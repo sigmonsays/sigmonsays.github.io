@@ -1,9 +1,16 @@
 ---
+title: "sig"
 contentdir: "content"
 layoutdir: "layouts"
 publishdir: "public"
 indexes:
   category: "categories"
 baseurl: "http://sigmonsays.github.io/"
-title: "sig"
+permalinks:
+  post: /:year/:month/:title/
+params:
+  Description: "tech, rants, whatever"
+  AuthorName: "Sig L"
+  GitHubUser: "sigmonsays"
+  SidebarRecentLimit: 5
 
