@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Posts on sig </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://sigmonsays.github.io/post/index.xml/</link>
+    
+    
+    
+    <updated>Tue, 02 Sep 2014 09:39:19 PDT</updated>
+    
+    <item>
+      <title>first</title>
+      <link>http://sigmonsays.github.io/2014/09/first/</link>
+      <pubDate>Tue, 02 Sep 2014 09:39:19 PDT</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2014/09/first/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

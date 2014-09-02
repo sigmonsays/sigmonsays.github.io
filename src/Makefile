@@ -1,4 +1,6 @@
 all:
 	@echo building site..
-	hugo -t hyde --buildDrafts
-	rsync -ar public/ ../
+	hugo -t hyde -D -d ../data
+	rsync -ar ../data/ ../
+	git add -A ../
+	git status
