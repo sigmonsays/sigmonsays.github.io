@@ -1,0 +1,21 @@
+
+- docs - http://hugo.spf13.com/overview/quickstart/
+
+install
+------------------
+- install hugo
+  go get github.com/spf13/hugo
+
+- themes
+   git clone --recursive https://github.com/spf13/hugoThemes themes
+
+basics
+------------------
+
+- make a new file
+   hugo new post/first.md
+
+
+- dev server
+
+   hugo server --theme=hyde --buildDrafts
