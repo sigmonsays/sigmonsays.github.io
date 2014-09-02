@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Pages on sigmonsays </title>
+      <title>Pages on sigmonsays.github.io </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
     <link>http://sigmonsays.github.io/page/index.xml/</link>
-    <language>en-us</language>
+    
     
     
     <updated>Tue, 02 Sep 2014 09:43:18 PDT</updated>
