@@ -5,5 +5,5 @@ publishdir: "public"
 indexes:
   category: "categories"
 baseurl: "http://sigmonsays.github.io/"
-title: "sigmonsays.github.io"
+title: "sig"
 
