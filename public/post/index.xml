@@ -3,7 +3,7 @@
   <channel>
       <title>Posts on my new hugo site </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://localhost:1313/post/index.xml/</link>
+    <link>http://yourSiteHere/post/index.xml/</link>
     <language>en-us</language>
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>first</title>
-      <link>http://localhost:1313/post/first/</link>
+      <link>http://yoursitehere/post/first/</link>
       <pubDate>Tue, 02 Sep 2014 09:39:19 PDT</pubDate>
       
-      <guid>http://localhost:1313/post/first/</guid>
+      <guid>http://yoursitehere/post/first/</guid>
       <description></description>
     </item>
     
