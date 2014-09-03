@@ -1,6 +1,16 @@
+THEME = hyde
+
 all:
 	@echo building site..
-	hugo -t hyde -D -d ../data
+	hugo -t $(THEME)  -D -d ../data
 	rsync -ar ../data/ ../
 	git add -A ../
 	git status
+
+clean:
+	rm -rf ../data
+
+dev:
+	git status
+	hugo server -d ../tmp --theme=$(THEME)  --buildDrafts
+

@@ -1,40 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Posts on sig </title>
+      <title>Tech on sig </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://sigmonsays.github.io/post/index.xml/</link>
+    <link>http://sigmonsays.github.io/categories/tech/index.xml/</link>
     
     
     
-    <updated>Wed, 03 Sep 2014 10:30:30 PDT</updated>
-    
-    <item>
-      <title>interesting tech</title>
-      <link>http://sigmonsays.github.io/2014/09/interesting-tech/</link>
-      <pubDate>Wed, 03 Sep 2014 10:30:30 PDT</pubDate>
-      
-      <guid>http://sigmonsays.github.io/2014/09/interesting-tech/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;tenus - linux networking in golang
-
-&lt;ul&gt;
-&lt;li&gt;website &lt;a href=&#34;https://github.com/milosgajdos83/tenus&#34;&gt;https://github.com/milosgajdos83/tenus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;mentioned in article - &lt;a href=&#34;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&#34;&gt;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>interesting tech</title>
-      <link>http://sigmonsays.github.io/2014/09/interesting-tech/</link>
-      <pubDate>Tue, 02 Sep 2014 10:38:37 PDT</pubDate>
-      
-      <guid>http://sigmonsays.github.io/2014/09/interesting-tech/</guid>
-      <description>&lt;p&gt;some stuff..&lt;/p&gt;
-</description>
-    </item>
+    <updated>Tue, 02 Sep 2014 10:38:37 PDT</updated>
     
     <item>
       <title>interesting tech</title>
