@@ -7,7 +7,24 @@
     
     
     
-    <updated>Tue, 02 Sep 2014 10:38:37 PDT</updated>
+    <updated>Wed, 03 Sep 2014 10:30:30 PDT</updated>
+    
+    <item>
+      <title>post/interesting tech 1</title>
+      <link>http://sigmonsays.github.io/2014/09/post/interesting-tech-1/</link>
+      <pubDate>Wed, 03 Sep 2014 10:30:30 PDT</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2014/09/post/interesting-tech-1/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;tenus - linux networking in golang
+
+&lt;ul&gt;
+&lt;li&gt;website &lt;a href=&#34;https://github.com/milosgajdos83/tenus&#34;&gt;https://github.com/milosgajdos83/tenus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;mentioned in article - &lt;a href=&#34;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&#34;&gt;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>interesting tech</title>
@@ -27,7 +44,7 @@ decentralized cloud messaging with broadcast, request/reply and pubsub messaging
 
 &lt;li&gt;&lt;p&gt;Quick VPN using SSH - &lt;a href=&#34;http://backreference.org/2009/11/13/openssh-based-vpns/&#34;&gt;http://backreference.org/2009/11/13/openssh-based-vpns/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Rudder - Software Defined Networks - &lt;a href=&#34;https://github.com/coreos/rudder &#34;&gt;https://github.com/coreos/rudder &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;{{% href Rudder %}} - Software Defined Networks - &lt;a href=&#34;https://github.com/coreos/rudder &#34;&gt;https://github.com/coreos/rudder &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

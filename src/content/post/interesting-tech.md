@@ -16,4 +16,4 @@ title = "interesting tech"
 
 - Quick VPN using SSH - http://backreference.org/2009/11/13/openssh-based-vpns/
 
-- Rudder - Software Defined Networks - https://github.com/coreos/rudder 
+- {{% href Rudder %}} - Software Defined Networks - https://github.com/coreos/rudder 
