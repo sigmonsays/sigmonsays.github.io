@@ -2,7 +2,7 @@ THEME = hyde
 
 all:
 	@echo building site..
-	hugo -t $(THEME)  -D -d ../data
+	hugo -t $(THEME) -d ../data
 	rsync -ar ../data/ ../
 	git add -A ../
 	git status
