@@ -1,7 +1,7 @@
 +++
 date = "2014-09-03T10:30:30-07:00"
 draft = true
-title = "interesting tech 2"
+title = "interesting tech"
 
 +++
 
