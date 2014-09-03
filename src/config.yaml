@@ -7,7 +7,7 @@ indexes:
   category: "categories"
 baseurl: "http://sigmonsays.github.io/"
 permalinks:
-  post: /:year/:month/:title/
+  post: /:year/:month/:slug/
 params:
   Description: "tech, rants, whatever"
   AuthorName: "Sig L"
