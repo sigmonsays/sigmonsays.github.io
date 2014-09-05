@@ -12,5 +12,5 @@ clean:
 
 dev:
 	git status
-	hugo server -d ../tmp --theme=$(THEME)  --buildDrafts
+	hugo server -w -d ../tmp --theme=$(THEME)  --buildDrafts
 
