@@ -46,4 +46,105 @@ issues with docker-proxy
   routed through the proxy.
 
 
-To be continued..
+investigating the proxy history
+
+https://github.com/docker/docker/search?utf8=%E2%9C%93&q=proxy
+https://github.com/docker/docker/blob/master/pkg/proxy/proxy.go
+
+UDPProxy and TCPProxy in udp_proxy.go at pkg/proxy/tcp_proxy.go 
+
+shows NewProxy, which is used in the port mapping code, specifically map() function
+
+https://github.com/docker/docker/blob/master/daemon/networkdriver/portmapper/mapper.go#L41
+
+proxy was introduced in the following commits
+
+
+      commit 930e9a7e430a3d78e09a95bb32d9fb6052e7dae1
+      Author: Solomon Hykes <solomon@dotcloud.com>
+      Date:   Fri Apr 19 19:35:44 2013 -0700
+
+          Emulate DNAT in userland for loopback-to-loopback connections. This makes container ports available from localhost.
+
+       network.go | 46 ++++++++++++++++++++++++++++++++++++++++++++++
+       1 file changed, 46 insertions(+)
+
+      commit 61259ab4b4bfe3404e75dd811a2da7c88e7c7133
+      Author: Solomon Hykes <solomon@dotcloud.com>
+      Date:   Fri Apr 19 19:32:32 2013 -0700
+
+          Exclude loopback-to-loopback connections from DNAT rules, to allow userland proxying
+
+
+which shows the following diff
+
+git diff 61259a 930e9a 
+
+      diff --git a/network.go b/network.go
+      index 85c6083..54b8dbf 100644
+      --- a/network.go
+      +++ b/network.go
+      @@ -4,6 +4,7 @@ import (
+         "encoding/binary"
+         "errors"
+         "fmt"
+      +	"io"
+         "log"
+         "net"
+         "os/exec"
+      @@ -221,10 +222,55 @@ func (mapper *PortMapper) Map(port int, dest net.TCPAddr) error {
+         if err := mapper.iptablesForward("-A", port, dest); err != nil {
+            return err
+         }
+      +
+         mapper.mapping[port] = dest
+      +	listener, err := net.Listen("tcp", fmt.Sprintf("127.0.0.1:%d", port))
+      +	if err != nil {
+      +		mapper.Unmap(port)
+      +		return err
+      +	}
+      +	// FIXME: store the listener so we can close it at Unmap
+      +	go proxy(listener, "tcp", dest.String())
+         return nil
+       }
+       
+      +// proxy listens for socket connections on `listener`, and forwards them unmodified
+      +// to `proto:address`
+      +func proxy(listener net.Listener, proto, address string) error {
+      +	Debugf("proxying to %s:%s", proto, address)
+      +	defer Debugf("Done proxying to %s:%s", proto, address)
+      +	for {
+      +		Debugf("Listening on %s", listener)
+      +		src, err := listener.Accept()
+      +		if err != nil {
+      +			return err
+      +		}
+      +		Debugf("Connecting to %s:%s", proto, address)
+      +		dst, err := net.Dial(proto, address)
+      +		if err != nil {
+      +			log.Printf("Error connecting to %s:%s: %s", proto, address, err)
+      +			src.Close()
+      +			continue
+      +		}
+      +		Debugf("Connected to backend, splicing")
+      +		splice(src, dst)
+      +	}
+      +	return nil
+      +}
+      +
+      +func halfSplice(dst, src net.Conn) error {
+      +	_, err := io.Copy(dst, src)
+      +	// FIXME: on EOF from a tcp connection, pass WriteClose()
+      +	dst.Close()
+      +	src.Close()
+      +	return err
+      +}
+      +
+      +func splice(a, b net.Conn) {
+      +	go halfSplice(a, b)
+      +	go halfSplice(b, a)
+      +}
+      +
+       func (mapper *PortMapper) Unmap(port int) error {
+         dest, ok := mapper.mapping[port]
+         if !ok {
