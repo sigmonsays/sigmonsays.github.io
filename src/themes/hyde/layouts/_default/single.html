@@ -9,7 +9,12 @@
   <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
       {{ .Content }}
 </div>
+
+<h1>Comments</h1>
+{{ template "_internal/disqus.html" . }}
+
 </div>
+
 
   </body>
 </html>

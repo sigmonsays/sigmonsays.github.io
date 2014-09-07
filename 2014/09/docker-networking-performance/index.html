@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title> sig &middot; sig </title>
+  <title> docker networking performance &middot; sig </title>
 
   
   <link rel="stylesheet" href="http://sigmonsays.github.io/css/poole.css">
@@ -20,7 +20,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
 
   
-  <link href="http://sigmonsays.github.io/index.xml/" rel="alternate" type="application/rss+xml" title="sig" />
+  <link href="" rel="alternate" type="application/rss+xml" title="sig" />
 </head>
 
 <body>
@@ -45,19 +45,10 @@
 
 
     <div class="content container">
-<div class="posts">
-
+<div class="post">
+  <h1>docker networking performance</h1>
+  <span class="post-date">Fri, Sep 5, 2014</span>
       
-  <div class="post">
-    <h1 class="post-title">
-      <a href="http://sigmonsays.github.io/2014/09/docker-networking-performance/">
-        docker networking performance
-      </a>
-    </h1>
-
-    <span class="post-date">Fri, Sep 5, 2014</span>
-
-    
 
 <p>While trying to determine the performance overhead of a simple docker container setup, I discovered several
 issues related to network performance.</p>
@@ -106,74 +97,26 @@ used in the first place to handle local traffic. iptables is used to route the n
 traffic externally, so I wonder, why the proxy in userland. It seems pointless but I
 have yet to investigate it further.</p>
 
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="http://sigmonsays.github.io/2014/09/interesting-tech-2/">
-        interesting tech
-      </a>
-    </h1>
-
-    <span class="post-date">Wed, Sep 3, 2014</span>
-
-    <ul>
-<li>tenus - linux networking in golang
-
-<ul>
-<li>website <a href="https://github.com/milosgajdos83/tenus">https://github.com/milosgajdos83/tenus</a></li>
-<li>mentioned in article - <a href="http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/">http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/</a></li>
-</ul></li>
-</ul>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="http://sigmonsays.github.io/2014/09/interesting-tech/">
-        interesting tech
-      </a>
-    </h1>
-
-    <span class="post-date">Tue, Sep 2, 2014</span>
-
-    <ul>
-<li><p>otro - javascript interpreter in Go - <a href="https://github.com/robertkrimen/otto">https://github.com/robertkrimen/otto</a></p></li>
-
-<li><p>C10M - <a href="http://c10m.robertgraham.com/p/manifesto.html">http://c10m.robertgraham.com/p/manifesto.html</a></p></li>
-
-<li><p>Completely decentralized cloud messaging - <a href="http://iris.karalabe.com">http://iris.karalabe.com</a>
-decentralized cloud messaging with broadcast, request/reply and pubsub messaging with literally zero configuration.</p></li>
-
-<li><p>Fast and Simple Open Source &ldquo;Github&rdquo; - <a href="https://github.com/gogits/gogs">https://github.com/gogits/gogs</a></p></li>
-
-<li><p>Quick VPN using SSH - <a href="http://backreference.org/2009/11/13/openssh-based-vpns/">http://backreference.org/2009/11/13/openssh-based-vpns/</a></p></li>
-
-<li><p>Rudder - Software Defined Networks - <a href="https://github.com/coreos/rudder ">https://github.com/coreos/rudder </a></p></li>
-</ul>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="http://sigmonsays.github.io/about/">
-        about
-      </a>
-    </h1>
-
-    <span class="post-date">Tue, Sep 2, 2014</span>
-
-    <p>Start of another blog, developer focused, as a way to write about, keep track of and archive various technologies and trends.</p>
-
-<p>Hopefully this involves into something for now but mostly its a place to put random thought.</p>
-
-  </div>
-  
-
-
 </div>
 
+<h1>Comments</h1>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sigmonsays';
+    var disqus_identifier = 'http:\/\/sigmonsays.github.io\/2014\/09\/docker-networking-performance\/';
+    var disqus_title = 'docker networking performance';
+    var disqus_url = 'http:\/\/sigmonsays.github.io\/2014\/09\/docker-networking-performance\/';
 
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
 
 
   </body>
