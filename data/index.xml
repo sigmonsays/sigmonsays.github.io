@@ -7,7 +7,30 @@
     
     
     
-    <updated>Fri, 05 Sep 2014 07:33:28 PDT</updated>
+    <updated>Sun, 07 Sep 2014 19:37:21 PDT</updated>
+    
+    <item>
+      <title>docker wishlist</title>
+      <link>http://sigmonsays.github.io/2014/09/docker-wishlist/</link>
+      <pubDate>Sun, 07 Sep 2014 19:37:21 PDT</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2014/09/docker-wishlist/</guid>
+      <description>
+
+&lt;p&gt;things I find that I wish docker supported&lt;/p&gt;
+
+&lt;h1 id=&#34;toc_0&#34;&gt;dockerfile&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;support for variables&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is very little that the dockerfile actually supports beyond basic static directives.&lt;/p&gt;
+
+&lt;p&gt;If dockerfile supported templates and variables, we could allow repetitive lines to be reduced to
+  the bare minimum.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>docker networking performance</title>
