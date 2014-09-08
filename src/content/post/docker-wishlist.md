@@ -11,6 +11,12 @@ things I find that I wish docker supported
 dockerfile
 ========================
 
+- **store build context with the image **
+
+   - provides ability to change original dockerfile for images you download
+   - saves dockerfile and other build artifacts
+   - similar in concept to a "source package"
+
 - **support for variables**
 
   There is very little that the dockerfile actually supports beyond basic static directives.
