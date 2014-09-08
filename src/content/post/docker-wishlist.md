@@ -11,7 +11,7 @@ things I find that I wish docker supported
 dockerfile
 ========================
 
-- **store build context with the image **
+- **store build context with the image**
 
    - provides ability to change original dockerfile for images you download
    - saves dockerfile and other build artifacts
