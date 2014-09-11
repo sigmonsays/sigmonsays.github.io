@@ -12,12 +12,12 @@ Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The 
 takes a minimal base image tarball and installs all dependencies in it required to
 build your package.
 
-The build depenencies come from debian/control Build-Depends section. The package being
+The build dependencies come from debian/control Build-Depends section. The package being
 built is a python application using virtualenv. A lot of the packages come from apt however.
 There is a bunch of python pip/easy install work performed too.
 
 Needless to say this takes quite some time to do since extracting a .deb and installing
-it is a pretty expensive operation when there is a lot of depenencies.
+it is a pretty expensive operation when there is a lot of dependencies.
 
 Obverve the following times
 
