@@ -25,7 +25,7 @@ Obverve the following times
 - dpkg-buildpackage - 0m55.480s
 - docker - 0m37.421s
 
-because i'm not interested in explaining how the other 2 methds work, i'll leave that out. However, let me
+because i'm not interested in explaining how the other 2 method work, i'll leave that out. However, let me
 explain how the docker build works.
 
 docker

@@ -39,7 +39,7 @@ it is a pretty expensive operation when there is a lot of dependencies.&lt;/p&gt
 &lt;li&gt;docker - 0m37.421s&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;because i&amp;rsquo;m not interested in explaining how the other 2 methds work, i&amp;rsquo;ll leave that out. However, let me
+&lt;p&gt;because i&amp;rsquo;m not interested in explaining how the other 2 method work, i&amp;rsquo;ll leave that out. However, let me
 explain how the docker build works.&lt;/p&gt;
 
 &lt;h2 id=&#34;toc_0&#34;&gt;docker&lt;/h2&gt;
