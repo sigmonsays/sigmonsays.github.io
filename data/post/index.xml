@@ -7,7 +7,98 @@
     
     
     
-    <updated>Sun, 07 Sep 2014 19:37:21 PDT</updated>
+    <updated>Thu, 11 Sep 2014 15:32:44 PDT</updated>
+    
+    <item>
+      <title>building packages with docker</title>
+      <link>http://sigmonsays.github.io/2014/09/building-packages-with-docker/</link>
+      <pubDate>Thu, 11 Sep 2014 15:32:44 PDT</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2014/09/building-packages-with-docker/</guid>
+      <description>
+
+&lt;p&gt;This is a simple idea I had while waiting for a build to complete.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The background&lt;/strong&gt;
+Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script
+takes a minimal base image tarball and installs all dependencies in it required to
+build your package.&lt;/p&gt;
+
+&lt;p&gt;The build depenencies come from debian/control Build-Depends section. The packaging being
+built is a python application using virtualenv. A lot of the packages come from apt however.
+There is a bunch of python pip/easy install work performed too.&lt;/p&gt;
+
+&lt;p&gt;Needless to say this takes quite some time to do since extracting a .deb and installing
+it is a pretty expensive operation when there is a lot of depenencies.&lt;/p&gt;
+
+&lt;p&gt;Obverve the following times&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;pdebuild - 2m35.113s&lt;/li&gt;
+&lt;li&gt;dpkg-buildpackage - 0m55.480s&lt;/li&gt;
+&lt;li&gt;docker - 0m37.421s&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;because i&amp;rsquo;m not interested in explaining how the other 2 methds work, i&amp;rsquo;ll leave that out. However, let me
+explain how the docker build works.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;docker&lt;/h2&gt;
+
+&lt;p&gt;The idea is to exploit the layered file system of containers to provide build dependencies. Since
+its a copy on write file system, this means providing a container with all build deps present is
+incredibly fast.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dockerfile&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;FROM ubuntu
+RUN apt-get update \
+   &amp;amp;&amp;amp; apt-get install -y dpkg-dev
+
+
+# This is the key line, it installs the build dependencies for your application!
+RUN apt-get build-dep -y --force-yes YOUR_PACKAGE
+
+RUN useradd packaging \
+   &amp;amp;&amp;amp; mkdir -p /packaging \
+   &amp;amp;&amp;amp; chown packaging /packaging
+
+USER packaging
+ADD build.sh /bin/build.sh
+
+ENTRYPOINT [ &amp;quot;/bin/build.sh&amp;quot; ]
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;build.sh&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+
+echo &amp;quot;[build.sh] $@&amp;quot;
+
+set -x
+
+cd /packaging
+pwd
+tar vzxf -
+cd package
+dpkg-buildpackage
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then to invoke the build we stream the contents at a tar.gz into the container which streams
+it to disk and builds the package.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package_stream () 
+{ 
+    git archive HEAD --format tar --prefix=package/ | gzip -9
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally, this is the final command that runs the build&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  time package_stream | docker run -i debbie 
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>docker wishlist</title>
