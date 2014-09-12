@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> firewall &middot; sig </title>
+
+  
+  <link rel="stylesheet" href="http://sigmonsays.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://sigmonsays.github.io/css/syntax.css">
+  <link rel="stylesheet" href="http://sigmonsays.github.io/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="sig" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>sig</h1>
+      <p class="lead">
+       tech, rants, whatever 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; 2014. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+  <h1>firewall</h1>
+  <span class="post-date">Fri, Sep 12, 2014</span>
+      <p>Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.</p>
+
+<p>Only specific networks are allowed.</p>
+
+<pre><code>#!/bin/bash
+#set -x
+
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+
+iptables -F INPUT 
+#iptables -F FORWARD 
+#iptables -F OUTPUT 
+
+function clean_networks {
+   grep -v ^# | awk '{print $1}' |grep -v ^$
+}
+
+# Quick and dirty iptables firewall
+# We want to drop traffic for any open port if its not in the allowed list of IP addresses
+# 
+function list_allowed_networks {
+
+# the 1918 subnets
+cat &lt;&lt; EOF | clean_networks
+10.0.0.0/8
+172.16.0.0/12
+192.168.0.0/16
+EOF
+
+cat &lt;&lt; EOF | clean_networks
+10.0.0.0/8
+127.0.0.0/8
+EOF
+}
+
+function list_open_ports {
+	# ipv4
+	netstat -lntu |awk '/^tcp / {print $4}' |awk -F: '{print $2}'
+	# ipv6
+	netstat -lntu |awk '/^tcp6 / {print $4}' |awk -F: '{print $4}'
+}
+function list_ports {
+	list_open_ports
+	echo 22
+}
+function list_networks {
+	for N in $(list_allowed_networks)
+	do
+		echo $N
+	done
+	if [ -f /etc/firewall/networks.list ] ; then
+		cat /etc/firewall/networks.list
+	fi
+
+	# All local addresses
+	ip addr | awk -F'[ /]+' '/inet / {print $3}'
+
+	# Let all your connected subnets in..
+	# ip addr | awk  '/inet / {print $2}'
+}
+
+function prepare_iptables {
+
+	# Create drop logged chain
+	if ! iptables -L drop_logged &gt;/dev/null 2&gt;&amp;1 ; then
+		iptables -N drop_logged
+	fi
+	iptables -F drop_logged
+	iptables -A drop_logged -j LOG --log-prefix &quot;iptables-dropped: &quot; --log-level 4
+	iptables -A drop_logged -j DROP
+}
+
+
+
+#
+# Begin building the firewall
+#
+prepare_iptables
+
+list_networks | while read N
+do
+	echo &quot;netowrk $N&quot;
+        iptables -A INPUT -s $N -j ACCEPT
+done
+
+list_ports | while read P
+do
+	echo &quot;securing port $P&quot;
+        iptables -A INPUT -p tcp --dport $P -j drop_logged
+done
+
+
+
+</code></pre>
+
+</div>
+
+<h1>Comments</h1>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sigmonsays';
+    var disqus_identifier = 'http:\/\/sigmonsays.github.io\/static\/firewall\/';
+    var disqus_title = 'firewall';
+    var disqus_url = 'http:\/\/sigmonsays.github.io\/static\/firewall\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+
+  </body>
+</html>
