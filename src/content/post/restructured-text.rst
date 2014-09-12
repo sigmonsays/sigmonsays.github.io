@@ -1,7 +1,7 @@
 +++
 date = "2014-09-12T08:28:52-07:00"
 draft = true
-title = "test"
+title = "restructured text primer"
 
 tags = [ "cheatsheat", "rst2html", "hugo" ]
 
