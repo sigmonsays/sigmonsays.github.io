@@ -2,6 +2,9 @@
 date = "2014-09-11T15:32:44-07:00"
 draft = false
 title = "building packages with docker"
+aliases = [
+   "building-packages-with-docker"
+]
 
 +++
 
