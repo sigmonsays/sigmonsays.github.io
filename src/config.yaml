@@ -9,7 +9,7 @@ baseurl: "http://sigmonsays.github.io/"
 permalinks:
   post: /:year/:month/:slug/
 params:
-  Description: "tech, rants, whatever"
+  Description: "tech, life and random"
   AuthorName: "Sig L"
   GitHubUser: "sigmonsays"
   SidebarRecentLimit: 5
