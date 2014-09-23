@@ -7,7 +7,49 @@
     
     
     
-    <updated>Fri, 12 Sep 2014 09:38:41 PDT</updated>
+    <updated>Mon, 22 Sep 2014 21:26:16 PDT</updated>
+    
+    <item>
+      <title>ban systemd</title>
+      <link>http://sigmonsays.github.io/2014/09/ban-systemd/</link>
+      <pubDate>Mon, 22 Sep 2014 21:26:16 PDT</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2014/09/ban-systemd/</guid>
+      <description>
+
+&lt;h1 id=&#34;toc_0&#34;&gt;why I want to ban systemd&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;the developers and members on the irc room are aggressive and counter productive and only seem to want to fight
+rather than try to solve any issue.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I read countless posts about the terrible nature of the developers&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.infoworld.com/article/2608798/data-center/systemd--harbinger-of-the-linux-apocalypse.html?page=2&#34;&gt;http://www.infoworld.com/article/2608798/data-center/systemd--harbinger-of-the-linux-apocalypse.html?page=2&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Linus Banned a developer for fighting&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://bugs.freedesktop.org/show_bug.cgi?id=76935&#34;&gt;https://bugs.freedesktop.org/show_bug.cgi?id=76935&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;From &lt;a href=&#34;https://bugs.freedesktop.org/show_bug.cgi?id=76935#c24&#34;&gt;https://bugs.freedesktop.org/show_bug.cgi?id=76935#c24&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;   Systemd needs to be forked NOW.
+   Linus explained it well already:
+   Kay and Lennart: please just go away, disappear from the FOSS community, we don&#39;t need you and your crap.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;toc_1&#34;&gt;More updates to follow..&lt;/h1&gt;
+
+&lt;p&gt;I&amp;rsquo;m pretty entertained but really saddened by the fact. I joined the IRC room to ask abuot a bug and only
+got racial comments and vulgar language when I inquired about a bug. We didn&amp;rsquo;t even get to discussing the
+technical reasons, I had to leave the channel. I might try again later, I am curious.&lt;/p&gt;
+
+&lt;p&gt;The community needs to reject this overly complex piece of software without a clear focus or direction.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>firewall</title>
