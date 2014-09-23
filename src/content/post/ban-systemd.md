@@ -32,7 +32,7 @@ why I want to ban systemd
 More updates to follow..
 =============================
 
-I'm pretty entertained but really saddened by the fact. I joined the IRC room to ask abuot a bug and only
+I'm pretty entertained but really saddened by the current situation. I joined the IRC room to ask abuot a bug and only
 got racial comments and vulgar language when I inquired about a bug. We didn't even get to discussing the
 technical reasons, I had to leave the channel. I might try again later, I am curious.
 
