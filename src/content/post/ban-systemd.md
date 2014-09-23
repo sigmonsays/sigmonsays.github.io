@@ -29,6 +29,19 @@ why I want to ban systemd
    Linus explained it well already:
    Kay and Lennart: please just go away, disappear from the FOSS community, we don't need you and your crap.
    ```
+
+4. They ban you if they do not agree with you
+
+   1. https://lists.debian.org/debian-ctte/2014/02/msg00389.html
+
+
+5. Countless people disagree -- even Linus.
+
+   1. http://ewontfix.com/14/
+   2. https://news.ycombinator.com/item?id=7522200
+   3. http://lxer.com/module/forums/t/35320/
+   4. https://twitter.com/lusis/status/450701265782456320
+
 More updates to follow..
 =============================
 
