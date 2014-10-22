@@ -14,3 +14,6 @@ dev:
 	git status
 	hugo server -w -d ../tmp --theme=$(THEME)  --buildDrafts
 
+post:
+	hugo new post/example.md
+
