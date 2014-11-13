@@ -16,6 +16,8 @@ updates
       - "It's mind blowing to realize that because of the init system we have on our system we are now vulnerable to DNS poisoning."
    - anyways, give the thread a read and see for yourself how systemd should be abandoned
 
+- website which describes a lot of good points - http://boycottsystemd.org/
+
 why I want to ban systemd
 =============================
 

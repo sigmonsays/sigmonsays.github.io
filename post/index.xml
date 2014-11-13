@@ -34,7 +34,7 @@
 &lt;h1 id=&#34;toc_0&#34;&gt;updates&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Nov2014 - an exploit in systemd resolver - &lt;a href=&#34;https://news.ycombinator.com/item?id=8595335&#34;&gt;https://news.ycombinator.com/item?id=8595335&lt;/a&gt;
+&lt;li&gt;&lt;p&gt;Nov2014 - an exploit in systemd resolver - &lt;a href=&#34;https://news.ycombinator.com/item?id=8595335&#34;&gt;https://news.ycombinator.com/item?id=8595335&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Just another reason to do one thing well and not try to do too much. C&amp;rsquo;mon systemd, focus.&lt;/li&gt;
@@ -48,6 +48,8 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;anyways, give the thread a read and see for yourself how systemd should be abandoned&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;website which describes a lot of good points - &lt;a href=&#34;http://boycottsystemd.org/&#34;&gt;http://boycottsystemd.org/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;toc_1&#34;&gt;why I want to ban systemd&lt;/h1&gt;
