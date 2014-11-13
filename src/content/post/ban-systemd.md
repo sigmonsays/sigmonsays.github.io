@@ -5,6 +5,16 @@ title = "ban systemd"
 
 +++
 
+updates
+=============================
+- Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
+   - Just another reason to do one thing well and not try to do too much. C'mon systemd, focus.
+   - Please help me understand why a init.d replacement needs to provide a resolver.
+   - some gems from this thread 
+      - "I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver. To be clear, I don't really think it matters whether systemd-resolved is under the systemd umbrella, but I do think that the design has a lot of unnecessary NIH syndrome."
+      - "This is a perfect example of why the systemd approach of putting a bunch of disparate components under a single tightly-coupled umbrella is bad engineering."
+      - "It's mind blowing to realize that because of the init system we have on our system we are now vulnerable to DNS poisoning."
+   - anyways, give the thread a read and see for yourself how systemd should be abandoned
 
 why I want to ban systemd
 =============================

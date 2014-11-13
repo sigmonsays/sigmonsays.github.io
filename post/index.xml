@@ -31,7 +31,26 @@
       <guid>http://sigmonsays.github.io/2014/09/ban-systemd/</guid>
       <description>
 
-&lt;h1 id=&#34;toc_0&#34;&gt;why I want to ban systemd&lt;/h1&gt;
+&lt;h1 id=&#34;toc_0&#34;&gt;updates&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Nov2014 - an exploit in systemd resolver - &lt;a href=&#34;https://news.ycombinator.com/item?id=8595335&#34;&gt;https://news.ycombinator.com/item?id=8595335&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Just another reason to do one thing well and not try to do too much. C&amp;rsquo;mon systemd, focus.&lt;/li&gt;
+&lt;li&gt;Please help me understand why a init.d replacement needs to provide a resolver.&lt;/li&gt;
+&lt;li&gt;some gems from this thread
+
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver. To be clear, I don&amp;rsquo;t really think it matters whether systemd-resolved is under the systemd umbrella, but I do think that the design has a lot of unnecessary NIH syndrome.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;This is a perfect example of why the systemd approach of putting a bunch of disparate components under a single tightly-coupled umbrella is bad engineering.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;It&amp;rsquo;s mind blowing to realize that because of the init system we have on our system we are now vulnerable to DNS poisoning.&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;anyways, give the thread a read and see for yourself how systemd should be abandoned&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;toc_1&#34;&gt;why I want to ban systemd&lt;/h1&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;the developers and members on the irc room are aggressive and counter productive and only seem to want to fight
@@ -72,7 +91,7 @@ rather than try to solve any issue.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;toc_1&#34;&gt;More updates to follow..&lt;/h1&gt;
+&lt;h1 id=&#34;toc_2&#34;&gt;More updates to follow..&lt;/h1&gt;
 
 &lt;p&gt;I&amp;rsquo;m pretty entertained but really saddened by the current situation. I joined the IRC room to ask abuot a bug and only
 got racial comments and vulgar language when I inquired about a bug. We didn&amp;rsquo;t even get to discussing the
