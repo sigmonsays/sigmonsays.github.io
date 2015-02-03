@@ -1,6 +1,6 @@
 +++
 date = "2015-02-03T11:59:36-08:00"
-draft = true
+draft = false
 title = "convenient cli tookit using python"
 
 +++
