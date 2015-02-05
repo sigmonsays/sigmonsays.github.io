@@ -7,7 +7,25 @@
     
     
     
-    <updated>Tue, 03 Feb 2015 11:59:36 PST</updated>
+    <updated>Thu, 05 Feb 2015 04:20:00 -0700</updated>
+    
+    <item>
+      <title>Cool Software </title>
+      <link>http://sigmonsays.github.io/2015/02/Cool-Software/</link>
+      <pubDate>Thu, 05 Feb 2015 04:20:00 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2015/02/Cool-Software/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;hound - &lt;a href=&#34;https://github.com/etsy/Hound&#34;&gt;https://github.com/etsy/Hound&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;silver surfer - &lt;a href=&#34;http://geoff.greer.fm/ag/&#34;&gt;http://geoff.greer.fm/ag/&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ggreer/the_silver_searcher&#34;&gt;https://github.com/ggreer/the_silver_searcher&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>convenient cli tookit using python</title>
