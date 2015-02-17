@@ -11,4 +11,6 @@ title = "Cool Software "
 - silver surfer - http://geoff.greer.fm/ag/
   - https://github.com/ggreer/the_silver_searcher
 
+- microservices future 
+  - http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone
 
