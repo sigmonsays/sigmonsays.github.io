@@ -1,25 +1,28 @@
 +++
 date = "2015-05-04T18:38:37-07:00"
 draft = true
-title = "docker is not"
+title = "Docker is not what I want"
 slug = "what-docker-is-not"
 
 +++
+
+I have used docker for a while now and consider it a useful piece of software. It helped introduce
+containers to the masses but the projects scope has changed and the software is suffering.
 
 Docker is not what I want and here is a quick summary and then I will explain each in detail
 
 - The future of your app is tied to the future of Docker
 - Docker is insecure, the entire daemon runs as root
 - When docker crashes so does every one of your containers
-- Docker is already missing features
+- Docker is missing features
 - Docker is greedy for market 
-- Project is ignoring bugs and critical performance issues
+- Project is ignoring bugs and performance issues
 
 
-**the future of your app is tied to the future of docker**
+**The future of your app is tied to the future of docker**
 
 docker has stopped focusing on fixing bugs or performance improvements and instead is
-moving into clustering (swarm) or provisioning (machine). While this are necessary features it just shows that docker
+moving into clustering (swarm) or provisioning (machine). While these are necessary features it just shows that docker
 is greey for market share and not really trying to make quality software.
 
 **docker is insecure, the entire daemon runs as root**
@@ -34,7 +37,7 @@ Containers can run as unprivelleged users but docker does not support it.
 
 
 
-**when docker crashes so does every one of your containers**
+**When docker crashes so does every one of your containers**
 
 a namespace will exist as long as a single process in it does. This means that you do not need a single
 daemon running as a parent of all your containers. When you stop or restart the docker daemon all your containers
@@ -52,6 +55,10 @@ valuable features like unprivileged containers or CRIU.
 
 They removed their manifesto and are already focusing on building more poor quality software to get the market share
 
+They market that docker images are "like git" but this is far from the truth. The project provides no features what so 
+ever that git does. Adopting the terminology push and pull almost seems like a clever marketing decision. So me how
+to branch an image or show a unified diff that someone can merge into their "repo" if you even had some a thing.
+
 
 **Project is ignoring bugs and critical performance issues**
 
@@ -61,15 +68,22 @@ docker-proxy is a socket server which is spawned for each container. It performs
 host ports in specific cases. It performs so poorly that you see up to a 40x penalty when talking to nginx.
 
 
+**Freedom is key**
+
+Containers are gaining popularity so quickly because it allows freedom to move applications between
+cloud providers with no extra overhead. Docker is not spending any time contributing any standards for future
+interoperation and freedom and instead is focusing only on market share.
+
+Freedom of container solution is also key. As always you must use the right tool for the job. Supporting
+more than one container format is important.
+
+
 alternatives
 ========================
-there are a lot of alternatives thankfully
+there are a some alternatives thankfully
 
-lxc and lxd
---------------------
-
-rocket
---------------------
+- lxc and lxd - https://github.com/lxc
+- rocket - https://github.com/coreos/rkt
 
 
 
