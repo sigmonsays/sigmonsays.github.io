@@ -8,8 +8,15 @@ indexes:
 baseurl: "http://sigmonsays.github.io/"
 permalinks:
   post: /:year/:month/:slug/
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  series: "series"
+
 params:
   Description: "tech, life and random"
+  description: "tech, life and random"
   AuthorName: "Sig L"
   GitHubUser: "sigmonsays"
   SidebarRecentLimit: 5

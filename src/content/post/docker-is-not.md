@@ -3,6 +3,8 @@ date = "2015-05-04T18:38:37-07:00"
 draft = true
 title = "Docker is not what I want"
 slug = "what-docker-is-not"
+tags = [ "docker" ]
+
 
 +++
 

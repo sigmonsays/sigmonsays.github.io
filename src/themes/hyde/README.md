@@ -13,7 +13,7 @@ It pairs a prominent sidebar with uncomplicated content.
   - [Sticky sidebar content](#sticky-sidebar-content)
   - [Themes](#themes)
   - [Reverse layout](#reverse-layout)
-- [Development](#development)
+  - [Disqus](#disqus)
 - [Author](#author)
 - [Ported by](#ported-by)
 - [License](#license)
@@ -60,12 +60,22 @@ There are eight themes available at this time.
 
 ![Hyde theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
 
-To use a theme, add anyone of the available theme classes to the `<body>` element in the `default.html` layout, like so:
+To use a theme, add the `themeColor` variable under `params`, like so:
 
-```html
-<body class="theme-base-08">
-  ...
-</body>
+**TOML**
+```toml
+theme = "hyde"
+
+[params]
+  themeColor = "theme-base-09"
+```
+
+**YAML**
+```yaml
+theme: "hyde"
+
+params:
+  themeColor: "theme-base-09"
 ```
 
 To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/hyde/blob/master/public/css/hyde.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
@@ -82,8 +92,23 @@ Hyde's page orientation can be reversed with a single class.
 </body>
 ```
 
-## Author
+### Disqus
 
+You can optionally enable a comment system powered by Disqus for the posts. Simply add the variable `disqusShortname` to the `params` in your config file.
+
+**TOML**
+```toml
+[params]
+  disqusShortname = "spf13"
+```
+
+**YAML**
+```yaml
+params:
+  disqusShortname: "spf13"
+```
+
+## Author
 **Mark Otto**
 - <https://github.com/mdo>
 - <https://twitter.com/mdo>

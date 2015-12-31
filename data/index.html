@@ -3,6 +3,7 @@
 <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -13,22 +14,22 @@
   <link rel="stylesheet" href="http://sigmonsays.github.io/css/poole.css">
   <link rel="stylesheet" href="http://sigmonsays.github.io/css/syntax.css">
   <link rel="stylesheet" href="http://sigmonsays.github.io/css/hyde.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.png">
 
   
-  <link href="http://sigmonsays.github.io/index.xml/" rel="alternate" type="application/rss+xml" title="sig" />
+  <link href="http://sigmonsays.github.io/index.xml" rel="alternate" type="application/rss+xml" title="sig" />
 </head>
 
-<body>
+<body class="">
 
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1>sig</h1>
+      <a href="http://sigmonsays.github.io/"><h1>sig</h1></a>
       <p class="lead">
        tech, life and random 
       </p>
@@ -50,7 +51,7 @@
       
   <div class="post">
     <h1 class="post-title">
-      <a href="http://sigmonsays.github.io/2015/02/Cool-Software/">
+      <a href="http://sigmonsays.github.io/2015/02/cool-software/">
         Cool Software 
       </a>
     </h1>
@@ -98,7 +99,7 @@ useful.</p>
 
 <p>The code below is missing the imports used.. instead copy the text from the imports section</p>
 
-<h2 id="toc_0">tab completion and history</h2>
+<h2 id="tab-completion-and-history:e4940539d06f8e0fcff6a9f58ac37a44">tab completion and history</h2>
 
 <pre><code>  # Tab completion
   import rlcompleter
@@ -115,7 +116,7 @@ useful.</p>
   del histfile
 </code></pre>
 
-<h2 id="toc_1">imports</h2>
+<h2 id="imports:e4940539d06f8e0fcff6a9f58ac37a44">imports</h2>
 
 <p>i&rsquo;m going to just drop a list of imports used. I&rsquo;ll let you
 sort out which ones are unused with a linter (pyflakes peraps?).</p>
@@ -137,7 +138,7 @@ sort out which ones are unused with a linter (pyflakes peraps?).</p>
   from urllib import quote_plus,unquote,quote
 </code></pre>
 
-<h2 id="toc_2">custom prompt and line counter</h2>
+<h2 id="custom-prompt-and-line-counter:e4940539d06f8e0fcff6a9f58ac37a44">custom prompt and line counter</h2>
 
 <pre><code># use a custom prompt
 class LineCounter(object):
@@ -156,7 +157,7 @@ sys.ps1 = line
 6
 </code></pre>
 
-<h2 id="toc_3">handy string functions</h2>
+<h2 id="handy-string-functions:e4940539d06f8e0fcff6a9f58ac37a44">handy string functions</h2>
 
 <pre><code>  def safe_str(s):
       try:
@@ -168,7 +169,7 @@ sys.ps1 = line
   unquote = lambda s: urllib.unquote(s)
 </code></pre>
 
-<h2 id="toc_4">file size utilities</h2>
+<h2 id="file-size-utilities:e4940539d06f8e0fcff6a9f58ac37a44">file size utilities</h2>
 
 <p>format bytes as a human printable form</p>
 
@@ -219,7 +220,7 @@ sys.ps1 = line
   ConvertSize(1024)._install(units, globals())
 </code></pre>
 
-<h2 id="toc_5">time utilities</h2>
+<h2 id="time-utilities:e4940539d06f8e0fcff6a9f58ac37a44">time utilities</h2>
 
 <pre><code>  def formatTime(s, legend = [  'd', 'h', 'm', 's' ]):
       units = [  86400, 3600, 60, 1 ]
@@ -291,7 +292,7 @@ sys.ps1 = line
   days = ConvertTime.days
 </code></pre>
 
-<h2 id="toc_6">misc utilities</h2>
+<h2 id="misc-utilities:e4940539d06f8e0fcff6a9f58ac37a44">misc utilities</h2>
 
 <pre><code>  def to_hex(t, nbytes):
       &quot;Format text t as a sequence of nbyte long values separated by spaces.&quot;
@@ -304,7 +305,7 @@ sys.ps1 = line
       return ' '.join(chunkify())
 </code></pre>
 
-<h2 id="toc_7">display hooks</h2>
+<h2 id="display-hooks:e4940539d06f8e0fcff6a9f58ac37a44">display hooks</h2>
 
 <p>this display hook will automatically pretty print returned values from cli expressions</p>
 
@@ -329,7 +330,7 @@ sys.ps1 = line
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://sigmonsays.github.io/2014/10/Cool-Software/">
+      <a href="http://sigmonsays.github.io/2014/10/cool-software/">
         Cool Software
       </a>
     </h1>
@@ -355,7 +356,7 @@ sys.ps1 = line
 
     
 
-<h1 id="toc_0">updates</h1>
+<h1 id="updates:749128d591ff05498577f36910c58f15">updates</h1>
 
 <ul>
 <li><p>Nov2014 - an exploit in systemd resolver - <a href="https://news.ycombinator.com/item?id=8595335">https://news.ycombinator.com/item?id=8595335</a></p>
@@ -376,7 +377,7 @@ sys.ps1 = line
 <li><p>website which describes a lot of good points - <a href="http://boycottsystemd.org/">http://boycottsystemd.org/</a></p></li>
 </ul>
 
-<h1 id="toc_1">why I want to ban systemd</h1>
+<h1 id="why-i-want-to-ban-systemd:749128d591ff05498577f36910c58f15">why I want to ban systemd</h1>
 
 <ol>
 <li><p>the developers and members on the irc room are aggressive and counter productive and only seem to want to fight
@@ -417,7 +418,7 @@ rather than try to solve any issue.</p></li>
 </ol></li>
 </ol>
 
-<h1 id="toc_2">More updates to follow..</h1>
+<h1 id="more-updates-to-follow:749128d591ff05498577f36910c58f15">More updates to follow..</h1>
 
 <p>I&rsquo;m pretty entertained but really saddened by the current situation. I joined the IRC room to ask abuot a bug and only
 got racial comments and vulgar language when I inquired about a bug. We didn&rsquo;t even get to discussing the
@@ -571,7 +572,7 @@ it is a pretty expensive operation when there is a lot of dependencies.</p>
 <p>because i&rsquo;m not interested in explaining how the other 2 method work, i&rsquo;ll leave that out. However, let me
 explain how the docker build works.</p>
 
-<h2 id="toc_0">docker</h2>
+<h2 id="docker:98af894833143101fe4ab2edf48c5c0c">docker</h2>
 
 <p>The idea is to exploit the layered file system of containers to provide build dependencies. Since
 its a copy on write file system, this means providing a container with all build deps present is
@@ -642,7 +643,7 @@ it to disk and builds the package.</p>
 
 <p>things I find that I wish docker supported</p>
 
-<h1 id="toc_0">dockerfile</h1>
+<h1 id="dockerfile:1a0ce501ba8da3f2c3a74598e01110ce">dockerfile</h1>
 
 <ul>
 <li><p><strong>store build context with the image</strong></p>
@@ -713,7 +714,7 @@ performance degrades around 40-50% due to docker having to reverse proxy the con
 <p>I really believe that if performance is important, there should be a option of disabling docker-proxy,
 but I will focus on this more later if I really need to.</p>
 
-<h2 id="toc_0">issues with docker-proxy</h2>
+<h2 id="issues-with-docker-proxy:8077ca4b89f46c4b55abdf120961e82e">issues with docker-proxy</h2>
 
 <ul>
 <li>software reverse proxy should not be enabled by default</li>
@@ -779,7 +780,7 @@ decentralized cloud messaging with broadcast, request/reply and pubsub messaging
   <div class="post">
     <h1 class="post-title">
       <a href="http://sigmonsays.github.io/about/">
-        about
+        About
       </a>
     </h1>
 
@@ -791,12 +792,20 @@ decentralized cloud messaging with broadcast, request/reply and pubsub messaging
 
   </div>
   
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://sigmonsays.github.io/contact/">
+        Contact
+      </a>
+    </h1>
 
+    <span class="post-date">Tue, Sep 2, 2014</span>
 
+    
+  </div>
+  
 </div>
-
-
-
+</div>
 
   </body>
 </html>

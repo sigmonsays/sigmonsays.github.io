@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Recent Content on sig </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://sigmonsays.github.io/index.xml/</link>
-    
-    
-    
-    <updated>Thu, 05 Feb 2015 04:20:00 -0700</updated>
+    <title>sig</title>
+    <link>http://sigmonsays.github.io/</link>
+    <description>Recent content on sig</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 05 Feb 2015 04:20:00 -0700</lastBuildDate>
+    <atom:link href="http://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cool Software </title>
-      <link>http://sigmonsays.github.io/2015/02/Cool-Software/</link>
+      <link>http://sigmonsays.github.io/2015/02/cool-software/</link>
       <pubDate>Thu, 05 Feb 2015 04:20:00 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/2015/02/Cool-Software/</guid>
+      <guid>http://sigmonsays.github.io/2015/02/cool-software/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;hound - &lt;a href=&#34;https://github.com/etsy/Hound&#34;&gt;https://github.com/etsy/Hound&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
@@ -36,7 +35,7 @@
     <item>
       <title>convenient cli tookit using python</title>
       <link>http://sigmonsays.github.io/2015/02/convenient-cli-tookit-using-python/</link>
-      <pubDate>Tue, 03 Feb 2015 11:59:36 PST</pubDate>
+      <pubDate>Tue, 03 Feb 2015 11:59:36 -0800</pubDate>
       
       <guid>http://sigmonsays.github.io/2015/02/convenient-cli-tookit-using-python/</guid>
       <description>
@@ -53,7 +52,7 @@ useful.&lt;/p&gt;
 
 &lt;p&gt;The code below is missing the imports used.. instead copy the text from the imports section&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;tab completion and history&lt;/h2&gt;
+&lt;h2 id=&#34;tab-completion-and-history:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;tab completion and history&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;  # Tab completion
   import rlcompleter
@@ -70,7 +69,7 @@ useful.&lt;/p&gt;
   del histfile
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;toc_1&#34;&gt;imports&lt;/h2&gt;
+&lt;h2 id=&#34;imports:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;imports&lt;/h2&gt;
 
 &lt;p&gt;i&amp;rsquo;m going to just drop a list of imports used. I&amp;rsquo;ll let you
 sort out which ones are unused with a linter (pyflakes peraps?).&lt;/p&gt;
@@ -92,7 +91,7 @@ sort out which ones are unused with a linter (pyflakes peraps?).&lt;/p&gt;
   from urllib import quote_plus,unquote,quote
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;toc_2&#34;&gt;custom prompt and line counter&lt;/h2&gt;
+&lt;h2 id=&#34;custom-prompt-and-line-counter:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;custom prompt and line counter&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;# use a custom prompt
 class LineCounter(object):
@@ -111,7 +110,7 @@ sys.ps1 = line
 6
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;toc_3&#34;&gt;handy string functions&lt;/h2&gt;
+&lt;h2 id=&#34;handy-string-functions:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;handy string functions&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;  def safe_str(s):
       try:
@@ -123,7 +122,7 @@ sys.ps1 = line
   unquote = lambda s: urllib.unquote(s)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;toc_4&#34;&gt;file size utilities&lt;/h2&gt;
+&lt;h2 id=&#34;file-size-utilities:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;file size utilities&lt;/h2&gt;
 
 &lt;p&gt;format bytes as a human printable form&lt;/p&gt;
 
@@ -174,7 +173,7 @@ sys.ps1 = line
   ConvertSize(1024)._install(units, globals())
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;toc_5&#34;&gt;time utilities&lt;/h2&gt;
+&lt;h2 id=&#34;time-utilities:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;time utilities&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;  def formatTime(s, legend = [  &#39;d&#39;, &#39;h&#39;, &#39;m&#39;, &#39;s&#39; ]):
       units = [  86400, 3600, 60, 1 ]
@@ -246,7 +245,7 @@ sys.ps1 = line
   days = ConvertTime.days
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;toc_6&#34;&gt;misc utilities&lt;/h2&gt;
+&lt;h2 id=&#34;misc-utilities:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;misc utilities&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;  def to_hex(t, nbytes):
       &amp;quot;Format text t as a sequence of nbyte long values separated by spaces.&amp;quot;
@@ -259,7 +258,7 @@ sys.ps1 = line
       return &#39; &#39;.join(chunkify())
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;toc_7&#34;&gt;display hooks&lt;/h2&gt;
+&lt;h2 id=&#34;display-hooks:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;display hooks&lt;/h2&gt;
 
 &lt;p&gt;this display hook will automatically pretty print returned values from cli expressions&lt;/p&gt;
 
@@ -284,10 +283,10 @@ sys.ps1 = line
     
     <item>
       <title>Cool Software</title>
-      <link>http://sigmonsays.github.io/2014/10/Cool-Software/</link>
-      <pubDate>Wed, 22 Oct 2014 09:41:33 PDT</pubDate>
+      <link>http://sigmonsays.github.io/2014/10/cool-software/</link>
+      <pubDate>Wed, 22 Oct 2014 09:41:33 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/2014/10/Cool-Software/</guid>
+      <guid>http://sigmonsays.github.io/2014/10/cool-software/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Task Spooler - &lt;a href=&#34;http://vicerveza.homeunix.net/~viric/soft/ts/&#34;&gt;http://vicerveza.homeunix.net/~viric/soft/ts/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -299,12 +298,12 @@ sys.ps1 = line
     <item>
       <title>ban systemd</title>
       <link>http://sigmonsays.github.io/2014/09/ban-systemd/</link>
-      <pubDate>Mon, 22 Sep 2014 21:26:16 PDT</pubDate>
+      <pubDate>Mon, 22 Sep 2014 21:26:16 -0700</pubDate>
       
       <guid>http://sigmonsays.github.io/2014/09/ban-systemd/</guid>
       <description>
 
-&lt;h1 id=&#34;toc_0&#34;&gt;updates&lt;/h1&gt;
+&lt;h1 id=&#34;updates:749128d591ff05498577f36910c58f15&#34;&gt;updates&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Nov2014 - an exploit in systemd resolver - &lt;a href=&#34;https://news.ycombinator.com/item?id=8595335&#34;&gt;https://news.ycombinator.com/item?id=8595335&lt;/a&gt;&lt;/p&gt;
@@ -325,7 +324,7 @@ sys.ps1 = line
 &lt;li&gt;&lt;p&gt;website which describes a lot of good points - &lt;a href=&#34;http://boycottsystemd.org/&#34;&gt;http://boycottsystemd.org/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;toc_1&#34;&gt;why I want to ban systemd&lt;/h1&gt;
+&lt;h1 id=&#34;why-i-want-to-ban-systemd:749128d591ff05498577f36910c58f15&#34;&gt;why I want to ban systemd&lt;/h1&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;the developers and members on the irc room are aggressive and counter productive and only seem to want to fight
@@ -366,7 +365,7 @@ rather than try to solve any issue.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;toc_2&#34;&gt;More updates to follow..&lt;/h1&gt;
+&lt;h1 id=&#34;more-updates-to-follow:749128d591ff05498577f36910c58f15&#34;&gt;More updates to follow..&lt;/h1&gt;
 
 &lt;p&gt;I&amp;rsquo;m pretty entertained but really saddened by the current situation. I joined the IRC room to ask abuot a bug and only
 got racial comments and vulgar language when I inquired about a bug. We didn&amp;rsquo;t even get to discussing the
@@ -379,7 +378,7 @@ technical reasons, I had to leave the channel. I might try again later, I am cur
     <item>
       <title>firewall</title>
       <link>http://sigmonsays.github.io/static/firewall/</link>
-      <pubDate>Fri, 12 Sep 2014 09:38:41 PDT</pubDate>
+      <pubDate>Fri, 12 Sep 2014 09:38:41 -0700</pubDate>
       
       <guid>http://sigmonsays.github.io/static/firewall/</guid>
       <description>&lt;p&gt;Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.&lt;/p&gt;
@@ -484,7 +483,7 @@ done
     <item>
       <title>building packages with docker</title>
       <link>http://sigmonsays.github.io/2014/09/building-packages-with-docker/</link>
-      <pubDate>Thu, 11 Sep 2014 15:32:44 PDT</pubDate>
+      <pubDate>Thu, 11 Sep 2014 15:32:44 -0700</pubDate>
       
       <guid>http://sigmonsays.github.io/2014/09/building-packages-with-docker/</guid>
       <description>
@@ -514,7 +513,7 @@ it is a pretty expensive operation when there is a lot of dependencies.&lt;/p&gt
 &lt;p&gt;because i&amp;rsquo;m not interested in explaining how the other 2 method work, i&amp;rsquo;ll leave that out. However, let me
 explain how the docker build works.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;docker&lt;/h2&gt;
+&lt;h2 id=&#34;docker:98af894833143101fe4ab2edf48c5c0c&#34;&gt;docker&lt;/h2&gt;
 
 &lt;p&gt;The idea is to exploit the layered file system of containers to provide build dependencies. Since
 its a copy on write file system, this means providing a container with all build deps present is
@@ -575,14 +574,14 @@ it to disk and builds the package.&lt;/p&gt;
     <item>
       <title>docker wishlist</title>
       <link>http://sigmonsays.github.io/2014/09/docker-wishlist/</link>
-      <pubDate>Sun, 07 Sep 2014 19:37:21 PDT</pubDate>
+      <pubDate>Sun, 07 Sep 2014 19:37:21 -0700</pubDate>
       
       <guid>http://sigmonsays.github.io/2014/09/docker-wishlist/</guid>
       <description>
 
 &lt;p&gt;things I find that I wish docker supported&lt;/p&gt;
 
-&lt;h1 id=&#34;toc_0&#34;&gt;dockerfile&lt;/h1&gt;
+&lt;h1 id=&#34;dockerfile:1a0ce501ba8da3f2c3a74598e01110ce&#34;&gt;dockerfile&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;store build context with the image&lt;/strong&gt;&lt;/p&gt;
@@ -613,7 +612,7 @@ RUN cd package-0.1.3 &amp;amp;&amp;amp; make &amp;amp;&amp;amp; \
     <item>
       <title>docker networking performance</title>
       <link>http://sigmonsays.github.io/2014/09/docker-networking-performance/</link>
-      <pubDate>Fri, 05 Sep 2014 07:33:28 PDT</pubDate>
+      <pubDate>Fri, 05 Sep 2014 07:33:28 -0700</pubDate>
       
       <guid>http://sigmonsays.github.io/2014/09/docker-networking-performance/</guid>
       <description>
@@ -650,7 +649,7 @@ performance degrades around 40-50% due to docker having to reverse proxy the con
 &lt;p&gt;I really believe that if performance is important, there should be a option of disabling docker-proxy,
 but I will focus on this more later if I really need to.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;issues with docker-proxy&lt;/h2&gt;
+&lt;h2 id=&#34;issues-with-docker-proxy:8077ca4b89f46c4b55abdf120961e82e&#34;&gt;issues with docker-proxy&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;software reverse proxy should not be enabled by default&lt;/li&gt;
@@ -670,7 +669,7 @@ have yet to investigate it further.&lt;/p&gt;
     <item>
       <title>interesting tech</title>
       <link>http://sigmonsays.github.io/2014/09/interesting-tech-2/</link>
-      <pubDate>Wed, 03 Sep 2014 10:30:30 PDT</pubDate>
+      <pubDate>Wed, 03 Sep 2014 10:30:30 -0700</pubDate>
       
       <guid>http://sigmonsays.github.io/2014/09/interesting-tech-2/</guid>
       <description>&lt;ul&gt;
@@ -687,7 +686,7 @@ have yet to investigate it further.&lt;/p&gt;
     <item>
       <title>interesting tech</title>
       <link>http://sigmonsays.github.io/2014/09/interesting-tech/</link>
-      <pubDate>Tue, 02 Sep 2014 10:38:37 PDT</pubDate>
+      <pubDate>Tue, 02 Sep 2014 10:38:37 -0700</pubDate>
       
       <guid>http://sigmonsays.github.io/2014/09/interesting-tech/</guid>
       <description>&lt;ul&gt;
@@ -708,15 +707,24 @@ decentralized cloud messaging with broadcast, request/reply and pubsub messaging
     </item>
     
     <item>
-      <title>about</title>
+      <title>About</title>
       <link>http://sigmonsays.github.io/about/</link>
-      <pubDate>Tue, 02 Sep 2014 09:38:41 PDT</pubDate>
+      <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
       
       <guid>http://sigmonsays.github.io/about/</guid>
       <description>&lt;p&gt;Start of another blog, developer focused, as a way to write about, keep track of and archive various technologies and trends.&lt;/p&gt;
 
 &lt;p&gt;Hopefully this involves into something for now but mostly its a place to put random thought.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://sigmonsays.github.io/contact/</link>
+      <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/contact/</guid>
+      <description></description>
     </item>
     
   </channel>

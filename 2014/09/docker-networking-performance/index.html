@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -13,22 +14,21 @@
   <link rel="stylesheet" href="http://sigmonsays.github.io/css/poole.css">
   <link rel="stylesheet" href="http://sigmonsays.github.io/css/syntax.css">
   <link rel="stylesheet" href="http://sigmonsays.github.io/css/hyde.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.png">
 
   
   <link href="" rel="alternate" type="application/rss+xml" title="sig" />
 </head>
 
-<body>
-
-<div class="sidebar">
+	<body class="">
+		<div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1>sig</h1>
+      <a href="http://sigmonsays.github.io/"><h1>sig</h1></a>
       <p class="lead">
        tech, life and random 
       </p>
@@ -44,11 +44,19 @@
 </div>
 
 
-    <div class="content container">
-<div class="post">
-  <h1>docker networking performance</h1>
-  <span class="post-date">Fri, Sep 5, 2014</span>
-      
+		<div class="content container">
+			<div class="post">
+			 	<h1>docker networking performance</h1>
+
+            <ul id="tags">
+                 
+                     <li><a href="tags/docker">docker</a> </li>
+                       
+                    </ul>
+
+
+			  <span class="post-date">Fri, Sep 5, 2014</span>
+			      
 
 <p>While trying to determine the performance overhead of a simple docker container setup, I discovered several
 issues related to network performance.</p>
@@ -82,7 +90,7 @@ performance degrades around 40-50% due to docker having to reverse proxy the con
 <p>I really believe that if performance is important, there should be a option of disabling docker-proxy,
 but I will focus on this more later if I really need to.</p>
 
-<h2 id="toc_0">issues with docker-proxy</h2>
+<h2 id="issues-with-docker-proxy:8077ca4b89f46c4b55abdf120961e82e">issues with docker-proxy</h2>
 
 <ul>
 <li>software reverse proxy should not be enabled by default</li>
@@ -97,27 +105,10 @@ used in the first place to handle local traffic. iptables is used to route the n
 traffic externally, so I wonder, why the proxy in userland. It seems pointless but I
 have yet to investigate it further.</p>
 
-</div>
+			</div>
 
-<h1>Comments</h1>
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'sigmonsays';
-    var disqus_identifier = 'http:\/\/sigmonsays.github.io\/2014\/09\/docker-networking-performance\/';
-    var disqus_title = 'docker networking performance';
-    var disqus_url = 'http:\/\/sigmonsays.github.io\/2014\/09\/docker-networking-performance\/';
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-</div>
-
+			
+		</div>
 
   </body>
 </html>

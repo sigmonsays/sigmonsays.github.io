@@ -1,7 +1,7 @@
-{{ template "theme/chrome/head.html" . }}
-<body>
+{{ partial "head.html" . }}
+<body class="{{ .Site.Params.themeColor }}">
 
-{{ template "theme/chrome/sidebar.html" . }}
+{{ partial "sidebar.html" . }}
 
     <div class="content container">
 <div class="posts">
@@ -19,12 +19,8 @@
     {{ .Content }}
   </div>
   {{ end }}
-
-
 </div>
-
-
-
+</div>
 
   </body>
 </html>
