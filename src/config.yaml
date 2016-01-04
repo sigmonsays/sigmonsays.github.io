@@ -9,6 +9,15 @@ baseurl: "http://sigmonsays.github.io/"
 permalinks:
   post: /:year/:month/:slug/
 
+menu:
+  main:
+   - Name: "About"
+     Identifier: "about"
+     URL: "/about/"
+   - Name: "Contact"
+     Identifier: "contact"
+     URL: "/contact/"
+
 taxonomies:
   tag: "tags"
   category: "categories"
