@@ -5,8 +5,83 @@
     <link>http://sigmonsays.github.io/post/</link>
     <description>Recent content in Posts on sig</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 05 Feb 2015 04:20:00 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jan 2016 21:33:07 -0800</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>git-watch</title>
+      <link>http://sigmonsays.github.io/2016/01/git-watch/</link>
+      <pubDate>Sun, 03 Jan 2016 21:33:07 -0800</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2016/01/git-watch/</guid>
+      <description>&lt;p&gt;git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.&lt;/p&gt;
+
+&lt;p&gt;git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either
+code (in git) or configuration.&lt;/p&gt;
+
+&lt;p&gt;So here is a simple example which will automatically rebuild and restart a application when you git push (&lt;a href=&#34;https://github.com/sigmonsays/git-watch/tree/master/examples/go&#34;&gt;https://github.com/sigmonsays/git-watch/tree/master/examples/go&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Below in git-watch.yaml we check the upstream every 5 seconds and merge the master branch in. execcmd is &amp;ldquo;my_application&amp;rdquo; which is a simple application. When a upstream
+change is detected, we invoke the updatecmd. If the updatecmd does not succeed, the restart process is aborted. Assuming the update command succeeds, we then invoke the install
+command. After the install command succeeds, the application is restarted.&lt;/p&gt;
+
+&lt;p&gt;git-watch.yaml&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  # reinstall a go application when changes are detected in a git remote
+  checkinterval: 5
+  localbranch: master
+  execcmd: my_application
+  updatecmd: make
+  install: make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Makefile&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  REPO=github.com/sigmonsays/git-watch
+
+  all:
+     go get -u $(REPO)/examples/go/my_application/...
+
+  install:
+     go install $(REPO)/examples/go/my_application
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Full usage&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Usage of git-watch:
+ -branch string
+       local branch (default &amp;quot;master&amp;quot;)
+ -check int
+       git check interval (seconds) (default 5)
+ -config string
+       git watch config (default &amp;quot;git-watch.yaml&amp;quot;)
+ -dir string
+       change directory before starting (default &amp;quot;.&amp;quot;)
+ -exec-cmd string
+       exec command (default &amp;quot;make run&amp;quot;)
+ -http string
+       start a http server
+ -inherit-env
+       inherit environment
+ -inotify-dir string
+       use inotify as a trigger in directory
+ -install-cmd string
+       install command (default &amp;quot;make install&amp;quot;)
+ -loglevel string
+       set log level (default &amp;quot;error&amp;quot;)
+ -once
+       run once and exit
+ -static-dir string
+       static directory (default &amp;quot;static&amp;quot;)
+ -update-cmd string
+       update command (default &amp;quot;make&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[1] - &lt;a href=&#34;https://github.com/sigmonsays/git-watch&#34;&gt;https://github.com/sigmonsays/git-watch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Cool Software </title>

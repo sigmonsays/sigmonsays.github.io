@@ -1,0 +1,130 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.16-DEV" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> git-watch &middot; sig </title>
+
+  
+  <link rel="stylesheet" href="http://sigmonsays.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://sigmonsays.github.io/css/syntax.css">
+  <link rel="stylesheet" href="http://sigmonsays.github.io/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="sig" />
+</head>
+
+	<body class="">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://sigmonsays.github.io/"><h1>sig</h1></a>
+      <p class="lead">
+       tech, life and random 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; 2016. All rights reserved. </p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>git-watch</h1>
+
+            <ul id="tags">
+                 
+                    </ul>
+
+
+			  <span class="post-date">Sun, Jan 3, 2016</span>
+			      <p>git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.</p>
+
+<p>git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either
+code (in git) or configuration.</p>
+
+<p>So here is a simple example which will automatically rebuild and restart a application when you git push (<a href="https://github.com/sigmonsays/git-watch/tree/master/examples/go">https://github.com/sigmonsays/git-watch/tree/master/examples/go</a>)</p>
+
+<p>Below in git-watch.yaml we check the upstream every 5 seconds and merge the master branch in. execcmd is &ldquo;my_application&rdquo; which is a simple application. When a upstream
+change is detected, we invoke the updatecmd. If the updatecmd does not succeed, the restart process is aborted. Assuming the update command succeeds, we then invoke the install
+command. After the install command succeeds, the application is restarted.</p>
+
+<p>git-watch.yaml</p>
+
+<pre><code>  # reinstall a go application when changes are detected in a git remote
+  checkinterval: 5
+  localbranch: master
+  execcmd: my_application
+  updatecmd: make
+  install: make install
+</code></pre>
+
+<p>Makefile</p>
+
+<pre><code>  REPO=github.com/sigmonsays/git-watch
+
+  all:
+     go get -u $(REPO)/examples/go/my_application/...
+
+  install:
+     go install $(REPO)/examples/go/my_application
+</code></pre>
+
+<p>Full usage</p>
+
+<pre><code>Usage of git-watch:
+ -branch string
+       local branch (default &quot;master&quot;)
+ -check int
+       git check interval (seconds) (default 5)
+ -config string
+       git watch config (default &quot;git-watch.yaml&quot;)
+ -dir string
+       change directory before starting (default &quot;.&quot;)
+ -exec-cmd string
+       exec command (default &quot;make run&quot;)
+ -http string
+       start a http server
+ -inherit-env
+       inherit environment
+ -inotify-dir string
+       use inotify as a trigger in directory
+ -install-cmd string
+       install command (default &quot;make install&quot;)
+ -loglevel string
+       set log level (default &quot;error&quot;)
+ -once
+       run once and exit
+ -static-dir string
+       static directory (default &quot;static&quot;)
+ -update-cmd string
+       update command (default &quot;make&quot;)
+</code></pre>
+
+<ul>
+<li>[1] - <a href="https://github.com/sigmonsays/git-watch">https://github.com/sigmonsays/git-watch</a></li>
+</ul>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>
