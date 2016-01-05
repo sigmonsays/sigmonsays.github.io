@@ -3,8 +3,12 @@ title: "sig"
 contentdir: "content"
 layoutdir: "layouts"
 publishdir: "public"
+
 indexes:
+  tag: "tags"
   category: "categories"
+  series: "series"
+
 baseurl: "http://sigmonsays.github.io/"
 permalinks:
   post: /:year/:month/:slug/
