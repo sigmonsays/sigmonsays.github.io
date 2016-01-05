@@ -12,7 +12,7 @@ clean:
 
 dev:
 	git status
-	hugo server -w -d ../tmp --theme=$(THEME)  --buildDrafts
+	hugo server --baseURL http://192.168.33.2 --bind 0.0.0.0 -w -d ../tmp --theme=$(THEME)  --buildDrafts
 
 post:
 	hugo new post/example.md
