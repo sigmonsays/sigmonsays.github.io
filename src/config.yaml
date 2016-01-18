@@ -21,6 +21,9 @@ menu:
    - Name: "Contact"
      Identifier: "contact"
      URL: "/contact/"
+   - Name: "Github"
+     Identifier: "github"
+     URL: "https://github.com/sigmonsays"
 
 taxonomies:
   tag: "tags"
