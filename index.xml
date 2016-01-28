@@ -802,5 +802,17 @@ decentralized cloud messaging with broadcast, request/reply and pubsub messaging
       <description></description>
     </item>
     
+    <item>
+      <title>Sudo</title>
+      <link>http://sigmonsays.github.io/sudo/</link>
+      <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/sudo/</guid>
+      <description>&lt;p&gt;$ sudo -i
+    [sudo] password for sig:
+    sig is not in the sudoers file.  This incident will be reported.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
