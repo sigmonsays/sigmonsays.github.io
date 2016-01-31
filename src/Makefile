@@ -1,5 +1,7 @@
 THEME = hyde
 
+#HUGO_FLAGS := --baseURL http://192.168.33.2
+
 all:
 	@echo building site..
 	hugo -t $(THEME) -d ../data
@@ -12,7 +14,7 @@ clean:
 
 dev:
 	git status
-	hugo server --baseURL http://192.168.33.2 --bind 0.0.0.0 -w -d ../tmp --theme=$(THEME)  --buildDrafts
+	hugo server $(HUGO_FLAGS) --bind 0.0.0.0 -w -d ../tmp --theme=$(THEME)  --buildDrafts
 
 post:
 	hugo new post/example.md

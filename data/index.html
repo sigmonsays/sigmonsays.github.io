@@ -57,6 +57,29 @@
       
   <div class="post">
     <h1 class="post-title">
+      <a href="http://sigmonsays.github.io/2016/01/paste-an-hour-long-project/">
+        paste, an hour long project
+      </a>
+    </h1>
+
+    <span class="post-date">Sun, Jan 31, 2016</span>
+
+    <p>I&rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.</p>
+
+<p>It has always been bothersome to me that any paste, or &ldquo;no paste&rdquo; command line client has to be needlessly complex. Some i&rsquo;ve tried to
+use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing
+more than curl. Its code is on github [1] and the client is rediculously simple:</p>
+
+<pre><code>#!/bin/bash
+paste() { curl --data-binary @- http://paste.grepped.org/paste ;  }
+</code></pre>
+
+<p>github <a href="https://github.com/sigmonsays/paste">https://github.com/sigmonsays/paste</a></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="http://sigmonsays.github.io/2016/01/interesting-tech-jan-2016/">
         Interesting tech Jan 2016
       </a>

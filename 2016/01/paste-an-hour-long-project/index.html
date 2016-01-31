@@ -1,0 +1,81 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.16-DEV" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> paste, an hour long project &middot; sig </title>
+
+  
+  <link rel="stylesheet" href="http://sigmonsays.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://sigmonsays.github.io/css/syntax.css">
+  <link rel="stylesheet" href="http://sigmonsays.github.io/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="sig" />
+</head>
+
+	<body class="">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://sigmonsays.github.io/"><h1>sig</h1></a>
+      <p class="lead">
+       tech, life and random 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+        <li><a href="/about/"> About </a></li>
+      
+        <li><a href="/contact/"> Contact </a></li>
+      
+        <li><a href="https://github.com/sigmonsays"> Github </a></li>
+      
+    </ul>
+
+    <p>&copy; 2016. All rights reserved. </p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>paste, an hour long project</h1>
+
+            <ul id="tags">
+                 
+                    </ul>
+
+
+			  <span class="post-date">Sun, Jan 31, 2016</span>
+			      <p>I&rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.</p>
+
+<p>It has always been bothersome to me that any paste, or &ldquo;no paste&rdquo; command line client has to be needlessly complex. Some i&rsquo;ve tried to
+use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing
+more than curl. Its code is on github [1] and the client is rediculously simple:</p>
+
+<pre><code>#!/bin/bash
+paste() { curl --data-binary @- http://paste.grepped.org/paste ;  }
+</code></pre>
+
+<p>github <a href="https://github.com/sigmonsays/paste">https://github.com/sigmonsays/paste</a></p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>
