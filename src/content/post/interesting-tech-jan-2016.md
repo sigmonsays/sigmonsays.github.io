@@ -11,3 +11,4 @@ title = "Interesting tech Jan 2016"
   it very interesting for mobile (and more) development.
 
 
+- sheepdog - distributed block storage for qemu - http://sheepdog.github.io/sheepdog/
