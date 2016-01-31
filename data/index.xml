@@ -5,8 +5,23 @@
     <link>http://sigmonsays.github.io/</link>
     <description>Recent content on sig</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 03 Jan 2016 21:33:07 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 31 Jan 2016 10:52:23 -0800</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Interesting tech Jan 2016</title>
+      <link>http://sigmonsays.github.io/2016/01/interesting-tech-jan-2016/</link>
+      <pubDate>Sun, 31 Jan 2016 10:52:23 -0800</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2016/01/interesting-tech-jan-2016/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;MQTT - &lt;a href=&#34;http://mqtt.org/&#34;&gt;http://mqtt.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;MQTT is a machine-to-machine messaging protocol designed for IoT. Its design goals are small code and resource footprint is required (network, memory, etc) making
+  it very interesting for mobile (and more) development.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>git-watch</title>
