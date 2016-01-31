@@ -12,3 +12,7 @@ title = "Interesting tech Jan 2016"
 
 
 - sheepdog - distributed block storage for qemu - http://sheepdog.github.io/sheepdog/
+
+- snap - https://github.com/intelsdi-x/snap
+
+- thermal cameras - http://www.thermal.com/thermal-cameras/

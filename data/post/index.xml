@@ -42,7 +42,11 @@ paste() { curl --data-binary @- http://paste.grepped.org/paste ;  }
   it very interesting for mobile (and more) development.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;sheepdog - distributed block storage for qemu - &lt;a href=&#34;http://sheepdog.github.io/sheepdog/&#34;&gt;http://sheepdog.github.io/sheepdog/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sheepdog - distributed block storage for qemu - &lt;a href=&#34;http://sheepdog.github.io/sheepdog/&#34;&gt;http://sheepdog.github.io/sheepdog/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;snap - &lt;a href=&#34;https://github.com/intelsdi-x/snap&#34;&gt;https://github.com/intelsdi-x/snap&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;thermal cameras - &lt;a href=&#34;http://www.thermal.com/thermal-cameras/&#34;&gt;http://www.thermal.com/thermal-cameras/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
