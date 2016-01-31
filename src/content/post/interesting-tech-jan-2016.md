@@ -16,3 +16,5 @@ title = "Interesting tech Jan 2016"
 - snap - https://github.com/intelsdi-x/snap
 
 - thermal cameras - http://www.thermal.com/thermal-cameras/
+
+- debops - http://docs.debops.org/en/latest/index.html - automate installation of all your data center components
