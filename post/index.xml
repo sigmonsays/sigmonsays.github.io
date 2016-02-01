@@ -49,6 +49,8 @@ paste() { curl --data-binary @- http://paste.grepped.org/paste ;  }
 &lt;li&gt;&lt;p&gt;thermal cameras - &lt;a href=&#34;http://www.thermal.com/thermal-cameras/&#34;&gt;http://www.thermal.com/thermal-cameras/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;debops - &lt;a href=&#34;http://docs.debops.org/en/latest/index.html&#34;&gt;http://docs.debops.org/en/latest/index.html&lt;/a&gt; - automate installation of all your data center components&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;api.data.gov&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
