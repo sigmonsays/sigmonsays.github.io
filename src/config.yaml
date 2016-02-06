@@ -24,6 +24,9 @@ menu:
    - Name: "Github"
      Identifier: "github"
      URL: "https://github.com/sigmonsays"
+   - Name: "PGP"
+     Identifier: "keybase"
+     URL: "https://github.com/keybase"
 
 taxonomies:
   tag: "tags"
