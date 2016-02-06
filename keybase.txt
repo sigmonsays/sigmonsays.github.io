@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/sigmonsays
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://sigmonsays.github.io
+  * I am sigmonsays (https://keybase.io/sigmonsays) on keybase.
+  * I have a public key with fingerprint DA4C 82DC C4B0 3E93 1EF2  86BE CB3A F88F E1E3 28BA
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010189b332191bf1e1ca89d0b0cd0df003a6cdddf53a4eb590a85656f12fe3ab8ad80a",
+            "fingerprint": "da4c82dcc4b03e931ef286becb3af88fe1e328ba",
+            "host": "keybase.io",
+            "key_id": "cb3af88fe1e328ba",
+            "kid": "010189b332191bf1e1ca89d0b0cd0df003a6cdddf53a4eb590a85656f12fe3ab8ad80a",
+            "uid": "01c56184952cf2a35afb3dacde855619",
+            "username": "sigmonsays"
+        },
+        "service": {
+            "hostname": "sigmonsays.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1454725593,
+    "expire_in": 157680000,
+    "prev": "1198b616d3c0ce4abc25c3ed5179c6e3c9fd0420fe33ede275d5f58dc2de9a1e",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.49
+Comment: https://keybase.io/crypto
+
+yMIiAnicrZJZaBNBGMcTr2JECVUR+lB1wQOMcWY3s5kNnniiUlpRUVHCXJuuprtp
+dlNtxQsFrVcfxBe1CAV9qFR98KhVUUOhjYKiVjSK4gEiguKJB16zHk/66LwM883/
+/5vv/zGdA3sHQsFLlx/ObjzQFg5eudSSCyw+ubS4VqEOr1cSa5VV4ucm0ly4XnKV
+xZWEAiCA2KCapkIDUhMKyAg2OKCAccBNADSiM865iTQSExQZgGCkI92Eqik0QjHh
+GBAlopiWnRLZTNayPYnlJMawyhmLUaAJQ4PCVLFOBaMaMTE2BRSaiqlvrHZc3yGb
+o8QVUcuRNXlI/mzvH/r/3HfuN44hHeKYgVRmqkRDxKQaJ4wLjOSF4QtdkbVJjZBq
+10rVOLZL6l1lXUSR9TqLCX+0fpa/NNGU5VXn6K9kmazjOcxJS0W152XchE/w6jO+
+ZbWgyd+wJLVsLicqHXUi61qOrSSgVDLP8ukwhmJxFSFDiyhiTcbKiqTlK1Bcx0Au
+/x1RJ5EQGpjqUOcaA0zECGUqYprgCMYNpguNGSYHMRXImciqUOOIIxNhzlQuDAKF
+4sertR3JllCPpH4ls4mXywplXf7i8j6BYCjQr28v/6sFQv3Dfz5g1faSr+VvSlrv
+hYzQrMLXxaM3fqu8W1J5s51kjubw9EdgbM3J3vabJe1r9k2cWTWlp9C/pPF+cQ8V
+x9u2RW+UNg3f/C68YVbLgK0FNHXwjs7gok3p8flrn0ftH2eB2z1ps9AwpuNOa9cJ
+iOdMu7Bl14Pr+SYabSyb/LLj1LNNg1qHqtaw2q4ZDWJkVaHsCe/5XLxVPDf77vm5
+2z+VD7cOnH6yshp8Wp4+e3Y9aQmT7u7m9/HD274/mLfA3D3kTHTKwtqyY6uvfjw+
+KLBiZ6jp7dPpe8tfGJNfTbo8wn39YWHphM7u+clRd+Z1ZUL8UMWRh5nSzV+aI88f
+LduZn3Dw2uNIRSC+46l55geU0Ux6
+=tzCZ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sigmonsays
+
+==================================================================
+
