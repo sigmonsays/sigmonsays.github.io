@@ -9,7 +9,7 @@ tags = [ "keybase", "pgp", "security"  ]
 
 my keybase profile is https://keybase.io/sigmonsays
 
-my public key is can be downloaded from https://keybase.io/sigmonsays/key.asc or copied and pasted below:
+my public key can be downloaded from https://keybase.io/sigmonsays/key.asc or copied and pasted below:
 
 
       -----BEGIN PGP PUBLIC KEY BLOCK-----
