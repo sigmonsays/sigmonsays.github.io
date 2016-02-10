@@ -14,6 +14,7 @@ enlightnement 0.20 caused all sorts of graphics problems
 i tried a bunch of different things, like hardware and software rendering without luck
 
 the problems I had were many
+
 - chrome kept freezing which only began happening in the new e. I managed to work around it by disabling GL in chrome
 - pidgin systray icon went away
 - sluggish UI after hours of usage

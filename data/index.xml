@@ -25,17 +25,29 @@ window maker and then fluxbox before I made the switch to enlightenment (0.16 at
 
 &lt;p&gt;i tried a bunch of different things, like hardware and software rendering without luck&lt;/p&gt;
 
-&lt;p&gt;the problems I had were many
-- chrome kept freezing which only began happening in the new e. I managed to work around it by disabling GL in chrome
-- pidgin systray icon went away
-- sluggish UI after hours of usage
-- while using hardware rendering, windows would just render bloack
-  - no matter what I did, restart e, minimize/shade/move window, etc
-- while using software rendering
-  - really high cpu usage
-- under both hardware and software I would see windows flickering all the time
-  - windows would not redraw properly quite item
-  - notably xterm which is just not acceptable&lt;/p&gt;
+&lt;p&gt;the problems I had were many&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;chrome kept freezing which only began happening in the new e. I managed to work around it by disabling GL in chrome&lt;/li&gt;
+&lt;li&gt;pidgin systray icon went away&lt;/li&gt;
+&lt;li&gt;sluggish UI after hours of usage&lt;/li&gt;
+&lt;li&gt;while using hardware rendering, windows would just render bloack
+
+&lt;ul&gt;
+&lt;li&gt;no matter what I did, restart e, minimize/shade/move window, etc&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;while using software rendering
+
+&lt;ul&gt;
+&lt;li&gt;really high cpu usage&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;under both hardware and software I would see windows flickering all the time
+
+&lt;ul&gt;
+&lt;li&gt;windows would not redraw properly quite item&lt;/li&gt;
+&lt;li&gt;notably xterm which is just not acceptable&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;This is an attempt to keep an ongoing document that describes the issues and fixes i&amp;rsquo;ve encountered.&lt;/p&gt;
 </description>
