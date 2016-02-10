@@ -5,8 +5,41 @@
     <link>http://sigmonsays.github.io/</link>
     <description>Recent content on sig</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 Feb 2016 18:28:35 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Feb 2016 17:10:00 -0800</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>enlightenment</title>
+      <link>http://sigmonsays.github.io/enlightenment/</link>
+      <pubDate>Tue, 09 Feb 2016 17:10:00 -0800</pubDate>
+      
+      <guid>http://sigmonsays.github.io/enlightenment/</guid>
+      <description>
+
+&lt;p&gt;enlightenment has been my window manager of choice for a very long time maintly because of its speed. I used to run
+window maker and then fluxbox before I made the switch to enlightenment (0.16 at the time iirc).&lt;/p&gt;
+
+&lt;h1 id=&#34;e20-feb2016:e2d74d2c54dc965c42c7ac5c556b6456&#34;&gt;e20 - feb2016&lt;/h1&gt;
+
+&lt;p&gt;enlightnement 0.20 caused all sorts of graphics problems&lt;/p&gt;
+
+&lt;p&gt;i tried a bunch of different things, like hardware and software rendering without luck&lt;/p&gt;
+
+&lt;p&gt;the problems I had were many
+- chrome kept freezing which only began happening in the new e. I managed to work around it by disabling GL in chrome
+- pidgin systray icon went away
+- sluggish UI after hours of usage
+- while using hardware rendering, windows would just render bloack
+  - no matter what I did, restart e, minimize/shade/move window, etc
+- while using software rendering
+  - really high cpu usage
+- under both hardware and software I would see windows flickering all the time
+  - windows would not redraw properly quite item
+  - notably xterm which is just not acceptable&lt;/p&gt;
+
+&lt;p&gt;This is an attempt to keep an ongoing document that describes the issues and fixes i&amp;rsquo;ve encountered.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>keybase</title>
@@ -909,29 +942,6 @@ have yet to investigate it further.&lt;/p&gt;
 &lt;li&gt;website &lt;a href=&#34;https://github.com/milosgajdos83/tenus&#34;&gt;https://github.com/milosgajdos83/tenus&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;mentioned in article - &lt;a href=&#34;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&#34;&gt;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>interesting tech</title>
-      <link>http://sigmonsays.github.io/2014/09/interesting-tech/</link>
-      <pubDate>Tue, 02 Sep 2014 10:38:37 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/2014/09/interesting-tech/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;otro - javascript interpreter in Go - &lt;a href=&#34;https://github.com/robertkrimen/otto&#34;&gt;https://github.com/robertkrimen/otto&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;C10M - &lt;a href=&#34;http://c10m.robertgraham.com/p/manifesto.html&#34;&gt;http://c10m.robertgraham.com/p/manifesto.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Completely decentralized cloud messaging - &lt;a href=&#34;http://iris.karalabe.com&#34;&gt;http://iris.karalabe.com&lt;/a&gt;
-decentralized cloud messaging with broadcast, request/reply and pubsub messaging with literally zero configuration.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Fast and Simple Open Source &amp;ldquo;Github&amp;rdquo; - &lt;a href=&#34;https://github.com/gogits/gogs&#34;&gt;https://github.com/gogits/gogs&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Quick VPN using SSH - &lt;a href=&#34;http://backreference.org/2009/11/13/openssh-based-vpns/&#34;&gt;http://backreference.org/2009/11/13/openssh-based-vpns/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Rudder - Software Defined Networks - &lt;a href=&#34;https://github.com/coreos/rudder &#34;&gt;https://github.com/coreos/rudder &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
