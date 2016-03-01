@@ -157,7 +157,13 @@ window maker and then fluxbox before I made the switch to enlightenment (0.16 at
 &lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;find unused packages in a go repository - &lt;a href=&#34;https://github.com/nf/deadleaves&#34;&gt;https://github.com/nf/deadleaves&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;AppImages is a interesting format that is similar to other &amp;ldquo;self contained&amp;rdquo; technologies like
+CDE (&lt;a href=&#34;http://www.pgbovine.net/cde.html&#34;&gt;http://www.pgbovine.net/cde.html&lt;/a&gt;). I havn&amp;rsquo;t read into it yet but lets hope it does better
+than everyone else&amp;hellip;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;AppImage is at &lt;a href=&#34;https://github.com/probonopd/AppImageKit/wiki/Creating-AppImages&#34;&gt;https://github.com/probonopd/AppImageKit/wiki/Creating-AppImages&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
