@@ -16,3 +16,6 @@ title = "interesting tech feb 2016"
 
   AppImage is at https://github.com/probonopd/AppImageKit/wiki/Creating-AppImages
 
+- The web of names, hashes and UUIDs - https://joearms.github.io/2015/03/12/The_web_of_names.html
+
+  This isn't the first time I read this but I came across it again recently and wanted to save it here
