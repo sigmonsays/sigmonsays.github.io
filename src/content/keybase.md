@@ -9,6 +9,8 @@ tags = [ "keybase", "pgp", "security"  ]
 
 my keybase profile is https://keybase.io/sigmonsays
 
+keybase proof for this site here https://sigmonsays.github.io/keybase.txt
+
 my public key can be downloaded from https://keybase.io/sigmonsays/key.asc or copied and pasted below:
 
 
