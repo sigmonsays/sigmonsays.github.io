@@ -20,7 +20,7 @@
 
 &lt;p&gt;the goal of this program is to find the shortest number of stickers used to make a another word given that you have thousands of stickers&lt;/p&gt;
 
-&lt;p&gt;for instance, with the word &amp;ldquo;WPENGINE&amp;rdquo; printed on them to make for example &amp;ldquo;WWW&amp;rdquo; would take 3 and another example is &amp;ldquo;WINE&amp;rdquo; would take 2.&lt;/p&gt;
+&lt;p&gt;for instance, with the word &amp;ldquo;WPENGINE&amp;rdquo; printed on them to make for example &amp;ldquo;WWW&amp;rdquo; would take 3 and another example is &amp;ldquo;WINE&amp;rdquo; would take 1.&lt;/p&gt;
 
 &lt;p&gt;The programs logic is really quite literal and was enjoyable to write.&lt;/p&gt;
 

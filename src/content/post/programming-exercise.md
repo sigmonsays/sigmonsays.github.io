@@ -11,7 +11,7 @@ I heard from a friend about an interesting interview question that I thought wou
 
 the goal of this program is to find the shortest number of stickers used to make a another word given that you have thousands of stickers
 
-for instance, with the word "WPENGINE" printed on them to make for example "WWW" would take 3 and another example is "WINE" would take 2.
+for instance, with the word "WPENGINE" printed on them to make for example "WWW" would take 3 and another example is "WINE" would take 1.
 
 The programs logic is really quite literal and was enjoyable to write. 
 
