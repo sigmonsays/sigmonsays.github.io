@@ -22,6 +22,13 @@
 
 &lt;p&gt;for instance, with the word &amp;ldquo;WPENGINE&amp;rdquo; printed on them to make for example &amp;ldquo;WWW&amp;rdquo; would take 3 and another example is &amp;ldquo;WINE&amp;rdquo; would take 2.&lt;/p&gt;
 
+&lt;p&gt;The programs logic is really quite literal and was enjoyable to write.&lt;/p&gt;
+
+&lt;p&gt;We have a Sticker type who keeps track of the number of letters used and a pile of stickers which is just a list
+of stickers. We search the pile for a given letter, and if its not found we add another sticker to the pile.&lt;/p&gt;
+
+&lt;p&gt;We keep a dummy sticker object around to validate that we do infact have the letters, and error if not.&lt;/p&gt;
+
 &lt;p&gt;The code&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  package main

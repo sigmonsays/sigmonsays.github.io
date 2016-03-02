@@ -74,6 +74,13 @@
 
 <p>for instance, with the word &ldquo;WPENGINE&rdquo; printed on them to make for example &ldquo;WWW&rdquo; would take 3 and another example is &ldquo;WINE&rdquo; would take 2.</p>
 
+<p>The programs logic is really quite literal and was enjoyable to write.</p>
+
+<p>We have a Sticker type who keeps track of the number of letters used and a pile of stickers which is just a list
+of stickers. We search the pile for a given letter, and if its not found we add another sticker to the pile.</p>
+
+<p>We keep a dummy sticker object around to validate that we do infact have the letters, and error if not.</p>
+
 <p>The code</p>
 
 <pre><code>  package main
