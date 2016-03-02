@@ -13,6 +13,12 @@ the goal of this program is to find the shortest number of stickers used to make
 
 for instance, with the word "WPENGINE" printed on them to make for example "WWW" would take 3 and another example is "WINE" would take 2.
 
+The programs logic is really quite literal and was enjoyable to write. 
+
+We have a Sticker type who keeps track of the number of letters used and a pile of stickers which is just a list
+of stickers. We search the pile for a given letter, and if its not found we add another sticker to the pile.
+
+We keep a dummy sticker object around to validate that we do infact have the letters, and error if not.
 
 The code
 
