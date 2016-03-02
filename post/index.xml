@@ -5,8 +5,171 @@
     <link>http://sigmonsays.github.io/post/</link>
     <description>Recent content in Posts on sig</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 01 Feb 2016 11:31:15 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 02 Mar 2016 14:57:19 -0800</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>programming exercise</title>
+      <link>http://sigmonsays.github.io/2016/03/programming-exercise/</link>
+      <pubDate>Wed, 02 Mar 2016 14:57:19 -0800</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2016/03/programming-exercise/</guid>
+      <description>&lt;p&gt;I heard from a friend about an interesting interview question that I thought would be easy.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The problem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;the goal of this program is to find the shortest number of stickers used to make a another word given that you have thousands of stickers&lt;/p&gt;
+
+&lt;p&gt;for instance, with the word &amp;ldquo;WPENGINE&amp;rdquo; printed on them to make for example &amp;ldquo;WWW&amp;rdquo; would take 3 and another example is &amp;ldquo;WINE&amp;rdquo; would take 2.&lt;/p&gt;
+
+&lt;p&gt;The code&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  package main
+
+  import (
+     &amp;quot;fmt&amp;quot;
+     &amp;quot;os&amp;quot;
+     &amp;quot;strings&amp;quot;
+  )
+
+  func NewSticker(word string) *Sticker {
+     s := &amp;amp;Sticker{
+        letters: make(map[rune]int, 0),
+     }
+     var v int
+     for _, w := range strings.ToLower(word) {
+        v, _ = s.letters[w]
+        v += 1
+        s.letters[w] = v
+     }
+     return s
+  }
+
+  type Sticker struct {
+     letters map[rune]int
+  }
+
+  func (s *Sticker) HasLetter(l rune) bool {
+     count, found := s.letters[l]
+     if found == false {
+        return false
+     }
+     if count &amp;gt; 0 {
+        return true
+     }
+     return false
+  }
+
+  func (s *Sticker) Desc() string {
+     a := make([]string, 0)
+     for l, cnt := range s.letters {
+        a = append(a, fmt.Sprintf(&amp;quot;%s=%d&amp;quot;, string(l), cnt))
+     }
+     return strings.Join(a, &amp;quot; &amp;quot;)
+  }
+
+  func (s *Sticker) UseLetter(l rune) error {
+
+     fmt.Printf(&amp;quot;using letter %s\n&amp;quot;, string(l))
+
+     count, found := s.letters[l]
+     if found == false {
+        return fmt.Errorf(&amp;quot;sticker doesn&#39;t have letter %s&amp;quot;, l)
+     }
+
+     if count == 0 {
+        return fmt.Errorf(&amp;quot;letter is used up&amp;quot;)
+     }
+
+     count--
+     s.letters[l] = count
+     return nil
+
+  }
+
+  type Pile struct {
+     word     string
+     stickers []*Sticker
+  }
+
+  func NewPile(word string) *Pile {
+     p := &amp;amp;Pile{
+        word:     word,
+        stickers: make([]*Sticker, 0),
+     }
+     return p
+  }
+
+  func (p *Pile) HasLetter(l rune) bool {
+     for _, sticker := range p.stickers {
+        if sticker.HasLetter(l) {
+           return true
+        }
+     }
+     return false
+  }
+
+  func (p *Pile) AddSticker() {
+     p.stickers = append(p.stickers, NewSticker(p.word))
+  }
+
+  func main() {
+
+     var err error
+     sticker_word := &amp;quot;WPENGINE&amp;quot;
+
+     word := &amp;quot;pingping&amp;quot;
+     if len(os.Args) &amp;gt; 1 {
+        word = os.Args[1]
+     }
+     fmt.Printf(&amp;quot;sticker word %s\n&amp;quot;, sticker_word)
+     fmt.Printf(&amp;quot;making word %s\n&amp;quot;, word)
+     pile := NewPile(sticker_word)
+
+     // just to validate we have the letters..
+     sticker := NewSticker(sticker_word)
+
+     for _, l := range word {
+        //s := string(l)
+        fmt.Printf(&amp;quot;letter %s\n&amp;quot;, string(l))
+
+        if sticker.HasLetter(l) == false {
+           err = fmt.Errorf(&amp;quot;no letter %s&amp;quot;, string(l))
+           break
+        }
+
+        if pile.HasLetter(l) == false {
+           pile.AddSticker()
+        }
+
+        // find a sticker that has the letter we&#39;re lookin for in the pile
+        for _, sticker := range pile.stickers {
+           if sticker.HasLetter(l) {
+              sticker.UseLetter(l)
+              continue
+           }
+        }
+
+     }
+
+     if err != nil {
+        fmt.Printf(&amp;quot;ERROR: %s\n&amp;quot;, err)
+        return
+     }
+
+     // print the results
+
+     used := len(pile.stickers)
+     fmt.Printf(&amp;quot;stickers used %d\n&amp;quot;, used)
+
+     for i, sticker := range pile.stickers {
+        fmt.Printf(&amp;quot;sticker #%d  letters %+v\n&amp;quot;, i+1, sticker.Desc())
+     }
+
+  }
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>interesting tech feb 2016</title>
