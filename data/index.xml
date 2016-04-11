@@ -5,8 +5,114 @@
     <link>http://sigmonsays.github.io/</link>
     <description>Recent content on sig</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 02 Mar 2016 14:57:19 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 Apr 2016 11:23:01 -0700</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>hitler uses docker</title>
+      <link>http://sigmonsays.github.io/2016/04/hitler-uses-docker/</link>
+      <pubDate>Mon, 11 Apr 2016 11:23:01 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2016/04/hitler-uses-docker/</guid>
+      <description>&lt;p&gt;video&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=PivpCKEiQOQ&#34;&gt;https://www.youtube.com/watch?v=PivpCKEiQOQ&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;transcript
+-------------------------------
+
+we pushed the images to dockerhub, then used docker-compose to deploy to the cluster
+
+we mounted data volumes on these nodes
+
+and linked app container here
+
+finally we&#39;ve updated the DNS records
+
+
+hitler: so we&#39;re running 20 containers on every node now. when can we get rid of the excess servers?
+
+mein fuhrer...
+
+the kernel... 
+A 3rd party container caused a panic...
+
+we&#39;ve lost 70% of the cluster and the data volumes
+
+.... hitler loses his shit ....
+
+hitler: if you never used docker in production, leave the room now
+
+hitler: isolation my ass!
+
+hitler: what were you thinking?
+
+hitler: who the hell uses public containers from docker hub?
+
+hitler: for all you know they were made by russian hackers!
+
+hitler: you might as well use `curl | sudo bash`
+
+hitler: you think everything in public rpeo is secure because it&#39;s OSS?
+
+hitler: you&#39;re a bunch of node.js hipsters that just HAVE to install everything you read on hacker news!
+
+but docker allows us to run our applications anywhere!
+
+hitler: you use a VM just to run docker on your laptop!
+
+mein fuhrer, docker-machine uses a lightweight VM!
+
+hitler: do you hear yourself? why do we need docker if we&#39;re running a VM?
+
+hitler: a container inside a container!!!
+
+hitler: you archived a whole linux O/S then used CoW storage becaues it&#39;s too big
+
+hitler: Just so you can deploy a 10MB go Binary!
+
+hitler: Dont even talk to me about resource constraints
+
+hitler: all that cgroups black magic and it still can&#39;t stop a simple fork bomb!
+
+hitler: and if the database needs all the resources on the server, how exactly will docker allow you to run more programs on it?
+
+hitler: before docker, I just picked the right size VMs. 
+
+hitler: Suddenly people talk to me about datacenter efficiency and &amp;quot;hyperconvergence&amp;quot;
+
+hitler: everybody thinkst they&#39;re google!
+
+hitler: you don&#39;t even run your own machines anymore!
+
+hitler: people run docker on GCE, in VM instances that run in linux containers on Borg!
+
+hitler: people even think docker is configuration management
+
+hitler: they think docker solves everything!
+
+hitler: even microsoft has containers now
+
+hitler: i&#39;m moving everyone to windows!
+
+dont cry, you can run bash on windows 10 now
+
+hitler: docker is supposed to have better performance
+
+hitler: yet that fucker userland proxy is slower than a 28.8k modem
+
+hitler: and for what
+
+hitler: just bind on port 0
+
+hitler: even enterprises want to run docker now and they still have red hat 5 installed
+
+hitler: you idiots think docker will help your application scale
+
+hitler: use openstack for all I care
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>programming exercise</title>
@@ -1065,63 +1171,6 @@ RUN tar zxf package-0.1.3.tar.gz
 RUN cd package-0.1.3 &amp;amp;&amp;amp; make &amp;amp;&amp;amp; \
     cp package-0.1.3/bin/whatever /usr/bin/whatever
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>docker networking performance</title>
-      <link>http://sigmonsays.github.io/2014/09/docker-networking-performance/</link>
-      <pubDate>Fri, 05 Sep 2014 07:33:28 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/2014/09/docker-networking-performance/</guid>
-      <description>
-
-&lt;p&gt;While trying to determine the performance overhead of a simple docker container setup, I discovered several
-issues related to network performance.&lt;/p&gt;
-
-&lt;p&gt;two issues I have encountered&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;docker-proxy handles local network traffic when using the hosts bridge IP (or localhost)&lt;/li&gt;
-&lt;li&gt;connection tracking overhead of NAT increases memory usage&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;my setup&lt;/p&gt;
-
-&lt;p&gt;I am using docker containers as an easy way to deploy backends on a host. I wish to use
-the hosts bridge IP as a backend to route requests from the load balancer. The load balancer
-is just a haproxy instance running on port 8080 and it uses 500X as backend ports.  I had to
-doctor up the output a little but this is still the output of &lt;strong&gt;docker ps&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;07 haproxy:0.0.1-8 X Up 2 days   0.0.0.0:443-&amp;gt;443/tcp     dev1-haproxy-1      
-                                 0.0.0.0:1983-&amp;gt;1983/tcp
-                                 0.0.0.0:8080-&amp;gt;8080/tcp
-
-b6 api:4.2.0-2   X  Up 14 hours  0.0.0.0:5003-&amp;gt;8080/tcp   dev1-api-3
-f0 api:4.2.0-2   X  Up 14 hours  0.0.0.0:5002-&amp;gt;8080/tcp   dev1-api-2
-7f api:4.2.0-2   X  Up 15 hours  0.0.0.0:5001-&amp;gt;8080/tcp   dev1-api-1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I&amp;rsquo;ve measured performance of docker-proxy process using nginx and timing the transfers and have seen
-performance degrades around 40-50% due to docker having to reverse proxy the connection in software.&lt;/p&gt;
-
-&lt;p&gt;I really believe that if performance is important, there should be a option of disabling docker-proxy,
-but I will focus on this more later if I really need to.&lt;/p&gt;
-
-&lt;h2 id=&#34;issues-with-docker-proxy:8077ca4b89f46c4b55abdf120961e82e&#34;&gt;issues with docker-proxy&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;software reverse proxy should not be enabled by default&lt;/li&gt;
-&lt;li&gt;network performance degradation up to 50% is not acceptable when traffic is &lt;em&gt;accidently&lt;/em&gt;
-routed through the proxy.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;i&amp;rsquo;m not entirely sure why the userland proxy is even required or why it was introduced.
-investigating the proxy history shows proxy was introduced in Apr 2013, commit 930e9a7,
-unfortunately it is not easy to determine the intention and why iptables was not just
-used in the first place to handle local traffic. iptables is used to route the network
-traffic externally, so I wonder, why the proxy in userland. It seems pointless but I
-have yet to investigate it further.&lt;/p&gt;
 </description>
     </item>
     
