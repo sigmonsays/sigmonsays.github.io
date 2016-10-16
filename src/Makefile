@@ -8,6 +8,8 @@ all:
 	rsync -ar ../data/ ../
 	git add -A ../
 	git status
+	@echo
+	@echo open http://sigmonsays.github.io in your web browser..
 
 clean:
 	rm -rf ../data

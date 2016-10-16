@@ -5,4 +5,7 @@ title = "golang FAQ"
 
 +++
 
+# Network programming in Go
+
+http://whispering-gophers.appspot.com/talk.slide#1
 
