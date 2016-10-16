@@ -1,6 +1,6 @@
 +++
 date = "2016-10-16T14:50:29-07:00"
-draft = true
+draft = false
 title = "interesting tech"
 
 +++

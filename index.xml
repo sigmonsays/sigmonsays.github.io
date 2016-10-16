@@ -5,8 +5,79 @@
     <link>http://sigmonsays.github.io/</link>
     <description>Recent content on sig</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 11 Apr 2016 11:23:01 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 16 Oct 2016 14:50:29 -0700</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>interesting tech</title>
+      <link>http://sigmonsays.github.io/2016/10/interesting-tech/</link>
+      <pubDate>Sun, 16 Oct 2016 14:50:29 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2016/10/interesting-tech/</guid>
+      <description>
+
+&lt;h1 id=&#34;hitless-haproxy-reload:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;hitless haproxy reload&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sorah/sandbox/tree/master/ruby/haproxy-master&#34;&gt;https://github.com/sorah/sandbox/tree/master/ruby/haproxy-master&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;go-jira:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;go jira&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Netflix-Skunkworks/go-jira&#34;&gt;https://github.com/Netflix-Skunkworks/go-jira&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I currently use this program in a very limited fashion for managing development workflow. it becomes very handy to build a
+shell script environment for aiding in common development process. Right now its only used to view jira tasks and comment on
+them.&lt;/p&gt;
+
+&lt;p&gt;This is powerful enough for the time being&lt;/p&gt;
+
+&lt;h1 id=&#34;http2-keylog:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;http2 keylog&lt;/h1&gt;
+
+&lt;p&gt;with the growing popularity of http/2 you can&amp;rsquo;t be without the ability to inspect the payload.&lt;/p&gt;
+
+&lt;p&gt;This looks really useful in tracing http/2 (even grpc) with wireshark&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/joneskoo/http2-keylog/&#34;&gt;https://github.com/joneskoo/http2-keylog/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;xo:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;xo&lt;/h1&gt;
+
+&lt;p&gt;generate idomatic go code for SQL databases (Please do not confuse this with an ORM!)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/knq/xo&#34;&gt;https://github.com/knq/xo&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;teleport:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;teleport&lt;/h1&gt;
+
+&lt;p&gt;its a pretty impressive ssh daemon setup that has temporary certs for ssh access through a central auth system, with 2-factor
+auth built in. Every &amp;ldquo;teleport node&amp;rdquo; registers itself too so you can just list specific nodes&lt;/p&gt;
+
+&lt;p&gt;I can imagine something like this becoming &amp;ldquo;the normal&amp;rdquo; in a cloud computing environment&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/gravitational/teleport&#34;&gt;https://github.com/gravitational/teleport&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;sftp-server-library-in-go:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;sftp server library in go&lt;/h1&gt;
+
+&lt;p&gt;SFTP server library in Go, &lt;a href=&#34;https://github.com/taruti/sftpd&#34;&gt;https://github.com/taruti/sftpd&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;toasteroid:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;toasteroid&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;print stuff on your toast.&lt;/li&gt;
+&lt;li&gt;Print Ads on your toast.&lt;/li&gt;
+&lt;li&gt;Profit. What!?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;See &lt;a href=&#34;https://toasteroid.com/&#34;&gt;https://toasteroid.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I imagine a (dystopian?) future where you have to pay a subscription fee to remove ads from your toast in the morning&lt;/p&gt;
+
+&lt;p&gt;This could be the IoT future we all hate.&lt;/p&gt;
+
+&lt;h1 id=&#34;httpcache:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;httpcache&lt;/h1&gt;
+
+&lt;p&gt;A Transport for http.Client that will cache responses according to the HTTP RFC&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/gregjones/httpcache&#34;&gt;https://github.com/gregjones/httpcache&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>hitler uses docker</title>
@@ -1132,44 +1203,6 @@ it to disk and builds the package.&lt;/p&gt;
 &lt;p&gt;Finally, this is the final command that runs the build&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  time package_stream | docker run -i debbie 
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>docker wishlist</title>
-      <link>http://sigmonsays.github.io/2014/09/docker-wishlist/</link>
-      <pubDate>Sun, 07 Sep 2014 19:37:21 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/2014/09/docker-wishlist/</guid>
-      <description>
-
-&lt;p&gt;things I find that I wish docker supported&lt;/p&gt;
-
-&lt;h1 id=&#34;dockerfile:1a0ce501ba8da3f2c3a74598e01110ce&#34;&gt;dockerfile&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;store build context with the image&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;provides ability to change original dockerfile for images you download&lt;/li&gt;
-&lt;li&gt;saves dockerfile and other build artifacts&lt;/li&gt;
-&lt;li&gt;similar in concept to a &amp;ldquo;source package&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;support for variables&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There is very little that the dockerfile actually supports beyond basic static directives.&lt;/p&gt;
-
-&lt;p&gt;If dockerfile supported templates and variables, we could allow repetitive lines to be reduced to
-  the bare minimum. This would allow snippets like this to be greatly reduced. We shouldn&amp;rsquo;t have to
-  repeat 0.1.3 everywhere, it should just be a variable!&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;RUN curl http://example.net/package-0.1.3.tar.gz -o package-0.1.3.tar.gz
-RUN tar zxf package-0.1.3.tar.gz 
-RUN cd package-0.1.3 &amp;amp;&amp;amp; make &amp;amp;&amp;amp; \
-    cp package-0.1.3/bin/whatever /usr/bin/whatever
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
