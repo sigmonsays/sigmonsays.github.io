@@ -5,8 +5,22 @@
     <link>http://sigmonsays.github.io/</link>
     <description>Recent content on sig</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 16 Oct 2016 14:50:29 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 16 Oct 2016 19:51:52 -0700</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>random musings</title>
+      <link>http://sigmonsays.github.io/2016/10/random-musings/</link>
+      <pubDate>Sun, 16 Oct 2016 19:51:52 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2016/10/random-musings/</guid>
+      <description>
+
+&lt;h1 id=&#34;would-you-rather-fight-100-duck-sized-horses-or-one-horse-sized-duck:2a3e229a0c52252aca13c01ed60c9a60&#34;&gt;Would you rather fight 100 duck sized horses or one horse sized duck?&lt;/h1&gt;
+
+&lt;p&gt;Bill Murray weights in &lt;a href=&#34;https://www.youtube.com/watch?v=THUGHEJjjGc&#34;&gt;https://www.youtube.com/watch?v=THUGHEJjjGc&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>interesting tech</title>
@@ -1112,97 +1126,6 @@ done
 
 
 
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>building packages with docker</title>
-      <link>http://sigmonsays.github.io/2014/09/building-packages-with-docker/</link>
-      <pubDate>Thu, 11 Sep 2014 15:32:44 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/2014/09/building-packages-with-docker/</guid>
-      <description>
-
-&lt;p&gt;This is a simple idea I had while waiting for a build to complete.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The background&lt;/strong&gt;
-Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script
-takes a minimal base image tarball and installs all dependencies in it required to
-build your package.&lt;/p&gt;
-
-&lt;p&gt;The build dependencies come from debian/control Build-Depends section. The package being
-built is a python application using virtualenv. A lot of the packages come from apt however.
-There is a bunch of python pip/easy install work performed too.&lt;/p&gt;
-
-&lt;p&gt;Needless to say this takes quite some time to do since extracting a .deb and installing
-it is a pretty expensive operation when there is a lot of dependencies.&lt;/p&gt;
-
-&lt;p&gt;Obverve the following times&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;pdebuild - 2m35.113s&lt;/li&gt;
-&lt;li&gt;dpkg-buildpackage - 0m55.480s&lt;/li&gt;
-&lt;li&gt;docker - 0m37.421s&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;because i&amp;rsquo;m not interested in explaining how the other 2 method work, i&amp;rsquo;ll leave that out. However, let me
-explain how the docker build works.&lt;/p&gt;
-
-&lt;h2 id=&#34;docker:98af894833143101fe4ab2edf48c5c0c&#34;&gt;docker&lt;/h2&gt;
-
-&lt;p&gt;The idea is to exploit the layered file system of containers to provide build dependencies. Since
-its a copy on write file system, this means providing a container with all build deps present is
-incredibly fast.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Dockerfile&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;FROM ubuntu
-RUN apt-get update \
-   &amp;amp;&amp;amp; apt-get install -y dpkg-dev
-
-
-# This is the key line, it installs the build dependencies for your application!
-RUN apt-get build-dep -y --force-yes YOUR_PACKAGE
-
-RUN useradd packaging \
-   &amp;amp;&amp;amp; mkdir -p /packaging \
-   &amp;amp;&amp;amp; chown packaging /packaging
-
-USER packaging
-ADD build.sh /bin/build.sh
-
-ENTRYPOINT [ &amp;quot;/bin/build.sh&amp;quot; ]
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;build.sh&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-
-echo &amp;quot;[build.sh] $@&amp;quot;
-
-set -x
-
-cd /packaging
-pwd
-tar vzxf -
-cd package
-dpkg-buildpackage
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then to invoke the build we stream the contents at a tar.gz into the container which streams
-it to disk and builds the package.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;package_stream () 
-{ 
-    git archive HEAD --format tar --prefix=package/ | gzip -9
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Finally, this is the final command that runs the build&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  time package_stream | docker run -i debbie 
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>

@@ -5,8 +5,22 @@
     <link>http://sigmonsays.github.io/post/</link>
     <description>Recent content in Posts on sig</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 16 Oct 2016 14:50:29 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 16 Oct 2016 19:51:52 -0700</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>random musings</title>
+      <link>http://sigmonsays.github.io/2016/10/random-musings/</link>
+      <pubDate>Sun, 16 Oct 2016 19:51:52 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2016/10/random-musings/</guid>
+      <description>
+
+&lt;h1 id=&#34;would-you-rather-fight-100-duck-sized-horses-or-one-horse-sized-duck:2a3e229a0c52252aca13c01ed60c9a60&#34;&gt;Would you rather fight 100 duck sized horses or one horse sized duck?&lt;/h1&gt;
+
+&lt;p&gt;Bill Murray weights in &lt;a href=&#34;https://www.youtube.com/watch?v=THUGHEJjjGc&#34;&gt;https://www.youtube.com/watch?v=THUGHEJjjGc&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>interesting tech</title>
@@ -1057,23 +1071,6 @@ unfortunately it is not easy to determine the intention and why iptables was not
 used in the first place to handle local traffic. iptables is used to route the network
 traffic externally, so I wonder, why the proxy in userland. It seems pointless but I
 have yet to investigate it further.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>interesting tech</title>
-      <link>http://sigmonsays.github.io/2014/09/interesting-tech-2/</link>
-      <pubDate>Wed, 03 Sep 2014 10:30:30 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/2014/09/interesting-tech-2/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;tenus - linux networking in golang
-
-&lt;ul&gt;
-&lt;li&gt;website &lt;a href=&#34;https://github.com/milosgajdos83/tenus&#34;&gt;https://github.com/milosgajdos83/tenus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;mentioned in article - &lt;a href=&#34;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&#34;&gt;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
