@@ -1,7 +1,7 @@
 +++
 date = "2016-10-27T09:15:13-07:00"
 draft = false
-tags = golang
+tags = [ "golang" ]
 title = "interesting tech oct 2016"
 
 +++
