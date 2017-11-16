@@ -5,8 +5,38 @@
     <link>http://sigmonsays.github.io/</link>
     <description>Recent content on sig</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 27 Oct 2016 09:15:13 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 16 Nov 2017 10:27:27 -0800</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>why use the go programming language?</title>
+      <link>http://sigmonsays.github.io/2017/11/why-use-the-go-programming-language/</link>
+      <pubDate>Thu, 16 Nov 2017 10:27:27 -0800</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2017/11/why-use-the-go-programming-language/</guid>
+      <description>
+
+&lt;h1 id=&#34;in-summary:2948febad6b536d231a5b814f2926696&#34;&gt;In summary&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;compiled language checks a lot of errors for me&lt;/li&gt;
+&lt;li&gt;statically compiled (single binary deployment!)&lt;/li&gt;
+&lt;li&gt;strictly typed language&lt;/li&gt;
+&lt;li&gt;excellent type system and OOP-like features (interfaces)
+
+&lt;ul&gt;
+&lt;li&gt;composition and embedding&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;language grammer well defined&lt;/li&gt;
+&lt;li&gt;language spec well defined &lt;a href=&#34;https://golang.org/ref/spec&#34;&gt;https://golang.org/ref/spec&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;amazing tooling (gofmt, godef, vim-go)&lt;/li&gt;
+&lt;li&gt;small standard library and the go1 promise &lt;a href=&#34;https://golang.org/doc/go1compat&#34;&gt;https://golang.org/doc/go1compat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;concurrency is a language (not library) feature&lt;/li&gt;
+&lt;li&gt;concurrency, goroutines, channels&lt;/li&gt;
+&lt;li&gt;it&amp;rsquo;s good to collaborate on (e.g. writing large systems)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>interesting tech oct 2016</title>
@@ -953,20 +983,6 @@ sys.ps1 = line
   __builtins__.pprint_off = lambda: setattr(sys, &#39;displayhook&#39;, orig_displayhook)
   # end display hook hack to pretty print everything
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cool Software</title>
-      <link>http://sigmonsays.github.io/2014/10/cool-software/</link>
-      <pubDate>Wed, 22 Oct 2014 09:41:33 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/2014/10/cool-software/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Task Spooler - &lt;a href=&#34;http://vicerveza.homeunix.net/~viric/soft/ts/&#34;&gt;http://vicerveza.homeunix.net/~viric/soft/ts/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;An oldie but a goodie.. I had used this many years ago but forgot its name and wanted it again.. Here&amp;rsquo;s to remembering!&lt;/p&gt;
 </description>
     </item>
     
