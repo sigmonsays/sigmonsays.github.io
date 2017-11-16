@@ -2,6 +2,8 @@
 date = "2017-11-16T10:27:27-08:00"
 draft = false
 title = "why use the go programming language?"
+tags = [ "golang" ]
+
 
 +++
 
