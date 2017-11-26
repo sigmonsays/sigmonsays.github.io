@@ -1,3 +1,4 @@
 *.trash
 *.swp
 /tmp/
+/src/.go-env.sh
