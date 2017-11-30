@@ -10,14 +10,35 @@
     
     <item>
       <title>Contact</title>
-      <link>http://sigmonsays.github.io/contact-me/</link>
+      <link>http://sigmonsays.github.io/contact/</link>
       <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/contact-me/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;twitter &lt;code&gt;@sigmonsays &amp;lt;https://twitter.com/sigmonsays&amp;gt;&lt;/code&gt;_&lt;/li&gt;
-&lt;li&gt;github  - &lt;a href=&#34;http://github.com/sigmonsays&#34;&gt;http://github.com/sigmonsays&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+      <guid>http://sigmonsays.github.io/contact/</guid>
+      <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;place&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;twitter&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://twitter.com/sigmonsays&#34;&gt;@sigmonsays&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;github&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://github.com/sigmonsays&#34;&gt;@sigmonsays&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;PGP&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://sigmonsays.github.io/keybase/&#34;&gt;my PGP key&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
