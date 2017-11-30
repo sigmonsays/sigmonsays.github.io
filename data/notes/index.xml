@@ -5,23 +5,8 @@
     <link>http://sigmonsays.github.io/notes/</link>
     <description>Recent content in Notes on sig</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 27 Oct 2016 09:15:13 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 17 Oct 2016 14:27:30 -0700</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>interesting tech oct 2016</title>
-      <link>http://sigmonsays.github.io/notes/interesting-tech-oct-2016/</link>
-      <pubDate>Thu, 27 Oct 2016 09:15:13 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/notes/interesting-tech-oct-2016/</guid>
-      <description>
-
-&lt;h1 id=&#34;gmx:eeedbe584770332c9cc64393c4441d95&#34;&gt;gmx&lt;/h1&gt;
-
-&lt;p&gt;gmx - similar to jmx but for go
-&lt;a href=&#34;https://github.com/davecheney/gmx&#34;&gt;https://github.com/davecheney/gmx&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>bunny</title>
@@ -41,11 +26,99 @@
       <guid>http://sigmonsays.github.io/notes/interesting-tech/</guid>
       <description>
 
-&lt;h1 id=&#34;hitless-haproxy-reload:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;hitless haproxy reload&lt;/h1&gt;
+&lt;h1 id=&#34;index:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Index&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Section&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#oct-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;October 2016&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#hitless-haproxy-reload:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;haproxy hitless reload&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#feb-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Feb 2016&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#jan-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2016&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#nov-2015:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;November 2015&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#go-jira:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;go jira&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#jan-2015:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2015&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Unsorted&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#xo:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;xo&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#teleport:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;teleport&lt;/a&gt; ssh server&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#sftp-server-library-in-go:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;sftp server library in go&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#toasteroid:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;toasteroid&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#httpcache:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;httpcache&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&#34;oct-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Oct 2016&lt;/h1&gt;
+
+&lt;p&gt;gmx - similar to jmx but for go
+&lt;a href=&#34;https://github.com/davecheney/gmx&#34;&gt;https://github.com/davecheney/gmx&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;hitless-haproxy-reload:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;hitless haproxy reload&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/sorah/sandbox/tree/master/ruby/haproxy-master&#34;&gt;https://github.com/sorah/sandbox/tree/master/ruby/haproxy-master&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;go-jira:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;go jira&lt;/h1&gt;
+&lt;h2 id=&#34;go-jira:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;go jira&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/Netflix-Skunkworks/go-jira&#34;&gt;https://github.com/Netflix-Skunkworks/go-jira&lt;/a&gt;&lt;/p&gt;
 
@@ -55,7 +128,7 @@ them.&lt;/p&gt;
 
 &lt;p&gt;This is powerful enough for the time being&lt;/p&gt;
 
-&lt;h1 id=&#34;http2-keylog:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;http2 keylog&lt;/h1&gt;
+&lt;h2 id=&#34;http2-keylog:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;http2 keylog&lt;/h2&gt;
 
 &lt;p&gt;with the growing popularity of http/2 you can&amp;rsquo;t be without the ability to inspect the payload.&lt;/p&gt;
 
@@ -63,13 +136,13 @@ them.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/joneskoo/http2-keylog/&#34;&gt;https://github.com/joneskoo/http2-keylog/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;xo:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;xo&lt;/h1&gt;
+&lt;h2 id=&#34;xo:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;xo&lt;/h2&gt;
 
 &lt;p&gt;generate idomatic go code for SQL databases (Please do not confuse this with an ORM!)&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/knq/xo&#34;&gt;https://github.com/knq/xo&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;teleport:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;teleport&lt;/h1&gt;
+&lt;h2 id=&#34;teleport:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;teleport&lt;/h2&gt;
 
 &lt;p&gt;its a pretty impressive ssh daemon setup that has temporary certs for ssh access through a central auth system, with 2-factor
 auth built in. Every &amp;ldquo;teleport node&amp;rdquo; registers itself too so you can just list specific nodes&lt;/p&gt;
@@ -78,11 +151,11 @@ auth built in. Every &amp;ldquo;teleport node&amp;rdquo; registers itself too so
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/gravitational/teleport&#34;&gt;https://github.com/gravitational/teleport&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;sftp-server-library-in-go:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;sftp server library in go&lt;/h1&gt;
+&lt;h2 id=&#34;sftp-server-library-in-go:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;sftp server library in go&lt;/h2&gt;
 
 &lt;p&gt;SFTP server library in Go, &lt;a href=&#34;https://github.com/taruti/sftpd&#34;&gt;https://github.com/taruti/sftpd&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;toasteroid:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;toasteroid&lt;/h1&gt;
+&lt;h2 id=&#34;toasteroid:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;toasteroid&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;print stuff on your toast.&lt;/li&gt;
@@ -96,21 +169,15 @@ auth built in. Every &amp;ldquo;teleport node&amp;rdquo; registers itself too so
 
 &lt;p&gt;This could be the IoT future we all hate.&lt;/p&gt;
 
-&lt;h1 id=&#34;httpcache:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;httpcache&lt;/h1&gt;
+&lt;h2 id=&#34;httpcache:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;httpcache&lt;/h2&gt;
 
 &lt;p&gt;A Transport for http.Client that will cache responses according to the HTTP RFC&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/gregjones/httpcache&#34;&gt;https://github.com/gregjones/httpcache&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>interesting tech feb 2016</title>
-      <link>http://sigmonsays.github.io/notes/interesting-tech-feb-2016/</link>
-      <pubDate>Mon, 01 Feb 2016 11:31:15 -0800</pubDate>
-      
-      <guid>http://sigmonsays.github.io/notes/interesting-tech-feb-2016/</guid>
-      <description>&lt;ul&gt;
+
+&lt;h1 id=&#34;feb-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Feb 2016&lt;/h1&gt;
+
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;asciinema - record your terminal in plain text and replay it!&lt;/p&gt;
 
 &lt;ul&gt;
@@ -130,17 +197,11 @@ than everyone else&amp;hellip;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;The web of names, hashes and UUIDs - &lt;a href=&#34;https://joearms.github.io/2015/03/12/The_web_of_names.html&#34;&gt;https://joearms.github.io/2015/03/12/The_web_of_names.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This isn&amp;rsquo;t the first time I read this but I came across it again recently and wanted to save it here&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Interesting tech Jan 2016</title>
-      <link>http://sigmonsays.github.io/notes/interesting-tech-jan-2016/</link>
-      <pubDate>Sun, 31 Jan 2016 10:52:23 -0800</pubDate>
-      
-      <guid>http://sigmonsays.github.io/notes/interesting-tech-jan-2016/</guid>
-      <description>&lt;ul&gt;
+&lt;p&gt;This isnt the first time I read this but I came across it again recently and wanted to save it here&lt;/p&gt;
+
+&lt;h1 id=&#34;jan-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2016&lt;/h1&gt;
+
+&lt;ul&gt;
 &lt;li&gt;MQTT - &lt;a href=&#34;http://mqtt.org/&#34;&gt;http://mqtt.org/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -158,16 +219,10 @@ than everyone else&amp;hellip;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;api.data.gov&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>interesting tech</title>
-      <link>http://sigmonsays.github.io/notes/interesting-tech-2/</link>
-      <pubDate>Wed, 03 Sep 2014 10:30:30 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/notes/interesting-tech-2/</guid>
-      <description>&lt;ul&gt;
+
+&lt;h1 id=&#34;nov-2015:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Nov 2015&lt;/h1&gt;
+
+&lt;ul&gt;
 &lt;li&gt;tenus - linux networking in golang
 
 &lt;ul&gt;
@@ -175,16 +230,10 @@ than everyone else&amp;hellip;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;mentioned in article - &lt;a href=&#34;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&#34;&gt;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>interesting tech</title>
-      <link>http://sigmonsays.github.io/notes/interesting-tech/</link>
-      <pubDate>Tue, 02 Sep 2014 10:38:37 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/notes/interesting-tech/</guid>
-      <description>&lt;ul&gt;
+
+&lt;h1 id=&#34;jan-2015:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2015&lt;/h1&gt;
+
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;otro - javascript interpreter in Go - &lt;a href=&#34;https://github.com/robertkrimen/otto&#34;&gt;https://github.com/robertkrimen/otto&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;C10M - &lt;a href=&#34;http://c10m.robertgraham.com/p/manifesto.html&#34;&gt;http://c10m.robertgraham.com/p/manifesto.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
