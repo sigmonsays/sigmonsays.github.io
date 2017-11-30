@@ -40,10 +40,10 @@
     
     <item>
       <title>interesting tech oct 2016</title>
-      <link>http://sigmonsays.github.io/2016/10/interesting-tech-oct-2016/</link>
+      <link>http://sigmonsays.github.io/notes/interesting-tech-oct-2016/</link>
       <pubDate>Thu, 27 Oct 2016 09:15:13 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/2016/10/interesting-tech-oct-2016/</guid>
+      <guid>http://sigmonsays.github.io/notes/interesting-tech-oct-2016/</guid>
       <description>
 
 &lt;h1 id=&#34;gmx:eeedbe584770332c9cc64393c4441d95&#34;&gt;gmx&lt;/h1&gt;
@@ -55,10 +55,10 @@
     
     <item>
       <title>bunny</title>
-      <link>http://sigmonsays.github.io/2016/10/bunny/</link>
+      <link>http://sigmonsays.github.io/notes/bunny/</link>
       <pubDate>Mon, 17 Oct 2016 14:27:30 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/2016/10/bunny/</guid>
+      <guid>http://sigmonsays.github.io/notes/bunny/</guid>
       <description>&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/6dDBAiq4RFE?rel=0&amp;amp;showinfo=0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 </description>
     </item>
@@ -79,10 +79,10 @@
     
     <item>
       <title>interesting tech</title>
-      <link>http://sigmonsays.github.io/2016/10/interesting-tech/</link>
+      <link>http://sigmonsays.github.io/notes/interesting-tech/</link>
       <pubDate>Sun, 16 Oct 2016 14:50:29 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/2016/10/interesting-tech/</guid>
+      <guid>http://sigmonsays.github.io/notes/interesting-tech/</guid>
       <description>
 
 &lt;h1 id=&#34;hitless-haproxy-reload:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;hitless haproxy reload&lt;/h1&gt;
@@ -563,10 +563,10 @@ window maker and then fluxbox before I made the switch to enlightenment (0.16 at
     
     <item>
       <title>interesting tech feb 2016</title>
-      <link>http://sigmonsays.github.io/2016/02/interesting-tech-feb-2016/</link>
+      <link>http://sigmonsays.github.io/notes/interesting-tech-feb-2016/</link>
       <pubDate>Mon, 01 Feb 2016 11:31:15 -0800</pubDate>
       
-      <guid>http://sigmonsays.github.io/2016/02/interesting-tech-feb-2016/</guid>
+      <guid>http://sigmonsays.github.io/notes/interesting-tech-feb-2016/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;asciinema - record your terminal in plain text and replay it!&lt;/p&gt;
 
@@ -613,10 +613,10 @@ paste() { curl --data-binary @- http://paste.grepped.org/paste ;  }
     
     <item>
       <title>Interesting tech Jan 2016</title>
-      <link>http://sigmonsays.github.io/2016/01/interesting-tech-jan-2016/</link>
+      <link>http://sigmonsays.github.io/notes/interesting-tech-jan-2016/</link>
       <pubDate>Sun, 31 Jan 2016 10:52:23 -0800</pubDate>
       
-      <guid>http://sigmonsays.github.io/2016/01/interesting-tech-jan-2016/</guid>
+      <guid>http://sigmonsays.github.io/notes/interesting-tech-jan-2016/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;MQTT - &lt;a href=&#34;http://mqtt.org/&#34;&gt;http://mqtt.org/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
