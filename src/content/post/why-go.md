@@ -9,7 +9,7 @@ tags = [ "golang" ]
 
 # In summary
 
--  compiled language checks a lot of errors for me
+- compiled language has a compiler which checks a lot of errors for me
 - statically compiled (single binary deployment!)
 - strictly typed language
 - excellent type system and OOP-like features (interfaces)
@@ -20,7 +20,19 @@ tags = [ "golang" ]
 - small standard library and the go1 promise https://golang.org/doc/go1compat
 - concurrency is a language (not library) feature
 - concurrency, goroutines, channels
-- it's good to collaborate on (e.g. writing large systems)
+- it is good to collaborate on (e.g. writing large systems)
+
+
+# compiled language 
+
+compiled checks a lot of errors for me
+
+Large refactors in code often require changing arguments around or adding new ones. With a strictly
+typed language this is easy. If the compile works, you can be fairly confident that everything will run
+as designed.
 
 
 
+# work in progress
+
+This page will be filled out over time

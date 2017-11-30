@@ -19,7 +19,7 @@
 &lt;h1 id=&#34;in-summary:2948febad6b536d231a5b814f2926696&#34;&gt;In summary&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;compiled language checks a lot of errors for me&lt;/li&gt;
+&lt;li&gt;compiled language has a compiler which checks a lot of errors for me&lt;/li&gt;
 &lt;li&gt;statically compiled (single binary deployment!)&lt;/li&gt;
 &lt;li&gt;strictly typed language&lt;/li&gt;
 &lt;li&gt;excellent type system and OOP-like features (interfaces)
@@ -33,8 +33,20 @@
 &lt;li&gt;small standard library and the go1 promise &lt;a href=&#34;https://golang.org/doc/go1compat&#34;&gt;https://golang.org/doc/go1compat&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;concurrency is a language (not library) feature&lt;/li&gt;
 &lt;li&gt;concurrency, goroutines, channels&lt;/li&gt;
-&lt;li&gt;it&amp;rsquo;s good to collaborate on (e.g. writing large systems)&lt;/li&gt;
+&lt;li&gt;it is good to collaborate on (e.g. writing large systems)&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h1 id=&#34;compiled-language:2948febad6b536d231a5b814f2926696&#34;&gt;compiled language&lt;/h1&gt;
+
+&lt;p&gt;compiled checks a lot of errors for me&lt;/p&gt;
+
+&lt;p&gt;Large refactors in code often require changing arguments around or adding new ones. With a strictly
+typed language this is easy. If the compile works, you can be fairly confident that everything will run
+as designed.&lt;/p&gt;
+
+&lt;h1 id=&#34;work-in-progress:2948febad6b536d231a5b814f2926696&#34;&gt;work in progress&lt;/h1&gt;
+
+&lt;p&gt;This page will be filled out over time&lt;/p&gt;
 </description>
     </item>
     
