@@ -2,6 +2,7 @@
 date = "2016-10-17T14:27:30-07:00"
 draft = false
 title = "bunny"
+tags = [ "funny" ]
 
 +++
 
