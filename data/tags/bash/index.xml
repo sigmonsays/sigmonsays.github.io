@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on sig</title>
+    <link>http://sigmonsays.github.io/tags/bash/</link>
+    <description>Recent content in Bash on sig</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 01 Dec 2017 10:38:37 -0700</lastBuildDate>
+    <atom:link href="http://sigmonsays.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>bash</title>
+      <link>http://sigmonsays.github.io/bash/</link>
+      <pubDate>Fri, 01 Dec 2017 10:38:37 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/bash/</guid>
+      <description>
+
+&lt;p&gt;I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page
+primarily serves as short snippets of bash recipes I often want to re-use.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#simple-logging-redirect:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Simple Logging Redirect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#human-size:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Human Size&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;simple-logging-redirect:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Simple Logging Redirect&lt;/h3&gt;
+
+&lt;p&gt;If you have a bash script you wish to add logging to a simple approach is to use &lt;code&gt;exec&lt;/code&gt; and redirect the output to a file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; exec &amp;gt; &amp;gt;(tee mylog) 2&amp;gt;&amp;amp;1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is straight from the bash FAQ &lt;a href=&#34;http://mywiki.wooledge.org/BashFAQ/106&#34;&gt;#106&lt;/a&gt; so go there for details.&lt;/p&gt;
+
+&lt;h3 id=&#34;human-size:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Human Size&lt;/h3&gt;
+
+&lt;p&gt;This function converts a integer to the appropriate human size&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  function human_size {
+   local B=$1
+   local S
+   if [ &amp;quot;$B&amp;quot; -gt 1099511627776   ] ; then
+     S=&amp;quot;$(($B/1099511627776))tb&amp;quot;
+   elif [ &amp;quot;$B&amp;quot; -gt 1073741824 ] ; then
+     S=&amp;quot;$(($B/1073741824))gb&amp;quot;
+   elif [ &amp;quot;$B&amp;quot; -gt 1048576  ] ; then
+     S=&amp;quot;$(($B/1048576))mb&amp;quot;
+   elif [ &amp;quot;$B&amp;quot; -gt 1024  ] ; then
+     S=&amp;quot;$(($B/1024))kb&amp;quot;
+   else
+     S=&amp;quot;${B}b&amp;quot;
+   fi
+   echo $S
+  }
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

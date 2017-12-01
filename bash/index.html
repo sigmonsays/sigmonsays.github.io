@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title> why use the go programming language? &middot; sig </title>
+  <title> bash &middot; sig </title>
 
   
   <link rel="stylesheet" href="http://sigmonsays.github.io/css/poole.css">
@@ -56,46 +56,53 @@
 
 		<div class="content container">
 			<div class="post">
-			 	<h1>why use the go programming language?</h1>
-			   <span class="post-date">Thu, Nov 16, 2017</span>
+			 	<h1>bash</h1>
+			   <span class="post-date">Fri, Dec 1, 2017</span>
             Tags:
               
-                  <a href="/tags/golang">golang</a> &nbsp; 
+                  <a href="/tags/bash">bash</a> &nbsp; 
                     
             <br>
             
 
-<h1 id="in-summary:2948febad6b536d231a5b814f2926696">In summary</h1>
+<p>I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page
+primarily serves as short snippets of bash recipes I often want to re-use.</p>
 
 <ul>
-<li>compiled language has a compiler which checks a lot of errors for me</li>
-<li>statically compiled (single binary deployment!)</li>
-<li>strictly typed language</li>
-<li>excellent type system and OOP-like features (interfaces)
-
-<ul>
-<li>composition and embedding</li>
-</ul></li>
-<li>language grammer well defined</li>
-<li>language spec well defined <a href="https://golang.org/ref/spec">https://golang.org/ref/spec</a></li>
-<li>amazing tooling (gofmt, godef, vim-go)</li>
-<li>small standard library and the go1 promise <a href="https://golang.org/doc/go1compat">https://golang.org/doc/go1compat</a></li>
-<li>concurrency is a language (not library) feature</li>
-<li>concurrency, goroutines, channels</li>
-<li>it is good to collaborate on (e.g. writing large systems)</li>
+<li><a href="#simple-logging-redirect:e0ae544864458d94d3dd5e542da523d5">Simple Logging Redirect</a></li>
+<li><a href="#human-size:e0ae544864458d94d3dd5e542da523d5">Human Size</a></li>
 </ul>
 
-<h1 id="compiled-language:2948febad6b536d231a5b814f2926696">compiled language</h1>
+<h3 id="simple-logging-redirect:e0ae544864458d94d3dd5e542da523d5">Simple Logging Redirect</h3>
 
-<p>compiled checks a lot of errors for me</p>
+<p>If you have a bash script you wish to add logging to a simple approach is to use <code>exec</code> and redirect the output to a file.</p>
 
-<p>Large refactors in code often require changing arguments around or adding new ones. With a strictly
-typed language this is easy. If the compile works, you can be fairly confident that everything will run
-as designed.</p>
+<pre><code> exec &gt; &gt;(tee mylog) 2&gt;&amp;1
+</code></pre>
 
-<h1 id="work-in-progress:2948febad6b536d231a5b814f2926696">work in progress</h1>
+<p>This is straight from the bash FAQ <a href="http://mywiki.wooledge.org/BashFAQ/106">#106</a> so go there for details.</p>
 
-<p>This page will be filled out over time</p>
+<h3 id="human-size:e0ae544864458d94d3dd5e542da523d5">Human Size</h3>
+
+<p>This function converts a integer to the appropriate human size</p>
+
+<pre><code>  function human_size {
+   local B=$1
+   local S
+   if [ &quot;$B&quot; -gt 1099511627776   ] ; then
+     S=&quot;$(($B/1099511627776))tb&quot;
+   elif [ &quot;$B&quot; -gt 1073741824 ] ; then
+     S=&quot;$(($B/1073741824))gb&quot;
+   elif [ &quot;$B&quot; -gt 1048576  ] ; then
+     S=&quot;$(($B/1048576))mb&quot;
+   elif [ &quot;$B&quot; -gt 1024  ] ; then
+     S=&quot;$(($B/1024))kb&quot;
+   else
+     S=&quot;${B}b&quot;
+   fi
+   echo $S
+  }
+</code></pre>
 
 			</div>
 

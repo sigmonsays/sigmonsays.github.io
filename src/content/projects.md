@@ -11,8 +11,6 @@ Various ramblings and projects, mostly tools and libraries
 
 I maintain a page of [ Interesting Tech ]({{< relref "interesting-tech.md" >}})
 
-# Projects
-
 [ Paste ]({{< relref "paste.md" >}})
 An hour long project where I wrote a paste server and shell script client
 

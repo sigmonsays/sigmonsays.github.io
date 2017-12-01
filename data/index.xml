@@ -5,8 +5,57 @@
     <link>http://sigmonsays.github.io/</link>
     <description>Recent content on sig</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 30 Nov 2017 16:07:01 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 01 Dec 2017 10:38:37 -0700</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>bash</title>
+      <link>http://sigmonsays.github.io/bash/</link>
+      <pubDate>Fri, 01 Dec 2017 10:38:37 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/bash/</guid>
+      <description>
+
+&lt;p&gt;I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page
+primarily serves as short snippets of bash recipes I often want to re-use.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#simple-logging-redirect:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Simple Logging Redirect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#human-size:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Human Size&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;simple-logging-redirect:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Simple Logging Redirect&lt;/h3&gt;
+
+&lt;p&gt;If you have a bash script you wish to add logging to a simple approach is to use &lt;code&gt;exec&lt;/code&gt; and redirect the output to a file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; exec &amp;gt; &amp;gt;(tee mylog) 2&amp;gt;&amp;amp;1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is straight from the bash FAQ &lt;a href=&#34;http://mywiki.wooledge.org/BashFAQ/106&#34;&gt;#106&lt;/a&gt; so go there for details.&lt;/p&gt;
+
+&lt;h3 id=&#34;human-size:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Human Size&lt;/h3&gt;
+
+&lt;p&gt;This function converts a integer to the appropriate human size&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  function human_size {
+   local B=$1
+   local S
+   if [ &amp;quot;$B&amp;quot; -gt 1099511627776   ] ; then
+     S=&amp;quot;$(($B/1099511627776))tb&amp;quot;
+   elif [ &amp;quot;$B&amp;quot; -gt 1073741824 ] ; then
+     S=&amp;quot;$(($B/1073741824))gb&amp;quot;
+   elif [ &amp;quot;$B&amp;quot; -gt 1048576  ] ; then
+     S=&amp;quot;$(($B/1048576))mb&amp;quot;
+   elif [ &amp;quot;$B&amp;quot; -gt 1024  ] ; then
+     S=&amp;quot;$(($B/1024))kb&amp;quot;
+   else
+     S=&amp;quot;${B}b&amp;quot;
+   fi
+   echo $S
+  }
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Projects</title>
@@ -19,8 +68,6 @@
 &lt;p&gt;Various ramblings and projects, mostly tools and libraries&lt;/p&gt;
 
 &lt;p&gt;I maintain a page of &lt;a href=&#34;http://sigmonsays.github.io/notes/interesting-tech/&#34;&gt; Interesting Tech &lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;projects:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;Projects&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://sigmonsays.github.io/2016/01/paste-an-hour-long-project/&#34;&gt; Paste &lt;/a&gt;
 An hour long project where I wrote a paste server and shell script client&lt;/p&gt;
@@ -1309,97 +1356,6 @@ done
 
 
 
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>building packages with docker</title>
-      <link>http://sigmonsays.github.io/2014/09/building-packages-with-docker/</link>
-      <pubDate>Thu, 11 Sep 2014 15:32:44 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/2014/09/building-packages-with-docker/</guid>
-      <description>
-
-&lt;p&gt;This is a simple idea I had while waiting for a build to complete.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The background&lt;/strong&gt;
-Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script
-takes a minimal base image tarball and installs all dependencies in it required to
-build your package.&lt;/p&gt;
-
-&lt;p&gt;The build dependencies come from debian/control Build-Depends section. The package being
-built is a python application using virtualenv. A lot of the packages come from apt however.
-There is a bunch of python pip/easy install work performed too.&lt;/p&gt;
-
-&lt;p&gt;Needless to say this takes quite some time to do since extracting a .deb and installing
-it is a pretty expensive operation when there is a lot of dependencies.&lt;/p&gt;
-
-&lt;p&gt;Obverve the following times&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;pdebuild - 2m35.113s&lt;/li&gt;
-&lt;li&gt;dpkg-buildpackage - 0m55.480s&lt;/li&gt;
-&lt;li&gt;docker - 0m37.421s&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;because i&amp;rsquo;m not interested in explaining how the other 2 method work, i&amp;rsquo;ll leave that out. However, let me
-explain how the docker build works.&lt;/p&gt;
-
-&lt;h2 id=&#34;docker:98af894833143101fe4ab2edf48c5c0c&#34;&gt;docker&lt;/h2&gt;
-
-&lt;p&gt;The idea is to exploit the layered file system of containers to provide build dependencies. Since
-its a copy on write file system, this means providing a container with all build deps present is
-incredibly fast.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Dockerfile&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;FROM ubuntu
-RUN apt-get update \
-   &amp;amp;&amp;amp; apt-get install -y dpkg-dev
-
-
-# This is the key line, it installs the build dependencies for your application!
-RUN apt-get build-dep -y --force-yes YOUR_PACKAGE
-
-RUN useradd packaging \
-   &amp;amp;&amp;amp; mkdir -p /packaging \
-   &amp;amp;&amp;amp; chown packaging /packaging
-
-USER packaging
-ADD build.sh /bin/build.sh
-
-ENTRYPOINT [ &amp;quot;/bin/build.sh&amp;quot; ]
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;build.sh&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-
-echo &amp;quot;[build.sh] $@&amp;quot;
-
-set -x
-
-cd /packaging
-pwd
-tar vzxf -
-cd package
-dpkg-buildpackage
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then to invoke the build we stream the contents at a tar.gz into the container which streams
-it to disk and builds the package.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;package_stream () 
-{ 
-    git archive HEAD --format tar --prefix=package/ | gzip -9
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Finally, this is the final command that runs the build&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  time package_stream | docker run -i debbie 
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
