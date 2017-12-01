@@ -35,6 +35,7 @@ taxonomies:
   tag: "tags"
   category: "categories"
   series: "series"
+  status: "status"
 
 params:
   Description: "tech, life and random"
