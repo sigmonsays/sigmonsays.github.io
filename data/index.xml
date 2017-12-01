@@ -14,13 +14,40 @@
       <pubDate>Thu, 30 Nov 2017 16:07:01 -0800</pubDate>
       
       <guid>http://sigmonsays.github.io/projects/</guid>
-      <description>&lt;p&gt;Various projects&lt;/p&gt;
+      <description>
+
+&lt;p&gt;Various projects, mostly tools and libraries&lt;/p&gt;
+
+&lt;h1 id=&#34;projects:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;Projects&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://sigmonsays.github.io/2016/01/paste-an-hour-long-project/&#34;&gt; Paste &lt;/a&gt;
 An hour long project where I wrote a paste server and shell script client&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays&#34;&gt; Screenshot &lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/screenshot&#34;&gt; Screenshot &lt;/a&gt;
 python script for taking screenshots and uploading them to a cloud storage provider&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/git-watch&#34;&gt; git-watch &lt;/a&gt;
+watch a git repository for changes and execute update commands&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/dice&#34;&gt; dice &lt;/a&gt;
+simple dice program as a 1 hour hack&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/runitcmd&#34;&gt; runitcmd &lt;/a&gt;
+runit utility written in go for setting up and managing runit services&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/haproxyctl&#34;&gt; haproxyctl &lt;/a&gt;
+go cli and library for managing haproxy&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/dns-router&#34;&gt; dns-router &lt;/a&gt;
+personal dns server with bells and whistles written in go&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/webchat&#34;&gt; webchat &lt;/a&gt;
+forked websocket demo which implements a chat server that is similar in function to a IRC server&lt;/p&gt;
+
+&lt;h1 id=&#34;go-libaries:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;Go libaries&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/go-logging&#34;&gt; go-logging &lt;/a&gt;
+leveled logging libary for go&lt;/p&gt;
 </description>
     </item>
     
