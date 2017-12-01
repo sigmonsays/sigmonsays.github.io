@@ -436,30 +436,6 @@ command. After the install command succeeds, the application is restarted.&lt;/p
     </item>
     
     <item>
-      <title>Cool Software </title>
-      <link>http://sigmonsays.github.io/2015/02/cool-software/</link>
-      <pubDate>Thu, 05 Feb 2015 04:20:00 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/2015/02/cool-software/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;hound - &lt;a href=&#34;https://github.com/etsy/Hound&#34;&gt;https://github.com/etsy/Hound&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;silver surfer - &lt;a href=&#34;http://geoff.greer.fm/ag/&#34;&gt;http://geoff.greer.fm/ag/&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ggreer/the_silver_searcher&#34;&gt;https://github.com/ggreer/the_silver_searcher&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;microservices future&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone&#34;&gt;http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>convenient cli tookit using python</title>
       <link>http://sigmonsays.github.io/2015/02/convenient-cli-tookit-using-python/</link>
       <pubDate>Tue, 03 Feb 2015 11:59:36 -0800</pubDate>
@@ -705,20 +681,6 @@ sys.ps1 = line
   __builtins__.pprint_off = lambda: setattr(sys, &#39;displayhook&#39;, orig_displayhook)
   # end display hook hack to pretty print everything
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cool Software</title>
-      <link>http://sigmonsays.github.io/2014/10/cool-software/</link>
-      <pubDate>Wed, 22 Oct 2014 09:41:33 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/2014/10/cool-software/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Task Spooler - &lt;a href=&#34;http://vicerveza.homeunix.net/~viric/soft/ts/&#34;&gt;http://vicerveza.homeunix.net/~viric/soft/ts/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;An oldie but a goodie.. I had used this many years ago but forgot its name and wanted it again.. Here&amp;rsquo;s to remembering!&lt;/p&gt;
 </description>
     </item>
     

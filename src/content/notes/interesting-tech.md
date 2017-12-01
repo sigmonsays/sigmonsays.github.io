@@ -3,6 +3,7 @@ date = "2016-10-16T14:50:29-07:00"
 draft = false
 title = "interesting tech"
 tags = [ "notes" ]
+promo = "nopromo"
 
 +++
 
@@ -136,6 +137,22 @@ https://github.com/gregjones/httpcache
 - tenus - linux networking in golang
   - website https://github.com/milosgajdos83/tenus
   - mentioned in article - http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/
+
+- Task Spooler - http://vicerveza.homeunix.net/~viric/soft/ts/
+
+  An oldie but a goodie.. I had used this many years ago but forgot its name and wanted it again.. Here's to remembering!
+
+
+- hound - https://github.com/etsy/Hound
+
+- silver surfer - http://geoff.greer.fm/ag/
+  - https://github.com/ggreer/the_silver_searcher
+
+- microservices future 
+  - http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone
+
+
+
 
 # Jan 2015
 

@@ -322,11 +322,31 @@ than everyone else&amp;hellip;&lt;/p&gt;&lt;/li&gt;
 &lt;h1 id=&#34;nov-2015:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Nov 2015&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;tenus - linux networking in golang
+&lt;li&gt;&lt;p&gt;tenus - linux networking in golang&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;website &lt;a href=&#34;https://github.com/milosgajdos83/tenus&#34;&gt;https://github.com/milosgajdos83/tenus&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;mentioned in article - &lt;a href=&#34;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&#34;&gt;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Task Spooler - &lt;a href=&#34;http://vicerveza.homeunix.net/~viric/soft/ts/&#34;&gt;http://vicerveza.homeunix.net/~viric/soft/ts/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An oldie but a goodie.. I had used this many years ago but forgot its name and wanted it again.. Here&amp;rsquo;s to remembering!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;hound - &lt;a href=&#34;https://github.com/etsy/Hound&#34;&gt;https://github.com/etsy/Hound&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;silver surfer - &lt;a href=&#34;http://geoff.greer.fm/ag/&#34;&gt;http://geoff.greer.fm/ag/&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ggreer/the_silver_searcher&#34;&gt;https://github.com/ggreer/the_silver_searcher&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;microservices future&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone&#34;&gt;http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -858,30 +878,6 @@ command. After the install command succeeds, the application is restarted.&lt;/p
     </item>
     
     <item>
-      <title>Cool Software </title>
-      <link>http://sigmonsays.github.io/2015/02/cool-software/</link>
-      <pubDate>Thu, 05 Feb 2015 04:20:00 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/2015/02/cool-software/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;hound - &lt;a href=&#34;https://github.com/etsy/Hound&#34;&gt;https://github.com/etsy/Hound&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;silver surfer - &lt;a href=&#34;http://geoff.greer.fm/ag/&#34;&gt;http://geoff.greer.fm/ag/&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ggreer/the_silver_searcher&#34;&gt;https://github.com/ggreer/the_silver_searcher&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;microservices future&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone&#34;&gt;http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>convenient cli tookit using python</title>
       <link>http://sigmonsays.github.io/2015/02/convenient-cli-tookit-using-python/</link>
       <pubDate>Tue, 03 Feb 2015 11:59:36 -0800</pubDate>
@@ -1131,20 +1127,6 @@ sys.ps1 = line
     </item>
     
     <item>
-      <title>Cool Software</title>
-      <link>http://sigmonsays.github.io/2014/10/cool-software/</link>
-      <pubDate>Wed, 22 Oct 2014 09:41:33 -0700</pubDate>
-      
-      <guid>http://sigmonsays.github.io/2014/10/cool-software/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Task Spooler - &lt;a href=&#34;http://vicerveza.homeunix.net/~viric/soft/ts/&#34;&gt;http://vicerveza.homeunix.net/~viric/soft/ts/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;An oldie but a goodie.. I had used this many years ago but forgot its name and wanted it again.. Here&amp;rsquo;s to remembering!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>ban systemd</title>
       <link>http://sigmonsays.github.io/2014/09/ban-systemd/</link>
       <pubDate>Mon, 22 Sep 2014 21:26:16 -0700</pubDate>
@@ -1221,6 +1203,202 @@ got racial comments and vulgar language when I inquired about a bug. We didn&amp
 technical reasons, I had to leave the channel. I might try again later, I am curious.&lt;/p&gt;
 
 &lt;p&gt;The community needs to reject this overly complex piece of software without a clear focus or direction.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>firewall</title>
+      <link>http://sigmonsays.github.io/static/firewall/</link>
+      <pubDate>Fri, 12 Sep 2014 09:38:41 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/static/firewall/</guid>
+      <description>&lt;p&gt;Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.&lt;/p&gt;
+
+&lt;p&gt;Only specific networks are allowed.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+#set -x
+
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+
+iptables -F INPUT 
+#iptables -F FORWARD 
+#iptables -F OUTPUT 
+
+function clean_networks {
+   grep -v ^# | awk &#39;{print $1}&#39; |grep -v ^$
+}
+
+# Quick and dirty iptables firewall
+# We want to drop traffic for any open port if its not in the allowed list of IP addresses
+# 
+function list_allowed_networks {
+
+# the 1918 subnets
+cat &amp;lt;&amp;lt; EOF | clean_networks
+10.0.0.0/8
+172.16.0.0/12
+192.168.0.0/16
+EOF
+
+cat &amp;lt;&amp;lt; EOF | clean_networks
+10.0.0.0/8
+127.0.0.0/8
+EOF
+}
+
+function list_open_ports {
+	# ipv4
+	netstat -lntu |awk &#39;/^tcp / {print $4}&#39; |awk -F: &#39;{print $2}&#39;
+	# ipv6
+	netstat -lntu |awk &#39;/^tcp6 / {print $4}&#39; |awk -F: &#39;{print $4}&#39;
+}
+function list_ports {
+	list_open_ports
+	echo 22
+}
+function list_networks {
+	for N in $(list_allowed_networks)
+	do
+		echo $N
+	done
+	if [ -f /etc/firewall/networks.list ] ; then
+		cat /etc/firewall/networks.list
+	fi
+
+	# All local addresses
+	ip addr | awk -F&#39;[ /]+&#39; &#39;/inet / {print $3}&#39;
+
+	# Let all your connected subnets in..
+	# ip addr | awk  &#39;/inet / {print $2}&#39;
+}
+
+function prepare_iptables {
+
+	# Create drop logged chain
+	if ! iptables -L drop_logged &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 ; then
+		iptables -N drop_logged
+	fi
+	iptables -F drop_logged
+	iptables -A drop_logged -j LOG --log-prefix &amp;quot;iptables-dropped: &amp;quot; --log-level 4
+	iptables -A drop_logged -j DROP
+}
+
+
+
+#
+# Begin building the firewall
+#
+prepare_iptables
+
+list_networks | while read N
+do
+	echo &amp;quot;netowrk $N&amp;quot;
+        iptables -A INPUT -s $N -j ACCEPT
+done
+
+list_ports | while read P
+do
+	echo &amp;quot;securing port $P&amp;quot;
+        iptables -A INPUT -p tcp --dport $P -j drop_logged
+done
+
+
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>building packages with docker</title>
+      <link>http://sigmonsays.github.io/2014/09/building-packages-with-docker/</link>
+      <pubDate>Thu, 11 Sep 2014 15:32:44 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2014/09/building-packages-with-docker/</guid>
+      <description>
+
+&lt;p&gt;This is a simple idea I had while waiting for a build to complete.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The background&lt;/strong&gt;
+Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script
+takes a minimal base image tarball and installs all dependencies in it required to
+build your package.&lt;/p&gt;
+
+&lt;p&gt;The build dependencies come from debian/control Build-Depends section. The package being
+built is a python application using virtualenv. A lot of the packages come from apt however.
+There is a bunch of python pip/easy install work performed too.&lt;/p&gt;
+
+&lt;p&gt;Needless to say this takes quite some time to do since extracting a .deb and installing
+it is a pretty expensive operation when there is a lot of dependencies.&lt;/p&gt;
+
+&lt;p&gt;Obverve the following times&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;pdebuild - 2m35.113s&lt;/li&gt;
+&lt;li&gt;dpkg-buildpackage - 0m55.480s&lt;/li&gt;
+&lt;li&gt;docker - 0m37.421s&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;because i&amp;rsquo;m not interested in explaining how the other 2 method work, i&amp;rsquo;ll leave that out. However, let me
+explain how the docker build works.&lt;/p&gt;
+
+&lt;h2 id=&#34;docker:98af894833143101fe4ab2edf48c5c0c&#34;&gt;docker&lt;/h2&gt;
+
+&lt;p&gt;The idea is to exploit the layered file system of containers to provide build dependencies. Since
+its a copy on write file system, this means providing a container with all build deps present is
+incredibly fast.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dockerfile&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;FROM ubuntu
+RUN apt-get update \
+   &amp;amp;&amp;amp; apt-get install -y dpkg-dev
+
+
+# This is the key line, it installs the build dependencies for your application!
+RUN apt-get build-dep -y --force-yes YOUR_PACKAGE
+
+RUN useradd packaging \
+   &amp;amp;&amp;amp; mkdir -p /packaging \
+   &amp;amp;&amp;amp; chown packaging /packaging
+
+USER packaging
+ADD build.sh /bin/build.sh
+
+ENTRYPOINT [ &amp;quot;/bin/build.sh&amp;quot; ]
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;build.sh&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+
+echo &amp;quot;[build.sh] $@&amp;quot;
+
+set -x
+
+cd /packaging
+pwd
+tar vzxf -
+cd package
+dpkg-buildpackage
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then to invoke the build we stream the contents at a tar.gz into the container which streams
+it to disk and builds the package.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package_stream () 
+{ 
+    git archive HEAD --format tar --prefix=package/ | gzip -9
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally, this is the final command that runs the build&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  time package_stream | docker run -i debbie 
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
