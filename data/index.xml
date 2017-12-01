@@ -67,7 +67,13 @@ primarily serves as short snippets of bash recipes I often want to re-use.&lt;/p
 
 &lt;p&gt;Various ramblings and projects, mostly tools and libraries&lt;/p&gt;
 
-&lt;p&gt;I maintain a page of &lt;a href=&#34;http://sigmonsays.github.io/notes/interesting-tech/&#34;&gt; Interesting Tech &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Related&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I maintain a page of &lt;a href=&#34;http://sigmonsays.github.io/notes/interesting-tech/&#34;&gt; Interesting Tech &lt;/a&gt; which are random pieces of software or tools I find interesting at the time.&lt;/p&gt;
+
+&lt;p&gt;There is a section on &lt;a href=&#34;http://sigmonsays.github.io/bash/&#34;&gt;bash scripting&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Projects&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://sigmonsays.github.io/2016/01/paste-an-hour-long-project/&#34;&gt; Paste &lt;/a&gt;
 An hour long project where I wrote a paste server and shell script client&lt;/p&gt;

@@ -9,7 +9,13 @@ tags = [ "projects" ]
 
 Various ramblings and projects, mostly tools and libraries
 
-I maintain a page of [ Interesting Tech ]({{< relref "interesting-tech.md" >}})
+**Related**
+
+I maintain a page of [ Interesting Tech ]({{< relref "interesting-tech.md" >}}) which are random pieces of software or tools I find interesting at the time.
+
+There is a section on [bash scripting]({{< relref "bash.md" >}})
+
+**Projects**
 
 [ Paste ]({{< relref "paste.md" >}})
 An hour long project where I wrote a paste server and shell script client
