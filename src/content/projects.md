@@ -7,7 +7,9 @@ tags = [ "projects" ]
 
 +++
 
-Various projects, mostly tools and libraries
+Various ramblings and projects, mostly tools and libraries
+
+I maintain a page of [ Interesting Tech ]({{< relref "interesting-tech.md" >}})
 
 # Projects
 
