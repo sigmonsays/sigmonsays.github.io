@@ -4,6 +4,7 @@ draft = false
 title = "About"
 layout = "plain"
 tags = [ "index" ]
+promo = "nopromo"
 
 +++
 
