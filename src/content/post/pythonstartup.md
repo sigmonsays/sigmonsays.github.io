@@ -2,6 +2,7 @@
 date = "2015-02-03T11:59:36-08:00"
 draft = false
 title = "convenient cli tookit using python"
+tags = [ "programming", "python" ]
 
 +++
 

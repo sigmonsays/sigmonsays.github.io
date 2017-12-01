@@ -2,6 +2,8 @@
 date = "2016-01-31T10:58:55-08:00"
 draft = false
 title = "paste, an hour long project"
+categories = [ "projects" ]
+tags = [ "projects", "shell" ]
 
 +++
 

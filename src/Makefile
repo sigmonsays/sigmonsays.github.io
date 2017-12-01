@@ -1,3 +1,5 @@
+.PHONY: post
+	
 THEME = hyde
 
 #HUGO_FLAGS := --baseURL http://192.168.33.2
