@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Index on sig</title>
+    <link>http://sigmonsays.github.io/tags/index/</link>
+    <description>Recent content in Index on sig</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 02 Sep 2014 09:38:41 -0700</lastBuildDate>
+    <atom:link href="http://sigmonsays.github.io/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About</title>
+      <link>http://sigmonsays.github.io/about/</link>
+      <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/about/</guid>
+      <description>&lt;p&gt;Start of another blog, developer focused, as a way to write about, keep track of and archive various technologies and trends.&lt;/p&gt;
+
+&lt;p&gt;Hopefully this involves into something for now but mostly its a place to put random thought.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://sigmonsays.github.io/contact/</link>
+      <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/contact/</guid>
+      <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;place&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;twitter&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://twitter.com/sigmonsays&#34;&gt;@sigmonsays&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;github&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://github.com/sigmonsays&#34;&gt;@sigmonsays&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;PGP&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://sigmonsays.github.io/keybase/&#34;&gt;my PGP key&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
