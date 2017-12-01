@@ -10,6 +10,8 @@ promo = [ "bash" ]
 I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page
 primarily serves as short snippets of bash recipes I often want to re-use.
 
+A lot of this bash is old and wrong, because I learned bash so long ago (1998?). Refer to http://mywiki.wooledge.org/BashGuide for proper rules.
+
 - [Simple Logging Redirect]({{< relref "#simple-logging-redirect" >}})
 - [Human Size]({{< relref "#human-size" >}})
 
@@ -44,4 +46,9 @@ This function converts a integer to the appropriate human size
        fi
        echo $S
       }
+
+
+`NOTES`
+
+- This is `sh` compatible and not explicitly bash because it makes use of `[` and should instead use `[[`
 

@@ -68,6 +68,8 @@
 <p>I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page
 primarily serves as short snippets of bash recipes I often want to re-use.</p>
 
+<p>A lot of this bash is old and wrong, because I learned bash so long ago (1998?). Refer to <a href="http://mywiki.wooledge.org/BashGuide">http://mywiki.wooledge.org/BashGuide</a> for proper rules.</p>
+
 <ul>
 <li><a href="#simple-logging-redirect:e0ae544864458d94d3dd5e542da523d5">Simple Logging Redirect</a></li>
 <li><a href="#human-size:e0ae544864458d94d3dd5e542da523d5">Human Size</a></li>
@@ -103,6 +105,12 @@ primarily serves as short snippets of bash recipes I often want to re-use.</p>
    echo $S
   }
 </code></pre>
+
+<p><code>NOTES</code></p>
+
+<ul>
+<li>This is <code>sh</code> compatible and not explicitly bash because it makes use of <code>[</code> and should instead use <code>[[</code></li>
+</ul>
 
 			</div>
 

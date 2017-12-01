@@ -19,6 +19,8 @@
 &lt;p&gt;I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page
 primarily serves as short snippets of bash recipes I often want to re-use.&lt;/p&gt;
 
+&lt;p&gt;A lot of this bash is old and wrong, because I learned bash so long ago (1998?). Refer to &lt;a href=&#34;http://mywiki.wooledge.org/BashGuide&#34;&gt;http://mywiki.wooledge.org/BashGuide&lt;/a&gt; for proper rules.&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#simple-logging-redirect:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Simple Logging Redirect&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#human-size:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Human Size&lt;/a&gt;&lt;/li&gt;
@@ -54,6 +56,12 @@ primarily serves as short snippets of bash recipes I often want to re-use.&lt;/p
    echo $S
   }
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;NOTES&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This is &lt;code&gt;sh&lt;/code&gt; compatible and not explicitly bash because it makes use of &lt;code&gt;[&lt;/code&gt; and should instead use &lt;code&gt;[[&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
