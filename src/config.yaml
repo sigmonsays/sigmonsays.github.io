@@ -15,6 +15,9 @@ permalinks:
 
 menu:
   main:
+   - Name: "Archive"
+     Identifier: "archive"
+     URL: "/archive/"
    - Name: "About"
      Identifier: "about"
      URL: "/about/"
