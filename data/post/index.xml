@@ -19,34 +19,115 @@
 &lt;h1 id=&#34;in-summary:2948febad6b536d231a5b814f2926696&#34;&gt;In summary&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;compiled language has a compiler which checks a lot of errors for me&lt;/li&gt;
-&lt;li&gt;statically compiled (single binary deployment!)&lt;/li&gt;
-&lt;li&gt;strictly typed language&lt;/li&gt;
-&lt;li&gt;excellent type system and OOP-like features (interfaces)
+&lt;li&gt;&lt;a href=&#34;#compiled-language:2948febad6b536d231a5b814f2926696&#34;&gt;Compiled Language&lt;/a&gt; has a compiler which checks a lot of errors for me&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#static-linking:2948febad6b536d231a5b814f2926696&#34;&gt;Strictly typed&lt;/a&gt; language&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#static-linking:2948febad6b536d231a5b814f2926696&#34;&gt;Statically linked&lt;/a&gt; binary (single binary deployment!)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#type-system:2948febad6b536d231a5b814f2926696&#34;&gt;Unique type system&lt;/a&gt;
 
 &lt;ul&gt;
+&lt;li&gt;excellent type system and OOP-like features (interfaces)&lt;/li&gt;
 &lt;li&gt;composition and embedding&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;language grammer well defined&lt;/li&gt;
-&lt;li&gt;language spec well defined &lt;a href=&#34;https://golang.org/ref/spec&#34;&gt;https://golang.org/ref/spec&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;amazing tooling (gofmt, godef, vim-go)&lt;/li&gt;
-&lt;li&gt;small standard library and the go1 promise &lt;a href=&#34;https://golang.org/doc/go1compat&#34;&gt;https://golang.org/doc/go1compat&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;concurrency is a language (not library) feature&lt;/li&gt;
-&lt;li&gt;concurrency, goroutines, channels&lt;/li&gt;
-&lt;li&gt;it is good to collaborate on (e.g. writing large systems)&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#language-grammer:2948febad6b536d231a5b814f2926696&#34;&gt;Language Grammer&lt;/a&gt; well defined&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#tooling:2948febad6b536d231a5b814f2926696&#34;&gt;Amazing Tooling&lt;/a&gt; ie, gofmt, godef, go-imports, vim-go&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;small standard library and the go1 promise &lt;a href=&#34;https://golang.org/doc/go1compat&#34;&gt;https://golang.org/doc/go1compat&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#concurrency:2948febad6b536d231a5b814f2926696&#34;&gt;concurrency&lt;/a&gt; is a language (not library) feature, ie concurrency, goroutines, and channels&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;it is good to collaborate on (e.g. writing large systems)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;compiled-language:2948febad6b536d231a5b814f2926696&#34;&gt;compiled language&lt;/h1&gt;
+&lt;h1 id=&#34;work-in-progress:2948febad6b536d231a5b814f2926696&#34;&gt;work in progress!&lt;/h1&gt;
 
-&lt;p&gt;compiled checks a lot of errors for me&lt;/p&gt;
+&lt;p&gt;This page will be filled out over time&lt;/p&gt;
+
+&lt;h1 id=&#34;compiled-language:2948febad6b536d231a5b814f2926696&#34;&gt;Compiled Language&lt;/h1&gt;
+
+&lt;p&gt;compiler checks a lot of errors for me&lt;/p&gt;
+
+&lt;p&gt;One case which use to get me all the time is error handling code in dynamic languages. If you do not unit test every case, often a undefined variable would result
+in your error handling code explode.&lt;/p&gt;
+
+&lt;p&gt;The go language also has some unique features. Undefined and unused variables cause compiler errors.&lt;/p&gt;
+
+&lt;h1 id=&#34;strictly-typed:2948febad6b536d231a5b814f2926696&#34;&gt;Strictly Typed&lt;/h1&gt;
+
+&lt;p&gt;Similar to being a compiled language,&lt;/p&gt;
 
 &lt;p&gt;Large refactors in code often require changing arguments around or adding new ones. With a strictly
 typed language this is easy. If the compile works, you can be fairly confident that everything will run
 as designed.&lt;/p&gt;
 
-&lt;h1 id=&#34;work-in-progress:2948febad6b536d231a5b814f2926696&#34;&gt;work in progress&lt;/h1&gt;
+&lt;h1 id=&#34;statically-linked:2948febad6b536d231a5b814f2926696&#34;&gt;Statically Linked&lt;/h1&gt;
 
-&lt;p&gt;This page will be filled out over time&lt;/p&gt;
+&lt;p&gt;Being a statically linked package means you are deploying a single binary or binary + config file. The only thing most go binaries link to are libc for some OS level networking support. It is possible
+to compile without libc entirely if you choose. Finally, if you avoid &lt;strong&gt;cgo&lt;/strong&gt; this means your binary will run anywhere given you have a matching architecture.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;This is an amazing feature coming from python&lt;/strong&gt; I love python but its biggest shortcoming is the confusion that arrises from the myraid of packaging systems.&lt;/p&gt;
+
+&lt;h1 id=&#34;type-system:2948febad6b536d231a5b814f2926696&#34;&gt;Type system&lt;/h1&gt;
+
+&lt;p&gt;Go has a interesting type system which removes the fundamentally flawed OOP features. OOP programmers often uses inheritenace when composition could be used instead.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;composition&lt;/strong&gt; means you combine objects together instead of searching a inheritence tree. I am not going into all the details here but here is the &lt;a href=&#34;https://en.wikipedia.org/wiki/Composition_over_inheritance&#34;&gt;wikipedia article on composition&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;language-grammer:2948febad6b536d231a5b814f2926696&#34;&gt;Language Grammer&lt;/h1&gt;
+
+&lt;p&gt;a language spec that is well defined &lt;a href=&#34;https://golang.org/ref/spec&#34;&gt;https://golang.org/ref/spec&lt;/a&gt;, short, and simple.&lt;/p&gt;
+
+&lt;p&gt;Without a well defined language specification, none of the tooling would be possible. It also makes it easy to develop tools which parse code into AST (Abstract syntax tree) and manipulate it. Ie, write code which
+modifies other code. This was not very practical in other langauges (IMHO). The &lt;code&gt;go/ast&lt;/code&gt; and &lt;code&gt;go/types&lt;/code&gt; packages lowered the barrier of entry to write quick tools for manipulating go source code.&lt;/p&gt;
+
+&lt;h1 id=&#34;tooling:2948febad6b536d231a5b814f2926696&#34;&gt;Tooling&lt;/h1&gt;
+
+&lt;p&gt;The amount of tooling really makes go a step above the rest&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gofmt&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This tool automatically formats source code in a pre-defined way.&lt;/p&gt;
+
+&lt;p&gt;The tool shuts down the bike shed discussions which naturally occur about code formatting. Most people (if not all) require &lt;code&gt;gofmt&lt;/code&gt; to be executed on the source code being submitted to a project. This
+is also very useful to tie into your editor on save. Often you can paste a piece of code which does not match the indentation level, and watch it all fall into place.&lt;/p&gt;
+
+&lt;p&gt;I have spent a lot of time re-indenting code and this is no longer a step in go.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;goimports&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This tool automatically adds imports and removes unused imports in a source file&lt;/p&gt;
+
+&lt;p&gt;It is very useful to not worry about jumping to the top of the file and change imports every time you modify code.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;godef&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This tool is used in editors to jump to a types declartion.&lt;/p&gt;
+
+&lt;p&gt;Within vim one can type &lt;code&gt;gd&lt;/code&gt; on any variable or type and the editor jumps to the file and location where that &lt;em&gt;thing&lt;/em&gt; is defined. It is very useful for navigating
+unfamiliar and large source trees.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gocode&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This tool provides a auto complete interface of methods and variables&lt;/p&gt;
+
+&lt;p&gt;integration with editors, like &lt;strong&gt;vim-go&lt;/strong&gt; really tie the tools together for a IDE like developer experience from the terminal. Of course there
+is a lot of graphical editors too if that is your thing.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Others?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I am sure I missed some tools that I use.  What tools do you use that are not mentioned here?&lt;/p&gt;
+
+&lt;h1 id=&#34;concurrency:2948febad6b536d231a5b814f2926696&#34;&gt;Concurrency&lt;/h1&gt;
+
+&lt;p&gt;Last but not least and quite possibly the most important feature of go is its concurrency primitives.&lt;/p&gt;
+
+&lt;p&gt;They are built directly into the language specification and first class citizens (they are not bolted on later).&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;goroutines&lt;/code&gt; are essentially coroutines but are executed across multiple real OS threads. The runtime scheduler handles everything for you so you can focus on writing logically blocking
+code. goroutines run in parallel, which makes it easy to maintain a mental model of what is happening in a concurrent program.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;channels&lt;/code&gt; are the communication primitive and allow different goroutines to talk to each other. A channel can be buffered and unbuffered, which allows creation of some really useful patterns.&lt;/p&gt;
 </description>
     </item>
     
