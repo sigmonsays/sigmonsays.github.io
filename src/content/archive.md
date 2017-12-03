@@ -4,10 +4,7 @@ draft = false
 title = "Archive"
 tags = [ "index" ]
 promo = [ "nopromo" ]
-type = "archive"
-layout = "single"
+layout = "archive"
 
 +++
-
-Stuff
-
+**All Pages**
