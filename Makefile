@@ -1,4 +1,5 @@
 all:
+	find src -type f > allfiles.txt
 	$(MAKE) -C src
 
 help:
