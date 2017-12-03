@@ -2,7 +2,7 @@
 date = "2016-01-03T21:33:07-08:00"
 draft = false
 title = "git-watch"
-tags = [ "golang" ]
+tags = [ "projects", "golang" ]
 
 +++
 git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.
