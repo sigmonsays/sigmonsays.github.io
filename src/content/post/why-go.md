@@ -10,7 +10,7 @@ tags = [ "golang" ]
 # In summary
 
 - [Compiled Language]({{< relref "#compiled-language" >}}) has a compiler which checks a lot of errors for me
-- [Strictly typed]({{< relref "#static-linking" >}}) language
+- [Strictly typed]({{< relref "#strictly-typed" >}}) language
 - [Statically linked]({{< relref "#static-linking" >}}) binary (single binary deployment!)
 - [Unique type system]({{< relref "#type-system" >}}) using interfaces, composition and embedding instead of OOP patterns
 - [Language Grammer]({{< relref "#language-grammer" >}}) well defined 
@@ -33,7 +33,7 @@ in your error handling code explode.
 The go language also has some unique features. Undefined and unused variables cause compiler errors.
 
 
-# Strictly Typed 
+# Strictly typed 
 
 Similar to being a compiled language, 
 
@@ -41,7 +41,7 @@ Large refactors in code often require changing arguments around or adding new on
 typed language this is easy. If the compile works, you can be fairly confident that everything will run
 as designed.
 
-# Statically Linked 
+# Static linking 
 
 Being a statically linked package means you are deploying a single binary or binary + config file. The only thing most go binaries link to are libc for some OS level networking support. It is possible
 to compile without libc entirely if you choose. Finally, if you avoid **cgo** this means your binary will run anywhere given you have a matching architecture. 

@@ -20,7 +20,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#compiled-language:2948febad6b536d231a5b814f2926696&#34;&gt;Compiled Language&lt;/a&gt; has a compiler which checks a lot of errors for me&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#static-linking:2948febad6b536d231a5b814f2926696&#34;&gt;Strictly typed&lt;/a&gt; language&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#strictly-typed:2948febad6b536d231a5b814f2926696&#34;&gt;Strictly typed&lt;/a&gt; language&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#static-linking:2948febad6b536d231a5b814f2926696&#34;&gt;Statically linked&lt;/a&gt; binary (single binary deployment!)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#type-system:2948febad6b536d231a5b814f2926696&#34;&gt;Unique type system&lt;/a&gt; using interfaces, composition and embedding instead of OOP patterns&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#language-grammer:2948febad6b536d231a5b814f2926696&#34;&gt;Language Grammer&lt;/a&gt; well defined&lt;/li&gt;
@@ -43,7 +43,7 @@ in your error handling code explode.&lt;/p&gt;
 
 &lt;p&gt;The go language also has some unique features. Undefined and unused variables cause compiler errors.&lt;/p&gt;
 
-&lt;h1 id=&#34;strictly-typed:2948febad6b536d231a5b814f2926696&#34;&gt;Strictly Typed&lt;/h1&gt;
+&lt;h1 id=&#34;strictly-typed:2948febad6b536d231a5b814f2926696&#34;&gt;Strictly typed&lt;/h1&gt;
 
 &lt;p&gt;Similar to being a compiled language,&lt;/p&gt;
 
@@ -51,7 +51,7 @@ in your error handling code explode.&lt;/p&gt;
 typed language this is easy. If the compile works, you can be fairly confident that everything will run
 as designed.&lt;/p&gt;
 
-&lt;h1 id=&#34;statically-linked:2948febad6b536d231a5b814f2926696&#34;&gt;Statically Linked&lt;/h1&gt;
+&lt;h1 id=&#34;static-linking:2948febad6b536d231a5b814f2926696&#34;&gt;Static linking&lt;/h1&gt;
 
 &lt;p&gt;Being a statically linked package means you are deploying a single binary or binary + config file. The only thing most go binaries link to are libc for some OS level networking support. It is possible
 to compile without libc entirely if you choose. Finally, if you avoid &lt;strong&gt;cgo&lt;/strong&gt; this means your binary will run anywhere given you have a matching architecture.&lt;/p&gt;
