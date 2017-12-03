@@ -1,7 +1,8 @@
 +++
 date = "2014-11-29T10:45:05-08:00"
-draft = true
+draft = false
 title = "go powered databases"
+tags = [ "golang" ]
 
 +++
 
@@ -33,12 +34,14 @@ A Scalable, Geo-Replicated, Transactional Datastore
 design document https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit
 
 feature summary
+
 - ACID transactional semantics
 - versioned values
 - primary design goal is consistency and survivability
 - aims to tolerate disk, server, rack and datacenter failures
 
 related technologies
+
 - rocksdb (variant of leveldb) - http://rocksdb.org/
 
 

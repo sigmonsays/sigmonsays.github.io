@@ -766,6 +766,59 @@ sys.ps1 = line
     </item>
     
     <item>
+      <title>go powered databases</title>
+      <link>http://sigmonsays.github.io/2014/11/go-powered-databases/</link>
+      <pubDate>Sat, 29 Nov 2014 10:45:05 -0800</pubDate>
+      
+      <guid>http://sigmonsays.github.io/2014/11/go-powered-databases/</guid>
+      <description>
+
+&lt;ul&gt;
+&lt;li&gt;bolt - &lt;a href=&#34;https://github.com/boltdb/bolt&#34;&gt;https://github.com/boltdb/bolt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ledis - &lt;a href=&#34;http://ledisdb.com/&#34;&gt;http://ledisdb.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;tiedot - &lt;a href=&#34;https://github.com/HouzuoGuo/tiedot&#34;&gt;https://github.com/HouzuoGuo/tiedot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cockroachdb - &lt;a href=&#34;https://github.com/cockroachdb/cockroach&#34;&gt;https://github.com/cockroachdb/cockroach&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;bolt:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;bolt&lt;/h2&gt;
+
+&lt;p&gt;pure go key-value datastore&lt;/p&gt;
+
+&lt;h2 id=&#34;ledis:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;ledis&lt;/h2&gt;
+
+&lt;p&gt;redis like database written in go&lt;/p&gt;
+
+&lt;p&gt;attractive to embed redis like features directly into your application which
+will reduce operational complexity.&lt;/p&gt;
+
+&lt;h2 id=&#34;tiedot:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;tiedot&lt;/h2&gt;
+
+&lt;p&gt;JSON document database&lt;/p&gt;
+
+&lt;h2 id=&#34;cockrochdb:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;cockrochdb&lt;/h2&gt;
+
+&lt;p&gt;A Scalable, Geo-Replicated, Transactional Datastore&lt;/p&gt;
+
+&lt;p&gt;design document &lt;a href=&#34;https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit&#34;&gt;https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;feature summary&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ACID transactional semantics&lt;/li&gt;
+&lt;li&gt;versioned values&lt;/li&gt;
+&lt;li&gt;primary design goal is consistency and survivability&lt;/li&gt;
+&lt;li&gt;aims to tolerate disk, server, rack and datacenter failures&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;related technologies&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;rocksdb (variant of leveldb) - &lt;a href=&#34;http://rocksdb.org/&#34;&gt;http://rocksdb.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>ban systemd</title>
       <link>http://sigmonsays.github.io/2014/09/ban-systemd/</link>
       <pubDate>Mon, 22 Sep 2014 21:26:16 -0700</pubDate>
