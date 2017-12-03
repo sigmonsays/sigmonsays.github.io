@@ -138,22 +138,12 @@ leveled logging libary for go&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;#compiled-language:2948febad6b536d231a5b814f2926696&#34;&gt;Compiled Language&lt;/a&gt; has a compiler which checks a lot of errors for me&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#static-linking:2948febad6b536d231a5b814f2926696&#34;&gt;Strictly typed&lt;/a&gt; language&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#static-linking:2948febad6b536d231a5b814f2926696&#34;&gt;Statically linked&lt;/a&gt; binary (single binary deployment!)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#type-system:2948febad6b536d231a5b814f2926696&#34;&gt;Unique type system&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;excellent type system and OOP-like features (interfaces)&lt;/li&gt;
-&lt;li&gt;composition and embedding&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#language-grammer:2948febad6b536d231a5b814f2926696&#34;&gt;Language Grammer&lt;/a&gt; well defined&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#tooling:2948febad6b536d231a5b814f2926696&#34;&gt;Amazing Tooling&lt;/a&gt; ie, gofmt, godef, go-imports, vim-go&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;small standard library and the go1 promise &lt;a href=&#34;https://golang.org/doc/go1compat&#34;&gt;https://golang.org/doc/go1compat&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#concurrency:2948febad6b536d231a5b814f2926696&#34;&gt;concurrency&lt;/a&gt; is a language (not library) feature, ie concurrency, goroutines, and channels&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;it is good to collaborate on (e.g. writing large systems)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#type-system:2948febad6b536d231a5b814f2926696&#34;&gt;Unique type system&lt;/a&gt; using interfaces, composition and embedding instead of OOP patterns&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#language-grammer:2948febad6b536d231a5b814f2926696&#34;&gt;Language Grammer&lt;/a&gt; well defined&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tooling:2948febad6b536d231a5b814f2926696&#34;&gt;Amazing Tooling&lt;/a&gt; ie, gofmt, godef, go-imports, vim-go&lt;/li&gt;
+&lt;li&gt;small standard library and the go1 promise &lt;a href=&#34;https://golang.org/doc/go1compat&#34;&gt;https://golang.org/doc/go1compat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#concurrency:2948febad6b536d231a5b814f2926696&#34;&gt;concurrency&lt;/a&gt; is a language (not library) feature, ie concurrency, goroutines, and channels&lt;/li&gt;
+&lt;li&gt;it is good to collaborate on (e.g. writing large systems)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;work-in-progress:2948febad6b536d231a5b814f2926696&#34;&gt;work in progress!&lt;/h1&gt;

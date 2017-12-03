@@ -12,11 +12,8 @@ tags = [ "golang" ]
 - [Compiled Language]({{< relref "#compiled-language" >}}) has a compiler which checks a lot of errors for me
 - [Strictly typed]({{< relref "#static-linking" >}}) language
 - [Statically linked]({{< relref "#static-linking" >}}) binary (single binary deployment!)
-- [Unique type system]({{< relref "#type-system" >}})
-  - excellent type system and OOP-like features (interfaces)
-  - composition and embedding
+- [Unique type system]({{< relref "#type-system" >}}) using interfaces, composition and embedding instead of OOP patterns
 - [Language Grammer]({{< relref "#language-grammer" >}}) well defined 
-
 - [Amazing Tooling]({{< relref "#tooling" >}}) ie, gofmt, godef, go-imports, vim-go
 - small standard library and the go1 promise https://golang.org/doc/go1compat
 - [concurrency]({{< relref "#concurrency" >}}) is a language (not library) feature, ie concurrency, goroutines, and channels
