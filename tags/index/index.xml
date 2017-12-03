@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Index on sig</title>
-    <link>http://sigmonsays.github.io/tags/index/</link>
+    <link>https://sigmonsays.github.io/tags/index/</link>
     <description>Recent content in Index on sig</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 02 Dec 2017 10:38:37 -0700</lastBuildDate>
-    <atom:link href="http://sigmonsays.github.io/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sigmonsays.github.io/tags/index/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Archive</title>
-      <link>http://sigmonsays.github.io/archive/</link>
+      <link>https://sigmonsays.github.io/archive/</link>
       <pubDate>Sat, 02 Dec 2017 10:38:37 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/archive/</guid>
+      <guid>https://sigmonsays.github.io/archive/</guid>
       <description>&lt;p&gt;&lt;strong&gt;All Pages&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://sigmonsays.github.io/about/</link>
+      <link>https://sigmonsays.github.io/about/</link>
       <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/about/</guid>
+      <guid>https://sigmonsays.github.io/about/</guid>
       <description>&lt;p&gt;Start of another blog, developer focused, as a way to write about, keep track of and archive various technologies and trends.&lt;/p&gt;
 
 &lt;p&gt;Hopefully this involves into something for now but mostly its a place to put random thought.&lt;/p&gt;
@@ -32,10 +32,10 @@
     
     <item>
       <title>Contact</title>
-      <link>http://sigmonsays.github.io/contact/</link>
+      <link>https://sigmonsays.github.io/contact/</link>
       <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/contact/</guid>
+      <guid>https://sigmonsays.github.io/contact/</guid>
       <description>&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -57,7 +57,7 @@
 
 &lt;tr&gt;
 &lt;td&gt;PGP&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://sigmonsays.github.io/keybase/&#34;&gt;my PGP key&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://sigmonsays.github.io/keybase/&#34;&gt;my PGP key&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

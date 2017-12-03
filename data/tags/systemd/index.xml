@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Systemd on sig</title>
-    <link>http://sigmonsays.github.io/tags/systemd/</link>
+    <link>https://sigmonsays.github.io/tags/systemd/</link>
     <description>Recent content in Systemd on sig</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 22 Sep 2014 21:26:16 -0700</lastBuildDate>
-    <atom:link href="http://sigmonsays.github.io/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sigmonsays.github.io/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ban systemd</title>
-      <link>http://sigmonsays.github.io/2014/09/ban-systemd/</link>
+      <link>https://sigmonsays.github.io/2014/09/ban-systemd/</link>
       <pubDate>Mon, 22 Sep 2014 21:26:16 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/2014/09/ban-systemd/</guid>
+      <guid>https://sigmonsays.github.io/2014/09/ban-systemd/</guid>
       <description>
 
 &lt;h1 id=&#34;updates:749128d591ff05498577f36910c58f15&#34;&gt;updates&lt;/h1&gt;

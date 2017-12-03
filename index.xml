@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sig</title>
-    <link>http://sigmonsays.github.io/</link>
+    <link>https://sigmonsays.github.io/</link>
     <description>Recent content on sig</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 02 Dec 2017 10:38:37 -0700</lastBuildDate>
-    <atom:link href="http://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Archive</title>
-      <link>http://sigmonsays.github.io/archive/</link>
+      <link>https://sigmonsays.github.io/archive/</link>
       <pubDate>Sat, 02 Dec 2017 10:38:37 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/archive/</guid>
+      <guid>https://sigmonsays.github.io/archive/</guid>
       <description>&lt;p&gt;&lt;strong&gt;All Pages&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>bash</title>
-      <link>http://sigmonsays.github.io/bash/</link>
+      <link>https://sigmonsays.github.io/bash/</link>
       <pubDate>Fri, 01 Dec 2017 10:38:37 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/bash/</guid>
+      <guid>https://sigmonsays.github.io/bash/</guid>
       <description>
 
 &lt;p&gt;I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page
@@ -77,23 +77,23 @@ primarily serves as short snippets of bash recipes I often want to re-use.&lt;/p
     
     <item>
       <title>Projects</title>
-      <link>http://sigmonsays.github.io/projects/</link>
+      <link>https://sigmonsays.github.io/projects/</link>
       <pubDate>Thu, 30 Nov 2017 16:07:01 -0800</pubDate>
       
-      <guid>http://sigmonsays.github.io/projects/</guid>
+      <guid>https://sigmonsays.github.io/projects/</guid>
       <description>
 
 &lt;p&gt;Various ramblings and projects, mostly tools and libraries&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Related&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;I maintain a page of &lt;a href=&#34;http://sigmonsays.github.io/notes/interesting-tech/&#34;&gt; Interesting Tech &lt;/a&gt; which are random pieces of software or tools I find interesting at the time.&lt;/p&gt;
+&lt;p&gt;I maintain a page of &lt;a href=&#34;https://sigmonsays.github.io/notes/interesting-tech/&#34;&gt; Interesting Tech &lt;/a&gt; which are random pieces of software or tools I find interesting at the time.&lt;/p&gt;
 
-&lt;p&gt;There is a section on &lt;a href=&#34;http://sigmonsays.github.io/bash/&#34;&gt;bash scripting&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There is a section on &lt;a href=&#34;https://sigmonsays.github.io/bash/&#34;&gt;bash scripting&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Projects&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://sigmonsays.github.io/2016/01/paste-an-hour-long-project/&#34;&gt; Paste &lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://sigmonsays.github.io/2016/01/paste-an-hour-long-project/&#34;&gt; Paste &lt;/a&gt;
 An hour long project where I wrote a paste server and shell script client&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/screenshot&#34;&gt; Screenshot &lt;/a&gt;
@@ -126,10 +126,10 @@ leveled logging libary for go&lt;/p&gt;
     
     <item>
       <title>why use the go programming language?</title>
-      <link>http://sigmonsays.github.io/2017/11/why-use-the-go-programming-language/</link>
+      <link>https://sigmonsays.github.io/2017/11/why-use-the-go-programming-language/</link>
       <pubDate>Thu, 16 Nov 2017 10:27:27 -0800</pubDate>
       
-      <guid>http://sigmonsays.github.io/2017/11/why-use-the-go-programming-language/</guid>
+      <guid>https://sigmonsays.github.io/2017/11/why-use-the-go-programming-language/</guid>
       <description>
 
 &lt;h1 id=&#34;in-summary:2948febad6b536d231a5b814f2926696&#34;&gt;In summary&lt;/h1&gt;
@@ -239,20 +239,20 @@ code. goroutines run in parallel, which makes it easy to maintain a mental model
     
     <item>
       <title>bunny</title>
-      <link>http://sigmonsays.github.io/notes/bunny/</link>
+      <link>https://sigmonsays.github.io/notes/bunny/</link>
       <pubDate>Mon, 17 Oct 2016 14:27:30 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/notes/bunny/</guid>
+      <guid>https://sigmonsays.github.io/notes/bunny/</guid>
       <description>&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/6dDBAiq4RFE?rel=0&amp;amp;showinfo=0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 </description>
     </item>
     
     <item>
       <title>random musings</title>
-      <link>http://sigmonsays.github.io/2016/10/random-musings/</link>
+      <link>https://sigmonsays.github.io/2016/10/random-musings/</link>
       <pubDate>Sun, 16 Oct 2016 19:51:52 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/2016/10/random-musings/</guid>
+      <guid>https://sigmonsays.github.io/2016/10/random-musings/</guid>
       <description>
 
 &lt;h1 id=&#34;would-you-rather-fight-100-duck-sized-horses-or-one-horse-sized-duck:2a3e229a0c52252aca13c01ed60c9a60&#34;&gt;Would you rather fight 100 duck sized horses or one horse sized duck?&lt;/h1&gt;
@@ -263,10 +263,10 @@ code. goroutines run in parallel, which makes it easy to maintain a mental model
     
     <item>
       <title>interesting tech</title>
-      <link>http://sigmonsays.github.io/notes/interesting-tech/</link>
+      <link>https://sigmonsays.github.io/notes/interesting-tech/</link>
       <pubDate>Sun, 16 Oct 2016 14:50:29 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/notes/interesting-tech/</guid>
+      <guid>https://sigmonsays.github.io/notes/interesting-tech/</guid>
       <description>
 
 &lt;h1 id=&#34;index:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Index&lt;/h1&gt;
@@ -515,10 +515,10 @@ decentralized cloud messaging with broadcast, request/reply and pubsub messaging
     
     <item>
       <title>hitler uses docker</title>
-      <link>http://sigmonsays.github.io/2016/04/hitler-uses-docker/</link>
+      <link>https://sigmonsays.github.io/2016/04/hitler-uses-docker/</link>
       <pubDate>Mon, 11 Apr 2016 11:23:01 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/2016/04/hitler-uses-docker/</guid>
+      <guid>https://sigmonsays.github.io/2016/04/hitler-uses-docker/</guid>
       <description>&lt;p&gt;video&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=PivpCKEiQOQ&#34;&gt;https://www.youtube.com/watch?v=PivpCKEiQOQ&lt;/a&gt;&lt;/p&gt;
@@ -621,10 +621,10 @@ hitler: use openstack for all I care
     
     <item>
       <title>programming exercise</title>
-      <link>http://sigmonsays.github.io/2016/03/programming-exercise/</link>
+      <link>https://sigmonsays.github.io/2016/03/programming-exercise/</link>
       <pubDate>Wed, 02 Mar 2016 14:57:19 -0800</pubDate>
       
-      <guid>http://sigmonsays.github.io/2016/03/programming-exercise/</guid>
+      <guid>https://sigmonsays.github.io/2016/03/programming-exercise/</guid>
       <description>&lt;p&gt;I heard from a friend about an interesting interview question that I thought would be easy.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;The problem&lt;/em&gt;&lt;/p&gt;
@@ -791,10 +791,10 @@ of stickers. We search the pile for a given letter, and if its not found we add 
     
     <item>
       <title>enlightenment</title>
-      <link>http://sigmonsays.github.io/enlightenment/</link>
+      <link>https://sigmonsays.github.io/enlightenment/</link>
       <pubDate>Tue, 09 Feb 2016 17:10:00 -0800</pubDate>
       
-      <guid>http://sigmonsays.github.io/enlightenment/</guid>
+      <guid>https://sigmonsays.github.io/enlightenment/</guid>
       <description>
 
 &lt;p&gt;enlightenment has been my window manager of choice for a very long time maintly because of its speed. I used to run
@@ -836,10 +836,10 @@ window maker and then fluxbox before I made the switch to enlightenment (0.16 at
     
     <item>
       <title>keybase</title>
-      <link>http://sigmonsays.github.io/keybase/</link>
+      <link>https://sigmonsays.github.io/keybase/</link>
       <pubDate>Fri, 05 Feb 2016 18:28:35 -0800</pubDate>
       
-      <guid>http://sigmonsays.github.io/keybase/</guid>
+      <guid>https://sigmonsays.github.io/keybase/</guid>
       <description>&lt;p&gt;my keybase profile is &lt;a href=&#34;https://keybase.io/sigmonsays&#34;&gt;https://keybase.io/sigmonsays&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;keybase proof for this site here &lt;a href=&#34;https://sigmonsays.github.io/keybase.txt&#34;&gt;https://sigmonsays.github.io/keybase.txt&lt;/a&gt;&lt;/p&gt;
@@ -928,10 +928,10 @@ window maker and then fluxbox before I made the switch to enlightenment (0.16 at
     
     <item>
       <title>paste, an hour long project</title>
-      <link>http://sigmonsays.github.io/2016/01/paste-an-hour-long-project/</link>
+      <link>https://sigmonsays.github.io/2016/01/paste-an-hour-long-project/</link>
       <pubDate>Sun, 31 Jan 2016 10:58:55 -0800</pubDate>
       
-      <guid>http://sigmonsays.github.io/2016/01/paste-an-hour-long-project/</guid>
+      <guid>https://sigmonsays.github.io/2016/01/paste-an-hour-long-project/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.&lt;/p&gt;
 
 &lt;p&gt;It has always been bothersome to me that any paste, or &amp;ldquo;no paste&amp;rdquo; command line client has to be needlessly complex. Some i&amp;rsquo;ve tried to
@@ -948,10 +948,10 @@ paste() { curl --data-binary @- http://paste.grepped.org/paste ;  }
     
     <item>
       <title>git-watch</title>
-      <link>http://sigmonsays.github.io/2016/01/git-watch/</link>
+      <link>https://sigmonsays.github.io/2016/01/git-watch/</link>
       <pubDate>Sun, 03 Jan 2016 21:33:07 -0800</pubDate>
       
-      <guid>http://sigmonsays.github.io/2016/01/git-watch/</guid>
+      <guid>https://sigmonsays.github.io/2016/01/git-watch/</guid>
       <description>&lt;p&gt;git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.&lt;/p&gt;
 
 &lt;p&gt;git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either
@@ -1023,10 +1023,10 @@ command. After the install command succeeds, the application is restarted.&lt;/p
     
     <item>
       <title>convenient cli tookit using python</title>
-      <link>http://sigmonsays.github.io/2015/02/convenient-cli-tookit-using-python/</link>
+      <link>https://sigmonsays.github.io/2015/02/convenient-cli-tookit-using-python/</link>
       <pubDate>Tue, 03 Feb 2015 11:59:36 -0800</pubDate>
       
-      <guid>http://sigmonsays.github.io/2015/02/convenient-cli-tookit-using-python/</guid>
+      <guid>https://sigmonsays.github.io/2015/02/convenient-cli-tookit-using-python/</guid>
       <description>
 
 &lt;p&gt;python is a incredibly useful language and has a powerful type system which
@@ -1272,10 +1272,10 @@ sys.ps1 = line
     
     <item>
       <title>go powered databases</title>
-      <link>http://sigmonsays.github.io/2014/11/go-powered-databases/</link>
+      <link>https://sigmonsays.github.io/2014/11/go-powered-databases/</link>
       <pubDate>Sat, 29 Nov 2014 10:45:05 -0800</pubDate>
       
-      <guid>http://sigmonsays.github.io/2014/11/go-powered-databases/</guid>
+      <guid>https://sigmonsays.github.io/2014/11/go-powered-databases/</guid>
       <description>
 
 &lt;ul&gt;

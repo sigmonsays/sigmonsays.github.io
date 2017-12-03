@@ -9,7 +9,7 @@ indexes:
   category: "categories"
   series: "series"
 
-baseurl: "http://sigmonsays.github.io/"
+baseurl: "https://sigmonsays.github.io/"
 permalinks:
   post: /:year/:month/:slug/
 

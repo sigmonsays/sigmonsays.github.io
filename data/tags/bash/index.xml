@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bash on sig</title>
-    <link>http://sigmonsays.github.io/tags/bash/</link>
+    <link>https://sigmonsays.github.io/tags/bash/</link>
     <description>Recent content in Bash on sig</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 01 Dec 2017 10:38:37 -0700</lastBuildDate>
-    <atom:link href="http://sigmonsays.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sigmonsays.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>bash</title>
-      <link>http://sigmonsays.github.io/bash/</link>
+      <link>https://sigmonsays.github.io/bash/</link>
       <pubDate>Fri, 01 Dec 2017 10:38:37 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/bash/</guid>
+      <guid>https://sigmonsays.github.io/bash/</guid>
       <description>
 
 &lt;p&gt;I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page

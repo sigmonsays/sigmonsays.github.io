@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pgp on sig</title>
-    <link>http://sigmonsays.github.io/tags/pgp/</link>
+    <link>https://sigmonsays.github.io/tags/pgp/</link>
     <description>Recent content in Pgp on sig</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 05 Feb 2016 18:28:35 -0800</lastBuildDate>
-    <atom:link href="http://sigmonsays.github.io/tags/pgp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sigmonsays.github.io/tags/pgp/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>keybase</title>
-      <link>http://sigmonsays.github.io/keybase/</link>
+      <link>https://sigmonsays.github.io/keybase/</link>
       <pubDate>Fri, 05 Feb 2016 18:28:35 -0800</pubDate>
       
-      <guid>http://sigmonsays.github.io/keybase/</guid>
+      <guid>https://sigmonsays.github.io/keybase/</guid>
       <description>&lt;p&gt;my keybase profile is &lt;a href=&#34;https://keybase.io/sigmonsays&#34;&gt;https://keybase.io/sigmonsays&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;keybase proof for this site here &lt;a href=&#34;https://sigmonsays.github.io/keybase.txt&#34;&gt;https://sigmonsays.github.io/keybase.txt&lt;/a&gt;&lt;/p&gt;

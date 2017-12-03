@@ -1,3 +1,3 @@
 
-The code for the website https://sigmonsays.github.io
+The code for the website http://sigmonsays.github.io
 

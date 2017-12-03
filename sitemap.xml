@@ -2,123 +2,123 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://sigmonsays.github.io/</loc>
+    <loc>https://sigmonsays.github.io/</loc>
     <lastmod>2017-12-02T10:38:37-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/archive/</loc>
+    <loc>https://sigmonsays.github.io/archive/</loc>
     <lastmod>2017-12-02T10:38:37-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/bash/</loc>
+    <loc>https://sigmonsays.github.io/bash/</loc>
     <lastmod>2017-12-01T10:38:37-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/projects/</loc>
+    <loc>https://sigmonsays.github.io/projects/</loc>
     <lastmod>2017-11-30T16:07:01-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/2017/11/why-use-the-go-programming-language/</loc>
+    <loc>https://sigmonsays.github.io/2017/11/why-use-the-go-programming-language/</loc>
     <lastmod>2017-11-16T10:27:27-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/notes/bunny/</loc>
+    <loc>https://sigmonsays.github.io/notes/bunny/</loc>
     <lastmod>2016-10-17T14:27:30-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/2016/10/random-musings/</loc>
+    <loc>https://sigmonsays.github.io/2016/10/random-musings/</loc>
     <lastmod>2016-10-16T19:51:52-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/notes/interesting-tech/</loc>
+    <loc>https://sigmonsays.github.io/notes/interesting-tech/</loc>
     <lastmod>2016-10-16T14:50:29-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/2016/04/hitler-uses-docker/</loc>
+    <loc>https://sigmonsays.github.io/2016/04/hitler-uses-docker/</loc>
     <lastmod>2016-04-11T11:23:01-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/2016/03/programming-exercise/</loc>
+    <loc>https://sigmonsays.github.io/2016/03/programming-exercise/</loc>
     <lastmod>2016-03-02T14:57:19-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/enlightenment/</loc>
+    <loc>https://sigmonsays.github.io/enlightenment/</loc>
     <lastmod>2016-02-09T17:10:00-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/keybase/</loc>
+    <loc>https://sigmonsays.github.io/keybase/</loc>
     <lastmod>2016-02-05T18:28:35-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/2016/01/paste-an-hour-long-project/</loc>
+    <loc>https://sigmonsays.github.io/2016/01/paste-an-hour-long-project/</loc>
     <lastmod>2016-01-31T10:58:55-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/2016/01/git-watch/</loc>
+    <loc>https://sigmonsays.github.io/2016/01/git-watch/</loc>
     <lastmod>2016-01-03T21:33:07-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/2015/02/convenient-cli-tookit-using-python/</loc>
+    <loc>https://sigmonsays.github.io/2015/02/convenient-cli-tookit-using-python/</loc>
     <lastmod>2015-02-03T11:59:36-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/2014/11/go-powered-databases/</loc>
+    <loc>https://sigmonsays.github.io/2014/11/go-powered-databases/</loc>
     <lastmod>2014-11-29T10:45:05-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/2014/09/ban-systemd/</loc>
+    <loc>https://sigmonsays.github.io/2014/09/ban-systemd/</loc>
     <lastmod>2014-09-22T21:26:16-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/static/firewall/</loc>
+    <loc>https://sigmonsays.github.io/static/firewall/</loc>
     <lastmod>2014-09-12T09:38:41-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/2014/09/building-packages-with-docker/</loc>
+    <loc>https://sigmonsays.github.io/2014/09/building-packages-with-docker/</loc>
     <lastmod>2014-09-11T15:32:44-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/2014/09/docker-wishlist/</loc>
+    <loc>https://sigmonsays.github.io/2014/09/docker-wishlist/</loc>
     <lastmod>2014-09-07T19:37:21-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/2014/09/docker-networking-performance/</loc>
+    <loc>https://sigmonsays.github.io/2014/09/docker-networking-performance/</loc>
     <lastmod>2014-09-05T07:33:28-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/about/</loc>
+    <loc>https://sigmonsays.github.io/about/</loc>
     <lastmod>2014-09-02T09:38:41-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/contact/</loc>
+    <loc>https://sigmonsays.github.io/contact/</loc>
     <lastmod>2014-09-02T09:38:41-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sigmonsays.github.io/sudo/</loc>
+    <loc>https://sigmonsays.github.io/sudo/</loc>
     <lastmod>2014-09-02T09:38:41-07:00</lastmod>
   </url>
   
