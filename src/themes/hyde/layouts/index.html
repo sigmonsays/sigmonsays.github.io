@@ -6,7 +6,7 @@
     <div class="content container">
 <div class="posts">
 
-      {{ range where .Site.Pages "Params.promo" "ne" "nopromo"  }}
+      {{ range first 3 (where .Site.Pages "Params.promo" "ne" "nopromo"  ) }}
   <div class="post">
     <h1 class="post-title">
       <a href="{{ .Permalink }}">
