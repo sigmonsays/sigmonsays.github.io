@@ -6,11 +6,13 @@
 			<div class="post">
 			 	<h1>{{ .Title }}</h1>
 			   <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+            {{ if .Params.tags }}
             Tags:
               {{ range .Params.tags }}
                   <a href="/tags/{{ . | urlize }}">{{ . }}</a> &nbsp; 
                     {{ end }}
             <br>
+            {{ end }}
             {{ .Content }}
 			</div>
 
