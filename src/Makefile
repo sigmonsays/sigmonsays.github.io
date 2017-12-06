@@ -20,5 +20,7 @@ dev:
 	hugo server $(HUGO_FLAGS) --bind 0.0.0.0 -w -d ../tmp --theme=$(THEME)  --buildDrafts
 
 post:
-	hugo new post/example.md
+	cp content/template.md post/example.md
+	sed -i 's,^date =.*,date = "$(date +%s)"'
+
 
