@@ -21,6 +21,5 @@ dev:
 
 post:
 	cp content/template.md post/example.md
-	sed -i 's,^date =.*,date = "$(date +%s)"'
 
 

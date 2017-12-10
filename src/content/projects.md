@@ -20,8 +20,8 @@ There is a section on [bash scripting]({{< relref "bash.md" >}})
 [ Paste ]({{< relref "paste.md" >}})
 An hour long project where I wrote a paste server and shell script client
 
-[ Screenshot ](https://github.com/sigmonsays/screenshot)
-python script for taking screenshots and uploading them to a cloud storage provider 
+[ Screenshot ]({{< relref "project/screenshot.md" >}})
+python script for taking screenshots and uploading them to a cloud storage provider. [github](https://github.com/sigmonsays/screenshot)
 
 [ git-watch ](https://github.com/sigmonsays/git-watch)
 watch a git repository for changes and execute update commands
