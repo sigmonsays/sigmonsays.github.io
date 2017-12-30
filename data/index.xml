@@ -133,6 +133,10 @@ leveled logging libary for go&lt;/p&gt;
       <guid>https://sigmonsays.github.io/2017/11/why-use-the-go-programming-language/</guid>
       <description>
 
+&lt;p&gt;I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2009. as en exercise I wrote a simple daemon to handle
+some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors
+needed to operate on a workqueue. This daemon is actually still in produciton today =P&lt;/p&gt;
+
 &lt;h1 id=&#34;in-summary:2948febad6b536d231a5b814f2926696&#34;&gt;In summary&lt;/h1&gt;
 
 &lt;ul&gt;
