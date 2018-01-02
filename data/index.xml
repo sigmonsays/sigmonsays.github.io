@@ -274,85 +274,22 @@ code. goroutines run in parallel, which makes it easy to maintain a mental model
       <guid>https://sigmonsays.github.io/notes/interesting-tech/</guid>
       <description>
 
-&lt;h1 id=&#34;index:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Index&lt;/h1&gt;
+&lt;p&gt;There is a &lt;a href=&#34;#index&#34;&gt;index&lt;/a&gt; which lists all the sections. The newest is at the top.&lt;/p&gt;
+
+&lt;h1 id=&#34;jan-2018:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2018&lt;/h1&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Section&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
 &lt;th&gt;Description&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#oct-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;October 2016&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#hitless-haproxy-reload:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;haproxy hitless reload&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#feb-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Feb 2016&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#jan-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2016&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#nov-2015:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;November 2015&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#go-jira:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;go jira&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#jan-2015:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2015&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Unsorted&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#xo:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;xo&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#teleport:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;teleport&lt;/a&gt; ssh server&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#sftp-server-library-in-go:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;sftp server library in go&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#toasteroid:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;toasteroid&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#httpcache:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;httpcache&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/lewish/asciiflow2&#34;&gt;https://github.com/lewish/asciiflow2&lt;/a&gt; and &lt;a href=&#34;http://asciiflow.com/&#34;&gt;http://asciiflow.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;ascii art draw tool.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -515,6 +452,94 @@ decentralized cloud messaging with broadcast, request/reply and pubsub messaging
 
 &lt;li&gt;&lt;p&gt;Rudder - Software Defined Networks - &lt;a href=&#34;https://github.com/coreos/rudder &#34;&gt;https://github.com/coreos/rudder &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h1 id=&#34;index:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Index&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Section&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#jan-2018:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2018&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#oct-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;October 2016&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#hitless-haproxy-reload:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;haproxy hitless reload&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#feb-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Feb 2016&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#jan-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2016&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#nov-2015:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;November 2015&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#go-jira:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;go jira&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#jan-2015:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2015&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Unsorted&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#xo:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;xo&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#teleport:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;teleport&lt;/a&gt; ssh server&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#sftp-server-library-in-go:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;sftp server library in go&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#toasteroid:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;toasteroid&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#httpcache:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;httpcache&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     

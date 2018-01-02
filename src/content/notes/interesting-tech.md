@@ -8,26 +8,14 @@ promo = "nopromo"
 +++
 
 
-# Index
+There is a [index](#index) which lists all the sections. The newest is at the top.
 
+# Jan 2018
 
+| Link                                                           | Description          |
+| ---                                                            | ---                  |
+| https://github.com/lewish/asciiflow2 and http://asciiflow.com/ | ascii art draw tool. | 
 
-| Section                                     | Description                                                              |
-| ---                                         | ---                                                                      |
-| [October 2016]({{< ref "#oct-2016" >}})     |                                                                          |
-|                                             | [haproxy hitless reload]({{< relref "#hitless-haproxy-reload" >}})       |
-| [Feb 2016]({{< relref "#feb-2016" >}})      |                                                                          |
-| [Jan 2016]({{< relref "#jan-2016" >}})      |                                                                          |
-| [November 2015]({{< relref "#nov-2015" >}}) |                                                                          |
-|                                             | [go jira]({{< relref "#go-jira" >}})                                     |
-| [Jan 2015]({{< relref "#jan-2015" >}})      |                                                                          |
-| Unsorted                                    |                                                                          |
-|                                             | [xo]({{< relref "#xo" >}})                                               |
-|                                             | [teleport]({{< relref "#teleport" >}}) ssh server                        |
-|                                             | [sftp server library in go]({{< relref "#sftp-server-library-in-go" >}}) |
-|                                             | [toasteroid]({{< relref "#toasteroid" >}})                               |
-|                                             | [httpcache]({{< relref "#httpcache" >}})                                 |
-|                                             |                                                                          |
 
 # Oct 2016
 
@@ -168,3 +156,24 @@ https://github.com/gregjones/httpcache
 - Quick VPN using SSH - http://backreference.org/2009/11/13/openssh-based-vpns/
 
 - Rudder - Software Defined Networks - https://github.com/coreos/rudder 
+
+
+# Index
+
+| Section                                     | Description                                                              |
+| ---                                         | ---                                                                      |
+| [Jan 2018]({{< ref "#jan-2018" >}})         |                                                                          |
+| [October 2016]({{< ref "#oct-2016" >}})     |                                                                          |
+|                                             | [haproxy hitless reload]({{< relref "#hitless-haproxy-reload" >}})       |
+| [Feb 2016]({{< relref "#feb-2016" >}})      |                                                                          |
+| [Jan 2016]({{< relref "#jan-2016" >}})      |                                                                          |
+| [November 2015]({{< relref "#nov-2015" >}}) |                                                                          |
+|                                             | [go jira]({{< relref "#go-jira" >}})                                     |
+| [Jan 2015]({{< relref "#jan-2015" >}})      |                                                                          |
+| Unsorted                                    |                                                                          |
+|                                             | [xo]({{< relref "#xo" >}})                                               |
+|                                             | [teleport]({{< relref "#teleport" >}}) ssh server                        |
+|                                             | [sftp server library in go]({{< relref "#sftp-server-library-in-go" >}}) |
+|                                             | [toasteroid]({{< relref "#toasteroid" >}})                               |
+|                                             | [httpcache]({{< relref "#httpcache" >}})                                 |
+|                                             |                                                                          |
