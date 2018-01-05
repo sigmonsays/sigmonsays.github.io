@@ -7,7 +7,7 @@ tags = [ "golang" ]
 
 +++
 
-I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2009. as en exercise I wrote a simple daemon to handle
+I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle
 some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors
 needed to operate on a workqueue. This daemon is actually still in produciton today =P
 
