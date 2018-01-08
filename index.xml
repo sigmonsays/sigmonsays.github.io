@@ -1301,55 +1301,124 @@ sys.ps1 = line
     </item>
     
     <item>
-      <title>go powered databases</title>
-      <link>https://sigmonsays.github.io/2014/11/go-powered-databases/</link>
-      <pubDate>Sat, 29 Nov 2014 10:45:05 -0800</pubDate>
+      <title>Google Owned</title>
+      <link>https://sigmonsays.github.io/2015/01/google-owned/</link>
+      <pubDate>Mon, 05 Jan 2015 10:38:37 -0700</pubDate>
       
-      <guid>https://sigmonsays.github.io/2014/11/go-powered-databases/</guid>
+      <guid>https://sigmonsays.github.io/2015/01/google-owned/</guid>
       <description>
 
-&lt;ul&gt;
-&lt;li&gt;bolt - &lt;a href=&#34;https://github.com/boltdb/bolt&#34;&gt;https://github.com/boltdb/bolt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ledis - &lt;a href=&#34;http://ledisdb.com/&#34;&gt;http://ledisdb.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;tiedot - &lt;a href=&#34;https://github.com/HouzuoGuo/tiedot&#34;&gt;https://github.com/HouzuoGuo/tiedot&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;cockroachdb - &lt;a href=&#34;https://github.com/cockroachdb/cockroach&#34;&gt;https://github.com/cockroachdb/cockroach&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Ever think about how much information google has collected about you?&lt;/p&gt;
 
-&lt;h2 id=&#34;bolt:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;bolt&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Service&lt;/th&gt;
+&lt;th&gt;Information&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
 
-&lt;p&gt;pure go key-value datastore&lt;/p&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Gmail&lt;/td&gt;
+&lt;td&gt;E-mail Data&lt;/td&gt;
+&lt;td&gt;All my E-mail dating back to 2009&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;h2 id=&#34;ledis:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;ledis&lt;/h2&gt;
+&lt;tr&gt;
+&lt;td&gt;Chrome Web History&lt;/td&gt;
+&lt;td&gt;Browser History&lt;/td&gt;
+&lt;td&gt;Names of web sites I visit&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;redis like database written in go&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;Chrome Saved Passwords&lt;/td&gt;
+&lt;td&gt;Passwords&lt;/td&gt;
+&lt;td&gt;Saved passwords for sites (almost every site)&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;attractive to embed redis like features directly into your application which
-will reduce operational complexity.&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;Maps on Android&lt;/td&gt;
+&lt;td&gt;Location data&lt;/td&gt;
+&lt;td&gt;Everywhere I go is stored and archive, since I carry my phone they know exactly where I go and when&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;h2 id=&#34;tiedot:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;tiedot&lt;/h2&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Operated Dns Servers&lt;/td&gt;
+&lt;td&gt;DNS Queries&lt;/td&gt;
+&lt;td&gt;every service I talk to thats not controlled by them can be seen at the DNS level&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;JSON document database&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;Photos&lt;/td&gt;
+&lt;td&gt;Pictures&lt;/td&gt;
+&lt;td&gt;They run facial recognition on everyone&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;h2 id=&#34;cockrochdb:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;cockrochdb&lt;/h2&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Music&lt;/td&gt;
+&lt;td&gt;Music&lt;/td&gt;
+&lt;td&gt;All my music is hosted by google&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;A Scalable, Geo-Replicated, Transactional Datastore&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Drive (Sheets, Docs)&lt;/td&gt;
+&lt;td&gt;Productivity&lt;/td&gt;
+&lt;td&gt;I store a lot of information in google docs&lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;design document &lt;a href=&#34;https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit&#34;&gt;https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit&lt;/a&gt;&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Home&lt;/td&gt;
+&lt;td&gt;TTS Conversations&lt;/td&gt;
+&lt;td&gt;Always on microphone virtual assistant&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
-&lt;p&gt;feature summary&lt;/p&gt;
+&lt;h1 id=&#34;photos:b7dd011bcf4b0b70c51c588c1e7032da&#34;&gt;Photos&lt;/h1&gt;
 
-&lt;ul&gt;
-&lt;li&gt;ACID transactional semantics&lt;/li&gt;
-&lt;li&gt;versioned values&lt;/li&gt;
-&lt;li&gt;primary design goal is consistency and survivability&lt;/li&gt;
-&lt;li&gt;aims to tolerate disk, server, rack and datacenter failures&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;On top of facial recognition, there are other levels of processing performed.&lt;/p&gt;
 
-&lt;p&gt;related technologies&lt;/p&gt;
+&lt;p&gt;They have ran extensive image processing on my photo library. I can ask google home to show me pictures of &lt;code&gt;pizza&lt;/code&gt; and it shows mostly things similar to pizza&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;rocksdb (variant of leveldb) - &lt;a href=&#34;http://rocksdb.org/&#34;&gt;http://rocksdb.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h1 id=&#34;phone-sensors:b7dd011bcf4b0b70c51c588c1e7032da&#34;&gt;Phone Sensors&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Sensor&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Microphone&lt;/td&gt;
+&lt;td&gt;Audio Recording&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Camera&lt;/td&gt;
+&lt;td&gt;Picture and Video Recording&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;GPS&lt;/td&gt;
+&lt;td&gt;GPS Location - Location within meters&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;802.11 (Wifi)&lt;/td&gt;
+&lt;td&gt;Wifi Location - Triangulation&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Accelorometer&lt;/td&gt;
+&lt;td&gt;Local movement and direction&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     

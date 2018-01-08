@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google on sig</title>
+    <link>https://sigmonsays.github.io/tags/google/</link>
+    <description>Recent content in Google on sig</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 05 Jan 2015 10:38:37 -0700</lastBuildDate>
+    <atom:link href="https://sigmonsays.github.io/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Google Owned</title>
+      <link>https://sigmonsays.github.io/2015/01/google-owned/</link>
+      <pubDate>Mon, 05 Jan 2015 10:38:37 -0700</pubDate>
+      
+      <guid>https://sigmonsays.github.io/2015/01/google-owned/</guid>
+      <description>
+
+&lt;p&gt;Ever think about how much information google has collected about you?&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Service&lt;/th&gt;
+&lt;th&gt;Information&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Gmail&lt;/td&gt;
+&lt;td&gt;E-mail Data&lt;/td&gt;
+&lt;td&gt;All my E-mail dating back to 2009&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Chrome Web History&lt;/td&gt;
+&lt;td&gt;Browser History&lt;/td&gt;
+&lt;td&gt;Names of web sites I visit&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Chrome Saved Passwords&lt;/td&gt;
+&lt;td&gt;Passwords&lt;/td&gt;
+&lt;td&gt;Saved passwords for sites (almost every site)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Maps on Android&lt;/td&gt;
+&lt;td&gt;Location data&lt;/td&gt;
+&lt;td&gt;Everywhere I go is stored and archive, since I carry my phone they know exactly where I go and when&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Google Operated Dns Servers&lt;/td&gt;
+&lt;td&gt;DNS Queries&lt;/td&gt;
+&lt;td&gt;every service I talk to thats not controlled by them can be seen at the DNS level&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Photos&lt;/td&gt;
+&lt;td&gt;Pictures&lt;/td&gt;
+&lt;td&gt;They run facial recognition on everyone&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Google Music&lt;/td&gt;
+&lt;td&gt;Music&lt;/td&gt;
+&lt;td&gt;All my music is hosted by google&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Google Drive (Sheets, Docs)&lt;/td&gt;
+&lt;td&gt;Productivity&lt;/td&gt;
+&lt;td&gt;I store a lot of information in google docs&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Google Home&lt;/td&gt;
+&lt;td&gt;TTS Conversations&lt;/td&gt;
+&lt;td&gt;Always on microphone virtual assistant&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&#34;photos:b7dd011bcf4b0b70c51c588c1e7032da&#34;&gt;Photos&lt;/h1&gt;
+
+&lt;p&gt;On top of facial recognition, there are other levels of processing performed.&lt;/p&gt;
+
+&lt;p&gt;They have ran extensive image processing on my photo library. I can ask google home to show me pictures of &lt;code&gt;pizza&lt;/code&gt; and it shows mostly things similar to pizza&lt;/p&gt;
+
+&lt;h1 id=&#34;phone-sensors:b7dd011bcf4b0b70c51c588c1e7032da&#34;&gt;Phone Sensors&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Sensor&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Microphone&lt;/td&gt;
+&lt;td&gt;Audio Recording&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Camera&lt;/td&gt;
+&lt;td&gt;Picture and Video Recording&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;GPS&lt;/td&gt;
+&lt;td&gt;GPS Location - Location within meters&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;802.11 (Wifi)&lt;/td&gt;
+&lt;td&gt;Wifi Location - Triangulation&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Accelorometer&lt;/td&gt;
+&lt;td&gt;Local movement and direction&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,6 +1,6 @@
 +++
 date = "2015-01-05T10:38:37-07:00"
-draft = true
+draft = false
 title = "Google Owned"
 tags = [ "google", "security" ]
 _promo = [ "nopromo" ]
