@@ -118,3 +118,8 @@ code. goroutines run in parallel, which makes it easy to maintain a mental model
 
 `channels` are the communication primitive and allow different goroutines to talk to each other. A channel can be buffered and unbuffered, which allows creation of some really useful patterns.
 
+
+# Useful Resources
+
+- Go Proverbs - Bunch of wisdom - https://go-proverbs.github.io/
+

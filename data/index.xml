@@ -239,6 +239,12 @@ is a lot of graphical editors too if that is your thing.&lt;/p&gt;
 code. goroutines run in parallel, which makes it easy to maintain a mental model of what is happening in a concurrent program.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;channels&lt;/code&gt; are the communication primitive and allow different goroutines to talk to each other. A channel can be buffered and unbuffered, which allows creation of some really useful patterns.&lt;/p&gt;
+
+&lt;h1 id=&#34;useful-resources:2948febad6b536d231a5b814f2926696&#34;&gt;Useful Resources&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go Proverbs - Bunch of wisdom - &lt;a href=&#34;https://go-proverbs.github.io/&#34;&gt;https://go-proverbs.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
