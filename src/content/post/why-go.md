@@ -122,4 +122,6 @@ code. goroutines run in parallel, which makes it easy to maintain a mental model
 # Useful Resources
 
 - Go Proverbs - Bunch of wisdom - https://go-proverbs.github.io/
+- Errors are Values - https://blog.golang.org/errors-are-values
+
 
