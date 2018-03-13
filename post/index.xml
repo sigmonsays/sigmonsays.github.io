@@ -127,6 +127,7 @@ code. goroutines run in parallel, which makes it easy to maintain a mental model
 
 &lt;ul&gt;
 &lt;li&gt;Go Proverbs - Bunch of wisdom - &lt;a href=&#34;https://go-proverbs.github.io/&#34;&gt;https://go-proverbs.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Errors are Values - &lt;a href=&#34;https://blog.golang.org/errors-are-values&#34;&gt;https://blog.golang.org/errors-are-values&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
