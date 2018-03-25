@@ -22,6 +22,7 @@ needed to operate on a workqueue. This daemon is actually still in produciton to
 - small standard library and the go1 promise https://golang.org/doc/go1compat
 - [concurrency]({{< relref "#concurrency" >}}) is a language (not library) feature, ie concurrency, goroutines, and channels
 - it is good to collaborate on (e.g. writing large systems)
+- Go is [memory safe](https://en.wikipedia.org/wiki/Memory_safety)
 
 # work in progress!
 
