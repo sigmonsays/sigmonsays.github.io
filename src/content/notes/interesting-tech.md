@@ -15,6 +15,7 @@ There is a [index](#index) which lists all the sections. The newest is at the to
 | Link                                                           | Description          |
 | ---                                                            | ---                  |
 | https://github.com/lewish/asciiflow2 and http://asciiflow.com/ | ascii art draw tool. | 
+| https://github.com/benhoyt/goawk | awk fully implemented in go and passes 'the awk test' |
 
 
 # Oct 2016
