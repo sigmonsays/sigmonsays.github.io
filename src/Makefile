@@ -2,11 +2,13 @@
 	
 THEME = hyde
 
+HUGO = $HOME/go/bin/hugo
+
 #HUGO_FLAGS := --baseURL http://192.168.33.2
 
 all:
 	@echo building site..
-	hugo -t $(THEME) -d ../data
+	$(HUGO) -t $(THEME) -d ../data
 	rsync -ar ../data/ ../
 	git add -A ../
 	git status
