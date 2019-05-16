@@ -102,6 +102,14 @@ integration with editors, like **vim-go** really tie the tools together for a ID
 is a lot of graphical editors too if that is your thing.
 
 
+`vim-go`
+
+Lots of amazing features provided by vim-go
+
+- Godef - typing `gd` in vim goes to the file defining the type or function that is under the cursor
+- Automatic imports - typing `gi` in vim adds missing imports and removes unused imports 
+
+
 **Others?**
 
 I am sure I missed some tools that I use.  What tools do you use that are not mentioned here?
