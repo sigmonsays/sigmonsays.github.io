@@ -5,6 +5,15 @@ title = "enlightenment"
 
 +++
 
+# Update: August 2019
+
+I have switched to i3wm (for some time now) exclusively due to its speed and lightweight. I'll have to write a post about that experience
+some time.
+
+
+# e20
+
+
 enlightenment has been my window manager of choice for a very long time maintly because of its speed. I used to run 
 window maker and then fluxbox before I made the switch to enlightenment (0.16 at the time iirc).
 
