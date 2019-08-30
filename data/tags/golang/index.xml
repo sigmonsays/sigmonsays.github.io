@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Golang on sig</title>
+    <title>golang on sig</title>
     <link>https://sigmonsays.github.io/tags/golang/</link>
-    <description>Recent content in Golang on sig</description>
+    <description>Recent content in golang on sig</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 16 Nov 2017 10:27:27 -0800</lastBuildDate>
-    <atom:link href="https://sigmonsays.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://sigmonsays.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>why use the go programming language?</title>
@@ -14,122 +16,7 @@
       <pubDate>Thu, 16 Nov 2017 10:27:27 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2017/11/why-use-the-go-programming-language/</guid>
-      <description>
-
-&lt;p&gt;I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle
-some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors
-needed to operate on a workqueue. This daemon is actually still in produciton today =P&lt;/p&gt;
-
-&lt;h1 id=&#34;in-summary:2948febad6b536d231a5b814f2926696&#34;&gt;In summary&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#compiled-language:2948febad6b536d231a5b814f2926696&#34;&gt;Compiled Language&lt;/a&gt; has a compiler which checks a lot of errors for me&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#strictly-typed:2948febad6b536d231a5b814f2926696&#34;&gt;Strictly typed&lt;/a&gt; language&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#static-linking:2948febad6b536d231a5b814f2926696&#34;&gt;Statically linked&lt;/a&gt; binary (single binary deployment!)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#type-system:2948febad6b536d231a5b814f2926696&#34;&gt;Unique type system&lt;/a&gt; using interfaces, composition and embedding instead of OOP patterns&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#language-grammer:2948febad6b536d231a5b814f2926696&#34;&gt;Language Grammer&lt;/a&gt; well defined&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tooling:2948febad6b536d231a5b814f2926696&#34;&gt;Amazing Tooling&lt;/a&gt; ie, gofmt, godef, go-imports, vim-go&lt;/li&gt;
-&lt;li&gt;small standard library and the go1 promise &lt;a href=&#34;https://golang.org/doc/go1compat&#34;&gt;https://golang.org/doc/go1compat&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#concurrency:2948febad6b536d231a5b814f2926696&#34;&gt;concurrency&lt;/a&gt; is a language (not library) feature, ie concurrency, goroutines, and channels&lt;/li&gt;
-&lt;li&gt;it is good to collaborate on (e.g. writing large systems)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;work-in-progress:2948febad6b536d231a5b814f2926696&#34;&gt;work in progress!&lt;/h1&gt;
-
-&lt;p&gt;This page will be filled out over time&lt;/p&gt;
-
-&lt;h1 id=&#34;compiled-language:2948febad6b536d231a5b814f2926696&#34;&gt;Compiled Language&lt;/h1&gt;
-
-&lt;p&gt;compiler checks a lot of errors for me&lt;/p&gt;
-
-&lt;p&gt;One case which use to get me all the time is error handling code in dynamic languages. If you do not unit test every case, often a undefined variable would result
-in your error handling code explode.&lt;/p&gt;
-
-&lt;p&gt;The go language also has some unique features. Undefined and unused variables cause compiler errors.&lt;/p&gt;
-
-&lt;h1 id=&#34;strictly-typed:2948febad6b536d231a5b814f2926696&#34;&gt;Strictly typed&lt;/h1&gt;
-
-&lt;p&gt;Similar to being a compiled language,&lt;/p&gt;
-
-&lt;p&gt;Large refactors in code often require changing arguments around or adding new ones. With a strictly
-typed language this is easy. If the compile works, you can be fairly confident that everything will run
-as designed.&lt;/p&gt;
-
-&lt;h1 id=&#34;static-linking:2948febad6b536d231a5b814f2926696&#34;&gt;Static linking&lt;/h1&gt;
-
-&lt;p&gt;Being a statically linked package means you are deploying a single binary or binary + config file. The only thing most go binaries link to are libc for some OS level networking support. It is possible
-to compile without libc entirely if you choose. Finally, if you avoid &lt;strong&gt;cgo&lt;/strong&gt; this means your binary will run anywhere given you have a matching architecture.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;This is an amazing feature coming from python&lt;/strong&gt; I love python but its biggest shortcoming is the confusion that arrises from the myraid of packaging systems.&lt;/p&gt;
-
-&lt;h1 id=&#34;type-system:2948febad6b536d231a5b814f2926696&#34;&gt;Type system&lt;/h1&gt;
-
-&lt;p&gt;Go has a interesting type system which removes the fundamentally flawed OOP features. OOP programmers often uses inheritenace when composition could be used instead.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;composition&lt;/strong&gt; means you combine objects together instead of searching a inheritence tree. I am not going into all the details here but here is the &lt;a href=&#34;https://en.wikipedia.org/wiki/Composition_over_inheritance&#34;&gt;wikipedia article on composition&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;language-grammer:2948febad6b536d231a5b814f2926696&#34;&gt;Language Grammer&lt;/h1&gt;
-
-&lt;p&gt;a language spec that is well defined &lt;a href=&#34;https://golang.org/ref/spec&#34;&gt;https://golang.org/ref/spec&lt;/a&gt;, short, and simple.&lt;/p&gt;
-
-&lt;p&gt;Without a well defined language specification, none of the tooling would be possible. It also makes it easy to develop tools which parse code into AST (Abstract syntax tree) and manipulate it. Ie, write code which
-modifies other code. This was not very practical in other langauges (IMHO). The &lt;code&gt;go/ast&lt;/code&gt; and &lt;code&gt;go/types&lt;/code&gt; packages lowered the barrier of entry to write quick tools for manipulating go source code.&lt;/p&gt;
-
-&lt;h1 id=&#34;tooling:2948febad6b536d231a5b814f2926696&#34;&gt;Tooling&lt;/h1&gt;
-
-&lt;p&gt;The amount of tooling really makes go a step above the rest&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;gofmt&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This tool automatically formats source code in a pre-defined way.&lt;/p&gt;
-
-&lt;p&gt;The tool shuts down the bike shed discussions which naturally occur about code formatting. Most people (if not all) require &lt;code&gt;gofmt&lt;/code&gt; to be executed on the source code being submitted to a project. This
-is also very useful to tie into your editor on save. Often you can paste a piece of code which does not match the indentation level, and watch it all fall into place.&lt;/p&gt;
-
-&lt;p&gt;I have spent a lot of time re-indenting code and this is no longer a step in go.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;goimports&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This tool automatically adds imports and removes unused imports in a source file&lt;/p&gt;
-
-&lt;p&gt;It is very useful to not worry about jumping to the top of the file and change imports every time you modify code.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;godef&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This tool is used in editors to jump to a types declartion.&lt;/p&gt;
-
-&lt;p&gt;Within vim one can type &lt;code&gt;gd&lt;/code&gt; on any variable or type and the editor jumps to the file and location where that &lt;em&gt;thing&lt;/em&gt; is defined. It is very useful for navigating
-unfamiliar and large source trees.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;gocode&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This tool provides a auto complete interface of methods and variables&lt;/p&gt;
-
-&lt;p&gt;integration with editors, like &lt;strong&gt;vim-go&lt;/strong&gt; really tie the tools together for a IDE like developer experience from the terminal. Of course there
-is a lot of graphical editors too if that is your thing.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Others?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I am sure I missed some tools that I use.  What tools do you use that are not mentioned here?&lt;/p&gt;
-
-&lt;h1 id=&#34;concurrency:2948febad6b536d231a5b814f2926696&#34;&gt;Concurrency&lt;/h1&gt;
-
-&lt;p&gt;Last but not least and quite possibly the most important feature of go is its concurrency primitives.&lt;/p&gt;
-
-&lt;p&gt;They are built directly into the language specification and first class citizens (they are not bolted on later).&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;goroutines&lt;/code&gt; are essentially coroutines but are executed across multiple real OS threads. The runtime scheduler handles everything for you so you can focus on writing logically blocking
-code. goroutines run in parallel, which makes it easy to maintain a mental model of what is happening in a concurrent program.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;channels&lt;/code&gt; are the communication primitive and allow different goroutines to talk to each other. A channel can be buffered and unbuffered, which allows creation of some really useful patterns.&lt;/p&gt;
-
-&lt;h1 id=&#34;useful-resources:2948febad6b536d231a5b814f2926696&#34;&gt;Useful Resources&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Go Proverbs - Bunch of wisdom - &lt;a href=&#34;https://go-proverbs.github.io/&#34;&gt;https://go-proverbs.github.io/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Errors are Values - &lt;a href=&#34;https://blog.golang.org/errors-are-values&#34;&gt;https://blog.golang.org/errors-are-values&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors needed to operate on a workqueue. This daemon is actually still in produciton today =P</description>
     </item>
     
     <item>
@@ -138,73 +25,10 @@ code. goroutines run in parallel, which makes it easy to maintain a mental model
       <pubDate>Sun, 03 Jan 2016 21:33:07 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2016/01/git-watch/</guid>
-      <description>&lt;p&gt;git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.&lt;/p&gt;
-
-&lt;p&gt;git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either
-code (in git) or configuration.&lt;/p&gt;
-
-&lt;p&gt;So here is a simple example which will automatically rebuild and restart a application when you git push (&lt;a href=&#34;https://github.com/sigmonsays/git-watch/tree/master/examples/go&#34;&gt;https://github.com/sigmonsays/git-watch/tree/master/examples/go&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Below in git-watch.yaml we check the upstream every 5 seconds and merge the master branch in. execcmd is &amp;ldquo;my_application&amp;rdquo; which is a simple application. When a upstream
-change is detected, we invoke the updatecmd. If the updatecmd does not succeed, the restart process is aborted. Assuming the update command succeeds, we then invoke the install
-command. After the install command succeeds, the application is restarted.&lt;/p&gt;
-
-&lt;p&gt;git-watch.yaml&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  # reinstall a go application when changes are detected in a git remote
-  checkinterval: 5
-  localbranch: master
-  execcmd: my_application
-  updatecmd: make
-  install: make install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Makefile&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  REPO=github.com/sigmonsays/git-watch
-
-  all:
-     go get -u $(REPO)/examples/go/my_application/...
-
-  install:
-     go install $(REPO)/examples/go/my_application
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Full usage&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Usage of git-watch:
- -branch string
-       local branch (default &amp;quot;master&amp;quot;)
- -check int
-       git check interval (seconds) (default 5)
- -config string
-       git watch config (default &amp;quot;git-watch.yaml&amp;quot;)
- -dir string
-       change directory before starting (default &amp;quot;.&amp;quot;)
- -exec-cmd string
-       exec command (default &amp;quot;make run&amp;quot;)
- -http string
-       start a http server
- -inherit-env
-       inherit environment
- -inotify-dir string
-       use inotify as a trigger in directory
- -install-cmd string
-       install command (default &amp;quot;make install&amp;quot;)
- -loglevel string
-       set log level (default &amp;quot;error&amp;quot;)
- -once
-       run once and exit
- -static-dir string
-       static directory (default &amp;quot;static&amp;quot;)
- -update-cmd string
-       update command (default &amp;quot;make&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;[1] - &lt;a href=&#34;https://github.com/sigmonsays/git-watch&#34;&gt;https://github.com/sigmonsays/git-watch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.
+git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either code (in git) or configuration.
+So here is a simple example which will automatically rebuild and restart a application when you git push (https://github.com/sigmonsays/git-watch/tree/master/examples/go)
+Below in git-watch.</description>
     </item>
     
     <item>
@@ -213,51 +37,14 @@ command. After the install command succeeds, the application is restarted.&lt;/p
       <pubDate>Sat, 29 Nov 2014 10:45:05 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2014/11/go-powered-databases/</guid>
-      <description>
-
-&lt;ul&gt;
-&lt;li&gt;bolt - &lt;a href=&#34;https://github.com/boltdb/bolt&#34;&gt;https://github.com/boltdb/bolt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ledis - &lt;a href=&#34;http://ledisdb.com/&#34;&gt;http://ledisdb.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;tiedot - &lt;a href=&#34;https://github.com/HouzuoGuo/tiedot&#34;&gt;https://github.com/HouzuoGuo/tiedot&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;cockroachdb - &lt;a href=&#34;https://github.com/cockroachdb/cockroach&#34;&gt;https://github.com/cockroachdb/cockroach&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;bolt:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;bolt&lt;/h2&gt;
-
-&lt;p&gt;pure go key-value datastore&lt;/p&gt;
-
-&lt;h2 id=&#34;ledis:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;ledis&lt;/h2&gt;
-
-&lt;p&gt;redis like database written in go&lt;/p&gt;
-
-&lt;p&gt;attractive to embed redis like features directly into your application which
-will reduce operational complexity.&lt;/p&gt;
-
-&lt;h2 id=&#34;tiedot:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;tiedot&lt;/h2&gt;
-
-&lt;p&gt;JSON document database&lt;/p&gt;
-
-&lt;h2 id=&#34;cockrochdb:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;cockrochdb&lt;/h2&gt;
-
-&lt;p&gt;A Scalable, Geo-Replicated, Transactional Datastore&lt;/p&gt;
-
-&lt;p&gt;design document &lt;a href=&#34;https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit&#34;&gt;https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;feature summary&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ACID transactional semantics&lt;/li&gt;
-&lt;li&gt;versioned values&lt;/li&gt;
-&lt;li&gt;primary design goal is consistency and survivability&lt;/li&gt;
-&lt;li&gt;aims to tolerate disk, server, rack and datacenter failures&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;related technologies&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;rocksdb (variant of leveldb) - &lt;a href=&#34;http://rocksdb.org/&#34;&gt;http://rocksdb.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>bolt - https://github.com/boltdb/bolt ledis - http://ledisdb.com/ tiedot - https://github.com/HouzuoGuo/tiedot cockroachdb - https://github.com/cockroachdb/cockroach  bolt pure go key-value datastore
+ledis redis like database written in go
+attractive to embed redis like features directly into your application which will reduce operational complexity.
+tiedot JSON document database
+cockrochdb A Scalable, Geo-Replicated, Transactional Datastore
+design document https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit
+feature summary
+ ACID transactional semantics versioned values primary design goal is consistency and survivability aims to tolerate disk, server, rack and datacenter failures  related technologies</description>
     </item>
     
   </channel>

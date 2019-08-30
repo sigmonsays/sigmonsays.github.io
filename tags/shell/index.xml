@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Shell on sig</title>
+    <title>shell on sig</title>
     <link>https://sigmonsays.github.io/tags/shell/</link>
-    <description>Recent content in Shell on sig</description>
+    <description>Recent content in shell on sig</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 31 Jan 2016 10:58:55 -0800</lastBuildDate>
-    <atom:link href="https://sigmonsays.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://sigmonsays.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>paste, an hour long project</title>
@@ -14,18 +16,8 @@
       <pubDate>Sun, 31 Jan 2016 10:58:55 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2016/01/paste-an-hour-long-project/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.&lt;/p&gt;
-
-&lt;p&gt;It has always been bothersome to me that any paste, or &amp;ldquo;no paste&amp;rdquo; command line client has to be needlessly complex. Some i&amp;rsquo;ve tried to
-use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing
-more than curl. Its code is on github [1] and the client is rediculously simple:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-paste() { curl --data-binary @- http://paste.grepped.org/paste ;  }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;github &lt;a href=&#34;https://github.com/sigmonsays/paste&#34;&gt;https://github.com/sigmonsays/paste&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>I&amp;rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.
+It has always been bothersome to me that any paste, or &amp;ldquo;no paste&amp;rdquo; command line client has to be needlessly complex. Some i&amp;rsquo;ve tried to use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing more than curl.</description>
     </item>
     
   </channel>

@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Statics on sig </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://sigmonsays.github.io/static/index.xml/</link>
-    
-    
-    
-    <updated>Fri, 12 Sep 2014 09:38:41 PDT</updated>
+    <title>Statics on sig</title>
+    <link>https://sigmonsays.github.io/static/</link>
+    <description>Recent content in Statics on sig</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 12 Sep 2014 09:38:41 -0700</lastBuildDate>
+    <atom:link href="https://sigmonsays.github.io/static/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>firewall</title>
-      <link>http://sigmonsays.github.io/static/firewall/</link>
-      <pubDate>Fri, 12 Sep 2014 09:38:41 PDT</pubDate>
+      <link>https://sigmonsays.github.io/static/firewall/</link>
+      <pubDate>Fri, 12 Sep 2014 09:38:41 -0700</pubDate>
       
-      <guid>http://sigmonsays.github.io/static/firewall/</guid>
+      <guid>https://sigmonsays.github.io/static/firewall/</guid>
       <description>&lt;p&gt;Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.&lt;/p&gt;
 
 &lt;p&gt;Only specific networks are allowed.&lt;/p&gt;

@@ -1,8 +1,9 @@
 .PHONY: post
 	
-THEME = hyde
+THEME = hyde-hyde
 
-HUGO = $(HOME)/go/bin/hugo
+#HUGO = $(HOME)/go/bin/hugo
+HUGO = /usr/local/bin/hugo
 
 #HUGO_FLAGS := --baseURL http://192.168.33.2
 

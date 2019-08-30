@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docker on sig</title>
+    <title>docker on sig</title>
     <link>https://sigmonsays.github.io/tags/docker/</link>
-    <description>Recent content in Docker on sig</description>
+    <description>Recent content in docker on sig</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 11 Sep 2014 15:32:44 -0700</lastBuildDate>
-    <atom:link href="https://sigmonsays.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://sigmonsays.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>building packages with docker</title>
@@ -14,89 +16,9 @@
       <pubDate>Thu, 11 Sep 2014 15:32:44 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/2014/09/building-packages-with-docker/</guid>
-      <description>
-
-&lt;p&gt;This is a simple idea I had while waiting for a build to complete.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The background&lt;/strong&gt;
-Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script
-takes a minimal base image tarball and installs all dependencies in it required to
-build your package.&lt;/p&gt;
-
-&lt;p&gt;The build dependencies come from debian/control Build-Depends section. The package being
-built is a python application using virtualenv. A lot of the packages come from apt however.
-There is a bunch of python pip/easy install work performed too.&lt;/p&gt;
-
-&lt;p&gt;Needless to say this takes quite some time to do since extracting a .deb and installing
-it is a pretty expensive operation when there is a lot of dependencies.&lt;/p&gt;
-
-&lt;p&gt;Obverve the following times&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;pdebuild - 2m35.113s&lt;/li&gt;
-&lt;li&gt;dpkg-buildpackage - 0m55.480s&lt;/li&gt;
-&lt;li&gt;docker - 0m37.421s&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;because i&amp;rsquo;m not interested in explaining how the other 2 method work, i&amp;rsquo;ll leave that out. However, let me
-explain how the docker build works.&lt;/p&gt;
-
-&lt;h2 id=&#34;docker:98af894833143101fe4ab2edf48c5c0c&#34;&gt;docker&lt;/h2&gt;
-
-&lt;p&gt;The idea is to exploit the layered file system of containers to provide build dependencies. Since
-its a copy on write file system, this means providing a container with all build deps present is
-incredibly fast.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Dockerfile&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;FROM ubuntu
-RUN apt-get update \
-   &amp;amp;&amp;amp; apt-get install -y dpkg-dev
-
-
-# This is the key line, it installs the build dependencies for your application!
-RUN apt-get build-dep -y --force-yes YOUR_PACKAGE
-
-RUN useradd packaging \
-   &amp;amp;&amp;amp; mkdir -p /packaging \
-   &amp;amp;&amp;amp; chown packaging /packaging
-
-USER packaging
-ADD build.sh /bin/build.sh
-
-ENTRYPOINT [ &amp;quot;/bin/build.sh&amp;quot; ]
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;build.sh&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-
-echo &amp;quot;[build.sh] $@&amp;quot;
-
-set -x
-
-cd /packaging
-pwd
-tar vzxf -
-cd package
-dpkg-buildpackage
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then to invoke the build we stream the contents at a tar.gz into the container which streams
-it to disk and builds the package.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;package_stream () 
-{ 
-    git archive HEAD --format tar --prefix=package/ | gzip -9
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Finally, this is the final command that runs the build&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  time package_stream | docker run -i debbie 
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>This is a simple idea I had while waiting for a build to complete.
+The background Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script takes a minimal base image tarball and installs all dependencies in it required to build your package.
+The build dependencies come from debian/control Build-Depends section. The package being built is a python application using virtualenv. A lot of the packages come from apt however.</description>
     </item>
     
     <item>
@@ -105,55 +27,10 @@ it to disk and builds the package.&lt;/p&gt;
       <pubDate>Fri, 05 Sep 2014 07:33:28 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/2014/09/docker-networking-performance/</guid>
-      <description>
-
-&lt;p&gt;While trying to determine the performance overhead of a simple docker container setup, I discovered several
-issues related to network performance.&lt;/p&gt;
-
-&lt;p&gt;two issues I have encountered&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;docker-proxy handles local network traffic when using the hosts bridge IP (or localhost)&lt;/li&gt;
-&lt;li&gt;connection tracking overhead of NAT increases memory usage&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;my setup&lt;/p&gt;
-
-&lt;p&gt;I am using docker containers as an easy way to deploy backends on a host. I wish to use
-the hosts bridge IP as a backend to route requests from the load balancer. The load balancer
-is just a haproxy instance running on port 8080 and it uses 500X as backend ports.  I had to
-doctor up the output a little but this is still the output of &lt;strong&gt;docker ps&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;07 haproxy:0.0.1-8 X Up 2 days   0.0.0.0:443-&amp;gt;443/tcp     dev1-haproxy-1      
-                                 0.0.0.0:1983-&amp;gt;1983/tcp
-                                 0.0.0.0:8080-&amp;gt;8080/tcp
-
-b6 api:4.2.0-2   X  Up 14 hours  0.0.0.0:5003-&amp;gt;8080/tcp   dev1-api-3
-f0 api:4.2.0-2   X  Up 14 hours  0.0.0.0:5002-&amp;gt;8080/tcp   dev1-api-2
-7f api:4.2.0-2   X  Up 15 hours  0.0.0.0:5001-&amp;gt;8080/tcp   dev1-api-1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I&amp;rsquo;ve measured performance of docker-proxy process using nginx and timing the transfers and have seen
-performance degrades around 40-50% due to docker having to reverse proxy the connection in software.&lt;/p&gt;
-
-&lt;p&gt;I really believe that if performance is important, there should be a option of disabling docker-proxy,
-but I will focus on this more later if I really need to.&lt;/p&gt;
-
-&lt;h2 id=&#34;issues-with-docker-proxy:8077ca4b89f46c4b55abdf120961e82e&#34;&gt;issues with docker-proxy&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;software reverse proxy should not be enabled by default&lt;/li&gt;
-&lt;li&gt;network performance degradation up to 50% is not acceptable when traffic is &lt;em&gt;accidently&lt;/em&gt;
-routed through the proxy.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;i&amp;rsquo;m not entirely sure why the userland proxy is even required or why it was introduced.
-investigating the proxy history shows proxy was introduced in Apr 2013, commit 930e9a7,
-unfortunately it is not easy to determine the intention and why iptables was not just
-used in the first place to handle local traffic. iptables is used to route the network
-traffic externally, so I wonder, why the proxy in userland. It seems pointless but I
-have yet to investigate it further.&lt;/p&gt;
-</description>
+      <description>While trying to determine the performance overhead of a simple docker container setup, I discovered several issues related to network performance.
+two issues I have encountered
+ docker-proxy handles local network traffic when using the hosts bridge IP (or localhost) connection tracking overhead of NAT increases memory usage  my setup
+I am using docker containers as an easy way to deploy backends on a host. I wish to use the hosts bridge IP as a backend to route requests from the load balancer.</description>
     </item>
     
   </channel>

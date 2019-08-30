@@ -6,7 +6,9 @@
     <description>Recent content on sig</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 18 Mar 2018 10:38:37 -0700</lastBuildDate>
-    <atom:link href="https://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Pinterest invades google</title>
@@ -14,62 +16,8 @@
       <pubDate>Sun, 18 Mar 2018 10:38:37 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/pinterest-sucks/</guid>
-      <description>
-
-&lt;p&gt;Pinterest is awful.&lt;/p&gt;
-
-&lt;p&gt;This has been growing for years. Here is the typical situation I think more people run into than you think. When you are looking for an image
-on google image search and find what you are looking for by thumbnail, and click through just to be taken to pinterest.com. Once you land here,
-you do not see any fragment of what you came for. Instead, you are confronted with a sign up page.&lt;/p&gt;
-
-&lt;p&gt;This has happened so many times to me and ive ranted to my friends about it before. However, It happened again recently and I also happened to read about it
-later. So I am taking it upon myself to make this post, hopefully as a way to contribute to a small change: Pinterest not sucking.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Pinterest Sucks&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;They require you to sign up for accounts to see any content yet manage to infect the SEO system of google search results. Both regular
-results are affected but also image search.&lt;/p&gt;
-
-&lt;p&gt;Even after logging into Pinterest, the image does not show. They are nothing more than click bait.&lt;/p&gt;
-
-&lt;p&gt;They probably dont realize it but their decision is probably costing them accounts. I will never sign up for a pinterest account because of the terrible
-user experience.&lt;/p&gt;
-
-&lt;p&gt;I can never find what im looking for. There is never a working link back to the original source.  Everything they do is garbage. They are the next generation
-spammer.&lt;/p&gt;
-
-&lt;p&gt;If you want ideas on coffee tables and want to look at a bunch of photos for ideas, they fit. However getting anything meaningful out of pinterest via search
-is an exercise in futility.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Pinterest is a broken model&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Its not just that Pinterest is spamming google searches, and that you have to search again once you get to Pinterest (assuming you have an account and are logged in).
-Its also the fact that the majority of Pins are BROKEN- they dont lead back to the original source. (Whether because the pins are old, content has been moved, etc.)
-So as opposed to a search engine like Google that continuously updates its index, the Pinterest model will only lead to more and more broken links as time goes by.
-It is a broken model, and incredibly frustrating.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;code&gt;What can we do?&lt;/code&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Stop using pinterest and help others to stop using pinterest.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Complain. Write blog posts, like this.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Use an extension to block their results&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Chrome &lt;a href=&#34;https://chrome.google.com/webstore/detail/personal-blocklist-by-goo/nolijncfnkgaikbjbdaogikpmpbdcdef?hl=en&#34;&gt;https://chrome.google.com/webstore/detail/personal-blocklist-by-goo/nolijncfnkgaikbjbdaogikpmpbdcdef?hl=en&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Firefox &lt;a href=&#34;https://github.com/wildskyf/personal-blocklist&#34;&gt;https://github.com/wildskyf/personal-blocklist&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&#34;references:e809b07ecd33fccb59a427cc6c8c434a&#34;&gt;References&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;[1] &lt;a href=&#34;https://www.reddit.com/r/google/comments/85atho/pinterest_needs_to_be_removed_from_google_imo/&#34;&gt;reddit thread mar18 2018&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Pinterest is awful.
+This has been growing for years. Here is the typical situation I think more people run into than you think. When you are looking for an image on google image search and find what you are looking for by thumbnail, and click through just to be taken to pinterest.com. Once you land here, you do not see any fragment of what you came for. Instead, you are confronted with a sign up page.</description>
     </item>
     
     <item>
@@ -78,8 +26,7 @@ It is a broken model, and incredibly frustrating.&lt;/p&gt;
       <pubDate>Sat, 02 Dec 2017 10:38:37 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/archive/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;All Pages&lt;/strong&gt;&lt;/p&gt;
-</description>
+      <description>All Pages</description>
     </item>
     
     <item>
@@ -88,55 +35,9 @@ It is a broken model, and incredibly frustrating.&lt;/p&gt;
       <pubDate>Fri, 01 Dec 2017 10:38:37 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/bash/</guid>
-      <description>
-
-&lt;p&gt;I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page
-primarily serves as short snippets of bash recipes I often want to re-use.&lt;/p&gt;
-
-&lt;p&gt;A lot of this bash is old and wrong, because I learned bash so long ago (1998?). Refer to &lt;a href=&#34;http://mywiki.wooledge.org/BashGuide&#34;&gt;http://mywiki.wooledge.org/BashGuide&lt;/a&gt; for proper rules.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#simple-logging-redirect:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Simple Logging Redirect&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#human-size:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Human Size&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;simple-logging-redirect:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Simple Logging Redirect&lt;/h3&gt;
-
-&lt;p&gt;If you have a bash script you wish to add logging to a simple approach is to use &lt;code&gt;exec&lt;/code&gt; and redirect the output to a file.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; exec &amp;gt; &amp;gt;(tee mylog) 2&amp;gt;&amp;amp;1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is straight from the bash FAQ &lt;a href=&#34;http://mywiki.wooledge.org/BashFAQ/106&#34;&gt;#106&lt;/a&gt; so go there for details.&lt;/p&gt;
-
-&lt;h3 id=&#34;human-size:e0ae544864458d94d3dd5e542da523d5&#34;&gt;Human Size&lt;/h3&gt;
-
-&lt;p&gt;This function converts a integer to the appropriate human size&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  function human_size {
-   local B=$1
-   local S
-   if [ &amp;quot;$B&amp;quot; -gt 1099511627776   ] ; then
-     S=&amp;quot;$(($B/1099511627776))tb&amp;quot;
-   elif [ &amp;quot;$B&amp;quot; -gt 1073741824 ] ; then
-     S=&amp;quot;$(($B/1073741824))gb&amp;quot;
-   elif [ &amp;quot;$B&amp;quot; -gt 1048576  ] ; then
-     S=&amp;quot;$(($B/1048576))mb&amp;quot;
-   elif [ &amp;quot;$B&amp;quot; -gt 1024  ] ; then
-     S=&amp;quot;$(($B/1024))kb&amp;quot;
-   else
-     S=&amp;quot;${B}b&amp;quot;
-   fi
-   echo $S
-  }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;NOTES&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;This is &lt;code&gt;sh&lt;/code&gt; compatible and not explicitly bash because it makes use of &lt;code&gt;[&lt;/code&gt; and should instead use &lt;code&gt;[[&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page primarily serves as short snippets of bash recipes I often want to re-use.
+A lot of this bash is old and wrong, because I learned bash so long ago (1998?). Refer to http://mywiki.wooledge.org/BashGuide for proper rules.
+ Simple Logging Redirect Human Size  Simple Logging Redirect If you have a bash script you wish to add logging to a simple approach is to use exec and redirect the output to a file.</description>
     </item>
     
     <item>
@@ -145,48 +46,13 @@ primarily serves as short snippets of bash recipes I often want to re-use.&lt;/p
       <pubDate>Thu, 30 Nov 2017 16:07:01 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/projects/</guid>
-      <description>
-
-&lt;p&gt;Various ramblings and projects, mostly tools and libraries&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Related&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I maintain a page of &lt;a href=&#34;https://sigmonsays.github.io/notes/interesting-tech/&#34;&gt; Interesting Tech &lt;/a&gt; which are random pieces of software or tools I find interesting at the time.&lt;/p&gt;
-
-&lt;p&gt;There is a section on &lt;a href=&#34;https://sigmonsays.github.io/bash/&#34;&gt;bash scripting&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Projects&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://sigmonsays.github.io/2016/01/paste-an-hour-long-project/&#34;&gt; Paste &lt;/a&gt;
-An hour long project where I wrote a paste server and shell script client&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;No page found with path or logical name &#34;project/screenshot.md&#34;.
-&#34;&gt; Screenshot &lt;/a&gt;
-python script for taking screenshots and uploading them to a cloud storage provider. &lt;a href=&#34;https://github.com/sigmonsays/screenshot&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/git-watch&#34;&gt; git-watch &lt;/a&gt;
-watch a git repository for changes and execute update commands&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/dice&#34;&gt; dice &lt;/a&gt;
-simple dice program as a 1 hour hack&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/runitcmd&#34;&gt; runitcmd &lt;/a&gt;
-runit utility written in go for setting up and managing runit services&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/haproxyctl&#34;&gt; haproxyctl &lt;/a&gt;
-go cli and library for managing haproxy&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/dns-router&#34;&gt; dns-router &lt;/a&gt;
-personal dns server with bells and whistles written in go&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/webchat&#34;&gt; webchat &lt;/a&gt;
-forked websocket demo which implements a chat server that is similar in function to a IRC server&lt;/p&gt;
-
-&lt;h1 id=&#34;go-libaries:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;Go libaries&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/sigmonsays/go-logging&#34;&gt; go-logging &lt;/a&gt;
-leveled logging libary for go&lt;/p&gt;
-</description>
+      <description>Various ramblings and projects, mostly tools and libraries
+Related
+I maintain a page of Interesting Tech  which are random pieces of software or tools I find interesting at the time.
+There is a section on bash scripting
+Projects
+Paste  An hour long project where I wrote a paste server and shell script client
+Screenshot  python script for taking screenshots and uploading them to a cloud storage provider.</description>
     </item>
     
     <item>
@@ -195,122 +61,7 @@ leveled logging libary for go&lt;/p&gt;
       <pubDate>Thu, 16 Nov 2017 10:27:27 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2017/11/why-use-the-go-programming-language/</guid>
-      <description>
-
-&lt;p&gt;I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle
-some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors
-needed to operate on a workqueue. This daemon is actually still in produciton today =P&lt;/p&gt;
-
-&lt;h1 id=&#34;in-summary:2948febad6b536d231a5b814f2926696&#34;&gt;In summary&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#compiled-language:2948febad6b536d231a5b814f2926696&#34;&gt;Compiled Language&lt;/a&gt; has a compiler which checks a lot of errors for me&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#strictly-typed:2948febad6b536d231a5b814f2926696&#34;&gt;Strictly typed&lt;/a&gt; language&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#static-linking:2948febad6b536d231a5b814f2926696&#34;&gt;Statically linked&lt;/a&gt; binary (single binary deployment!)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#type-system:2948febad6b536d231a5b814f2926696&#34;&gt;Unique type system&lt;/a&gt; using interfaces, composition and embedding instead of OOP patterns&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#language-grammer:2948febad6b536d231a5b814f2926696&#34;&gt;Language Grammer&lt;/a&gt; well defined&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tooling:2948febad6b536d231a5b814f2926696&#34;&gt;Amazing Tooling&lt;/a&gt; ie, gofmt, godef, go-imports, vim-go&lt;/li&gt;
-&lt;li&gt;small standard library and the go1 promise &lt;a href=&#34;https://golang.org/doc/go1compat&#34;&gt;https://golang.org/doc/go1compat&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#concurrency:2948febad6b536d231a5b814f2926696&#34;&gt;concurrency&lt;/a&gt; is a language (not library) feature, ie concurrency, goroutines, and channels&lt;/li&gt;
-&lt;li&gt;it is good to collaborate on (e.g. writing large systems)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;work-in-progress:2948febad6b536d231a5b814f2926696&#34;&gt;work in progress!&lt;/h1&gt;
-
-&lt;p&gt;This page will be filled out over time&lt;/p&gt;
-
-&lt;h1 id=&#34;compiled-language:2948febad6b536d231a5b814f2926696&#34;&gt;Compiled Language&lt;/h1&gt;
-
-&lt;p&gt;compiler checks a lot of errors for me&lt;/p&gt;
-
-&lt;p&gt;One case which use to get me all the time is error handling code in dynamic languages. If you do not unit test every case, often a undefined variable would result
-in your error handling code explode.&lt;/p&gt;
-
-&lt;p&gt;The go language also has some unique features. Undefined and unused variables cause compiler errors.&lt;/p&gt;
-
-&lt;h1 id=&#34;strictly-typed:2948febad6b536d231a5b814f2926696&#34;&gt;Strictly typed&lt;/h1&gt;
-
-&lt;p&gt;Similar to being a compiled language,&lt;/p&gt;
-
-&lt;p&gt;Large refactors in code often require changing arguments around or adding new ones. With a strictly
-typed language this is easy. If the compile works, you can be fairly confident that everything will run
-as designed.&lt;/p&gt;
-
-&lt;h1 id=&#34;static-linking:2948febad6b536d231a5b814f2926696&#34;&gt;Static linking&lt;/h1&gt;
-
-&lt;p&gt;Being a statically linked package means you are deploying a single binary or binary + config file. The only thing most go binaries link to are libc for some OS level networking support. It is possible
-to compile without libc entirely if you choose. Finally, if you avoid &lt;strong&gt;cgo&lt;/strong&gt; this means your binary will run anywhere given you have a matching architecture.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;This is an amazing feature coming from python&lt;/strong&gt; I love python but its biggest shortcoming is the confusion that arrises from the myraid of packaging systems.&lt;/p&gt;
-
-&lt;h1 id=&#34;type-system:2948febad6b536d231a5b814f2926696&#34;&gt;Type system&lt;/h1&gt;
-
-&lt;p&gt;Go has a interesting type system which removes the fundamentally flawed OOP features. OOP programmers often uses inheritenace when composition could be used instead.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;composition&lt;/strong&gt; means you combine objects together instead of searching a inheritence tree. I am not going into all the details here but here is the &lt;a href=&#34;https://en.wikipedia.org/wiki/Composition_over_inheritance&#34;&gt;wikipedia article on composition&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;language-grammer:2948febad6b536d231a5b814f2926696&#34;&gt;Language Grammer&lt;/h1&gt;
-
-&lt;p&gt;a language spec that is well defined &lt;a href=&#34;https://golang.org/ref/spec&#34;&gt;https://golang.org/ref/spec&lt;/a&gt;, short, and simple.&lt;/p&gt;
-
-&lt;p&gt;Without a well defined language specification, none of the tooling would be possible. It also makes it easy to develop tools which parse code into AST (Abstract syntax tree) and manipulate it. Ie, write code which
-modifies other code. This was not very practical in other langauges (IMHO). The &lt;code&gt;go/ast&lt;/code&gt; and &lt;code&gt;go/types&lt;/code&gt; packages lowered the barrier of entry to write quick tools for manipulating go source code.&lt;/p&gt;
-
-&lt;h1 id=&#34;tooling:2948febad6b536d231a5b814f2926696&#34;&gt;Tooling&lt;/h1&gt;
-
-&lt;p&gt;The amount of tooling really makes go a step above the rest&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;gofmt&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This tool automatically formats source code in a pre-defined way.&lt;/p&gt;
-
-&lt;p&gt;The tool shuts down the bike shed discussions which naturally occur about code formatting. Most people (if not all) require &lt;code&gt;gofmt&lt;/code&gt; to be executed on the source code being submitted to a project. This
-is also very useful to tie into your editor on save. Often you can paste a piece of code which does not match the indentation level, and watch it all fall into place.&lt;/p&gt;
-
-&lt;p&gt;I have spent a lot of time re-indenting code and this is no longer a step in go.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;goimports&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This tool automatically adds imports and removes unused imports in a source file&lt;/p&gt;
-
-&lt;p&gt;It is very useful to not worry about jumping to the top of the file and change imports every time you modify code.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;godef&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This tool is used in editors to jump to a types declartion.&lt;/p&gt;
-
-&lt;p&gt;Within vim one can type &lt;code&gt;gd&lt;/code&gt; on any variable or type and the editor jumps to the file and location where that &lt;em&gt;thing&lt;/em&gt; is defined. It is very useful for navigating
-unfamiliar and large source trees.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;gocode&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This tool provides a auto complete interface of methods and variables&lt;/p&gt;
-
-&lt;p&gt;integration with editors, like &lt;strong&gt;vim-go&lt;/strong&gt; really tie the tools together for a IDE like developer experience from the terminal. Of course there
-is a lot of graphical editors too if that is your thing.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Others?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I am sure I missed some tools that I use.  What tools do you use that are not mentioned here?&lt;/p&gt;
-
-&lt;h1 id=&#34;concurrency:2948febad6b536d231a5b814f2926696&#34;&gt;Concurrency&lt;/h1&gt;
-
-&lt;p&gt;Last but not least and quite possibly the most important feature of go is its concurrency primitives.&lt;/p&gt;
-
-&lt;p&gt;They are built directly into the language specification and first class citizens (they are not bolted on later).&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;goroutines&lt;/code&gt; are essentially coroutines but are executed across multiple real OS threads. The runtime scheduler handles everything for you so you can focus on writing logically blocking
-code. goroutines run in parallel, which makes it easy to maintain a mental model of what is happening in a concurrent program.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;channels&lt;/code&gt; are the communication primitive and allow different goroutines to talk to each other. A channel can be buffered and unbuffered, which allows creation of some really useful patterns.&lt;/p&gt;
-
-&lt;h1 id=&#34;useful-resources:2948febad6b536d231a5b814f2926696&#34;&gt;Useful Resources&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Go Proverbs - Bunch of wisdom - &lt;a href=&#34;https://go-proverbs.github.io/&#34;&gt;https://go-proverbs.github.io/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Errors are Values - &lt;a href=&#34;https://blog.golang.org/errors-are-values&#34;&gt;https://blog.golang.org/errors-are-values&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors needed to operate on a workqueue. This daemon is actually still in produciton today =P</description>
     </item>
     
     <item>
@@ -319,8 +70,7 @@ code. goroutines run in parallel, which makes it easy to maintain a mental model
       <pubDate>Mon, 17 Oct 2016 14:27:30 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/notes/bunny/</guid>
-      <description>&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/6dDBAiq4RFE?rel=0&amp;amp;showinfo=0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-</description>
+      <description> </description>
     </item>
     
     <item>
@@ -329,12 +79,7 @@ code. goroutines run in parallel, which makes it easy to maintain a mental model
       <pubDate>Sun, 16 Oct 2016 19:51:52 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/2016/10/random-musings/</guid>
-      <description>
-
-&lt;h1 id=&#34;would-you-rather-fight-100-duck-sized-horses-or-one-horse-sized-duck:2a3e229a0c52252aca13c01ed60c9a60&#34;&gt;Would you rather fight 100 duck sized horses or one horse sized duck?&lt;/h1&gt;
-
-&lt;p&gt;Bill Murray weights in &lt;a href=&#34;https://www.youtube.com/watch?v=THUGHEJjjGc&#34;&gt;https://www.youtube.com/watch?v=THUGHEJjjGc&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Would you rather fight 100 duck sized horses or one horse sized duck? Bill Murray weights in https://www.youtube.com/watch?v=THUGHEJjjGc</description>
     </item>
     
     <item>
@@ -343,275 +88,11 @@ code. goroutines run in parallel, which makes it easy to maintain a mental model
       <pubDate>Sun, 16 Oct 2016 14:50:29 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/notes/interesting-tech/</guid>
-      <description>
-
-&lt;p&gt;There is a &lt;a href=&#34;#index&#34;&gt;index&lt;/a&gt; which lists all the sections. The newest is at the top.&lt;/p&gt;
-
-&lt;h1 id=&#34;jan-2018:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2018&lt;/h1&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Link&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/lewish/asciiflow2&#34;&gt;https://github.com/lewish/asciiflow2&lt;/a&gt; and &lt;a href=&#34;http://asciiflow.com/&#34;&gt;http://asciiflow.com/&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;ascii art draw tool.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&#34;oct-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Oct 2016&lt;/h1&gt;
-
-&lt;p&gt;gmx - similar to jmx but for go
-&lt;a href=&#34;https://github.com/davecheney/gmx&#34;&gt;https://github.com/davecheney/gmx&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;hitless-haproxy-reload:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;hitless haproxy reload&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/sorah/sandbox/tree/master/ruby/haproxy-master&#34;&gt;https://github.com/sorah/sandbox/tree/master/ruby/haproxy-master&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;go-jira:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;go jira&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/Netflix-Skunkworks/go-jira&#34;&gt;https://github.com/Netflix-Skunkworks/go-jira&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I currently use this program in a very limited fashion for managing development workflow. it becomes very handy to build a
-shell script environment for aiding in common development process. Right now its only used to view jira tasks and comment on
-them.&lt;/p&gt;
-
-&lt;p&gt;This is powerful enough for the time being&lt;/p&gt;
-
-&lt;h2 id=&#34;http2-keylog:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;http2 keylog&lt;/h2&gt;
-
-&lt;p&gt;with the growing popularity of http/2 you can&amp;rsquo;t be without the ability to inspect the payload.&lt;/p&gt;
-
-&lt;p&gt;This looks really useful in tracing http/2 (even grpc) with wireshark&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/joneskoo/http2-keylog/&#34;&gt;https://github.com/joneskoo/http2-keylog/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;xo:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;xo&lt;/h2&gt;
-
-&lt;p&gt;generate idomatic go code for SQL databases (Please do not confuse this with an ORM!)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/knq/xo&#34;&gt;https://github.com/knq/xo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;teleport:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;teleport&lt;/h2&gt;
-
-&lt;p&gt;its a pretty impressive ssh daemon setup that has temporary certs for ssh access through a central auth system, with 2-factor
-auth built in. Every &amp;ldquo;teleport node&amp;rdquo; registers itself too so you can just list specific nodes&lt;/p&gt;
-
-&lt;p&gt;I can imagine something like this becoming &amp;ldquo;the normal&amp;rdquo; in a cloud computing environment&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/gravitational/teleport&#34;&gt;https://github.com/gravitational/teleport&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;sftp-server-library-in-go:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;sftp server library in go&lt;/h2&gt;
-
-&lt;p&gt;SFTP server library in Go, &lt;a href=&#34;https://github.com/taruti/sftpd&#34;&gt;https://github.com/taruti/sftpd&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;toasteroid:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;toasteroid&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;print stuff on your toast.&lt;/li&gt;
-&lt;li&gt;Print Ads on your toast.&lt;/li&gt;
-&lt;li&gt;Profit. What!?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;See &lt;a href=&#34;https://toasteroid.com/&#34;&gt;https://toasteroid.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I imagine a (dystopian?) future where you have to pay a subscription fee to remove ads from your toast in the morning&lt;/p&gt;
-
-&lt;p&gt;This could be the IoT future we all hate.&lt;/p&gt;
-
-&lt;h2 id=&#34;httpcache:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;httpcache&lt;/h2&gt;
-
-&lt;p&gt;A Transport for http.Client that will cache responses according to the HTTP RFC&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/gregjones/httpcache&#34;&gt;https://github.com/gregjones/httpcache&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;feb-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Feb 2016&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;asciinema - record your terminal in plain text and replay it!&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;website - &lt;a href=&#34;https://asciinema.org/&#34;&gt;https://asciinema.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;find unused packages in a go repository - &lt;a href=&#34;https://github.com/nf/deadleaves&#34;&gt;https://github.com/nf/deadleaves&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;AppImages is a interesting format that is similar to other &amp;ldquo;self contained&amp;rdquo; technologies like
-CDE (&lt;a href=&#34;http://www.pgbovine.net/cde.html&#34;&gt;http://www.pgbovine.net/cde.html&lt;/a&gt;). I havn&amp;rsquo;t read into it yet but lets hope it does better
-than everyone else&amp;hellip;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;AppImage is at &lt;a href=&#34;https://github.com/probonopd/AppImageKit/wiki/Creating-AppImages&#34;&gt;https://github.com/probonopd/AppImageKit/wiki/Creating-AppImages&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The web of names, hashes and UUIDs - &lt;a href=&#34;https://joearms.github.io/2015/03/12/The_web_of_names.html&#34;&gt;https://joearms.github.io/2015/03/12/The_web_of_names.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This isnt the first time I read this but I came across it again recently and wanted to save it here&lt;/p&gt;
-
-&lt;h1 id=&#34;jan-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2016&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;MQTT - &lt;a href=&#34;http://mqtt.org/&#34;&gt;http://mqtt.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;MQTT is a machine-to-machine messaging protocol designed for IoT. Its design goals are small code and resource footprint is required (network, memory, etc) making
-  it very interesting for mobile (and more) development.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;sheepdog - distributed block storage for qemu - &lt;a href=&#34;http://sheepdog.github.io/sheepdog/&#34;&gt;http://sheepdog.github.io/sheepdog/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;snap - &lt;a href=&#34;https://github.com/intelsdi-x/snap&#34;&gt;https://github.com/intelsdi-x/snap&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;thermal cameras - &lt;a href=&#34;http://www.thermal.com/thermal-cameras/&#34;&gt;http://www.thermal.com/thermal-cameras/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;debops - &lt;a href=&#34;http://docs.debops.org/en/latest/index.html&#34;&gt;http://docs.debops.org/en/latest/index.html&lt;/a&gt; - automate installation of all your data center components&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;api.data.gov&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;nov-2015:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Nov 2015&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;tenus - linux networking in golang&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;website &lt;a href=&#34;https://github.com/milosgajdos83/tenus&#34;&gt;https://github.com/milosgajdos83/tenus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;mentioned in article - &lt;a href=&#34;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&#34;&gt;http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Task Spooler - &lt;a href=&#34;http://vicerveza.homeunix.net/~viric/soft/ts/&#34;&gt;http://vicerveza.homeunix.net/~viric/soft/ts/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;An oldie but a goodie.. I had used this many years ago but forgot its name and wanted it again.. Here&amp;rsquo;s to remembering!&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;hound - &lt;a href=&#34;https://github.com/etsy/Hound&#34;&gt;https://github.com/etsy/Hound&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;silver surfer - &lt;a href=&#34;http://geoff.greer.fm/ag/&#34;&gt;http://geoff.greer.fm/ag/&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ggreer/the_silver_searcher&#34;&gt;https://github.com/ggreer/the_silver_searcher&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;microservices future&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone&#34;&gt;http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;jan-2015:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2015&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;otro - javascript interpreter in Go - &lt;a href=&#34;https://github.com/robertkrimen/otto&#34;&gt;https://github.com/robertkrimen/otto&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;C10M - &lt;a href=&#34;http://c10m.robertgraham.com/p/manifesto.html&#34;&gt;http://c10m.robertgraham.com/p/manifesto.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Completely decentralized cloud messaging - &lt;a href=&#34;http://iris.karalabe.com&#34;&gt;http://iris.karalabe.com&lt;/a&gt;
-decentralized cloud messaging with broadcast, request/reply and pubsub messaging with literally zero configuration.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Fast and Simple Open Source &amp;ldquo;Github&amp;rdquo; - &lt;a href=&#34;https://github.com/gogits/gogs&#34;&gt;https://github.com/gogits/gogs&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Quick VPN using SSH - &lt;a href=&#34;http://backreference.org/2009/11/13/openssh-based-vpns/&#34;&gt;http://backreference.org/2009/11/13/openssh-based-vpns/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Rudder - Software Defined Networks - &lt;a href=&#34;https://github.com/coreos/rudder &#34;&gt;https://github.com/coreos/rudder &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;index:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Index&lt;/h1&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Section&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#jan-2018:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2018&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#oct-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;October 2016&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#hitless-haproxy-reload:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;haproxy hitless reload&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#feb-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Feb 2016&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#jan-2016:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2016&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#nov-2015:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;November 2015&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#go-jira:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;go jira&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#jan-2015:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;Jan 2015&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Unsorted&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#xo:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;xo&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#teleport:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;teleport&lt;/a&gt; ssh server&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#sftp-server-library-in-go:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;sftp server library in go&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#toasteroid:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;toasteroid&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;#httpcache:e5ea4b745fd245f72610ce6bf6ba6942&#34;&gt;httpcache&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>There is a index which lists all the sections. The newest is at the top.
+Jan 2018    Link Description     https://github.com/lewish/asciiflow2 and http://asciiflow.com/ ascii art draw tool.   https://github.com/benhoyt/goawk awk fully implemented in go and passes &amp;lsquo;the awk test&amp;rsquo;    Oct 2016 gmx - similar to jmx but for go https://github.com/davecheney/gmx
+hitless haproxy reload https://github.com/sorah/sandbox/tree/master/ruby/haproxy-master
+go jira https://github.com/Netflix-Skunkworks/go-jira
+I currently use this program in a very limited fashion for managing development workflow.</description>
     </item>
     
     <item>
@@ -620,104 +101,9 @@ decentralized cloud messaging with broadcast, request/reply and pubsub messaging
       <pubDate>Mon, 11 Apr 2016 11:23:01 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/2016/04/hitler-uses-docker/</guid>
-      <description>&lt;p&gt;video&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=PivpCKEiQOQ&#34;&gt;https://www.youtube.com/watch?v=PivpCKEiQOQ&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;transcript
--------------------------------
-
-we pushed the images to dockerhub, then used docker-compose to deploy to the cluster
-
-we mounted data volumes on these nodes
-
-and linked app container here
-
-finally we&#39;ve updated the DNS records
-
-
-hitler: so we&#39;re running 20 containers on every node now. when can we get rid of the excess servers?
-
-mein fuhrer...
-
-the kernel... 
-A 3rd party container caused a panic...
-
-we&#39;ve lost 70% of the cluster and the data volumes
-
-.... hitler loses his shit ....
-
-hitler: if you never used docker in production, leave the room now
-
-hitler: isolation my ass!
-
-hitler: what were you thinking?
-
-hitler: who the hell uses public containers from docker hub?
-
-hitler: for all you know they were made by russian hackers!
-
-hitler: you might as well use `curl | sudo bash`
-
-hitler: you think everything in public rpeo is secure because it&#39;s OSS?
-
-hitler: you&#39;re a bunch of node.js hipsters that just HAVE to install everything you read on hacker news!
-
-but docker allows us to run our applications anywhere!
-
-hitler: you use a VM just to run docker on your laptop!
-
-mein fuhrer, docker-machine uses a lightweight VM!
-
-hitler: do you hear yourself? why do we need docker if we&#39;re running a VM?
-
-hitler: a container inside a container!!!
-
-hitler: you archived a whole linux O/S then used CoW storage becaues it&#39;s too big
-
-hitler: Just so you can deploy a 10MB go Binary!
-
-hitler: Dont even talk to me about resource constraints
-
-hitler: all that cgroups black magic and it still can&#39;t stop a simple fork bomb!
-
-hitler: and if the database needs all the resources on the server, how exactly will docker allow you to run more programs on it?
-
-hitler: before docker, I just picked the right size VMs. 
-
-hitler: Suddenly people talk to me about datacenter efficiency and &amp;quot;hyperconvergence&amp;quot;
-
-hitler: everybody thinkst they&#39;re google!
-
-hitler: you don&#39;t even run your own machines anymore!
-
-hitler: people run docker on GCE, in VM instances that run in linux containers on Borg!
-
-hitler: people even think docker is configuration management
-
-hitler: they think docker solves everything!
-
-hitler: even microsoft has containers now
-
-hitler: i&#39;m moving everyone to windows!
-
-dont cry, you can run bash on windows 10 now
-
-hitler: docker is supposed to have better performance
-
-hitler: yet that fucker userland proxy is slower than a 28.8k modem
-
-hitler: and for what
-
-hitler: just bind on port 0
-
-hitler: even enterprises want to run docker now and they still have red hat 5 installed
-
-hitler: you idiots think docker will help your application scale
-
-hitler: use openstack for all I care
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>video
+https://www.youtube.com/watch?v=PivpCKEiQOQ
+transcript ------------------------------- we pushed the images to dockerhub, then used docker-compose to deploy to the cluster we mounted data volumes on these nodes and linked app container here finally we&#39;ve updated the DNS records hitler: so we&#39;re running 20 containers on every node now. when can we get rid of the excess servers? mein fuhrer... the kernel... A 3rd party container caused a panic... we&#39;ve lost 70% of the cluster and the data volumes .</description>
     </item>
     
     <item>
@@ -726,168 +112,11 @@ hitler: use openstack for all I care
       <pubDate>Wed, 02 Mar 2016 14:57:19 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2016/03/programming-exercise/</guid>
-      <description>&lt;p&gt;I heard from a friend about an interesting interview question that I thought would be easy.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;The problem&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;the goal of this program is to find the shortest number of stickers used to make a another word given that you have thousands of stickers&lt;/p&gt;
-
-&lt;p&gt;for instance, with the word &amp;ldquo;WPENGINE&amp;rdquo; printed on them to make for example &amp;ldquo;WWW&amp;rdquo; would take 3 and another example is &amp;ldquo;WINE&amp;rdquo; would take 1.&lt;/p&gt;
-
-&lt;p&gt;The programs logic is really quite literal and was enjoyable to write.&lt;/p&gt;
-
-&lt;p&gt;We have a Sticker type who keeps track of the number of letters used and a pile of stickers which is just a list
-of stickers. We search the pile for a given letter, and if its not found we add another sticker to the pile.&lt;/p&gt;
-
-&lt;p&gt;We keep a dummy sticker object around to validate that we do infact have the letters, and error if not.&lt;/p&gt;
-
-&lt;p&gt;The code&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  package main
-
-  import (
-     &amp;quot;fmt&amp;quot;
-     &amp;quot;os&amp;quot;
-     &amp;quot;strings&amp;quot;
-  )
-
-  func NewSticker(word string) *Sticker {
-     s := &amp;amp;Sticker{
-        letters: make(map[rune]int, 0),
-     }
-     var v int
-     for _, w := range strings.ToLower(word) {
-        v, _ = s.letters[w]
-        v += 1
-        s.letters[w] = v
-     }
-     return s
-  }
-
-  type Sticker struct {
-     letters map[rune]int
-  }
-
-  func (s *Sticker) HasLetter(l rune) bool {
-     count, found := s.letters[l]
-     if found == false {
-        return false
-     }
-     if count &amp;gt; 0 {
-        return true
-     }
-     return false
-  }
-
-  func (s *Sticker) Desc() string {
-     a := make([]string, 0)
-     for l, cnt := range s.letters {
-        a = append(a, fmt.Sprintf(&amp;quot;%s=%d&amp;quot;, string(l), cnt))
-     }
-     return strings.Join(a, &amp;quot; &amp;quot;)
-  }
-
-  func (s *Sticker) UseLetter(l rune) error {
-
-     fmt.Printf(&amp;quot;using letter %s\n&amp;quot;, string(l))
-
-     count, found := s.letters[l]
-     if found == false {
-        return fmt.Errorf(&amp;quot;sticker doesn&#39;t have letter %s&amp;quot;, l)
-     }
-
-     if count == 0 {
-        return fmt.Errorf(&amp;quot;letter is used up&amp;quot;)
-     }
-
-     count--
-     s.letters[l] = count
-     return nil
-
-  }
-
-  type Pile struct {
-     word     string
-     stickers []*Sticker
-  }
-
-  func NewPile(word string) *Pile {
-     p := &amp;amp;Pile{
-        word:     word,
-        stickers: make([]*Sticker, 0),
-     }
-     return p
-  }
-
-  func (p *Pile) HasLetter(l rune) bool {
-     for _, sticker := range p.stickers {
-        if sticker.HasLetter(l) {
-           return true
-        }
-     }
-     return false
-  }
-
-  func (p *Pile) AddSticker() {
-     p.stickers = append(p.stickers, NewSticker(p.word))
-  }
-
-  func main() {
-
-     var err error
-     sticker_word := &amp;quot;WPENGINE&amp;quot;
-
-     word := &amp;quot;pingping&amp;quot;
-     if len(os.Args) &amp;gt; 1 {
-        word = os.Args[1]
-     }
-     fmt.Printf(&amp;quot;sticker word %s\n&amp;quot;, sticker_word)
-     fmt.Printf(&amp;quot;making word %s\n&amp;quot;, word)
-     pile := NewPile(sticker_word)
-
-     // just to validate we have the letters..
-     sticker := NewSticker(sticker_word)
-
-     for _, l := range word {
-        //s := string(l)
-        fmt.Printf(&amp;quot;letter %s\n&amp;quot;, string(l))
-
-        if sticker.HasLetter(l) == false {
-           err = fmt.Errorf(&amp;quot;no letter %s&amp;quot;, string(l))
-           break
-        }
-
-        if pile.HasLetter(l) == false {
-           pile.AddSticker()
-        }
-
-        // find a sticker that has the letter we&#39;re lookin for in the pile
-        for _, sticker := range pile.stickers {
-           if sticker.HasLetter(l) {
-              sticker.UseLetter(l)
-              continue
-           }
-        }
-
-     }
-
-     if err != nil {
-        fmt.Printf(&amp;quot;ERROR: %s\n&amp;quot;, err)
-        return
-     }
-
-     // print the results
-
-     used := len(pile.stickers)
-     fmt.Printf(&amp;quot;stickers used %d\n&amp;quot;, used)
-
-     for i, sticker := range pile.stickers {
-        fmt.Printf(&amp;quot;sticker #%d  letters %+v\n&amp;quot;, i+1, sticker.Desc())
-     }
-
-  }
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>I heard from a friend about an interesting interview question that I thought would be easy.
+The problem
+the goal of this program is to find the shortest number of stickers used to make a another word given that you have thousands of stickers
+for instance, with the word &amp;ldquo;WPENGINE&amp;rdquo; printed on them to make for example &amp;ldquo;WWW&amp;rdquo; would take 3 and another example is &amp;ldquo;WINE&amp;rdquo; would take 1.
+The programs logic is really quite literal and was enjoyable to write.</description>
     </item>
     
     <item>
@@ -896,43 +125,10 @@ of stickers. We search the pile for a given letter, and if its not found we add 
       <pubDate>Tue, 09 Feb 2016 17:10:00 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/enlightenment/</guid>
-      <description>
-
-&lt;p&gt;enlightenment has been my window manager of choice for a very long time maintly because of its speed. I used to run
-window maker and then fluxbox before I made the switch to enlightenment (0.16 at the time iirc).&lt;/p&gt;
-
-&lt;h1 id=&#34;e20-feb2016:e2d74d2c54dc965c42c7ac5c556b6456&#34;&gt;e20 - feb2016&lt;/h1&gt;
-
-&lt;p&gt;enlightnement 0.20 caused all sorts of graphics problems&lt;/p&gt;
-
-&lt;p&gt;i tried a bunch of different things, like hardware and software rendering without luck&lt;/p&gt;
-
-&lt;p&gt;the problems I had were many&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;chrome kept freezing which only began happening in the new e. I managed to work around it by disabling GL in chrome&lt;/li&gt;
-&lt;li&gt;pidgin systray icon went away&lt;/li&gt;
-&lt;li&gt;sluggish UI after hours of usage&lt;/li&gt;
-&lt;li&gt;while using hardware rendering, windows would just render bloack
-
-&lt;ul&gt;
-&lt;li&gt;no matter what I did, restart e, minimize/shade/move window, etc&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;while using software rendering
-
-&lt;ul&gt;
-&lt;li&gt;really high cpu usage&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;under both hardware and software I would see windows flickering all the time
-
-&lt;ul&gt;
-&lt;li&gt;windows would not redraw properly quite item&lt;/li&gt;
-&lt;li&gt;notably xterm which is just not acceptable&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is an attempt to keep an ongoing document that describes the issues and fixes i&amp;rsquo;ve encountered.&lt;/p&gt;
-</description>
+      <description>enlightenment has been my window manager of choice for a very long time maintly because of its speed. I used to run window maker and then fluxbox before I made the switch to enlightenment (0.16 at the time iirc).
+e20 - feb2016 enlightnement 0.20 caused all sorts of graphics problems
+i tried a bunch of different things, like hardware and software rendering without luck
+the problems I had were many</description>
     </item>
     
     <item>
@@ -941,90 +137,10 @@ window maker and then fluxbox before I made the switch to enlightenment (0.16 at
       <pubDate>Fri, 05 Feb 2016 18:28:35 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/keybase/</guid>
-      <description>&lt;p&gt;my keybase profile is &lt;a href=&#34;https://keybase.io/sigmonsays&#34;&gt;https://keybase.io/sigmonsays&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;keybase proof for this site here &lt;a href=&#34;https://sigmonsays.github.io/keybase.txt&#34;&gt;https://sigmonsays.github.io/keybase.txt&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;my public key can be downloaded from &lt;a href=&#34;https://keybase.io/sigmonsays/key.asc&#34;&gt;https://keybase.io/sigmonsays/key.asc&lt;/a&gt; or copied and pasted below:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  -----BEGIN PGP PUBLIC KEY BLOCK-----
-  Version: Keybase OpenPGP v2.0.49
-  Comment: https://keybase.io/crypto
-
-  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
-  =5/I3
-  -----END PGP PUBLIC KEY BLOCK-----
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>my keybase profile is https://keybase.io/sigmonsays
+keybase proof for this site here https://sigmonsays.github.io/keybase.txt
+my public key can be downloaded from https://keybase.io/sigmonsays/key.asc or copied and pasted below:
+ -----BEGIN PGP PUBLIC KEY BLOCK----- Version: Keybase OpenPGP v2.0.49 Comment: https://keybase.io/crypto xsFNBFa1E6kBEADVYWauiTCPmd3cSkim7aRu7Vpl1PLo07KZp/SavvxBNoyKGRMs 8xkpd8kN2LZS2YmjLDCxLmk+UZ3d+FsJTKcpZyBW5lzLsbp/9+l1fF6YmC3fAYk6 9EmnyH6BBr98ECCSuqtGHo6EKHtkWYqI0cTvZhZkFKj1AigmAUS+zWdEYAWriayM rtYPLA+RNXkc4C8+0V1wvmV2RJYGzwCUyvs1QoMrJWSh7H8WB5Zhaw8UPAO5LaKI bx1nD7Jv9jQ//YCUOJ9u/yoGRjrX2Bo/GbTLl+9iOmt3llx/8NS4E7BdcXMm8idP 7ZkIYau31renLyn61Oa63eGPgJQWQbJTHC5lSo6lzcV9nIXeIk3p6kw9cYq/WS6V nmr0SNNK3FY0bzgb8+CifpWFLYxK/qxe+6rWeNBRJyAagZlJcKnxQM9TBDC4ndXL WUa/RaRG53dEnRzD0s/PD3NfvlPwGB5k+P73Qu9VlwjAGEI55nfALK1iPOePE7sU OR2Snlj2MVZMipiA1uWMuWiaLnt1xaSxfyg/HCaJa3NGmm4QAbWSmBv9Ws7QJQdy AZ01yqNFKKHQ/e/6A9bIF8zj83pv2H+QSK3U15ijBWweWvFAopxOOIY9UbEBgFPw eHSDMbLKsEGLV+sciwGyzoEgQrGvvRMhgMH7cBCS/3kvVfc5ASe1moQClwARAQAB zR9TaWcgTGFuZ2UgPHNpZy5sYW5nZUBnbWFpbC5jb20+wsF0BBMBCgAeBQJWtROp AhsDAwsJBwMVCggCHgECF4ADFgIBAhkBAAoJEMs6+I/h4yi6XwkP/3eH72CS8qYm TSiCRzQ7tjr7ClU9BRPmlO/zgVivCA3t1weYxrXCWTFV/uqAzvw4IVJTNhtDqIpi 08kZO81DucUpku3BZGrp1sR9UoAnC9XUjlu7+K3rZzjU15WfHcHjmOAFfWPh+uiP NwlMt9NQtcHAJ07pnJ88O/q1X+QnsJTVL9GHnC8YA/1LDdf4WP+t1DYOpOH8aENB zvDUCCPQbXGyEXgXXXCuaAwDea53VuFIeqcul5RmM8QTbDsmcdb172mxs9UEEMSQ G/q5rNSTH73W+pJC64ruh5w017pkitZh3ZGJxYXfglCOBpv22McUNksn6bHDSFmC 7/riPKosPcSGlzk6ZzPNIX+Un9rJoUFWFOJjjPC8levEGYv1h+k97PclgBb/K/ga dsWTddX0mIuSKiwohZg9M72SfZuNBz0YqToQ2w9lsTB6edhU1WA8wT6toiEh14pt SepdMMp3zDb1c4FTetZXsfVIUWBgf3mcSXkNr7C/GGau3SFu56r3ahcfiJYcGPQi dDYaQTCiAzr4BKuhRHd5e2ZoP9DYu9sVZBj8AT2UtnEaRHuoVuNybC/ZIEZfHOWc RnpxJe7CFEMqQHWyM36qxuN0xD68Ob19ur5YQ5cxI/4z0XeewWYaR41vK/4nZcxd 3x6QcNQeAtH8+Bix5t2h3pPXFoaDtlcVzsBNBFa1E6kBCADg4NOxTpBlckc6kKWH 1hEQW6rQRSZEajcqXDU8H/+Xkiq4OLkMIXL4MG8oEeJ2ilzge7PjFIB4Pc9x6NoN h96pk+su8mLt+2SibU786Ah+6GSaLmgRWqeVcJr+xBmWbkg3BGa+l+djYkzgEv6x FexNV9kYM85ofbUiGAIyFP6hpfa6YGJ4Q/wXYkEOUOHQYB5tQJDw8fzTL3x8KC+l RslGYJ8pAftMQbyPgYGrfRzmyzGpVMtTqxIlF/dZn3X9M04C711AX1PAtbAiK6nG BH5XE3B2NW2EGDQ29CKoszr6m200M6QBNr6rrw+Fx0Q9scSp7IP+fkALI/vgViOt /MqfABEBAAHCwoQEGAEKAA8FAla1E6kFCQ8JnAACGwwBKQkQyzr4j+HjKLrAXSAE GQEKAAYFAla1E6kACgkQjBmYXQi7uILUJAf/S/ngJT/VddsEzEw6gysVyaPMhb/z Y4hq+EgjYTYauwmWuKXLKGjZLJ3H9kU1/eC08qk2mz0D1KwvuY87Pl7/Ub9T2vTY om0MADGBOMhVOGZeq+Z1EKNgLcG/EMuuI0TtLWlEShbl4Zs5T8h4KWn9b0XOT/b1 3PpJW/e/n3QRxxcRsru2R9UyVqE8rqojxBnGeCyDM/dtSLLhL722JDtbjleFjfof +t+O3FqaaJPDARmJPfLnCOLgNO7nAwBVDtTSUvLeP097jvj+5Dv/qUilWd98sup4 t6MXWJqYnIKpmow6QKgtlUxkYyiWVSBphpoSM7Iku85LXUle3J+kQcY6TOTJD/4z 2cYC/S5rjvvalIGjeuI4shG+K7dRoht8vRkpSC2eUIe0fOjPutNoifbF/iRj71up JaizvcecVafRvu5moCev3drOXVF/htn/DxjPgAfwOuL6SPoXBWFPn4v4n/iZ+PSo j6R7ldUynZi0xaBJwkzFDri7H8g7tMTGtEC9Ye5tHgtLQbIEgJ/sdNYX9dGIVvlL ZV2AAtbECU+kKR8C6bbXDyJpa9yJE/yryUz2Yusz5VrahA/FSZmJeWJ5JAUctwIS HR8NxiIZ/X/ehNRPQbt3agme5AYRAM3PSpXC/h9TT55flAIDWUEO8OLAEnoHoxp0 lZr16u0zh7UhQM93Md4a3IQwQTqeQuZ5X4dPeNFzkeenkfW22kevSlKAitTnbV/F geUlR6F7VBH3trwnqVni5TE85UY1ihlTbpXsMEa4kAihte4EGlxrCu/Xz2hzJAkE jzyKh30/RoM8JqUjyjrR6GpbNBRuJr9kCiUy3LfeRTEHtBuPDlGT8McmsNvw7r0d bE2eIgpGCAiqgxTYexICkCzE7TYGWu/uFZyE6wMre0CYmbpsU/YpK3Lvc12SyULo X/W61fUyHe/R0HLn2e27l5fDmDFLl0u+hJlD1VBEzb2bJYyMEr/fCInCyxfxB8+5 FIFRr1lRxJutEJjbBKwVSSDWnD4LSH1oAVwmYLwjbM7ATQRWtROpAQgAuj67mtne wlL7yidop1UN/76k0g+U7+O/AyL9IX1VQuTYU6YkMlJM32k9KWDJQHfELewGKHR8 dlbzvjn6Pph1YseNeQhXl2Tjw+e+5hl0mGiG31mH6GNXqW88c/0KDgZK+K5XuU7Y fVvheCPnOljv8TxunX78m70o7CawKctUKazQ4FBjjAnxGVBCBKkMzXSVwrdYaMth NY0BmJfYegWMnvwXa9fgsuf2FChVwi1t395Y/CYoBwAXx7H3L8ICRLi2CXXGjQWH XmE7jzqtAdUrLsnIB86Bkc32YJCQXBCCTRdHYzO+a5vKlAN8AQlcrVGa3dNjQ1hK 0NGfQjOvsHP1pwARAQABwsKEBBgBCgAPBQJWtROpBQkPCZwAAhsiASkJEMs6+I/h 4yi6wF0gBBkBCgAGBQJWtROpAAoJEMHK4EeJnK0Qn6oH/jJ03hVELWKR3xzuxJyC nvAnlhpw5JGx2ON19enJaPvimenzfz5O4BKDLOQ+rxoeeBN4OVfwMf47UnvNr8Jt hgyHf9r/QvPJA1BDiMGMr27Ts8rxhs5R/1ikiViqu8jDhyh2QJr3mZZMkSJ3OKyR 4u//naWBGdvANOUwFI0fnMIvuQAveDr3hL9nD1AzbM+EernQ/qwdkpEplDdg9oKF KqlmYbiyP1u8MdtgqjkbTbNOxkSylMIXY7zDV/ia7OPAN64cy3q9XhhFtu3gXygy 2TIxmivPIofKbh8m2VQxT3wlLKSan3CG0QZ1l7MdPnlDGuj9OBzAabvYWqi0SuIF T4NRKhAAr4peRa9bENapPI73MqljkGsLdAKc7tlNhK42UYW/rY1XXRmUMVdUoJ8+ /+AonDhpa42if1T5qBtWYXcR1QWZ3QKsG++YM4mHNvNhGHYk0jCBRQ461S1NlwZL 6qLSwy6TioYbiG6HXcx6hwATe+2dEpdPzKL7J74IJCQaoMYHius7ttNHU0TfreWy JtNd6L0EN2LxJ13yzGyBImS7f+SEKDwN9GSSJi0oAlr+eNHdCPy5kdVWYilRqKbf uvdZkEHQmSCF1GpT2y2t+yeqiMHxpEEu1MMkUOMwPqtJnKqs5aohHBfcrVfAWlMQ 9GOr8zX8hrhAo1SE946Lapt+aVB2CbH//q21myK+m3NT+NlANxzA4XO3ZzVNofE2 p2uQzcHd2PEfw28uhTsCZbUattjAy5L1qBvkLS4Zo/bGD8iCGiqZLVubtMLjEVMg ycgtEMx5fl2tBeK+xp2fHim3eiCvgIyVizgXpAzVEs2FB6SsGtyymxaZpOGY3QUt eqbj823NhUkuFG7QXAz2W4Z88AgSIstaMcRA8v5H1esVVe1NyxAt82fnICow12pv Bkx4itma/FlbMX7W1dOywiAUJMNc1j+YbqZIzmaR4YX2dJxFs3x+eEHGvlaKHsoX HVyxl75S/iTac90KCKTj+j+lThPJu5m3W31KkMoFF2uAMf6nIso= =5/I3 -----END PGP PUBLIC KEY BLOCK-----  </description>
     </item>
     
     <item>
@@ -1033,18 +149,8 @@ window maker and then fluxbox before I made the switch to enlightenment (0.16 at
       <pubDate>Sun, 31 Jan 2016 10:58:55 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2016/01/paste-an-hour-long-project/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.&lt;/p&gt;
-
-&lt;p&gt;It has always been bothersome to me that any paste, or &amp;ldquo;no paste&amp;rdquo; command line client has to be needlessly complex. Some i&amp;rsquo;ve tried to
-use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing
-more than curl. Its code is on github [1] and the client is rediculously simple:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-paste() { curl --data-binary @- http://paste.grepped.org/paste ;  }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;github &lt;a href=&#34;https://github.com/sigmonsays/paste&#34;&gt;https://github.com/sigmonsays/paste&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>I&amp;rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.
+It has always been bothersome to me that any paste, or &amp;ldquo;no paste&amp;rdquo; command line client has to be needlessly complex. Some i&amp;rsquo;ve tried to use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing more than curl.</description>
     </item>
     
     <item>
@@ -1053,73 +159,10 @@ paste() { curl --data-binary @- http://paste.grepped.org/paste ;  }
       <pubDate>Sun, 03 Jan 2016 21:33:07 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2016/01/git-watch/</guid>
-      <description>&lt;p&gt;git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.&lt;/p&gt;
-
-&lt;p&gt;git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either
-code (in git) or configuration.&lt;/p&gt;
-
-&lt;p&gt;So here is a simple example which will automatically rebuild and restart a application when you git push (&lt;a href=&#34;https://github.com/sigmonsays/git-watch/tree/master/examples/go&#34;&gt;https://github.com/sigmonsays/git-watch/tree/master/examples/go&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Below in git-watch.yaml we check the upstream every 5 seconds and merge the master branch in. execcmd is &amp;ldquo;my_application&amp;rdquo; which is a simple application. When a upstream
-change is detected, we invoke the updatecmd. If the updatecmd does not succeed, the restart process is aborted. Assuming the update command succeeds, we then invoke the install
-command. After the install command succeeds, the application is restarted.&lt;/p&gt;
-
-&lt;p&gt;git-watch.yaml&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  # reinstall a go application when changes are detected in a git remote
-  checkinterval: 5
-  localbranch: master
-  execcmd: my_application
-  updatecmd: make
-  install: make install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Makefile&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  REPO=github.com/sigmonsays/git-watch
-
-  all:
-     go get -u $(REPO)/examples/go/my_application/...
-
-  install:
-     go install $(REPO)/examples/go/my_application
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Full usage&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Usage of git-watch:
- -branch string
-       local branch (default &amp;quot;master&amp;quot;)
- -check int
-       git check interval (seconds) (default 5)
- -config string
-       git watch config (default &amp;quot;git-watch.yaml&amp;quot;)
- -dir string
-       change directory before starting (default &amp;quot;.&amp;quot;)
- -exec-cmd string
-       exec command (default &amp;quot;make run&amp;quot;)
- -http string
-       start a http server
- -inherit-env
-       inherit environment
- -inotify-dir string
-       use inotify as a trigger in directory
- -install-cmd string
-       install command (default &amp;quot;make install&amp;quot;)
- -loglevel string
-       set log level (default &amp;quot;error&amp;quot;)
- -once
-       run once and exit
- -static-dir string
-       static directory (default &amp;quot;static&amp;quot;)
- -update-cmd string
-       update command (default &amp;quot;make&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;[1] - &lt;a href=&#34;https://github.com/sigmonsays/git-watch&#34;&gt;https://github.com/sigmonsays/git-watch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.
+git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either code (in git) or configuration.
+So here is a simple example which will automatically rebuild and restart a application when you git push (https://github.com/sigmonsays/git-watch/tree/master/examples/go)
+Below in git-watch.</description>
     </item>
     
     <item>
@@ -1128,247 +171,129 @@ command. After the install command succeeds, the application is restarted.&lt;/p
       <pubDate>Tue, 03 Feb 2015 11:59:36 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2015/02/convenient-cli-tookit-using-python/</guid>
-      <description>
-
-&lt;p&gt;python is a incredibly useful language and has a powerful type system which
-can be pretty convenient. I&amp;rsquo;ve written python for many years now and when
-I need a quick tool, most the time I write it in python.&lt;/p&gt;
-
-&lt;p&gt;These tools have built up over time and i&amp;rsquo;ve been collecting them organically
-into a python startup file as a set of libraries and functions.&lt;/p&gt;
-
-&lt;p&gt;create a file in $HOME/&lt;strong&gt;.pythonstartup&lt;/strong&gt; and cherry pick anything below that you find
-useful.&lt;/p&gt;
-
-&lt;p&gt;The code below is missing the imports used.. instead copy the text from the imports section&lt;/p&gt;
-
-&lt;h2 id=&#34;tab-completion-and-history:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;tab completion and history&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;  # Tab completion
-  import rlcompleter
-  import readline
-  readline.parse_and_bind(&amp;quot;tab: complete&amp;quot;)
-
-  # History
-  histfile = os.path.join(os.path.expanduser(&amp;quot;~&amp;quot;), &amp;quot;.pyhist&amp;quot;)
-  try:
-      readline.read_history_file(histfile)
-  except IOError:
-      pass
-  atexit.register(readline.write_history_file, histfile)
-  del histfile
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;imports:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;imports&lt;/h2&gt;
-
-&lt;p&gt;i&amp;rsquo;m going to just drop a list of imports used. I&amp;rsquo;ll let you
-sort out which ones are unused with a linter (pyflakes peraps?).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  import os
-  import sys
-  import json
-  import time
-  import atexit
-  import urllib
-  import urlparse
-  import uuid
-  import hashlib
-  import hmac
-  import base64
-  import binascii
-  import struct
-  import os
-  from urllib import quote_plus,unquote,quote
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;custom-prompt-and-line-counter:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;custom prompt and line counter&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;# use a custom prompt
-class LineCounter(object):
-    def __init__(self):
-        self.count = 0
-    def __str__(self):
-        self.count += 1
-        return &#39;&amp;gt;&amp;gt;&amp;gt; &#39;
-line = LineCounter()
-sys.ps1 = line
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;this makes it possible to interact with the line object like this and whatever you return from &lt;strong&gt;str&lt;/strong&gt; will be your prompt.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; line.count
-6
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;handy-string-functions:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;handy string functions&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;  def safe_str(s):
-      try:
-          return str(s)
-      except UnicodeEncodeError:
-          return unicode(s).encode(&#39;utf-8&#39;)
-
-  quote = lambda s: urllib.quote(s)
-  unquote = lambda s: urllib.unquote(s)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;file-size-utilities:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;file size utilities&lt;/h2&gt;
-
-&lt;p&gt;format bytes as a human printable form&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  def formatSize(bytes, base=1024, precision=2):
-      units = [ &#39;b&#39;, &#39;kb&#39;, &#39;mb&#39;, &#39;gb&#39;, &#39;tb&#39;, &#39;pb&#39;, &#39;eb&#39;, &#39;xb&#39;, &#39;yb&#39; ]
-      nunits = len(units)
-      for n in xrange(nunits, -1, -1):
-          if bytes &amp;gt; base ** n:
-              break
-      v = round(float(bytes) / (base ** n), precision)
-      return (v, units[n])
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;convert bytes between units&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  class ConvertSize:
-     def __init__(self, base=1024):
-        B = 1
-        KB = B * base
-        MB = KB * base
-        GB = MB * base
-        TB = GB * base
-        PB = TB * base
-        EB = PB * base
-        ZB = EB * base
-        YB = ZB * base
-        base = base
-        _sym = &#39;B KB MB GB TB PB EB ZB YB&#39;.split()
-        self.__dict__.update(locals())
-
-     def _install(self, units, g):
-        for n, unit in enumerate(units.split()):
-           g[unit]=getattr(self, &#39;_&#39;+self._sym[n])
-     def _B(self, v):  return v * self.B
-     def _KB(self, v): return v * self.KB
-     def _MB(self, v): return v * self.MB
-     def _GB(self, v): return v * self.GB
-     def _TB(self, v): return v * self.TB
-     def _PB(self, v): return v * self.PB
-     def _EB(self, v): return v * self.EB
-     def _ZB(self, v): return v * self.ZB
-     def _YB(self, v): return v * self.YB
-
-  units = &#39;byte kilobyte megabyte gigabyte terabyte petabyte exabyte zettabyte yottabyte&#39;
-  ConvertSize(1000)._install(units, globals())
-
-  units = &#39;bit kibibyte mebibyte gibibyte tebibyte pebibyte exbibyte zebibyte yobibyte&#39;
-  ConvertSize(1024)._install(units, globals())
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;time-utilities:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;time utilities&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;  def formatTime(s, legend = [  &#39;d&#39;, &#39;h&#39;, &#39;m&#39;, &#39;s&#39; ]):
-      units = [  86400, 3600, 60, 1 ]
-      r = s
-      ret = []
-      for u, l in zip(units, legend):
-          if r &amp;gt;= u:
-              ret.append(&amp;quot;%d%s&amp;quot; % (r / u, l))
-              r -= u * int(r / u)
-          if r == 0:
-              break
-      if len(ret) == 0:
-          return &#39;0s&#39;
-      return &amp;quot;&amp;quot;.join(ret)
-
-  class ConvertTimeUtil:
-     &amp;quot;&amp;quot;&amp;quot;
-     convert time tool expected to be used in interactive cli
-     everything is stored in nanoseconds internally
-     then converted to the appropriate format on output in the ConvertTimeTo class
-
-     picosecond          1,000,000,000,000     one trillionth of a second.    10 ^ -9
-     nanosecond          1,000,000,000         one billionth of a second.    10 ^ -9
-     microsecond         1,000,000             one millionth of a second.    10 ^ -6
-     millisecond         1,000                 one thousandth of a second.   10 ^ -3
-
-     &amp;gt;&amp;gt;&amp;gt; ConvertTime.nanoseconds(6606999).to_seconds()
-     0.006606999
-
-     &amp;quot;&amp;quot;&amp;quot;
-     Nanosecond  = 1
-     Microsecond          = 1000 * Nanosecond
-     Millisecond          = 1000 * Microsecond
-     Second               = 1000 * Millisecond
-     Minute               = 60 * Second
-     Hour                 = 60 * Minute
-     Day                  = 24 * Hour
-
-     def nanoseconds(self, v): return ConvertTimeTo(v)
-     def microseconds(self, v): return ConvertTimeTo(v * self.Microsecond)
-     def milliseconds(self, v): return ConvertTimeTo(v * self.Millisecond)
-     def seconds(self, v): return ConvertTimeTo(v * self.Second)
-     def minutes(self, v): return ConvertTimeTo(v * self.Minute)
-     def hours(self, v): return ConvertTimeTo(v * self.Hour)
-     def days(self, v): return ConvertTimeTo(v * self.Day)
-
-  class ConvertTimeTo:
-     def __init__(self, v):
-        self.v = float(v)
-     def to_nanoseconds(self): return self.v
-     def to_microseconds(self): return self.v / ConvertTimeUtil.Microsecond
-     def to_milliseconds(self): return self.v / ConvertTimeUtil.Millisecond
-     def to_seconds(self): return self.v / ConvertTimeUtil.Second
-     def to_minutes(self): return self.v / ConvertTimeUtil.Minute
-     def to_hours(self): return self.v / ConvertTimeUtil.Hour
-     def to_days(self): return self.v / ConvertTimeUtil.Day
-
-     def __repr__(self):
-        return &amp;quot;&amp;lt;%s v=%s&amp;gt;&amp;quot; % (self.__class__.__name__, self.v)
-
-  ConvertTime = ConvertTimeUtil()
-
-  nanoseconds = ConvertTime.nanoseconds
-  microseconds = ConvertTime.microseconds
-  milliseconds = ConvertTime.milliseconds
-  seconds = ConvertTime.seconds
-  minutes = ConvertTime.minutes
-  hours = ConvertTime.hours
-  days = ConvertTime.days
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;misc-utilities:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;misc utilities&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;  def to_hex(t, nbytes):
-      &amp;quot;Format text t as a sequence of nbyte long values separated by spaces.&amp;quot;
-      chars_per_item = nbytes * 2
-      hex_version = binascii.hexlify(t)
-      num_chunks = len(hex_version) / chars_per_item
-      def chunkify():
-          for start in xrange(0, len(hex_version), chars_per_item):
-              yield hex_version[start:start + chars_per_item]
-      return &#39; &#39;.join(chunkify())
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;display-hooks:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;display hooks&lt;/h2&gt;
-
-&lt;p&gt;this display hook will automatically pretty print returned values from cli expressions&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  # display hook hack to pretty print everything by default
-  # use pprint_on or pprint_off to enable/disable pretty printing
-  import pprint
-  import sys
-
-  orig_displayhook = sys.displayhook
-
-  def myhook(value):
-      if value != None:
-          __builtins__._ = value
-          pprint.pprint(value)
-
-  __builtins__.pprint_on = lambda: setattr(sys, &#39;displayhook&#39;, myhook)
-  __builtins__.pprint_off = lambda: setattr(sys, &#39;displayhook&#39;, orig_displayhook)
-  # end display hook hack to pretty print everything
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>python is a incredibly useful language and has a powerful type system which can be pretty convenient. I&amp;rsquo;ve written python for many years now and when I need a quick tool, most the time I write it in python.
+These tools have built up over time and i&amp;rsquo;ve been collecting them organically into a python startup file as a set of libraries and functions.
+create a file in $HOME/.pythonstartup and cherry pick anything below that you find useful.</description>
+    </item>
+    
+    <item>
+      <title>Google Owned</title>
+      <link>https://sigmonsays.github.io/2015/01/google-owned/</link>
+      <pubDate>Mon, 05 Jan 2015 10:38:37 -0700</pubDate>
+      
+      <guid>https://sigmonsays.github.io/2015/01/google-owned/</guid>
+      <description>Ever think about how much information google has collected about you?
+   Service Information Notes     Gmail E-mail Data All my E-mail dating back to 2009   Chrome Web History Browser History Names of web sites I visit   Chrome Saved Passwords Passwords Saved passwords for sites (almost every site)   Maps on Android Location data Everywhere I go is stored and archive, since I carry my phone they know exactly where I go and when   Google Operated Dns Servers DNS Queries every service I talk to thats not controlled by them can be seen at the DNS level   Photos Pictures They run facial recognition on everyone   Google Music Music All my music is hosted by google   Google Drive (Sheets, Docs) Productivity I store a lot of information in google docs   Google Home TTS Conversations Always on microphone virtual assistant    Photos On top of facial recognition, there are other levels of processing performed.</description>
+    </item>
+    
+    <item>
+      <title>go powered databases</title>
+      <link>https://sigmonsays.github.io/2014/11/go-powered-databases/</link>
+      <pubDate>Sat, 29 Nov 2014 10:45:05 -0800</pubDate>
+      
+      <guid>https://sigmonsays.github.io/2014/11/go-powered-databases/</guid>
+      <description>bolt - https://github.com/boltdb/bolt ledis - http://ledisdb.com/ tiedot - https://github.com/HouzuoGuo/tiedot cockroachdb - https://github.com/cockroachdb/cockroach  bolt pure go key-value datastore
+ledis redis like database written in go
+attractive to embed redis like features directly into your application which will reduce operational complexity.
+tiedot JSON document database
+cockrochdb A Scalable, Geo-Replicated, Transactional Datastore
+design document https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit
+feature summary
+ ACID transactional semantics versioned values primary design goal is consistency and survivability aims to tolerate disk, server, rack and datacenter failures  related technologies</description>
+    </item>
+    
+    <item>
+      <title>ban systemd</title>
+      <link>https://sigmonsays.github.io/2014/09/ban-systemd/</link>
+      <pubDate>Mon, 22 Sep 2014 21:26:16 -0700</pubDate>
+      
+      <guid>https://sigmonsays.github.io/2014/09/ban-systemd/</guid>
+      <description>updates  Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
+ Just another reason to do one thing well and not try to do too much. C&amp;rsquo;mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread  &amp;ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.</description>
+    </item>
+    
+    <item>
+      <title>firewall</title>
+      <link>https://sigmonsays.github.io/notes/firewall/</link>
+      <pubDate>Fri, 12 Sep 2014 09:38:41 -0700</pubDate>
+      
+      <guid>https://sigmonsays.github.io/notes/firewall/</guid>
+      <description>Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.
+Only specific networks are allowed.
+#!/bin/bash #set -x iptables -P INPUT ACCEPT iptables -P FORWARD ACCEPT iptables -P OUTPUT ACCEPT iptables -F INPUT #iptables -F FORWARD #iptables -F OUTPUT function clean_networks { grep -v ^# | awk &#39;{print $1}&#39; |grep -v ^$ } # Quick and dirty iptables firewall # We want to drop traffic for any open port if its not in the allowed list of IP addresses # function list_allowed_networks { # the 1918 subnets cat &amp;lt;&amp;lt; EOF | clean_networks 10.</description>
+    </item>
+    
+    <item>
+      <title>building packages with docker</title>
+      <link>https://sigmonsays.github.io/2014/09/building-packages-with-docker/</link>
+      <pubDate>Thu, 11 Sep 2014 15:32:44 -0700</pubDate>
+      
+      <guid>https://sigmonsays.github.io/2014/09/building-packages-with-docker/</guid>
+      <description>This is a simple idea I had while waiting for a build to complete.
+The background Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script takes a minimal base image tarball and installs all dependencies in it required to build your package.
+The build dependencies come from debian/control Build-Depends section. The package being built is a python application using virtualenv. A lot of the packages come from apt however.</description>
+    </item>
+    
+    <item>
+      <title>docker wishlist</title>
+      <link>https://sigmonsays.github.io/2014/09/docker-wishlist/</link>
+      <pubDate>Sun, 07 Sep 2014 19:37:21 -0700</pubDate>
+      
+      <guid>https://sigmonsays.github.io/2014/09/docker-wishlist/</guid>
+      <description>things I find that I wish docker supported
+dockerfile  store build context with the image
+ provides ability to change original dockerfile for images you download saves dockerfile and other build artifacts similar in concept to a &amp;ldquo;source package&amp;rdquo;  support for variables
+  There is very little that the dockerfile actually supports beyond basic static directives.
+If dockerfile supported templates and variables, we could allow repetitive lines to be reduced to the bare minimum.</description>
+    </item>
+    
+    <item>
+      <title>docker networking performance</title>
+      <link>https://sigmonsays.github.io/2014/09/docker-networking-performance/</link>
+      <pubDate>Fri, 05 Sep 2014 07:33:28 -0700</pubDate>
+      
+      <guid>https://sigmonsays.github.io/2014/09/docker-networking-performance/</guid>
+      <description>While trying to determine the performance overhead of a simple docker container setup, I discovered several issues related to network performance.
+two issues I have encountered
+ docker-proxy handles local network traffic when using the hosts bridge IP (or localhost) connection tracking overhead of NAT increases memory usage  my setup
+I am using docker containers as an easy way to deploy backends on a host. I wish to use the hosts bridge IP as a backend to route requests from the load balancer.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://sigmonsays.github.io/about/</link>
+      <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
+      
+      <guid>https://sigmonsays.github.io/about/</guid>
+      <description>Start of another blog, developer focused, as a way to write about, keep track of and archive various technologies and trends.
+Hopefully this involves into something for now but mostly its a place to put random thought.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://sigmonsays.github.io/contact/</link>
+      <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
+      
+      <guid>https://sigmonsays.github.io/contact/</guid>
+      <description>   place Description     twitter @sigmonsays   github @sigmonsays   PGP my PGP key    </description>
+    </item>
+    
+    <item>
+      <title>Sudo</title>
+      <link>https://sigmonsays.github.io/sudo/</link>
+      <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
+      
+      <guid>https://sigmonsays.github.io/sudo/</guid>
+      <description> $ sudo -i [sudo] password for sig: sig is not in the sudoers file. This incident will be reported.  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sigmonsays.github.io/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sigmonsays.github.io/1/01/</guid>
+      <description></description>
     </item>
     
   </channel>

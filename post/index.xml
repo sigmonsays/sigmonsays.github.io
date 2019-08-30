@@ -6,7 +6,9 @@
     <description>Recent content in Posts on sig</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 16 Nov 2017 10:27:27 -0800</lastBuildDate>
-    <atom:link href="https://sigmonsays.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://sigmonsays.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>why use the go programming language?</title>
@@ -14,122 +16,7 @@
       <pubDate>Thu, 16 Nov 2017 10:27:27 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2017/11/why-use-the-go-programming-language/</guid>
-      <description>
-
-&lt;p&gt;I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle
-some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors
-needed to operate on a workqueue. This daemon is actually still in produciton today =P&lt;/p&gt;
-
-&lt;h1 id=&#34;in-summary:2948febad6b536d231a5b814f2926696&#34;&gt;In summary&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#compiled-language:2948febad6b536d231a5b814f2926696&#34;&gt;Compiled Language&lt;/a&gt; has a compiler which checks a lot of errors for me&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#strictly-typed:2948febad6b536d231a5b814f2926696&#34;&gt;Strictly typed&lt;/a&gt; language&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#static-linking:2948febad6b536d231a5b814f2926696&#34;&gt;Statically linked&lt;/a&gt; binary (single binary deployment!)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#type-system:2948febad6b536d231a5b814f2926696&#34;&gt;Unique type system&lt;/a&gt; using interfaces, composition and embedding instead of OOP patterns&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#language-grammer:2948febad6b536d231a5b814f2926696&#34;&gt;Language Grammer&lt;/a&gt; well defined&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tooling:2948febad6b536d231a5b814f2926696&#34;&gt;Amazing Tooling&lt;/a&gt; ie, gofmt, godef, go-imports, vim-go&lt;/li&gt;
-&lt;li&gt;small standard library and the go1 promise &lt;a href=&#34;https://golang.org/doc/go1compat&#34;&gt;https://golang.org/doc/go1compat&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#concurrency:2948febad6b536d231a5b814f2926696&#34;&gt;concurrency&lt;/a&gt; is a language (not library) feature, ie concurrency, goroutines, and channels&lt;/li&gt;
-&lt;li&gt;it is good to collaborate on (e.g. writing large systems)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;work-in-progress:2948febad6b536d231a5b814f2926696&#34;&gt;work in progress!&lt;/h1&gt;
-
-&lt;p&gt;This page will be filled out over time&lt;/p&gt;
-
-&lt;h1 id=&#34;compiled-language:2948febad6b536d231a5b814f2926696&#34;&gt;Compiled Language&lt;/h1&gt;
-
-&lt;p&gt;compiler checks a lot of errors for me&lt;/p&gt;
-
-&lt;p&gt;One case which use to get me all the time is error handling code in dynamic languages. If you do not unit test every case, often a undefined variable would result
-in your error handling code explode.&lt;/p&gt;
-
-&lt;p&gt;The go language also has some unique features. Undefined and unused variables cause compiler errors.&lt;/p&gt;
-
-&lt;h1 id=&#34;strictly-typed:2948febad6b536d231a5b814f2926696&#34;&gt;Strictly typed&lt;/h1&gt;
-
-&lt;p&gt;Similar to being a compiled language,&lt;/p&gt;
-
-&lt;p&gt;Large refactors in code often require changing arguments around or adding new ones. With a strictly
-typed language this is easy. If the compile works, you can be fairly confident that everything will run
-as designed.&lt;/p&gt;
-
-&lt;h1 id=&#34;static-linking:2948febad6b536d231a5b814f2926696&#34;&gt;Static linking&lt;/h1&gt;
-
-&lt;p&gt;Being a statically linked package means you are deploying a single binary or binary + config file. The only thing most go binaries link to are libc for some OS level networking support. It is possible
-to compile without libc entirely if you choose. Finally, if you avoid &lt;strong&gt;cgo&lt;/strong&gt; this means your binary will run anywhere given you have a matching architecture.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;This is an amazing feature coming from python&lt;/strong&gt; I love python but its biggest shortcoming is the confusion that arrises from the myraid of packaging systems.&lt;/p&gt;
-
-&lt;h1 id=&#34;type-system:2948febad6b536d231a5b814f2926696&#34;&gt;Type system&lt;/h1&gt;
-
-&lt;p&gt;Go has a interesting type system which removes the fundamentally flawed OOP features. OOP programmers often uses inheritenace when composition could be used instead.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;composition&lt;/strong&gt; means you combine objects together instead of searching a inheritence tree. I am not going into all the details here but here is the &lt;a href=&#34;https://en.wikipedia.org/wiki/Composition_over_inheritance&#34;&gt;wikipedia article on composition&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;language-grammer:2948febad6b536d231a5b814f2926696&#34;&gt;Language Grammer&lt;/h1&gt;
-
-&lt;p&gt;a language spec that is well defined &lt;a href=&#34;https://golang.org/ref/spec&#34;&gt;https://golang.org/ref/spec&lt;/a&gt;, short, and simple.&lt;/p&gt;
-
-&lt;p&gt;Without a well defined language specification, none of the tooling would be possible. It also makes it easy to develop tools which parse code into AST (Abstract syntax tree) and manipulate it. Ie, write code which
-modifies other code. This was not very practical in other langauges (IMHO). The &lt;code&gt;go/ast&lt;/code&gt; and &lt;code&gt;go/types&lt;/code&gt; packages lowered the barrier of entry to write quick tools for manipulating go source code.&lt;/p&gt;
-
-&lt;h1 id=&#34;tooling:2948febad6b536d231a5b814f2926696&#34;&gt;Tooling&lt;/h1&gt;
-
-&lt;p&gt;The amount of tooling really makes go a step above the rest&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;gofmt&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This tool automatically formats source code in a pre-defined way.&lt;/p&gt;
-
-&lt;p&gt;The tool shuts down the bike shed discussions which naturally occur about code formatting. Most people (if not all) require &lt;code&gt;gofmt&lt;/code&gt; to be executed on the source code being submitted to a project. This
-is also very useful to tie into your editor on save. Often you can paste a piece of code which does not match the indentation level, and watch it all fall into place.&lt;/p&gt;
-
-&lt;p&gt;I have spent a lot of time re-indenting code and this is no longer a step in go.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;goimports&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This tool automatically adds imports and removes unused imports in a source file&lt;/p&gt;
-
-&lt;p&gt;It is very useful to not worry about jumping to the top of the file and change imports every time you modify code.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;godef&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This tool is used in editors to jump to a types declartion.&lt;/p&gt;
-
-&lt;p&gt;Within vim one can type &lt;code&gt;gd&lt;/code&gt; on any variable or type and the editor jumps to the file and location where that &lt;em&gt;thing&lt;/em&gt; is defined. It is very useful for navigating
-unfamiliar and large source trees.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;gocode&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This tool provides a auto complete interface of methods and variables&lt;/p&gt;
-
-&lt;p&gt;integration with editors, like &lt;strong&gt;vim-go&lt;/strong&gt; really tie the tools together for a IDE like developer experience from the terminal. Of course there
-is a lot of graphical editors too if that is your thing.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Others?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I am sure I missed some tools that I use.  What tools do you use that are not mentioned here?&lt;/p&gt;
-
-&lt;h1 id=&#34;concurrency:2948febad6b536d231a5b814f2926696&#34;&gt;Concurrency&lt;/h1&gt;
-
-&lt;p&gt;Last but not least and quite possibly the most important feature of go is its concurrency primitives.&lt;/p&gt;
-
-&lt;p&gt;They are built directly into the language specification and first class citizens (they are not bolted on later).&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;goroutines&lt;/code&gt; are essentially coroutines but are executed across multiple real OS threads. The runtime scheduler handles everything for you so you can focus on writing logically blocking
-code. goroutines run in parallel, which makes it easy to maintain a mental model of what is happening in a concurrent program.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;channels&lt;/code&gt; are the communication primitive and allow different goroutines to talk to each other. A channel can be buffered and unbuffered, which allows creation of some really useful patterns.&lt;/p&gt;
-
-&lt;h1 id=&#34;useful-resources:2948febad6b536d231a5b814f2926696&#34;&gt;Useful Resources&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Go Proverbs - Bunch of wisdom - &lt;a href=&#34;https://go-proverbs.github.io/&#34;&gt;https://go-proverbs.github.io/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Errors are Values - &lt;a href=&#34;https://blog.golang.org/errors-are-values&#34;&gt;https://blog.golang.org/errors-are-values&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors needed to operate on a workqueue. This daemon is actually still in produciton today =P</description>
     </item>
     
     <item>
@@ -138,12 +25,7 @@ code. goroutines run in parallel, which makes it easy to maintain a mental model
       <pubDate>Sun, 16 Oct 2016 19:51:52 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/2016/10/random-musings/</guid>
-      <description>
-
-&lt;h1 id=&#34;would-you-rather-fight-100-duck-sized-horses-or-one-horse-sized-duck:2a3e229a0c52252aca13c01ed60c9a60&#34;&gt;Would you rather fight 100 duck sized horses or one horse sized duck?&lt;/h1&gt;
-
-&lt;p&gt;Bill Murray weights in &lt;a href=&#34;https://www.youtube.com/watch?v=THUGHEJjjGc&#34;&gt;https://www.youtube.com/watch?v=THUGHEJjjGc&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Would you rather fight 100 duck sized horses or one horse sized duck? Bill Murray weights in https://www.youtube.com/watch?v=THUGHEJjjGc</description>
     </item>
     
     <item>
@@ -152,104 +34,9 @@ code. goroutines run in parallel, which makes it easy to maintain a mental model
       <pubDate>Mon, 11 Apr 2016 11:23:01 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/2016/04/hitler-uses-docker/</guid>
-      <description>&lt;p&gt;video&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=PivpCKEiQOQ&#34;&gt;https://www.youtube.com/watch?v=PivpCKEiQOQ&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;transcript
--------------------------------
-
-we pushed the images to dockerhub, then used docker-compose to deploy to the cluster
-
-we mounted data volumes on these nodes
-
-and linked app container here
-
-finally we&#39;ve updated the DNS records
-
-
-hitler: so we&#39;re running 20 containers on every node now. when can we get rid of the excess servers?
-
-mein fuhrer...
-
-the kernel... 
-A 3rd party container caused a panic...
-
-we&#39;ve lost 70% of the cluster and the data volumes
-
-.... hitler loses his shit ....
-
-hitler: if you never used docker in production, leave the room now
-
-hitler: isolation my ass!
-
-hitler: what were you thinking?
-
-hitler: who the hell uses public containers from docker hub?
-
-hitler: for all you know they were made by russian hackers!
-
-hitler: you might as well use `curl | sudo bash`
-
-hitler: you think everything in public rpeo is secure because it&#39;s OSS?
-
-hitler: you&#39;re a bunch of node.js hipsters that just HAVE to install everything you read on hacker news!
-
-but docker allows us to run our applications anywhere!
-
-hitler: you use a VM just to run docker on your laptop!
-
-mein fuhrer, docker-machine uses a lightweight VM!
-
-hitler: do you hear yourself? why do we need docker if we&#39;re running a VM?
-
-hitler: a container inside a container!!!
-
-hitler: you archived a whole linux O/S then used CoW storage becaues it&#39;s too big
-
-hitler: Just so you can deploy a 10MB go Binary!
-
-hitler: Dont even talk to me about resource constraints
-
-hitler: all that cgroups black magic and it still can&#39;t stop a simple fork bomb!
-
-hitler: and if the database needs all the resources on the server, how exactly will docker allow you to run more programs on it?
-
-hitler: before docker, I just picked the right size VMs. 
-
-hitler: Suddenly people talk to me about datacenter efficiency and &amp;quot;hyperconvergence&amp;quot;
-
-hitler: everybody thinkst they&#39;re google!
-
-hitler: you don&#39;t even run your own machines anymore!
-
-hitler: people run docker on GCE, in VM instances that run in linux containers on Borg!
-
-hitler: people even think docker is configuration management
-
-hitler: they think docker solves everything!
-
-hitler: even microsoft has containers now
-
-hitler: i&#39;m moving everyone to windows!
-
-dont cry, you can run bash on windows 10 now
-
-hitler: docker is supposed to have better performance
-
-hitler: yet that fucker userland proxy is slower than a 28.8k modem
-
-hitler: and for what
-
-hitler: just bind on port 0
-
-hitler: even enterprises want to run docker now and they still have red hat 5 installed
-
-hitler: you idiots think docker will help your application scale
-
-hitler: use openstack for all I care
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>video
+https://www.youtube.com/watch?v=PivpCKEiQOQ
+transcript ------------------------------- we pushed the images to dockerhub, then used docker-compose to deploy to the cluster we mounted data volumes on these nodes and linked app container here finally we&#39;ve updated the DNS records hitler: so we&#39;re running 20 containers on every node now. when can we get rid of the excess servers? mein fuhrer... the kernel... A 3rd party container caused a panic... we&#39;ve lost 70% of the cluster and the data volumes .</description>
     </item>
     
     <item>
@@ -258,168 +45,11 @@ hitler: use openstack for all I care
       <pubDate>Wed, 02 Mar 2016 14:57:19 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2016/03/programming-exercise/</guid>
-      <description>&lt;p&gt;I heard from a friend about an interesting interview question that I thought would be easy.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;The problem&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;the goal of this program is to find the shortest number of stickers used to make a another word given that you have thousands of stickers&lt;/p&gt;
-
-&lt;p&gt;for instance, with the word &amp;ldquo;WPENGINE&amp;rdquo; printed on them to make for example &amp;ldquo;WWW&amp;rdquo; would take 3 and another example is &amp;ldquo;WINE&amp;rdquo; would take 1.&lt;/p&gt;
-
-&lt;p&gt;The programs logic is really quite literal and was enjoyable to write.&lt;/p&gt;
-
-&lt;p&gt;We have a Sticker type who keeps track of the number of letters used and a pile of stickers which is just a list
-of stickers. We search the pile for a given letter, and if its not found we add another sticker to the pile.&lt;/p&gt;
-
-&lt;p&gt;We keep a dummy sticker object around to validate that we do infact have the letters, and error if not.&lt;/p&gt;
-
-&lt;p&gt;The code&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  package main
-
-  import (
-     &amp;quot;fmt&amp;quot;
-     &amp;quot;os&amp;quot;
-     &amp;quot;strings&amp;quot;
-  )
-
-  func NewSticker(word string) *Sticker {
-     s := &amp;amp;Sticker{
-        letters: make(map[rune]int, 0),
-     }
-     var v int
-     for _, w := range strings.ToLower(word) {
-        v, _ = s.letters[w]
-        v += 1
-        s.letters[w] = v
-     }
-     return s
-  }
-
-  type Sticker struct {
-     letters map[rune]int
-  }
-
-  func (s *Sticker) HasLetter(l rune) bool {
-     count, found := s.letters[l]
-     if found == false {
-        return false
-     }
-     if count &amp;gt; 0 {
-        return true
-     }
-     return false
-  }
-
-  func (s *Sticker) Desc() string {
-     a := make([]string, 0)
-     for l, cnt := range s.letters {
-        a = append(a, fmt.Sprintf(&amp;quot;%s=%d&amp;quot;, string(l), cnt))
-     }
-     return strings.Join(a, &amp;quot; &amp;quot;)
-  }
-
-  func (s *Sticker) UseLetter(l rune) error {
-
-     fmt.Printf(&amp;quot;using letter %s\n&amp;quot;, string(l))
-
-     count, found := s.letters[l]
-     if found == false {
-        return fmt.Errorf(&amp;quot;sticker doesn&#39;t have letter %s&amp;quot;, l)
-     }
-
-     if count == 0 {
-        return fmt.Errorf(&amp;quot;letter is used up&amp;quot;)
-     }
-
-     count--
-     s.letters[l] = count
-     return nil
-
-  }
-
-  type Pile struct {
-     word     string
-     stickers []*Sticker
-  }
-
-  func NewPile(word string) *Pile {
-     p := &amp;amp;Pile{
-        word:     word,
-        stickers: make([]*Sticker, 0),
-     }
-     return p
-  }
-
-  func (p *Pile) HasLetter(l rune) bool {
-     for _, sticker := range p.stickers {
-        if sticker.HasLetter(l) {
-           return true
-        }
-     }
-     return false
-  }
-
-  func (p *Pile) AddSticker() {
-     p.stickers = append(p.stickers, NewSticker(p.word))
-  }
-
-  func main() {
-
-     var err error
-     sticker_word := &amp;quot;WPENGINE&amp;quot;
-
-     word := &amp;quot;pingping&amp;quot;
-     if len(os.Args) &amp;gt; 1 {
-        word = os.Args[1]
-     }
-     fmt.Printf(&amp;quot;sticker word %s\n&amp;quot;, sticker_word)
-     fmt.Printf(&amp;quot;making word %s\n&amp;quot;, word)
-     pile := NewPile(sticker_word)
-
-     // just to validate we have the letters..
-     sticker := NewSticker(sticker_word)
-
-     for _, l := range word {
-        //s := string(l)
-        fmt.Printf(&amp;quot;letter %s\n&amp;quot;, string(l))
-
-        if sticker.HasLetter(l) == false {
-           err = fmt.Errorf(&amp;quot;no letter %s&amp;quot;, string(l))
-           break
-        }
-
-        if pile.HasLetter(l) == false {
-           pile.AddSticker()
-        }
-
-        // find a sticker that has the letter we&#39;re lookin for in the pile
-        for _, sticker := range pile.stickers {
-           if sticker.HasLetter(l) {
-              sticker.UseLetter(l)
-              continue
-           }
-        }
-
-     }
-
-     if err != nil {
-        fmt.Printf(&amp;quot;ERROR: %s\n&amp;quot;, err)
-        return
-     }
-
-     // print the results
-
-     used := len(pile.stickers)
-     fmt.Printf(&amp;quot;stickers used %d\n&amp;quot;, used)
-
-     for i, sticker := range pile.stickers {
-        fmt.Printf(&amp;quot;sticker #%d  letters %+v\n&amp;quot;, i+1, sticker.Desc())
-     }
-
-  }
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>I heard from a friend about an interesting interview question that I thought would be easy.
+The problem
+the goal of this program is to find the shortest number of stickers used to make a another word given that you have thousands of stickers
+for instance, with the word &amp;ldquo;WPENGINE&amp;rdquo; printed on them to make for example &amp;ldquo;WWW&amp;rdquo; would take 3 and another example is &amp;ldquo;WINE&amp;rdquo; would take 1.
+The programs logic is really quite literal and was enjoyable to write.</description>
     </item>
     
     <item>
@@ -428,18 +58,8 @@ of stickers. We search the pile for a given letter, and if its not found we add 
       <pubDate>Sun, 31 Jan 2016 10:58:55 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2016/01/paste-an-hour-long-project/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.&lt;/p&gt;
-
-&lt;p&gt;It has always been bothersome to me that any paste, or &amp;ldquo;no paste&amp;rdquo; command line client has to be needlessly complex. Some i&amp;rsquo;ve tried to
-use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing
-more than curl. Its code is on github [1] and the client is rediculously simple:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-paste() { curl --data-binary @- http://paste.grepped.org/paste ;  }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;github &lt;a href=&#34;https://github.com/sigmonsays/paste&#34;&gt;https://github.com/sigmonsays/paste&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>I&amp;rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.
+It has always been bothersome to me that any paste, or &amp;ldquo;no paste&amp;rdquo; command line client has to be needlessly complex. Some i&amp;rsquo;ve tried to use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing more than curl.</description>
     </item>
     
     <item>
@@ -448,73 +68,10 @@ paste() { curl --data-binary @- http://paste.grepped.org/paste ;  }
       <pubDate>Sun, 03 Jan 2016 21:33:07 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2016/01/git-watch/</guid>
-      <description>&lt;p&gt;git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.&lt;/p&gt;
-
-&lt;p&gt;git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either
-code (in git) or configuration.&lt;/p&gt;
-
-&lt;p&gt;So here is a simple example which will automatically rebuild and restart a application when you git push (&lt;a href=&#34;https://github.com/sigmonsays/git-watch/tree/master/examples/go&#34;&gt;https://github.com/sigmonsays/git-watch/tree/master/examples/go&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Below in git-watch.yaml we check the upstream every 5 seconds and merge the master branch in. execcmd is &amp;ldquo;my_application&amp;rdquo; which is a simple application. When a upstream
-change is detected, we invoke the updatecmd. If the updatecmd does not succeed, the restart process is aborted. Assuming the update command succeeds, we then invoke the install
-command. After the install command succeeds, the application is restarted.&lt;/p&gt;
-
-&lt;p&gt;git-watch.yaml&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  # reinstall a go application when changes are detected in a git remote
-  checkinterval: 5
-  localbranch: master
-  execcmd: my_application
-  updatecmd: make
-  install: make install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Makefile&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  REPO=github.com/sigmonsays/git-watch
-
-  all:
-     go get -u $(REPO)/examples/go/my_application/...
-
-  install:
-     go install $(REPO)/examples/go/my_application
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Full usage&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Usage of git-watch:
- -branch string
-       local branch (default &amp;quot;master&amp;quot;)
- -check int
-       git check interval (seconds) (default 5)
- -config string
-       git watch config (default &amp;quot;git-watch.yaml&amp;quot;)
- -dir string
-       change directory before starting (default &amp;quot;.&amp;quot;)
- -exec-cmd string
-       exec command (default &amp;quot;make run&amp;quot;)
- -http string
-       start a http server
- -inherit-env
-       inherit environment
- -inotify-dir string
-       use inotify as a trigger in directory
- -install-cmd string
-       install command (default &amp;quot;make install&amp;quot;)
- -loglevel string
-       set log level (default &amp;quot;error&amp;quot;)
- -once
-       run once and exit
- -static-dir string
-       static directory (default &amp;quot;static&amp;quot;)
- -update-cmd string
-       update command (default &amp;quot;make&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;[1] - &lt;a href=&#34;https://github.com/sigmonsays/git-watch&#34;&gt;https://github.com/sigmonsays/git-watch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.
+git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either code (in git) or configuration.
+So here is a simple example which will automatically rebuild and restart a application when you git push (https://github.com/sigmonsays/git-watch/tree/master/examples/go)
+Below in git-watch.</description>
     </item>
     
     <item>
@@ -523,247 +80,9 @@ command. After the install command succeeds, the application is restarted.&lt;/p
       <pubDate>Tue, 03 Feb 2015 11:59:36 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2015/02/convenient-cli-tookit-using-python/</guid>
-      <description>
-
-&lt;p&gt;python is a incredibly useful language and has a powerful type system which
-can be pretty convenient. I&amp;rsquo;ve written python for many years now and when
-I need a quick tool, most the time I write it in python.&lt;/p&gt;
-
-&lt;p&gt;These tools have built up over time and i&amp;rsquo;ve been collecting them organically
-into a python startup file as a set of libraries and functions.&lt;/p&gt;
-
-&lt;p&gt;create a file in $HOME/&lt;strong&gt;.pythonstartup&lt;/strong&gt; and cherry pick anything below that you find
-useful.&lt;/p&gt;
-
-&lt;p&gt;The code below is missing the imports used.. instead copy the text from the imports section&lt;/p&gt;
-
-&lt;h2 id=&#34;tab-completion-and-history:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;tab completion and history&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;  # Tab completion
-  import rlcompleter
-  import readline
-  readline.parse_and_bind(&amp;quot;tab: complete&amp;quot;)
-
-  # History
-  histfile = os.path.join(os.path.expanduser(&amp;quot;~&amp;quot;), &amp;quot;.pyhist&amp;quot;)
-  try:
-      readline.read_history_file(histfile)
-  except IOError:
-      pass
-  atexit.register(readline.write_history_file, histfile)
-  del histfile
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;imports:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;imports&lt;/h2&gt;
-
-&lt;p&gt;i&amp;rsquo;m going to just drop a list of imports used. I&amp;rsquo;ll let you
-sort out which ones are unused with a linter (pyflakes peraps?).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  import os
-  import sys
-  import json
-  import time
-  import atexit
-  import urllib
-  import urlparse
-  import uuid
-  import hashlib
-  import hmac
-  import base64
-  import binascii
-  import struct
-  import os
-  from urllib import quote_plus,unquote,quote
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;custom-prompt-and-line-counter:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;custom prompt and line counter&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;# use a custom prompt
-class LineCounter(object):
-    def __init__(self):
-        self.count = 0
-    def __str__(self):
-        self.count += 1
-        return &#39;&amp;gt;&amp;gt;&amp;gt; &#39;
-line = LineCounter()
-sys.ps1 = line
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;this makes it possible to interact with the line object like this and whatever you return from &lt;strong&gt;str&lt;/strong&gt; will be your prompt.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; line.count
-6
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;handy-string-functions:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;handy string functions&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;  def safe_str(s):
-      try:
-          return str(s)
-      except UnicodeEncodeError:
-          return unicode(s).encode(&#39;utf-8&#39;)
-
-  quote = lambda s: urllib.quote(s)
-  unquote = lambda s: urllib.unquote(s)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;file-size-utilities:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;file size utilities&lt;/h2&gt;
-
-&lt;p&gt;format bytes as a human printable form&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  def formatSize(bytes, base=1024, precision=2):
-      units = [ &#39;b&#39;, &#39;kb&#39;, &#39;mb&#39;, &#39;gb&#39;, &#39;tb&#39;, &#39;pb&#39;, &#39;eb&#39;, &#39;xb&#39;, &#39;yb&#39; ]
-      nunits = len(units)
-      for n in xrange(nunits, -1, -1):
-          if bytes &amp;gt; base ** n:
-              break
-      v = round(float(bytes) / (base ** n), precision)
-      return (v, units[n])
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;convert bytes between units&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  class ConvertSize:
-     def __init__(self, base=1024):
-        B = 1
-        KB = B * base
-        MB = KB * base
-        GB = MB * base
-        TB = GB * base
-        PB = TB * base
-        EB = PB * base
-        ZB = EB * base
-        YB = ZB * base
-        base = base
-        _sym = &#39;B KB MB GB TB PB EB ZB YB&#39;.split()
-        self.__dict__.update(locals())
-
-     def _install(self, units, g):
-        for n, unit in enumerate(units.split()):
-           g[unit]=getattr(self, &#39;_&#39;+self._sym[n])
-     def _B(self, v):  return v * self.B
-     def _KB(self, v): return v * self.KB
-     def _MB(self, v): return v * self.MB
-     def _GB(self, v): return v * self.GB
-     def _TB(self, v): return v * self.TB
-     def _PB(self, v): return v * self.PB
-     def _EB(self, v): return v * self.EB
-     def _ZB(self, v): return v * self.ZB
-     def _YB(self, v): return v * self.YB
-
-  units = &#39;byte kilobyte megabyte gigabyte terabyte petabyte exabyte zettabyte yottabyte&#39;
-  ConvertSize(1000)._install(units, globals())
-
-  units = &#39;bit kibibyte mebibyte gibibyte tebibyte pebibyte exbibyte zebibyte yobibyte&#39;
-  ConvertSize(1024)._install(units, globals())
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;time-utilities:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;time utilities&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;  def formatTime(s, legend = [  &#39;d&#39;, &#39;h&#39;, &#39;m&#39;, &#39;s&#39; ]):
-      units = [  86400, 3600, 60, 1 ]
-      r = s
-      ret = []
-      for u, l in zip(units, legend):
-          if r &amp;gt;= u:
-              ret.append(&amp;quot;%d%s&amp;quot; % (r / u, l))
-              r -= u * int(r / u)
-          if r == 0:
-              break
-      if len(ret) == 0:
-          return &#39;0s&#39;
-      return &amp;quot;&amp;quot;.join(ret)
-
-  class ConvertTimeUtil:
-     &amp;quot;&amp;quot;&amp;quot;
-     convert time tool expected to be used in interactive cli
-     everything is stored in nanoseconds internally
-     then converted to the appropriate format on output in the ConvertTimeTo class
-
-     picosecond          1,000,000,000,000     one trillionth of a second.    10 ^ -9
-     nanosecond          1,000,000,000         one billionth of a second.    10 ^ -9
-     microsecond         1,000,000             one millionth of a second.    10 ^ -6
-     millisecond         1,000                 one thousandth of a second.   10 ^ -3
-
-     &amp;gt;&amp;gt;&amp;gt; ConvertTime.nanoseconds(6606999).to_seconds()
-     0.006606999
-
-     &amp;quot;&amp;quot;&amp;quot;
-     Nanosecond  = 1
-     Microsecond          = 1000 * Nanosecond
-     Millisecond          = 1000 * Microsecond
-     Second               = 1000 * Millisecond
-     Minute               = 60 * Second
-     Hour                 = 60 * Minute
-     Day                  = 24 * Hour
-
-     def nanoseconds(self, v): return ConvertTimeTo(v)
-     def microseconds(self, v): return ConvertTimeTo(v * self.Microsecond)
-     def milliseconds(self, v): return ConvertTimeTo(v * self.Millisecond)
-     def seconds(self, v): return ConvertTimeTo(v * self.Second)
-     def minutes(self, v): return ConvertTimeTo(v * self.Minute)
-     def hours(self, v): return ConvertTimeTo(v * self.Hour)
-     def days(self, v): return ConvertTimeTo(v * self.Day)
-
-  class ConvertTimeTo:
-     def __init__(self, v):
-        self.v = float(v)
-     def to_nanoseconds(self): return self.v
-     def to_microseconds(self): return self.v / ConvertTimeUtil.Microsecond
-     def to_milliseconds(self): return self.v / ConvertTimeUtil.Millisecond
-     def to_seconds(self): return self.v / ConvertTimeUtil.Second
-     def to_minutes(self): return self.v / ConvertTimeUtil.Minute
-     def to_hours(self): return self.v / ConvertTimeUtil.Hour
-     def to_days(self): return self.v / ConvertTimeUtil.Day
-
-     def __repr__(self):
-        return &amp;quot;&amp;lt;%s v=%s&amp;gt;&amp;quot; % (self.__class__.__name__, self.v)
-
-  ConvertTime = ConvertTimeUtil()
-
-  nanoseconds = ConvertTime.nanoseconds
-  microseconds = ConvertTime.microseconds
-  milliseconds = ConvertTime.milliseconds
-  seconds = ConvertTime.seconds
-  minutes = ConvertTime.minutes
-  hours = ConvertTime.hours
-  days = ConvertTime.days
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;misc-utilities:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;misc utilities&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;  def to_hex(t, nbytes):
-      &amp;quot;Format text t as a sequence of nbyte long values separated by spaces.&amp;quot;
-      chars_per_item = nbytes * 2
-      hex_version = binascii.hexlify(t)
-      num_chunks = len(hex_version) / chars_per_item
-      def chunkify():
-          for start in xrange(0, len(hex_version), chars_per_item):
-              yield hex_version[start:start + chars_per_item]
-      return &#39; &#39;.join(chunkify())
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;display-hooks:e4940539d06f8e0fcff6a9f58ac37a44&#34;&gt;display hooks&lt;/h2&gt;
-
-&lt;p&gt;this display hook will automatically pretty print returned values from cli expressions&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  # display hook hack to pretty print everything by default
-  # use pprint_on or pprint_off to enable/disable pretty printing
-  import pprint
-  import sys
-
-  orig_displayhook = sys.displayhook
-
-  def myhook(value):
-      if value != None:
-          __builtins__._ = value
-          pprint.pprint(value)
-
-  __builtins__.pprint_on = lambda: setattr(sys, &#39;displayhook&#39;, myhook)
-  __builtins__.pprint_off = lambda: setattr(sys, &#39;displayhook&#39;, orig_displayhook)
-  # end display hook hack to pretty print everything
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>python is a incredibly useful language and has a powerful type system which can be pretty convenient. I&amp;rsquo;ve written python for many years now and when I need a quick tool, most the time I write it in python.
+These tools have built up over time and i&amp;rsquo;ve been collecting them organically into a python startup file as a set of libraries and functions.
+create a file in $HOME/.pythonstartup and cherry pick anything below that you find useful.</description>
     </item>
     
     <item>
@@ -772,120 +91,8 @@ sys.ps1 = line
       <pubDate>Mon, 05 Jan 2015 10:38:37 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/2015/01/google-owned/</guid>
-      <description>
-
-&lt;p&gt;Ever think about how much information google has collected about you?&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Service&lt;/th&gt;
-&lt;th&gt;Information&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Gmail&lt;/td&gt;
-&lt;td&gt;E-mail Data&lt;/td&gt;
-&lt;td&gt;All my E-mail dating back to 2009&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Chrome Web History&lt;/td&gt;
-&lt;td&gt;Browser History&lt;/td&gt;
-&lt;td&gt;Names of web sites I visit&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Chrome Saved Passwords&lt;/td&gt;
-&lt;td&gt;Passwords&lt;/td&gt;
-&lt;td&gt;Saved passwords for sites (almost every site)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Maps on Android&lt;/td&gt;
-&lt;td&gt;Location data&lt;/td&gt;
-&lt;td&gt;Everywhere I go is stored and archive, since I carry my phone they know exactly where I go and when&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Google Operated Dns Servers&lt;/td&gt;
-&lt;td&gt;DNS Queries&lt;/td&gt;
-&lt;td&gt;every service I talk to thats not controlled by them can be seen at the DNS level&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Photos&lt;/td&gt;
-&lt;td&gt;Pictures&lt;/td&gt;
-&lt;td&gt;They run facial recognition on everyone&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Google Music&lt;/td&gt;
-&lt;td&gt;Music&lt;/td&gt;
-&lt;td&gt;All my music is hosted by google&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Google Drive (Sheets, Docs)&lt;/td&gt;
-&lt;td&gt;Productivity&lt;/td&gt;
-&lt;td&gt;I store a lot of information in google docs&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Google Home&lt;/td&gt;
-&lt;td&gt;TTS Conversations&lt;/td&gt;
-&lt;td&gt;Always on microphone virtual assistant&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&#34;photos:b7dd011bcf4b0b70c51c588c1e7032da&#34;&gt;Photos&lt;/h1&gt;
-
-&lt;p&gt;On top of facial recognition, there are other levels of processing performed.&lt;/p&gt;
-
-&lt;p&gt;They have ran extensive image processing on my photo library. I can ask google home to show me pictures of &lt;code&gt;pizza&lt;/code&gt; and it shows mostly things similar to pizza&lt;/p&gt;
-
-&lt;h1 id=&#34;phone-sensors:b7dd011bcf4b0b70c51c588c1e7032da&#34;&gt;Phone Sensors&lt;/h1&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Sensor&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Microphone&lt;/td&gt;
-&lt;td&gt;Audio Recording&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Camera&lt;/td&gt;
-&lt;td&gt;Picture and Video Recording&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;GPS&lt;/td&gt;
-&lt;td&gt;GPS Location - Location within meters&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;802.11 (Wifi)&lt;/td&gt;
-&lt;td&gt;Wifi Location - Triangulation&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Accelorometer&lt;/td&gt;
-&lt;td&gt;Local movement and direction&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>Ever think about how much information google has collected about you?
+   Service Information Notes     Gmail E-mail Data All my E-mail dating back to 2009   Chrome Web History Browser History Names of web sites I visit   Chrome Saved Passwords Passwords Saved passwords for sites (almost every site)   Maps on Android Location data Everywhere I go is stored and archive, since I carry my phone they know exactly where I go and when   Google Operated Dns Servers DNS Queries every service I talk to thats not controlled by them can be seen at the DNS level   Photos Pictures They run facial recognition on everyone   Google Music Music All my music is hosted by google   Google Drive (Sheets, Docs) Productivity I store a lot of information in google docs   Google Home TTS Conversations Always on microphone virtual assistant    Photos On top of facial recognition, there are other levels of processing performed.</description>
     </item>
     
     <item>
@@ -894,51 +101,14 @@ sys.ps1 = line
       <pubDate>Sat, 29 Nov 2014 10:45:05 -0800</pubDate>
       
       <guid>https://sigmonsays.github.io/2014/11/go-powered-databases/</guid>
-      <description>
-
-&lt;ul&gt;
-&lt;li&gt;bolt - &lt;a href=&#34;https://github.com/boltdb/bolt&#34;&gt;https://github.com/boltdb/bolt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ledis - &lt;a href=&#34;http://ledisdb.com/&#34;&gt;http://ledisdb.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;tiedot - &lt;a href=&#34;https://github.com/HouzuoGuo/tiedot&#34;&gt;https://github.com/HouzuoGuo/tiedot&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;cockroachdb - &lt;a href=&#34;https://github.com/cockroachdb/cockroach&#34;&gt;https://github.com/cockroachdb/cockroach&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;bolt:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;bolt&lt;/h2&gt;
-
-&lt;p&gt;pure go key-value datastore&lt;/p&gt;
-
-&lt;h2 id=&#34;ledis:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;ledis&lt;/h2&gt;
-
-&lt;p&gt;redis like database written in go&lt;/p&gt;
-
-&lt;p&gt;attractive to embed redis like features directly into your application which
-will reduce operational complexity.&lt;/p&gt;
-
-&lt;h2 id=&#34;tiedot:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;tiedot&lt;/h2&gt;
-
-&lt;p&gt;JSON document database&lt;/p&gt;
-
-&lt;h2 id=&#34;cockrochdb:bbf2ada5599758707c1e5f1b7edc50b4&#34;&gt;cockrochdb&lt;/h2&gt;
-
-&lt;p&gt;A Scalable, Geo-Replicated, Transactional Datastore&lt;/p&gt;
-
-&lt;p&gt;design document &lt;a href=&#34;https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit&#34;&gt;https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;feature summary&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ACID transactional semantics&lt;/li&gt;
-&lt;li&gt;versioned values&lt;/li&gt;
-&lt;li&gt;primary design goal is consistency and survivability&lt;/li&gt;
-&lt;li&gt;aims to tolerate disk, server, rack and datacenter failures&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;related technologies&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;rocksdb (variant of leveldb) - &lt;a href=&#34;http://rocksdb.org/&#34;&gt;http://rocksdb.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>bolt - https://github.com/boltdb/bolt ledis - http://ledisdb.com/ tiedot - https://github.com/HouzuoGuo/tiedot cockroachdb - https://github.com/cockroachdb/cockroach  bolt pure go key-value datastore
+ledis redis like database written in go
+attractive to embed redis like features directly into your application which will reduce operational complexity.
+tiedot JSON document database
+cockrochdb A Scalable, Geo-Replicated, Transactional Datastore
+design document https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit
+feature summary
+ ACID transactional semantics versioned values primary design goal is consistency and survivability aims to tolerate disk, server, rack and datacenter failures  related technologies</description>
     </item>
     
     <item>
@@ -947,78 +117,8 @@ will reduce operational complexity.&lt;/p&gt;
       <pubDate>Mon, 22 Sep 2014 21:26:16 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/2014/09/ban-systemd/</guid>
-      <description>
-
-&lt;h1 id=&#34;updates:749128d591ff05498577f36910c58f15&#34;&gt;updates&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Nov2014 - an exploit in systemd resolver - &lt;a href=&#34;https://news.ycombinator.com/item?id=8595335&#34;&gt;https://news.ycombinator.com/item?id=8595335&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Just another reason to do one thing well and not try to do too much. C&amp;rsquo;mon systemd, focus.&lt;/li&gt;
-&lt;li&gt;Please help me understand why a init.d replacement needs to provide a resolver.&lt;/li&gt;
-&lt;li&gt;some gems from this thread
-
-&lt;ul&gt;
-&lt;li&gt;&amp;ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver. To be clear, I don&amp;rsquo;t really think it matters whether systemd-resolved is under the systemd umbrella, but I do think that the design has a lot of unnecessary NIH syndrome.&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;This is a perfect example of why the systemd approach of putting a bunch of disparate components under a single tightly-coupled umbrella is bad engineering.&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;It&amp;rsquo;s mind blowing to realize that because of the init system we have on our system we are now vulnerable to DNS poisoning.&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;anyways, give the thread a read and see for yourself how systemd should be abandoned&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;website which describes a lot of good points - &lt;a href=&#34;http://boycottsystemd.org/&#34;&gt;http://boycottsystemd.org/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;why-i-want-to-ban-systemd:749128d591ff05498577f36910c58f15&#34;&gt;why I want to ban systemd&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;the developers and members on the irc room are aggressive and counter productive and only seem to want to fight
-rather than try to solve any issue.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;I read countless posts about the terrible nature of the developers&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.infoworld.com/article/2608798/data-center/systemd--harbinger-of-the-linux-apocalypse.html?page=2&#34;&gt;http://www.infoworld.com/article/2608798/data-center/systemd--harbinger-of-the-linux-apocalypse.html?page=2&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Linus Banned a developer for fighting&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://bugs.freedesktop.org/show_bug.cgi?id=76935&#34;&gt;https://bugs.freedesktop.org/show_bug.cgi?id=76935&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;From &lt;a href=&#34;https://bugs.freedesktop.org/show_bug.cgi?id=76935#c24&#34;&gt;https://bugs.freedesktop.org/show_bug.cgi?id=76935#c24&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;   Systemd needs to be forked NOW.
-   Linus explained it well already:
-   Kay and Lennart: please just go away, disappear from the FOSS community, we don&#39;t need you and your crap.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;They ban you if they do not agree with you&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://lists.debian.org/debian-ctte/2014/02/msg00389.html&#34;&gt;https://lists.debian.org/debian-ctte/2014/02/msg00389.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Countless people disagree &amp;ndash; even Linus.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://ewontfix.com/14/&#34;&gt;http://ewontfix.com/14/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=7522200&#34;&gt;https://news.ycombinator.com/item?id=7522200&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://lxer.com/module/forums/t/35320/&#34;&gt;http://lxer.com/module/forums/t/35320/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/lusis/status/450701265782456320&#34;&gt;https://twitter.com/lusis/status/450701265782456320&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&#34;more-updates-to-follow:749128d591ff05498577f36910c58f15&#34;&gt;More updates to follow..&lt;/h1&gt;
-
-&lt;p&gt;I&amp;rsquo;m pretty entertained but really saddened by the current situation. I joined the IRC room to ask abuot a bug and only
-got racial comments and vulgar language when I inquired about a bug. We didn&amp;rsquo;t even get to discussing the
-technical reasons, I had to leave the channel. I might try again later, I am curious.&lt;/p&gt;
-
-&lt;p&gt;The community needs to reject this overly complex piece of software without a clear focus or direction.&lt;/p&gt;
-</description>
+      <description>updates  Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
+ Just another reason to do one thing well and not try to do too much. C&amp;rsquo;mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread  &amp;ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.</description>
     </item>
     
     <item>
@@ -1027,89 +127,9 @@ technical reasons, I had to leave the channel. I might try again later, I am cur
       <pubDate>Thu, 11 Sep 2014 15:32:44 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/2014/09/building-packages-with-docker/</guid>
-      <description>
-
-&lt;p&gt;This is a simple idea I had while waiting for a build to complete.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The background&lt;/strong&gt;
-Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script
-takes a minimal base image tarball and installs all dependencies in it required to
-build your package.&lt;/p&gt;
-
-&lt;p&gt;The build dependencies come from debian/control Build-Depends section. The package being
-built is a python application using virtualenv. A lot of the packages come from apt however.
-There is a bunch of python pip/easy install work performed too.&lt;/p&gt;
-
-&lt;p&gt;Needless to say this takes quite some time to do since extracting a .deb and installing
-it is a pretty expensive operation when there is a lot of dependencies.&lt;/p&gt;
-
-&lt;p&gt;Obverve the following times&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;pdebuild - 2m35.113s&lt;/li&gt;
-&lt;li&gt;dpkg-buildpackage - 0m55.480s&lt;/li&gt;
-&lt;li&gt;docker - 0m37.421s&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;because i&amp;rsquo;m not interested in explaining how the other 2 method work, i&amp;rsquo;ll leave that out. However, let me
-explain how the docker build works.&lt;/p&gt;
-
-&lt;h2 id=&#34;docker:98af894833143101fe4ab2edf48c5c0c&#34;&gt;docker&lt;/h2&gt;
-
-&lt;p&gt;The idea is to exploit the layered file system of containers to provide build dependencies. Since
-its a copy on write file system, this means providing a container with all build deps present is
-incredibly fast.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Dockerfile&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;FROM ubuntu
-RUN apt-get update \
-   &amp;amp;&amp;amp; apt-get install -y dpkg-dev
-
-
-# This is the key line, it installs the build dependencies for your application!
-RUN apt-get build-dep -y --force-yes YOUR_PACKAGE
-
-RUN useradd packaging \
-   &amp;amp;&amp;amp; mkdir -p /packaging \
-   &amp;amp;&amp;amp; chown packaging /packaging
-
-USER packaging
-ADD build.sh /bin/build.sh
-
-ENTRYPOINT [ &amp;quot;/bin/build.sh&amp;quot; ]
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;build.sh&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-
-echo &amp;quot;[build.sh] $@&amp;quot;
-
-set -x
-
-cd /packaging
-pwd
-tar vzxf -
-cd package
-dpkg-buildpackage
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then to invoke the build we stream the contents at a tar.gz into the container which streams
-it to disk and builds the package.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;package_stream () 
-{ 
-    git archive HEAD --format tar --prefix=package/ | gzip -9
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Finally, this is the final command that runs the build&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  time package_stream | docker run -i debbie 
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>This is a simple idea I had while waiting for a build to complete.
+The background Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script takes a minimal base image tarball and installs all dependencies in it required to build your package.
+The build dependencies come from debian/control Build-Depends section. The package being built is a python application using virtualenv. A lot of the packages come from apt however.</description>
     </item>
     
     <item>
@@ -1118,36 +138,11 @@ it to disk and builds the package.&lt;/p&gt;
       <pubDate>Sun, 07 Sep 2014 19:37:21 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/2014/09/docker-wishlist/</guid>
-      <description>
-
-&lt;p&gt;things I find that I wish docker supported&lt;/p&gt;
-
-&lt;h1 id=&#34;dockerfile:1a0ce501ba8da3f2c3a74598e01110ce&#34;&gt;dockerfile&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;store build context with the image&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;provides ability to change original dockerfile for images you download&lt;/li&gt;
-&lt;li&gt;saves dockerfile and other build artifacts&lt;/li&gt;
-&lt;li&gt;similar in concept to a &amp;ldquo;source package&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;support for variables&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There is very little that the dockerfile actually supports beyond basic static directives.&lt;/p&gt;
-
-&lt;p&gt;If dockerfile supported templates and variables, we could allow repetitive lines to be reduced to
-  the bare minimum. This would allow snippets like this to be greatly reduced. We shouldn&amp;rsquo;t have to
-  repeat 0.1.3 everywhere, it should just be a variable!&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;RUN curl http://example.net/package-0.1.3.tar.gz -o package-0.1.3.tar.gz
-RUN tar zxf package-0.1.3.tar.gz 
-RUN cd package-0.1.3 &amp;amp;&amp;amp; make &amp;amp;&amp;amp; \
-    cp package-0.1.3/bin/whatever /usr/bin/whatever
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>things I find that I wish docker supported
+dockerfile  store build context with the image
+ provides ability to change original dockerfile for images you download saves dockerfile and other build artifacts similar in concept to a &amp;ldquo;source package&amp;rdquo;  support for variables
+  There is very little that the dockerfile actually supports beyond basic static directives.
+If dockerfile supported templates and variables, we could allow repetitive lines to be reduced to the bare minimum.</description>
     </item>
     
     <item>
@@ -1156,55 +151,19 @@ RUN cd package-0.1.3 &amp;amp;&amp;amp; make &amp;amp;&amp;amp; \
       <pubDate>Fri, 05 Sep 2014 07:33:28 -0700</pubDate>
       
       <guid>https://sigmonsays.github.io/2014/09/docker-networking-performance/</guid>
-      <description>
-
-&lt;p&gt;While trying to determine the performance overhead of a simple docker container setup, I discovered several
-issues related to network performance.&lt;/p&gt;
-
-&lt;p&gt;two issues I have encountered&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;docker-proxy handles local network traffic when using the hosts bridge IP (or localhost)&lt;/li&gt;
-&lt;li&gt;connection tracking overhead of NAT increases memory usage&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;my setup&lt;/p&gt;
-
-&lt;p&gt;I am using docker containers as an easy way to deploy backends on a host. I wish to use
-the hosts bridge IP as a backend to route requests from the load balancer. The load balancer
-is just a haproxy instance running on port 8080 and it uses 500X as backend ports.  I had to
-doctor up the output a little but this is still the output of &lt;strong&gt;docker ps&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;07 haproxy:0.0.1-8 X Up 2 days   0.0.0.0:443-&amp;gt;443/tcp     dev1-haproxy-1      
-                                 0.0.0.0:1983-&amp;gt;1983/tcp
-                                 0.0.0.0:8080-&amp;gt;8080/tcp
-
-b6 api:4.2.0-2   X  Up 14 hours  0.0.0.0:5003-&amp;gt;8080/tcp   dev1-api-3
-f0 api:4.2.0-2   X  Up 14 hours  0.0.0.0:5002-&amp;gt;8080/tcp   dev1-api-2
-7f api:4.2.0-2   X  Up 15 hours  0.0.0.0:5001-&amp;gt;8080/tcp   dev1-api-1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I&amp;rsquo;ve measured performance of docker-proxy process using nginx and timing the transfers and have seen
-performance degrades around 40-50% due to docker having to reverse proxy the connection in software.&lt;/p&gt;
-
-&lt;p&gt;I really believe that if performance is important, there should be a option of disabling docker-proxy,
-but I will focus on this more later if I really need to.&lt;/p&gt;
-
-&lt;h2 id=&#34;issues-with-docker-proxy:8077ca4b89f46c4b55abdf120961e82e&#34;&gt;issues with docker-proxy&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;software reverse proxy should not be enabled by default&lt;/li&gt;
-&lt;li&gt;network performance degradation up to 50% is not acceptable when traffic is &lt;em&gt;accidently&lt;/em&gt;
-routed through the proxy.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;i&amp;rsquo;m not entirely sure why the userland proxy is even required or why it was introduced.
-investigating the proxy history shows proxy was introduced in Apr 2013, commit 930e9a7,
-unfortunately it is not easy to determine the intention and why iptables was not just
-used in the first place to handle local traffic. iptables is used to route the network
-traffic externally, so I wonder, why the proxy in userland. It seems pointless but I
-have yet to investigate it further.&lt;/p&gt;
-</description>
+      <description>While trying to determine the performance overhead of a simple docker container setup, I discovered several issues related to network performance.
+two issues I have encountered
+ docker-proxy handles local network traffic when using the hosts bridge IP (or localhost) connection tracking overhead of NAT increases memory usage  my setup
+I am using docker containers as an easy way to deploy backends on a host. I wish to use the hosts bridge IP as a backend to route requests from the load balancer.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sigmonsays.github.io/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sigmonsays.github.io/1/01/</guid>
+      <description></description>
     </item>
     
   </channel>
