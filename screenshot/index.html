@@ -17,31 +17,27 @@
     
     
 
-<title>Projects • sig</title>
+<title>screenshot • sig</title>
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Projects"/>
-<meta name="twitter:description" content="Various ramblings and projects, mostly tools and libraries
-Related
-I maintain a page of Interesting Tech  which are random pieces of software or tools I find interesting at the time.
-There is a section on bash scripting
-Projects
-Paste  An hour long project where I wrote a paste server and shell script client
-Screenshot  python script for taking screenshots and uploading them to a cloud storage provider."/>
+<meta name="twitter:title" content="screenshot"/>
+<meta name="twitter:description" content="Screenshot is a simple python script that has evolved over time. It started out as a shell script which called import -window root screenshot.png and has evolved into a full featured application.
+Github page - https://github.com/sigmonsays/screenshot/blob/master/README.md
+The point of this post is to demonstrate how to setup screenshot and how to use it to achieve a few things
+Installation
+git clone https://github.com/sigmonsays/screenshot.git sudo apt-get install -y xclip imagemagick cd screenshot sudo pip install ."/>
 
-<meta property="og:title" content="Projects" />
-<meta property="og:description" content="Various ramblings and projects, mostly tools and libraries
-Related
-I maintain a page of Interesting Tech  which are random pieces of software or tools I find interesting at the time.
-There is a section on bash scripting
-Projects
-Paste  An hour long project where I wrote a paste server and shell script client
-Screenshot  python script for taking screenshots and uploading them to a cloud storage provider." />
+<meta property="og:title" content="screenshot" />
+<meta property="og:description" content="Screenshot is a simple python script that has evolved over time. It started out as a shell script which called import -window root screenshot.png and has evolved into a full featured application.
+Github page - https://github.com/sigmonsays/screenshot/blob/master/README.md
+The point of this post is to demonstrate how to setup screenshot and how to use it to achieve a few things
+Installation
+git clone https://github.com/sigmonsays/screenshot.git sudo apt-get install -y xclip imagemagick cd screenshot sudo pip install ." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://sigmonsays.github.io/projects/" />
-<meta property="article:published_time" content="2017-11-30T16:07:01-08:00" />
-<meta property="article:modified_time" content="2017-11-30T16:07:01-08:00" />
+<meta property="og:url" content="https://sigmonsays.github.io/screenshot/" />
+<meta property="article:published_time" content="2017-12-06T13:01:02-07:00" />
+<meta property="article:modified_time" content="2017-12-06T13:01:02-07:00" />
 
 
     
@@ -175,13 +171,13 @@ Screenshot  python script for taking screenshots and uploading them to a cloud s
     
 <article>
   <header>
-    <h1>Projects</h1>
+    <h1>screenshot</h1>
     
     
 <div class="post__meta">
     
     
-      <i class="fas fa-calendar-alt"></i> Nov 30, 2017
+      <i class="fas fa-calendar-alt"></i> Dec 06, 2017
     
     
     
@@ -206,60 +202,74 @@ Screenshot  python script for taking screenshots and uploading them to a cloud s
   
   
   <div class="post">
-    
+    <p>Screenshot is a simple python script that has evolved over time. It started out as a shell script which called <code>import -window root screenshot.png</code> and has
+evolved into a full featured application.</p>
 
-<p>Various ramblings and projects, mostly tools and libraries</p>
+<p>Github page - <a href="https://github.com/sigmonsays/screenshot/blob/master/README.md">https://github.com/sigmonsays/screenshot/blob/master/README.md</a></p>
 
-<p><strong>Related</strong></p>
+<p>The point of this post is to demonstrate how to setup screenshot and how to use it to achieve a few things</p>
 
-<p>I maintain a page of <a href="/notes/interesting-tech/"> Interesting Tech </a> which are random pieces of software or tools I find interesting at the time.</p>
+<p>Installation</p>
 
-<p>There is a section on <a href="/bash/">bash scripting</a></p>
+<pre><code>git clone https://github.com/sigmonsays/screenshot.git
+sudo apt-get install -y xclip imagemagick
+cd screenshot
+sudo pip install .
+</code></pre>
 
-<p><strong>Projects</strong></p>
+<p>Configuration</p>
 
-<p><a href="/2016/01/paste-an-hour-long-project/"> Paste </a>
-An hour long project where I wrote a paste server and shell script client</p>
+<p>Edit <code>~/.screenshot/config.ini</code></p>
 
-<p><a href="/screenshot/"> Screenshot </a>
-python script for taking screenshots and uploading them to a cloud storage provider. <a href="https://github.com/sigmonsays/screenshot">github</a></p>
+<p>[screenshot]
+   use_clipboard = yes
+   clipboard_method = s3
+   capture_method = imagemagick</p>
 
-<p><a href="https://github.com/sigmonsays/git-watch"> git-watch </a>
-watch a git repository for changes and execute update commands</p>
+<p>[s3]
+   enabled = yes
+   bucket = my_bucket
+   access_key = XXXX
+   secret_key = XXXX</p>
 
-<p><a href="https://github.com/sigmonsays/dice"> dice </a>
-simple dice program as a 1 hour hack</p>
+<p>Flag summary</p>
 
-<p><a href="https://github.com/sigmonsays/runitcmd"> runitcmd </a>
-runit utility written in go for setting up and managing runit services</p>
+<pre><code>  Usage: screenshot [options]
 
-<p><a href="https://github.com/sigmonsays/haproxyctl"> haproxyctl </a>
-go cli and library for managing haproxy</p>
+  Options:
+    -h, --help            show this help message and exit
+    -c FILE, --config=FILE
+                          config file
+    -v, --verbose         
+    -l LOG_LEVEL, --log-level=LOG_LEVEL
+                          set logging level [info]
+    -s SUMMARY, --summary=SUMMARY
+                          optional summary of picture
+    -u UPLOADERS, --uploaders=UPLOADERS
+                          enable specific uploaders
+    -f FILENAME, --filename=FILENAME
+                          use this file (or http address) instead of capturing
+</code></pre>
 
-<p><a href="https://github.com/sigmonsays/dns-router"> dns-router </a>
-personal dns server with bells and whistles written in go</p>
+<p>Usage</p>
 
-<p><a href="https://github.com/sigmonsays/webchat"> webchat </a>
-forked websocket demo which implements a chat server that is similar in function to a IRC server</p>
+<p>screenshot whatever</p>
 
-<h1 id="go-libaries">Go libaries</h1>
-
-<p><a href="https://github.com/sigmonsays/go-logging"> go-logging </a>
-leveled logging libary for go</p>
+<p>This allows you to select a region of your screen and then uploads it</p>
 
   </div>
   
 
 <div class="navigation navigation-single">
     
-    <a href="/enlightenment/" class="navigation-prev">
+    <a href="/archive/" class="navigation-prev">
       <i aria-hidden="true" class="fa fa-chevron-left"></i>
-      <span class="navigation-tittle">enlightenment</span>
+      <span class="navigation-tittle">Archive</span>
     </a>
     
     
-    <a href="/bash/" class="navigation-next">
-      <span class="navigation-tittle">bash</span>
+    <a href="/pinterest-sucks/" class="navigation-next">
+      <span class="navigation-tittle">Pinterest invades google</span>
       <i aria-hidden="true" class="fa fa-chevron-right"></i>
     </a>
     

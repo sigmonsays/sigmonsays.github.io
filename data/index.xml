@@ -21,6 +21,19 @@ This has been growing for years. Here is the typical situation I think more peop
     </item>
     
     <item>
+      <title>screenshot</title>
+      <link>https://sigmonsays.github.io/screenshot/</link>
+      <pubDate>Wed, 06 Dec 2017 13:01:02 -0700</pubDate>
+      
+      <guid>https://sigmonsays.github.io/screenshot/</guid>
+      <description>Screenshot is a simple python script that has evolved over time. It started out as a shell script which called import -window root screenshot.png and has evolved into a full featured application.
+Github page - https://github.com/sigmonsays/screenshot/blob/master/README.md
+The point of this post is to demonstrate how to setup screenshot and how to use it to achieve a few things
+Installation
+git clone https://github.com/sigmonsays/screenshot.git sudo apt-get install -y xclip imagemagick cd screenshot sudo pip install .</description>
+    </item>
+    
+    <item>
       <title>Archive</title>
       <link>https://sigmonsays.github.io/archive/</link>
       <pubDate>Sat, 02 Dec 2017 10:38:37 -0700</pubDate>
