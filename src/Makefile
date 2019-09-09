@@ -7,7 +7,14 @@ HUGO = /usr/local/bin/hugo
 
 #HUGO_FLAGS := --baseURL http://192.168.33.2
 
-all:
+help:
+	# 
+	# gen          generate hugo website
+	# clean        clean up output data 
+	# dev          start dev server
+	# post         create a new post
+	#
+gen:
 	@echo building site..
 	$(HUGO) -t $(THEME) -d ../data
 	rsync -ar ../data/ ../

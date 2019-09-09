@@ -11,6 +11,7 @@ I have switched to i3wm (for some time now) exclusively due to its speed and lig
 some time.
 
 
+
 # e20
 
 
