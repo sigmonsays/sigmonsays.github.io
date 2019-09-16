@@ -24,21 +24,6 @@ git clone https://github.com/sigmonsays/screenshot.git sudo apt-get install -y x
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>https://sigmonsays.github.io/projects/</link>
-      <pubDate>Thu, 30 Nov 2017 16:07:01 -0800</pubDate>
-      
-      <guid>https://sigmonsays.github.io/projects/</guid>
-      <description>Various ramblings and projects, mostly tools and libraries
-Related
-I maintain a page of Interesting Tech  which are random pieces of software or tools I find interesting at the time.
-There is a section on bash scripting
-Projects
-Paste  An hour long project where I wrote a paste server and shell script client
-Screenshot  python script for taking screenshots and uploading them to a cloud storage provider.</description>
-    </item>
-    
-    <item>
       <title>paste, an hour long project</title>
       <link>https://sigmonsays.github.io/2016/01/paste-an-hour-long-project/</link>
       <pubDate>Sun, 31 Jan 2016 10:58:55 -0800</pubDate>
