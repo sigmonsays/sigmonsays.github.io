@@ -33,6 +33,9 @@ menu:
    - Name: "PGP"
      Identifier: "PGP"
      URL: "/keybase/"
+   - Name: "Interesting Software"
+     Identifier: "interesting-software"
+     URL: "/notes/interesting-tech/"
 
 taxonomies:
   tag: "tags"
