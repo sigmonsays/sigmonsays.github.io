@@ -8,10 +8,9 @@ promo = "nopromo"
 +++
 
 
-| Link                                                           | Description          |
-| ---                                                            | ---                  |
-| https://landscape.cncf.io/                                     | the CNCF landscape makes me want to cry |
-
+| Link                       | Description                             |
+| ---                        | ---                                     |
+| https://landscape.cncf.io/ | the CNCF landscape makes me want to cry |
 
 
 
@@ -19,10 +18,10 @@ There is a [index](#index) which lists all the old sections. The newest is at th
 
 # Jan 2018
 
-| Link                                                           | Description          |
-| ---                                                            | ---                  |
-| https://github.com/lewish/asciiflow2 and http://asciiflow.com/ | ascii art draw tool. | 
-| https://github.com/benhoyt/goawk | awk fully implemented in go and passes 'the awk test' |
+| Link                                                           | Description                                           |
+| ---                                                            | ---                                                   |
+| https://github.com/lewish/asciiflow2 and http://asciiflow.com/ | ascii art draw tool.                                  |
+| https://github.com/benhoyt/goawk                               | awk fully implemented in go and passes 'the awk test' |
 
 
 # Oct 2016
