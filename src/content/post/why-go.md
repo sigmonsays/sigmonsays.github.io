@@ -72,6 +72,11 @@ modifies other code. This was not very practical in other langauges (IMHO). The 
 
 The amount of tooling really makes go a step above the rest
 
+`godoc` and `godoc.org`
+
+having the ability to easily see any 3rd party libraries documentation on godoc.org or with godoc locally is a far superior experience
+when trying to use someone elses library.
+
 `gofmt`
 
 This tool automatically formats source code in a pre-defined way. 

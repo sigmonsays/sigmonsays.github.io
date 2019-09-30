@@ -13,6 +13,8 @@ help:
 	# clean        clean up output data 
 	# dev          start dev server
 	# post         create a new post
+	# commit       commit code changes
+	# publish      gen and commit
 	#
 gen:
 	@echo building site..
@@ -32,4 +34,12 @@ dev:
 post:
 	cp content/template.md post/example.md
 
+publish: gen commit push
+	# Done
+	
 
+push:
+	git push
+commit:
+	git add .
+	git commit -a -m' auto commit'
