@@ -13,6 +13,7 @@ needed to operate on a workqueue. This daemon is actually still in produciton to
 
 # In summary
 
+- [Easy To Learn]({{< relref "#eary-to-learn" >}}) language is simple and easy to learn
 - [Compiled Language]({{< relref "#compiled-language" >}}) has a compiler which checks a lot of errors for me
 - [Strictly typed]({{< relref "#strictly-typed" >}}) language
 - [Statically linked]({{< relref "#static-linking" >}}) binary (single binary deployment!)
@@ -27,6 +28,16 @@ needed to operate on a workqueue. This daemon is actually still in produciton to
 # work in progress!
 
 This page will be filled out over time
+
+# Easy To Learn
+
+It is hard to say how important it is to get this right. Having a langauge that
+is both powerful and easy to learn is extremely challenging. 
+
+The go language is easy to start with and quickly learn and get up to speed on. 
+
+Coming from a history of C, PHP, Ruby and Python, it only took a couple weeks
+before I had something that was production ready.
 
 # Compiled Language 
 
