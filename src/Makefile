@@ -14,10 +14,10 @@ help:
 	# dev          start dev server
 	# post         create a new post
 	# commit       commit code changes
-	# publish      gen and commit
+	# publish (p)  gen and commit
 	#
 	#
-	# you likely want 'make publish'
+	# you likely want 'make p' (make publish)
 gen:
 	@echo building site..
 	$(HUGO) -t $(THEME) -d ../data
@@ -35,6 +35,8 @@ dev:
 
 post:
 	cp content/template.md post/example.md
+
+p: publish
 
 publish: gen commit push
 	# Done
