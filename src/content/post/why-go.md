@@ -13,7 +13,7 @@ needed to operate on a workqueue. This daemon is actually still in produciton to
 
 # In summary
 
-- [Easy To Learn]({{< relref "#eary-to-learn" >}}) language is simple and easy to learn
+- [Easy To Learn]({{< relref "#easy-to-learn" >}}) language is simple and easy to learn
 - [Compiled Language]({{< relref "#compiled-language" >}}) has a compiler which checks a lot of errors for me
 - [Strictly typed]({{< relref "#strictly-typed" >}}) language
 - [Statically linked]({{< relref "#static-linking" >}}) binary (single binary deployment!)

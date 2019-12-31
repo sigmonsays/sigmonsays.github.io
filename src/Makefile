@@ -16,6 +16,8 @@ help:
 	# commit       commit code changes
 	# publish      gen and commit
 	#
+	#
+	# you likely want 'make publish'
 gen:
 	@echo building site..
 	$(HUGO) -t $(THEME) -d ../data
