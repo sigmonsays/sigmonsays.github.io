@@ -14,6 +14,11 @@ install
 basics
 ------------------
 
+- editing a post
+
+   of content/post google ow
+
+
 - make a new file
    hugo new post/first.md
 
