@@ -37,8 +37,11 @@ post:
 	cp content/template.md post/example.md
 
 p: publish
+	# 
+	# Done
 
 publish: gen commit push
+	# 
 	# Done
 	
 
