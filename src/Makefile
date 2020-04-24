@@ -49,4 +49,4 @@ push:
 	git push
 commit:
 	git add .
-	git commit -a -m' auto commit'
+	-git commit -a -m' auto commit'
