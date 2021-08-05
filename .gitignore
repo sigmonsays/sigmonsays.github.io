@@ -1,4 +1,2 @@
-*.trash
-*.swp
-/tmp/
-/src/.go-env.sh
+bin/hugo
+hugo*_Linux-64bit.tar.gz
