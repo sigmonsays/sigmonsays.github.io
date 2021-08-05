@@ -26,9 +26,8 @@ help:
 	# you likely want 'make p' (make publish)
 gen: $(HUGO)
 	@echo building site..
-	$(HUGO) -t $(THEME) -d ./data
-	#rsync -ar ../data/ ../
-	#git add -A .
+	$(HUGO) -t $(THEME) -d ./docs
+	git add -A docs
 	git status
 	@echo
 
