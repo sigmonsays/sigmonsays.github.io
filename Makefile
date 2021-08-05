@@ -27,10 +27,13 @@ help:
 gen: $(HUGO)
 	@echo building site..
 	$(HUGO) -t $(THEME) -d ./docs
+	rsync -ar overlay/ docs/
 	git add -A docs
 	git status
 	@echo
 
+clean:
+	rm -rf docs
 
 dev:
 	git status
