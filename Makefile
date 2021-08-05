@@ -37,7 +37,7 @@ dev:
 	$(HUGO) server $(HUGO_FLAGS) --bind 0.0.0.0 -w -d ../tmp --theme=$(THEME)  --buildDrafts
 
 post:
-	cp content/template.md post/example.md
+	cp content/template.md content/post/example.md
 
 p: publish
 	# 
