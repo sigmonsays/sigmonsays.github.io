@@ -13,11 +13,15 @@ Contents
 - [Link Heading]({{< relref "#foo" >}})
 
 
-
 # Heading
 
 some stuff..
 
 a href to google <a href="http://google.com/">google</a>
 
+
+| Col      | Notes                     |
+| ---      | ---                       |
+| example1 | Example of tables         |
+| example2 | another example of tables |
 
