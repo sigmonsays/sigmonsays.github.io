@@ -21,6 +21,7 @@ help:
 	# post         create a new post
 	# commit       commit code changes
 	# publish (p)  gen and commit
+	# download     download and install hugo
 	#
 	#
 	# you likely want 'make p' (make publish)
@@ -34,6 +35,8 @@ gen: $(HUGO)
 
 clean:
 	rm -rf docs
+
+download: $(HUGO)
 
 dev:
 	git status
@@ -58,8 +61,9 @@ commit:
 	-git commit -a -m' auto commit'
 
 ./bin/hugo:
-	curl -LsO $(HUGO_URL)
-	tar vzxf $(HUGO_BASENAME)
-	mv hugo ./bin/hugo
-	rm -f hugo_$(HUGO_VERSION)_Linux-64bit.tar.gz
+	mkdir -pv tmp
+	cd tmp && curl -LsO $(HUGO_URL)
+	cd tmp && tar vzxf $(HUGO_BASENAME)
+	cd tmp && mv hugo ../bin/hugo
+	rm -rf tmp
 	chmod +x ./bin/hugo
