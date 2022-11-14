@@ -6,7 +6,19 @@
     <description>Recent content in Posts on sigmonsays</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Apr 2020 13:32:59 -0700</lastBuildDate><atom:link href="http://sigmonsays.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Nov 2022 08:57:49 -0800</lastBuildDate><atom:link href="http://sigmonsays.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Emacs Kit</title>
+      <link>http://sigmonsays.github.io/post/emacs/</link>
+      <pubDate>Mon, 14 Nov 2022 08:57:49 -0800</pubDate>
+      
+      <guid>http://sigmonsays.github.io/post/emacs/</guid>
+      <description>This document will be a living document that i&amp;rsquo;ll attempt to update from time to time
+Table of Contents
+ Intro Pico and Nano Vim doom emacs emacs28 with native compilation Markdown mode Org mode and babel  Intro I&amp;rsquo;ve been using doom-emacs for over a year now (since March 2021) and this is my personal experiences with it.
+I do not put a ton of effort into editors, rather I spend a chunk of time intermittently.</description>
+    </item>
+    
     <item>
       <title>Trump</title>
       <link>http://sigmonsays.github.io/post/trump/</link>

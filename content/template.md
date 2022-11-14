@@ -25,3 +25,10 @@ a href to google <a href="http://google.com/">google</a>
 | example1 | Example of tables         |
 | example2 | another example of tables |
 
+
+Aligned left
+
+| Col      | Notes                     |
+|:---------|:--------------------------|
+| example1 | Example of tables         |
+| example2 | another example of tables |
