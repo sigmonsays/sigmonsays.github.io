@@ -60,7 +60,10 @@ Being a vim user for so many years has basically burned those keys into my brain
 
 I am still a vim user to this day like using `j` and `k` to navigate is still present in doom emacs due to evil mode
 
-I'm by no means a lisp expert but doom emacs is ready to go out very quickly. Some things that look time 
+I'm by no means a lisp expert but doom emacs is ready to go out very quickly. Some things that look time are learning
+and discovering everything that is out there. 
+
+Favorite packages
 
 | Package          | Notes                                                                      |
 |:-----------------|:---------------------------------------------------------------------------|
@@ -82,7 +85,7 @@ Honerable mentions
 - eshell
 - markdown mode
 - org mode and babel 
-
+- dired 
 
 # emacs28 with native compilation
 
