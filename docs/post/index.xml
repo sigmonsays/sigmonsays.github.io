@@ -6,7 +6,18 @@
     <description>Recent content in Posts on sigmonsays</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Nov 2022 08:57:49 -0800</lastBuildDate><atom:link href="http://sigmonsays.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Jan 2023 08:57:49 -0800</lastBuildDate><atom:link href="http://sigmonsays.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dotbot</title>
+      <link>http://sigmonsays.github.io/post/dotbot/</link>
+      <pubDate>Sun, 29 Jan 2023 08:57:49 -0800</pubDate>
+      
+      <guid>http://sigmonsays.github.io/post/dotbot/</guid>
+      <description>Table of Contents
+ why dotbot  why dotbot is a tool to manage dot files. I wrote this tool after gettting tired of futzing around with the python dotbot from https://github.com/anishathalye/dotbot. Full disclosure I love this tool and it&amp;rsquo;s the motivation for the development of my own dotbot.
+I had two main issues that were annoying to me. First, git submodules were a part of the bootstrap process. Second, I always needed some yaml dependancy installed.</description>
+    </item>
+    
     <item>
       <title>My Emacs Kit</title>
       <link>http://sigmonsays.github.io/post/emacs/</link>
