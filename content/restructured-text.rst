@@ -3,7 +3,7 @@ date = "2014-09-12T08:28:52-07:00"
 draft = true
 title = "restructured text primer"
 
-tags = [ "cheatsheat", "rst2html", "hugo" ]
+tags = [ "cheatsheet", "rst2html", "hugo" ]
 
 +++
 restructured text primer
