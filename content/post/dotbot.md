@@ -2,7 +2,7 @@
 title: "dotbot"
 date: 2023-01-29T08:57:49-08:00
 draft: false
-tags: [ "linux" ]
+tags: [ "linux", "projects" ]
 ---
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
