@@ -9,6 +9,25 @@ _promo = [ "nopromo" ]
 
 Ever think about how much information google has collected about you?
 
+Apart from services there are additional things going on that you might not be aware of 
+
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Location Services](#location-services)
+- [Services](#services)
+- [Photos](#photos)
+- [Phone Sensors](#phone-sensors)
+
+<!-- markdown-toc end -->
+
+# Location Services
+
+In addition to GPS tracking, there is a service that runs on android phones and looks at available wifi networks to determine your location. This is usable when there isn't cell service.  However, the wifi networks are saved
+and uploaded centrally to google. Nobody knows what and how this data is used. I do not want google or Macy's knowing if I happen to walk into their store and my wifi pings theirs.
+ 
+
+# Services
 
 | Service                         | Information        | Notes
 | ---                             | ---                | ---
@@ -16,7 +35,7 @@ Ever think about how much information google has collected about you?
 | Gmail                           | E-mail Data        | All my E-mail dating back to 2009
 | Chrome Web History              | Browser History    | Names of web sites I visit
 | Chrome Saved Passwords          | Passwords          | Saved passwords for sites (almost every site)
-| Maps on Android                 | Location data      | Everywhere I go is stored and archive, since I carry my phone they know exactly where I go and when
+| Maps on Android                 | Location data      | Everywhere I go is stored, since I carry my phone they know exactly where I go and when
 | Google Operated Dns Servers     | DNS Queries        | every service I talk to thats not controlled by them can be seen at the DNS level
 | Photos                          | Pictures           | They run facial recognition on everyone
 | Google Music                    | Music              | All my music is hosted by google
