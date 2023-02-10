@@ -17,3 +17,10 @@ title = "sigmonsays"
   pre = "<i class='fa fa-heart'></i>"
   url = '/about/'
   weight = -110
+
+[[menu.main]]
+  identifier = 'index'
+  name = 'index '
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/'
+  weight = -110

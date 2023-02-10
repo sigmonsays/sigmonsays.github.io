@@ -89,13 +89,12 @@ A lot of this bash is old and wrong, because I learned bash so long ago (1998?).
       <pubDate>Thu, 30 Nov 2017 16:07:01 -0800</pubDate>
       
       <guid>http://sigmonsays.github.io/projects/</guid>
-      <description>Various ramblings and projects, mostly tools and libraries
-Related
-I maintain a page of Interesting Tech  which are random pieces of software or tools I find interesting at the time.
+      <description>Table of Contents
+ Related Projects Go libaries  Various ramblings and projects, mostly tools and libraries
+Related I maintain a page of Interesting Tech  which are random pieces of software or tools I find interesting at the time.
 There is a section on bash scripting
-Projects
-Paste  An hour long project where I wrote a paste server and shell script client
-Screenshot  python script for taking screenshots and uploading them to a cloud storage provider. github</description>
+Projects Paste  An hour long project where I wrote a paste server and shell script client
+Screenshot  python script for taking screenshots and uploading them to a cloud storage provider.</description>
     </item>
     
     <item>
