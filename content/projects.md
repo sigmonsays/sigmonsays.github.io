@@ -6,15 +6,23 @@ promo =  "nopromo"
 
 +++
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Related](#related)
+- [Projects](#projects)
+- [Go libaries](#go-libaries)
+
+<!-- markdown-toc end -->
 Various ramblings and projects, mostly tools and libraries
 
-**Related**
+# Related
 
 I maintain a page of [ Interesting Tech ]({{< relref "interesting-tech.md" >}}) which are random pieces of software or tools I find interesting at the time.
 
 There is a section on [bash scripting]({{< relref "bash.md" >}})
 
-**Projects**
+# Projects
 
 [ Paste ]({{< relref "paste.md" >}})
 An hour long project where I wrote a paste server and shell script client
@@ -24,6 +32,9 @@ python script for taking screenshots and uploading them to a cloud storage provi
 
 [ git-watch ](https://github.com/sigmonsays/git-watch)
 watch a git repository for changes and execute update commands
+
+[ git-caddy ](https://github.com/sigmonsays/git-caddy)
+clone or update a bunch of git repositories from a configuration file
 
 [ dice ](https://github.com/sigmonsays/dice)
 simple dice program as a 1 hour hack
