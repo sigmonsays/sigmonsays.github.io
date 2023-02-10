@@ -2,3 +2,18 @@ baseURL = "http://sigmonsays.github.io/"
 languageCode = "en-us"
 title = "sigmonsays"
 
+[menu]
+
+[[menu.main]]
+  identifier = 'projects'
+  name = 'projects '
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/tags/projects/'
+  weight = -110
+
+[[menu.main]]
+  identifier = 'about'
+  name = 'about '
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/about/'
+  weight = -110
