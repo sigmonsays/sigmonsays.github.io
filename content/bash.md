@@ -2,7 +2,7 @@
 date = "2017-12-01T10:38:37-07:00"
 draft = false
 title = "bash"
-tags = [ "bash" ]
+tags = [ "bash", "misc" ]
 promo = [ "bash" ]
 
 +++

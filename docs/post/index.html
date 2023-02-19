@@ -71,6 +71,12 @@
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/misc/" title="misc  page">
+              misc 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white no-underline white-90" href="/tags/projects/" title="projects  page">
               projects 
             </a>
@@ -228,6 +234,31 @@ trump will rip off anyone even if he says he&rsquo;ll pay https://www.independen
             <div class="mb3 pa4 mid-gray overflow-hidden">
     
       <div class="f6">
+        September 20, 2016
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/golang-faq/" class="link black dim">
+        golang FAQ
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Sections
+ Network Programming in go Installing golang tools Errors are values   Network programming in Go http://whispering-gophers.appspot.com/talk.slide#1
+installing golang tools is there any way i could install my go binaries wherever i want using go tools?
+answer
+typical solution is to install tools in a different GOPATH
+export GOPATH=&quot;$HOME/go&quot; export PATH=&quot;$GOPATH/bin:$PATH&quot; go get -u golang.org/x/tools/cmd/goimports  The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
         April 11, 2016
       </div>
     
@@ -308,28 +339,6 @@ It has always been bothersome to me that any paste, or &ldquo;no paste&rdquo; co
 git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either code (in git) or configuration.
 So here is a simple example which will automatically rebuild and restart a application when you git push (https://github.com/sigmonsays/git-watch/tree/master/examples/go)
 Below in git-watch.
-    </div>
-  </div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        February 3, 2015
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/pythonstartup/" class="link black dim">
-        convenient cli tookit using python
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      python is a incredibly useful language and has a powerful type system which can be pretty convenient. I&rsquo;ve written python for many years now and when I need a quick tool, most the time I write it in python.
-These tools have built up over time and i&rsquo;ve been collecting them organically into a python startup file as a set of libraries and functions.
-create a file in $HOME/.pythonstartup and cherry pick anything below that you find useful.
     </div>
   </div>
 

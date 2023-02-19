@@ -3,7 +3,7 @@ date = "2016-10-16T19:51:52-07:00"
 draft = false
 title = "random musings"
 promo = "nopromo"
-tags = [ "funny" ]
+tags = [ "funny", "misc" ]
 
 +++
 

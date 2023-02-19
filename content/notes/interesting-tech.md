@@ -2,7 +2,7 @@
 date = "2016-10-16T14:50:29-07:00"
 draft = false
 title = "interesting tech"
-tags = [ "notes" ]
+tags = [ "notes", "misc" ]
 promo = "nopromo"
 
 +++

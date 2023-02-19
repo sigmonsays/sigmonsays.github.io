@@ -6,7 +6,9 @@ title = "template"
 # Common tags
 # bash cheatsheet development google hugo i3 keybase notes pgp pinterest
 # programming python rants rst2html seo shell systemd security template docker
-tags = [ "template" ]
+#
+# misc - catch all
+tags = [ "template", "misc" ]
 
 
 _promo = [ "nopromo" ]

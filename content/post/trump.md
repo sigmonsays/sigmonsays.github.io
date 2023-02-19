@@ -2,6 +2,7 @@
 title: "Trump"
 date: 2020-04-24T13:32:59-07:00
 draft: false
+tags: [ "misc" ]
 ---
 
 Trump owes millions to state-owned bank in China

@@ -2,7 +2,7 @@
 date = "2015-01-05T10:38:37-07:00"
 draft = false
 title = "Google Owned"
-tags = [ "google", "security" ]
+tags = [ "google", "security", "misc" ]
 _promo = [ "nopromo" ]
 
 +++

@@ -2,7 +2,7 @@
 date = "2018-03-18T10:38:37-07:00"
 draft = false
 title = "Pinterest invades google"
-tags = [ "pinterest", "seo", "rants" ]
+tags = [ "pinterest", "seo", "rants", "misc" ]
 _promo = [ "nopromo" ]
 
 +++

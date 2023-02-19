@@ -2,6 +2,7 @@
 date = "2016-02-09T17:10:00-08:00"
 draft = false
 title = "enlightenment"
+tags = [ "linux", "misc" ]
 
 +++
 

@@ -59,6 +59,20 @@ trump will rip off anyone even if he says he&amp;rsquo;ll pay https://www.indepe
     </item>
     
     <item>
+      <title>golang FAQ</title>
+      <link>http://sigmonsays.github.io/post/golang-faq/</link>
+      <pubDate>Tue, 20 Sep 2016 12:47:58 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/post/golang-faq/</guid>
+      <description>Sections
+ Network Programming in go Installing golang tools Errors are values   Network programming in Go http://whispering-gophers.appspot.com/talk.slide#1
+installing golang tools is there any way i could install my go binaries wherever i want using go tools?
+answer
+typical solution is to install tools in a different GOPATH
+export GOPATH=&amp;quot;$HOME/go&amp;quot; export PATH=&amp;quot;$GOPATH/bin:$PATH&amp;quot; go get -u golang.org/x/tools/cmd/goimports  The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion.</description>
+    </item>
+    
+    <item>
       <title>hitler uses docker</title>
       <link>http://sigmonsays.github.io/post/hitler-uses-docker/</link>
       <pubDate>Mon, 11 Apr 2016 11:23:01 -0700</pubDate>

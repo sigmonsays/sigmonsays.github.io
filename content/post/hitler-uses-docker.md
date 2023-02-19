@@ -2,7 +2,7 @@
 date = "2016-04-11T11:23:01-07:00"
 draft = false
 title = "hitler uses docker"
-tags = [ "funny" ]
+tags = [ "funny", "misc" ]
 promo = [ "nopromo" ]
 
 +++

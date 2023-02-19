@@ -2,7 +2,7 @@
 date = "2014-09-22T21:26:16-07:00"
 draft = false
 title = "ban systemd"
-tags = [ "systemd" ]
+tags = [ "systemd", "misc" ]
 
 +++
 

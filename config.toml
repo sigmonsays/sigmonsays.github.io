@@ -12,6 +12,13 @@ title = "sigmonsays"
   weight = -110
 
 [[menu.main]]
+  identifier = 'misc'
+  name = 'misc '
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/tags/misc/'
+  weight = -110
+
+[[menu.main]]
   identifier = 'about'
   name = 'about '
   pre = "<i class='fa fa-heart'></i>"

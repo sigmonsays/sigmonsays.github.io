@@ -2,6 +2,7 @@
 date = "2014-09-07T19:37:21-07:00"
 draft = false
 title = "docker wishlist"
+tags = [ "misc" ]
 
 +++
 

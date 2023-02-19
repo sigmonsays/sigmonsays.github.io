@@ -2,7 +2,7 @@
 date = "2014-11-29T10:45:05-08:00"
 draft = false
 title = "go powered databases"
-tags = [ "golang" ]
+tags = [ "golang", "misc" ]
 
 +++
 

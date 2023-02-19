@@ -43,7 +43,7 @@ Only specific networks are allowed.
 #!/bin/bash #set -x iptables -P INPUT ACCEPT iptables -P FORWARD ACCEPT iptables -P OUTPUT ACCEPT iptables -F INPUT #iptables -F FORWARD #iptables -F OUTPUT function clean_networks { grep -v ^# | awk &#39;{print $1}&#39; |grep -v ^$ } # Quick and dirty iptables firewall # We want to drop traffic for any open port if its not in the allowed list of IP addresses # function list_allowed_networks { # the 1918 subnets cat &lt;&lt; EOF | clean_networks 10."><meta itemprop="datePublished" content="2014-09-12T09:38:41-07:00" />
 <meta itemprop="dateModified" content="2014-09-12T09:38:41-07:00" />
 <meta itemprop="wordCount" content="289">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="misc," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="firewall"/>
 <meta name="twitter:description" content="Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.
 Only specific networks are allowed.
@@ -77,6 +77,12 @@ Only specific networks are allowed.
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white no-underline white-90" href="/" title="index  page">
               index 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/misc/" title="misc  page">
+              misc 
             </a>
           </li>
           
@@ -255,6 +261,10 @@ done
 
 </code></pre><ul class="pa0">
   
+   <li class="list">
+     <a href="/tags/misc" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">misc</a>
+   </li>
+  
 </ul>
 <div class="mt6 instapaper_ignoref">
       
@@ -266,6 +276,25 @@ done
 
 
 
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/post/building-packages-with-docker/">building packages with docker</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/docker-wishlist/">docker wishlist</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/sudo/">Sudo</a>
+        </li>
+	    
+    </ul>
+</div>
 
 </aside>
 

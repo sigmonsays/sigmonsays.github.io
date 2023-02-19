@@ -2,6 +2,7 @@
 date = "2014-09-12T09:38:41-07:00"
 draft = false
 title = "firewall"
+tags = [ "misc" ]
 
 +++
 

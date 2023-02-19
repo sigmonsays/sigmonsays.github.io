@@ -2,7 +2,7 @@
 date = "2016-02-05T18:28:35-08:00"
 draft = false
 title = "keybase"
-tags = [ "keybase", "pgp", "security"  ]
+tags = [ "keybase", "pgp", "security", "misc" ]
 
 +++
 
