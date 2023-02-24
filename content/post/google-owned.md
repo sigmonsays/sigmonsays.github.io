@@ -26,6 +26,11 @@ Apart from services there are additional things going on that you might not be a
 In addition to GPS tracking, there is a service that runs on android phones and looks at available wifi networks to determine your location. This is usable when there isn't cell service.  However, the wifi networks are saved
 and uploaded centrally to google. Nobody knows what and how this data is used. I do not want google or Macy's knowing if I happen to walk into their store and my wifi pings theirs.
  
+The options given to you might not even work. See Google Tracks you even if you turn off 'location history' [1] and [2]
+
+
+- [1] https://www.theverge.com/2018/8/13/17684660/google-turn-off-location-history-data (2018)
+- [2] https://qz.com/1131515/google-collects-android-users-locations-even-when-location-services-are-disabled
 
 # Services
 
@@ -68,5 +73,12 @@ They have ran extensive image processing on my photo library. I can ask google h
 | Accelorometer | Local movement and direction
 
 
+
+
+
+# Degoogle Resources
+
+- [1] https://www.youtube.com/watch?v=RQUEgwgV99I
+- [2] https://archive.ph/XzrbQ - archive of https://www.cupwire.com/google-timeline/
 
 
