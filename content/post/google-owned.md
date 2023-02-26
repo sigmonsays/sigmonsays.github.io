@@ -14,12 +14,23 @@ Apart from services there are additional things going on that you might not be a
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
+- [Data Collection](#data-collection)
 - [Location Services](#location-services)
 - [Services](#services)
 - [Photos](#photos)
 - [Phone Sensors](#phone-sensors)
+- [Degoogle Resources](#degoogle-resources)
 
 <!-- markdown-toc end -->
+
+# Data Collection
+
+Data collected is often uploaded to google servers
+
+- IMEI, hardware serial number, Wifi MAC address
+- AndroidID, Google Ad ID
+
+- [1] https://www.scss.tcd.ie/Doug.Leith/Android_privacy_report.pdf
 
 # Location Services
 
@@ -72,6 +83,10 @@ They have ran extensive image processing on my photo library. I can ask google h
 | 802.11 (Wifi) | Wifi Location - Triangulation
 | Accelorometer | Local movement and direction
 
+
+
+Notes
+- With accelorometer they know if you're walking/driving/in a train/on a bike/etc and upload this data to google. https://www.youtube.com/watch?v=yIZmUINSvQ4
 
 
 
