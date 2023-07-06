@@ -6,7 +6,25 @@
     <description>Recent content in Tags on sigmonsays</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Jan 2023 08:57:49 -0800</lastBuildDate><atom:link href="http://sigmonsays.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jul 2023 01:23:45 -0700</lastBuildDate><atom:link href="http://sigmonsays.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>development</title>
+      <link>http://sigmonsays.github.io/tags/development/</link>
+      <pubDate>Wed, 05 Jul 2023 01:23:45 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nix</title>
+      <link>http://sigmonsays.github.io/tags/nix/</link>
+      <pubDate>Wed, 05 Jul 2023 01:23:45 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/tags/nix/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>linux</title>
       <link>http://sigmonsays.github.io/tags/linux/</link>

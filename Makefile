@@ -42,6 +42,7 @@ dev:
 	git status
 	$(HUGO) server $(HUGO_FLAGS) --bind 0.0.0.0 -w -d ../tmp --theme=$(THEME)  --buildDrafts
 
+new-post: post
 post:
 	cp content/template.md content/post/example.md
 

@@ -16,7 +16,10 @@
       <description>Ever think about how much information google has collected about you?
 Apart from services there are additional things going on that you might not be aware of
 Table of Contents
- Location Services Services Photos Phone Sensors  Location Services In addition to GPS tracking, there is a service that runs on android phones and looks at available wifi networks to determine your location. This is usable when there isn&amp;rsquo;t cell service.</description>
+ Data Collection Location Services Services Photos Phone Sensors Degoogle Resources  Data Collection Data collected is often uploaded to google servers
+  IMEI, hardware serial number, Wifi MAC address
+  AndroidID, Google Ad ID
+  [1] https://www.</description>
     </item>
     
   </channel>

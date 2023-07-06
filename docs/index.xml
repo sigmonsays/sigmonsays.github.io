@@ -6,7 +6,19 @@
     <description>Recent content on sigmonsays</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Jan 2023 08:57:49 -0800</lastBuildDate><atom:link href="http://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jul 2023 01:23:45 -0700</lastBuildDate><atom:link href="http://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nix and nixos</title>
+      <link>http://sigmonsays.github.io/post/nix/</link>
+      <pubDate>Wed, 05 Jul 2023 01:23:45 -0700</pubDate>
+      
+      <guid>http://sigmonsays.github.io/post/nix/</guid>
+      <description>Table of Contents
+ Summary NixOS Home Manager Build Docker Containers Development Shells Nix Cache  Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
+Nix overall has so many features that it&amp;rsquo;s worth understanding what&amp;rsquo;s possible
+ build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows+WSL nix cache (https://cachix.</description>
+    </item>
+    
     <item>
       <title>dotbot</title>
       <link>http://sigmonsays.github.io/post/dotbot/</link>
@@ -236,7 +248,10 @@ create a file in $HOME/.pythonstartup and cherry pick anything below that you fi
       <description>Ever think about how much information google has collected about you?
 Apart from services there are additional things going on that you might not be aware of
 Table of Contents
- Location Services Services Photos Phone Sensors  Location Services In addition to GPS tracking, there is a service that runs on android phones and looks at available wifi networks to determine your location. This is usable when there isn&amp;rsquo;t cell service.</description>
+ Data Collection Location Services Services Photos Phone Sensors Degoogle Resources  Data Collection Data collected is often uploaded to google servers
+  IMEI, hardware serial number, Wifi MAC address
+  AndroidID, Google Ad ID
+  [1] https://www.</description>
     </item>
     
     <item>
