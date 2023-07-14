@@ -29,12 +29,15 @@ may not be worth it to some people.
 
 Nix overall has so many features that it's worth understanding what's possible
 
+with nix you can
+
 - build docker containers
 - build qemu images
 - install packages per user or system
 - build development shells
 - runs everywhere - linux, nixos, macos, windows+WSL
 - nix cache (https://cachix.org)
+- Everything above is reproducible
 
 I hope this document aims to explain how i've used each one and my experiences with it. There is not a lot of information out there and nix error messages are anything but useful.
 
