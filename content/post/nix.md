@@ -12,6 +12,7 @@ _promo = [ "nopromo" ]
 **Table of Contents**
 
 - [Summary](#summary)
+- [Why NixOS](#why-nixos)
 - [NixOS](#nixos)
 - [Home Manager](#home-manager)
 - [Build Docker Containers](#build-docker-containers)
@@ -35,6 +36,14 @@ Nix overall has so many features that it's worth understanding what's possible
 - nix cache (https://cachix.org)
 
 I hope this document aims to explain how i've used each one and my experiences with it. There is not a lot of information out there and nix error messages are anything but useful.
+
+# Why NixOS
+
+- reproducible
+- updates are atomic; system never left in half configured state
+- rollback
+- tools like puppet, ansible, chef, etc do not work the same.  nix works at a higher level.
+- nix config can easily be shared
 
 # NixOS
 

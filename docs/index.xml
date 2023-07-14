@@ -14,7 +14,7 @@
       
       <guid>http://sigmonsays.github.io/post/nix/</guid>
       <description>Table of Contents
- Summary NixOS Home Manager Build Docker Containers Development Shells Nix Cache  Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
+ Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache  Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
 Nix overall has so many features that it&amp;rsquo;s worth understanding what&amp;rsquo;s possible
  build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows+WSL nix cache (https://cachix.</description>
     </item>
