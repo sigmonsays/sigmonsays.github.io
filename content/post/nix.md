@@ -91,6 +91,9 @@ Example nixos configurations are [here](https://github.com/sigmonsays/nix-experi
 
 I installed nixos on a Lenovo ThinkPad P15S Gen 2 but gave up quickly when the graphics failed to function. I ended up returning the laptop for other reasons so my nixos experience was cut short.
 
+I purchased an old Thinkpad T480 and put NIXOS on it. The installation went smoothly and it's my primary NIXOS laptop. I'm surprised by
+how quickly I got everything working.
+
 # Home Manager
 
 Since nix runs everywhere, I have it as part of my dotfile repo and it naturally fits
@@ -103,6 +106,7 @@ device.nix file I was in.
 All of my devices run home manager. On MacOS i've used it to replace brew. I have a module for macos
 that installed more modern versions of bash and coreutils in addition to all the other things I use
 like emacs, jq, fzf, tmux, gdu, etc.
+
 
 # Build Docker Containers
 
