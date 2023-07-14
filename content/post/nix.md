@@ -42,8 +42,13 @@ I hope this document aims to explain how i've used each one and my experiences w
 - reproducible
 - updates are atomic; system never left in half configured state
 - rollback
-- tools like puppet, ansible, chef, etc do not work the same.  nix works at a higher level.
+- don't have to run a config management system
+- tools like puppet, ansible, chef, etc do not work the same.  
+  - nix works at a higher level.
+  - order of execution does not matter
+  - declare end state
 - nix config can easily be shared
+- bring up a new system in minutes
 
 # NixOS
 
