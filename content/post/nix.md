@@ -49,13 +49,20 @@ I hope this document aims to explain how i've used each one and my experiences w
 - rollback
 - don't have to run a config management system
 - tools like puppet, ansible, chef, etc do not work the same.  
-  - nix works at a higher level.
+  - nix works at a higher level (not as many details required to use)
   - order of execution does not matter
   - declare end state
+  - nix is always pristine
 - nix config can easily be shared
 - bring up a new system in minutes
 
-The system state is declarative. Which means that it essentially turns my entire OS state into something that can be pristine, setup from scratch, and rolled back to any revision in git. This makes experiementing with software fearless. With other config mgmt systems, you have to go manually clean up the mess made to remove something
+The system state is declarative. Which means that it essentially turns my entire OS state into something that can be pristine, setup from scratch, and rolled back to any revision in git. 
+
+This makes experimenting with software fearless. With other config mgmt systems, you have to go manually clean up the mess made to remove something either
+in error or to uninstall it. Building automations that always work when errors and half states are encountered is difficult.
+
+This is not the issue with nix because the system is built from scratch each time. If I decide I want to experiment with an application 
+and need to uninstall it, i just comment out the "install package" line and when I rebuild the system it's gone.
 
 Some examples
 
