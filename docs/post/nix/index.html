@@ -45,7 +45,7 @@ Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;
 Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible
  build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows&#43;WSL nix cache (https://cachix."><meta itemprop="datePublished" content="2023-07-05T01:23:45-07:00" />
 <meta itemprop="dateModified" content="2023-07-05T01:23:45-07:00" />
-<meta itemprop="wordCount" content="606">
+<meta itemprop="wordCount" content="630">
 <meta itemprop="keywords" content="nix,development," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="nix and nixos"/>
 <meta name="twitter:description" content="Table of Contents
@@ -200,8 +200,16 @@ may not be worth it to some people.</p>
 <li>reproducible</li>
 <li>updates are atomic; system never left in half configured state</li>
 <li>rollback</li>
-<li>tools like puppet, ansible, chef, etc do not work the same.  nix works at a higher level.</li>
+<li>don&rsquo;t have to run a config management system</li>
+<li>tools like puppet, ansible, chef, etc do not work the same.
+<ul>
+<li>nix works at a higher level.</li>
+<li>order of execution does not matter</li>
+<li>declare end state</li>
+</ul>
+</li>
 <li>nix config can easily be shared</li>
+<li>bring up a new system in minutes</li>
 </ul>
 <h1 id="nixos">NixOS</h1>
 <p>nixos provides a entire OS that is defined in the same nix language that nix package manager and home manager uses.</p>
