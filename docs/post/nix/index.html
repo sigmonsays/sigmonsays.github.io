@@ -7,8 +7,9 @@
     <title>nix and nixos | sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Table of Contents
- Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache  Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
+ Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes  Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
 Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible
+with nix you can
  build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows&#43;WSL nix cache (https://cachix.">
     <meta name="generator" content="Hugo 0.87.0" />
     
@@ -31,8 +32,9 @@ Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;
     
     <meta property="og:title" content="nix and nixos" />
 <meta property="og:description" content="Table of Contents
- Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache  Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
+ Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes  Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
 Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible
+with nix you can
  build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows&#43;WSL nix cache (https://cachix." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://sigmonsays.github.io/post/nix/" /><meta property="article:section" content="post" />
@@ -41,16 +43,18 @@ Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;
 
 <meta itemprop="name" content="nix and nixos">
 <meta itemprop="description" content="Table of Contents
- Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache  Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
+ Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes  Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
 Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible
+with nix you can
  build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows&#43;WSL nix cache (https://cachix."><meta itemprop="datePublished" content="2023-07-05T01:23:45-07:00" />
 <meta itemprop="dateModified" content="2023-07-05T01:23:45-07:00" />
-<meta itemprop="wordCount" content="630">
+<meta itemprop="wordCount" content="962">
 <meta itemprop="keywords" content="nix,development," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="nix and nixos"/>
 <meta name="twitter:description" content="Table of Contents
- Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache  Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
+ Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes  Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
 Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible
+with nix you can
  build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows&#43;WSL nix cache (https://cachix."/>
 
 	
@@ -180,12 +184,14 @@ Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;
 <li><a href="#build-docker-containers">Build Docker Containers</a></li>
 <li><a href="#development-shells">Development Shells</a></li>
 <li><a href="#nix-cache">Nix Cache</a></li>
+<li><a href="#flakes">Flakes</a></li>
 </ul>
 <!-- raw HTML omitted -->
 <h1 id="summary">Summary</h1>
 <p>Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required
 may not be worth it to some people.</p>
 <p>Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible</p>
+<p>with nix you can</p>
 <ul>
 <li>build docker containers</li>
 <li>build qemu images</li>
@@ -193,29 +199,52 @@ may not be worth it to some people.</p>
 <li>build development shells</li>
 <li>runs everywhere - linux, nixos, macos, windows+WSL</li>
 <li>nix cache (<a href="https://cachix.org">https://cachix.org</a>)</li>
+<li>Everything above is reproducible</li>
 </ul>
 <p>I hope this document aims to explain how i&rsquo;ve used each one and my experiences with it. There is not a lot of information out there and nix error messages are anything but useful.</p>
 <h1 id="why-nixos">Why NixOS</h1>
 <ul>
+<li>declarative</li>
 <li>reproducible</li>
 <li>updates are atomic; system never left in half configured state</li>
 <li>rollback</li>
 <li>don&rsquo;t have to run a config management system</li>
 <li>tools like puppet, ansible, chef, etc do not work the same.
 <ul>
-<li>nix works at a higher level.</li>
+<li>nix works at a higher level (not as many details required to use)</li>
 <li>order of execution does not matter</li>
 <li>declare end state</li>
+<li>nix is always pristine</li>
 </ul>
 </li>
 <li>nix config can easily be shared</li>
 <li>bring up a new system in minutes</li>
 </ul>
+<p>The system state is declarative. Which means that it essentially turns my entire OS state into something that can be pristine, setup from scratch, and rolled back to any revision in git.</p>
+<p>This makes experimenting with software fearless. With other config mgmt systems, you have to go manually clean up the mess made to remove something either
+in error or to uninstall it. Building automations that always work when errors and half states are encountered is difficult.</p>
+<p>This is not the issue with nix because the system is built from scratch each time. If I decide I want to experiment with an application
+and need to uninstall it, i just comment out the &ldquo;install package&rdquo; line and when I rebuild the system it&rsquo;s gone.</p>
+<p>Some examples</p>
+<p>laptop lid close behavior on my T480</p>
+<pre><code> services.logind.lidSwitch = &quot;hibernate&quot;;
+</code></pre>
+<p>change bindings for keyboard volume keys</p>
+<pre><code> services.actkbd.bindings = [
+    { keys = [ 122 ]; events = [ &quot;key&quot; &quot;rep&quot; ]; command = &quot;${pkgs.alsaUtils}/bin/amixer -q set Master ${config.sound.mediaKeys.volumeStep}- unmute&quot;; }
+    { keys = [ 123 ]; events = [ &quot;key&quot; &quot;rep&quot; ]; command = &quot;${pkgs.alsaUtils}/bin/amixer -q set Master ${config.sound.mediaKeys.volumeStep}+ unmute&quot;; }
+ ]
+</code></pre>
+<p>enable alsa</p>
+<pre><code> sound.enable = true;
+</code></pre>
 <h1 id="nixos">NixOS</h1>
 <p>nixos provides a entire OS that is defined in the same nix language that nix package manager and home manager uses.</p>
 <p>I&rsquo;ve only bootstraped a VM using nixos and that was relatively straighforward. I followed <a href="https://gist.github.com/tarnacious/f9674436fff0efeb4bb6585c79a3b9ff">this</a> guide. A working verion I modified is <a href="https://github.com/sigmonsays/nix-experiments/tree/main/nix-qemu2">here</a></p>
 <p>Example nixos configurations are <a href="https://github.com/sigmonsays/nix-experiments/tree/main/nix/nixos">here</a></p>
 <p>I installed nixos on a Lenovo ThinkPad P15S Gen 2 but gave up quickly when the graphics failed to function. I ended up returning the laptop for other reasons so my nixos experience was cut short.</p>
+<p>I purchased an old Thinkpad T480 and put NIXOS on it. The installation went smoothly and it&rsquo;s my primary NIXOS laptop. I&rsquo;m surprised by
+how quickly I got everything working.</p>
 <h1 id="home-manager">Home Manager</h1>
 <p>Since nix runs everywhere, I have it as part of my dotfile repo and it naturally fits</p>
 <p>Figuring out how to organize nix code was very difficult for me and I refactored a couple times. First I just wrote it, then I tried doing hostname detection and importing things dynamically but that failed.</p>
@@ -254,6 +283,12 @@ workflows where I needed exiftool, imagemagick and libheif.</p>
 <p>You get the best of both worlds with a nix binary cache since most things can be pulled as a binary from
 the cache.</p>
 <p>iF the inputs result in a hash that&rsquo;s not in the cache, nix will build it from source.</p>
+<h1 id="flakes">Flakes</h1>
+<p>I havn&rsquo;t converted over to flakes yet but am just now (after a few months) starting to understand what their purpose is</p>
+<p>The main purpose of flakes is to have more control over the inputs used to install a package. For instance if your nixos configuration.nix
+has the stable channel and you try to take someone elses code that expects unstable channel, there could be problems. It might work but the
+two systems are not the exact same.</p>
+<p><code>TODO</code> I&rsquo;ll update this section as I switch over</p>
 <ul class="pa0">
   
    <li class="list">
