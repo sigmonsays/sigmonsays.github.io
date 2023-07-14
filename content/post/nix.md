@@ -18,6 +18,7 @@ _promo = [ "nopromo" ]
 - [Build Docker Containers](#build-docker-containers)
 - [Development Shells](#development-shells)
 - [Nix Cache](#nix-cache)
+- [Flakes](#flakes)
 
 <!-- markdown-toc end -->
 
@@ -52,6 +53,23 @@ I hope this document aims to explain how i've used each one and my experiences w
 - bring up a new system in minutes
 
 The system state is declarative. Which means that it essentially turns my entire OS state into something that can be pristine, setup from scratch, and rolled back to any revision in git. This makes experiementing with software fearless. With other config mgmt systems, you have to go manually clean up the mess made to remove something
+
+Some examples
+
+laptop lid close behavior on my T480
+
+     services.logind.lidSwitch = "hibernate";
+
+change bindings for keyboard volume keys
+
+     services.actkbd.bindings = [
+        { keys = [ 122 ]; events = [ "key" "rep" ]; command = "${pkgs.alsaUtils}/bin/amixer -q set Master ${config.sound.mediaKeys.volumeStep}- unmute"; }
+        { keys = [ 123 ]; events = [ "key" "rep" ]; command = "${pkgs.alsaUtils}/bin/amixer -q set Master ${config.sound.mediaKeys.volumeStep}+ unmute"; }
+     ]
+ 
+ enable alsa
+
+     sound.enable = true;
 
 # NixOS
 
@@ -120,3 +138,13 @@ the cache.
 
 iF the inputs result in a hash that's not in the cache, nix will build it from source.
 
+
+# Flakes
+
+I havn't converted over to flakes yet but am just now (after a few months) starting to understand what their purpose is
+
+The main purpose of flakes is to have more control over the inputs used to install a package. For instance if your nixos configuration.nix
+has the stable channel and you try to take someone elses code that expects unstable channel, there could be problems. It might work but the
+two systems are not the exact same.
+
+`TODO` I'll update this section as I switch over
