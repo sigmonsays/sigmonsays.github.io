@@ -1,43 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sigmonsays</title>
-    <link>http://sigmonsays.github.io/</link>
-    <description>Recent content on sigmonsays</description>
+    <title>misc on sigmonsays</title>
+    <link>http://sigmonsays.github.io/tags/misc/</link>
+    <description>Recent content in misc on sigmonsays</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Jul 2023 01:23:45 -0700</lastBuildDate>
-    <atom:link href="http://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>nix and nixos</title>
-      <link>http://sigmonsays.github.io/post/nix/</link>
-      <pubDate>Wed, 05 Jul 2023 01:23:45 -0700</pubDate>
-      <guid>http://sigmonsays.github.io/post/nix/</guid>
-      <description>Table of Contents
-Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes Resources Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
-Nix overall has so many features that it&amp;rsquo;s worth understanding what&amp;rsquo;s possible
-with nix you can
-build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows+WSL nix cache (https://cachix.</description>
-    </item>
-    <item>
-      <title>dotbot</title>
-      <link>http://sigmonsays.github.io/post/dotbot/</link>
-      <pubDate>Sun, 29 Jan 2023 08:57:49 -0800</pubDate>
-      <guid>http://sigmonsays.github.io/post/dotbot/</guid>
-      <description>Table of Contents
-why dotbot why dotbot is a tool to manage dot files. I wrote this tool after gettting tired of futzing around with the python dotbot from https://github.com/anishathalye/dotbot. Full disclosure I love this tool and it&amp;rsquo;s the motivation for the development of my own dotbot.
-I had two main issues that were annoying to me. First, git submodules were a part of the bootstrap process. Second, I always needed some yaml dependancy installed.</description>
-    </item>
-    <item>
-      <title>My Emacs Kit</title>
-      <link>http://sigmonsays.github.io/post/emacs/</link>
-      <pubDate>Mon, 14 Nov 2022 08:57:49 -0800</pubDate>
-      <guid>http://sigmonsays.github.io/post/emacs/</guid>
-      <description>This document will be a living document that i&amp;rsquo;ll attempt to update from time to time
-Table of Contents
-Intro Pico and Nano Vim doom emacs emacs28 with native compilation Markdown mode Org mode and babel Intro I&amp;rsquo;ve been using doom-emacs for over a year now (since March 2021) and this is my personal experiences with it.
-I do not put a ton of effort into editors, rather I spend a chunk of time intermittently.</description>
-    </item>
+    <lastBuildDate>Fri, 24 Apr 2020 13:32:59 -0700</lastBuildDate>
+    <atom:link href="http://sigmonsays.github.io/tags/misc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Trump</title>
       <link>http://sigmonsays.github.io/post/trump/</link>
@@ -55,17 +25,6 @@ trump will rip off anyone even if he says he&amp;rsquo;ll pay https://www.indepe
 This has been growing for years. Here is the typical situation I think more people run into than you think. When you are looking for an image on google image search and find what you are looking for by thumbnail, and click through just to be taken to pinterest.com. Once you land here, you do not see any fragment of what you came for. Instead, you are confronted with a sign up page.</description>
     </item>
     <item>
-      <title>screenshot</title>
-      <link>http://sigmonsays.github.io/screenshot/</link>
-      <pubDate>Wed, 06 Dec 2017 13:01:02 -0700</pubDate>
-      <guid>http://sigmonsays.github.io/screenshot/</guid>
-      <description>Screenshot is a simple python script that has evolved over time. It started out as a shell script which called import -window root screenshot.png and has evolved into a full featured application.
-Github page - https://github.com/sigmonsays/screenshot/blob/master/README.md
-The point of this post is to demonstrate how to setup screenshot and how to use it to achieve a few things
-Installation
-git clone https://github.com/sigmonsays/screenshot.git sudo apt-get install -y xclip imagemagick cd screenshot sudo pip install .</description>
-    </item>
-    <item>
       <title>Archive</title>
       <link>http://sigmonsays.github.io/archive/</link>
       <pubDate>Sat, 02 Dec 2017 10:38:37 -0700</pubDate>
@@ -80,18 +39,6 @@ git clone https://github.com/sigmonsays/screenshot.git sudo apt-get install -y x
       <description>I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page primarily serves as short snippets of bash recipes I often want to re-use.
 A lot of this bash is old and wrong, because I learned bash so long ago (1998?). Refer to http://mywiki.wooledge.org/BashGuide for proper rules.
 Simple Logging Redirect Human Size Simple Logging Redirect If you have a bash script you wish to add logging to a simple approach is to use exec and redirect the output to a file.</description>
-    </item>
-    <item>
-      <title>Projects</title>
-      <link>http://sigmonsays.github.io/projects/</link>
-      <pubDate>Thu, 30 Nov 2017 16:07:01 -0800</pubDate>
-      <guid>http://sigmonsays.github.io/projects/</guid>
-      <description>Table of Contents
-Related Projects Go libaries Various ramblings and projects, mostly tools and libraries
-Related I maintain a page of Interesting Tech which are random pieces of software or tools I find interesting at the time.
-There is a section on bash scripting
-Projects Paste An hour long project where I wrote a paste server and shell script client
-Screenshot python script for taking screenshots and uploading them to a cloud storage provider.</description>
     </item>
     <item>
       <title>why use the go programming language?</title>
@@ -147,17 +94,6 @@ https://www.youtube.com/watch?v=PivpCKEiQOQ
 transcript ------------------------------- we pushed the images to dockerhub, then used docker-compose to deploy to the cluster we mounted data volumes on these nodes and linked app container here finally we&#39;ve updated the DNS records hitler: so we&#39;re running 20 containers on every node now. when can we get rid of the excess servers? mein fuhrer... the kernel... A 3rd party container caused a panic... we&#39;ve lost 70% of the cluster and the data volumes .</description>
     </item>
     <item>
-      <title>programming exercise</title>
-      <link>http://sigmonsays.github.io/post/programming-exercise/</link>
-      <pubDate>Wed, 02 Mar 2016 14:57:19 -0800</pubDate>
-      <guid>http://sigmonsays.github.io/post/programming-exercise/</guid>
-      <description>I heard from a friend about an interesting interview question that I thought would be easy.
-The problem
-the goal of this program is to find the shortest number of stickers used to make a another word given that you have thousands of stickers
-for instance, with the word &amp;ldquo;WPENGINE&amp;rdquo; printed on them to make for example &amp;ldquo;WWW&amp;rdquo; would take 3 and another example is &amp;ldquo;WINE&amp;rdquo; would take 1.
-The programs logic is really quite literal and was enjoyable to write.</description>
-    </item>
-    <item>
       <title>enlightenment</title>
       <link>http://sigmonsays.github.io/enlightenment/</link>
       <pubDate>Tue, 09 Feb 2016 17:10:00 -0800</pubDate>
@@ -174,24 +110,6 @@ e20 enlightenment has been my window manager of choice for a very long time main
 keybase proof for this site here https://sigmonsays.github.io/keybase.txt
 my public key can be downloaded from https://keybase.io/sigmonsays/key.asc or copied and pasted below:
 -----BEGIN PGP PUBLIC KEY BLOCK----- Version: Keybase OpenPGP v2.0.49 Comment: https://keybase.io/crypto xsFNBFa1E6kBEADVYWauiTCPmd3cSkim7aRu7Vpl1PLo07KZp/SavvxBNoyKGRMs 8xkpd8kN2LZS2YmjLDCxLmk+UZ3d+FsJTKcpZyBW5lzLsbp/9+l1fF6YmC3fAYk6 9EmnyH6BBr98ECCSuqtGHo6EKHtkWYqI0cTvZhZkFKj1AigmAUS+zWdEYAWriayM rtYPLA+RNXkc4C8+0V1wvmV2RJYGzwCUyvs1QoMrJWSh7H8WB5Zhaw8UPAO5LaKI bx1nD7Jv9jQ//YCUOJ9u/yoGRjrX2Bo/GbTLl+9iOmt3llx/8NS4E7BdcXMm8idP 7ZkIYau31renLyn61Oa63eGPgJQWQbJTHC5lSo6lzcV9nIXeIk3p6kw9cYq/WS6V nmr0SNNK3FY0bzgb8+CifpWFLYxK/qxe+6rWeNBRJyAagZlJcKnxQM9TBDC4ndXL WUa/RaRG53dEnRzD0s/PD3NfvlPwGB5k+P73Qu9VlwjAGEI55nfALK1iPOePE7sU OR2Snlj2MVZMipiA1uWMuWiaLnt1xaSxfyg/HCaJa3NGmm4QAbWSmBv9Ws7QJQdy AZ01yqNFKKHQ/e/6A9bIF8zj83pv2H+QSK3U15ijBWweWvFAopxOOIY9UbEBgFPw eHSDMbLKsEGLV+sciwGyzoEgQrGvvRMhgMH7cBCS/3kvVfc5ASe1moQClwARAQAB zR9TaWcgTGFuZ2UgPHNpZy5sYW5nZUBnbWFpbC5jb20+wsF0BBMBCgAeBQJWtROp AhsDAwsJBwMVCggCHgECF4ADFgIBAhkBAAoJEMs6+I/h4yi6XwkP/3eH72CS8qYm TSiCRzQ7tjr7ClU9BRPmlO/zgVivCA3t1weYxrXCWTFV/uqAzvw4IVJTNhtDqIpi 08kZO81DucUpku3BZGrp1sR9UoAnC9XUjlu7+K3rZzjU15WfHcHjmOAFfWPh+uiP NwlMt9NQtcHAJ07pnJ88O/q1X+QnsJTVL9GHnC8YA/1LDdf4WP+t1DYOpOH8aENB zvDUCCPQbXGyEXgXXXCuaAwDea53VuFIeqcul5RmM8QTbDsmcdb172mxs9UEEMSQ G/q5rNSTH73W+pJC64ruh5w017pkitZh3ZGJxYXfglCOBpv22McUNksn6bHDSFmC 7/riPKosPcSGlzk6ZzPNIX+Un9rJoUFWFOJjjPC8levEGYv1h+k97PclgBb/K/ga dsWTddX0mIuSKiwohZg9M72SfZuNBz0YqToQ2w9lsTB6edhU1WA8wT6toiEh14pt SepdMMp3zDb1c4FTetZXsfVIUWBgf3mcSXkNr7C/GGau3SFu56r3ahcfiJYcGPQi dDYaQTCiAzr4BKuhRHd5e2ZoP9DYu9sVZBj8AT2UtnEaRHuoVuNybC/ZIEZfHOWc RnpxJe7CFEMqQHWyM36qxuN0xD68Ob19ur5YQ5cxI/4z0XeewWYaR41vK/4nZcxd 3x6QcNQeAtH8+Bix5t2h3pPXFoaDtlcVzsBNBFa1E6kBCADg4NOxTpBlckc6kKWH 1hEQW6rQRSZEajcqXDU8H/+Xkiq4OLkMIXL4MG8oEeJ2ilzge7PjFIB4Pc9x6NoN h96pk+su8mLt+2SibU786Ah+6GSaLmgRWqeVcJr+xBmWbkg3BGa+l+djYkzgEv6x FexNV9kYM85ofbUiGAIyFP6hpfa6YGJ4Q/wXYkEOUOHQYB5tQJDw8fzTL3x8KC+l RslGYJ8pAftMQbyPgYGrfRzmyzGpVMtTqxIlF/dZn3X9M04C711AX1PAtbAiK6nG BH5XE3B2NW2EGDQ29CKoszr6m200M6QBNr6rrw+Fx0Q9scSp7IP+fkALI/vgViOt /MqfABEBAAHCwoQEGAEKAA8FAla1E6kFCQ8JnAACGwwBKQkQyzr4j+HjKLrAXSAE GQEKAAYFAla1E6kACgkQjBmYXQi7uILUJAf/S/ngJT/VddsEzEw6gysVyaPMhb/z Y4hq+EgjYTYauwmWuKXLKGjZLJ3H9kU1/eC08qk2mz0D1KwvuY87Pl7/Ub9T2vTY om0MADGBOMhVOGZeq+Z1EKNgLcG/EMuuI0TtLWlEShbl4Zs5T8h4KWn9b0XOT/b1 3PpJW/e/n3QRxxcRsru2R9UyVqE8rqojxBnGeCyDM/dtSLLhL722JDtbjleFjfof +t+O3FqaaJPDARmJPfLnCOLgNO7nAwBVDtTSUvLeP097jvj+5Dv/qUilWd98sup4 t6MXWJqYnIKpmow6QKgtlUxkYyiWVSBphpoSM7Iku85LXUle3J+kQcY6TOTJD/4z 2cYC/S5rjvvalIGjeuI4shG+K7dRoht8vRkpSC2eUIe0fOjPutNoifbF/iRj71up JaizvcecVafRvu5moCev3drOXVF/htn/DxjPgAfwOuL6SPoXBWFPn4v4n/iZ+PSo j6R7ldUynZi0xaBJwkzFDri7H8g7tMTGtEC9Ye5tHgtLQbIEgJ/sdNYX9dGIVvlL ZV2AAtbECU+kKR8C6bbXDyJpa9yJE/yryUz2Yusz5VrahA/FSZmJeWJ5JAUctwIS HR8NxiIZ/X/ehNRPQbt3agme5AYRAM3PSpXC/h9TT55flAIDWUEO8OLAEnoHoxp0 lZr16u0zh7UhQM93Md4a3IQwQTqeQuZ5X4dPeNFzkeenkfW22kevSlKAitTnbV/F geUlR6F7VBH3trwnqVni5TE85UY1ihlTbpXsMEa4kAihte4EGlxrCu/Xz2hzJAkE jzyKh30/RoM8JqUjyjrR6GpbNBRuJr9kCiUy3LfeRTEHtBuPDlGT8McmsNvw7r0d bE2eIgpGCAiqgxTYexICkCzE7TYGWu/uFZyE6wMre0CYmbpsU/YpK3Lvc12SyULo X/W61fUyHe/R0HLn2e27l5fDmDFLl0u+hJlD1VBEzb2bJYyMEr/fCInCyxfxB8+5 FIFRr1lRxJutEJjbBKwVSSDWnD4LSH1oAVwmYLwjbM7ATQRWtROpAQgAuj67mtne wlL7yidop1UN/76k0g+U7+O/AyL9IX1VQuTYU6YkMlJM32k9KWDJQHfELewGKHR8 dlbzvjn6Pph1YseNeQhXl2Tjw+e+5hl0mGiG31mH6GNXqW88c/0KDgZK+K5XuU7Y fVvheCPnOljv8TxunX78m70o7CawKctUKazQ4FBjjAnxGVBCBKkMzXSVwrdYaMth NY0BmJfYegWMnvwXa9fgsuf2FChVwi1t395Y/CYoBwAXx7H3L8ICRLi2CXXGjQWH XmE7jzqtAdUrLsnIB86Bkc32YJCQXBCCTRdHYzO+a5vKlAN8AQlcrVGa3dNjQ1hK 0NGfQjOvsHP1pwARAQABwsKEBBgBCgAPBQJWtROpBQkPCZwAAhsiASkJEMs6+I/h 4yi6wF0gBBkBCgAGBQJWtROpAAoJEMHK4EeJnK0Qn6oH/jJ03hVELWKR3xzuxJyC nvAnlhpw5JGx2ON19enJaPvimenzfz5O4BKDLOQ+rxoeeBN4OVfwMf47UnvNr8Jt hgyHf9r/QvPJA1BDiMGMr27Ts8rxhs5R/1ikiViqu8jDhyh2QJr3mZZMkSJ3OKyR 4u//naWBGdvANOUwFI0fnMIvuQAveDr3hL9nD1AzbM+EernQ/qwdkpEplDdg9oKF KqlmYbiyP1u8MdtgqjkbTbNOxkSylMIXY7zDV/ia7OPAN64cy3q9XhhFtu3gXygy 2TIxmivPIofKbh8m2VQxT3wlLKSan3CG0QZ1l7MdPnlDGuj9OBzAabvYWqi0SuIF T4NRKhAAr4peRa9bENapPI73MqljkGsLdAKc7tlNhK42UYW/rY1XXRmUMVdUoJ8+ /+AonDhpa42if1T5qBtWYXcR1QWZ3QKsG++YM4mHNvNhGHYk0jCBRQ461S1NlwZL 6qLSwy6TioYbiG6HXcx6hwATe+2dEpdPzKL7J74IJCQaoMYHius7ttNHU0TfreWy JtNd6L0EN2LxJ13yzGyBImS7f+SEKDwN9GSSJi0oAlr+eNHdCPy5kdVWYilRqKbf uvdZkEHQmSCF1GpT2y2t+yeqiMHxpEEu1MMkUOMwPqtJnKqs5aohHBfcrVfAWlMQ 9GOr8zX8hrhAo1SE946Lapt+aVB2CbH//q21myK+m3NT+NlANxzA4XO3ZzVNofE2 p2uQzcHd2PEfw28uhTsCZbUattjAy5L1qBvkLS4Zo/bGD8iCGiqZLVubtMLjEVMg ycgtEMx5fl2tBeK+xp2fHim3eiCvgIyVizgXpAzVEs2FB6SsGtyymxaZpOGY3QUt eqbj823NhUkuFG7QXAz2W4Z88AgSIstaMcRA8v5H1esVVe1NyxAt82fnICow12pv Bkx4itma/FlbMX7W1dOywiAUJMNc1j+YbqZIzmaR4YX2dJxFs3x+eEHGvlaKHsoX HVyxl75S/iTac90KCKTj+j+lThPJu5m3W31KkMoFF2uAMf6nIso= =5/I3 -----END PGP PUBLIC KEY BLOCK----- </description>
-    </item>
-    <item>
-      <title>paste, an hour long project</title>
-      <link>http://sigmonsays.github.io/post/paste/</link>
-      <pubDate>Sun, 31 Jan 2016 10:58:55 -0800</pubDate>
-      <guid>http://sigmonsays.github.io/post/paste/</guid>
-      <description>I&amp;rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.
-It has always been bothersome to me that any paste, or &amp;ldquo;no paste&amp;rdquo; command line client has to be needlessly complex. Some i&amp;rsquo;ve tried to use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing more than curl.</description>
-    </item>
-    <item>
-      <title>git-watch</title>
-      <link>http://sigmonsays.github.io/post/git-watch/</link>
-      <pubDate>Sun, 03 Jan 2016 21:33:07 -0800</pubDate>
-      <guid>http://sigmonsays.github.io/post/git-watch/</guid>
-      <description>git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.
-git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either code (in git) or configuration.
-So here is a simple example which will automatically rebuild and restart a application when you git push (https://github.com/sigmonsays/git-watch/tree/master/examples/go)
-Below in git-watch.</description>
     </item>
     <item>
       <title>convenient cli tookit using python</title>
@@ -268,43 +186,11 @@ There is very little that the dockerfile actually supports beyond basic static d
 If dockerfile supported templates and variables, we could allow repetitive lines to be reduced to the bare minimum.</description>
     </item>
     <item>
-      <title>docker networking performance</title>
-      <link>http://sigmonsays.github.io/post/docker-networking-performance/</link>
-      <pubDate>Fri, 05 Sep 2014 07:33:28 -0700</pubDate>
-      <guid>http://sigmonsays.github.io/post/docker-networking-performance/</guid>
-      <description>While trying to determine the performance overhead of a simple docker container setup, I discovered several issues related to network performance.
-two issues I have encountered
-docker-proxy handles local network traffic when using the hosts bridge IP (or localhost) connection tracking overhead of NAT increases memory usage my setup
-I am using docker containers as an easy way to deploy backends on a host. I wish to use the hosts bridge IP as a backend to route requests from the load balancer.</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://sigmonsays.github.io/about/</link>
-      <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
-      <guid>http://sigmonsays.github.io/about/</guid>
-      <description>Start of another blog, developer focused, as a way to write about, keep track of and archive various technologies and trends.
-Hopefully this involves into something for now but mostly its a place to put random thought.</description>
-    </item>
-    <item>
-      <title>Contact</title>
-      <link>http://sigmonsays.github.io/contact/</link>
-      <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
-      <guid>http://sigmonsays.github.io/contact/</guid>
-      <description> place Description twitter @sigmonsays github @sigmonsays PGP my PGP key </description>
-    </item>
-    <item>
       <title>Sudo</title>
       <link>http://sigmonsays.github.io/sudo/</link>
       <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
       <guid>http://sigmonsays.github.io/sudo/</guid>
       <description> </description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://sigmonsays.github.io/post/post-2018-07-18/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://sigmonsays.github.io/post/post-2018-07-18/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>
