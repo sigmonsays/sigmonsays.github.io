@@ -7,7 +7,7 @@
     <title>sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="generator" content="Hugo 0.120.3">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -129,7 +129,7 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      
+       
     </div>
   </div>
 </div>
@@ -144,8 +144,11 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Link Description     https://landscape.cncf.io/ the CNCF landscape makes me want to cry    There is a index which lists all the old sections. The newest is at the top.
-Jan 2018    Link Description     https://github.com/lewish/asciiflow2 and http://asciiflow.com/ ascii art draw tool.   https://github.com/benhoyt/goawk awk fully implemented in go and passes &lsquo;the awk test&rsquo;    Oct 2016 gmx - similar to jmx but for go https://github.
+      Link Description https://landscape.cncf.io/ the CNCF landscape makes me want to cry There is a index which lists all the old sections. The newest is at the top.
+Jan 2018 Link Description https://github.com/lewish/asciiflow2 and http://asciiflow.com/ ascii art draw tool. https://github.com/benhoyt/goawk awk fully implemented in go and passes &rsquo;the awk test' Oct 2016 gmx - similar to jmx but for go https://github.com/davecheney/gmx
+hitless haproxy reload https://github.com/sorah/sandbox/tree/master/ruby/haproxy-master
+go jira https://github.com/Netflix-Skunkworks/go-jira
+I currently use this program in a very limited fashion for managing development workflow.
     </div>
   </div>
 </div>
@@ -162,7 +165,7 @@ Jan 2018    Link Description     https://github.com/lewish/asciiflow2 and http:/
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.
 Only specific networks are allowed.
-#!/bin/bash #set -x iptables -P INPUT ACCEPT iptables -P FORWARD ACCEPT iptables -P OUTPUT ACCEPT iptables -F INPUT #iptables -F FORWARD #iptables -F OUTPUT function clean_networks { grep -v ^# | awk '{print $1}' |grep -v ^$ } # Quick and dirty iptables firewall # We want to drop traffic for any open port if its not in the allowed list of IP addresses # function list_allowed_networks { # the 1918 subnets cat &lt;&lt; EOF | clean_networks 10.
+#!/bin/bash #set -x iptables -P INPUT ACCEPT iptables -P FORWARD ACCEPT iptables -P OUTPUT ACCEPT iptables -F INPUT #iptables -F FORWARD #iptables -F OUTPUT function clean_networks { grep -v ^# | awk &#39;{print $1}&#39; |grep -v ^$ } # Quick and dirty iptables firewall # We want to drop traffic for any open port if its not in the allowed list of IP addresses # function list_allowed_networks { # the 1918 subnets cat &lt;&lt; EOF | clean_networks 10.
     </div>
   </div>
 </div>

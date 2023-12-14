@@ -6,6 +6,7 @@ THEME = ananke
 #HUGO = $(HOME)/go/bin/hugo
 #HUGO = /usr/local/bin/hugo
 HUGO = ./bin/hugo
+HUGO = hugo
 
 #HUGO_URL = https://github.com/gohugoio/hugo/releases/download/v0.87.0/hugo_0.87.0_Linux-64bit.tar.gz
 HUGO_URL_BASE = https://github.com/gohugoio/hugo/releases/download
@@ -25,7 +26,9 @@ help:
 	#
 	#
 	# you likely want 'make p' (make publish)
-gen: $(HUGO)
+#gen: $(HUGO)
+
+gen:
 	@echo building site..
 	$(HUGO) -t $(THEME) -d ./docs
 	rsync -ar overlay/ docs/

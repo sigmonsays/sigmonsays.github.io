@@ -9,7 +9,7 @@
     <meta name="description" content="Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.
 Only specific networks are allowed.
 #!/bin/bash #set -x iptables -P INPUT ACCEPT iptables -P FORWARD ACCEPT iptables -P OUTPUT ACCEPT iptables -F INPUT #iptables -F FORWARD #iptables -F OUTPUT function clean_networks { grep -v ^# | awk &#39;{print $1}&#39; |grep -v ^$ } # Quick and dirty iptables firewall # We want to drop traffic for any open port if its not in the allowed list of IP addresses # function list_allowed_networks { # the 1918 subnets cat &lt;&lt; EOF | clean_networks 10.">
-    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="generator" content="Hugo 0.120.3">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -168,7 +168,7 @@ Only specific networks are allowed.
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.</p>
 <p>Only specific networks are allowed.</p>
-<pre><code>#!/bin/bash
+<pre tabindex="0"><code>#!/bin/bash
 #set -x
 
 iptables -P INPUT ACCEPT
@@ -180,7 +180,7 @@ iptables -F INPUT
 #iptables -F OUTPUT 
 
 function clean_networks {
-   grep -v ^# | awk '{print $1}' |grep -v ^$
+   grep -v ^# | awk &#39;{print $1}&#39; |grep -v ^$
 }
 
 # Quick and dirty iptables firewall
@@ -203,9 +203,9 @@ EOF
 
 function list_open_ports {
 	# ipv4
-	netstat -lntu |awk '/^tcp / {print $4}' |awk -F: '{print $2}'
+	netstat -lntu |awk &#39;/^tcp / {print $4}&#39; |awk -F: &#39;{print $2}&#39;
 	# ipv6
-	netstat -lntu |awk '/^tcp6 / {print $4}' |awk -F: '{print $4}'
+	netstat -lntu |awk &#39;/^tcp6 / {print $4}&#39; |awk -F: &#39;{print $4}&#39;
 }
 function list_ports {
 	list_open_ports
@@ -221,10 +221,10 @@ function list_networks {
 	fi
 
 	# All local addresses
-	ip addr | awk -F'[ /]+' '/inet / {print $3}'
+	ip addr | awk -F&#39;[ /]+&#39; &#39;/inet / {print $3}&#39;
 
 	# Let all your connected subnets in..
-	# ip addr | awk  '/inet / {print $2}'
+	# ip addr | awk  &#39;/inet / {print $2}&#39;
 }
 
 function prepare_iptables {
@@ -234,7 +234,7 @@ function prepare_iptables {
 		iptables -N drop_logged
 	fi
 	iptables -F drop_logged
-	iptables -A drop_logged -j LOG --log-prefix &quot;iptables-dropped: &quot; --log-level 4
+	iptables -A drop_logged -j LOG --log-prefix &#34;iptables-dropped: &#34; --log-level 4
 	iptables -A drop_logged -j DROP
 }
 
@@ -247,18 +247,15 @@ prepare_iptables
 
 list_networks | while read N
 do
-	echo &quot;netowrk $N&quot;
+	echo &#34;netowrk $N&#34;
         iptables -A INPUT -s $N -j ACCEPT
 done
 
 list_ports | while read P
 do
-	echo &quot;securing port $P&quot;
+	echo &#34;securing port $P&#34;
         iptables -A INPUT -p tcp --dport $P -j drop_logged
 done
-
-
-
 </code></pre><ul class="pa0">
   
    <li class="list">

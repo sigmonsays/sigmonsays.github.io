@@ -7,7 +7,7 @@
     <title>why use the go programming language? | sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors needed to operate on a workqueue. This daemon is actually still in produciton today =P">
-    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="generator" content="Hugo 0.120.3">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -201,7 +201,7 @@ to compile without libc entirely if you choose. Finally, if you avoid <strong>cg
 <p>Go has a interesting type system which removes the fundamentally flawed OOP features. OOP programmers often uses inheritenace when composition could be used instead.</p>
 <p><strong>composition</strong> means you combine objects together instead of searching a inheritence tree. I am not going into all the details here but here is the <a href="https://en.wikipedia.org/wiki/Composition_over_inheritance">wikipedia article on composition</a></p>
 <h1 id="language-grammer">Language Grammer</h1>
-<p>a language spec that is well defined <a href="https://golang.org/ref/spec,">https://golang.org/ref/spec,</a> short, and simple.</p>
+<p>a language spec that is well defined <a href="https://golang.org/ref/spec">https://golang.org/ref/spec</a>, short, and simple.</p>
 <p>Without a well defined language specification, none of the tooling would be possible. It also makes it easy to develop tools which parse code into AST (Abstract syntax tree) and manipulate it. Ie, write code which
 modifies other code. This was not very practical in other langauges (IMHO). The <code>go/ast</code> and <code>go/types</code> packages lowered the barrier of entry to write quick tools for manipulating go source code.</p>
 <h1 id="tooling">Tooling</h1>

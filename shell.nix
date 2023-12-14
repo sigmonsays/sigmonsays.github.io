@@ -1,8 +1,7 @@
 { pkgs ? import <nixpkgs> {} }:
 
-with pkgs;
-
-mkShell {
+with pkgs; mkShell {
   buildInputs = [
+        hugo
   ];
 }

@@ -19,6 +19,7 @@ _promo = [ "nopromo" ]
 - [Development Shells](#development-shells)
 - [Nix Cache](#nix-cache)
 - [Flakes](#flakes)
+- [Resources](#resources)
 
 <!-- markdown-toc end -->
 
@@ -155,10 +156,39 @@ iF the inputs result in a hash that's not in the cache, nix will build it from s
 
 # Flakes
 
-I havn't converted over to flakes yet but am just now (after a few months) starting to understand what their purpose is
-
 The main purpose of flakes is to have more control over the inputs used to install a package. For instance if your nixos configuration.nix
 has the stable channel and you try to take someone elses code that expects unstable channel, there could be problems. It might work but the
-two systems are not the exact same.
+two systems are not the exact same. Flakes solves this by enforcing the inputs. 
 
-`TODO` I'll update this section as I switch over
+To start using flakes you need to enable them in `/etc/nix/nix.conf` by adding the following
+
+     experimental-features = nix-command flakes
+
+Once enabled everything under the 'nix' command becomes available for use with flakes
+
+    # Get shell with gdu installed
+    nix shell 'nixpkgs#gdu'
+
+    # run gdu 
+    nix run 'nixpkgs#gdu'
+
+    # search unstable
+    nix search nixpkgs fzf
+
+    # Search a specific channel (23.05)
+    nix search github:NixOS/nixpkgs/nixos-23.05 fzf
+
+
+
+# Resources
+
+One of the biggest negatives of nix is it's lack and fragmentation of documenttation
+
+This section aims to collect the resources I found useful
+
+- search nixos packages https://search.nixos.org/packages
+- search nixos options https://search.nixos.org/options
+- search home-manager options https://mipmip.github.io/home-manager-option-search/
+- nix package versions - https://lazamar.co.uk/nix-versions/
+- awesome-nix - https://github.com/nix-community/awesome-nix
+
