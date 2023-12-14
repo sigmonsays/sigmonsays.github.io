@@ -7,7 +7,7 @@
     <title>sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="generator" content="Hugo 0.120.3">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -185,10 +185,11 @@ create a file in $HOME/.pythonstartup and cherry pick anything below that you fi
       Ever think about how much information google has collected about you?
 Apart from services there are additional things going on that you might not be aware of
 Table of Contents
- Data Collection Location Services Services Photos Phone Sensors Degoogle Resources  Data Collection Data collected is often uploaded to google servers
-  IMEI, hardware serial number, Wifi MAC address
-  AndroidID, Google Ad ID
-  [1] https://www.
+Data Collection Location Services Services Photos Phone Sensors Degoogle Resources Data Collection Data collected is often uploaded to google servers
+IMEI, hardware serial number, Wifi MAC address
+AndroidID, Google Ad ID
+[1] https://www.scss.tcd.ie/Doug.Leith/Android_privacy_report.pdf
+Location Services In addition to GPS tracking, there is a service that runs on android phones and looks at available wifi networks to determine your location.
     </div>
   </div>
 
@@ -208,14 +209,14 @@ Table of Contents
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      bolt - https://github.com/boltdb/bolt ledis - http://ledisdb.com/ tiedot - https://github.com/HouzuoGuo/tiedot cockroachdb - https://github.com/cockroachdb/cockroach  bolt pure go key-value datastore
+      bolt - https://github.com/boltdb/bolt ledis - http://ledisdb.com/ tiedot - https://github.com/HouzuoGuo/tiedot cockroachdb - https://github.com/cockroachdb/cockroach bolt pure go key-value datastore
 ledis redis like database written in go
 attractive to embed redis like features directly into your application which will reduce operational complexity.
 tiedot JSON document database
 cockrochdb A Scalable, Geo-Replicated, Transactional Datastore
 design document https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit
 feature summary
- ACID transactional semantics versioned values primary design goal is consistency and survivability aims to tolerate disk, server, rack and datacenter failures  related technologies
+ACID transactional semantics versioned values primary design goal is consistency and survivability aims to tolerate disk, server, rack and datacenter failures related technologies
     </div>
   </div>
 
@@ -235,8 +236,8 @@ feature summary
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      updates   Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
- Just another reason to do one thing well and not try to do too much. C&rsquo;mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread  &ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.
+      updates Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
+Just another reason to do one thing well and not try to do too much. C&rsquo;mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread &ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.
     </div>
   </div>
 
@@ -279,8 +280,8 @@ The build dependencies come from debian/control Build-Depends section. The packa
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       things I find that I wish docker supported
-dockerfile   store build context with the image
- provides ability to change original dockerfile for images you download saves dockerfile and other build artifacts similar in concept to a &ldquo;source package&rdquo;    support for variables
+dockerfile store build context with the image
+provides ability to change original dockerfile for images you download saves dockerfile and other build artifacts similar in concept to a &ldquo;source package&rdquo; support for variables
 There is very little that the dockerfile actually supports beyond basic static directives.
 If dockerfile supported templates and variables, we could allow repetitive lines to be reduced to the bare minimum.
     </div>
@@ -304,7 +305,7 @@ If dockerfile supported templates and variables, we could allow repetitive lines
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       While trying to determine the performance overhead of a simple docker container setup, I discovered several issues related to network performance.
 two issues I have encountered
- docker-proxy handles local network traffic when using the hosts bridge IP (or localhost) connection tracking overhead of NAT increases memory usage  my setup
+docker-proxy handles local network traffic when using the hosts bridge IP (or localhost) connection tracking overhead of NAT increases memory usage my setup
 I am using docker containers as an easy way to deploy backends on a host. I wish to use the hosts bridge IP as a backend to route requests from the load balancer.
     </div>
   </div>
@@ -340,13 +341,13 @@ I am using docker containers as an easy way to deploy backends on a host. I wish
         <a href="/post/" aria-label="Page 1" class="page-link" role="button">1</a>
       </li>
       <li class="page-item active">
-        <a href="#" aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
+        <a aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
       </li>
       <li class="page-item disabled">
-        <a href="#" aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item disabled">
-        <a href="#" aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
   </article>

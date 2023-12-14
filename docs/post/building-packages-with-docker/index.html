@@ -9,7 +9,7 @@
     <meta name="description" content="This is a simple idea I had while waiting for a build to complete.
 The background Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script takes a minimal base image tarball and installs all dependencies in it required to build your package.
 The build dependencies come from debian/control Build-Depends section. The package being built is a python application using virtualenv. A lot of the packages come from apt however.">
-    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="generator" content="Hugo 0.120.3">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -189,7 +189,7 @@ explain how the docker build works.</p>
 its a copy on write file system, this means providing a container with all build deps present is
 incredibly fast.</p>
 <p><strong>Dockerfile</strong></p>
-<pre><code>FROM ubuntu
+<pre tabindex="0"><code>FROM ubuntu
 RUN apt-get update \
    &amp;&amp; apt-get install -y dpkg-dev
 
@@ -204,12 +204,11 @@ RUN useradd packaging \
 USER packaging
 ADD build.sh /bin/build.sh
 
-ENTRYPOINT [ &quot;/bin/build.sh&quot; ]
-
+ENTRYPOINT [ &#34;/bin/build.sh&#34; ]
 </code></pre><p><strong>build.sh</strong></p>
-<pre><code>#!/bin/bash
+<pre tabindex="0"><code>#!/bin/bash
 
-echo &quot;[build.sh] $@&quot;
+echo &#34;[build.sh] $@&#34;
 
 set -x
 
@@ -220,7 +219,7 @@ cd package
 dpkg-buildpackage
 </code></pre><p>Then to invoke the build we stream the contents at a tar.gz into the container which streams
 it to disk and builds the package.</p>
-<pre><code>package_stream () 
+<pre tabindex="0"><code>package_stream () 
 { 
     git archive HEAD --format tar --prefix=package/ | gzip -9
 }
