@@ -191,4 +191,4 @@ This section aims to collect the resources I found useful
 - search home-manager options https://mipmip.github.io/home-manager-option-search/
 - nix package versions - https://lazamar.co.uk/nix-versions/
 - awesome-nix - https://github.com/nix-community/awesome-nix
-
+- mynixos - https://mynixos.com/
