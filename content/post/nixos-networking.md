@@ -31,5 +31,46 @@ documentation is pretty much missing
 
 nixos-rebuild switch does not always work. This is the first time the configuration was not applied
 
+# Working configuration
+
+The final configration that setup bridged networking for my host
+
+        # This network config uses sytemd networkd with a bridge
+        {
+        networking.hostName = "desktop3";
+        networking = {
+            useDHCP = false;
+            useNetworkd = true;
+        };
+        systemd.network = {
+            enable = true;
+            netdevs = {
+                "25-br0" = {
+                    netdevConfig = {
+                        Kind = "bridge";
+                        Name = "br0";
+                    };
+                };
+            };
+            networks = {
+                "30-br0" = {
+                    matchConfig.Name = "en*";
+                    networkConfig = {
+                        Bridge = "br0";
+                    };
+                };
+                "40-br0" = {
+                    DHCP = "yes";
+                    matchConfig.Name = "br0";
+                };
+            };
+        };
+
+        # Wait for any interface to become available, not for all
+        systemd.services."systemd-networkd-wait-online".serviceConfig.ExecStart = [
+            "" "${config.systemd.package}/lib/systemd/systemd-networkd-wait-online --any"
+        ];
+        }
+
 
 
