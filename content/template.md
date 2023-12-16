@@ -15,8 +15,16 @@ _promo = [ "nopromo" ]
 
 +++
 
-Contents
-- [Link Heading]({{< relref "#foo" >}})
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Common tags](#common-tags)
+- [bash cheatsheet development google hugo i3 keybase notes pgp pinterest](#bash-cheatsheet-development-google-hugo-i3-keybase-notes-pgp-pinterest)
+- [programming python rants rst2html seo shell systemd security template docker](#programming-python-rants-rst2html-seo-shell-systemd-security-template-docker)
+- [misc - catch all](#misc---catch-all)
+- [Heading](#heading)
+
+<!-- markdown-toc end -->
 
 
 # Heading

@@ -21,6 +21,7 @@ tags = [ "nix" ]
 - [Static Website](#static-website)
 - [nix-shell and shabang](#nix-shell-and-shabang)
 - [Emacs](#emacs)
+- [Save some of that garbage!](#save-some-of-that-garbage)
 - [References](#references)
 
 <!-- markdown-toc end -->
@@ -290,6 +291,13 @@ Since emacs is the editor i use (doom emacs to be specific) i figured it's worth
 
 in ~/.doom.d/init.el I have `:tools direnv` set which sets up `emacs-direnv` [3]. This allows various tools 
 like gopls and rust-analyzer to function properly.
+
+# hey gcroots, save some of that garbage!
+
+So it's worth mentioning that `use flake` saves build result in a hidden file where .envrc resides. This has the effect
+of protecting the shell contents from getting garbage collected. This is ideal imho as constantly having to re-download
+and setup a shell is annoying.
+
 
 # References
 
