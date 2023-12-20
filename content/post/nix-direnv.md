@@ -17,11 +17,10 @@ tags = [ "nix" ]
 - [Go development environment](#go-development-environment)
 - [Nix Shell and Flakes](#nix-shell-and-flakes)
 - [Audio / Video Transcoding tools](#audio--video-transcoding-tools)
-- [Photos and Videos ](#photos-and-videos)
+- [Photos and Videos](#photos-and-videos)
 - [Static Website](#static-website)
-- [nix-shell and shabang](#nix-shell-and-shabang)
 - [Emacs](#emacs)
-- [Save some of that garbage!](#save-some-of-that-garbage)
+- [hey gcroots, save some of that garbage!](#hey-gcroots-save-some-of-that-garbage)
 - [References](#references)
 
 <!-- markdown-toc end -->
@@ -257,32 +256,6 @@ This website is created using hugo, here is it's shell.nix
       ];
     }
 
-# nix-shell and shabang
-
-A feature I discovered recently is that nix-shell can be used as an interpreter
-
-    #!/usr/bin/env nix-shell
-    #!nix-shell -i bash -p bash htop
-
-    echo hello world
-    which htop
-
-It even works for python
-
-    #!/usr/bin/env nix-shell
-    #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor
-
-    # scale image by 50%
-    import sys, PIL.Image, ansicolor
-    path = sys.argv[1]
-    image = PIL.Image.open(path)
-    factor = 0.5
-    image = image.resize((round(image.width * factor), round(image.height * factor)))
-    path = path + ".s50.jpg"
-    image.save(path)
-    print(ansicolor.green(f"done {path}"))
-
-Discovered on the wiki page at https://nixos.wiki/wiki/Nix-shell_shebang
 
 # Emacs
 
