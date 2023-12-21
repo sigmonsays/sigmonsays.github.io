@@ -1,7 +1,7 @@
 +++
 date = "2023-12-20T06:07:08-07:00"
 draft = false
-title = "nix shell shabang"
+title = "nix tip: shell shabang"
 tags = [ "nix" ]
 
 +++
