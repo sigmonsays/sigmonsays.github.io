@@ -151,70 +151,71 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/post/nix-tip-nvd/" class="color-inherit dim link">
+            nix tip: nvd to see what is going to change
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          have you ever wanted to see what packages are going to change before updating them on nix?
+Well read on to find out how to do this with home-manager and nixos
+First, there is a few different ways i came across
+Table of Contents
+A naive approach nix store diff-closure nvd nix-diff A naive approach I wondered since everything is in the nix store, why not just diff it?
+So as an experiment I set off to do just that
+        </div>
+          <a href="/post/nix-tip-nvd/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/post/nix-tip-shabang/" class="color-inherit dim link">
+            nix tip: shell shabang
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          A feature I discovered recently is that nix-shell can be used as an interpreter
+#!/usr/bin/env nix-shell #!nix-shell -i bash -p bash htop echo hello world which htop It even works for python
+#!/usr/bin/env nix-shell #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor # scale image by 50% import sys, PIL.Image, ansicolor path = sys.argv[1] image = PIL.Image.open(path) factor = 0.5 image = image.resize((round(image.width * factor), round(image.height * factor))) path = path + &quot;.
+        </div>
+          <a href="/post/nix-tip-shabang/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/post/nix-direnv/" class="color-inherit dim link">
             nix-direnv
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
           Table of Contents
-direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website nix-shell and shabang Emacs References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
+direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website Emacs hey gcroots, save some of that garbage! References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
 direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd to a specific directory.
         </div>
           <a href="/post/nix-direnv/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/post/nix/" class="color-inherit dim link">
-            nix and nixos
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Table of Contents
-Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes Resources Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
-Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible
-with nix you can
-build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows+WSL nix cache (https://cachix.
-        </div>
-          <a href="/post/nix/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/post/dotbot/" class="color-inherit dim link">
-            dotbot
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Table of Contents
-why dotbot why dotbot is a tool to manage dot files. I wrote this tool after gettting tired of futzing around with the python dotbot from https://github.com/anishathalye/dotbot. Full disclosure I love this tool and it&rsquo;s the motivation for the development of my own dotbot.
-I had two main issues that were annoying to me. First, git submodules were a part of the bootstrap process. Second, I always needed some yaml dependancy installed.
-        </div>
-          <a href="/post/dotbot/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -231,6 +232,18 @@ I had two main issues that were annoying to me. First, git submodules were a par
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/post/nix/" class="link black dim">
+              nix and nixos
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/post/dotbot/" class="link black dim">
+              dotbot
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/post/emacs/" class="link black dim">
               My Emacs Kit
             </a>
@@ -239,18 +252,6 @@ I had two main issues that were annoying to me. First, git submodules were a par
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/post/trump/" class="link black dim">
               Trump
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/post/why-go/" class="link black dim">
-              why use the go programming language?
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/post/random-musings/" class="link black dim">
-              random musings
             </a>
           </h2>
         

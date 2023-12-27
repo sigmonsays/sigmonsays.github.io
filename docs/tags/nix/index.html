@@ -129,13 +129,54 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Post</span>
     <h1 class="f3 near-black">
+      <a href="/post/nix-tip-nvd/" class="link black dim">
+        nix tip: nvd to see what is going to change
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      have you ever wanted to see what packages are going to change before updating them on nix?
+Well read on to find out how to do this with home-manager and nixos
+First, there is a few different ways i came across
+Table of Contents
+A naive approach nix store diff-closure nvd nix-diff A naive approach I wondered since everything is in the nix store, why not just diff it?
+So as an experiment I set off to do just that
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Post</span>
+    <h1 class="f3 near-black">
+      <a href="/post/nix-tip-shabang/" class="link black dim">
+        nix tip: shell shabang
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      A feature I discovered recently is that nix-shell can be used as an interpreter
+#!/usr/bin/env nix-shell #!nix-shell -i bash -p bash htop echo hello world which htop It even works for python
+#!/usr/bin/env nix-shell #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor # scale image by 50% import sys, PIL.Image, ansicolor path = sys.argv[1] image = PIL.Image.open(path) factor = 0.5 image = image.resize((round(image.width * factor), round(image.height * factor))) path = path + &quot;.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Post</span>
+    <h1 class="f3 near-black">
       <a href="/post/nix-direnv/" class="link black dim">
         nix-direnv
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       Table of Contents
-direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website nix-shell and shabang Emacs References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
+direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website Emacs hey gcroots, save some of that garbage! References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
 direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd to a specific directory.
     </div>
   </div>

@@ -7,7 +7,7 @@
     <title>nix-direnv | sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Table of Contents
-direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website nix-shell and shabang Emacs References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
+direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website Emacs hey gcroots, save some of that garbage! References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
 direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd to a specific directory.">
     <meta name="generator" content="Hugo 0.120.3">
     
@@ -30,7 +30,7 @@ direnv is a nice tool to use which allows you to load the appropriate environmen
     
     <meta property="og:title" content="nix-direnv" />
 <meta property="og:description" content="Table of Contents
-direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website nix-shell and shabang Emacs References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
+direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website Emacs hey gcroots, save some of that garbage! References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
 direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd to a specific directory." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://sigmonsays.github.io/post/nix-direnv/" /><meta property="article:section" content="post" />
@@ -39,14 +39,14 @@ direnv is a nice tool to use which allows you to load the appropriate environmen
 
 <meta itemprop="name" content="nix-direnv">
 <meta itemprop="description" content="Table of Contents
-direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website nix-shell and shabang Emacs References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
+direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website Emacs hey gcroots, save some of that garbage! References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
 direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd to a specific directory."><meta itemprop="datePublished" content="2023-12-14T06:07:08-07:00" />
 <meta itemprop="dateModified" content="2023-12-14T06:07:08-07:00" />
-<meta itemprop="wordCount" content="905">
+<meta itemprop="wordCount" content="877">
 <meta itemprop="keywords" content="nix," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="nix-direnv"/>
 <meta name="twitter:description" content="Table of Contents
-direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website nix-shell and shabang Emacs References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
+direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website Emacs hey gcroots, save some of that garbage! References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
 direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd to a specific directory."/>
 
 	
@@ -176,10 +176,10 @@ direnv is a nice tool to use which allows you to load the appropriate environmen
 <li><a href="#go-development-environment">Go development environment</a></li>
 <li><a href="#nix-shell-and-flakes">Nix Shell and Flakes</a></li>
 <li><a href="#audio--video-transcoding-tools">Audio / Video Transcoding tools</a></li>
-<li><a href="#photos-and-videos">Photos and Videos </a></li>
+<li><a href="#photos-and-videos">Photos and Videos</a></li>
 <li><a href="#static-website">Static Website</a></li>
-<li><a href="#nix-shell-and-shabang">nix-shell and shabang</a></li>
 <li><a href="#emacs">Emacs</a></li>
+<li><a href="#hey-gcroots-save-some-of-that-garbage">hey gcroots, save some of that garbage!</a></li>
 <li><a href="#references">References</a></li>
 </ul>
 <!-- raw HTML omitted -->
@@ -363,33 +363,14 @@ with pkgs; mkShell {
   ];
 }
 </code></pre>
-<h1 id="nix-shell-and-shabang">nix-shell and shabang</h1>
-<p>A feature I discovered recently is that nix-shell can be used as an interpreter</p>
-<pre><code>#!/usr/bin/env nix-shell
-#!nix-shell -i bash -p bash htop
-
-echo hello world
-which htop
-</code></pre>
-<p>It even works for python</p>
-<pre><code>#!/usr/bin/env nix-shell
-#!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor
-
-# scale image by 50%
-import sys, PIL.Image, ansicolor
-path = sys.argv[1]
-image = PIL.Image.open(path)
-factor = 0.5
-image = image.resize((round(image.width * factor), round(image.height * factor)))
-path = path + &quot;.s50.jpg&quot;
-image.save(path)
-print(ansicolor.green(f&quot;done {path}&quot;))
-</code></pre>
-<p>Discovered on the wiki page at <a href="https://nixos.wiki/wiki/Nix-shell_shebang">https://nixos.wiki/wiki/Nix-shell_shebang</a></p>
 <h1 id="emacs">Emacs</h1>
 <p>Since emacs is the editor i use (doom emacs to be specific) i figured it&rsquo;s worth mentioning that I also use</p>
 <p>in ~/.doom.d/init.el I have <code>:tools direnv</code> set which sets up <code>emacs-direnv</code> [3]. This allows various tools
 like gopls and rust-analyzer to function properly.</p>
+<h1 id="hey-gcroots-save-some-of-that-garbage">hey gcroots, save some of that garbage!</h1>
+<p>So it&rsquo;s worth mentioning that <code>use flake</code> saves build result in a hidden file where .envrc resides. This has the effect
+of protecting the shell contents from getting garbage collected. This is ideal imho as constantly having to re-download
+and setup a shell is annoying.</p>
 <h1 id="references">References</h1>
 <ul>
 <li>[1] <a href="https://direnv.net/">https://direnv.net/</a></li>
