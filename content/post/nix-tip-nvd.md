@@ -108,6 +108,12 @@ Here is an example of running `make diff`
 
 Here we can see if I were to do a switch, 7 packages would be updated.
 
+Also here are some cool one liners
+
+On nixos you can diff the last 2 profiles. This can be used to 
+detect if a kernel update occured
+
+    nvd diff $(ls -d1v /nix/var/nix/profiles/system-*-link|tail -n 2)
 
 # nix store diff-closure
 
