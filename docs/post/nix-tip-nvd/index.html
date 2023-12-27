@@ -51,7 +51,7 @@ Table of Contents
 A naive approach nix store diff-closure nvd nix-diff A naive approach I wondered since everything is in the nix store, why not just diff it?
 So as an experiment I set off to do just that"><meta itemprop="datePublished" content="2023-12-27T06:07:08-07:00" />
 <meta itemprop="dateModified" content="2023-12-27T06:07:08-07:00" />
-<meta itemprop="wordCount" content="429">
+<meta itemprop="wordCount" content="463">
 <meta itemprop="keywords" content="nix," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="nix tip: nvd to see what is going to change"/>
 <meta name="twitter:description" content="have you ever wanted to see what packages are going to change before updating them on nix?
@@ -260,6 +260,11 @@ Version changes:
 Closure size: 2102 -&gt; 2102 (54 paths added, 54 paths removed, delta +0, disk usage +1.2MiB).
 </code></pre>
 <p>Here we can see if I were to do a switch, 7 packages would be updated.</p>
+<p>Also here are some cool one liners</p>
+<p>On nixos you can diff the last 2 profiles. This can be used to
+detect if a kernel update occured</p>
+<pre><code>nvd diff $(ls -d1v /nix/var/nix/profiles/system-*-link|tail -n 2)
+</code></pre>
 <h1 id="nix-store-diff-closure">nix store diff-closure</h1>
 <p>I have yet to explore this method but people demonstrated invocations here</p>
 <p><a href="https://www.reddit.com/r/NixOS/comments/x5i7nb/how_to_see_whats_been_updated_after_nix_flake/">https://www.reddit.com/r/NixOS/comments/x5i7nb/how_to_see_whats_been_updated_after_nix_flake/</a></p>
