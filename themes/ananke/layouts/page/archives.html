@@ -1,8 +1,7 @@
-
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
 <main class="content" role="main">
-    <div class="inner">
+    <div class="inner" style="padding: 3em;">
         {{ range (.Site.RegularPages.GroupByDate "2006") }}
             <h3>{{ .Key }}</h3>
 
@@ -18,5 +17,4 @@
         {{ end }}
     </div>
 </main>
-
 {{ end }}
