@@ -215,12 +215,5 @@ two issues I have encountered
 docker-proxy handles local network traffic when using the hosts bridge IP (or localhost) connection tracking overhead of NAT increases memory usage my setup
 I am using docker containers as an easy way to deploy backends on a host. I wish to use the hosts bridge IP as a backend to route requests from the load balancer.</description>
     </item>
-    <item>
-      <title></title>
-      <link>http://sigmonsays.github.io/post/post-2018-07-18/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://sigmonsays.github.io/post/post-2018-07-18/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
