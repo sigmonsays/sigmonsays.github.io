@@ -5,6 +5,13 @@ title = "sigmonsays"
 [menu]
 
 [[menu.main]]
+  identifier = 'archives'
+  name = 'archives '
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/archives/'
+  weight = -110
+
+[[menu.main]]
   identifier = 'projects'
   name = 'projects '
   pre = "<i class='fa fa-heart'></i>"

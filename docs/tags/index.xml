@@ -72,13 +72,6 @@
       <description></description>
     </item>
     <item>
-      <title>index</title>
-      <link>http://sigmonsays.github.io/tags/index/</link>
-      <pubDate>Sat, 02 Dec 2017 10:38:37 -0700</pubDate>
-      <guid>http://sigmonsays.github.io/tags/index/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>bash</title>
       <link>http://sigmonsays.github.io/tags/bash/</link>
       <pubDate>Fri, 01 Dec 2017 10:38:37 -0700</pubDate>
@@ -167,6 +160,13 @@
       <link>http://sigmonsays.github.io/tags/docker/</link>
       <pubDate>Thu, 11 Sep 2014 15:32:44 -0700</pubDate>
       <guid>http://sigmonsays.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>index</title>
+      <link>http://sigmonsays.github.io/tags/index/</link>
+      <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
+      <guid>http://sigmonsays.github.io/tags/index/</guid>
       <description></description>
     </item>
   </channel>

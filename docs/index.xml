@@ -6,8 +6,15 @@
     <description>Recent content on sigmonsays</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Dec 2023 06:07:08 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 27 Dec 2023 15:45:41 -0800</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archives</title>
+      <link>http://sigmonsays.github.io/post/archives/</link>
+      <pubDate>Wed, 27 Dec 2023 15:45:41 -0800</pubDate>
+      <guid>http://sigmonsays.github.io/post/archives/</guid>
+      <description></description>
+    </item>
     <item>
       <title>nix tip: nvd to see what is going to change</title>
       <link>http://sigmonsays.github.io/post/nix-tip-nvd/</link>
@@ -94,13 +101,6 @@ Github page - https://github.com/sigmonsays/screenshot/blob/master/README.md
 The point of this post is to demonstrate how to setup screenshot and how to use it to achieve a few things
 Installation
 git clone https://github.com/sigmonsays/screenshot.git sudo apt-get install -y xclip imagemagick cd screenshot sudo pip install .</description>
-    </item>
-    <item>
-      <title>Archive</title>
-      <link>http://sigmonsays.github.io/archive/</link>
-      <pubDate>Sat, 02 Dec 2017 10:38:37 -0700</pubDate>
-      <guid>http://sigmonsays.github.io/archive/</guid>
-      <description>All Pages</description>
     </item>
     <item>
       <title>bash</title>
@@ -313,7 +313,8 @@ I am using docker containers as an easy way to deploy backends on a host. I wish
       <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
       <guid>http://sigmonsays.github.io/about/</guid>
       <description>Start of another blog, developer focused, as a way to write about, keep track of and archive various technologies and trends.
-Hopefully this involves into something for now but mostly its a place to put random thought.</description>
+Hopefully this involves into something for now but mostly its a place to put random thought.
+This blog was started in 2014 and has continued to receive updates all the way up until the end of 2023.</description>
     </item>
     <item>
       <title>Contact</title>
