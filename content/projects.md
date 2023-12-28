@@ -24,10 +24,10 @@ There is a section on [bash scripting]({{< relref "bash.md" >}})
 
 # Projects
 
-[ Paste ]({{< relref "paste.md" >}})
+[ Paste ]({{< relref "post/paste.md" >}})
 An hour long project where I wrote a paste server and shell script client
 
-[ Screenshot ]({{< relref "screenshot.md" >}})
+[ Screenshot ]({{< relref "post/screenshot.md" >}})
 python script for taking screenshots and uploading them to a cloud storage provider. [github](https://github.com/sigmonsays/screenshot)
 
 [ git-watch ](https://github.com/sigmonsays/git-watch)

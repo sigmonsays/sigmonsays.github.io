@@ -134,6 +134,51 @@
             <div class="mb3 pa4 mid-gray overflow-hidden">
     
       <div class="f6">
+        October 16, 2016
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/random-musings/" class="link black dim">
+        random musings
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Would you rather fight 100 duck sized horses or one horse sized duck? Bill Murray weights in https://www.youtube.com/watch?v=THUGHEJjjGc
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        September 20, 2016
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/golang-faq/" class="link black dim">
+        golang FAQ
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Sections
+Network Programming in go Installing golang tools Errors are values Network programming in Go http://whispering-gophers.appspot.com/talk.slide#1
+installing golang tools is there any way i could install my go binaries wherever i want using go tools?
+answer
+typical solution is to install tools in a different GOPATH
+export GOPATH=&quot;$HOME/go&quot; export PATH=&quot;$GOPATH/bin:$PATH&quot; go get -u golang.org/x/tools/cmd/goimports The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
         April 11, 2016
       </div>
     
@@ -170,6 +215,27 @@ The problem
 the goal of this program is to find the shortest number of stickers used to make a another word given that you have thousands of stickers
 for instance, with the word &ldquo;WPENGINE&rdquo; printed on them to make for example &ldquo;WWW&rdquo; would take 3 and another example is &ldquo;WINE&rdquo; would take 1.
 The programs logic is really quite literal and was enjoyable to write.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        February 9, 2016
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/enlightenment/" class="link black dim">
+        enlightenment
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Update: August 2019 I have switched to i3wm (for some time now) exclusively due to its speed and lightweight. I&rsquo;ll have to write a post about that experience some time.
+e20 enlightenment has been my window manager of choice for a very long time maintly because of its speed. I used to run window maker and then fluxbox before I made the switch to enlightenment (0.16 at the time iirc).
     </div>
   </div>
 
@@ -290,73 +356,6 @@ cockrochdb A Scalable, Geo-Replicated, Transactional Datastore
 design document https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit
 feature summary
 ACID transactional semantics versioned values primary design goal is consistency and survivability aims to tolerate disk, server, rack and datacenter failures related technologies
-    </div>
-  </div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        September 22, 2014
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/ban-systemd/" class="link black dim">
-        ban systemd
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      updates Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
-Just another reason to do one thing well and not try to do too much. C&rsquo;mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread &ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.
-    </div>
-  </div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        September 11, 2014
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/building-packages-with-docker/" class="link black dim">
-        building packages with docker
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This is a simple idea I had while waiting for a build to complete.
-The background Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script takes a minimal base image tarball and installs all dependencies in it required to build your package.
-The build dependencies come from debian/control Build-Depends section. The package being built is a python application using virtualenv. A lot of the packages come from apt however.
-    </div>
-  </div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        September 7, 2014
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/docker-wishlist/" class="link black dim">
-        docker wishlist
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      things I find that I wish docker supported
-dockerfile store build context with the image
-provides ability to change original dockerfile for images you download saves dockerfile and other build artifacts similar in concept to a &ldquo;source package&rdquo; support for variables
-There is very little that the dockerfile actually supports beyond basic static directives.
-If dockerfile supported templates and variables, we could allow repetitive lines to be reduced to the bare minimum.
     </div>
   </div>
 

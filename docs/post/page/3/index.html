@@ -134,6 +134,73 @@
             <div class="mb3 pa4 mid-gray overflow-hidden">
     
       <div class="f6">
+        September 22, 2014
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/ban-systemd/" class="link black dim">
+        ban systemd
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      updates Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
+Just another reason to do one thing well and not try to do too much. C&rsquo;mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread &ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        September 11, 2014
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/building-packages-with-docker/" class="link black dim">
+        building packages with docker
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      This is a simple idea I had while waiting for a build to complete.
+The background Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script takes a minimal base image tarball and installs all dependencies in it required to build your package.
+The build dependencies come from debian/control Build-Depends section. The package being built is a python application using virtualenv. A lot of the packages come from apt however.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        September 7, 2014
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/docker-wishlist/" class="link black dim">
+        docker wishlist
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      things I find that I wish docker supported
+dockerfile store build context with the image
+provides ability to change original dockerfile for images you download saves dockerfile and other build artifacts similar in concept to a &ldquo;source package&rdquo; support for variables
+There is very little that the dockerfile actually supports beyond basic static directives.
+If dockerfile supported templates and variables, we could allow repetitive lines to be reduced to the bare minimum.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
         September 5, 2014
       </div>
     
@@ -147,6 +214,26 @@
 two issues I have encountered
 docker-proxy handles local network traffic when using the hosts bridge IP (or localhost) connection tracking overhead of NAT increases memory usage my setup
 I am using docker containers as an easy way to deploy backends on a host. I wish to use the hosts bridge IP as a backend to route requests from the load balancer.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        September 2, 2014
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/sudo/" class="link black dim">
+        Sudo
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       
     </div>
   </div>
 

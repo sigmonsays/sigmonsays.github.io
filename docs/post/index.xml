@@ -77,6 +77,25 @@ I do not put a ton of effort into editors, rather I spend a chunk of time interm
 trump will rip off anyone even if he says he&amp;rsquo;ll pay https://www.independent.co.uk/news/world/americas/i-sold-trump-100000-worth-of-pianos-then-he-stiffed-me-a7335951.html</description>
     </item>
     <item>
+      <title>Pinterest invades google</title>
+      <link>http://sigmonsays.github.io/post/pinterest-sucks/</link>
+      <pubDate>Sun, 18 Mar 2018 10:38:37 -0700</pubDate>
+      <guid>http://sigmonsays.github.io/post/pinterest-sucks/</guid>
+      <description>Pinterest is awful.
+This has been growing for years. Here is the typical situation I think more people run into than you think. When you are looking for an image on google image search and find what you are looking for by thumbnail, and click through just to be taken to pinterest.com. Once you land here, you do not see any fragment of what you came for. Instead, you are confronted with a sign up page.</description>
+    </item>
+    <item>
+      <title>screenshot</title>
+      <link>http://sigmonsays.github.io/post/screenshot/</link>
+      <pubDate>Wed, 06 Dec 2017 13:01:02 -0700</pubDate>
+      <guid>http://sigmonsays.github.io/post/screenshot/</guid>
+      <description>Screenshot is a simple python script that has evolved over time. It started out as a shell script which called import -window root screenshot.png and has evolved into a full featured application.
+Github page - https://github.com/sigmonsays/screenshot/blob/master/README.md
+The point of this post is to demonstrate how to setup screenshot and how to use it to achieve a few things
+Installation
+git clone https://github.com/sigmonsays/screenshot.git sudo apt-get install -y xclip imagemagick cd screenshot sudo pip install .</description>
+    </item>
+    <item>
       <title>why use the go programming language?</title>
       <link>http://sigmonsays.github.io/post/why-go/</link>
       <pubDate>Thu, 16 Nov 2017 10:27:27 -0800</pubDate>
@@ -121,6 +140,14 @@ The problem
 the goal of this program is to find the shortest number of stickers used to make a another word given that you have thousands of stickers
 for instance, with the word &amp;ldquo;WPENGINE&amp;rdquo; printed on them to make for example &amp;ldquo;WWW&amp;rdquo; would take 3 and another example is &amp;ldquo;WINE&amp;rdquo; would take 1.
 The programs logic is really quite literal and was enjoyable to write.</description>
+    </item>
+    <item>
+      <title>enlightenment</title>
+      <link>http://sigmonsays.github.io/post/enlightenment/</link>
+      <pubDate>Tue, 09 Feb 2016 17:10:00 -0800</pubDate>
+      <guid>http://sigmonsays.github.io/post/enlightenment/</guid>
+      <description>Update: August 2019 I have switched to i3wm (for some time now) exclusively due to its speed and lightweight. I&amp;rsquo;ll have to write a post about that experience some time.
+e20 enlightenment has been my window manager of choice for a very long time maintly because of its speed. I used to run window maker and then fluxbox before I made the switch to enlightenment (0.16 at the time iirc).</description>
     </item>
     <item>
       <title>paste, an hour long project</title>
@@ -214,6 +241,13 @@ If dockerfile supported templates and variables, we could allow repetitive lines
 two issues I have encountered
 docker-proxy handles local network traffic when using the hosts bridge IP (or localhost) connection tracking overhead of NAT increases memory usage my setup
 I am using docker containers as an easy way to deploy backends on a host. I wish to use the hosts bridge IP as a backend to route requests from the load balancer.</description>
+    </item>
+    <item>
+      <title>Sudo</title>
+      <link>http://sigmonsays.github.io/post/sudo/</link>
+      <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
+      <guid>http://sigmonsays.github.io/post/sudo/</guid>
+      <description> </description>
     </item>
   </channel>
 </rss>

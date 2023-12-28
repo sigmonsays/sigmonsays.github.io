@@ -7,4 +7,6 @@ new post
 
 # Ideas
 
+- write about switching from enlightenment to i3 window manager
+
 - write about something in your dotfiles, ~/sig-home

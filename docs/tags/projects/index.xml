@@ -19,9 +19,9 @@ I had two main issues that were annoying to me. First, git submodules were a par
     </item>
     <item>
       <title>screenshot</title>
-      <link>http://sigmonsays.github.io/screenshot/</link>
+      <link>http://sigmonsays.github.io/post/screenshot/</link>
       <pubDate>Wed, 06 Dec 2017 13:01:02 -0700</pubDate>
-      <guid>http://sigmonsays.github.io/screenshot/</guid>
+      <guid>http://sigmonsays.github.io/post/screenshot/</guid>
       <description>Screenshot is a simple python script that has evolved over time. It started out as a shell script which called import -window root screenshot.png and has evolved into a full featured application.
 Github page - https://github.com/sigmonsays/screenshot/blob/master/README.md
 The point of this post is to demonstrate how to setup screenshot and how to use it to achieve a few things
