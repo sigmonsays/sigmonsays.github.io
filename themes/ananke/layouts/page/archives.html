@@ -9,8 +9,7 @@
                 {{ range (where .Pages "Type" "post") }}
                     <li>
                         {{ .PublishDate.Format "02 Jan" }}
-                        -
-                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        - <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                     </li>
                 {{ end }}
             </ul>
