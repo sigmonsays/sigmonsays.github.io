@@ -7,14 +7,35 @@ promo = "nopromo"
 
 +++
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [2023](#2023)
+- [Jan 2018](#jan-2018)
+- [Oct 2016](#oct-2016)
+    - [hitless haproxy reload](#hitless-haproxy-reload)
+    - [go jira](#go-jira)
+    - [http2 keylog](#http2-keylog)
+    - [xo](#xo)
+    - [teleport](#teleport)
+    - [sftp server library in go](#sftp-server-library-in-go)
+    - [toasteroid](#toasteroid)
+    - [httpcache](#httpcache)
+- [Feb 2016](#feb-2016)
+- [Jan 2016](#jan-2016)
+- [Nov 2015](#nov-2015)
+- [Jan 2015](#jan-2015)
+- [Index](#index)
+
+<!-- markdown-toc end -->
+
+# Feb 2019
+
 
 | Link                       | Description                             |
 | ---                        | ---                                     |
 | https://landscape.cncf.io/ | the CNCF landscape makes me want to cry |
 
-
-
-There is a [index](#index) which lists all the old sections. The newest is at the top.
 
 # Jan 2018
 
@@ -165,22 +186,3 @@ https://github.com/gregjones/httpcache
 - Rudder - Software Defined Networks - https://github.com/coreos/rudder 
 
 
-# Index
-
-| Section                                     | Description                                                              |
-| ---                                         | ---                                                                      |
-| [Jan 2018]({{< ref "#jan-2018" >}})         |                                                                          |
-| [October 2016]({{< ref "#oct-2016" >}})     |                                                                          |
-|                                             | [haproxy hitless reload]({{< relref "#hitless-haproxy-reload" >}})       |
-| [Feb 2016]({{< relref "#feb-2016" >}})      |                                                                          |
-| [Jan 2016]({{< relref "#jan-2016" >}})      |                                                                          |
-| [November 2015]({{< relref "#nov-2015" >}}) |                                                                          |
-|                                             | [go jira]({{< relref "#go-jira" >}})                                     |
-| [Jan 2015]({{< relref "#jan-2015" >}})      |                                                                          |
-| Unsorted                                    |                                                                          |
-|                                             | [xo]({{< relref "#xo" >}})                                               |
-|                                             | [teleport]({{< relref "#teleport" >}}) ssh server                        |
-|                                             | [sftp server library in go]({{< relref "#sftp-server-library-in-go" >}}) |
-|                                             | [toasteroid]({{< relref "#toasteroid" >}})                               |
-|                                             | [httpcache]({{< relref "#httpcache" >}})                                 |
-|                                             |                                                                          |
