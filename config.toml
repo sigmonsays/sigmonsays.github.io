@@ -15,7 +15,7 @@ title = "sigmonsays"
   identifier = 'projects'
   name = 'projects '
   pre = "<i class='fa fa-heart'></i>"
-  url = '/tags/projects/'
+  url = '/projects/'
   weight = 20
 
 [[menu.main]]

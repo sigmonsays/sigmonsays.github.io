@@ -10,15 +10,15 @@ new post
 - write about switching from enlightenment to i3 window manager
 
 - write about a github project
-  - [x] screenshot2
-  - [ ] instructd
-  - [ ] git-caddy
-  - [x] dotbot
-  - [ ] picman
-  - [ ] findfile
-  - [ ] graphspace
-  - [x] paste
   - [ ] dns-router
+  - [ ] findfile
+  - [ ] git-caddy
+  - [ ] graphspace
+  - [ ] instructd
+  - [ ] picman
   - [ ] voyager
+  - [x] dotbot
+  - [x] paste
+  - [x] screenshot2
 
 - write about something in your dotfiles, ~/sig-home
