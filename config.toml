@@ -5,36 +5,36 @@ title = "sigmonsays"
 [menu]
 
 [[menu.main]]
-  identifier = 'archives'
-  name = 'archives '
+  identifier = 'home'
+  name = 'home '
   pre = "<i class='fa fa-heart'></i>"
-  url = '/archives/'
-  weight = -110
+  url = '/'
+  weight = 5
 
 [[menu.main]]
   identifier = 'projects'
   name = 'projects '
   pre = "<i class='fa fa-heart'></i>"
   url = '/tags/projects/'
-  weight = -110
+  weight = 20
 
 [[menu.main]]
   identifier = 'misc'
   name = 'misc '
   pre = "<i class='fa fa-heart'></i>"
   url = '/tags/misc/'
-  weight = -110
+  weight = 30
+
+[[menu.main]]
+  identifier = 'archives'
+  name = 'archives '
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/archives/'
+  weight = 40
 
 [[menu.main]]
   identifier = 'about'
   name = 'about '
   pre = "<i class='fa fa-heart'></i>"
   url = '/about/'
-  weight = -110
-
-[[menu.main]]
-  identifier = 'index'
-  name = 'index '
-  pre = "<i class='fa fa-heart'></i>"
-  url = '/'
-  weight = -110
+  weight = 50
