@@ -22,6 +22,8 @@ I maintain a page of [ Interesting Tech ]({{< relref "interesting-tech.md" >}}) 
 
 There is a section on [bash scripting]({{< relref "bash.md" >}})
 
+Also look at any page with the [projects](/tags/projects) tag
+
 # Projects
 
 [ Paste ]({{< relref "post/paste.md" >}})
