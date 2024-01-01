@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>convenient cli tookit using python | sigmonsays</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="python is a incredibly useful language and has a powerful type system which can be pretty convenient. I&rsquo;ve written python for many years now and when I need a quick tool, most the time I write it in python.
+These tools have built up over time and i&rsquo;ve been collecting them organically into a python startup file as a set of libraries and functions.
+create a file in $HOME/.pythonstartup and cherry pick anything below that you find useful.">
+    <meta name="generator" content="Hugo 0.120.3">
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="convenient cli tookit using python" />
+<meta property="og:description" content="python is a incredibly useful language and has a powerful type system which can be pretty convenient. I&rsquo;ve written python for many years now and when I need a quick tool, most the time I write it in python.
+These tools have built up over time and i&rsquo;ve been collecting them organically into a python startup file as a set of libraries and functions.
+create a file in $HOME/.pythonstartup and cherry pick anything below that you find useful." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://sigmonsays.github.io/post/pythonstartup/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-02-03T11:59:36-08:00" />
+<meta property="article:modified_time" content="2015-02-03T11:59:36-08:00" />
+
+<meta itemprop="name" content="convenient cli tookit using python">
+<meta itemprop="description" content="python is a incredibly useful language and has a powerful type system which can be pretty convenient. I&rsquo;ve written python for many years now and when I need a quick tool, most the time I write it in python.
+These tools have built up over time and i&rsquo;ve been collecting them organically into a python startup file as a set of libraries and functions.
+create a file in $HOME/.pythonstartup and cherry pick anything below that you find useful."><meta itemprop="datePublished" content="2015-02-03T11:59:36-08:00" />
+<meta itemprop="dateModified" content="2015-02-03T11:59:36-08:00" />
+<meta itemprop="wordCount" content="892">
+<meta itemprop="keywords" content="programming,python,misc," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="convenient cli tookit using python"/>
+<meta name="twitter:description" content="python is a incredibly useful language and has a powerful type system which can be pretty convenient. I&rsquo;ve written python for many years now and when I need a quick tool, most the time I write it in python.
+These tools have built up over time and i&rsquo;ve been collecting them organically into a python startup file as a set of libraries and functions.
+create a file in $HOME/.pythonstartup and cherry pick anything below that you find useful."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="home  page">
+              home 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/projects/" title="projects  page">
+              projects 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/misc/" title="misc  page">
+              misc 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/archives/" title="archives  page">
+              archives 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="about  page">
+              about 
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=http://sigmonsays.github.io/post/pythonstartup/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=http://sigmonsays.github.io/post/pythonstartup/&amp;text=convenient%20cli%20tookit%20using%20python" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://sigmonsays.github.io/post/pythonstartup/&amp;title=convenient%20cli%20tookit%20using%20python" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">convenient cli tookit using python</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-02-03T11:59:36-08:00">February 3, 2015</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>python is a incredibly useful language and has a powerful type system which
+can be pretty convenient. I&rsquo;ve written python for many years now and when
+I need a quick tool, most the time I write it in python.</p>
+<p>These tools have built up over time and i&rsquo;ve been collecting them organically
+into a python startup file as a set of libraries and functions.</p>
+<p>create a file in $HOME/<strong>.pythonstartup</strong> and cherry pick anything below that you find
+useful.</p>
+<p>The code below is missing the imports used.. instead copy the text from the imports section</p>
+<h2 id="tab-completion-and-history">tab completion and history</h2>
+<pre><code>  # Tab completion
+  import rlcompleter
+  import readline
+  readline.parse_and_bind(&quot;tab: complete&quot;)
+
+  # History
+  histfile = os.path.join(os.path.expanduser(&quot;~&quot;), &quot;.pyhist&quot;)
+  try:
+      readline.read_history_file(histfile)
+  except IOError:
+      pass
+  atexit.register(readline.write_history_file, histfile)
+  del histfile
+</code></pre>
+<h2 id="imports">imports</h2>
+<p>i&rsquo;m going to just drop a list of imports used. I&rsquo;ll let you
+sort out which ones are unused with a linter (pyflakes peraps?).</p>
+<pre><code>  import os
+  import sys
+  import json
+  import time
+  import atexit
+  import urllib
+  import urlparse
+  import uuid
+  import hashlib
+  import hmac
+  import base64
+  import binascii
+  import struct
+  import os
+  from urllib import quote_plus,unquote,quote
+</code></pre>
+<h2 id="custom-prompt-and-line-counter">custom prompt and line counter</h2>
+<pre><code># use a custom prompt
+class LineCounter(object):
+    def __init__(self):
+        self.count = 0
+    def __str__(self):
+        self.count += 1
+        return '&gt;&gt;&gt; '
+line = LineCounter()
+sys.ps1 = line
+</code></pre>
+<p>this makes it possible to interact with the line object like this and whatever you return from <strong>str</strong> will be your prompt.</p>
+<pre><code>&gt;&gt;&gt; line.count
+6
+</code></pre>
+<h2 id="handy-string-functions">handy string functions</h2>
+<pre><code>  def safe_str(s):
+      try:
+          return str(s)
+      except UnicodeEncodeError:
+          return unicode(s).encode('utf-8')
+
+  quote = lambda s: urllib.quote(s)
+  unquote = lambda s: urllib.unquote(s)
+</code></pre>
+<h2 id="file-size-utilities">file size utilities</h2>
+<p>format bytes as a human printable form</p>
+<pre><code>  def formatSize(bytes, base=1024, precision=2):
+      units = [ 'b', 'kb', 'mb', 'gb', 'tb', 'pb', 'eb', 'xb', 'yb' ]
+      nunits = len(units)
+      for n in xrange(nunits, -1, -1):
+          if bytes &gt; base ** n:
+              break
+      v = round(float(bytes) / (base ** n), precision)
+      return (v, units[n])
+</code></pre>
+<p>convert bytes between units</p>
+<pre><code>  class ConvertSize:
+     def __init__(self, base=1024):
+        B = 1
+        KB = B * base
+        MB = KB * base
+        GB = MB * base
+        TB = GB * base
+        PB = TB * base
+        EB = PB * base
+        ZB = EB * base
+        YB = ZB * base
+        base = base
+        _sym = 'B KB MB GB TB PB EB ZB YB'.split()
+        self.__dict__.update(locals())
+
+     def _install(self, units, g):
+        for n, unit in enumerate(units.split()):
+           g[unit]=getattr(self, '_'+self._sym[n])
+     def _B(self, v):  return v * self.B
+     def _KB(self, v): return v * self.KB
+     def _MB(self, v): return v * self.MB
+     def _GB(self, v): return v * self.GB
+     def _TB(self, v): return v * self.TB
+     def _PB(self, v): return v * self.PB
+     def _EB(self, v): return v * self.EB
+     def _ZB(self, v): return v * self.ZB
+     def _YB(self, v): return v * self.YB
+
+  units = 'byte kilobyte megabyte gigabyte terabyte petabyte exabyte zettabyte yottabyte'
+  ConvertSize(1000)._install(units, globals())
+
+  units = 'bit kibibyte mebibyte gibibyte tebibyte pebibyte exbibyte zebibyte yobibyte'
+  ConvertSize(1024)._install(units, globals())
+</code></pre>
+<h2 id="time-utilities">time utilities</h2>
+<pre><code>  def formatTime(s, legend = [  'd', 'h', 'm', 's' ]):
+      units = [  86400, 3600, 60, 1 ]
+      r = s
+      ret = []
+      for u, l in zip(units, legend):
+          if r &gt;= u:
+              ret.append(&quot;%d%s&quot; % (r / u, l))
+              r -= u * int(r / u)
+          if r == 0:
+              break
+      if len(ret) == 0:
+          return '0s'
+      return &quot;&quot;.join(ret)
+
+  class ConvertTimeUtil:
+     &quot;&quot;&quot;
+     convert time tool expected to be used in interactive cli
+     everything is stored in nanoseconds internally
+     then converted to the appropriate format on output in the ConvertTimeTo class
+
+     picosecond          1,000,000,000,000     one trillionth of a second.    10 ^ -9
+     nanosecond          1,000,000,000         one billionth of a second.    10 ^ -9
+     microsecond         1,000,000             one millionth of a second.    10 ^ -6
+     millisecond         1,000                 one thousandth of a second.   10 ^ -3
+
+     &gt;&gt;&gt; ConvertTime.nanoseconds(6606999).to_seconds()
+     0.006606999
+
+     &quot;&quot;&quot;
+     Nanosecond  = 1
+     Microsecond          = 1000 * Nanosecond
+     Millisecond          = 1000 * Microsecond
+     Second               = 1000 * Millisecond
+     Minute               = 60 * Second
+     Hour                 = 60 * Minute
+     Day                  = 24 * Hour
+
+     def nanoseconds(self, v): return ConvertTimeTo(v)
+     def microseconds(self, v): return ConvertTimeTo(v * self.Microsecond)
+     def milliseconds(self, v): return ConvertTimeTo(v * self.Millisecond)
+     def seconds(self, v): return ConvertTimeTo(v * self.Second)
+     def minutes(self, v): return ConvertTimeTo(v * self.Minute)
+     def hours(self, v): return ConvertTimeTo(v * self.Hour)
+     def days(self, v): return ConvertTimeTo(v * self.Day)
+
+  class ConvertTimeTo:
+     def __init__(self, v):
+        self.v = float(v)
+     def to_nanoseconds(self): return self.v
+     def to_microseconds(self): return self.v / ConvertTimeUtil.Microsecond
+     def to_milliseconds(self): return self.v / ConvertTimeUtil.Millisecond
+     def to_seconds(self): return self.v / ConvertTimeUtil.Second
+     def to_minutes(self): return self.v / ConvertTimeUtil.Minute
+     def to_hours(self): return self.v / ConvertTimeUtil.Hour
+     def to_days(self): return self.v / ConvertTimeUtil.Day
+
+     def __repr__(self):
+        return &quot;&lt;%s v=%s&gt;&quot; % (self.__class__.__name__, self.v)
+
+  ConvertTime = ConvertTimeUtil()
+
+  nanoseconds = ConvertTime.nanoseconds
+  microseconds = ConvertTime.microseconds
+  milliseconds = ConvertTime.milliseconds
+  seconds = ConvertTime.seconds
+  minutes = ConvertTime.minutes
+  hours = ConvertTime.hours
+  days = ConvertTime.days
+</code></pre>
+<h2 id="misc-utilities">misc utilities</h2>
+<pre><code>  def to_hex(t, nbytes):
+      &quot;Format text t as a sequence of nbyte long values separated by spaces.&quot;
+      chars_per_item = nbytes * 2
+      hex_version = binascii.hexlify(t)
+      num_chunks = len(hex_version) / chars_per_item
+      def chunkify():
+          for start in xrange(0, len(hex_version), chars_per_item):
+              yield hex_version[start:start + chars_per_item]
+      return ' '.join(chunkify())
+</code></pre>
+<h2 id="display-hooks">display hooks</h2>
+<p>this display hook will automatically pretty print returned values from cli expressions</p>
+<pre><code>  # display hook hack to pretty print everything by default
+  # use pprint_on or pprint_off to enable/disable pretty printing
+  import pprint
+  import sys
+
+  orig_displayhook = sys.displayhook
+
+  def myhook(value):
+      if value != None:
+          __builtins__._ = value
+          pprint.pprint(value)
+
+  __builtins__.pprint_on = lambda: setattr(sys, 'displayhook', myhook)
+  __builtins__.pprint_off = lambda: setattr(sys, 'displayhook', orig_displayhook)
+  # end display hook hack to pretty print everything
+</code></pre>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/programming" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">programming</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/python" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/misc" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">misc</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/post/google-owned/">Google Owned</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/go-powered-databases/">go powered databases</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/ban-systemd/">ban systemd</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/notes/firewall/">firewall</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/building-packages-with-docker/">building packages with docker</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/docker-wishlist/">docker wishlist</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/sudo/">Sudo</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://sigmonsays.github.io/" >
+    &copy;  sigmonsays 2024 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

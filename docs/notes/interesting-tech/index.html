@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>interesting tech | sigmonsays</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Table of Contents
+2023 Jan 2018 Oct 2016 hitless haproxy reload go jira http2 keylog xo teleport sftp server library in go toasteroid httpcache Feb 2016 Jan 2016 Nov 2015 Jan 2015 Index Feb 2019 Link Description https://landscape.cncf.io/ the CNCF landscape makes me want to cry Jan 2018 Link Description https://github.com/lewish/asciiflow2 and http://asciiflow.com/ ascii art draw tool. https://github.com/benhoyt/goawk awk fully implemented in go and passes &rsquo;the awk test&#39; Oct 2016 gmx - similar to jmx but for go https://github.">
+    <meta name="generator" content="Hugo 0.120.3">
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="interesting tech" />
+<meta property="og:description" content="Table of Contents
+2023 Jan 2018 Oct 2016 hitless haproxy reload go jira http2 keylog xo teleport sftp server library in go toasteroid httpcache Feb 2016 Jan 2016 Nov 2015 Jan 2015 Index Feb 2019 Link Description https://landscape.cncf.io/ the CNCF landscape makes me want to cry Jan 2018 Link Description https://github.com/lewish/asciiflow2 and http://asciiflow.com/ ascii art draw tool. https://github.com/benhoyt/goawk awk fully implemented in go and passes &rsquo;the awk test&#39; Oct 2016 gmx - similar to jmx but for go https://github." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://sigmonsays.github.io/notes/interesting-tech/" /><meta property="article:section" content="notes" />
+<meta property="article:published_time" content="2016-10-16T14:50:29-07:00" />
+<meta property="article:modified_time" content="2016-10-16T14:50:29-07:00" />
+
+<meta itemprop="name" content="interesting tech">
+<meta itemprop="description" content="Table of Contents
+2023 Jan 2018 Oct 2016 hitless haproxy reload go jira http2 keylog xo teleport sftp server library in go toasteroid httpcache Feb 2016 Jan 2016 Nov 2015 Jan 2015 Index Feb 2019 Link Description https://landscape.cncf.io/ the CNCF landscape makes me want to cry Jan 2018 Link Description https://github.com/lewish/asciiflow2 and http://asciiflow.com/ ascii art draw tool. https://github.com/benhoyt/goawk awk fully implemented in go and passes &rsquo;the awk test&#39; Oct 2016 gmx - similar to jmx but for go https://github."><meta itemprop="datePublished" content="2016-10-16T14:50:29-07:00" />
+<meta itemprop="dateModified" content="2016-10-16T14:50:29-07:00" />
+<meta itemprop="wordCount" content="571">
+<meta itemprop="keywords" content="notes,misc," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="interesting tech"/>
+<meta name="twitter:description" content="Table of Contents
+2023 Jan 2018 Oct 2016 hitless haproxy reload go jira http2 keylog xo teleport sftp server library in go toasteroid httpcache Feb 2016 Jan 2016 Nov 2015 Jan 2015 Index Feb 2019 Link Description https://landscape.cncf.io/ the CNCF landscape makes me want to cry Jan 2018 Link Description https://github.com/lewish/asciiflow2 and http://asciiflow.com/ ascii art draw tool. https://github.com/benhoyt/goawk awk fully implemented in go and passes &rsquo;the awk test&#39; Oct 2016 gmx - similar to jmx but for go https://github."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="home  page">
+              home 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/projects/" title="projects  page">
+              projects 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/misc/" title="misc  page">
+              misc 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/archives/" title="archives  page">
+              archives 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="about  page">
+              about 
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        NOTES
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=http://sigmonsays.github.io/notes/interesting-tech/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=http://sigmonsays.github.io/notes/interesting-tech/&amp;text=interesting%20tech" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://sigmonsays.github.io/notes/interesting-tech/&amp;title=interesting%20tech" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">interesting tech</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2016-10-16T14:50:29-07:00">October 16, 2016</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><!-- raw HTML omitted -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#2023">2023</a></li>
+<li><a href="#jan-2018">Jan 2018</a></li>
+<li><a href="#oct-2016">Oct 2016</a>
+<ul>
+<li><a href="#hitless-haproxy-reload">hitless haproxy reload</a></li>
+<li><a href="#go-jira">go jira</a></li>
+<li><a href="#http2-keylog">http2 keylog</a></li>
+<li><a href="#xo">xo</a></li>
+<li><a href="#teleport">teleport</a></li>
+<li><a href="#sftp-server-library-in-go">sftp server library in go</a></li>
+<li><a href="#toasteroid">toasteroid</a></li>
+<li><a href="#httpcache">httpcache</a></li>
+</ul>
+</li>
+<li><a href="#feb-2016">Feb 2016</a></li>
+<li><a href="#jan-2016">Jan 2016</a></li>
+<li><a href="#nov-2015">Nov 2015</a></li>
+<li><a href="#jan-2015">Jan 2015</a></li>
+<li><a href="#index">Index</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="feb-2019">Feb 2019</h1>
+<table>
+<thead>
+<tr>
+<th>Link</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://landscape.cncf.io/">https://landscape.cncf.io/</a></td>
+<td>the CNCF landscape makes me want to cry</td>
+</tr>
+</tbody>
+</table>
+<h1 id="jan-2018">Jan 2018</h1>
+<table>
+<thead>
+<tr>
+<th>Link</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/lewish/asciiflow2">https://github.com/lewish/asciiflow2</a> and <a href="http://asciiflow.com/">http://asciiflow.com/</a></td>
+<td>ascii art draw tool.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benhoyt/goawk">https://github.com/benhoyt/goawk</a></td>
+<td>awk fully implemented in go and passes &rsquo;the awk test'</td>
+</tr>
+</tbody>
+</table>
+<h1 id="oct-2016">Oct 2016</h1>
+<p>gmx - similar to jmx but for go
+<a href="https://github.com/davecheney/gmx">https://github.com/davecheney/gmx</a></p>
+<h2 id="hitless-haproxy-reload">hitless haproxy reload</h2>
+<p><a href="https://github.com/sorah/sandbox/tree/master/ruby/haproxy-master">https://github.com/sorah/sandbox/tree/master/ruby/haproxy-master</a></p>
+<h2 id="go-jira">go jira</h2>
+<p><a href="https://github.com/Netflix-Skunkworks/go-jira">https://github.com/Netflix-Skunkworks/go-jira</a></p>
+<p>I currently use this program in a very limited fashion for managing development workflow. it becomes very handy to build a
+shell script environment for aiding in common development process. Right now its only used to view jira tasks and comment on
+them.</p>
+<p>This is powerful enough for the time being</p>
+<h2 id="http2-keylog">http2 keylog</h2>
+<p>with the growing popularity of http/2 you can&rsquo;t be without the ability to inspect the payload.</p>
+<p>This looks really useful in tracing http/2 (even grpc) with wireshark</p>
+<p><a href="https://github.com/joneskoo/http2-keylog/">https://github.com/joneskoo/http2-keylog/</a></p>
+<h2 id="xo">xo</h2>
+<p>generate idomatic go code for SQL databases (Please do not confuse this with an ORM!)</p>
+<p><a href="https://github.com/knq/xo">https://github.com/knq/xo</a></p>
+<h2 id="teleport">teleport</h2>
+<p>its a pretty impressive ssh daemon setup that has temporary certs for ssh access through a central auth system, with 2-factor
+auth built in. Every &ldquo;teleport node&rdquo; registers itself too so you can just list specific nodes</p>
+<p>I can imagine something like this becoming &ldquo;the normal&rdquo; in a cloud computing environment</p>
+<p><a href="https://github.com/gravitational/teleport">https://github.com/gravitational/teleport</a></p>
+<h2 id="sftp-server-library-in-go">sftp server library in go</h2>
+<p>SFTP server library in Go, <a href="https://github.com/taruti/sftpd">https://github.com/taruti/sftpd</a></p>
+<h2 id="toasteroid">toasteroid</h2>
+<ol>
+<li>print stuff on your toast.</li>
+<li>Print Ads on your toast.</li>
+<li>Profit. What!?</li>
+</ol>
+<p>See <a href="https://toasteroid.com/">https://toasteroid.com/</a></p>
+<p>I imagine a (dystopian?) future where you have to pay a subscription fee to remove ads from your toast in the morning</p>
+<p>This could be the IoT future we all hate.</p>
+<h2 id="httpcache">httpcache</h2>
+<p>A Transport for http.Client that will cache responses according to the HTTP RFC</p>
+<p><a href="https://github.com/gregjones/httpcache">https://github.com/gregjones/httpcache</a></p>
+<h1 id="feb-2016">Feb 2016</h1>
+<ul>
+<li>
+<p>asciinema - record your terminal in plain text and replay it!</p>
+<ul>
+<li>website - <a href="https://asciinema.org/">https://asciinema.org/</a></li>
+</ul>
+</li>
+<li>
+<p>find unused packages in a go repository - <a href="https://github.com/nf/deadleaves">https://github.com/nf/deadleaves</a></p>
+</li>
+<li>
+<p>AppImages is a interesting format that is similar to other &ldquo;self contained&rdquo; technologies like
+CDE (<a href="http://www.pgbovine.net/cde.html)">http://www.pgbovine.net/cde.html)</a>. I havn&rsquo;t read into it yet but lets hope it does better
+than everyone else&hellip;</p>
+<p>AppImage is at <a href="https://github.com/probonopd/AppImageKit/wiki/Creating-AppImages">https://github.com/probonopd/AppImageKit/wiki/Creating-AppImages</a></p>
+</li>
+<li>
+<p>The web of names, hashes and UUIDs - <a href="https://joearms.github.io/2015/03/12/The_web_of_names.html">https://joearms.github.io/2015/03/12/The_web_of_names.html</a></p>
+<p>This isnt the first time I read this but I came across it again recently and wanted to save it here</p>
+</li>
+</ul>
+<h1 id="jan-2016">Jan 2016</h1>
+<ul>
+<li>
+<p>MQTT - <a href="http://mqtt.org/">http://mqtt.org/</a></p>
+<p>MQTT is a machine-to-machine messaging protocol designed for IoT. Its design goals are small code and resource footprint is required (network, memory, etc) making
+it very interesting for mobile (and more) development.</p>
+</li>
+<li>
+<p>sheepdog - distributed block storage for qemu - <a href="http://sheepdog.github.io/sheepdog/">http://sheepdog.github.io/sheepdog/</a></p>
+</li>
+<li>
+<p>snap - <a href="https://github.com/intelsdi-x/snap">https://github.com/intelsdi-x/snap</a></p>
+</li>
+<li>
+<p>thermal cameras - <a href="http://www.thermal.com/thermal-cameras/">http://www.thermal.com/thermal-cameras/</a></p>
+</li>
+<li>
+<p>debops - <a href="http://docs.debops.org/en/latest/index.html">http://docs.debops.org/en/latest/index.html</a> - automate installation of all your data center components</p>
+</li>
+<li>
+<p>api.data.gov</p>
+</li>
+</ul>
+<h1 id="nov-2015">Nov 2015</h1>
+<ul>
+<li>
+<p>tenus - linux networking in golang</p>
+<ul>
+<li>website <a href="https://github.com/milosgajdos83/tenus">https://github.com/milosgajdos83/tenus</a></li>
+<li>mentioned in article - <a href="http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/">http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/</a></li>
+</ul>
+</li>
+<li>
+<p>Task Spooler - <a href="http://vicerveza.homeunix.net/~viric/soft/ts/">http://vicerveza.homeunix.net/~viric/soft/ts/</a></p>
+<p>An oldie but a goodie.. I had used this many years ago but forgot its name and wanted it again.. Here&rsquo;s to remembering!</p>
+</li>
+<li>
+<p>hound - <a href="https://github.com/etsy/Hound">https://github.com/etsy/Hound</a></p>
+</li>
+<li>
+<p>silver surfer - <a href="http://geoff.greer.fm/ag/">http://geoff.greer.fm/ag/</a></p>
+<ul>
+<li><a href="https://github.com/ggreer/the_silver_searcher">https://github.com/ggreer/the_silver_searcher</a></li>
+</ul>
+</li>
+<li>
+<p>microservices future</p>
+<ul>
+<li><a href="http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone">http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="jan-2015">Jan 2015</h1>
+<ul>
+<li>
+<p>otro - javascript interpreter in Go - https://github.com/robertkrimen/otto</p>
+</li>
+<li>
+<p>C10M - http://c10m.robertgraham.com/p/manifesto.html</p>
+</li>
+<li>
+<p>Completely decentralized cloud messaging - http://iris.karalabe.com
+decentralized cloud messaging with broadcast, request/reply and pubsub messaging with literally zero configuration.</p>
+</li>
+<li>
+<p>Fast and Simple Open Source &ldquo;Github&rdquo; - https://github.com/gogits/gogs</p>
+</li>
+<li>
+<p>Quick VPN using SSH - <a href="http://backreference.org/2009/11/13/openssh-based-vpns/">http://backreference.org/2009/11/13/openssh-based-vpns/</a></p>
+</li>
+<li>
+<p>Rudder - Software Defined Networks - <a href="https://github.com/coreos/rudder">https://github.com/coreos/rudder</a> </p>
+</li>
+</ul>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/notes" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">notes</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/misc" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">misc</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/post/golang-faq/">golang FAQ</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/hitler-uses-docker/">hitler uses docker</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/enlightenment/">enlightenment</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/keybase/">keybase</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/pythonstartup/">convenient cli tookit using python</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/google-owned/">Google Owned</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/go-powered-databases/">go powered databases</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/ban-systemd/">ban systemd</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/notes/firewall/">firewall</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/building-packages-with-docker/">building packages with docker</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/docker-wishlist/">docker wishlist</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/sudo/">Sudo</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://sigmonsays.github.io/" >
+    &copy;  sigmonsays 2024 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

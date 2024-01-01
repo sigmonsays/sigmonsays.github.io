@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>nix and nixos | sigmonsays</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Table of Contents
+Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes Resources Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
+Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible
+with nix you can
+build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows&#43;WSL nix cache (https://cachix.">
+    <meta name="generator" content="Hugo 0.120.3">
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="nix and nixos" />
+<meta property="og:description" content="Table of Contents
+Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes Resources Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
+Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible
+with nix you can
+build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows&#43;WSL nix cache (https://cachix." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://sigmonsays.github.io/post/nix/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-07-05T01:23:45-07:00" />
+<meta property="article:modified_time" content="2023-07-05T01:23:45-07:00" />
+
+<meta itemprop="name" content="nix and nixos">
+<meta itemprop="description" content="Table of Contents
+Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes Resources Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
+Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible
+with nix you can
+build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows&#43;WSL nix cache (https://cachix."><meta itemprop="datePublished" content="2023-07-05T01:23:45-07:00" />
+<meta itemprop="dateModified" content="2023-07-05T01:23:45-07:00" />
+<meta itemprop="wordCount" content="1051">
+<meta itemprop="keywords" content="nix,development," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="nix and nixos"/>
+<meta name="twitter:description" content="Table of Contents
+Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes Resources Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
+Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible
+with nix you can
+build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows&#43;WSL nix cache (https://cachix."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="home  page">
+              home 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/projects/" title="projects  page">
+              projects 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/misc/" title="misc  page">
+              misc 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/archives/" title="archives  page">
+              archives 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="about  page">
+              about 
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=http://sigmonsays.github.io/post/nix/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=http://sigmonsays.github.io/post/nix/&amp;text=nix%20and%20nixos" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://sigmonsays.github.io/post/nix/&amp;title=nix%20and%20nixos" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">nix and nixos</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-07-05T01:23:45-07:00">July 5, 2023</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><!-- raw HTML omitted -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#why-nixos">Why NixOS</a></li>
+<li><a href="#nixos">NixOS</a></li>
+<li><a href="#home-manager">Home Manager</a></li>
+<li><a href="#build-docker-containers">Build Docker Containers</a></li>
+<li><a href="#development-shells">Development Shells</a></li>
+<li><a href="#nix-cache">Nix Cache</a></li>
+<li><a href="#flakes">Flakes</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="summary">Summary</h1>
+<p>Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required
+may not be worth it to some people.</p>
+<p>Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible</p>
+<p>with nix you can</p>
+<ul>
+<li>build docker containers</li>
+<li>build qemu images</li>
+<li>install packages per user or system</li>
+<li>build development shells</li>
+<li>runs everywhere - linux, nixos, macos, windows+WSL</li>
+<li>nix cache (<a href="https://cachix.org">https://cachix.org</a>)</li>
+<li>Everything above is reproducible</li>
+</ul>
+<p>I hope this document aims to explain how i&rsquo;ve used each one and my experiences with it. There is not a lot of information out there and nix error messages are anything but useful.</p>
+<h1 id="why-nixos">Why NixOS</h1>
+<ul>
+<li>declarative</li>
+<li>reproducible</li>
+<li>updates are atomic; system never left in half configured state</li>
+<li>rollback</li>
+<li>don&rsquo;t have to run a config management system</li>
+<li>tools like puppet, ansible, chef, etc do not work the same.
+<ul>
+<li>nix works at a higher level (not as many details required to use)</li>
+<li>order of execution does not matter</li>
+<li>declare end state</li>
+<li>nix is always pristine</li>
+</ul>
+</li>
+<li>nix config can easily be shared</li>
+<li>bring up a new system in minutes</li>
+</ul>
+<p>The system state is declarative. Which means that it essentially turns my entire OS state into something that can be pristine, setup from scratch, and rolled back to any revision in git.</p>
+<p>This makes experimenting with software fearless. With other config mgmt systems, you have to go manually clean up the mess made to remove something either
+in error or to uninstall it. Building automations that always work when errors and half states are encountered is difficult.</p>
+<p>This is not the issue with nix because the system is built from scratch each time. If I decide I want to experiment with an application
+and need to uninstall it, i just comment out the &ldquo;install package&rdquo; line and when I rebuild the system it&rsquo;s gone.</p>
+<p>Some examples</p>
+<p>laptop lid close behavior on my T480</p>
+<pre><code> services.logind.lidSwitch = &quot;hibernate&quot;;
+</code></pre>
+<p>change bindings for keyboard volume keys</p>
+<pre><code> services.actkbd.bindings = [
+    { keys = [ 122 ]; events = [ &quot;key&quot; &quot;rep&quot; ]; command = &quot;${pkgs.alsaUtils}/bin/amixer -q set Master ${config.sound.mediaKeys.volumeStep}- unmute&quot;; }
+    { keys = [ 123 ]; events = [ &quot;key&quot; &quot;rep&quot; ]; command = &quot;${pkgs.alsaUtils}/bin/amixer -q set Master ${config.sound.mediaKeys.volumeStep}+ unmute&quot;; }
+ ]
+</code></pre>
+<p>enable alsa</p>
+<pre><code> sound.enable = true;
+</code></pre>
+<h1 id="nixos">NixOS</h1>
+<p>nixos provides a entire OS that is defined in the same nix language that nix package manager and home manager uses.</p>
+<p>I&rsquo;ve only bootstraped a VM using nixos and that was relatively straighforward. I followed <a href="https://gist.github.com/tarnacious/f9674436fff0efeb4bb6585c79a3b9ff">this</a> guide. A working verion I modified is <a href="https://github.com/sigmonsays/nix-experiments/tree/main/nix-qemu2">here</a></p>
+<p>Example nixos configurations are <a href="https://github.com/sigmonsays/nix-experiments/tree/main/nix/nixos">here</a></p>
+<p>I installed nixos on a Lenovo ThinkPad P15S Gen 2 but gave up quickly when the graphics failed to function. I ended up returning the laptop for other reasons so my nixos experience was cut short.</p>
+<p>I purchased an old Thinkpad T480 and put NIXOS on it. The installation went smoothly and it&rsquo;s my primary NIXOS laptop. I&rsquo;m surprised by
+how quickly I got everything working.</p>
+<h1 id="home-manager">Home Manager</h1>
+<p>Since nix runs everywhere, I have it as part of my dotfile repo and it naturally fits</p>
+<p>Figuring out how to organize nix code was very difficult for me and I refactored a couple times. First I just wrote it, then I tried doing hostname detection and importing things dynamically but that failed.</p>
+<p>Where I ended up was having a entry point per device and then including modules based on what
+device.nix file I was in.</p>
+<p>All of my devices run home manager. On MacOS i&rsquo;ve used it to replace brew. I have a module for macos
+that installed more modern versions of bash and coreutils in addition to all the other things I use
+like emacs, jq, fzf, tmux, gdu, etc.</p>
+<h1 id="build-docker-containers">Build Docker Containers</h1>
+<p>I have yet to actually do this but will update this section when I get there</p>
+<h1 id="development-shells">Development Shells</h1>
+<p>I&rsquo;ve used nix to build development shells for various tools.</p>
+<p>One such repository is a go code base which manages dotfiles named <a href="https://github.com/sigmonsays/dotbot/blob/main/shell.nix">dotbot</a>. Specifically the <code>shell.nix</code> file
+contains the details on what&rsquo;s needed to compile and run the application.</p>
+<p>If you have nix installed and clone this repo you instantly have the build dependencies</p>
+<p>Coupling direnv with direnv-nix allows .envrc to setup the environment when you cd into the directory
+which is really nice.</p>
+<pre><code>0 sig@mac14:~/code/dotbot (main) λ  direnv allow
+direnv: loading ~/code/dotbot/.envrc
+direnv: using flake
+... output cut for brevity ...
+</code></pre>
+<p>Now we have go and can install the package</p>
+<pre><code>0 sig@mac14:~/code/dotbot (main) λ  which go
+/nix/store/ifw3aqbayvh4pnhrrak0jc1parvcybqf-go-1.20.4/bin/go
+0 sig@mac14:~/code/dotbot (main) λ  go install .
+0 sig@mac14:~/code/dotbot (main) λ  which dotbot
+/Users/sig/go/bin/dotbot
+</code></pre>
+<p>This is great when you need additional tools for code generation, like grpc or swagger. Since
+now they can be defined in code and kept in the repository.</p>
+<p>I&rsquo;ve also used this same concept for including various tools for scripts such as image processing
+workflows where I needed exiftool, imagemagick and libheif.</p>
+<h1 id="nix-cache">Nix Cache</h1>
+<p>This feature makes nix really nice.</p>
+<p>You get the best of both worlds with a nix binary cache since most things can be pulled as a binary from
+the cache.</p>
+<p>iF the inputs result in a hash that&rsquo;s not in the cache, nix will build it from source.</p>
+<h1 id="flakes">Flakes</h1>
+<p>The main purpose of flakes is to have more control over the inputs used to install a package. For instance if your nixos configuration.nix
+has the stable channel and you try to take someone elses code that expects unstable channel, there could be problems. It might work but the
+two systems are not the exact same. Flakes solves this by enforcing the inputs.</p>
+<p>To start using flakes you need to enable them in <code>/etc/nix/nix.conf</code> by adding the following</p>
+<pre><code> experimental-features = nix-command flakes
+</code></pre>
+<p>Once enabled everything under the &rsquo;nix&rsquo; command becomes available for use with flakes</p>
+<pre><code># Get shell with gdu installed
+nix shell 'nixpkgs#gdu'
+
+# run gdu 
+nix run 'nixpkgs#gdu'
+
+# search unstable
+nix search nixpkgs fzf
+
+# Search a specific channel (23.05)
+nix search github:NixOS/nixpkgs/nixos-23.05 fzf
+</code></pre>
+<h1 id="resources">Resources</h1>
+<p>One of the biggest negatives of nix is it&rsquo;s lack and fragmentation of documenttation</p>
+<p>This section aims to collect the resources I found useful</p>
+<ul>
+<li>search nixos packages <a href="https://search.nixos.org/packages">https://search.nixos.org/packages</a></li>
+<li>search nixos options <a href="https://search.nixos.org/options">https://search.nixos.org/options</a></li>
+<li>search home-manager options <a href="https://mipmip.github.io/home-manager-option-search/">https://mipmip.github.io/home-manager-option-search/</a></li>
+<li>nix package versions - <a href="https://lazamar.co.uk/nix-versions/">https://lazamar.co.uk/nix-versions/</a></li>
+<li>awesome-nix - <a href="https://github.com/nix-community/awesome-nix">https://github.com/nix-community/awesome-nix</a></li>
+<li>mynixos - <a href="https://mynixos.com/">https://mynixos.com/</a></li>
+</ul>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/nix" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">nix</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/development" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">development</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://sigmonsays.github.io/" >
+    &copy;  sigmonsays 2024 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>notes on sigmonsays</title>
+    <link>http://sigmonsays.github.io/tags/notes/</link>
+    <description>Recent content in notes on sigmonsays</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Oct 2016 14:50:29 -0700</lastBuildDate>
+    <atom:link href="http://sigmonsays.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>interesting tech</title>
+      <link>http://sigmonsays.github.io/notes/interesting-tech/</link>
+      <pubDate>Sun, 16 Oct 2016 14:50:29 -0700</pubDate>
+      <guid>http://sigmonsays.github.io/notes/interesting-tech/</guid>
+      <description>Table of Contents
+2023 Jan 2018 Oct 2016 hitless haproxy reload go jira http2 keylog xo teleport sftp server library in go toasteroid httpcache Feb 2016 Jan 2016 Nov 2015 Jan 2015 Index Feb 2019 Link Description https://landscape.cncf.io/ the CNCF landscape makes me want to cry Jan 2018 Link Description https://github.com/lewish/asciiflow2 and http://asciiflow.com/ ascii art draw tool. https://github.com/benhoyt/goawk awk fully implemented in go and passes &amp;rsquo;the awk test&#39; Oct 2016 gmx - similar to jmx but for go https://github.</description>
+    </item>
+  </channel>
+</rss>
