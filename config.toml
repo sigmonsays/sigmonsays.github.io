@@ -2,6 +2,7 @@ baseURL = "http://sigmonsays.github.io/"
 languageCode = "en-us"
 title = "sigmonsays"
 
+
 [menu]
 
 [[menu.main]]

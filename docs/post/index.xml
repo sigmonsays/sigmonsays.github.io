@@ -6,12 +6,12 @@
     <description>Recent content in Posts on sigmonsays</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Dec 2023 10:58:55 -0800</lastBuildDate>
-    <atom:link href="http://sigmonsays.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Dec 2023 10:58:55 -0800</lastBuildDate><atom:link href="http://sigmonsays.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>picman: photo sorting tool</title>
       <link>http://sigmonsays.github.io/post/picman/</link>
       <pubDate>Sun, 31 Dec 2023 10:58:55 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/picman/</guid>
       <description>github https://github.com/sigmonsays/picman
 I wrote a basic tool to replace my krufty bash scripts that imports my photos from various locations into their final resting place.
@@ -19,10 +19,12 @@ The tool operates in steps where each step is kind of idempotent. The set of all
 Each step operates on the same workflow object, which primarily has a state object
 State Object code</description>
     </item>
+    
     <item>
       <title>nix tip: nvd to see what is going to change</title>
       <link>http://sigmonsays.github.io/post/nix-tip-nvd/</link>
       <pubDate>Wed, 27 Dec 2023 06:07:08 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/nix-tip-nvd/</guid>
       <description>have you ever wanted to see what packages are going to change before updating them on nix?
 Well read on to find out how to do this with home-manager and nixos
@@ -31,28 +33,34 @@ Table of Contents
 A naive approach nix store diff-closure nvd nix-diff A naive approach I wondered since everything is in the nix store, why not just diff it?
 So as an experiment I set off to do just that</description>
     </item>
+    
     <item>
       <title>nix tip: shell shabang</title>
       <link>http://sigmonsays.github.io/post/nix-tip-shabang/</link>
       <pubDate>Wed, 20 Dec 2023 06:07:08 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/nix-tip-shabang/</guid>
       <description>A feature I discovered recently is that nix-shell can be used as an interpreter
 #!/usr/bin/env nix-shell #!nix-shell -i bash -p bash htop echo hello world which htop It even works for python
 #!/usr/bin/env nix-shell #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor # scale image by 50% import sys, PIL.Image, ansicolor path = sys.argv[1] image = PIL.Image.open(path) factor = 0.5 image = image.resize((round(image.width * factor), round(image.height * factor))) path = path + &amp;quot;.</description>
     </item>
+    
     <item>
       <title>nix-direnv</title>
       <link>http://sigmonsays.github.io/post/nix-direnv/</link>
       <pubDate>Thu, 14 Dec 2023 06:07:08 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/nix-direnv/</guid>
       <description>Table of Contents
 direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website Emacs hey gcroots, save some of that garbage! References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
 direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd to a specific directory.</description>
     </item>
+    
     <item>
       <title>nix and nixos</title>
       <link>http://sigmonsays.github.io/post/nix/</link>
       <pubDate>Wed, 05 Jul 2023 01:23:45 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/nix/</guid>
       <description>Table of Contents
 Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes Resources Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
@@ -60,45 +68,55 @@ Nix overall has so many features that it&amp;rsquo;s worth understanding what&am
 with nix you can
 build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows+WSL nix cache (https://cachix.</description>
     </item>
+    
     <item>
       <title>dotbot</title>
       <link>http://sigmonsays.github.io/post/dotbot/</link>
       <pubDate>Sun, 29 Jan 2023 08:57:49 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/dotbot/</guid>
       <description>Table of Contents
 why dotbot why dotbot is a tool to manage dot files. I wrote this tool after gettting tired of futzing around with the python dotbot from https://github.com/anishathalye/dotbot. Full disclosure I love this tool and it&amp;rsquo;s the motivation for the development of my own dotbot.
 I had two main issues that were annoying to me. First, git submodules were a part of the bootstrap process. Second, I always needed some yaml dependancy installed.</description>
     </item>
+    
     <item>
       <title>My Emacs Kit</title>
       <link>http://sigmonsays.github.io/post/emacs/</link>
       <pubDate>Mon, 14 Nov 2022 08:57:49 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/emacs/</guid>
       <description>This document will be a living document that i&amp;rsquo;ll attempt to update from time to time
 Table of Contents
 Intro Pico and Nano Vim doom emacs emacs28 with native compilation Markdown mode Org mode and babel Intro I&amp;rsquo;ve been using doom-emacs for over a year now (since March 2021) and this is my personal experiences with it.
 I do not put a ton of effort into editors, rather I spend a chunk of time intermittently.</description>
     </item>
+    
     <item>
       <title>Trump</title>
       <link>http://sigmonsays.github.io/post/trump/</link>
       <pubDate>Fri, 24 Apr 2020 13:32:59 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/trump/</guid>
       <description>Trump owes millions to state-owned bank in China https://www.salon.com/2020/04/24/newly-revealed-financial-records-show-trump-owes-millions-to-state-owned-bank-in-china-report/
 trump will rip off anyone even if he says he&amp;rsquo;ll pay https://www.independent.co.uk/news/world/americas/i-sold-trump-100000-worth-of-pianos-then-he-stiffed-me-a7335951.html</description>
     </item>
+    
     <item>
       <title>Pinterest invades google</title>
       <link>http://sigmonsays.github.io/post/pinterest-sucks/</link>
       <pubDate>Sun, 18 Mar 2018 10:38:37 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/pinterest-sucks/</guid>
       <description>Pinterest is awful.
 This has been growing for years. Here is the typical situation I think more people run into than you think. When you are looking for an image on google image search and find what you are looking for by thumbnail, and click through just to be taken to pinterest.com. Once you land here, you do not see any fragment of what you came for. Instead, you are confronted with a sign up page.</description>
     </item>
+    
     <item>
       <title>screenshot</title>
       <link>http://sigmonsays.github.io/post/screenshot/</link>
       <pubDate>Wed, 06 Dec 2017 13:01:02 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/screenshot/</guid>
       <description>Screenshot is a simple python script that has evolved over time. It started out as a shell script which called import -window root screenshot.png and has evolved into a full featured application.
 Github page - https://github.com/sigmonsays/screenshot/blob/master/README.md
@@ -106,24 +124,30 @@ The point of this post is to demonstrate how to setup screenshot and how to use 
 Installation
 git clone https://github.com/sigmonsays/screenshot.git sudo apt-get install -y xclip imagemagick cd screenshot sudo pip install .</description>
     </item>
+    
     <item>
       <title>why use the go programming language?</title>
       <link>http://sigmonsays.github.io/post/why-go/</link>
       <pubDate>Thu, 16 Nov 2017 10:27:27 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/why-go/</guid>
       <description>I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors needed to operate on a workqueue. This daemon is actually still in produciton today =P</description>
     </item>
+    
     <item>
       <title>random musings</title>
       <link>http://sigmonsays.github.io/post/random-musings/</link>
       <pubDate>Sun, 16 Oct 2016 19:51:52 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/random-musings/</guid>
       <description>Would you rather fight 100 duck sized horses or one horse sized duck? Bill Murray weights in https://www.youtube.com/watch?v=THUGHEJjjGc</description>
     </item>
+    
     <item>
       <title>golang FAQ</title>
       <link>http://sigmonsays.github.io/post/golang-faq/</link>
       <pubDate>Tue, 20 Sep 2016 12:47:58 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/golang-faq/</guid>
       <description>Sections
 Network Programming in go Installing golang tools Errors are values Network programming in Go http://whispering-gophers.appspot.com/talk.slide#1
@@ -132,19 +156,23 @@ answer
 typical solution is to install tools in a different GOPATH
 export GOPATH=&amp;quot;$HOME/go&amp;quot; export PATH=&amp;quot;$GOPATH/bin:$PATH&amp;quot; go get -u golang.org/x/tools/cmd/goimports The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion.</description>
     </item>
+    
     <item>
       <title>hitler uses docker</title>
       <link>http://sigmonsays.github.io/post/hitler-uses-docker/</link>
       <pubDate>Mon, 11 Apr 2016 11:23:01 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/hitler-uses-docker/</guid>
       <description>video
 https://www.youtube.com/watch?v=PivpCKEiQOQ
 transcript ------------------------------- we pushed the images to dockerhub, then used docker-compose to deploy to the cluster we mounted data volumes on these nodes and linked app container here finally we&#39;ve updated the DNS records hitler: so we&#39;re running 20 containers on every node now. when can we get rid of the excess servers? mein fuhrer... the kernel... A 3rd party container caused a panic... we&#39;ve lost 70% of the cluster and the data volumes .</description>
     </item>
+    
     <item>
       <title>programming exercise</title>
       <link>http://sigmonsays.github.io/post/programming-exercise/</link>
       <pubDate>Wed, 02 Mar 2016 14:57:19 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/programming-exercise/</guid>
       <description>I heard from a friend about an interesting interview question that I thought would be easy.
 The problem
@@ -152,45 +180,55 @@ the goal of this program is to find the shortest number of stickers used to make
 for instance, with the word &amp;ldquo;WPENGINE&amp;rdquo; printed on them to make for example &amp;ldquo;WWW&amp;rdquo; would take 3 and another example is &amp;ldquo;WINE&amp;rdquo; would take 1.
 The programs logic is really quite literal and was enjoyable to write.</description>
     </item>
+    
     <item>
       <title>enlightenment</title>
       <link>http://sigmonsays.github.io/post/enlightenment/</link>
       <pubDate>Tue, 09 Feb 2016 17:10:00 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/enlightenment/</guid>
       <description>Update: August 2019 I have switched to i3wm (for some time now) exclusively due to its speed and lightweight. I&amp;rsquo;ll have to write a post about that experience some time.
 e20 enlightenment has been my window manager of choice for a very long time maintly because of its speed. I used to run window maker and then fluxbox before I made the switch to enlightenment (0.16 at the time iirc).</description>
     </item>
+    
     <item>
       <title>paste, an hour long project</title>
       <link>http://sigmonsays.github.io/post/paste/</link>
       <pubDate>Sun, 31 Jan 2016 10:58:55 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/paste/</guid>
       <description>I&amp;rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.
 It has always been bothersome to me that any paste, or &amp;ldquo;no paste&amp;rdquo; command line client has to be needlessly complex. Some i&amp;rsquo;ve tried to use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing more than curl.</description>
     </item>
+    
     <item>
       <title>git-watch</title>
       <link>http://sigmonsays.github.io/post/git-watch/</link>
       <pubDate>Sun, 03 Jan 2016 21:33:07 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/git-watch/</guid>
       <description>git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.
 git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either code (in git) or configuration.
 So here is a simple example which will automatically rebuild and restart a application when you git push (https://github.com/sigmonsays/git-watch/tree/master/examples/go)
 Below in git-watch.</description>
     </item>
+    
     <item>
       <title>convenient cli tookit using python</title>
       <link>http://sigmonsays.github.io/post/pythonstartup/</link>
       <pubDate>Tue, 03 Feb 2015 11:59:36 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/pythonstartup/</guid>
       <description>python is a incredibly useful language and has a powerful type system which can be pretty convenient. I&amp;rsquo;ve written python for many years now and when I need a quick tool, most the time I write it in python.
 These tools have built up over time and i&amp;rsquo;ve been collecting them organically into a python startup file as a set of libraries and functions.
 create a file in $HOME/.pythonstartup and cherry pick anything below that you find useful.</description>
     </item>
+    
     <item>
       <title>Google Owned</title>
       <link>http://sigmonsays.github.io/post/google-owned/</link>
       <pubDate>Mon, 05 Jan 2015 10:38:37 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/google-owned/</guid>
       <description>Ever think about how much information google has collected about you?
 Apart from services there are additional things going on that you might not be aware of
@@ -201,10 +239,12 @@ AndroidID, Google Ad ID
 [1] https://www.scss.tcd.ie/Doug.Leith/Android_privacy_report.pdf
 Location Services In addition to GPS tracking, there is a service that runs on android phones and looks at available wifi networks to determine your location.</description>
     </item>
+    
     <item>
       <title>go powered databases</title>
       <link>http://sigmonsays.github.io/post/go-powered-databases/</link>
       <pubDate>Sat, 29 Nov 2014 10:45:05 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/go-powered-databases/</guid>
       <description>bolt - https://github.com/boltdb/bolt ledis - http://ledisdb.com/ tiedot - https://github.com/HouzuoGuo/tiedot cockroachdb - https://github.com/cockroachdb/cockroach bolt pure go key-value datastore
 ledis redis like database written in go
@@ -215,27 +255,33 @@ design document https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF
 feature summary
 ACID transactional semantics versioned values primary design goal is consistency and survivability aims to tolerate disk, server, rack and datacenter failures related technologies</description>
     </item>
+    
     <item>
       <title>ban systemd</title>
       <link>http://sigmonsays.github.io/post/ban-systemd/</link>
       <pubDate>Mon, 22 Sep 2014 21:26:16 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/ban-systemd/</guid>
       <description>updates Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
 Just another reason to do one thing well and not try to do too much. C&amp;rsquo;mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread &amp;ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.</description>
     </item>
+    
     <item>
       <title>building packages with docker</title>
       <link>http://sigmonsays.github.io/post/building-packages-with-docker/</link>
       <pubDate>Thu, 11 Sep 2014 15:32:44 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/building-packages-with-docker/</guid>
       <description>This is a simple idea I had while waiting for a build to complete.
 The background Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script takes a minimal base image tarball and installs all dependencies in it required to build your package.
 The build dependencies come from debian/control Build-Depends section. The package being built is a python application using virtualenv. A lot of the packages come from apt however.</description>
     </item>
+    
     <item>
       <title>docker wishlist</title>
       <link>http://sigmonsays.github.io/post/docker-wishlist/</link>
       <pubDate>Sun, 07 Sep 2014 19:37:21 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/docker-wishlist/</guid>
       <description>things I find that I wish docker supported
 dockerfile store build context with the image
@@ -243,22 +289,27 @@ provides ability to change original dockerfile for images you download saves doc
 There is very little that the dockerfile actually supports beyond basic static directives.
 If dockerfile supported templates and variables, we could allow repetitive lines to be reduced to the bare minimum.</description>
     </item>
+    
     <item>
       <title>docker networking performance</title>
       <link>http://sigmonsays.github.io/post/docker-networking-performance/</link>
       <pubDate>Fri, 05 Sep 2014 07:33:28 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/docker-networking-performance/</guid>
       <description>While trying to determine the performance overhead of a simple docker container setup, I discovered several issues related to network performance.
 two issues I have encountered
 docker-proxy handles local network traffic when using the hosts bridge IP (or localhost) connection tracking overhead of NAT increases memory usage my setup
 I am using docker containers as an easy way to deploy backends on a host. I wish to use the hosts bridge IP as a backend to route requests from the load balancer.</description>
     </item>
+    
     <item>
       <title>Sudo</title>
       <link>http://sigmonsays.github.io/post/sudo/</link>
       <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/post/sudo/</guid>
       <description> </description>
     </item>
+    
   </channel>
 </rss>

@@ -6,175 +6,222 @@
     <description>Recent content in Tags on sigmonsays</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Dec 2023 10:58:55 -0800</lastBuildDate>
-    <atom:link href="http://sigmonsays.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Dec 2023 10:58:55 -0800</lastBuildDate><atom:link href="http://sigmonsays.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>photos</title>
       <link>http://sigmonsays.github.io/tags/photos/</link>
       <pubDate>Sun, 31 Dec 2023 10:58:55 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/photos/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>projects</title>
       <link>http://sigmonsays.github.io/tags/projects/</link>
       <pubDate>Sun, 31 Dec 2023 10:58:55 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/projects/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>nix</title>
       <link>http://sigmonsays.github.io/tags/nix/</link>
       <pubDate>Wed, 27 Dec 2023 06:07:08 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/nix/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>development</title>
       <link>http://sigmonsays.github.io/tags/development/</link>
       <pubDate>Wed, 05 Jul 2023 01:23:45 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/development/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>linux</title>
       <link>http://sigmonsays.github.io/tags/linux/</link>
       <pubDate>Sun, 29 Jan 2023 08:57:49 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/linux/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>emacs</title>
       <link>http://sigmonsays.github.io/tags/emacs/</link>
       <pubDate>Mon, 14 Nov 2022 08:57:49 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/emacs/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>misc</title>
       <link>http://sigmonsays.github.io/tags/misc/</link>
       <pubDate>Fri, 24 Apr 2020 13:32:59 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/misc/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>pinterest</title>
       <link>http://sigmonsays.github.io/tags/pinterest/</link>
       <pubDate>Sun, 18 Mar 2018 10:38:37 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/pinterest/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>rants</title>
       <link>http://sigmonsays.github.io/tags/rants/</link>
       <pubDate>Sun, 18 Mar 2018 10:38:37 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/rants/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>seo</title>
       <link>http://sigmonsays.github.io/tags/seo/</link>
       <pubDate>Sun, 18 Mar 2018 10:38:37 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/seo/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>bash</title>
       <link>http://sigmonsays.github.io/tags/bash/</link>
       <pubDate>Fri, 01 Dec 2017 10:38:37 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/bash/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>golang</title>
       <link>http://sigmonsays.github.io/tags/golang/</link>
       <pubDate>Thu, 16 Nov 2017 10:27:27 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/golang/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>funny</title>
       <link>http://sigmonsays.github.io/tags/funny/</link>
       <pubDate>Mon, 17 Oct 2016 14:27:30 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/funny/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>notes</title>
       <link>http://sigmonsays.github.io/tags/notes/</link>
       <pubDate>Sun, 16 Oct 2016 14:50:29 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/notes/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>keybase</title>
       <link>http://sigmonsays.github.io/tags/keybase/</link>
       <pubDate>Fri, 05 Feb 2016 18:28:35 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/keybase/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>pgp</title>
       <link>http://sigmonsays.github.io/tags/pgp/</link>
       <pubDate>Fri, 05 Feb 2016 18:28:35 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/pgp/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>security</title>
       <link>http://sigmonsays.github.io/tags/security/</link>
       <pubDate>Fri, 05 Feb 2016 18:28:35 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/security/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>shell</title>
       <link>http://sigmonsays.github.io/tags/shell/</link>
       <pubDate>Sun, 31 Jan 2016 10:58:55 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/shell/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>programming</title>
       <link>http://sigmonsays.github.io/tags/programming/</link>
       <pubDate>Tue, 03 Feb 2015 11:59:36 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/programming/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>python</title>
       <link>http://sigmonsays.github.io/tags/python/</link>
       <pubDate>Tue, 03 Feb 2015 11:59:36 -0800</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/python/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>google</title>
       <link>http://sigmonsays.github.io/tags/google/</link>
       <pubDate>Mon, 05 Jan 2015 10:38:37 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/google/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>systemd</title>
       <link>http://sigmonsays.github.io/tags/systemd/</link>
       <pubDate>Mon, 22 Sep 2014 21:26:16 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/systemd/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>docker</title>
       <link>http://sigmonsays.github.io/tags/docker/</link>
       <pubDate>Thu, 11 Sep 2014 15:32:44 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/docker/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>index</title>
       <link>http://sigmonsays.github.io/tags/index/</link>
       <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
+      
       <guid>http://sigmonsays.github.io/tags/index/</guid>
       <description></description>
     </item>
+    
   </channel>
 </rss>

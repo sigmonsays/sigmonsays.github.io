@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/home/sig/code/sigmonsays.github.io",
+	"sourceRoot": "/Users/sig/code/sigmonsays.github.io",
 	"sources": [
 		"ananke/css/main.css"
 	],
