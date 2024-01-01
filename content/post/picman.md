@@ -1,6 +1,6 @@
 +++
 date = "2023-12-31T10:58:55-08:00"
-draft = true
+draft = false
 title = "picman: photo sorting tool"
 categories = [ "projects" ]
 tags = [ "projects", "photos" ]
@@ -35,8 +35,10 @@ Steps in order
 
 This process makes it very easy to build tools up around various photo imports.
 
-Additionally this tool writes a json summary of how many files were copied if you need to re-index
+Finally this tool writes a json summary of how many files were copied if you need to re-index
 external photo stores. This allows better integration with tooling like photoprism/photostructure.
+
+# Additional notes 
 
 This tool with syncthing and photoprism has solved my photo needs without relying on a cloud storage
 service or photo hosting provider. I own my own photos and have originals backed up at all times.
