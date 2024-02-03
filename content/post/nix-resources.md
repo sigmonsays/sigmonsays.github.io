@@ -43,6 +43,8 @@ nix packge versions - https://lazamar.co.uk/nix-versions/
 nix package versions can be useful for finding the commit where a particular version
 of a package exists.
 
+nix channel status is at https://status.nixos.org/
+
 # flakes
 
 
