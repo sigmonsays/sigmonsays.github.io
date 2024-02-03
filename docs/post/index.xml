@@ -14,15 +14,14 @@
       <pubDate>Fri, 02 Feb 2024 06:07:08 -0700</pubDate>
       <guid>http://sigmonsays.github.io/post/nix-resources/</guid>
       <description>Table of Contents
-nix nixos home-manager Fun Stuff the biggest hurdle in getting into nix is having the revelvant documentation available. This page is just another collection of useful resources to support success.
+nix flakes nixos home-manager hydra Fun Stuff the biggest hurdle in getting into nix is having the revelvant documentation available. This page is just another collection of useful resources to support success.
 nix nix the language
 nixhub https://www.nixhub.io/packages/mysql
 newer documentation https://nix.dev/
 nix-search-cli https://github.com/peterldowns/nix-search-cli
 nix-pills: Interesting information if you want to know how nix works. A little dated. https://nixos.org/nixos/nix-pills
 flakes nixos package search https://search.nixos.org/packages?channel=unstable&amp;amp;from=0&amp;amp;size=50&amp;amp;sort=relevance&amp;amp;type=packages&amp;amp;query=firefox
-option search https://search.nixos.org/options?channel=unstable&amp;amp;size=50&amp;amp;sort=relevance&amp;amp;type=packages&amp;amp;query=firefox
-wiki https://nixos.wiki/</description>
+option search https://search.nixos.org/options?channel=unstable&amp;amp;size=50&amp;amp;sort=relevance&amp;amp;type=packages&amp;amp;query=firefox</description>
     </item>
     <item>
       <title>picman: photo sorting tool</title>

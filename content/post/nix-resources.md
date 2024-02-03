@@ -10,8 +10,10 @@ tags = [ "nix" ]
 **Table of Contents**
 
 - [nix](#nix)
+- [flakes](#flakes)
 - [nixos](#nixos)
 - [home-manager](#home-manager)
+- [hydra](#hydra)
 - [Fun Stuff](#fun-stuff)
 
 <!-- markdown-toc end -->
