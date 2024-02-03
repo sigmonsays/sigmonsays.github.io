@@ -19,12 +19,10 @@ nix nix the language
 nixhub https://www.nixhub.io/packages/mysql
 newer documentation https://nix.dev/
 nix-search-cli https://github.com/peterldowns/nix-search-cli
+nix-pills: Interesting information if you want to know how nix works. A little dated. https://nixos.org/nixos/nix-pills
 flakes nixos package search https://search.nixos.org/packages?channel=unstable&amp;amp;from=0&amp;amp;size=50&amp;amp;sort=relevance&amp;amp;type=packages&amp;amp;query=firefox
 option search https://search.nixos.org/options?channel=unstable&amp;amp;size=50&amp;amp;sort=relevance&amp;amp;type=packages&amp;amp;query=firefox
-wiki https://nixos.wiki/
-home-manager option search https://mipmip.github.io/home-manager-option-search/
-hydra hydra is the build system for nix and nixos
-watch when a github pr lands in a channel https://nixpk.</description>
+wiki https://nixos.wiki/</description>
     </item>
     <item>
       <title>picman: photo sorting tool</title>

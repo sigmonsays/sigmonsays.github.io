@@ -33,6 +33,9 @@ https://nix.dev/
 nix-search-cli
 https://github.com/peterldowns/nix-search-cli
 
+nix-pills: Interesting information if you want to know how nix works. A little dated.
+https://nixos.org/nixos/nix-pills
+
 # flakes
 
 
