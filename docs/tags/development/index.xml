@@ -6,12 +6,12 @@
     <description>Recent content in development on sigmonsays</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Jul 2023 01:23:45 -0700</lastBuildDate><atom:link href="http://sigmonsays.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jul 2023 01:23:45 -0700</lastBuildDate>
+    <atom:link href="http://sigmonsays.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>nix and nixos</title>
       <link>http://sigmonsays.github.io/post/nix/</link>
       <pubDate>Wed, 05 Jul 2023 01:23:45 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/nix/</guid>
       <description>Table of Contents
 Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes Resources Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
@@ -19,6 +19,5 @@ Nix overall has so many features that it&amp;rsquo;s worth understanding what&am
 with nix you can
 build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows+WSL nix cache (https://cachix.</description>
     </item>
-    
   </channel>
 </rss>

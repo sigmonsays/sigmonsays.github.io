@@ -9,7 +9,7 @@
     <meta name="description" content="Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.
 Only specific networks are allowed.
 #!/bin/bash #set -x iptables -P INPUT ACCEPT iptables -P FORWARD ACCEPT iptables -P OUTPUT ACCEPT iptables -F INPUT #iptables -F FORWARD #iptables -F OUTPUT function clean_networks { grep -v ^# | awk &#39;{print $1}&#39; |grep -v ^$ } # Quick and dirty iptables firewall # We want to drop traffic for any open port if its not in the allowed list of IP addresses # function list_allowed_networks { # the 1918 subnets cat &lt;&lt; EOF | clean_networks 10.">
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="generator" content="Hugo 0.120.3">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -36,6 +36,7 @@ Only specific networks are allowed.
 <meta property="og:url" content="http://sigmonsays.github.io/notes/firewall/" /><meta property="article:section" content="notes" />
 <meta property="article:published_time" content="2014-09-12T09:38:41-07:00" />
 <meta property="article:modified_time" content="2014-09-12T09:38:41-07:00" />
+
 <meta itemprop="name" content="firewall">
 <meta itemprop="description" content="Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.
 Only specific networks are allowed.

@@ -6,80 +6,66 @@
     <description>Recent content in misc on sigmonsays</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Apr 2020 13:32:59 -0700</lastBuildDate><atom:link href="http://sigmonsays.github.io/tags/misc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Apr 2020 13:32:59 -0700</lastBuildDate>
+    <atom:link href="http://sigmonsays.github.io/tags/misc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Trump</title>
       <link>http://sigmonsays.github.io/post/trump/</link>
       <pubDate>Fri, 24 Apr 2020 13:32:59 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/trump/</guid>
       <description>Trump owes millions to state-owned bank in China https://www.salon.com/2020/04/24/newly-revealed-financial-records-show-trump-owes-millions-to-state-owned-bank-in-china-report/
 trump will rip off anyone even if he says he&amp;rsquo;ll pay https://www.independent.co.uk/news/world/americas/i-sold-trump-100000-worth-of-pianos-then-he-stiffed-me-a7335951.html</description>
     </item>
-    
     <item>
       <title>Pinterest invades google</title>
       <link>http://sigmonsays.github.io/post/pinterest-sucks/</link>
       <pubDate>Sun, 18 Mar 2018 10:38:37 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/pinterest-sucks/</guid>
       <description>Pinterest is awful.
 This has been growing for years. Here is the typical situation I think more people run into than you think. When you are looking for an image on google image search and find what you are looking for by thumbnail, and click through just to be taken to pinterest.com. Once you land here, you do not see any fragment of what you came for. Instead, you are confronted with a sign up page.</description>
     </item>
-    
     <item>
       <title>bash</title>
       <link>http://sigmonsays.github.io/bash/</link>
       <pubDate>Fri, 01 Dec 2017 10:38:37 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/bash/</guid>
       <description>I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page primarily serves as short snippets of bash recipes I often want to re-use.
 A lot of this bash is old and wrong, because I learned bash so long ago (1998?). Refer to http://mywiki.wooledge.org/BashGuide for proper rules.
 Simple Logging Redirect Human Size Simple Logging Redirect If you have a bash script you wish to add logging to a simple approach is to use exec and redirect the output to a file.</description>
     </item>
-    
     <item>
       <title>why use the go programming language?</title>
       <link>http://sigmonsays.github.io/post/why-go/</link>
       <pubDate>Thu, 16 Nov 2017 10:27:27 -0800</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/why-go/</guid>
       <description>I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors needed to operate on a workqueue. This daemon is actually still in produciton today =P</description>
     </item>
-    
     <item>
       <title>bunny</title>
       <link>http://sigmonsays.github.io/notes/bunny/</link>
       <pubDate>Mon, 17 Oct 2016 14:27:30 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/notes/bunny/</guid>
       <description> </description>
     </item>
-    
     <item>
       <title>random musings</title>
       <link>http://sigmonsays.github.io/post/random-musings/</link>
       <pubDate>Sun, 16 Oct 2016 19:51:52 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/random-musings/</guid>
       <description>Would you rather fight 100 duck sized horses or one horse sized duck? Bill Murray weights in https://www.youtube.com/watch?v=THUGHEJjjGc</description>
     </item>
-    
     <item>
       <title>interesting tech</title>
       <link>http://sigmonsays.github.io/notes/interesting-tech/</link>
       <pubDate>Sun, 16 Oct 2016 14:50:29 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/notes/interesting-tech/</guid>
       <description>Table of Contents
 2023 Jan 2018 Oct 2016 hitless haproxy reload go jira http2 keylog xo teleport sftp server library in go toasteroid httpcache Feb 2016 Jan 2016 Nov 2015 Jan 2015 Index Feb 2019 Link Description https://landscape.cncf.io/ the CNCF landscape makes me want to cry Jan 2018 Link Description https://github.com/lewish/asciiflow2 and http://asciiflow.com/ ascii art draw tool. https://github.com/benhoyt/goawk awk fully implemented in go and passes &amp;rsquo;the awk test&#39; Oct 2016 gmx - similar to jmx but for go https://github.</description>
     </item>
-    
     <item>
       <title>golang FAQ</title>
       <link>http://sigmonsays.github.io/post/golang-faq/</link>
       <pubDate>Tue, 20 Sep 2016 12:47:58 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/golang-faq/</guid>
       <description>Sections
 Network Programming in go Installing golang tools Errors are values Network programming in Go http://whispering-gophers.appspot.com/talk.slide#1
@@ -88,56 +74,46 @@ answer
 typical solution is to install tools in a different GOPATH
 export GOPATH=&amp;quot;$HOME/go&amp;quot; export PATH=&amp;quot;$GOPATH/bin:$PATH&amp;quot; go get -u golang.org/x/tools/cmd/goimports The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion.</description>
     </item>
-    
     <item>
       <title>hitler uses docker</title>
       <link>http://sigmonsays.github.io/post/hitler-uses-docker/</link>
       <pubDate>Mon, 11 Apr 2016 11:23:01 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/hitler-uses-docker/</guid>
       <description>video
 https://www.youtube.com/watch?v=PivpCKEiQOQ
 transcript ------------------------------- we pushed the images to dockerhub, then used docker-compose to deploy to the cluster we mounted data volumes on these nodes and linked app container here finally we&#39;ve updated the DNS records hitler: so we&#39;re running 20 containers on every node now. when can we get rid of the excess servers? mein fuhrer... the kernel... A 3rd party container caused a panic... we&#39;ve lost 70% of the cluster and the data volumes .</description>
     </item>
-    
     <item>
       <title>enlightenment</title>
       <link>http://sigmonsays.github.io/post/enlightenment/</link>
       <pubDate>Tue, 09 Feb 2016 17:10:00 -0800</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/enlightenment/</guid>
       <description>Update: August 2019 I have switched to i3wm (for some time now) exclusively due to its speed and lightweight. I&amp;rsquo;ll have to write a post about that experience some time.
 e20 enlightenment has been my window manager of choice for a very long time maintly because of its speed. I used to run window maker and then fluxbox before I made the switch to enlightenment (0.16 at the time iirc).</description>
     </item>
-    
     <item>
       <title>keybase</title>
       <link>http://sigmonsays.github.io/keybase/</link>
       <pubDate>Fri, 05 Feb 2016 18:28:35 -0800</pubDate>
-      
       <guid>http://sigmonsays.github.io/keybase/</guid>
       <description>my keybase profile is https://keybase.io/sigmonsays
 keybase proof for this site here https://sigmonsays.github.io/keybase.txt
 my public key can be downloaded from https://keybase.io/sigmonsays/key.asc or copied and pasted below:
 -----BEGIN PGP PUBLIC KEY BLOCK----- Version: Keybase OpenPGP v2.0.49 Comment: https://keybase.io/crypto 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 =5/I3 -----END PGP PUBLIC KEY BLOCK----- </description>
     </item>
-    
     <item>
       <title>convenient cli tookit using python</title>
       <link>http://sigmonsays.github.io/post/pythonstartup/</link>
       <pubDate>Tue, 03 Feb 2015 11:59:36 -0800</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/pythonstartup/</guid>
       <description>python is a incredibly useful language and has a powerful type system which can be pretty convenient. I&amp;rsquo;ve written python for many years now and when I need a quick tool, most the time I write it in python.
 These tools have built up over time and i&amp;rsquo;ve been collecting them organically into a python startup file as a set of libraries and functions.
 create a file in $HOME/.pythonstartup and cherry pick anything below that you find useful.</description>
     </item>
-    
     <item>
       <title>Google Owned</title>
       <link>http://sigmonsays.github.io/post/google-owned/</link>
       <pubDate>Mon, 05 Jan 2015 10:38:37 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/google-owned/</guid>
       <description>Ever think about how much information google has collected about you?
 Apart from services there are additional things going on that you might not be aware of
@@ -148,12 +124,10 @@ AndroidID, Google Ad ID
 [1] https://www.scss.tcd.ie/Doug.Leith/Android_privacy_report.pdf
 Location Services In addition to GPS tracking, there is a service that runs on android phones and looks at available wifi networks to determine your location.</description>
     </item>
-    
     <item>
       <title>go powered databases</title>
       <link>http://sigmonsays.github.io/post/go-powered-databases/</link>
       <pubDate>Sat, 29 Nov 2014 10:45:05 -0800</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/go-powered-databases/</guid>
       <description>bolt - https://github.com/boltdb/bolt ledis - http://ledisdb.com/ tiedot - https://github.com/HouzuoGuo/tiedot cockroachdb - https://github.com/cockroachdb/cockroach bolt pure go key-value datastore
 ledis redis like database written in go
@@ -164,44 +138,36 @@ design document https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF
 feature summary
 ACID transactional semantics versioned values primary design goal is consistency and survivability aims to tolerate disk, server, rack and datacenter failures related technologies</description>
     </item>
-    
     <item>
       <title>ban systemd</title>
       <link>http://sigmonsays.github.io/post/ban-systemd/</link>
       <pubDate>Mon, 22 Sep 2014 21:26:16 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/ban-systemd/</guid>
       <description>updates Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
 Just another reason to do one thing well and not try to do too much. C&amp;rsquo;mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread &amp;ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.</description>
     </item>
-    
     <item>
       <title>firewall</title>
       <link>http://sigmonsays.github.io/notes/firewall/</link>
       <pubDate>Fri, 12 Sep 2014 09:38:41 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/notes/firewall/</guid>
       <description>Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.
 Only specific networks are allowed.
 #!/bin/bash #set -x iptables -P INPUT ACCEPT iptables -P FORWARD ACCEPT iptables -P OUTPUT ACCEPT iptables -F INPUT #iptables -F FORWARD #iptables -F OUTPUT function clean_networks { grep -v ^# | awk &amp;#39;{print $1}&amp;#39; |grep -v ^$ } # Quick and dirty iptables firewall # We want to drop traffic for any open port if its not in the allowed list of IP addresses # function list_allowed_networks { # the 1918 subnets cat &amp;lt;&amp;lt; EOF | clean_networks 10.</description>
     </item>
-    
     <item>
       <title>building packages with docker</title>
       <link>http://sigmonsays.github.io/post/building-packages-with-docker/</link>
       <pubDate>Thu, 11 Sep 2014 15:32:44 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/building-packages-with-docker/</guid>
       <description>This is a simple idea I had while waiting for a build to complete.
 The background Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script takes a minimal base image tarball and installs all dependencies in it required to build your package.
 The build dependencies come from debian/control Build-Depends section. The package being built is a python application using virtualenv. A lot of the packages come from apt however.</description>
     </item>
-    
     <item>
       <title>docker wishlist</title>
       <link>http://sigmonsays.github.io/post/docker-wishlist/</link>
       <pubDate>Sun, 07 Sep 2014 19:37:21 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/docker-wishlist/</guid>
       <description>things I find that I wish docker supported
 dockerfile store build context with the image
@@ -209,15 +175,12 @@ provides ability to change original dockerfile for images you download saves doc
 There is very little that the dockerfile actually supports beyond basic static directives.
 If dockerfile supported templates and variables, we could allow repetitive lines to be reduced to the bare minimum.</description>
     </item>
-    
     <item>
       <title>Sudo</title>
       <link>http://sigmonsays.github.io/post/sudo/</link>
       <pubDate>Tue, 02 Sep 2014 09:38:41 -0700</pubDate>
-      
       <guid>http://sigmonsays.github.io/post/sudo/</guid>
       <description> </description>
     </item>
-    
   </channel>
 </rss>
