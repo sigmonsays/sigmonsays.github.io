@@ -38,6 +38,11 @@ https://github.com/peterldowns/nix-search-cli
 nix-pills: Interesting information if you want to know how nix works. A little dated.
 https://nixos.org/nixos/nix-pills
 
+nix packge versions - https://lazamar.co.uk/nix-versions/
+- unstable https://lazamar.co.uk/nix-versions/?channel=nixpkgs-unstable&package=hugo
+nix package versions can be useful for finding the commit where a particular version
+of a package exists.
+
 # flakes
 
 
