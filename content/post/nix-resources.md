@@ -70,12 +70,14 @@ option search
 https://mipmip.github.io/home-manager-option-search/
 
 
-# hydra
+# hydra (build system)
 hydra is the build system for nix and nixos
 
 watch when a github pr lands in a channel
 https://nixpk.gs/pr-tracker.html?pr=268800
 
+reproducible builds
+https://reproducible.nixos.org/
 
 # Fun Stuff
 
