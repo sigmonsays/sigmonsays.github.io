@@ -28,6 +28,8 @@ help:
 	# you likely want 'make p' (make publish)
 #gen: $(HUGO)
 
+g: gen
+
 gen:
 	@echo building site..
 	$(HUGO) -t $(THEME) -d ./docs

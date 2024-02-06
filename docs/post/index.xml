@@ -14,14 +14,14 @@
       <pubDate>Fri, 02 Feb 2024 06:07:08 -0700</pubDate>
       <guid>http://sigmonsays.github.io/post/nix-resources/</guid>
       <description>Table of Contents
-nix flakes nixos home-manager hydra Fun Stuff the biggest hurdle in getting into nix is having the revelvant documentation available. This page is just another collection of useful resources to support success.
+nix flakes nixos home-manager hydra (build system) Fun Stuff the biggest hurdle in getting into nix is having the revelvant documentation available. This page is just another collection of useful resources to support success.
 nix nix the language
 nixhub https://www.nixhub.io/packages/mysql
 newer documentation https://nix.dev/
 nix-search-cli https://github.com/peterldowns/nix-search-cli
 nix-pills: Interesting information if you want to know how nix works. A little dated. https://nixos.org/nixos/nix-pills
 nix packge versions - https://lazamar.co.uk/nix-versions/
-unstable https://lazamar.co.uk/nix-versions/?channel=nixpkgs-unstable&amp;amp;package=hugo nix package versions can be useful for finding the commit where a particular version of a package exists.</description>
+unstable https://lazamar.</description>
     </item>
     <item>
       <title>picman: photo sorting tool</title>

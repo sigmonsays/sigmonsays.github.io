@@ -13,7 +13,7 @@ tags = [ "nix" ]
 - [flakes](#flakes)
 - [nixos](#nixos)
 - [home-manager](#home-manager)
-- [hydra](#hydra)
+- [hydra (build system)](#hydra-build-system)
 - [Fun Stuff](#fun-stuff)
 
 <!-- markdown-toc end -->
