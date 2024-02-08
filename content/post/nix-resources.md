@@ -60,6 +60,8 @@ https://search.nixos.org/options?channel=unstable&size=50&sort=relevance&type=pa
 wiki
 https://nixos.wiki/
 
+Search the NUR (Nix User Repositories)
+https://nur.nix-community.org/
 
 
 # home-manager
