@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>systemd on sigmonsays</title>
+    <title>Systemd on sigmonsays</title>
     <link>http://sigmonsays.github.io/tags/systemd/</link>
-    <description>Recent content in systemd on sigmonsays</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Systemd on sigmonsays</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 22 Sep 2014 21:26:16 -0700</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,7 @@
       <link>http://sigmonsays.github.io/post/ban-systemd/</link>
       <pubDate>Mon, 22 Sep 2014 21:26:16 -0700</pubDate>
       <guid>http://sigmonsays.github.io/post/ban-systemd/</guid>
-      <description>updates Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
-Just another reason to do one thing well and not try to do too much. C&amp;rsquo;mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread &amp;ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.</description>
+      <description>updates Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335&#xA;Just another reason to do one thing well and not try to do too much. C&amp;rsquo;mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread &amp;ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.</description>
     </item>
   </channel>
 </rss>

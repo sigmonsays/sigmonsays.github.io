@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://sigmonsays.github.io/post/</loc>
+    <lastmod>2024-06-11T01:02:03-07:00</lastmod>
+  </url><url>
+    <loc>http://sigmonsays.github.io/</loc>
+    <lastmod>2024-06-11T01:02:03-07:00</lastmod>
+  </url><url>
     <loc>http://sigmonsays.github.io/tags/nix/</loc>
     <lastmod>2024-02-02T06:07:08-07:00</lastmod>
   </url><url>
     <loc>http://sigmonsays.github.io/post/nix-resources/</loc>
-    <lastmod>2024-02-02T06:07:08-07:00</lastmod>
-  </url><url>
-    <loc>http://sigmonsays.github.io/post/</loc>
-    <lastmod>2024-02-02T06:07:08-07:00</lastmod>
-  </url><url>
-    <loc>http://sigmonsays.github.io/</loc>
     <lastmod>2024-02-02T06:07:08-07:00</lastmod>
   </url><url>
     <loc>http://sigmonsays.github.io/tags/</loc>
@@ -83,10 +83,10 @@
     <loc>http://sigmonsays.github.io/post/screenshot/</loc>
     <lastmod>2017-12-06T13:01:02-07:00</lastmod>
   </url><url>
-    <loc>http://sigmonsays.github.io/tags/bash/</loc>
+    <loc>http://sigmonsays.github.io/bash/</loc>
     <lastmod>2017-12-01T10:38:37-07:00</lastmod>
   </url><url>
-    <loc>http://sigmonsays.github.io/bash/</loc>
+    <loc>http://sigmonsays.github.io/tags/bash/</loc>
     <lastmod>2017-12-01T10:38:37-07:00</lastmod>
   </url><url>
     <loc>http://sigmonsays.github.io/projects/</loc>
@@ -128,10 +128,10 @@
     <loc>http://sigmonsays.github.io/post/enlightenment/</loc>
     <lastmod>2016-02-09T17:10:00-08:00</lastmod>
   </url><url>
-    <loc>http://sigmonsays.github.io/tags/keybase/</loc>
+    <loc>http://sigmonsays.github.io/keybase/</loc>
     <lastmod>2016-02-05T18:28:35-08:00</lastmod>
   </url><url>
-    <loc>http://sigmonsays.github.io/keybase/</loc>
+    <loc>http://sigmonsays.github.io/tags/keybase/</loc>
     <lastmod>2016-02-05T18:28:35-08:00</lastmod>
   </url><url>
     <loc>http://sigmonsays.github.io/tags/pgp/</loc>

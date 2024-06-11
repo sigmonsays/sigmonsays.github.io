@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>emacs on sigmonsays</title>
+    <title>Emacs on sigmonsays</title>
     <link>http://sigmonsays.github.io/tags/emacs/</link>
-    <description>Recent content in emacs on sigmonsays</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Emacs on sigmonsays</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 14 Nov 2022 08:57:49 -0800</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,7 @@
       <link>http://sigmonsays.github.io/post/emacs/</link>
       <pubDate>Mon, 14 Nov 2022 08:57:49 -0800</pubDate>
       <guid>http://sigmonsays.github.io/post/emacs/</guid>
-      <description>This document will be a living document that i&amp;rsquo;ll attempt to update from time to time
-Table of Contents
-Intro Pico and Nano Vim doom emacs emacs28 with native compilation Markdown mode Org mode and babel Intro I&amp;rsquo;ve been using doom-emacs for over a year now (since March 2021) and this is my personal experiences with it.
-I do not put a ton of effort into editors, rather I spend a chunk of time intermittently.</description>
+      <description>This document will be a living document that i&amp;rsquo;ll attempt to update from time to time&#xA;Table of Contents&#xA;Intro Pico and Nano Vim doom emacs emacs28 with native compilation Markdown mode Org mode and babel Intro I&amp;rsquo;ve been using doom-emacs for over a year now (since March 2021) and this is my personal experiences with it.&#xA;I do not put a ton of effort into editors, rather I spend a chunk of time intermittently.</description>
     </item>
   </channel>
 </rss>

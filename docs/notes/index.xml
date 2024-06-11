@@ -4,7 +4,7 @@
     <title>Notes on sigmonsays</title>
     <link>http://sigmonsays.github.io/notes/</link>
     <description>Recent content in Notes on sigmonsays</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 17 Oct 2016 14:27:30 -0700</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
@@ -20,17 +20,14 @@
       <link>http://sigmonsays.github.io/notes/interesting-tech/</link>
       <pubDate>Sun, 16 Oct 2016 14:50:29 -0700</pubDate>
       <guid>http://sigmonsays.github.io/notes/interesting-tech/</guid>
-      <description>Table of Contents
-2023 Jan 2018 Oct 2016 hitless haproxy reload go jira http2 keylog xo teleport sftp server library in go toasteroid httpcache Feb 2016 Jan 2016 Nov 2015 Jan 2015 Index Feb 2019 Link Description https://landscape.cncf.io/ the CNCF landscape makes me want to cry Jan 2018 Link Description https://github.com/lewish/asciiflow2 and http://asciiflow.com/ ascii art draw tool. https://github.com/benhoyt/goawk awk fully implemented in go and passes &amp;rsquo;the awk test&#39; Oct 2016 gmx - similar to jmx but for go https://github.</description>
+      <description>Table of Contents&#xA;2023 Jan 2018 Oct 2016 hitless haproxy reload go jira http2 keylog xo teleport sftp server library in go toasteroid httpcache Feb 2016 Jan 2016 Nov 2015 Jan 2015 Index Feb 2019 Link Description https://landscape.cncf.io/ the CNCF landscape makes me want to cry Jan 2018 Link Description https://github.com/lewish/asciiflow2 and http://asciiflow.com/ ascii art draw tool. https://github.com/benhoyt/goawk awk fully implemented in go and passes &amp;rsquo;the awk test&#39; Oct 2016 gmx - similar to jmx but for go https://github.</description>
     </item>
     <item>
       <title>firewall</title>
       <link>http://sigmonsays.github.io/notes/firewall/</link>
       <pubDate>Fri, 12 Sep 2014 09:38:41 -0700</pubDate>
       <guid>http://sigmonsays.github.io/notes/firewall/</guid>
-      <description>Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.
-Only specific networks are allowed.
-#!/bin/bash #set -x iptables -P INPUT ACCEPT iptables -P FORWARD ACCEPT iptables -P OUTPUT ACCEPT iptables -F INPUT #iptables -F FORWARD #iptables -F OUTPUT function clean_networks { grep -v ^# | awk &amp;#39;{print $1}&amp;#39; |grep -v ^$ } # Quick and dirty iptables firewall # We want to drop traffic for any open port if its not in the allowed list of IP addresses # function list_allowed_networks { # the 1918 subnets cat &amp;lt;&amp;lt; EOF | clean_networks 10.</description>
+      <description>Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.&#xA;Only specific networks are allowed.&#xA;#!/bin/bash #set -x iptables -P INPUT ACCEPT iptables -P FORWARD ACCEPT iptables -P OUTPUT ACCEPT iptables -F INPUT #iptables -F FORWARD #iptables -F OUTPUT function clean_networks { grep -v ^# | awk &amp;#39;{print $1}&amp;#39; |grep -v ^$ } # Quick and dirty iptables firewall # We want to drop traffic for any open port if its not in the allowed list of IP addresses # function list_allowed_networks { # the 1918 subnets cat &amp;lt;&amp;lt; EOF | clean_networks 10.</description>
     </item>
   </channel>
 </rss>

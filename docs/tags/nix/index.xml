@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>nix on sigmonsays</title>
+    <title>Nix on sigmonsays</title>
     <link>http://sigmonsays.github.io/tags/nix/</link>
-    <description>Recent content in nix on sigmonsays</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Nix on sigmonsays</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Feb 2024 06:07:08 -0700</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/tags/nix/index.xml" rel="self" type="application/rss+xml" />
@@ -13,56 +13,35 @@
       <link>http://sigmonsays.github.io/post/nix-resources/</link>
       <pubDate>Fri, 02 Feb 2024 06:07:08 -0700</pubDate>
       <guid>http://sigmonsays.github.io/post/nix-resources/</guid>
-      <description>Table of Contents
-nix flakes nixos home-manager hydra (build system) Fun Stuff the biggest hurdle in getting into nix is having the revelvant documentation available. This page is just another collection of useful resources to support success.
-nix nix the language
-nixhub https://www.nixhub.io/packages/mysql
-newer documentation https://nix.dev/
-nix-search-cli https://github.com/peterldowns/nix-search-cli
-nix-pills: Interesting information if you want to know how nix works. A little dated. https://nixos.org/nixos/nix-pills
-nix packge versions - https://lazamar.co.uk/nix-versions/
-unstable https://lazamar.</description>
+      <description>Table of Contents&#xA;nix flakes nixos home-manager hydra (build system) Fun Stuff the biggest hurdle in getting into nix is having the revelvant documentation available. This page is just another collection of useful resources to support success.&#xA;nix nix the language&#xA;nixhub https://www.nixhub.io/packages/mysql&#xA;newer documentation https://nix.dev/&#xA;nix-search-cli https://github.com/peterldowns/nix-search-cli&#xA;nix-pills: Interesting information if you want to know how nix works. A little dated. https://nixos.org/nixos/nix-pills&#xA;nix packge versions - https://lazamar.co.uk/nix-versions/&#xA;unstable https://lazamar.</description>
     </item>
     <item>
       <title>nix tip: nvd to see what is going to change</title>
       <link>http://sigmonsays.github.io/post/nix-tip-nvd/</link>
       <pubDate>Wed, 27 Dec 2023 06:07:08 -0700</pubDate>
       <guid>http://sigmonsays.github.io/post/nix-tip-nvd/</guid>
-      <description>have you ever wanted to see what packages are going to change before updating them on nix?
-Well read on to find out how to do this with home-manager and nixos
-First, there is a few different ways i came across
-Table of Contents
-A naive approach nix store diff-closure nvd nix-diff A naive approach I wondered since everything is in the nix store, why not just diff it?
-So as an experiment I set off to do just that</description>
+      <description>have you ever wanted to see what packages are going to change before updating them on nix?&#xA;Well read on to find out how to do this with home-manager and nixos&#xA;First, there is a few different ways i came across&#xA;Table of Contents&#xA;A naive approach nix store diff-closure nvd nix-diff A naive approach I wondered since everything is in the nix store, why not just diff it?&#xA;So as an experiment I set off to do just that</description>
     </item>
     <item>
       <title>nix tip: shell shabang</title>
       <link>http://sigmonsays.github.io/post/nix-tip-shabang/</link>
       <pubDate>Wed, 20 Dec 2023 06:07:08 -0700</pubDate>
       <guid>http://sigmonsays.github.io/post/nix-tip-shabang/</guid>
-      <description>A feature I discovered recently is that nix-shell can be used as an interpreter
-#!/usr/bin/env nix-shell #!nix-shell -i bash -p bash htop echo hello world which htop It even works for python
-#!/usr/bin/env nix-shell #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor # scale image by 50% import sys, PIL.Image, ansicolor path = sys.argv[1] image = PIL.Image.open(path) factor = 0.5 image = image.resize((round(image.width * factor), round(image.height * factor))) path = path + &amp;quot;.</description>
+      <description>A feature I discovered recently is that nix-shell can be used as an interpreter&#xA;#!/usr/bin/env nix-shell #!nix-shell -i bash -p bash htop echo hello world which htop It even works for python&#xA;#!/usr/bin/env nix-shell #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor # scale image by 50% import sys, PIL.Image, ansicolor path = sys.argv[1] image = PIL.Image.open(path) factor = 0.5 image = image.resize((round(image.width * factor), round(image.height * factor))) path = path + &amp;quot;.</description>
     </item>
     <item>
       <title>nix-direnv</title>
       <link>http://sigmonsays.github.io/post/nix-direnv/</link>
       <pubDate>Thu, 14 Dec 2023 06:07:08 -0700</pubDate>
       <guid>http://sigmonsays.github.io/post/nix-direnv/</guid>
-      <description>Table of Contents
-direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website Emacs hey gcroots, save some of that garbage! References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
-direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd to a specific directory.</description>
+      <description>Table of Contents&#xA;direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website Emacs hey gcroots, save some of that garbage! References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.&#xA;direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd to a specific directory.</description>
     </item>
     <item>
       <title>nix and nixos</title>
       <link>http://sigmonsays.github.io/post/nix/</link>
       <pubDate>Wed, 05 Jul 2023 01:23:45 -0700</pubDate>
       <guid>http://sigmonsays.github.io/post/nix/</guid>
-      <description>Table of Contents
-Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes Resources Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
-Nix overall has so many features that it&amp;rsquo;s worth understanding what&amp;rsquo;s possible
-with nix you can
-build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows+WSL nix cache (https://cachix.</description>
+      <description>Table of Contents&#xA;Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes Resources Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.&#xA;Nix overall has so many features that it&amp;rsquo;s worth understanding what&amp;rsquo;s possible&#xA;with nix you can&#xA;build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows+WSL nix cache (https://cachix.</description>
     </item>
   </channel>
 </rss>

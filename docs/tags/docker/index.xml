@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>docker on sigmonsays</title>
+    <title>Docker on sigmonsays</title>
     <link>http://sigmonsays.github.io/tags/docker/</link>
-    <description>Recent content in docker on sigmonsays</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Docker on sigmonsays</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 11 Sep 2014 15:32:44 -0700</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
@@ -13,19 +13,14 @@
       <link>http://sigmonsays.github.io/post/building-packages-with-docker/</link>
       <pubDate>Thu, 11 Sep 2014 15:32:44 -0700</pubDate>
       <guid>http://sigmonsays.github.io/post/building-packages-with-docker/</guid>
-      <description>This is a simple idea I had while waiting for a build to complete.
-The background Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script takes a minimal base image tarball and installs all dependencies in it required to build your package.
-The build dependencies come from debian/control Build-Depends section. The package being built is a python application using virtualenv. A lot of the packages come from apt however.</description>
+      <description>This is a simple idea I had while waiting for a build to complete.&#xA;The background Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script takes a minimal base image tarball and installs all dependencies in it required to build your package.&#xA;The build dependencies come from debian/control Build-Depends section. The package being built is a python application using virtualenv. A lot of the packages come from apt however.</description>
     </item>
     <item>
       <title>docker networking performance</title>
       <link>http://sigmonsays.github.io/post/docker-networking-performance/</link>
       <pubDate>Fri, 05 Sep 2014 07:33:28 -0700</pubDate>
       <guid>http://sigmonsays.github.io/post/docker-networking-performance/</guid>
-      <description>While trying to determine the performance overhead of a simple docker container setup, I discovered several issues related to network performance.
-two issues I have encountered
-docker-proxy handles local network traffic when using the hosts bridge IP (or localhost) connection tracking overhead of NAT increases memory usage my setup
-I am using docker containers as an easy way to deploy backends on a host. I wish to use the hosts bridge IP as a backend to route requests from the load balancer.</description>
+      <description>While trying to determine the performance overhead of a simple docker container setup, I discovered several issues related to network performance.&#xA;two issues I have encountered&#xA;docker-proxy handles local network traffic when using the hosts bridge IP (or localhost) connection tracking overhead of NAT increases memory usage my setup&#xA;I am using docker containers as an easy way to deploy backends on a host. I wish to use the hosts bridge IP as a backend to route requests from the load balancer.</description>
     </item>
   </channel>
 </rss>

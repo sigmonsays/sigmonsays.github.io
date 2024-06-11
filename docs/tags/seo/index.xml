@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>seo on sigmonsays</title>
+    <title>Seo on sigmonsays</title>
     <link>http://sigmonsays.github.io/tags/seo/</link>
-    <description>Recent content in seo on sigmonsays</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Seo on sigmonsays</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 Mar 2018 10:38:37 -0700</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/tags/seo/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,7 @@
       <link>http://sigmonsays.github.io/post/pinterest-sucks/</link>
       <pubDate>Sun, 18 Mar 2018 10:38:37 -0700</pubDate>
       <guid>http://sigmonsays.github.io/post/pinterest-sucks/</guid>
-      <description>Pinterest is awful.
-This has been growing for years. Here is the typical situation I think more people run into than you think. When you are looking for an image on google image search and find what you are looking for by thumbnail, and click through just to be taken to pinterest.com. Once you land here, you do not see any fragment of what you came for. Instead, you are confronted with a sign up page.</description>
+      <description>Pinterest is awful.&#xA;This has been growing for years. Here is the typical situation I think more people run into than you think. When you are looking for an image on google image search and find what you are looking for by thumbnail, and click through just to be taken to pinterest.com. Once you land here, you do not see any fragment of what you came for. Instead, you are confronted with a sign up page.</description>
     </item>
   </channel>
 </rss>
