@@ -12,8 +12,11 @@ tags = [ "degoogle", "photos" ]
 
 - [Introduction](#introduction)
 - [Walled garden](#walled-garden)
-- [syncthing](#syncthing)
 - [The solution](#the-solution)
+- [syncthing](#syncthing)
+- [picman](#picman)
+- [photoprism](#photoprism)
+- [honorable mention: Photostructure](#honorable-mention-photostructure)
 
 <!-- markdown-toc end -->
 
@@ -22,18 +25,40 @@ tags = [ "degoogle", "photos" ]
 
 Google photos was amazing in the beginning, the photos application did what I wanted and in general it was a good experience
 
-I was an early adopter, so I had a lifetime of photos stored in google photos. 
+I was an early adopter, so I had a plethora of photos stored in google photos. 
+
+Some of the features were pretty useful such as facial recognition and automatic event creation but they didn't 
+really end up being needed.
+
 
 # Walled garden
 
 they stopped supporting integrations and tightened the walled garden.
 
-I was trying to use rclone to backup my photos, then removed the ability to access the originals. That is via the API any downloaded images will not be in the original resolution or quality. Other tools fell short as they continued to lock my data up. Google drive used to show photos as well but that was removed.
+I was trying to use rclone to backup my photos, but google removed the ability to access the originals. That is via the 
+API any downloaded images will not be in the original resolution or quality. Other tools (like drive) fell short as they continued 
+to lock my data up. 
+
+At one point photos could be accessed from google drive, but that was also removed.
 
 The exact order of events evades me but what was demonstrated time and time again was they wanted me stuck there. 
 
-The final straw was when I ran out of space and was told I needed to buy new. So I cleaned up some data to buy some time, did a photos takeout
+I began to care more about security after realizing that I am the product if the service is free. Google can and will use 
+metadata it collects from photos.
+
+because of facial recognition and location tracking security concerns, I began looking for alternatives. I do not want anyone 
+I take a photo of (directly or indirectly) being indexed. It is very big brother.
+
+The final straw was when I ran out of space and was told I needed to buy more. So I cleaned up some data to buy some time, did a photos takeout
 and begin my research.
+
+# The solution
+
+use [Syncthing](#syncthing) to copy originals from my phone to my server
+
+use [picman](#picman) as a way to automatically organize the photos on my NAS
+
+use [photoprism](#photoprism) as a webUI to look at photos
 
 # syncthing
 
@@ -54,9 +79,13 @@ This is the interface I settled on.
 
 It seems stable enough and does the job well.
 
-# Photostructure
+I turned off facial recognition
 
-I want to mention photostructure but I spent so much time trying to get it working
+# honorable mention: Photostructure
 
-It would randomly hang and stop importing and I dont know why
+I want to mention photostructure because I really liked the UI and UX, but I spent too much time 
+trying to get it working and be stable.
+
+The TLDR is it would randomly hang and stop importing and I could never figure out know why. I think
+it has some issues on large videos of large HEIC files.
 
