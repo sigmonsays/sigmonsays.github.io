@@ -6,13 +6,13 @@
     <description>Recent content in Tags on sigmonsays</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Feb 2024 06:07:08 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jun 2024 01:02:03 -0700</lastBuildDate>
     <atom:link href="http://sigmonsays.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Nix</title>
-      <link>http://sigmonsays.github.io/tags/nix/</link>
+      <title>Degoogle</title>
+      <link>http://sigmonsays.github.io/tags/degoogle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://sigmonsays.github.io/tags/nix/</guid>
+      <guid>http://sigmonsays.github.io/tags/degoogle/</guid>
       <description></description>
     </item>
     <item>
@@ -20,6 +20,13 @@
       <link>http://sigmonsays.github.io/tags/photos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://sigmonsays.github.io/tags/photos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nix</title>
+      <link>http://sigmonsays.github.io/tags/nix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://sigmonsays.github.io/tags/nix/</guid>
       <description></description>
     </item>
     <item>

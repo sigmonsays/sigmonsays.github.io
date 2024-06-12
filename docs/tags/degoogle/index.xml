@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Photos on sigmonsays</title>
-    <link>http://sigmonsays.github.io/tags/photos/</link>
-    <description>Recent content in Photos on sigmonsays</description>
+    <title>Degoogle on sigmonsays</title>
+    <link>http://sigmonsays.github.io/tags/degoogle/</link>
+    <description>Recent content in Degoogle on sigmonsays</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 11 Jun 2024 01:02:03 -0700</lastBuildDate>
-    <atom:link href="http://sigmonsays.github.io/tags/photos/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://sigmonsays.github.io/tags/degoogle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>my alternative to google photos</title>
       <link>http://sigmonsays.github.io/post/degoogle-photos/</link>
       <pubDate>Tue, 11 Jun 2024 01:02:03 -0700</pubDate>
       <guid>http://sigmonsays.github.io/post/degoogle-photos/</guid>
       <description>Table of Contents&#xA;Introduction Walled garden The solution syncthing picman photoprism honorable mention: Photostructure Introduction Google photos was amazing in the beginning, the photos application did what I wanted and in general it was a good experience&#xA;I was somewhat of an early adopter, so I had a plethora of photos stored in google photos. I didn&amp;rsquo;t really have to think about photos, it was just handled for me.</description>
-    </item>
-    <item>
-      <title>picman: photo sorting tool</title>
-      <link>http://sigmonsays.github.io/post/picman/</link>
-      <pubDate>Sun, 31 Dec 2023 10:58:55 -0800</pubDate>
-      <guid>http://sigmonsays.github.io/post/picman/</guid>
-      <description>github https://github.com/sigmonsays/picman&#xA;I wrote a basic tool to replace my krufty bash scripts that imports my photos from various locations into their final resting place.&#xA;The tool operates in steps where each step is kind of idempotent. The set of all steps is called a workflow and operates on a single file. see code.&#xA;Each step operates on the same workflow object, which primarily has a state object&#xA;State Object code</description>
     </item>
   </channel>
 </rss>
