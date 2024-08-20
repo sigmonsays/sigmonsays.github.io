@@ -1,2 +1,5 @@
 
 - write about the chaos that is python packaging
+- create a degoogle page and continue the theme
+  - write about what they did to nest and destroyed nest for a while
+    - also how crazy it is to setup an integration in home assistant
