@@ -6,9 +6,26 @@
     
     <title>ban systemd | sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="updates Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
-Just another reason to do one thing well and not try to do too much. C&rsquo;mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread &ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.">
-    <meta name="generator" content="Hugo 0.126.1">
+    <meta name="description" content="updates
+
+
+Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
+
+Just another reason to do one thing well and not try to do too much. C&rsquo;mon systemd, focus.
+Please help me understand why a init.d replacement needs to provide a resolver.
+some gems from this thread
+
+&ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver. To be clear, I don&rsquo;t really think it matters whether systemd-resolved is under the systemd umbrella, but I do think that the design has a lot of unnecessary NIH syndrome.&rdquo;
+&ldquo;This is a perfect example of why the systemd approach of putting a bunch of disparate components under a single tightly-coupled umbrella is bad engineering.&rdquo;
+&ldquo;It&rsquo;s mind blowing to realize that because of the init system we have on our system we are now vulnerable to DNS poisoning.&rdquo;
+
+
+anyways, give the thread a read and see for yourself how systemd should be abandoned
+
+
+
+website which describes a lot of good points - http://boycottsystemd.org/">
+    <meta name="generator" content="Hugo 0.136.5">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -31,7 +48,7 @@ Just another reason to do one thing well and not try to do too much. C&rsquo;mon
   <meta property="og:site_name" content="sigmonsays">
   <meta property="og:title" content="ban systemd">
   <meta property="og:description" content="updates Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
-Just another reason to do one thing well and not try to do too much. C’mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread “I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.">
+Just another reason to do one thing well and not try to do too much. C’mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread “I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver. To be clear, I don’t really think it matters whether systemd-resolved is under the systemd umbrella, but I do think that the design has a lot of unnecessary NIH syndrome.” “This is a perfect example of why the systemd approach of putting a bunch of disparate components under a single tightly-coupled umbrella is bad engineering.” “It’s mind blowing to realize that because of the init system we have on our system we are now vulnerable to DNS poisoning.” anyways, give the thread a read and see for yourself how systemd should be abandoned website which describes a lot of good points - http://boycottsystemd.org/">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -42,7 +59,7 @@ Just another reason to do one thing well and not try to do too much. C’mon sys
 
   <meta itemprop="name" content="ban systemd">
   <meta itemprop="description" content="updates Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
-Just another reason to do one thing well and not try to do too much. C’mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread “I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.">
+Just another reason to do one thing well and not try to do too much. C’mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread “I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver. To be clear, I don’t really think it matters whether systemd-resolved is under the systemd umbrella, but I do think that the design has a lot of unnecessary NIH syndrome.” “This is a perfect example of why the systemd approach of putting a bunch of disparate components under a single tightly-coupled umbrella is bad engineering.” “It’s mind blowing to realize that because of the init system we have on our system we are now vulnerable to DNS poisoning.” anyways, give the thread a read and see for yourself how systemd should be abandoned website which describes a lot of good points - http://boycottsystemd.org/">
   <meta itemprop="datePublished" content="2014-09-22T21:26:16-07:00">
   <meta itemprop="dateModified" content="2014-09-22T21:26:16-07:00">
   <meta itemprop="wordCount" content="362">
@@ -50,7 +67,7 @@ Just another reason to do one thing well and not try to do too much. C’mon sys
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="ban systemd">
   <meta name="twitter:description" content="updates Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
-Just another reason to do one thing well and not try to do too much. C’mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread “I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.">
+Just another reason to do one thing well and not try to do too much. C’mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread “I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver. To be clear, I don’t really think it matters whether systemd-resolved is under the systemd umbrella, but I do think that the design has a lot of unnecessary NIH syndrome.” “This is a perfect example of why the systemd approach of putting a bunch of disparate components under a single tightly-coupled umbrella is bad engineering.” “It’s mind blowing to realize that because of the init system we have on our system we are now vulnerable to DNS poisoning.” anyways, give the thread a read and see for yourself how systemd should be abandoned website which describes a lot of good points - http://boycottsystemd.org/">
 
   </head>
 

@@ -7,7 +7,7 @@
     <title>sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.126.1">
+    <meta name="generator" content="Hugo 0.136.5">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -38,6 +38,7 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="sigmonsays">
+  <meta itemprop="datePublished" content="2024-08-11T10:38:37-07:00">
   <meta itemprop="dateModified" content="2024-08-11T10:38:37-07:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="sigmonsays">
@@ -162,9 +163,22 @@
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Table of Contents
-Introduction Walled garden The solution syncthing picman photoprism honorable mention: Photostructure Introduction Google photos was amazing in the beginning, the photos application did what I wanted and in general it was a good experience
-I was somewhat of an early adopter, so I had a plethora of photos stored in google photos. I didn&rsquo;t really have to think about photos, it was just handled for me.
+          <!-- raw HTML omitted -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#walled-garden">Walled garden</a></li>
+<li><a href="#the-solution">The solution</a></li>
+<li><a href="#syncthing">syncthing</a></li>
+<li><a href="#picman">picman</a></li>
+<li><a href="#photoprism">photoprism</a></li>
+<li><a href="#honorable-mention-photostructure">honorable mention: Photostructure</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="introduction">Introduction</h1>
+<p>Google photos was amazing in the beginning, the photos application did what I wanted and in general it was a good experience</p>
+<p>I was somewhat of an early adopter, so I had a plethora of photos stored in google photos.  I didn&rsquo;t really
+have to think about photos, it was just handled for me.</p>
         </div>
           <a href="/post/degoogle-photos/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
@@ -188,15 +202,30 @@ I was somewhat of an early adopter, so I had a plethora of photos stored in goog
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Table of Contents
-nix flakes nixos home-manager hydra (build system) Fun Stuff the biggest hurdle in getting into nix is having the revelvant documentation available. This page is just another collection of useful resources to support success.
-nix nix the language
-nixhub https://www.nixhub.io/packages/mysql
-newer documentation https://nix.dev/
-nix-search-cli https://github.com/peterldowns/nix-search-cli
-nix-pills: Interesting information if you want to know how nix works. A little dated. https://nixos.org/nixos/nix-pills
-nix packge versions - https://lazamar.co.uk/nix-versions/
-unstable https://lazamar.
+          <!-- raw HTML omitted -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#nix">nix</a></li>
+<li><a href="#flakes">flakes</a></li>
+<li><a href="#nixos">nixos</a></li>
+<li><a href="#home-manager">home-manager</a></li>
+<li><a href="#hydra-build-system">hydra (build system)</a></li>
+<li><a href="#fun-stuff">Fun Stuff</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<p>the biggest hurdle in getting into nix is having the revelvant documentation available.
+This page is just another collection of useful resources to support success.</p>
+<h1 id="nix">nix</h1>
+<p>nix the language</p>
+<p>nixhub
+<a href="https://www.nixhub.io/packages/mysql">https://www.nixhub.io/packages/mysql</a></p>
+<p>newer documentation
+<a href="https://nix.dev/">https://nix.dev/</a></p>
+<p>nix-search-cli
+<a href="https://github.com/peterldowns/nix-search-cli">https://github.com/peterldowns/nix-search-cli</a></p>
+<p>nix-pills: Interesting information if you want to know how nix works. A little dated.
+<a href="https://nixos.org/nixos/nix-pills">https://nixos.org/nixos/nix-pills</a></p>
+<p>nix packge versions - <a href="https://lazamar.co.uk/nix-versions/">https://lazamar.co.uk/nix-versions/</a></p>
         </div>
           <a href="/post/nix-resources/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
@@ -220,11 +249,20 @@ unstable https://lazamar.
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          github https://github.com/sigmonsays/picman
-I wrote a basic tool to replace my krufty bash scripts that imports my photos from various locations into their final resting place.
-The tool operates in steps where each step is kind of idempotent. The set of all steps is called a workflow and operates on a single file. see code.
-Each step operates on the same workflow object, which primarily has a state object
-State Object code
+          <p>github <a href="https://github.com/sigmonsays/picman">https://github.com/sigmonsays/picman</a></p>
+<p>I wrote a basic tool to replace my krufty bash scripts that imports my photos from various locations into
+their final resting place.</p>
+<p>The tool operates in steps where each step is kind of idempotent. The set of all steps is called
+a workflow and operates on a single file. see <a href="https://github.com/sigmonsays/picman/blob/dev/autosort/workflow.go#L18">code</a>.</p>
+<p>Each step operates on the same workflow object, which primarily has a state object</p>
+<p>State Object <a href="https://github.com/sigmonsays/picman/blob/dev/core/statefile.go#L26">code</a></p>
+<ul>
+<li>holds exif data</li>
+<li>holds file stat information</li>
+<li>holds date metadata that is obtained via exif or other logic</li>
+<li>holds checksum and logs of processing the file</li>
+</ul>
+<p>Steps in order</p>
         </div>
           <a href="/post/picman/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         

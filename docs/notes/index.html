@@ -7,7 +7,7 @@
     <title>sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.126.1">
+    <meta name="generator" content="Hugo 0.136.5">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -38,6 +38,7 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Notes">
+  <meta itemprop="datePublished" content="2016-10-17T14:27:30-07:00">
   <meta itemprop="dateModified" content="2016-10-17T14:27:30-07:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Notes">
@@ -135,7 +136,7 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-       
+      <!-- raw HTML omitted -->
     </div>
   </div>
 </div>
@@ -150,8 +151,72 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Table of Contents
-Aug 2024 Feb 2019 Jan 2018 Oct 2016 hitless haproxy reload go jira http2 keylog xo teleport sftp server library in go toasteroid httpcache Feb 2016 Jan 2016 Nov 2015 Jan 2015 Aug 2024 process-compose - docker-compose but for processes see https://github.com/F1bonacc1/process-compose Feb 2019 Link Description https://landscape.cncf.io/ the CNCF landscape makes me want to cry Jan 2018 Link Description https://github.com/lewish/asciiflow2 and http://asciiflow.com/ ascii art draw tool. https://github.
+      <!-- raw HTML omitted -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#aug-2024">Aug 2024</a></li>
+<li><a href="#feb-2019">Feb 2019</a></li>
+<li><a href="#jan-2018">Jan 2018</a></li>
+<li><a href="#oct-2016">Oct 2016</a>
+<ul>
+<li><a href="#hitless-haproxy-reload">hitless haproxy reload</a></li>
+<li><a href="#go-jira">go jira</a></li>
+<li><a href="#http2-keylog">http2 keylog</a></li>
+<li><a href="#xo">xo</a></li>
+<li><a href="#teleport">teleport</a></li>
+<li><a href="#sftp-server-library-in-go">sftp server library in go</a></li>
+<li><a href="#toasteroid">toasteroid</a></li>
+<li><a href="#httpcache">httpcache</a></li>
+</ul>
+</li>
+<li><a href="#feb-2016">Feb 2016</a></li>
+<li><a href="#jan-2016">Jan 2016</a></li>
+<li><a href="#nov-2015">Nov 2015</a></li>
+<li><a href="#jan-2015">Jan 2015</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="aug-2024">Aug 2024</h1>
+<ul>
+<li>process-compose - docker-compose but for processes
+see <a href="https://github.com/F1bonacc1/process-compose">https://github.com/F1bonacc1/process-compose</a></li>
+</ul>
+<h1 id="feb-2019">Feb 2019</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Link</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><a href="https://landscape.cncf.io/">https://landscape.cncf.io/</a></td>
+          <td>the CNCF landscape makes me want to cry</td>
+      </tr>
+  </tbody>
+</table>
+<h1 id="jan-2018">Jan 2018</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Link</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><a href="https://github.com/lewish/asciiflow2">https://github.com/lewish/asciiflow2</a> and <a href="http://asciiflow.com/">http://asciiflow.com/</a></td>
+          <td>ascii art draw tool.</td>
+      </tr>
+      <tr>
+          <td><a href="https://github.com/benhoyt/goawk">https://github.com/benhoyt/goawk</a></td>
+          <td>awk fully implemented in go and passes &rsquo;the awk test'</td>
+      </tr>
+  </tbody>
+</table>
+<h1 id="oct-2016">Oct 2016</h1>
+<p>gmx - similar to jmx but for go
+<a href="https://github.com/davecheney/gmx">https://github.com/davecheney/gmx</a></p>
     </div>
   </div>
 </div>
@@ -166,9 +231,97 @@ Aug 2024 Feb 2019 Jan 2018 Oct 2016 hitless haproxy reload go jira http2 keylog 
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.
-Only specific networks are allowed.
-#!/bin/bash #set -x iptables -P INPUT ACCEPT iptables -P FORWARD ACCEPT iptables -P OUTPUT ACCEPT iptables -F INPUT #iptables -F FORWARD #iptables -F OUTPUT function clean_networks { grep -v ^# | awk &#39;{print $1}&#39; |grep -v ^$ } # Quick and dirty iptables firewall # We want to drop traffic for any open port if its not in the allowed list of IP addresses # function list_allowed_networks { # the 1918 subnets cat &lt;&lt; EOF | clean_networks 10.
+      <p>Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.</p>
+<p>Only specific networks are allowed.</p>
+<pre tabindex="0"><code>#!/bin/bash
+#set -x
+
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+
+iptables -F INPUT 
+#iptables -F FORWARD 
+#iptables -F OUTPUT 
+
+function clean_networks {
+   grep -v ^# | awk &#39;{print $1}&#39; |grep -v ^$
+}
+
+# Quick and dirty iptables firewall
+# We want to drop traffic for any open port if its not in the allowed list of IP addresses
+# 
+function list_allowed_networks {
+
+# the 1918 subnets
+cat &lt;&lt; EOF | clean_networks
+10.0.0.0/8
+172.16.0.0/12
+192.168.0.0/16
+EOF
+
+cat &lt;&lt; EOF | clean_networks
+10.0.0.0/8
+127.0.0.0/8
+EOF
+}
+
+function list_open_ports {
+	# ipv4
+	netstat -lntu |awk &#39;/^tcp / {print $4}&#39; |awk -F: &#39;{print $2}&#39;
+	# ipv6
+	netstat -lntu |awk &#39;/^tcp6 / {print $4}&#39; |awk -F: &#39;{print $4}&#39;
+}
+function list_ports {
+	list_open_ports
+	echo 22
+}
+function list_networks {
+	for N in $(list_allowed_networks)
+	do
+		echo $N
+	done
+	if [ -f /etc/firewall/networks.list ] ; then
+		cat /etc/firewall/networks.list
+	fi
+
+	# All local addresses
+	ip addr | awk -F&#39;[ /]+&#39; &#39;/inet / {print $3}&#39;
+
+	# Let all your connected subnets in..
+	# ip addr | awk  &#39;/inet / {print $2}&#39;
+}
+
+function prepare_iptables {
+
+	# Create drop logged chain
+	if ! iptables -L drop_logged &gt;/dev/null 2&gt;&amp;1 ; then
+		iptables -N drop_logged
+	fi
+	iptables -F drop_logged
+	iptables -A drop_logged -j LOG --log-prefix &#34;iptables-dropped: &#34; --log-level 4
+	iptables -A drop_logged -j DROP
+}
+
+
+
+#
+# Begin building the firewall
+#
+prepare_iptables
+
+list_networks | while read N
+do
+	echo &#34;netowrk $N&#34;
+        iptables -A INPUT -s $N -j ACCEPT
+done
+
+list_ports | while read P
+do
+	echo &#34;securing port $P&#34;
+        iptables -A INPUT -p tcp --dport $P -j drop_logged
+done
+</code></pre>
     </div>
   </div>
 </div>

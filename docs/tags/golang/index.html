@@ -7,7 +7,7 @@
     <title>sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.126.1">
+    <meta name="generator" content="Hugo 0.136.5">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -38,6 +38,7 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Golang">
+  <meta itemprop="datePublished" content="2017-11-16T10:27:27-08:00">
   <meta itemprop="dateModified" content="2017-11-16T10:27:27-08:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Golang">
@@ -140,7 +141,9 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors needed to operate on a workqueue. This daemon is actually still in produciton today =P
+      <p>I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle
+some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors
+needed to operate on a workqueue. This daemon is actually still in produciton today =P</p>
     </div>
   </div>
 </div>
@@ -157,10 +160,13 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.
-git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either code (in git) or configuration.
-So here is a simple example which will automatically rebuild and restart a application when you git push (https://github.com/sigmonsays/git-watch/tree/master/examples/go)
-Below in git-watch.
+      <p>git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.</p>
+<p>git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either
+code (in git) or configuration.</p>
+<p>So here is a simple example which will automatically rebuild and restart a application when you git push (<a href="https://github.com/sigmonsays/git-watch/tree/master/examples/go">https://github.com/sigmonsays/git-watch/tree/master/examples/go</a>)</p>
+<p>Below in git-watch.yaml we check the upstream every 5 seconds and merge the master branch in. execcmd is &ldquo;my_application&rdquo; which is a simple application. When a upstream
+change is detected, we invoke the updatecmd. If the updatecmd does not succeed, the restart process is aborted. Assuming the update command succeeds, we then invoke the install
+command. After the install command succeeds, the application is restarted.</p>
     </div>
   </div>
 </div>
@@ -177,14 +183,31 @@ Below in git-watch.
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      bolt - https://github.com/boltdb/bolt ledis - http://ledisdb.com/ tiedot - https://github.com/HouzuoGuo/tiedot cockroachdb - https://github.com/cockroachdb/cockroach bolt pure go key-value datastore
-ledis redis like database written in go
-attractive to embed redis like features directly into your application which will reduce operational complexity.
-tiedot JSON document database
-cockrochdb A Scalable, Geo-Replicated, Transactional Datastore
-design document https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit
-feature summary
-ACID transactional semantics versioned values primary design goal is consistency and survivability aims to tolerate disk, server, rack and datacenter failures related technologies
+      <ul>
+<li>bolt - <a href="https://github.com/boltdb/bolt">https://github.com/boltdb/bolt</a></li>
+<li>ledis - <a href="http://ledisdb.com/">http://ledisdb.com/</a></li>
+<li>tiedot - <a href="https://github.com/HouzuoGuo/tiedot">https://github.com/HouzuoGuo/tiedot</a></li>
+<li>cockroachdb - <a href="https://github.com/cockroachdb/cockroach">https://github.com/cockroachdb/cockroach</a></li>
+</ul>
+<h2 id="bolt">bolt</h2>
+<p>pure go key-value datastore</p>
+<h2 id="ledis">ledis</h2>
+<p>redis like database written in go</p>
+<p>attractive to embed redis like features directly into your application which
+will reduce operational complexity.</p>
+<h2 id="tiedot">tiedot</h2>
+<p>JSON document database</p>
+<h2 id="cockrochdb">cockrochdb</h2>
+<p>A Scalable, Geo-Replicated, Transactional Datastore</p>
+<p>design document <a href="https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit">https://docs.google.com/document/d/11k2EmhLGSbViBvi6_zFEiKzuXxYF49ZuuDJLe6O8gBU/edit</a></p>
+<p>feature summary</p>
+<ul>
+<li>ACID transactional semantics</li>
+<li>versioned values</li>
+<li>primary design goal is consistency and survivability</li>
+<li>aims to tolerate disk, server, rack and datacenter failures</li>
+</ul>
+<p>related technologies</p>
     </div>
   </div>
 </div>

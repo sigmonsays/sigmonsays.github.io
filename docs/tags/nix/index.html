@@ -7,7 +7,7 @@
     <title>sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.126.1">
+    <meta name="generator" content="Hugo 0.136.5">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -38,6 +38,7 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Nix">
+  <meta itemprop="datePublished" content="2024-02-02T06:07:08-07:00">
   <meta itemprop="dateModified" content="2024-02-02T06:07:08-07:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Nix">
@@ -140,15 +141,30 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Table of Contents
-nix flakes nixos home-manager hydra (build system) Fun Stuff the biggest hurdle in getting into nix is having the revelvant documentation available. This page is just another collection of useful resources to support success.
-nix nix the language
-nixhub https://www.nixhub.io/packages/mysql
-newer documentation https://nix.dev/
-nix-search-cli https://github.com/peterldowns/nix-search-cli
-nix-pills: Interesting information if you want to know how nix works. A little dated. https://nixos.org/nixos/nix-pills
-nix packge versions - https://lazamar.co.uk/nix-versions/
-unstable https://lazamar.
+      <!-- raw HTML omitted -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#nix">nix</a></li>
+<li><a href="#flakes">flakes</a></li>
+<li><a href="#nixos">nixos</a></li>
+<li><a href="#home-manager">home-manager</a></li>
+<li><a href="#hydra-build-system">hydra (build system)</a></li>
+<li><a href="#fun-stuff">Fun Stuff</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<p>the biggest hurdle in getting into nix is having the revelvant documentation available.
+This page is just another collection of useful resources to support success.</p>
+<h1 id="nix">nix</h1>
+<p>nix the language</p>
+<p>nixhub
+<a href="https://www.nixhub.io/packages/mysql">https://www.nixhub.io/packages/mysql</a></p>
+<p>newer documentation
+<a href="https://nix.dev/">https://nix.dev/</a></p>
+<p>nix-search-cli
+<a href="https://github.com/peterldowns/nix-search-cli">https://github.com/peterldowns/nix-search-cli</a></p>
+<p>nix-pills: Interesting information if you want to know how nix works. A little dated.
+<a href="https://nixos.org/nixos/nix-pills">https://nixos.org/nixos/nix-pills</a></p>
+<p>nix packge versions - <a href="https://lazamar.co.uk/nix-versions/">https://lazamar.co.uk/nix-versions/</a></p>
     </div>
   </div>
 </div>
@@ -165,12 +181,20 @@ unstable https://lazamar.
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      have you ever wanted to see what packages are going to change before updating them on nix?
-Well read on to find out how to do this with home-manager and nixos
-First, there is a few different ways i came across
-Table of Contents
-A naive approach nix store diff-closure nvd nix-diff A naive approach I wondered since everything is in the nix store, why not just diff it?
-So as an experiment I set off to do just that
+      <p>have you ever wanted to see what packages are going to change before updating them on nix?</p>
+<p>Well read on to find out how to do this with home-manager and nixos</p>
+<p>First, there is a few different ways i came across</p>
+<!-- raw HTML omitted -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#a-naive-approach">A naive approach</a></li>
+<li><a href="#nix-store-diff-closure">nix store diff-closure</a></li>
+<li><a href="#nvd">nvd</a></li>
+<li><a href="#nix-diff">nix-diff</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="a-naive-approach">A naive approach</h1>
+<p>I wondered since everything is in the nix store, why not just diff it?</p>
     </div>
   </div>
 </div>
@@ -187,9 +211,28 @@ So as an experiment I set off to do just that
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      A feature I discovered recently is that nix-shell can be used as an interpreter
-#!/usr/bin/env nix-shell #!nix-shell -i bash -p bash htop echo hello world which htop It even works for python
-#!/usr/bin/env nix-shell #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor # scale image by 50% import sys, PIL.Image, ansicolor path = sys.argv[1] image = PIL.Image.open(path) factor = 0.5 image = image.resize((round(image.width * factor), round(image.height * factor))) path = path + &quot;.
+      <p>A feature I discovered recently is that nix-shell can be used as an interpreter</p>
+<pre><code>#!/usr/bin/env nix-shell
+#!nix-shell -i bash -p bash htop
+
+echo hello world
+which htop
+</code></pre>
+<p>It even works for python</p>
+<pre><code>#!/usr/bin/env nix-shell
+#!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor
+
+# scale image by 50%
+import sys, PIL.Image, ansicolor
+path = sys.argv[1]
+image = PIL.Image.open(path)
+factor = 0.5
+image = image.resize((round(image.width * factor), round(image.height * factor)))
+path = path + &quot;.s50.jpg&quot;
+image.save(path)
+print(ansicolor.green(f&quot;done {path}&quot;))
+</code></pre>
+<p>Discovered on the wiki page at <a href="https://nixos.wiki/wiki/Nix-shell_shebang">https://nixos.wiki/wiki/Nix-shell_shebang</a></p>
     </div>
   </div>
 </div>
@@ -206,9 +249,27 @@ So as an experiment I set off to do just that
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Table of Contents
-direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website Emacs hey gcroots, save some of that garbage! References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
-direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd to a specific directory.
+      <!-- raw HTML omitted -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#direnv">direnv</a></li>
+<li><a href="#nix-direnv">nix-direnv</a></li>
+<li><a href="#nix-shell">Nix Shell</a></li>
+<li><a href="#rust-development-environment">Rust development environment</a></li>
+<li><a href="#go-development-environment">Go development environment</a></li>
+<li><a href="#nix-shell-and-flakes">Nix Shell and Flakes</a></li>
+<li><a href="#audio--video-transcoding-tools">Audio / Video Transcoding tools</a></li>
+<li><a href="#photos-and-videos">Photos and Videos</a></li>
+<li><a href="#static-website">Static Website</a></li>
+<li><a href="#emacs">Emacs</a></li>
+<li><a href="#hey-gcroots-save-some-of-that-garbage">hey gcroots, save some of that garbage!</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="direnv">direnv</h1>
+<p>The power of nix with direnv is easy to understate. This post is to explains some ways to use it.</p>
+<p>direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd
+to a specific directory. supported shells are bash, zsh, tcsh, fish, elvish, and powershell.</p>
     </div>
   </div>
 </div>
@@ -225,11 +286,25 @@ direnv is a nice tool to use which allows you to load the appropriate environmen
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Table of Contents
-Summary Why NixOS NixOS Home Manager Build Docker Containers Development Shells Nix Cache Flakes Resources Summary Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required may not be worth it to some people.
-Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible
-with nix you can
-build docker containers build qemu images install packages per user or system build development shells runs everywhere - linux, nixos, macos, windows+WSL nix cache (https://cachix.
+      <!-- raw HTML omitted -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#why-nixos">Why NixOS</a></li>
+<li><a href="#nixos">NixOS</a></li>
+<li><a href="#home-manager">Home Manager</a></li>
+<li><a href="#build-docker-containers">Build Docker Containers</a></li>
+<li><a href="#development-shells">Development Shells</a></li>
+<li><a href="#nix-cache">Nix Cache</a></li>
+<li><a href="#flakes">Flakes</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="summary">Summary</h1>
+<p>Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required
+may not be worth it to some people.</p>
+<p>Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible</p>
+<p>with nix you can</p>
     </div>
   </div>
 </div>

@@ -7,7 +7,7 @@
     <title>sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.126.1">
+    <meta name="generator" content="Hugo 0.136.5">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -38,6 +38,7 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Projects">
+  <meta itemprop="datePublished" content="2023-12-31T10:58:55-08:00">
   <meta itemprop="dateModified" content="2023-12-31T10:58:55-08:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Projects">
@@ -140,11 +141,20 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      github https://github.com/sigmonsays/picman
-I wrote a basic tool to replace my krufty bash scripts that imports my photos from various locations into their final resting place.
-The tool operates in steps where each step is kind of idempotent. The set of all steps is called a workflow and operates on a single file. see code.
-Each step operates on the same workflow object, which primarily has a state object
-State Object code
+      <p>github <a href="https://github.com/sigmonsays/picman">https://github.com/sigmonsays/picman</a></p>
+<p>I wrote a basic tool to replace my krufty bash scripts that imports my photos from various locations into
+their final resting place.</p>
+<p>The tool operates in steps where each step is kind of idempotent. The set of all steps is called
+a workflow and operates on a single file. see <a href="https://github.com/sigmonsays/picman/blob/dev/autosort/workflow.go#L18">code</a>.</p>
+<p>Each step operates on the same workflow object, which primarily has a state object</p>
+<p>State Object <a href="https://github.com/sigmonsays/picman/blob/dev/core/statefile.go#L26">code</a></p>
+<ul>
+<li>holds exif data</li>
+<li>holds file stat information</li>
+<li>holds date metadata that is obtained via exif or other logic</li>
+<li>holds checksum and logs of processing the file</li>
+</ul>
+<p>Steps in order</p>
     </div>
   </div>
 </div>
@@ -161,8 +171,10 @@ State Object code
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      I&rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.
-It has always been bothersome to me that any paste, or &ldquo;no paste&rdquo; command line client has to be needlessly complex. Some i&rsquo;ve tried to use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing more than curl.
+      <p>I&rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.</p>
+<p>It has always been bothersome to me that any paste, or &ldquo;no paste&rdquo; command line client has to be needlessly complex. Some i&rsquo;ve tried to
+use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing
+more than curl. Its code is on github [1] and the client is rediculously simple:</p>
     </div>
   </div>
 </div>

@@ -7,9 +7,28 @@
     <title>nix tip: shell shabang | sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="A feature I discovered recently is that nix-shell can be used as an interpreter
-#!/usr/bin/env nix-shell #!nix-shell -i bash -p bash htop echo hello world which htop It even works for python
-#!/usr/bin/env nix-shell #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor # scale image by 50% import sys, PIL.Image, ansicolor path = sys.argv[1] image = PIL.Image.open(path) factor = 0.5 image = image.resize((round(image.width * factor), round(image.height * factor))) path = path &#43; &quot;.">
-    <meta name="generator" content="Hugo 0.126.1">
+#!/usr/bin/env nix-shell
+#!nix-shell -i bash -p bash htop
+
+echo hello world
+which htop
+
+It even works for python
+#!/usr/bin/env nix-shell
+#!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor
+
+# scale image by 50%
+import sys, PIL.Image, ansicolor
+path = sys.argv[1]
+image = PIL.Image.open(path)
+factor = 0.5
+image = image.resize((round(image.width * factor), round(image.height * factor)))
+path = path &#43; &quot;.s50.jpg&quot;
+image.save(path)
+print(ansicolor.green(f&quot;done {path}&quot;))
+
+Discovered on the wiki page at https://nixos.wiki/wiki/Nix-shell_shebang">
+    <meta name="generator" content="Hugo 0.136.5">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -33,7 +52,7 @@
   <meta property="og:title" content="nix tip: shell shabang">
   <meta property="og:description" content="A feature I discovered recently is that nix-shell can be used as an interpreter
 #!/usr/bin/env nix-shell #!nix-shell -i bash -p bash htop echo hello world which htop It even works for python
-#!/usr/bin/env nix-shell #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor # scale image by 50% import sys, PIL.Image, ansicolor path = sys.argv[1] image = PIL.Image.open(path) factor = 0.5 image = image.resize((round(image.width * factor), round(image.height * factor))) path = path &#43; &#34;.">
+#!/usr/bin/env nix-shell #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor # scale image by 50% import sys, PIL.Image, ansicolor path = sys.argv[1] image = PIL.Image.open(path) factor = 0.5 image = image.resize((round(image.width * factor), round(image.height * factor))) path = path &#43; &#34;.s50.jpg&#34; image.save(path) print(ansicolor.green(f&#34;done {path}&#34;)) Discovered on the wiki page at https://nixos.wiki/wiki/Nix-shell_shebang">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -44,7 +63,7 @@
   <meta itemprop="name" content="nix tip: shell shabang">
   <meta itemprop="description" content="A feature I discovered recently is that nix-shell can be used as an interpreter
 #!/usr/bin/env nix-shell #!nix-shell -i bash -p bash htop echo hello world which htop It even works for python
-#!/usr/bin/env nix-shell #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor # scale image by 50% import sys, PIL.Image, ansicolor path = sys.argv[1] image = PIL.Image.open(path) factor = 0.5 image = image.resize((round(image.width * factor), round(image.height * factor))) path = path &#43; &#34;.">
+#!/usr/bin/env nix-shell #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor # scale image by 50% import sys, PIL.Image, ansicolor path = sys.argv[1] image = PIL.Image.open(path) factor = 0.5 image = image.resize((round(image.width * factor), round(image.height * factor))) path = path &#43; &#34;.s50.jpg&#34; image.save(path) print(ansicolor.green(f&#34;done {path}&#34;)) Discovered on the wiki page at https://nixos.wiki/wiki/Nix-shell_shebang">
   <meta itemprop="datePublished" content="2023-12-20T06:07:08-07:00">
   <meta itemprop="dateModified" content="2023-12-20T06:07:08-07:00">
   <meta itemprop="wordCount" content="81">
@@ -53,7 +72,7 @@
   <meta name="twitter:title" content="nix tip: shell shabang">
   <meta name="twitter:description" content="A feature I discovered recently is that nix-shell can be used as an interpreter
 #!/usr/bin/env nix-shell #!nix-shell -i bash -p bash htop echo hello world which htop It even works for python
-#!/usr/bin/env nix-shell #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor # scale image by 50% import sys, PIL.Image, ansicolor path = sys.argv[1] image = PIL.Image.open(path) factor = 0.5 image = image.resize((round(image.width * factor), round(image.height * factor))) path = path &#43; &#34;.">
+#!/usr/bin/env nix-shell #!nix-shell -i python3 -p python3Packages.pillow python3Packages.ansicolor # scale image by 50% import sys, PIL.Image, ansicolor path = sys.argv[1] image = PIL.Image.open(path) factor = 0.5 image = image.resize((round(image.width * factor), round(image.height * factor))) path = path &#43; &#34;.s50.jpg&#34; image.save(path) print(ansicolor.green(f&#34;done {path}&#34;)) Discovered on the wiki page at https://nixos.wiki/wiki/Nix-shell_shebang">
 
   </head>
 

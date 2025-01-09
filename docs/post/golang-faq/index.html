@@ -7,12 +7,25 @@
     <title>golang FAQ | sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Sections
-Network Programming in go Installing golang tools Errors are values Network programming in Go http://whispering-gophers.appspot.com/talk.slide#1
-installing golang tools is there any way i could install my go binaries wherever i want using go tools?
+
+Network Programming in go
+Installing golang tools
+Errors are values 
+
+Network programming in Go
+http://whispering-gophers.appspot.com/talk.slide#1
+installing golang tools
+is there any way i could install my go binaries wherever i want using go tools?
 answer
 typical solution is to install tools in a different GOPATH
-export GOPATH=&quot;$HOME/go&quot; export PATH=&quot;$GOPATH/bin:$PATH&quot; go get -u golang.org/x/tools/cmd/goimports The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion.">
-    <meta name="generator" content="Hugo 0.126.1">
+export GOPATH=&quot;$HOME/go&quot;
+export PATH=&quot;$GOPATH/bin:$PATH&quot;
+go get -u golang.org/x/tools/cmd/goimports
+
+The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion.
+Do not export GOPATH by default as a security measure. Any remote shell exploit could in theory instruct
+the go tool to install and run arbitrary code!">
+    <meta name="generator" content="Hugo 0.136.5">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -39,7 +52,7 @@ Network Programming in go Installing golang tools Errors are values Network prog
 installing golang tools is there any way i could install my go binaries wherever i want using go tools?
 answer
 typical solution is to install tools in a different GOPATH
-export GOPATH=&#34;$HOME/go&#34; export PATH=&#34;$GOPATH/bin:$PATH&#34; go get -u golang.org/x/tools/cmd/goimports The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion.">
+export GOPATH=&#34;$HOME/go&#34; export PATH=&#34;$GOPATH/bin:$PATH&#34; go get -u golang.org/x/tools/cmd/goimports The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion. Do not export GOPATH by default as a security measure. Any remote shell exploit could in theory instruct the go tool to install and run arbitrary code!">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -53,7 +66,7 @@ Network Programming in go Installing golang tools Errors are values Network prog
 installing golang tools is there any way i could install my go binaries wherever i want using go tools?
 answer
 typical solution is to install tools in a different GOPATH
-export GOPATH=&#34;$HOME/go&#34; export PATH=&#34;$GOPATH/bin:$PATH&#34; go get -u golang.org/x/tools/cmd/goimports The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion.">
+export GOPATH=&#34;$HOME/go&#34; export PATH=&#34;$GOPATH/bin:$PATH&#34; go get -u golang.org/x/tools/cmd/goimports The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion. Do not export GOPATH by default as a security measure. Any remote shell exploit could in theory instruct the go tool to install and run arbitrary code!">
   <meta itemprop="datePublished" content="2016-09-20T12:47:58-07:00">
   <meta itemprop="dateModified" content="2016-09-20T12:47:58-07:00">
   <meta itemprop="wordCount" content="367">
@@ -65,7 +78,7 @@ Network Programming in go Installing golang tools Errors are values Network prog
 installing golang tools is there any way i could install my go binaries wherever i want using go tools?
 answer
 typical solution is to install tools in a different GOPATH
-export GOPATH=&#34;$HOME/go&#34; export PATH=&#34;$GOPATH/bin:$PATH&#34; go get -u golang.org/x/tools/cmd/goimports The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion.">
+export GOPATH=&#34;$HOME/go&#34; export PATH=&#34;$GOPATH/bin:$PATH&#34; go get -u golang.org/x/tools/cmd/goimports The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion. Do not export GOPATH by default as a security measure. Any remote shell exploit could in theory instruct the go tool to install and run arbitrary code!">
 
   </head>
 

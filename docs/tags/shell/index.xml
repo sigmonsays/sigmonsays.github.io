@@ -13,7 +13,7 @@
       <link>http://sigmonsays.github.io/post/paste/</link>
       <pubDate>Sun, 31 Jan 2016 10:58:55 -0800</pubDate>
       <guid>http://sigmonsays.github.io/post/paste/</guid>
-      <description>I&amp;rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.&#xA;It has always been bothersome to me that any paste, or &amp;ldquo;no paste&amp;rdquo; command line client has to be needlessly complex. Some i&amp;rsquo;ve tried to use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing more than curl.</description>
+      <description>&lt;p&gt;I&amp;rsquo;m sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.&lt;/p&gt;&#xA;&lt;p&gt;It has always been bothersome to me that any paste, or &amp;ldquo;no paste&amp;rdquo; command line client has to be needlessly complex. Some i&amp;rsquo;ve tried to&#xA;use in the past have required installing ruby gems which I despise. So to scratch an itch, I wrote my very own which requires nothing&#xA;more than curl. Its code is on github [1] and the client is rediculously simple:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

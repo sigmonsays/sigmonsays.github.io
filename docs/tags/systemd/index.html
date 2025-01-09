@@ -7,7 +7,7 @@
     <title>sigmonsays</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.126.1">
+    <meta name="generator" content="Hugo 0.136.5">
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -38,6 +38,7 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Systemd">
+  <meta itemprop="datePublished" content="2014-09-22T21:26:16-07:00">
   <meta itemprop="dateModified" content="2014-09-22T21:26:16-07:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Systemd">
@@ -140,8 +141,25 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      updates Nov2014 - an exploit in systemd resolver - https://news.ycombinator.com/item?id=8595335
-Just another reason to do one thing well and not try to do too much. C&rsquo;mon systemd, focus. Please help me understand why a init.d replacement needs to provide a resolver. some gems from this thread &ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver.
+      <h1 id="updates">updates</h1>
+<ul>
+<li>
+<p>Nov2014 - an exploit in systemd resolver - <a href="https://news.ycombinator.com/item?id=8595335">https://news.ycombinator.com/item?id=8595335</a></p>
+<ul>
+<li>Just another reason to do one thing well and not try to do too much. C&rsquo;mon systemd, focus.</li>
+<li>Please help me understand why a init.d replacement needs to provide a resolver.</li>
+<li>some gems from this thread
+<ul>
+<li>&ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver. To be clear, I don&rsquo;t really think it matters whether systemd-resolved is under the systemd umbrella, but I do think that the design has a lot of unnecessary NIH syndrome.&rdquo;</li>
+<li>&ldquo;This is a perfect example of why the systemd approach of putting a bunch of disparate components under a single tightly-coupled umbrella is bad engineering.&rdquo;</li>
+<li>&ldquo;It&rsquo;s mind blowing to realize that because of the init system we have on our system we are now vulnerable to DNS poisoning.&rdquo;</li>
+</ul>
+</li>
+<li>anyways, give the thread a read and see for yourself how systemd should be abandoned</li>
+</ul>
+</li>
+<li>
+<p>website which describes a lot of good points - <a href="http://boycottsystemd.org/">http://boycottsystemd.org/</a></p>
     </div>
   </div>
 </div>
