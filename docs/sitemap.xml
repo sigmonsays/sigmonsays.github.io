@@ -2,10 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://sigmonsays.github.io/tags/lxd/</loc>
+    <lastmod>2025-01-09T10:38:37-07:00</lastmod>
+  </url><url>
+    <loc>http://sigmonsays.github.io/tags/nixos/</loc>
+    <lastmod>2025-01-09T10:38:37-07:00</lastmod>
+  </url><url>
+    <loc>http://sigmonsays.github.io/post/nixos-lxd/</loc>
+    <lastmod>2025-01-09T10:38:37-07:00</lastmod>
+  </url><url>
     <loc>http://sigmonsays.github.io/post/</loc>
     <lastmod>2025-01-09T10:38:37-07:00</lastmod>
   </url><url>
     <loc>http://sigmonsays.github.io/</loc>
+    <lastmod>2025-01-09T10:38:37-07:00</lastmod>
+  </url><url>
+    <loc>http://sigmonsays.github.io/tags/</loc>
     <lastmod>2025-01-09T10:38:37-07:00</lastmod>
   </url><url>
     <loc>http://sigmonsays.github.io/tags/degoogle/</loc>
@@ -15,9 +27,6 @@
     <lastmod>2024-06-11T01:02:03-07:00</lastmod>
   </url><url>
     <loc>http://sigmonsays.github.io/tags/photos/</loc>
-    <lastmod>2024-06-11T01:02:03-07:00</lastmod>
-  </url><url>
-    <loc>http://sigmonsays.github.io/tags/</loc>
     <lastmod>2024-06-11T01:02:03-07:00</lastmod>
   </url><url>
     <loc>http://sigmonsays.github.io/tags/nix/</loc>

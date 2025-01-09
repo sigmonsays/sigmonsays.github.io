@@ -38,8 +38,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Tags">
-  <meta itemprop="datePublished" content="2024-06-11T01:02:03-07:00">
-  <meta itemprop="dateModified" content="2024-06-11T01:02:03-07:00">
+  <meta itemprop="datePublished" content="2025-01-09T10:38:37-07:00">
+  <meta itemprop="dateModified" content="2025-01-09T10:38:37-07:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tags">
 
@@ -833,6 +833,46 @@ some time.</p>
 <h1 id="e20">e20</h1>
 <p>enlightenment has been my window manager of choice for a very long time maintly because of its speed. I used to run
 window maker and then fluxbox before I made the switch to enlightenment (0.16 at the time iirc).</p>
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/lxd" class="link blue hover-black">
+            Tag: lxd
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Post</span>
+    <h1 class="f3 near-black">
+      <a href="/post/nixos-lxd/" class="link black dim">
+        nixos VM in lxd
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>Setting up VM images with nixos is incredibly powerful when coupled with declarative nature of nix language itself.</p>
+<p>I am using it for running homelab type services and lab type setups. Here is how I have it working for me:</p>
+<h1 id="create-the-vm">Create the VM</h1>
+<p>This is a snippet from a shell script I use</p>
+<pre><code>name=nixos1
+img=nixos/24.05
+cpu=4
+mem=8
+disk=100
+incus launch images:$img $name \
+    --vm \
+    -c limits.cpu=4 \
+    -c limits.memory=${mem}GiB \
+    -c security.secureboot=false \
+    --device root,size=${disk}GiB
+</code></pre>
+<h1 id="configure-the-vm">Configure the VM</h1>
+<p>Assuming you have some nixos configuration, you can upload the config
+and update the VM.</p>
     </div>
   </div>
 </div>
@@ -1762,6 +1802,46 @@ to a specific directory. supported shells are bash, zsh, tcsh, fish, elvish, and
 may not be worth it to some people.</p>
 <p>Nix overall has so many features that it&rsquo;s worth understanding what&rsquo;s possible</p>
 <p>with nix you can</p>
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/nixos" class="link blue hover-black">
+            Tag: nixos
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Post</span>
+    <h1 class="f3 near-black">
+      <a href="/post/nixos-lxd/" class="link black dim">
+        nixos VM in lxd
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>Setting up VM images with nixos is incredibly powerful when coupled with declarative nature of nix language itself.</p>
+<p>I am using it for running homelab type services and lab type setups. Here is how I have it working for me:</p>
+<h1 id="create-the-vm">Create the VM</h1>
+<p>This is a snippet from a shell script I use</p>
+<pre><code>name=nixos1
+img=nixos/24.05
+cpu=4
+mem=8
+disk=100
+incus launch images:$img $name \
+    --vm \
+    -c limits.cpu=4 \
+    -c limits.memory=${mem}GiB \
+    -c security.secureboot=false \
+    --device root,size=${disk}GiB
+</code></pre>
+<h1 id="configure-the-vm">Configure the VM</h1>
+<p>Assuming you have some nixos configuration, you can upload the config
+and update the VM.</p>
     </div>
   </div>
 </div>

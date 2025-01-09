@@ -1,6 +1,6 @@
 +++
 date = "2025-01-09T10:38:37-07:00"
-draft = true
+draft = false
 title = "nixos VM in lxd"
 
 # Common tags

@@ -135,6 +135,44 @@
             <div class="mb3 pa4 mid-gray overflow-hidden">
     
       <div class="f6">
+        January 9, 2025
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/nixos-lxd/" class="link black dim">
+        nixos VM in lxd
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>Setting up VM images with nixos is incredibly powerful when coupled with declarative nature of nix language itself.</p>
+<p>I am using it for running homelab type services and lab type setups. Here is how I have it working for me:</p>
+<h1 id="create-the-vm">Create the VM</h1>
+<p>This is a snippet from a shell script I use</p>
+<pre><code>name=nixos1
+img=nixos/24.05
+cpu=4
+mem=8
+disk=100
+incus launch images:$img $name \
+    --vm \
+    -c limits.cpu=4 \
+    -c limits.memory=${mem}GiB \
+    -c security.secureboot=false \
+    --device root,size=${disk}GiB
+</code></pre>
+<h1 id="configure-the-vm">Configure the VM</h1>
+<p>Assuming you have some nixos configuration, you can upload the config
+and update the VM.</p>
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
         June 11, 2024
       </div>
     
@@ -458,29 +496,6 @@ written in a confusing shell script I managed to find getting setup annoying, an
 <p>I do not put a ton of effort into editors, rather I spend a chunk of time intermittently. This has happened with vi/vim and again
 with emacs. my vim configuration was always flaky and never worked correctly until around neovim. At that point I was so fed up
 with reproducible editor configuration that I looked for something better.</p>
-    </div>
-  </div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        April 24, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/trump/" class="link black dim">
-        Trump
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>Trump owes millions to state-owned bank in China
-<a href="https://www.salon.com/2020/04/24/newly-revealed-financial-records-show-trump-owes-millions-to-state-owned-bank-in-china-report/">https://www.salon.com/2020/04/24/newly-revealed-financial-records-show-trump-owes-millions-to-state-owned-bank-in-china-report/</a></p>
-<p>trump will rip off anyone even if he says he&rsquo;ll pay
-<a href="https://www.independent.co.uk/news/world/americas/i-sold-trump-100000-worth-of-pianos-then-he-stiffed-me-a7335951.html">https://www.independent.co.uk/news/world/americas/i-sold-trump-100000-worth-of-pianos-then-he-stiffed-me-a7335951.html</a></p>
     </div>
   </div>
 

@@ -158,6 +158,48 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/post/nixos-lxd/" class="color-inherit dim link">
+            nixos VM in lxd
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          <p>Setting up VM images with nixos is incredibly powerful when coupled with declarative nature of nix language itself.</p>
+<p>I am using it for running homelab type services and lab type setups. Here is how I have it working for me:</p>
+<h1 id="create-the-vm">Create the VM</h1>
+<p>This is a snippet from a shell script I use</p>
+<pre><code>name=nixos1
+img=nixos/24.05
+cpu=4
+mem=8
+disk=100
+incus launch images:$img $name \
+    --vm \
+    -c limits.cpu=4 \
+    -c limits.memory=${mem}GiB \
+    -c security.secureboot=false \
+    --device root,size=${disk}GiB
+</code></pre>
+<h1 id="configure-the-vm">Configure the VM</h1>
+<p>Assuming you have some nixos configuration, you can upload the config
+and update the VM.</p>
+        </div>
+          <a href="/post/nixos-lxd/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/post/degoogle-photos/" class="color-inherit dim link">
             my alternative to google photos
             </a>
@@ -236,49 +278,18 @@ This page is just another collection of useful resources to support success.</p>
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/post/picman/" class="color-inherit dim link">
-            picman: photo sorting tool
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>github <a href="https://github.com/sigmonsays/picman">https://github.com/sigmonsays/picman</a></p>
-<p>I wrote a basic tool to replace my krufty bash scripts that imports my photos from various locations into
-their final resting place.</p>
-<p>The tool operates in steps where each step is kind of idempotent. The set of all steps is called
-a workflow and operates on a single file. see <a href="https://github.com/sigmonsays/picman/blob/dev/autosort/workflow.go#L18">code</a>.</p>
-<p>Each step operates on the same workflow object, which primarily has a state object</p>
-<p>State Object <a href="https://github.com/sigmonsays/picman/blob/dev/core/statefile.go#L26">code</a></p>
-<ul>
-<li>holds exif data</li>
-<li>holds file stat information</li>
-<li>holds date metadata that is obtained via exif or other logic</li>
-<li>holds checksum and logs of processing the file</li>
-</ul>
-<p>Steps in order</p>
-        </div>
-          <a href="/post/picman/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/post/picman/" class="link black dim">
+              picman: photo sorting tool
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/post/nix-tip-nvd/" class="link black dim">
@@ -295,12 +306,6 @@ a workflow and operates on a single file. see <a href="https://github.com/sigmon
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/post/nix-direnv/" class="link black dim">
               nix-direnv
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/post/nix/" class="link black dim">
-              nix and nixos
             </a>
           </h2>
         

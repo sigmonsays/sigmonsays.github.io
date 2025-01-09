@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nixos on sigmonsays</title>
+    <link>http://sigmonsays.github.io/tags/nixos/</link>
+    <description>Recent content in Nixos on sigmonsays</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Jan 2025 10:38:37 -0700</lastBuildDate>
+    <atom:link href="http://sigmonsays.github.io/tags/nixos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nixos VM in lxd</title>
+      <link>http://sigmonsays.github.io/post/nixos-lxd/</link>
+      <pubDate>Thu, 09 Jan 2025 10:38:37 -0700</pubDate>
+      <guid>http://sigmonsays.github.io/post/nixos-lxd/</guid>
+      <description>&lt;p&gt;Setting up VM images with nixos is incredibly powerful when coupled with declarative nature of nix language itself.&lt;/p&gt;&#xA;&lt;p&gt;I am using it for running homelab type services and lab type setups. Here is how I have it working for me:&lt;/p&gt;&#xA;&lt;h1 id=&#34;create-the-vm&#34;&gt;Create the VM&lt;/h1&gt;&#xA;&lt;p&gt;This is a snippet from a shell script I use&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;name=nixos1&#xA;img=nixos/24.05&#xA;cpu=4&#xA;mem=8&#xA;disk=100&#xA;incus launch images:$img $name \&#xA;    --vm \&#xA;    -c limits.cpu=4 \&#xA;    -c limits.memory=${mem}GiB \&#xA;    -c security.secureboot=false \&#xA;    --device root,size=${disk}GiB&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h1 id=&#34;configure-the-vm&#34;&gt;Configure the VM&lt;/h1&gt;&#xA;&lt;p&gt;Assuming you have some nixos configuration, you can upload the config&#xA;and update the VM.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

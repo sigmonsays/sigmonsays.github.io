@@ -135,6 +135,32 @@
             <div class="mb3 pa4 mid-gray overflow-hidden">
     
       <div class="f6">
+        January 3, 2016
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/git-watch/" class="link black dim">
+        git-watch
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.</p>
+<p>git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either
+code (in git) or configuration.</p>
+<p>So here is a simple example which will automatically rebuild and restart a application when you git push (<a href="https://github.com/sigmonsays/git-watch/tree/master/examples/go">https://github.com/sigmonsays/git-watch/tree/master/examples/go</a>)</p>
+<p>Below in git-watch.yaml we check the upstream every 5 seconds and merge the master branch in. execcmd is &ldquo;my_application&rdquo; which is a simple application. When a upstream
+change is detected, we invoke the updatecmd. If the updatecmd does not succeed, the restart process is aborted. Assuming the update command succeeds, we then invoke the install
+command. After the install command succeeds, the application is restarted.</p>
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
         February 3, 2015
       </div>
     
