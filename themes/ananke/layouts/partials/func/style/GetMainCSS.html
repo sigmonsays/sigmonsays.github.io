@@ -22,7 +22,7 @@
   {{ end }}
 {{ end }}
 
-{{/* We look for any custom css files registered by the user under `site.params.custom_css and if found in the theme's 
+{{/* We look for any custom css files registered by the user under `site.params.custom_css and if found in the theme's
 css asset directory we add to aforementioned slice */}}
 {{ with site.Params.custom_css }}
   {{ range . }}
@@ -38,7 +38,7 @@ css asset directory we add to aforementioned slice */}}
 
   {{/* We then use toCSS to add sourceMap and minify */}}
   {{ $options := dict "enableSourceMap" true "precision" 6 }}
-  {{ $style = $style | resources.ToCSS $options | minify }}
+  {{ $style = $style | toCSS $options | minify }}
   {{/* We fingerprint in production for cache busting purposes */}}
   {{ if eq (getenv "HUGO_ENV") "production" }}
     {{ $style = $style | fingerprint }}

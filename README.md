@@ -1,4 +1,4 @@
-
+# Posts
 
 new post
 
@@ -6,6 +6,8 @@ new post
      hugo new content/post/blah.md
 
 # Ideas
+
+- write about nixos
 
 - write about switching from enlightenment to i3 window manager
 

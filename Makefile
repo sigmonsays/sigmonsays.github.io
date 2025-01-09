@@ -5,7 +5,7 @@ THEME = ananke
 
 #HUGO = $(HOME)/go/bin/hugo
 #HUGO = /usr/local/bin/hugo
-HUGO = ./bin/hugo
+# HUGO = ./bin/hugo
 HUGO = hugo
 
 #HUGO_URL = https://github.com/gohugoio/hugo/releases/download/v0.87.0/hugo_0.87.0_Linux-64bit.tar.gz
@@ -44,19 +44,18 @@ clean:
 download: $(HUGO)
 
 dev:
-	git status
-	$(HUGO) server $(HUGO_FLAGS) --bind 0.0.0.0 -w -d ../tmp --theme=$(THEME)  --buildDrafts
+	./dev-server.sh
 
 new-post: post
 post:
 	cp content/template.md content/post/example.md
 
 p: publish
-	# 
+	#
 	# Done
 
 publish: gen commit push
-	# 
+	#
 	# Done
 
 
