@@ -1,12 +1,7 @@
-+++
-date = "2023-07-05T01:23:45-07:00"
-draft = false
-title = "nix and nixos"
+---
+title: "nix and nixos"
 
-tags = [ "nix", "development" ]
-_promo = [ "nopromo" ]
-
-+++
+---
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
@@ -49,7 +44,7 @@ I hope this document aims to explain how i've used each one and my experiences w
 - updates are atomic; system never left in half configured state
 - rollback
 - don't have to run a config management system
-- tools like puppet, ansible, chef, etc do not work the same.  
+- tools like puppet, ansible, chef, etc do not work the same.
   - nix works at a higher level (not as many details required to use)
   - order of execution does not matter
   - declare end state
@@ -57,12 +52,12 @@ I hope this document aims to explain how i've used each one and my experiences w
 - nix config can easily be shared
 - bring up a new system in minutes
 
-The system state is declarative. Which means that it essentially turns my entire OS state into something that can be pristine, setup from scratch, and rolled back to any revision in git. 
+The system state is declarative. Which means that it essentially turns my entire OS state into something that can be pristine, setup from scratch, and rolled back to any revision in git.
 
 This makes experimenting with software fearless. With other config mgmt systems, you have to go manually clean up the mess made to remove something either
 in error or to uninstall it. Building automations that always work when errors and half states are encountered is difficult.
 
-This is not the issue with nix because the system is built from scratch each time. If I decide I want to experiment with an application 
+This is not the issue with nix because the system is built from scratch each time. If I decide I want to experiment with an application
 and need to uninstall it, i just comment out the "install package" line and when I rebuild the system it's gone.
 
 Some examples
@@ -77,14 +72,14 @@ change bindings for keyboard volume keys
         { keys = [ 122 ]; events = [ "key" "rep" ]; command = "${pkgs.alsaUtils}/bin/amixer -q set Master ${config.sound.mediaKeys.volumeStep}- unmute"; }
         { keys = [ 123 ]; events = [ "key" "rep" ]; command = "${pkgs.alsaUtils}/bin/amixer -q set Master ${config.sound.mediaKeys.volumeStep}+ unmute"; }
      ]
- 
+
  enable alsa
 
      sound.enable = true;
 
 # NixOS
 
-nixos provides a entire OS that is defined in the same nix language that nix package manager and home manager uses. 
+nixos provides a entire OS that is defined in the same nix language that nix package manager and home manager uses.
 
 I've only bootstraped a VM using nixos and that was relatively straighforward. I followed [this](https://gist.github.com/tarnacious/f9674436fff0efeb4bb6585c79a3b9ff) guide. A working verion I modified is [here](https://github.com/sigmonsays/nix-experiments/tree/main/nix-qemu2)
 
@@ -101,7 +96,7 @@ Since nix runs everywhere, I have it as part of my dotfile repo and it naturally
 
 Figuring out how to organize nix code was very difficult for me and I refactored a couple times. First I just wrote it, then I tried doing hostname detection and importing things dynamically but that failed.
 
-Where I ended up was having a entry point per device and then including modules based on what 
+Where I ended up was having a entry point per device and then including modules based on what
 device.nix file I was in.
 
 All of my devices run home manager. On MacOS i've used it to replace brew. I have a module for macos
@@ -115,7 +110,7 @@ I have yet to actually do this but will update this section when I get there
 
 # Development Shells
 
-I've used nix to build development shells for various tools. 
+I've used nix to build development shells for various tools.
 
 One such repository is a go code base which manages dotfiles named [dotbot](https://github.com/sigmonsays/dotbot/blob/main/shell.nix). Specifically the `shell.nix` file
 contains the details on what's needed to compile and run the application.
@@ -146,7 +141,7 @@ workflows where I needed exiftool, imagemagick and libheif.
 
 # Nix Cache
 
-This feature makes nix really nice. 
+This feature makes nix really nice.
 
 You get the best of both worlds with a nix binary cache since most things can be pulled as a binary from
 the cache.
@@ -158,7 +153,7 @@ iF the inputs result in a hash that's not in the cache, nix will build it from s
 
 The main purpose of flakes is to have more control over the inputs used to install a package. For instance if your nixos configuration.nix
 has the stable channel and you try to take someone elses code that expects unstable channel, there could be problems. It might work but the
-two systems are not the exact same. Flakes solves this by enforcing the inputs. 
+two systems are not the exact same. Flakes solves this by enforcing the inputs.
 
 To start using flakes you need to enable them in `/etc/nix/nix.conf` by adding the following
 
@@ -169,7 +164,7 @@ Once enabled everything under the 'nix' command becomes available for use with f
     # Get shell with gdu installed
     nix shell 'nixpkgs#gdu'
 
-    # run gdu 
+    # run gdu
     nix run 'nixpkgs#gdu'
 
     # search unstable

@@ -16,19 +16,16 @@
 
 <body>
   <nav>
-    <a id="brand" href="/">Home 🏠</a>
-    <a href="/projects.html">projects</a>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
   </nav>
   <header>
     <h1>{{ title }}</h1>
   </header>
-  <aside>{{ onthispage }}</aside>
   <article>{{ content }}</article>
-  {{ editthispage }}
   <footer>
-    Copyright &copy; James Mills ·
-    Last modified <time datetime="{{ date +%Y-%m-%dT%H:%M:%SZ%:z }}">{{ date }}</time> ·
-    Built with <a href="https://git.mills.io/prologic/zs">zs</a>
+    Copyright &copy; sigmonsays ·
+    Last modified <time datetime="{{ date +%Y-%m-%dT%H:%M:%SZ%:z }}">{{ date }}</time>
   </footer>
   {{ scripts }}
   <script>

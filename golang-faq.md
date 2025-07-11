@@ -1,16 +1,12 @@
-+++
-date = "2016-09-20T12:47:58-07:00"
-draft = false
-title = "golang FAQ"
-tags = [ "misc" ]
-
-+++
+---
+title: "golang FAQ"
+---
 
 Sections
 
-- [Network Programming in go]({{< relref "#network-programming-in-go" >}}) 
-- [Installing golang tools]({{< relref "#installing-golang-tools" >}}) 
-- [Errors are values ]({{< relref "#errors-are-values" >}}) 
+- [Network Programming in go]({{< relref "#network-programming-in-go" >}})
+- [Installing golang tools]({{< relref "#installing-golang-tools" >}})
+- [Errors are values ]({{< relref "#errors-are-values" >}})
 
 
 # Network programming in Go
@@ -24,7 +20,7 @@ is there any way i could install my go binaries wherever i want using go tools?
 
 `answer`
 
-typical solution is to install tools in a different GOPATH 
+typical solution is to install tools in a different GOPATH
 
     export GOPATH="$HOME/go"
     export PATH="$GOPATH/bin:$PATH"
@@ -40,12 +36,12 @@ This feature of go about errors being values was not immediately obvious to me u
 
 In the spec, https://golang.org/ref/spec#Comparison_operators about pointers it says this
 
-> Pointer values are comparable. Two pointer values are equal if they point to the same variable or if both have value nil. Pointers to distinct zero-size variables may or may not be equal. 
+> Pointer values are comparable. Two pointer values are equal if they point to the same variable or if both have value nil. Pointers to distinct zero-size variables may or may not be equal.
 
 This means that you can make your own type which satisfies error. If your package exports these errors, all your functions which return `error` can return these types. The value
 here is the caller can compare error to handle specific error conditions if needed.
 
-Further, if more detail is needed for an error, we now know the underlying type and can type switch it. 
+Further, if more detail is needed for an error, we now know the underlying type and can type switch it.
 
 Example Code Below
 
@@ -100,4 +96,3 @@ Playground links https://play.golang.org/p/49GdCgZyq2_e
             }
          }
       }
-

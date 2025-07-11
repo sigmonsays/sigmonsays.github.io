@@ -1,11 +1,7 @@
-+++
-date = "2017-12-01T10:38:37-07:00"
-draft = false
-title = "bash"
-tags = [ "bash", "misc" ]
-promo = [ "bash" ]
-
-+++
+---
+title: bash
+tags: bash msic
+---
 
 I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page
 primarily serves as short snippets of bash recipes I often want to re-use.
@@ -51,4 +47,3 @@ This function converts a integer to the appropriate human size
 `NOTES`
 
 - This is `sh` compatible and not explicitly bash because it makes use of `[` and should instead use `[[`
-

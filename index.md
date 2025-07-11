@@ -1,10 +1,29 @@
-# sigmonsays
+---
+title: sigmonsays.github.io
 
-## projects
+---
 
-[[SandBox]]
-[[why-go]]
+
+
 
 ## linux
 
-[[i3]]
+random linux things
+
+- [[bash]]
+
+window managers
+
+- [[i3wm]]
+- [[enlightenment]]
+
+linux distributions
+
+- [[nix]]
+
+## programming
+
+golang things
+
+- [[why-go]]
+- [[golang-faq]]

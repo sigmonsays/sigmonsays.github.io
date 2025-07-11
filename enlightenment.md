@@ -1,10 +1,7 @@
-+++
-date = "2016-02-09T17:10:00-08:00"
-draft = false
-title = "enlightenment"
-tags = [ "linux", "misc" ]
+---
+title: "enlightenment"
 
-+++
+---
 
 # Update: August 2019
 
@@ -16,10 +13,10 @@ some time.
 # e20
 
 
-enlightenment has been my window manager of choice for a very long time maintly because of its speed. I used to run 
+enlightenment has been my window manager of choice for a very long time maintly because of its speed. I used to run
 window maker and then fluxbox before I made the switch to enlightenment (0.16 at the time iirc).
 
-# e20 - feb2016 
+# e20 - feb2016
 enlightnement 0.20 caused all sorts of graphics problems
 
 i tried a bunch of different things, like hardware and software rendering without luck
@@ -37,7 +34,4 @@ the problems I had were many
   - windows would not redraw properly quite item
   - notably xterm which is just not acceptable
 
-This is an attempt to keep an ongoing document that describes the issues and fixes i've encountered. 
-
-
-
+This is an attempt to keep an ongoing document that describes the issues and fixes i've encountered.

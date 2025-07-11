@@ -1,7 +1,5 @@
 ---
 title: "Nix Problems"
-date: 2024-01-29T11:53:47-08:00
-draft: true
 ---
 
 
@@ -17,4 +15,3 @@ There seems to be a problem related to GTK3 but it's not fixed in nixpkgs stable
 https://github.com/NixOS/nixpkgs/issues/249616
 
 https://gitlab.com/inkscape/inbox/-/issues/9843
-

@@ -1,11 +1,7 @@
-+++
-date = "2017-12-06T13:01:02-07:00"
-draft = false
-title = "screenshot"
-tags = [ "projects" ]
-promo = [ "nopromo" ]
+---
+title: "screenshot"
 
-+++
+---
 
 Screenshot is a simple python script that has evolved over time. It started out as a shell script which called `import -window root screenshot.png` and has
 evolved into a full featured application.
@@ -14,7 +10,7 @@ Github page - https://github.com/sigmonsays/screenshot/blob/master/README.md
 
 The point of this post is to demonstrate how to setup screenshot and how to use it to achieve a few things
 
-Installation 
+Installation
 
     git clone https://github.com/sigmonsays/screenshot.git
     sudo apt-get install -y xclip imagemagick
@@ -44,7 +40,7 @@ Flag summary
         -h, --help            show this help message and exit
         -c FILE, --config=FILE
                               config file
-        -v, --verbose         
+        -v, --verbose
         -l LOG_LEVEL, --log-level=LOG_LEVEL
                               set logging level [info]
         -s SUMMARY, --summary=SUMMARY
@@ -59,4 +55,4 @@ Usage
 
    screenshot whatever
 
-This allows you to select a region of your screen and then uploads it 
+This allows you to select a region of your screen and then uploads it

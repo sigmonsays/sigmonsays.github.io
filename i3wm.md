@@ -1,16 +1,13 @@
-+++
-date = "2019-09-09T17:10:00-08:00"
-draft = true
-title = "i3"
-tags = [ "i3" ]
+---
+title: i3
+---
 
-+++
 
 I have switched from enlightenment to i3wm and wanted to talk about my experiences. At the time I was compiling enlightenment from source using a terrible set
 of bash scripts I wrote myself and maintained over the years. This was because I started running the latest version of e from git.
 
-If memory serves, I switched from fluxbox to enlightenment when enlightenment 0.17 came out, which was somewhere near the year 2012. Needless to say it 
-takes a lot to shift someone who has been using e for so long. 
+If memory serves, I switched from fluxbox to enlightenment when enlightenment 0.17 came out, which was somewhere near the year 2012. Needless to say it
+takes a lot to shift someone who has been using e for so long.
 
 The primary reasons I used enlightenment were
 
@@ -28,8 +25,4 @@ being keyboard driven it allows me to switch workspaces and windows without ever
 i'll get into later.
 
 
-
 `workflows`
-
-
-

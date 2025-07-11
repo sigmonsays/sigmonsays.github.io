@@ -1,15 +1,9 @@
-+++
-date = "2014-09-11T15:32:44-07:00"
-draft = false
-title = "building packages with docker"
-tags = [ "docker", "misc" ]
-aliases = [
-   "building-packages-with-docker"
-]
+---
+title: "building packages with docker"
 
-+++
+---
 
-This is a simple idea I had while waiting for a build to complete. 
+This is a simple idea I had while waiting for a build to complete.
 
 **The background**
 Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script
@@ -35,7 +29,7 @@ explain how the docker build works.
 docker
 -------------
 The idea is to exploit the layered file system of containers to provide build dependencies. Since
-its a copy on write file system, this means providing a container with all build deps present is 
+its a copy on write file system, this means providing a container with all build deps present is
 incredibly fast.
 
 **Dockerfile**
@@ -77,15 +71,12 @@ Then to invoke the build we stream the contents at a tar.gz into the container w
 it to disk and builds the package.
 
 ```
-package_stream () 
-{ 
+package_stream ()
+{
     git archive HEAD --format tar --prefix=package/ | gzip -9
 }
 ```
 
 Finally, this is the final command that runs the build
 
-      time package_stream | docker run -i debbie 
-
-
-
+      time package_stream | docker run -i debbie

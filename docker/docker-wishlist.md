@@ -1,10 +1,7 @@
-+++
-date = "2014-09-07T19:37:21-07:00"
-draft = false
-title = "docker wishlist"
-tags = [ "misc" ]
+---
+title: "docker wishlist"
 
-+++
+---
 
 things I find that I wish docker supported
 
@@ -27,10 +24,6 @@ dockerfile
   repeat 0.1.3 everywhere, it should just be a variable!
 
     RUN curl http://example.net/package-0.1.3.tar.gz -o package-0.1.3.tar.gz
-    RUN tar zxf package-0.1.3.tar.gz 
+    RUN tar zxf package-0.1.3.tar.gz
     RUN cd package-0.1.3 && make && \
         cp package-0.1.3/bin/whatever /usr/bin/whatever
-
-
-
-

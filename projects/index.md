@@ -1,38 +1,17 @@
-+++
-date = "2017-11-30T16:07:01-08:00"
-draft = false
-title = "Projects"
-promo =  "nopromo"
+---
+title: "Projects"
+---
 
-+++
-
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-**Table of Contents**
-
-- [Related](#related)
-- [Projects](#projects)
-- [Go libaries](#go-libaries)
-
-<!-- markdown-toc end -->
 Various ramblings and projects, mostly tools and libraries
 
-# Related
 
-I maintain a page of [ Interesting Tech ]({{< relref "interesting-tech.md" >}}) which are random pieces of software or tools I find interesting at the time.
-
-There is a section on [bash scripting]({{< relref "bash.md" >}})
-
-Also look at any page with the [projects](/tags/projects) tag
-
-# Projects
-
-[ Paste ]({{< relref "post/paste.md" >}})
+[[paste]]
 An hour long project where I wrote a paste server and shell script client
 
-[ Screenshot ]({{< relref "post/screenshot.md" >}})
+[[screenshot]]
 python script for taking screenshots and uploading them to a cloud storage provider. [github](https://github.com/sigmonsays/screenshot)
 
-[ git-watch ](https://github.com/sigmonsays/git-watch)
+[git-watch](https://github.com/sigmonsays/git-watch)
 watch a git repository for changes and execute update commands
 
 [ git-caddy ](https://github.com/sigmonsays/git-caddy)
@@ -58,3 +37,8 @@ forked websocket demo which implements a chat server that is similar in function
 [ go-logging ](https://github.com/sigmonsays/go-logging)
 leveled logging libary for go
 
+# Related
+
+I maintain a page of [[ Interesting-Tech ]] which are random pieces of software or tools I find interesting at the time.
+
+There is a section on [[bash scripting]]

@@ -1,8 +1,5 @@
 ---
 title: "My Emacs Kit"
-date: 2022-11-14T08:57:49-08:00
-draft: false
-tags: [ "emacs" ]
 ---
 
 This document will be a living document that i'll attempt to update from time to time
@@ -25,7 +22,7 @@ This document will be a living document that i'll attempt to update from time to
 I've been using doom-emacs for over a year now (since March 2021) and this is my personal experiences with it.
 
 I do not put a ton of effort into editors, rather I spend a chunk of time intermittently. This has happened with vi/vim and again
-with emacs. my vim configuration was always flaky and never worked correctly until around neovim. At that point I was so fed up 
+with emacs. my vim configuration was always flaky and never worked correctly until around neovim. At that point I was so fed up
 with reproducible editor configuration that I looked for something better.
 
 Here is my editor timeline
@@ -50,18 +47,18 @@ When I discovered vim and what it could do, I became interested.. But...
 It was really difficult for me to pick up. Once I managed to make the switch to a modal editor, I never
 looked back.
 
-vim configuration was always mystical to me (and still is). I could barely customize it outside of it's 
-stock configuration so that's what I used. 
+vim configuration was always mystical to me (and still is). I could barely customize it outside of it's
+stock configuration so that's what I used.
 
 
 # doom emacs
 
-Being a vim user for so many years has basically burned those keys into my brain. 
+Being a vim user for so many years has basically burned those keys into my brain.
 
 I am still a vim user to this day like using `j` and `k` to navigate is still present in doom emacs due to evil mode
 
 I'm by no means a lisp expert but doom emacs is ready to go out very quickly. Some things that look time are learning
-and discovering everything that is out there. 
+and discovering everything that is out there.
 
 Favorite packages
 
@@ -84,8 +81,8 @@ Honerable mentions
 - yasnippet for code snippets
 - eshell
 - markdown mode
-- org mode and babel 
-- dired 
+- org mode and babel
+- dired
 
 # emacs28 with native compilation
 

@@ -1,15 +1,11 @@
-+++
-date = "2023-12-31T10:58:55-08:00"
-draft = false
-title = "picman: photo sorting tool"
-categories = [ "projects" ]
-tags = [ "projects", "photos" ]
+---
+title: "picman: photo sorting tool"
 
-+++
+---
 
 github https://github.com/sigmonsays/picman
 
-I wrote a basic tool to replace my krufty bash scripts that imports my photos from various locations into 
+I wrote a basic tool to replace my krufty bash scripts that imports my photos from various locations into
 their final resting place.
 
 The tool operates in steps where each step is kind of idempotent. The set of all steps is called
@@ -26,7 +22,7 @@ State Object [code](https://github.com/sigmonsays/picman/blob/dev/core/statefile
 Steps in order
 - StartWorkflow - logs a start workflow
 - CheckSupportedType - returns core.StopProcessing if file type is not supported
-- PopulateExif - obtains exif data via json 
+- PopulateExif - obtains exif data via json
 - CheckExif - abandons file processing if it's a text file or if we have no exif data
 - ObtainDateTaken - gets data taken by looking at various exif data fields
 - ChecksumFile - obtain checksum of file
@@ -38,15 +34,9 @@ This process makes it very easy to build tools up around various photo imports.
 Finally this tool writes a json summary of how many files were copied if you need to re-index
 external photo stores. This allows better integration with tooling like photoprism/photostructure.
 
-# Additional notes 
+# Additional notes
 
 This tool with syncthing and photoprism has solved my photo needs without relying on a cloud storage
 service or photo hosting provider. I own my own photos and have originals backed up at all times.
 
 photo backups are taken daily via restic and stored encrypted in a cloud storage provider (currently backblaze)
-
-
-
-
-
-

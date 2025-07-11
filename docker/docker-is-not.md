@@ -1,12 +1,8 @@
-+++
-date = "2015-05-04T18:38:37-07:00"
-draft = true
-title = "Docker is not what I want"
-slug = "what-docker-is-not"
-tags = [ "docker", "misc" ]
+---
+title: "Docker is not what I want"
 
 
-+++
+---
 
 I have used docker for a while now and consider it a useful piece of software. It helped introduce
 containers to the masses but the projects scope has changed and the software is suffering.
@@ -17,7 +13,7 @@ Docker is not what I want and here is a quick summary and then I will explain ea
 - Docker is insecure, the entire daemon runs as root
 - When docker crashes so does every one of your containers
 - Docker is missing features
-- Docker is greedy for market 
+- Docker is greedy for market
 - Project is ignoring bugs and performance issues
 
 
@@ -35,7 +31,7 @@ Any exploit in the daemon gives root access. Containers are not secure and more 
 all containers as root leaves little to no security. Breaking out of a container from an application is pretty easy so you
 can not really trust third party containers.
 
-Containers can run as unprivelleged users but docker does not support it. 
+Containers can run as unprivelleged users but docker does not support it.
 
 
 
@@ -50,14 +46,14 @@ That is unacceptable.
 
 **Docker is already missing features**
 
-For docker getting the head start is is missing a lot of features. Since it decided to drop lxc it is already missing 
+For docker getting the head start is is missing a lot of features. Since it decided to drop lxc it is already missing
 valuable features like unprivileged containers or CRIU.
 
 **Docker is greedy for market**
 
 They removed their manifesto and are already focusing on building more poor quality software to get the market share
 
-They market that docker images are "like git" but this is far from the truth. The project provides no features what so 
+They market that docker images are "like git" but this is far from the truth. The project provides no features what so
 ever that git does. Adopting the terminology push and pull almost seems like a clever marketing decision. So me how
 to branch an image or show a unified diff that someone can merge into their "repo" if you even had some a thing.
 
@@ -66,7 +62,7 @@ to branch an image or show a unified diff that someone can merge into their "rep
 
 - docker-proxy performs software proxy
 
-docker-proxy is a socket server which is spawned for each container. It performs software proxy between container ports 
+docker-proxy is a socket server which is spawned for each container. It performs software proxy between container ports
 host ports in specific cases. It performs so poorly that you see up to a 40x penalty when talking to nginx.
 
 
@@ -86,6 +82,3 @@ there are a some alternatives thankfully
 
 - lxc and lxd - https://github.com/lxc
 - rocket - https://github.com/coreos/rkt
-
-
-

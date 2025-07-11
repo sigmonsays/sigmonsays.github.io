@@ -1,11 +1,6 @@
-+++
-date = "2018-01-05T10:38:37-07:00"
-draft = true
-title = "System latencies for software developers"
-tags = [ "development", "misc" ]
-_promo = [ "nopromo" ]
-
-+++
+---
+title: "System latencies for software developers"
+---
 
 Approximate timing for various operations on a typical PC:
 

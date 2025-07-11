@@ -1,10 +1,7 @@
-+++
-date = "2014-11-29T10:45:05-08:00"
-draft = false
-title = "go powered databases"
-tags = [ "golang", "misc" ]
+---
+title: "go powered databases"
 
-+++
+---
 
 - bolt - https://github.com/boltdb/bolt
 - ledis - http://ledisdb.com/
@@ -43,5 +40,3 @@ feature summary
 related technologies
 
 - rocksdb (variant of leveldb) - http://rocksdb.org/
-
-

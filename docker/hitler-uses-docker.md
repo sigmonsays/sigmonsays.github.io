@@ -1,11 +1,7 @@
-+++
-date = "2016-04-11T11:23:01-07:00"
-draft = false
-title = "hitler uses docker"
-tags = [ "funny", "misc" ]
-promo = [ "nopromo" ]
+---
+title: "hitler uses docker"
 
-+++
+---
 
 
 video
@@ -29,7 +25,7 @@ https://www.youtube.com/watch?v=PivpCKEiQOQ
 
     mein fuhrer...
 
-    the kernel... 
+    the kernel...
     A 3rd party container caused a panic...
 
     we've lost 70% of the cluster and the data volumes
@@ -72,7 +68,7 @@ https://www.youtube.com/watch?v=PivpCKEiQOQ
 
     hitler: and if the database needs all the resources on the server, how exactly will docker allow you to run more programs on it?
 
-    hitler: before docker, I just picked the right size VMs. 
+    hitler: before docker, I just picked the right size VMs.
 
     hitler: Suddenly people talk to me about datacenter efficiency and "hyperconvergence"
 
@@ -105,6 +101,3 @@ https://www.youtube.com/watch?v=PivpCKEiQOQ
     hitler: you idiots think docker will help your application scale
 
     hitler: use openstack for all I care
-
-
-

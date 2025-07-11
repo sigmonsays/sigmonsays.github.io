@@ -1,10 +1,6 @@
-+++
-date = "2016-01-03T21:33:07-08:00"
-draft = false
-title = "git-watch"
-tags = [ "projects", "golang" ]
-
-+++
+---
+title: "git-watch"
+---
 git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.
 
 git watch [1] was designed as a way to easily build and deploy daemons in development when upstream changes. The changes can be either
@@ -13,7 +9,7 @@ code (in git) or configuration.
 So here is a simple example which will automatically rebuild and restart a application when you git push (https://github.com/sigmonsays/git-watch/tree/master/examples/go)
 
 Below in git-watch.yaml we check the upstream every 5 seconds and merge the master branch in. execcmd is "my_application" which is a simple application. When a upstream
-change is detected, we invoke the updatecmd. If the updatecmd does not succeed, the restart process is aborted. Assuming the update command succeeds, we then invoke the install 
+change is detected, we invoke the updatecmd. If the updatecmd does not succeed, the restart process is aborted. Assuming the update command succeeds, we then invoke the install
 command. After the install command succeeds, the application is restarted.
 
 git-watch.yaml

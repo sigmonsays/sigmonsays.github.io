@@ -15,8 +15,8 @@
 
   --focus-background: rgb(12, 45, 107);
 
-  --border: rgb(33, 37, 44);
-  --border-muted: rgb(33, 38, 45);
+  /* --border: rgb(33, 37, 44); */
+  /* --border-muted: rgb(33, 38, 45); */
 
   --border-bright: rgb(139, 148, 158);
 
@@ -51,9 +51,9 @@ body {
     sans-serif;
   font-family: var(--sans-serif);
   line-height: 1.7;
-  max-width: 50rem;
-  margin: 6rem auto;
-  padding: 0 10px;
+  max-width: 60rem;
+  margin: 2rem auto;
+  padding: 0 1px;
   word-wrap: break-word;
   color: rgb(201, 209, 217);
   color: var(--text-main);
@@ -854,15 +854,13 @@ body nav:first-of-type ul li:hover ul {
 }
 
 section {
-  margin: 20px 0;
 }
 
 article {
   border: 1px solid rgb(33, 37, 44);
   border: 1px solid var(--border);
-  padding: 20px;
+  padding: 2px;
   margin: 10px 0;
-  border-radius: 0.4em;
 }
 
 article> :first-child {
