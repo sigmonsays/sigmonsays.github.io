@@ -1,7 +1,7 @@
 ---
-title: zs starter template
-description: A starter template for the Zen Static (zs) site generator
-keywords: zen, static, zs, starter, template, site, website, template, generator, ssg
+title: sigmonsays
+description: a few things to remember
+keywords: go, nix, linux
 
 extensions:
   - anchor

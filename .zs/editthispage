@@ -1,8 +1,8 @@
 #!/bin/sh
 
-GITEA_BASE_URL="https://git.mills.io"
-REPO="prologic/zs-starter-template"
-BRANCH="main"
+GITEA_BASE_URL="https://github.com"
+REPO="sigmonsays/sigmonsays.github.io"
+BRANCH="dev"
 
 url="${GITEA_BASE_URL}/${REPO}/_edit/${BRANCH}/${ZS_FILE}"
 
