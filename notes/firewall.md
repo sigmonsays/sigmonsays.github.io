@@ -1,14 +1,11 @@
-+++
-date = "2014-09-12T09:38:41-07:00"
-draft = false
-title = "firewall"
-tags = [ "misc" ]
+---
+title: "firewall"
 
-+++
+---
 
 Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.
 
-Only specific networks are allowed. 
+Only specific networks are allowed.
 
 ```
 #!/bin/bash
@@ -18,9 +15,9 @@ iptables -P INPUT ACCEPT
 iptables -P FORWARD ACCEPT
 iptables -P OUTPUT ACCEPT
 
-iptables -F INPUT 
-#iptables -F FORWARD 
-#iptables -F OUTPUT 
+iptables -F INPUT
+#iptables -F FORWARD
+#iptables -F OUTPUT
 
 function clean_networks {
    grep -v ^# | awk '{print $1}' |grep -v ^$
@@ -28,7 +25,7 @@ function clean_networks {
 
 # Quick and dirty iptables firewall
 # We want to drop traffic for any open port if its not in the allowed list of IP addresses
-# 
+#
 function list_allowed_networks {
 
 # the 1918 subnets

@@ -4,8 +4,6 @@ title: sigmonsays.github.io
 ---
 
 
-
-
 ## linux
 
 random linux things
@@ -27,3 +25,7 @@ golang things
 
 - [[why-go]]
 - [[golang-faq]]
+
+## misc
+
+all pages are available in the [[archives]]

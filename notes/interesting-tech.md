@@ -1,11 +1,7 @@
-+++
-date = "2016-10-16T14:50:29-07:00"
-draft = false
-title = "interesting tech"
-tags = [ "notes", "misc" ]
-promo = "nopromo"
+---
+title: "interesting tech"
 
-+++
+---
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
@@ -32,7 +28,7 @@ promo = "nopromo"
 # Aug 2024
 
 - process-compose - docker-compose but for processes
-  see https://github.com/F1bonacc1/process-compose 
+  see https://github.com/F1bonacc1/process-compose
 
 # Feb 2019
 
@@ -52,7 +48,7 @@ promo = "nopromo"
 
 # Oct 2016
 
-gmx - similar to jmx but for go 
+gmx - similar to jmx but for go
 https://github.com/davecheney/gmx
 
 
@@ -64,20 +60,20 @@ https://github.com/sorah/sandbox/tree/master/ruby/haproxy-master
 
 https://github.com/Netflix-Skunkworks/go-jira
 
-I currently use this program in a very limited fashion for managing development workflow. it becomes very handy to build a 
+I currently use this program in a very limited fashion for managing development workflow. it becomes very handy to build a
 shell script environment for aiding in common development process. Right now its only used to view jira tasks and comment on
-them. 
+them.
 
 This is powerful enough for the time being
 
 ## http2 keylog
 
-with the growing popularity of http/2 you can't be without the ability to inspect the payload. 
+with the growing popularity of http/2 you can't be without the ability to inspect the payload.
 
 This looks really useful in tracing http/2 (even grpc) with wireshark
 
 https://github.com/joneskoo/http2-keylog/
- 
+
 ## xo
 
 generate idomatic go code for SQL databases (Please do not confuse this with an ORM!)
@@ -86,8 +82,8 @@ https://github.com/knq/xo
 
 ## teleport
 
-its a pretty impressive ssh daemon setup that has temporary certs for ssh access through a central auth system, with 2-factor 
-auth built in. Every "teleport node" registers itself too so you can just list specific nodes 
+its a pretty impressive ssh daemon setup that has temporary certs for ssh access through a central auth system, with 2-factor
+auth built in. Every "teleport node" registers itself too so you can just list specific nodes
 
 I can imagine something like this becoming "the normal" in a cloud computing environment
 
@@ -101,9 +97,9 @@ SFTP server library in Go, https://github.com/taruti/sftpd
 
 ## toasteroid
 
-1. print stuff on your toast. 
+1. print stuff on your toast.
 2. Print Ads on your toast.
-3. Profit. What!? 
+3. Profit. What!?
 
 See https://toasteroid.com/
 
@@ -124,7 +120,7 @@ https://github.com/gregjones/httpcache
 
 - find unused packages in a go repository - https://github.com/nf/deadleaves
 
-- AppImages is a interesting format that is similar to other "self contained" technologies like 
+- AppImages is a interesting format that is similar to other "self contained" technologies like
   CDE (http://www.pgbovine.net/cde.html). I havn't read into it yet but lets hope it does better
   than everyone else...
 
@@ -169,7 +165,7 @@ https://github.com/gregjones/httpcache
 - silver surfer - http://geoff.greer.fm/ag/
   - https://github.com/ggreer/the_silver_searcher
 
-- microservices future 
+- microservices future
   - http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone
 
 
@@ -189,5 +185,3 @@ https://github.com/gregjones/httpcache
 - Quick VPN using SSH - http://backreference.org/2009/11/13/openssh-based-vpns/
 
 - Rudder - Software Defined Networks - https://github.com/coreos/rudder 
-
-

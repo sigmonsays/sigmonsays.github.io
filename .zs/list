@@ -22,7 +22,7 @@ find "$p" -type f -name "*.$t" | while read -r file; do
 
     title="$(zs vars "$file" title)"
     if [ -z "$title" ]; then
-        title="$name"
+        title="$file"
     fi
 
     echo "- [$title](${p}/${name}.html)"
