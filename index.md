@@ -4,3 +4,7 @@
 
 [[SandBox]]
 [[why-go]]
+
+## linux
+
+[[i3]]
