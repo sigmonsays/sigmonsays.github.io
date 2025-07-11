@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+CSS="bahunya board highlight site"
+
+for css in $CSS; do
+    printf "<link rel=\"stylesheet\" href=\"/assets/css/%s.css\">\n" "$css"
+done

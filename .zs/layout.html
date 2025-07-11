@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{ styles }}
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>{{ title }}</title>
+  <meta name="title" content="{{ title }}" />
+  <meta name="description" content="{{ description }}" />
+  <meta name="keywords" content="{{ keywords }}" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home 🏠</a>
+    <a href="/TestPage.html">Test Page 🧪</a>
+    <a href="https://zs.mills.io/">Demo 🥳</a>
+    <a href="https://git.mills.io/prologic/zs">Source 💾</a>
+  </nav>
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  <aside>{{ onthispage }}</aside>
+  <article>{{ content }}</article>
+  {{ editthispage }}
+  <footer>
+    Copyright &copy; James Mills ·
+    Last modified <time datetime="{{ date +%Y-%m-%dT%H:%M:%SZ%:z }}">{{ date }}</time> ·
+    Built with <a href="https://git.mills.io/prologic/zs">zs</a>
+  </footer>
+  {{ scripts }}
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>
