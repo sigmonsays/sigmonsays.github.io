@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on sigmonsays</title>
+    <link>http://localhost:1313/tags/linux/</link>
+    <description>Recent content in Linux on sigmonsays</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Jan 2023 08:57:49 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dotbot</title>
+      <link>http://localhost:1313/post/dotbot/</link>
+      <pubDate>Sun, 29 Jan 2023 08:57:49 -0800</pubDate>
+      <guid>http://localhost:1313/post/dotbot/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;strong&gt;Table of Contents&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#why&#34;&gt;why&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#dotbot&#34;&gt;dotbot&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;why&#34;&gt;why&lt;/h1&gt;&#xA;&lt;p&gt;dotbot is a tool to manage dot files. I wrote this tool after gettting tired of futzing around&#xA;with the python dotbot from &lt;a href=&#34;https://github.com/anishathalye/dotbot&#34;&gt;https://github.com/anishathalye/dotbot&lt;/a&gt;. Full disclosure I love&#xA;this tool and it&amp;rsquo;s the motivation for the development of my own dotbot.&lt;/p&gt;&#xA;&lt;p&gt;I had two main issues that were annoying to me. First, git submodules were a part of the bootstrap&#xA;process. Second, I always needed some yaml dependancy installed. These two steps combined and that&#xA;written in a confusing shell script I managed to find getting setup annoying, and slightly difficult.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>enlightenment</title>
+      <link>http://localhost:1313/post/enlightenment/</link>
+      <pubDate>Tue, 09 Feb 2016 17:10:00 -0800</pubDate>
+      <guid>http://localhost:1313/post/enlightenment/</guid>
+      <description>&lt;h1 id=&#34;update-august-2019&#34;&gt;Update: August 2019&lt;/h1&gt;&#xA;&lt;p&gt;I have switched to i3wm (for some time now) exclusively due to its speed and lightweight. I&amp;rsquo;ll have to write a post about that experience&#xA;some time.&lt;/p&gt;&#xA;&lt;h1 id=&#34;e20&#34;&gt;e20&lt;/h1&gt;&#xA;&lt;p&gt;enlightenment has been my window manager of choice for a very long time maintly because of its speed. I used to run&#xA;window maker and then fluxbox before I made the switch to enlightenment (0.16 at the time iirc).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

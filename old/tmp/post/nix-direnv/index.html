@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>nix-direnv | sigmonsays</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="
+Table of Contents
+
+direnv
+nix-direnv
+Nix Shell
+Rust development environment
+Go development environment
+Nix Shell and Flakes
+Audio / Video Transcoding tools
+Photos and Videos
+Static Website
+Emacs
+hey gcroots, save some of that garbage!
+References
+
+
+direnv
+The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
+direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd
+to a specific directory. supported shells are bash, zsh, tcsh, fish, elvish, and powershell.">
+    <meta name="generator" content="Hugo 0.136.5">
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:url" content="http://localhost:1313/post/nix-direnv/">
+  <meta property="og:site_name" content="sigmonsays">
+  <meta property="og:title" content="nix-direnv">
+  <meta property="og:description" content="Table of Contents
+direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website Emacs hey gcroots, save some of that garbage! References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
+direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd to a specific directory. supported shells are bash, zsh, tcsh, fish, elvish, and powershell.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-12-14T06:07:08-07:00">
+    <meta property="article:modified_time" content="2023-12-14T06:07:08-07:00">
+    <meta property="article:tag" content="Nix">
+
+  <meta itemprop="name" content="nix-direnv">
+  <meta itemprop="description" content="Table of Contents
+direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website Emacs hey gcroots, save some of that garbage! References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
+direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd to a specific directory. supported shells are bash, zsh, tcsh, fish, elvish, and powershell.">
+  <meta itemprop="datePublished" content="2023-12-14T06:07:08-07:00">
+  <meta itemprop="dateModified" content="2023-12-14T06:07:08-07:00">
+  <meta itemprop="wordCount" content="877">
+  <meta itemprop="keywords" content="Nix">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="nix-direnv">
+  <meta name="twitter:description" content="Table of Contents
+direnv nix-direnv Nix Shell Rust development environment Go development environment Nix Shell and Flakes Audio / Video Transcoding tools Photos and Videos Static Website Emacs hey gcroots, save some of that garbage! References direnv The power of nix with direnv is easy to understate. This post is to explains some ways to use it.
+direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd to a specific directory. supported shells are bash, zsh, tcsh, fish, elvish, and powershell.">
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="home  page">
+              home 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/projects/" title="projects  page">
+              projects 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/misc/" title="misc  page">
+              misc 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/archives/" title="archives  page">
+              archives 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="about  page">
+              about 
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      <h1 class="f1 athelas mt3 mb1">nix-direnv</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-12-14T06:07:08-07:00">December 14, 2023</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><!-- raw HTML omitted -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#direnv">direnv</a></li>
+<li><a href="#nix-direnv">nix-direnv</a></li>
+<li><a href="#nix-shell">Nix Shell</a></li>
+<li><a href="#rust-development-environment">Rust development environment</a></li>
+<li><a href="#go-development-environment">Go development environment</a></li>
+<li><a href="#nix-shell-and-flakes">Nix Shell and Flakes</a></li>
+<li><a href="#audio--video-transcoding-tools">Audio / Video Transcoding tools</a></li>
+<li><a href="#photos-and-videos">Photos and Videos</a></li>
+<li><a href="#static-website">Static Website</a></li>
+<li><a href="#emacs">Emacs</a></li>
+<li><a href="#hey-gcroots-save-some-of-that-garbage">hey gcroots, save some of that garbage!</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="direnv">direnv</h1>
+<p>The power of nix with direnv is easy to understate. This post is to explains some ways to use it.</p>
+<p>direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd
+to a specific directory. supported shells are bash, zsh, tcsh, fish, elvish, and powershell.</p>
+<p>It can not setup shell aliases or inject bash functions into your shell. This is by design due to security. however
+manipulating the environment variables seems enough.</p>
+<p>direnv can be used with <code>nix-direnv</code> to support modifying <code>PATH</code> and other variables to inject commands into your project.</p>
+<p>Installing direnv is out of scope for the purpose of this document but the direnv website [1] has good instructions and
+installation is pretty straightforward.</p>
+<p>In short the way direnv works is by loading a .envrc file like this</p>
+<pre><code>export FOO=bar
+</code></pre>
+<p>If you cd to a directory with this .envrc, you must first run <code>direnv allow</code> then you can see the environment is loaded</p>
+<pre><code>$ direnv allow
+direnv: loading ~/demo/.envrc
+direnv: export +FOO
+$ echo $FOO
+bar
+</code></pre>
+<h1 id="nix-direnv">nix-direnv</h1>
+<p>nix-direnv [2]  provides the <code>use flake</code> and <code>use nix</code> functionality for direnv</p>
+<h1 id="nix-shell">Nix Shell</h1>
+<p>It&rsquo;s possible to get a shell with a arbitrary package installed using nix-shell. This allows your computer
+to remain pristine except for when you&rsquo;re working on a specific project.</p>
+<p>Evaluating applications becomes fearless because everything needed to install said application, all it&rsquo;s
+dependencies can now easily be deleted when you exit the shell. No left over krufty deps.</p>
+<pre><code>$ nix-shell -p fortune
+$ fortune
+If you don't drink it, someone else will.
+</code></pre>
+<p>and fortune is no longer available after exiting</p>
+<pre><code>$ exit
+exit
+$ fortune
+command not found: fortune
+</code></pre>
+<p>Multiple packages</p>
+<pre><code>$ nix-shell -p fortune htop
+</code></pre>
+<h1 id="rust-development-environment">Rust development environment</h1>
+<p>In order to develop with rust, I installed rustup on my system. Installing rustup is
+a step i perform outside of the development shell.</p>
+<p>The unnamed application i built these examples from uses environment variables
+as configuration. So using direnv also has the added benefit of loading the
+applications configuration.</p>
+<p>The basic setup is to have both a .envrc file and a a shell.nix file</p>
+<p>example .envrc</p>
+<pre><code>export RUST_BACKTRACE=1
+export SIMPLE_LOGS=false
+export ENABLE_UI=true
+
+use nix
+</code></pre>
+<p>example shell.nix</p>
+<pre><code>{ pkgs ? import &lt;nixpkgs&gt; {} }:
+
+with pkgs;
+
+mkShell {
+    buildInputs = [
+        openssl
+        pkg-config
+    ];
+}
+</code></pre>
+<p>Then to install your rust toolchain (last project uses nightly)</p>
+<pre><code>  rustup toolchain install nightly
+  rustup default nightly
+  cargo install cargo-edit cargo-watch cargo-tree cargo-duplicates cargo-feature
+</code></pre>
+<p>rust-analyzer is the LSP i use in emacs</p>
+<pre><code>  rustup +nightly component add rust-analyzer-preview
+</code></pre>
+<p>finally compile the project</p>
+<pre><code>  cargo build
+</code></pre>
+<h1 id="go-development-environment">Go development environment</h1>
+<p>Just like the rust development environment we need two files, .envrc and shell.nix</p>
+<p>.envrc</p>
+<pre><code>export WORKSPACE=&quot;$(pwd)&quot;
+export GOFLAGS=&quot;-count=1&quot;
+use nix
+</code></pre>
+<p>shell.nix</p>
+<pre><code>{ pkgs ? import &lt;nixpkgs&gt; {} }:
+
+with pkgs;
+
+mkShell {
+  buildInputs = [
+        go_1_20
+        protobuf
+        grpc-gateway
+        sqlite
+        libpcap
+  ];
+}
+</code></pre>
+<p>The shell.nix contents are specific to a project that uses grpc gateway and protobuf.</p>
+<h1 id="nix-shell-and-flakes">Nix Shell and Flakes</h1>
+<p>The same .envrc and shell.nix can be used with flakes. The addition of a flake.nix file
+indicates what upstream nixos to use.</p>
+<p>flake.nix</p>
+<pre><code>{
+  description = &quot;example program&quot;;
+
+  inputs.nixpkgs.url = &quot;github:NixOS/nixpkgs/nixos-unstable&quot;;
+  inputs.flake-utils.url = &quot;github:numtide/flake-utils&quot;;
+  inputs.gomod2nix.url = &quot;github:nix-community/gomod2nix&quot;;
+
+  outputs = { self, nixpkgs, flake-utils, gomod2nix }:
+    (flake-utils.lib.eachDefaultSystem
+      (system:
+        let
+          pkgs = import nixpkgs {
+            inherit system;
+            overlays = [ gomod2nix.overlays.default ];
+          };
+
+        in
+        {
+          packages.default = pkgs.callPackage ./. { };
+          devShells.default = import ./shell.nix { inherit pkgs; };
+        })
+    );
+}
+</code></pre>
+<p>We need to change the .envrc use line from &lsquo;use nix&rsquo; to &lsquo;use flake&rsquo;</p>
+<p>.envrc</p>
+<pre><code>use flake
+</code></pre>
+<p>Now can can use flakes</p>
+<pre><code>nix shell
+</code></pre>
+<h1 id="audio--video-transcoding-tools">Audio / Video Transcoding tools</h1>
+<p>Changing to the transcoding-tools directory automatically loads all the tools I need to process video</p>
+<pre><code>cat ~/code/random-code/transcoding-tools/shell.nix
+
+{ pkgs ? import &lt;nixpkgs&gt; { } }:
+
+with pkgs;
+
+mkShell {
+  buildInputs = [
+
+    handbrake
+    mplayer
+    ffmpeg
+
+    audacity
+
+    mpg123
+
+  ];
+}
+</code></pre>
+<h1 id="photos-and-videos">Photos and Videos</h1>
+<p>Another example, I wrote a program call <code>picman</code> which sorts photos with my own rules. This program needs exiftool and libheif to function.</p>
+<p>Changing directory to my photos automatically loads the shell.nix for Photos and Videos and all of these tools are then made available to use</p>
+<pre><code>{ pkgs ? import &lt;nixpkgs&gt; {} }:
+
+with pkgs;
+
+mkShell {
+  buildInputs = [
+        exiftool
+        libheif
+  ];
+}
+</code></pre>
+<h1 id="static-website">Static Website</h1>
+<p>This website is created using hugo, here is it&rsquo;s shell.nix</p>
+<pre><code>{ pkgs ? import &lt;nixpkgs&gt; {} }:
+
+with pkgs; mkShell {
+  buildInputs = [
+        hugo
+  ];
+}
+</code></pre>
+<h1 id="emacs">Emacs</h1>
+<p>Since emacs is the editor i use (doom emacs to be specific) i figured it&rsquo;s worth mentioning that I also use</p>
+<p>in ~/.doom.d/init.el I have <code>:tools direnv</code> set which sets up <code>emacs-direnv</code> [3]. This allows various tools
+like gopls and rust-analyzer to function properly.</p>
+<h1 id="hey-gcroots-save-some-of-that-garbage">hey gcroots, save some of that garbage!</h1>
+<p>So it&rsquo;s worth mentioning that <code>use flake</code> saves build result in a hidden file where .envrc resides. This has the effect
+of protecting the shell contents from getting garbage collected. This is ideal imho as constantly having to re-download
+and setup a shell is annoying.</p>
+<h1 id="references">References</h1>
+<ul>
+<li>[1] <a href="https://direnv.net/">https://direnv.net/</a></li>
+<li>[2] <a href="https://github.com/nix-community/nix-direnv">https://github.com/nix-community/nix-direnv</a></li>
+<li>[3] <a href="https://github.com/wbolster/emacs-direnv">https://github.com/wbolster/emacs-direnv</a></li>
+</ul>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/nix" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">nix</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/post/nix/">nix and nixos</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  sigmonsays 2025 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

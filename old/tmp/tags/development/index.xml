@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on sigmonsays</title>
+    <link>http://localhost:1313/tags/development/</link>
+    <description>Recent content in Development on sigmonsays</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Jul 2023 01:23:45 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nix and nixos</title>
+      <link>http://localhost:1313/post/nix/</link>
+      <pubDate>Wed, 05 Jul 2023 01:23:45 -0700</pubDate>
+      <guid>http://localhost:1313/post/nix/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;strong&gt;Table of Contents&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#summary&#34;&gt;Summary&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#why-nixos&#34;&gt;Why NixOS&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#nixos&#34;&gt;NixOS&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#home-manager&#34;&gt;Home Manager&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#build-docker-containers&#34;&gt;Build Docker Containers&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#development-shells&#34;&gt;Development Shells&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#nix-cache&#34;&gt;Nix Cache&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#flakes&#34;&gt;Flakes&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#resources&#34;&gt;Resources&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;&#xA;&lt;p&gt;Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required&#xA;may not be worth it to some people.&lt;/p&gt;&#xA;&lt;p&gt;Nix overall has so many features that it&amp;rsquo;s worth understanding what&amp;rsquo;s possible&lt;/p&gt;&#xA;&lt;p&gt;with nix you can&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>System latencies for software developers</title>
+      <link>http://localhost:1313/post/latencies/</link>
+      <pubDate>Fri, 05 Jan 2018 10:38:37 -0700</pubDate>
+      <guid>http://localhost:1313/post/latencies/</guid>
+      <description>&lt;p&gt;Approximate timing for various operations on a typical PC:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;operation&lt;/th&gt;&#xA;          &lt;th&gt;latency&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;execute typical instruction&lt;/td&gt;&#xA;          &lt;td&gt;1/1,000,000,000 sec = 1 nanosec&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;fetch from L1 cache memory&lt;/td&gt;&#xA;          &lt;td&gt;0.5 nanosec&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;branch misprediction&lt;/td&gt;&#xA;          &lt;td&gt;5 nanosec&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;fetch from L2 cache memory&lt;/td&gt;&#xA;          &lt;td&gt;7 nanosec&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Mutex lock/unlock&lt;/td&gt;&#xA;          &lt;td&gt;25 nanosec&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;fetch from main memory&lt;/td&gt;&#xA;          &lt;td&gt;100 nanosec&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;send 2K bytes over 1Gbps network&lt;/td&gt;&#xA;          &lt;td&gt;20,000 nanosec&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;read 1MB sequentially from memory&lt;/td&gt;&#xA;          &lt;td&gt;250,000 nanosec&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;fetch from new disk location (seek)&lt;/td&gt;&#xA;          &lt;td&gt;8,000,000 nanosec&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;read 1MB sequentially from disk&lt;/td&gt;&#xA;          &lt;td&gt;20,000,000 nanosec&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;send packet US to Europe and back&lt;/td&gt;&#xA;          &lt;td&gt;150 milliseconds = 150,000,000 nanosec&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+    </item>
+  </channel>
+</rss>

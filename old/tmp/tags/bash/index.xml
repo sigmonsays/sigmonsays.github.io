@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on sigmonsays</title>
+    <link>http://localhost:1313/tags/bash/</link>
+    <description>Recent content in Bash on sigmonsays</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Dec 2017 10:38:37 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bash</title>
+      <link>http://localhost:1313/bash/</link>
+      <pubDate>Fri, 01 Dec 2017 10:38:37 -0700</pubDate>
+      <guid>http://localhost:1313/bash/</guid>
+      <description>&lt;p&gt;I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page&#xA;primarily serves as short snippets of bash recipes I often want to re-use.&lt;/p&gt;&#xA;&lt;p&gt;A lot of this bash is old and wrong, because I learned bash so long ago (1998?). Refer to &lt;a href=&#34;http://mywiki.wooledge.org/BashGuide&#34;&gt;http://mywiki.wooledge.org/BashGuide&lt;/a&gt; for proper rules.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#simple-logging-redirect&#34;&gt;Simple Logging Redirect&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#human-size&#34;&gt;Human Size&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;simple-logging-redirect&#34;&gt;Simple Logging Redirect&lt;/h3&gt;&#xA;&lt;p&gt;If you have a bash script you wish to add logging to a simple approach is to use &lt;code&gt;exec&lt;/code&gt; and redirect the output to a file.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

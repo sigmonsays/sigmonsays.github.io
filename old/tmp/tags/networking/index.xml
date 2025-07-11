@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Networking on sigmonsays</title>
+    <link>http://localhost:1313/tags/networking/</link>
+    <description>Recent content in Networking on sigmonsays</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Dec 2023 01:23:45 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nixos networking</title>
+      <link>http://localhost:1313/post/nixos-networking/</link>
+      <pubDate>Sun, 17 Dec 2023 01:23:45 -0700</pubDate>
+      <guid>http://localhost:1313/post/nixos-networking/</guid>
+      <description>&lt;h1 id=&#34;bridged-networking&#34;&gt;Bridged Networking&lt;/h1&gt;&#xA;&lt;p&gt;I recently switched my main desktop from ubuntu to nixos. So I started down the road of attempting&#xA;to run virtual machines on nixos as a development stack.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;All I want for christmas is a bridged network&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;all I wanted is a bridged network to have VMs DHCP on my LAN.&lt;/p&gt;&#xA;&lt;p&gt;One development stack I use is a VM filled with a bunch of services. That way I can setup&#xA;and install the machine just like a production node. Acurately representing the deployment&#xA;makes development and testing easier. Often this setup is used as some type of integration&#xA;testing or performance testing.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

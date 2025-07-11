@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on sigmonsays</title>
+    <link>http://localhost:1313/tags/python/</link>
+    <description>Recent content in Python on sigmonsays</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Feb 2015 11:59:36 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>convenient cli tookit using python</title>
+      <link>http://localhost:1313/post/pythonstartup/</link>
+      <pubDate>Tue, 03 Feb 2015 11:59:36 -0800</pubDate>
+      <guid>http://localhost:1313/post/pythonstartup/</guid>
+      <description>&lt;p&gt;python is a incredibly useful language and has a powerful type system which&#xA;can be pretty convenient. I&amp;rsquo;ve written python for many years now and when&#xA;I need a quick tool, most the time I write it in python.&lt;/p&gt;&#xA;&lt;p&gt;These tools have built up over time and i&amp;rsquo;ve been collecting them organically&#xA;into a python startup file as a set of libraries and functions.&lt;/p&gt;&#xA;&lt;p&gt;create a file in $HOME/&lt;strong&gt;.pythonstartup&lt;/strong&gt; and cherry pick anything below that you find&#xA;useful.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

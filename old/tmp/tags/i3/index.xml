@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>I3 on sigmonsays</title>
+    <link>http://localhost:1313/tags/i3/</link>
+    <description>Recent content in I3 on sigmonsays</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Sep 2019 17:10:00 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/i3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>i3</title>
+      <link>http://localhost:1313/post/i3wm/</link>
+      <pubDate>Mon, 09 Sep 2019 17:10:00 -0800</pubDate>
+      <guid>http://localhost:1313/post/i3wm/</guid>
+      <description>&lt;p&gt;I have switched from enlightenment to i3wm and wanted to talk about my experiences. At the time I was compiling enlightenment from source using a terrible set&#xA;of bash scripts I wrote myself and maintained over the years. This was because I started running the latest version of e from git.&lt;/p&gt;&#xA;&lt;p&gt;If memory serves, I switched from fluxbox to enlightenment when enlightenment 0.17 came out, which was somewhere near the year 2012. Needless to say it&#xA;takes a lot to shift someone who has been using e for so long.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

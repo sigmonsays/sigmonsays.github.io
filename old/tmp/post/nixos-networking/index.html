@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>nixos networking | sigmonsays</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Bridged Networking
+I recently switched my main desktop from ubuntu to nixos. So I started down the road of attempting
+to run virtual machines on nixos as a development stack.
+All I want for christmas is a bridged network
+all I wanted is a bridged network to have VMs DHCP on my LAN.
+One development stack I use is a VM filled with a bunch of services. That way I can setup
+and install the machine just like a production node. Acurately representing the deployment
+makes development and testing easier. Often this setup is used as some type of integration
+testing or performance testing.">
+    <meta name="generator" content="Hugo 0.136.5">
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:url" content="http://localhost:1313/post/nixos-networking/">
+  <meta property="og:site_name" content="sigmonsays">
+  <meta property="og:title" content="nixos networking">
+  <meta property="og:description" content="Bridged Networking I recently switched my main desktop from ubuntu to nixos. So I started down the road of attempting to run virtual machines on nixos as a development stack.
+All I want for christmas is a bridged network
+all I wanted is a bridged network to have VMs DHCP on my LAN.
+One development stack I use is a VM filled with a bunch of services. That way I can setup and install the machine just like a production node. Acurately representing the deployment makes development and testing easier. Often this setup is used as some type of integration testing or performance testing.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-12-17T01:23:45-07:00">
+    <meta property="article:modified_time" content="2023-12-17T01:23:45-07:00">
+    <meta property="article:tag" content="Nixos">
+    <meta property="article:tag" content="Networking">
+
+  <meta itemprop="name" content="nixos networking">
+  <meta itemprop="description" content="Bridged Networking I recently switched my main desktop from ubuntu to nixos. So I started down the road of attempting to run virtual machines on nixos as a development stack.
+All I want for christmas is a bridged network
+all I wanted is a bridged network to have VMs DHCP on my LAN.
+One development stack I use is a VM filled with a bunch of services. That way I can setup and install the machine just like a production node. Acurately representing the deployment makes development and testing easier. Often this setup is used as some type of integration testing or performance testing.">
+  <meta itemprop="datePublished" content="2023-12-17T01:23:45-07:00">
+  <meta itemprop="dateModified" content="2023-12-17T01:23:45-07:00">
+  <meta itemprop="wordCount" content="645">
+  <meta itemprop="keywords" content="Nixos,Networking">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="nixos networking">
+  <meta name="twitter:description" content="Bridged Networking I recently switched my main desktop from ubuntu to nixos. So I started down the road of attempting to run virtual machines on nixos as a development stack.
+All I want for christmas is a bridged network
+all I wanted is a bridged network to have VMs DHCP on my LAN.
+One development stack I use is a VM filled with a bunch of services. That way I can setup and install the machine just like a production node. Acurately representing the deployment makes development and testing easier. Often this setup is used as some type of integration testing or performance testing.">
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="home  page">
+              home 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/projects/" title="projects  page">
+              projects 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/misc/" title="misc  page">
+              misc 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/archives/" title="archives  page">
+              archives 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="about  page">
+              about 
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      <h1 class="f1 athelas mt3 mb1">nixos networking</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-12-17T01:23:45-07:00">December 17, 2023</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h1 id="bridged-networking">Bridged Networking</h1>
+<p>I recently switched my main desktop from ubuntu to nixos. So I started down the road of attempting
+to run virtual machines on nixos as a development stack.</p>
+<p><code>All I want for christmas is a bridged network</code></p>
+<p>all I wanted is a bridged network to have VMs DHCP on my LAN.</p>
+<p>One development stack I use is a VM filled with a bunch of services. That way I can setup
+and install the machine just like a production node. Acurately representing the deployment
+makes development and testing easier. Often this setup is used as some type of integration
+testing or performance testing.</p>
+<p>But enough about that&hellip; and onto setting up a bridged network on nixos!</p>
+<p>So I spent a little looking around on how to setup bridged networking with very
+little fruitful results. I didn&rsquo;t want to use networkd right away but i was guided
+that way on the nixos chat because the configuration directives are documented
+by networkd and we all know the state of nixos documentation.</p>
+<p>I ran into some issues along the way</p>
+<ul>
+<li><code>nixos-rebuild switch</code> took really long to configure networkd. This made feedback painful because trying things took a while.</li>
+<li>nixos networking documentation is subpar, atleast very confusing at the minimum</li>
+<li>documentation is pretty much missing on setting up common deployments. You&rsquo;re forced to look at
+a set of options and put them together to make something that works.</li>
+<li>i first looked for bridged networking using the networking.* set of options but was unable to find a complete example</li>
+<li>nixos-rebuild switch does not always work. This is the first time the configuration was not applied to the running system.</li>
+</ul>
+<p><strong>More on configuration not being applied to the running system</strong></p>
+<p>whatever happened i&rsquo;m not sure, i had to reboot the box for the network to come up properly. I discovered this by making a nixos VM and configuring it just like I did before. miraculously
+it worked!</p>
+<p>I thought WTH did i do wrong&hellip; At the end of the day I was fed up with the amount of time I put into it and wanted to move on. So I did.</p>
+<h2 id="dns-fun">dns fun</h2>
+<p>Second big woes was DNS</p>
+<ul>
+<li>first i tried &rsquo;networking.search&rsquo; and that did nothing</li>
+<li>then i tried &lsquo;services.resolved.domains = [ &ldquo;lan&rdquo; ]&rsquo; and that didn&rsquo;t work</li>
+<li>then i tried &lsquo;systemd.network.networks.<!-- raw HTML omitted -->.domains&rsquo; and that finally worked</li>
+<li>getting &lsquo;search lan&rsquo; functionality is surprisingly difficult</li>
+<li>somehow i was automatically switched over to &lsquo;resolved&rsquo; functionality (services.resolved.enable) when enabling systemd.network</li>
+</ul>
+<h1 id="working-configuration">Working configuration</h1>
+<p>The final configration that setup bridged networking for my host</p>
+<pre><code>    # This network config uses sytemd networkd with a bridge
+    {
+    networking.hostName = &quot;desktop3&quot;;
+    networking = {
+        useDHCP = false;
+        useNetworkd = true;
+    };
+    systemd.network = {
+        enable = true;
+        netdevs = {
+            &quot;25-br0&quot; = {
+                netdevConfig = {
+                    Kind = &quot;bridge&quot;;
+                    Name = &quot;br0&quot;;
+                };
+            };
+        };
+        networks = {
+            &quot;30-br0&quot; = {
+                matchConfig.Name = &quot;en*&quot;;
+                networkConfig = {
+                    Bridge = &quot;br0&quot;;
+                };
+            };
+            &quot;40-br0&quot; = {
+                DHCP = &quot;yes&quot;;
+                matchConfig.Name = &quot;br0&quot;;
+            };
+        };
+    };
+
+    # Wait for any interface to become available, not for all
+    systemd.services.&quot;systemd-networkd-wait-online&quot;.serviceConfig.ExecStart = [
+        &quot;&quot; &quot;${config.systemd.package}/lib/systemd/systemd-networkd-wait-online --any&quot;
+    ];
+    }
+</code></pre>
+<h1 id="final-thoughts">Final Thoughts</h1>
+<p>I think that nixos might be the best OS i&rsquo;ve used in terms of reproducibility.</p>
+<p>I usually dont have a lot of problem these days with ubuntu but having to upgrade between distributions and set everything back up was a pain. Mostly because I didn&rsquo;t remember what
+I wanted until I needed it right away. There was some things that were old on ubuntu like i3, tmux and polybar that I would compile from source.</p>
+<p>I dont even have a complete list of everything.</p>
+<p>I&rsquo;ve attempted to salt or ansible my desktop and development environments but those tools
+required more effort than I was willing to put in.</p>
+<p>So all that being said, I hope this blog post helps someone on their nixos adventures.</p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/nixos" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">nixos</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/networking" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">networking</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  sigmonsays 2025 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

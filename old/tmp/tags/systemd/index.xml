@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Systemd on sigmonsays</title>
+    <link>http://localhost:1313/tags/systemd/</link>
+    <description>Recent content in Systemd on sigmonsays</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Sep 2014 21:26:16 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ban systemd</title>
+      <link>http://localhost:1313/post/ban-systemd/</link>
+      <pubDate>Mon, 22 Sep 2014 21:26:16 -0700</pubDate>
+      <guid>http://localhost:1313/post/ban-systemd/</guid>
+      <description>&lt;h1 id=&#34;updates&#34;&gt;updates&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Nov2014 - an exploit in systemd resolver - &lt;a href=&#34;https://news.ycombinator.com/item?id=8595335&#34;&gt;https://news.ycombinator.com/item?id=8595335&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Just another reason to do one thing well and not try to do too much. C&amp;rsquo;mon systemd, focus.&lt;/li&gt;&#xA;&lt;li&gt;Please help me understand why a init.d replacement needs to provide a resolver.&lt;/li&gt;&#xA;&lt;li&gt;some gems from this thread&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&amp;ldquo;I find the design of systemd-resolved to be very strange. It uses dbus to talk to glibc, and it seems to be a new, from-scratch implementation of a DNS resolver. To be clear, I don&amp;rsquo;t really think it matters whether systemd-resolved is under the systemd umbrella, but I do think that the design has a lot of unnecessary NIH syndrome.&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;&amp;ldquo;This is a perfect example of why the systemd approach of putting a bunch of disparate components under a single tightly-coupled umbrella is bad engineering.&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;&amp;ldquo;It&amp;rsquo;s mind blowing to realize that because of the init system we have on our system we are now vulnerable to DNS poisoning.&amp;rdquo;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;anyways, give the thread a read and see for yourself how systemd should be abandoned&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;website which describes a lot of good points - &lt;a href=&#34;http://boycottsystemd.org/&#34;&gt;http://boycottsystemd.org/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

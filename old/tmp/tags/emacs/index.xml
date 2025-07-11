@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emacs on sigmonsays</title>
+    <link>http://localhost:1313/tags/emacs/</link>
+    <description>Recent content in Emacs on sigmonsays</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Nov 2022 08:57:49 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Emacs Kit</title>
+      <link>http://localhost:1313/post/emacs/</link>
+      <pubDate>Mon, 14 Nov 2022 08:57:49 -0800</pubDate>
+      <guid>http://localhost:1313/post/emacs/</guid>
+      <description>&lt;p&gt;This document will be a living document that i&amp;rsquo;ll attempt to update from time to time&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;strong&gt;Table of Contents&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#intro&#34;&gt;Intro&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#pico-and-nano&#34;&gt;Pico and Nano&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#vim&#34;&gt;Vim&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#doom-emacs&#34;&gt;doom emacs&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#emacs28-with-native-compilation&#34;&gt;emacs28 with native compilation&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#markdown-mode&#34;&gt;Markdown mode&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#org-mode-and-babel&#34;&gt;Org mode and babel&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been using doom-emacs for over a year now (since March 2021) and this is my personal experiences with it.&lt;/p&gt;&#xA;&lt;p&gt;I do not put a ton of effort into editors, rather I spend a chunk of time intermittently. This has happened with vi/vim and again&#xA;with emacs. my vim configuration was always flaky and never worked correctly until around neovim. At that point I was so fed up&#xA;with reproducible editor configuration that I looked for something better.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

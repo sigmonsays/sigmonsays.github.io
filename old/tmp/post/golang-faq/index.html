@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>golang FAQ | sigmonsays</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Sections
+
+Network Programming in go
+Installing golang tools
+Errors are values 
+
+Network programming in Go
+http://whispering-gophers.appspot.com/talk.slide#1
+installing golang tools
+is there any way i could install my go binaries wherever i want using go tools?
+answer
+typical solution is to install tools in a different GOPATH
+export GOPATH=&quot;$HOME/go&quot;
+export PATH=&quot;$GOPATH/bin:$PATH&quot;
+go get -u golang.org/x/tools/cmd/goimports
+
+The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion.
+Do not export GOPATH by default as a security measure. Any remote shell exploit could in theory instruct
+the go tool to install and run arbitrary code!">
+    <meta name="generator" content="Hugo 0.136.5">
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:url" content="http://localhost:1313/post/golang-faq/">
+  <meta property="og:site_name" content="sigmonsays">
+  <meta property="og:title" content="golang FAQ">
+  <meta property="og:description" content="Sections
+Network Programming in go Installing golang tools Errors are values Network programming in Go http://whispering-gophers.appspot.com/talk.slide#1
+installing golang tools is there any way i could install my go binaries wherever i want using go tools?
+answer
+typical solution is to install tools in a different GOPATH
+export GOPATH=&#34;$HOME/go&#34; export PATH=&#34;$GOPATH/bin:$PATH&#34; go get -u golang.org/x/tools/cmd/goimports The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion. Do not export GOPATH by default as a security measure. Any remote shell exploit could in theory instruct the go tool to install and run arbitrary code!">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2016-09-20T12:47:58-07:00">
+    <meta property="article:modified_time" content="2016-09-20T12:47:58-07:00">
+    <meta property="article:tag" content="Misc">
+
+  <meta itemprop="name" content="golang FAQ">
+  <meta itemprop="description" content="Sections
+Network Programming in go Installing golang tools Errors are values Network programming in Go http://whispering-gophers.appspot.com/talk.slide#1
+installing golang tools is there any way i could install my go binaries wherever i want using go tools?
+answer
+typical solution is to install tools in a different GOPATH
+export GOPATH=&#34;$HOME/go&#34; export PATH=&#34;$GOPATH/bin:$PATH&#34; go get -u golang.org/x/tools/cmd/goimports The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion. Do not export GOPATH by default as a security measure. Any remote shell exploit could in theory instruct the go tool to install and run arbitrary code!">
+  <meta itemprop="datePublished" content="2016-09-20T12:47:58-07:00">
+  <meta itemprop="dateModified" content="2016-09-20T12:47:58-07:00">
+  <meta itemprop="wordCount" content="367">
+  <meta itemprop="keywords" content="Misc">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="golang FAQ">
+  <meta name="twitter:description" content="Sections
+Network Programming in go Installing golang tools Errors are values Network programming in Go http://whispering-gophers.appspot.com/talk.slide#1
+installing golang tools is there any way i could install my go binaries wherever i want using go tools?
+answer
+typical solution is to install tools in a different GOPATH
+export GOPATH=&#34;$HOME/go&#34; export PATH=&#34;$GOPATH/bin:$PATH&#34; go get -u golang.org/x/tools/cmd/goimports The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion. Do not export GOPATH by default as a security measure. Any remote shell exploit could in theory instruct the go tool to install and run arbitrary code!">
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="home  page">
+              home 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/projects/" title="projects  page">
+              projects 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/misc/" title="misc  page">
+              misc 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/archives/" title="archives  page">
+              archives 
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="about  page">
+              about 
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      <h1 class="f1 athelas mt3 mb1">golang FAQ</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2016-09-20T12:47:58-07:00">September 20, 2016</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Sections</p>
+<ul>
+<li><a href="#network-programming-in-go">Network Programming in go</a></li>
+<li><a href="#installing-golang-tools">Installing golang tools</a></li>
+<li><a href="#errors-are-values">Errors are values </a></li>
+</ul>
+<h1 id="network-programming-in-go">Network programming in Go</h1>
+<p><a href="http://whispering-gophers.appspot.com/talk.slide#1">http://whispering-gophers.appspot.com/talk.slide#1</a></p>
+<h1 id="installing-golang-tools">installing golang tools</h1>
+<p>is there any way i could install my go binaries wherever i want using go tools?</p>
+<p><code>answer</code></p>
+<p>typical solution is to install tools in a different GOPATH</p>
+<pre><code>export GOPATH=&quot;$HOME/go&quot;
+export PATH=&quot;$GOPATH/bin:$PATH&quot;
+go get -u golang.org/x/tools/cmd/goimports
+</code></pre>
+<p>The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion.
+Do not export GOPATH by default as a security measure. Any remote shell exploit could in theory instruct
+the go tool to install and run arbitrary code!</p>
+<h1 id="errors-are-values">Errors are values</h1>
+<p>This feature of go about errors being values was not immediately obvious to me until I read through the spec about how objects are compared</p>
+<p>In the spec, <a href="https://golang.org/ref/spec#Comparison_operators">https://golang.org/ref/spec#Comparison_operators</a> about pointers it says this</p>
+<blockquote>
+<p>Pointer values are comparable. Two pointer values are equal if they point to the same variable or if both have value nil. Pointers to distinct zero-size variables may or may not be equal.</p>
+</blockquote>
+<p>This means that you can make your own type which satisfies error. If your package exports these errors, all your functions which return <code>error</code> can return these types. The value
+here is the caller can compare error to handle specific error conditions if needed.</p>
+<p>Further, if more detail is needed for an error, we now know the underlying type and can type switch it.</p>
+<p>Example Code Below</p>
+<p>Playground links <a href="https://play.golang.org/p/49GdCgZyq2_e">https://play.golang.org/p/49GdCgZyq2_e</a></p>
+<pre><code>  package main
+
+  import (
+     &quot;fmt&quot;
+  )
+
+  type E struct {
+     Message string
+  }
+
+  func (me *E) Error() string {
+     return me.Message
+  }
+  func NewE(m string) *E {
+     return &amp;E{m}
+  }
+
+  var (
+     TeaPot   = NewE(&quot;I am a tea pot&quot;)
+     Cabbages = NewE(&quot;cabbages&quot;)
+  )
+
+  func F1(a int) error {
+     if a == 1 {
+        return TeaPot
+     } else if a == 2 {
+        return Cabbages
+     }
+     return nil
+  }
+
+  func main() {
+
+     for x := 0; x &lt; 3; x++ {
+        fmt.Printf(&quot;\nx=%d:\n&quot;, x)
+        err := F1(x)
+        if err == nil {
+           fmt.Println(&quot;success&quot;)
+        } else if err == TeaPot {
+           fmt.Println(&quot;F1 is infact a tea pot&quot;)
+           teapot_error, ok := err.(*E)
+           if ok {
+              fmt.Printf(&quot;teapot message: %q\n&quot;, teapot_error.Message)
+           }
+        } else {
+           fmt.Println(&quot;F1 is not a tea pot:&quot;, err)
+        }
+     }
+  }
+</code></pre>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/misc" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">misc</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/post/hitler-uses-docker/">hitler uses docker</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/enlightenment/">enlightenment</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/keybase/">keybase</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/what-docker-is-not/">Docker is not what I want</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/pythonstartup/">convenient cli tookit using python</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/google-owned/">Google Owned</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/go-powered-databases/">go powered databases</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/ban-systemd/">ban systemd</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/notes/firewall/">firewall</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/building-packages-with-docker/">building packages with docker</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/docker-wishlist/">docker wishlist</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/sudo/">Sudo</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  sigmonsays 2025 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

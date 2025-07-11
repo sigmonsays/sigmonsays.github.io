@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google on sigmonsays</title>
+    <link>http://localhost:1313/tags/google/</link>
+    <description>Recent content in Google on sigmonsays</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Jan 2015 10:38:37 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Owned</title>
+      <link>http://localhost:1313/post/google-owned/</link>
+      <pubDate>Mon, 05 Jan 2015 10:38:37 -0700</pubDate>
+      <guid>http://localhost:1313/post/google-owned/</guid>
+      <description>&lt;p&gt;Ever think about how much information google has collected about you?&lt;/p&gt;&#xA;&lt;p&gt;Apart from services there are additional things going on that you might not be aware of&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;strong&gt;Table of Contents&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#data-collection&#34;&gt;Data Collection&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#location-services&#34;&gt;Location Services&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#services&#34;&gt;Services&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#photos&#34;&gt;Photos&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#phone-sensors&#34;&gt;Phone Sensors&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#degoogle-resources&#34;&gt;Degoogle Resources&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;data-collection&#34;&gt;Data Collection&lt;/h1&gt;&#xA;&lt;p&gt;Data collected is often uploaded to google servers&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;IMEI, hardware serial number, Wifi MAC address&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;AndroidID, Google Ad ID&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

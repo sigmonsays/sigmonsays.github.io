@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Template on sigmonsays</title>
+    <link>http://localhost:1313/tags/template/</link>
+    <description>Recent content in Template on sigmonsays</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Jan 2023 10:38:37 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/template/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>template</title>
+      <link>http://localhost:1313/template/</link>
+      <pubDate>Mon, 02 Jan 2023 10:38:37 -0700</pubDate>
+      <guid>http://localhost:1313/template/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;strong&gt;Table of Contents&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#common-tags&#34;&gt;Common tags&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#bash-cheatsheet-development-google-hugo-i3-keybase-notes-pgp-pinterest&#34;&gt;bash cheatsheet development google hugo i3 keybase notes pgp pinterest&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#programming-python-rants-rst2html-seo-shell-systemd-security-template-docker&#34;&gt;programming python rants rst2html seo shell systemd security template docker&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#misc---catch-all&#34;&gt;misc - catch all&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#heading&#34;&gt;Heading&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;heading&#34;&gt;Heading&lt;/h1&gt;&#xA;&lt;p&gt;some stuff..&lt;/p&gt;&#xA;&lt;p&gt;a href to google &lt;!-- raw HTML omitted --&gt;google&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Col&lt;/th&gt;&#xA;          &lt;th&gt;Notes&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;example1&lt;/td&gt;&#xA;          &lt;td&gt;Example of tables&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;example2&lt;/td&gt;&#xA;          &lt;td&gt;another example of tables&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;Aligned left&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;Col&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;Notes&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;example1&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Example of tables&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;example2&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;another example of tables&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+    </item>
+  </channel>
+</rss>
