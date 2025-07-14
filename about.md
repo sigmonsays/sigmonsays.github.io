@@ -10,4 +10,4 @@ Hopefully this involves into something for now but mostly its a place to put ran
 This blog was started in 2014 and has continued to receive updates all the way up until the end
 of 2023.
 
-- [[contact]]
+[[contact]]
