@@ -1,8 +1,5 @@
 ---
-date = "2015-02-03T11:59:36-08:00"
-draft = false
-title = "convenient cli tookit using python"
-tags = [ "programming", "python", "misc" ]
+title: "convenient cli tookit using python"
 
 ---
 
@@ -14,8 +11,8 @@ I need a quick tool, most the time I write it in python.
 These tools have built up over time and i've been collecting them organically
 into a python startup file as a set of libraries and functions.
 
-create a file in $HOME/**.pythonstartup** and cherry pick anything below that you find 
-useful. 
+create a file in $HOME/**.pythonstartup** and cherry pick anything below that you find
+useful.
 
 The code below is missing the imports used.. instead copy the text from the imports section
 
@@ -250,4 +247,3 @@ this display hook will automatically pretty print returned values from cli expre
       __builtins__.pprint_on = lambda: setattr(sys, 'displayhook', myhook)
       __builtins__.pprint_off = lambda: setattr(sys, 'displayhook', orig_displayhook)
       # end display hook hack to pretty print everything
-

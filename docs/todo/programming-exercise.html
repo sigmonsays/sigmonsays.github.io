@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/bahunya.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>programming exercise</title>
+  <meta name="title" content="programming exercise" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+  </nav>
+  <header>
+    <h1>programming exercise</h1>
+  </header>
+  <article><p>I heard from a friend about an interesting interview question that I thought would be easy.</p>
+<p><em>The problem</em></p>
+<p>the goal of this program is to find the shortest number of stickers used to make a another word given that you have thousands of stickers</p>
+<p>for instance, with the word &ldquo;WPENGINE&rdquo; printed on them to make for example &ldquo;WWW&rdquo; would take 3 and another example is &ldquo;WINE&rdquo; would take 1.</p>
+<p>The programs logic is really quite literal and was enjoyable to write.</p>
+<p>We have a Sticker type who keeps track of the number of letters used and a pile of stickers which is just a list<br />
+of stickers. We search the pile for a given letter, and if its not found we add another sticker to the pile.</p>
+<p>We keep a dummy sticker object around to validate that we do infact have the letters, and error if not.</p>
+<p>The code</p>
+<pre><code>  package main
+
+  import (
+     &quot;fmt&quot;
+     &quot;os&quot;
+     &quot;strings&quot;
+  )
+
+  func NewSticker(word string) *Sticker {
+     s := &amp;Sticker{
+        letters: make(map[rune]int, 0),
+     }
+     var v int
+     for _, w := range strings.ToLower(word) {
+        v, _ = s.letters[w]
+        v += 1
+        s.letters[w] = v
+     }
+     return s
+  }
+
+  type Sticker struct {
+     letters map[rune]int
+  }
+
+  func (s *Sticker) HasLetter(l rune) bool {
+     count, found := s.letters[l]
+     if found == false {
+        return false
+     }
+     if count &gt; 0 {
+        return true
+     }
+     return false
+  }
+
+  func (s *Sticker) Desc() string {
+     a := make([]string, 0)
+     for l, cnt := range s.letters {
+        a = append(a, fmt.Sprintf(&quot;%s=%d&quot;, string(l), cnt))
+     }
+     return strings.Join(a, &quot; &quot;)
+  }
+
+  func (s *Sticker) UseLetter(l rune) error {
+
+     fmt.Printf(&quot;using letter %s\n&quot;, string(l))
+
+     count, found := s.letters[l]
+     if found == false {
+        return fmt.Errorf(&quot;sticker doesn't have letter %s&quot;, l)
+     }
+
+     if count == 0 {
+        return fmt.Errorf(&quot;letter is used up&quot;)
+     }
+
+     count--
+     s.letters[l] = count
+     return nil
+
+  }
+
+  type Pile struct {
+     word     string
+     stickers []*Sticker
+  }
+
+  func NewPile(word string) *Pile {
+     p := &amp;Pile{
+        word:     word,
+        stickers: make([]*Sticker, 0),
+     }
+     return p
+  }
+
+  func (p *Pile) HasLetter(l rune) bool {
+     for _, sticker := range p.stickers {
+        if sticker.HasLetter(l) {
+           return true
+        }
+     }
+     return false
+  }
+
+  func (p *Pile) AddSticker() {
+     p.stickers = append(p.stickers, NewSticker(p.word))
+  }
+
+  func main() {
+
+     var err error
+     sticker_word := &quot;WPENGINE&quot;
+
+     word := &quot;pingping&quot;
+     if len(os.Args) &gt; 1 {
+        word = os.Args[1]
+     }
+     fmt.Printf(&quot;sticker word %s\n&quot;, sticker_word)
+     fmt.Printf(&quot;making word %s\n&quot;, word)
+     pile := NewPile(sticker_word)
+
+     // just to validate we have the letters..
+     sticker := NewSticker(sticker_word)
+
+     for _, l := range word {
+        //s := string(l)
+        fmt.Printf(&quot;letter %s\n&quot;, string(l))
+
+        if sticker.HasLetter(l) == false {
+           err = fmt.Errorf(&quot;no letter %s&quot;, string(l))
+           break
+        }
+
+        if pile.HasLetter(l) == false {
+           pile.AddSticker()
+        }
+
+        // find a sticker that has the letter we're lookin for in the pile
+        for _, sticker := range pile.stickers {
+           if sticker.HasLetter(l) {
+              sticker.UseLetter(l)
+              continue
+           }
+        }
+
+     }
+
+     if err != nil {
+        fmt.Printf(&quot;ERROR: %s\n&quot;, err)
+        return
+     }
+
+     // print the results
+
+     used := len(pile.stickers)
+     fmt.Printf(&quot;stickers used %d\n&quot;, used)
+
+     for i, sticker := range pile.stickers {
+        fmt.Printf(&quot;sticker #%d  letters %+v\n&quot;, i+1, sticker.Desc())
+     }
+
+  }
+</code></pre>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>

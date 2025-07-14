@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/bahunya.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>My Emacs Kit</title>
+  <meta name="title" content="My Emacs Kit" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+  </nav>
+  <header>
+    <h1>My Emacs Kit</h1>
+  </header>
+  <article><p>This document will be a living document that i&rsquo;ll attempt to update from time to time</p>
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#pico-and-nano">Pico and Nano</a></li>
+<li><a href="#vim">Vim</a></li>
+<li><a href="#doom-emacs">doom emacs</a></li>
+<li><a href="#emacs28-with-native-compilation">emacs28 with native compilation</a></li>
+<li><a href="#markdown-mode">Markdown mode</a></li>
+<li><a href="#org-mode-and-babel">Org mode and babel</a></li>
+</ul>
+<!-- markdown-toc end -->
+<h1 id="intro">Intro <a class="anchor" href="#intro"> </a></h1>
+<p>I&rsquo;ve been using doom-emacs for over a year now (since March 2021) and this is my personal experiences with it.</p>
+<p>I do not put a ton of effort into editors, rather I spend a chunk of time intermittently. This has happened with vi/vim and again<br />
+with emacs. my vim configuration was always flaky and never worked correctly until around neovim. At that point I was so fed up<br />
+with reproducible editor configuration that I looked for something better.</p>
+<p>Here is my editor timeline</p>
+<table>
+<thead>
+<tr>
+<th align="left">Editor</th>
+<th align="center">Years Using</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">nano pico</td>
+<td align="center">Since 2001</td>
+</tr>
+<tr>
+<td align="left">vi</td>
+<td align="center">Since 2002</td>
+</tr>
+<tr>
+<td align="left">vim neovim</td>
+<td align="center">Since 2004</td>
+</tr>
+<tr>
+<td align="left">emacs</td>
+<td align="center">Since late 2020</td>
+</tr>
+</tbody>
+</table>
+<h1 id="pico-and-nano">Pico and Nano <a class="anchor" href="#pico-and-nano"> </a></h1>
+<p>As a systems administration and a PHP developer, I primarily built CMS type stacks and shopping cart applications. These<br />
+editors worked well but I found myself wasting so much time navigating with page up and page down</p>
+<h1 id="vim">Vim <a class="anchor" href="#vim"> </a></h1>
+<p>When I discovered vim and what it could do, I became interested.. But&hellip;</p>
+<p>It was really difficult for me to pick up. Once I managed to make the switch to a modal editor, I never<br />
+looked back.</p>
+<p>vim configuration was always mystical to me (and still is). I could barely customize it outside of it&rsquo;s<br />
+stock configuration so that&rsquo;s what I used.</p>
+<h1 id="doom-emacs">doom emacs <a class="anchor" href="#doom-emacs"> </a></h1>
+<p>Being a vim user for so many years has basically burned those keys into my brain.</p>
+<p>I am still a vim user to this day like using <code>j</code> and <code>k</code> to navigate is still present in doom emacs due to evil mode</p>
+<p>I&rsquo;m by no means a lisp expert but doom emacs is ready to go out very quickly. Some things that look time are learning<br />
+and discovering everything that is out there.</p>
+<p>Favorite packages</p>
+<table>
+<thead>
+<tr>
+<th align="left">Package</th>
+<th align="left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">projectile</td>
+<td align="left">project manager</td>
+</tr>
+<tr>
+<td align="left">dired</td>
+<td align="left">file explorer</td>
+</tr>
+<tr>
+<td align="left">magit</td>
+<td align="left">use git in emacs</td>
+</tr>
+<tr>
+<td align="left">bookmarks</td>
+<td align="left">quickly jump to common files</td>
+</tr>
+<tr>
+<td align="left">ibuffer</td>
+<td align="left">grouping and switching buffers</td>
+</tr>
+<tr>
+<td align="left">LSP</td>
+<td align="left">for coding in go, rust, python</td>
+</tr>
+<tr>
+<td align="left">org-mode</td>
+<td align="left">knowledge base and interactive document</td>
+</tr>
+<tr>
+<td align="left">emacs-everywhere</td>
+<td align="left">quick pop up emacs buffer for editing and pasting back into an application</td>
+</tr>
+</tbody>
+</table>
+<p>Honerable mentions</p>
+<ul>
+<li>restclient.el</li>
+<li>code folding</li>
+<li>yasnippet for code snippets</li>
+<li>eshell</li>
+<li>markdown mode</li>
+<li>org mode and babel</li>
+<li>dired</li>
+</ul>
+<h1 id="emacs28-with-native-compilation">emacs28 with native compilation <a class="anchor" href="#emacs28-with-native-compilation"> </a></h1>
+<p>The editor install is a beast which is not ideal but native compilation made emacs so much faster that I can&rsquo;t live without it</p>
+<h1 id="markdown-mode">Markdown mode <a class="anchor" href="#markdown-mode"> </a></h1>
+<p>Emacs never fails to amaze in the commands it has. One case is in markdown mode, you can simply run <code>markdown-toc-generate-toc</code> and it will generate<br />
+a index at the top of the page. This also works for org mode using <code>toc-org-insert-toc</code></p>
+<h1 id="org-mode-and-babel">Org mode and babel <a class="anchor" href="#org-mode-and-babel"> </a></h1>
+<p>I use .org files for keeping notes about various things. Being able to have a text only interface with the ability to link between org files and sections<br />
+is really all I need.</p>
+<p>Then comes babel, which is a way for emacs to execute source code snippets. For instance for bash, I can get the output of <code>df -h /</code> rendered directly in<br />
+my org file</p>
+<pre><code>#+begin_src bash :results output
+df -h /
+#+end_src
+
+#+RESULTS:
+: Filesystem      Size  Used Avail Use% Mounted on
+: /dev/nvme0n1p2  1.8T  473G  1.3T  28% /
+</code></pre>
+<p>I&rsquo;ve used this for a lot of things where you want to remember the command and also capture the results.</p>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>

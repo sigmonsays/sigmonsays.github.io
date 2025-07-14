@@ -1,17 +1,6 @@
 ---
-date = "2023-01-02T10:38:37-07:00"
-draft = true
-title = "template"
+title: "template"
 
-# Common tags
-# bash cheatsheet development google hugo i3 keybase notes pgp pinterest
-# programming python rants rst2html seo shell systemd security template docker
-#
-# misc - catch all
-tags = [ "template", "misc" ]
-
-
-_promo = [ "nopromo" ]
 
 ---
 

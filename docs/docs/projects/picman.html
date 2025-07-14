@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/bahunya.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>picman: photo sorting tool</title>
+  <meta name="title" content="picman: photo sorting tool" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+  </nav>
+  <header>
+    <h1>picman: photo sorting tool</h1>
+  </header>
+  <article><p>github <a href="https://github.com/sigmonsays/picman">https://github.com/sigmonsays/picman</a></p>
+<p>I wrote a basic tool to replace my krufty bash scripts that imports my photos from various locations into<br />
+their final resting place.</p>
+<p>The tool operates in steps where each step is kind of idempotent. The set of all steps is called<br />
+a workflow and operates on a single file. see <a href="https://github.com/sigmonsays/picman/blob/dev/autosort/workflow.go#L18">code</a>.</p>
+<p>Each step operates on the same workflow object, which primarily has a state object</p>
+<p>State Object <a href="https://github.com/sigmonsays/picman/blob/dev/core/statefile.go#L26">code</a></p>
+<ul>
+<li>holds exif data</li>
+<li>holds file stat information</li>
+<li>holds date metadata that is obtained via exif or other logic</li>
+<li>holds checksum and logs of processing the file</li>
+</ul>
+<p>Steps in order</p>
+<ul>
+<li>StartWorkflow - logs a start workflow</li>
+<li>CheckSupportedType - returns core.StopProcessing if file type is not supported</li>
+<li>PopulateExif - obtains exif data via json</li>
+<li>CheckExif - abandons file processing if it&rsquo;s a text file or if we have no exif data</li>
+<li>ObtainDateTaken - gets data taken by looking at various exif data fields</li>
+<li>ChecksumFile - obtain checksum of file</li>
+<li>GenerateFinalName - generate a destination file name based on date taken</li>
+<li>CopyFile - copy file to final destination</li>
+</ul>
+<p>This process makes it very easy to build tools up around various photo imports.</p>
+<p>Finally this tool writes a json summary of how many files were copied if you need to re-index<br />
+external photo stores. This allows better integration with tooling like photoprism/photostructure.</p>
+<h1 id="additional-notes">Additional notes <a class="anchor" href="#additional-notes"> </a></h1>
+<p>This tool with syncthing and photoprism has solved my photo needs without relying on a cloud storage<br />
+service or photo hosting provider. I own my own photos and have originals backed up at all times.</p>
+<p>photo backups are taken daily via restic and stored encrypted in a cloud storage provider (currently backblaze)</p>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>

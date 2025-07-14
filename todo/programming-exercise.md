@@ -1,11 +1,9 @@
 ---
-date = "2016-03-02T14:57:19-08:00"
-draft = false
-title = "programming exercise"
+title: "programming exercise"
 
 ---
 
-I heard from a friend about an interesting interview question that I thought would be easy. 
+I heard from a friend about an interesting interview question that I thought would be easy.
 
 *The problem*
 
@@ -13,7 +11,7 @@ the goal of this program is to find the shortest number of stickers used to make
 
 for instance, with the word "WPENGINE" printed on them to make for example "WWW" would take 3 and another example is "WINE" would take 1.
 
-The programs logic is really quite literal and was enjoyable to write. 
+The programs logic is really quite literal and was enjoyable to write.
 
 We have a Sticker type who keeps track of the number of letters used and a pile of stickers which is just a list
 of stickers. We search the pile for a given letter, and if its not found we add another sticker to the pile.
@@ -166,5 +164,3 @@ The code
          }
 
       }
-
-
