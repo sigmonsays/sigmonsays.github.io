@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/bahunya.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>screenshot</title>
+  <meta name="title" content="screenshot" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+  </nav>
+  <header>
+    <h1>screenshot</h1>
+  </header>
+  <article><p>Screenshot is a simple python script that has evolved over time. It started out as a shell script which called <code>import -window root screenshot.png</code> and has<br />
+evolved into a full featured application.</p>
+<p>Github page - <a href="https://github.com/sigmonsays/screenshot/blob/master/README.md">https://github.com/sigmonsays/screenshot/blob/master/README.md</a></p>
+<p>The point of this post is to demonstrate how to setup screenshot and how to use it to achieve a few things</p>
+<p>Installation</p>
+<pre><code>git clone https://github.com/sigmonsays/screenshot.git
+sudo apt-get install -y xclip imagemagick
+cd screenshot
+sudo pip install .
+</code></pre>
+<p>Configuration</p>
+<p>Edit <code>~/.screenshot/config.ini</code></p>
+<p>[screenshot]<br />
+use_clipboard = yes<br />
+clipboard_method = s3<br />
+capture_method = imagemagick</p>
+<p>[s3]<br />
+enabled = yes<br />
+bucket = my_bucket<br />
+access_key = XXXX<br />
+secret_key = XXXX</p>
+<p>Flag summary</p>
+<pre><code>  Usage: screenshot [options]
+
+  Options:
+    -h, --help            show this help message and exit
+    -c FILE, --config=FILE
+                          config file
+    -v, --verbose
+    -l LOG_LEVEL, --log-level=LOG_LEVEL
+                          set logging level [info]
+    -s SUMMARY, --summary=SUMMARY
+                          optional summary of picture
+    -u UPLOADERS, --uploaders=UPLOADERS
+                          enable specific uploaders
+    -f FILENAME, --filename=FILENAME
+                          use this file (or http address) instead of capturing
+</code></pre>
+<p>Usage</p>
+<p>screenshot whatever</p>
+<p>This allows you to select a region of your screen and then uploads it</p>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+    Last modified <time datetime="2025-07-13T22:16:35Z-07:00
+">Sun Jul 13 10:16:35 PM PDT 2025
+</time>
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>
