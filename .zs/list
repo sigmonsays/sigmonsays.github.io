@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -e
+
+if [ ! $# = 1 ]; then
+    printf >&2 "Usage: %s <path> [ext]\n" "$(basename "$0")"
+    exit 0
+fi
+
+p="$1"
+t="${2:-md}"
+
+if [ ! -d "$p" ]; then
+    printf >&2 "error: path %s not found\n" "$p"
+    exit 1
+fi
+
+find "$p" -type f -name "*.$t" | while read -r file; do
+    name="${file#"$p"}"
+    name="${name#"/"}"
+    name="${name%.*}"
+
+    title="$(zs vars "$file" title)"
+    if [ -z "$title" ]; then
+        title="$file"
+    fi
+
+    echo "- [$title](${p}/${name}.html)"
+done
