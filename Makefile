@@ -15,10 +15,9 @@ dev : build
 	zs serve -root public
 
 build:
-	zs build
 	rm -rf docs
-	mkdir -p docs
-	mv .pub/* docs/
+	zs build
+	mv .pub/ docs/
 
 ifeq ($(PUBLISH), 1)
 image:
