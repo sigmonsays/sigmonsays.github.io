@@ -6,13 +6,16 @@ TAG := latest
 
 all: build
 
+b: build
+d: dev
+
 deps:
 	$(GOCMD) install go.mills.io/zs@latest
 	$(GOCMD) install github.com/tdewolff/minify/v2/cmd/minify@latest
 
 dev : DEBUG=1
 dev : build
-	zs serve -root public
+	zs serve
 
 build:
 	rm -rf docs

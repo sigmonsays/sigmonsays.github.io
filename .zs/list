@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 set -e
 
@@ -16,13 +16,17 @@ if [ ! -d "$p" ]; then
     exit 1
 fi
 
-ls -1 $p/*.$t | while read -r file; do
+
+ls -1 $p/*.$t | while read file; do
+    name="$file"
     name="${name%.*}"
 
     title="$(zs vars "$file" title)"
     if [ -z "$title" ]; then
         title="$file"
     fi
+    base="$(basename "$file")"
 
-    echo "- [$title](${prefix}/${name}.html)"
+    echo -e "\nfile:$file name:$name prefix:$prefix title:$title"
+    echo "- [$title](${prefix}${base}.html)"
 done

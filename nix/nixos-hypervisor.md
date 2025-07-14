@@ -1,15 +1,6 @@
 ---
 title: "nixos hypervisor"
 
-# Common tags
-# bash cheatsheet development google hugo i3 keybase notes pgp pinterest
-# programming python rants rst2html seo shell systemd security template docker
-#
-# misc - catch all
-tags = [ "nixos" ]
-
-
-_promo = [ "nopromo" ]
 
 ---
 
