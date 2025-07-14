@@ -1,6 +1,6 @@
 ---
 title: "docker networking performance"
-
+date: todo
 ---
 
 While trying to determine the performance overhead of a simple docker container setup, I discovered several

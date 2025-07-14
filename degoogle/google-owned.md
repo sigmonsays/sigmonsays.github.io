@@ -1,6 +1,6 @@
 ---
 title: "Google Owned"
-
+date: todo
 ---
 
 Ever think about how much information google has collected about you?

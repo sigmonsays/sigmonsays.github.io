@@ -1,6 +1,6 @@
 ---
 title: "paste, an hour long project"
-
+date: todo
 ---
 
 I'm sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.

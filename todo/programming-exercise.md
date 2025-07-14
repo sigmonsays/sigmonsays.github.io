@@ -1,6 +1,6 @@
 ---
 title: "programming exercise"
-
+date: todo
 ---
 
 I heard from a friend about an interesting interview question that I thought would be easy.

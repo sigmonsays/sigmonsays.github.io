@@ -1,6 +1,6 @@
 ---
 title: "firewall"
-
+date: todo
 ---
 
 Just a nasty little adhoc firewall script I use to quickly secure a box for any ports it has open.

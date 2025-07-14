@@ -1,6 +1,6 @@
 ---
 title: "Sudo"
-
+date: todo
 ---
 
 <pre>

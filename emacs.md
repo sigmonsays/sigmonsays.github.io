@@ -1,5 +1,6 @@
 ---
 title: "My Emacs Kit"
+date: todo
 ---
 
 This document will be a living document that i'll attempt to update from time to time

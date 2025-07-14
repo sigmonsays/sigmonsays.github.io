@@ -1,6 +1,6 @@
 ---
 title: "enlightenment"
-
+date: todo
 ---
 
 # Update: August 2019

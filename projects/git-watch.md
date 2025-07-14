@@ -1,5 +1,6 @@
 ---
 title: "git-watch"
+date: todo
 ---
 git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.
 

@@ -1,4 +1,0 @@
-todo/pinterest-sucks.md
-todo/programming-exercise.md
-todo/pythonstartup.md
-todo/template.md

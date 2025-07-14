@@ -1,7 +1,6 @@
 ---
 title: "nixos hypervisor"
-
-
+date: todo
 ---
 
 

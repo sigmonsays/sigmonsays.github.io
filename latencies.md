@@ -1,5 +1,6 @@
 ---
 title: "System latencies for software developers"
+date: todo
 ---
 
 Approximate timing for various operations on a typical PC:

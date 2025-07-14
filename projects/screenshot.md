@@ -1,6 +1,6 @@
 ---
 title: "screenshot"
-
+date: todo
 ---
 
 Screenshot is a simple python script that has evolved over time. It started out as a shell script which called `import -window root screenshot.png` and has

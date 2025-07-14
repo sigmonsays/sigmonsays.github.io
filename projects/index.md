@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+date: todo
 ---
 
 Various ramblings and projects, mostly tools and libraries

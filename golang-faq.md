@@ -1,5 +1,6 @@
 ---
 title: "golang FAQ"
+date: todo
 ---
 
 Sections

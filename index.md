@@ -1,6 +1,6 @@
 ---
 title: sigmonsays.github.io
-
+date: todo
 ---
 
 ## linux
