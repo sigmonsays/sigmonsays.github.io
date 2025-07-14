@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/bahunya.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>bash</title>
+  <meta name="title" content="bash" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+  </nav>
+  <header>
+    <h1>bash</h1>
+  </header>
+  <article><p>I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page<br />
+primarily serves as short snippets of bash recipes I often want to re-use.</p>
+<p>A lot of this bash is old and wrong, because I learned bash so long ago (1998?). Refer to <a href="http://mywiki.wooledge.org/BashGuide">http://mywiki.wooledge.org/BashGuide</a> for proper rules.</p>
+<ul>
+<li>[Simple Logging Redirect](&lt;: plugin or variable not found)</li>
+<li>[Human Size](&lt;: plugin or variable not found)</li>
+</ul>
+<h3 id="simple-logging-redirect">Simple Logging Redirect <a class="anchor" href="#simple-logging-redirect"> </a></h3>
+<p>If you have a bash script you wish to add logging to a simple approach is to use <code>exec</code> and redirect the output to a file.</p>
+<pre><code> exec &gt; &gt;(tee mylog) 2&gt;&amp;1
+</code></pre>
+<p>This is straight from the bash FAQ <a href="http://mywiki.wooledge.org/BashFAQ/106">#106</a> so go there for details.</p>
+<h3 id="human-size">Human Size <a class="anchor" href="#human-size"> </a></h3>
+<p>This function converts a integer to the appropriate human size</p>
+<pre><code>  function human_size {
+   local B=$1
+   local S
+   if [ &quot;$B&quot; -gt 1099511627776   ] ; then
+     S=&quot;$(($B/1099511627776))tb&quot;
+   elif [ &quot;$B&quot; -gt 1073741824 ] ; then
+     S=&quot;$(($B/1073741824))gb&quot;
+   elif [ &quot;$B&quot; -gt 1048576  ] ; then
+     S=&quot;$(($B/1048576))mb&quot;
+   elif [ &quot;$B&quot; -gt 1024  ] ; then
+     S=&quot;$(($B/1024))kb&quot;
+   else
+     S=&quot;${B}b&quot;
+   fi
+   echo $S
+  }
+</code></pre>
+<p><code>NOTES</code></p>
+<ul>
+<li>This is <code>sh</code> compatible and not explicitly bash because it makes use of <code>[</code> and should instead use <code>[[</code></li>
+</ul>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>

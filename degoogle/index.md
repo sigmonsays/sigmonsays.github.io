@@ -1,0 +1,5 @@
+---
+title: "degoogle"
+---
+
+{{ list degoogle }}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/bahunya.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>nixos networking</title>
+  <meta name="title" content="nixos networking" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+  </nav>
+  <header>
+    <h1>nixos networking</h1>
+  </header>
+  <article><h1 id="bridged-networking">Bridged Networking <a class="anchor" href="#bridged-networking"> </a></h1>
+<p>I recently switched my main desktop from ubuntu to nixos. So I started down the road of attempting<br />
+to run virtual machines on nixos as a development stack.</p>
+<p><code>All I want for christmas is a bridged network</code></p>
+<p>all I wanted is a bridged network to have VMs DHCP on my LAN.</p>
+<p>One development stack I use is a VM filled with a bunch of services. That way I can setup<br />
+and install the machine just like a production node. Acurately representing the deployment<br />
+makes development and testing easier. Often this setup is used as some type of integration<br />
+testing or performance testing.</p>
+<p>But enough about that&hellip; and onto setting up a bridged network on nixos!</p>
+<p>So I spent a little looking around on how to setup bridged networking with very<br />
+little fruitful results. I didn&rsquo;t want to use networkd right away but i was guided<br />
+that way on the nixos chat because the configuration directives are documented<br />
+by networkd and we all know the state of nixos documentation.</p>
+<p>I ran into some issues along the way</p>
+<ul>
+<li><code>nixos-rebuild switch</code> took really long to configure networkd. This made feedback painful because trying things took a while.</li>
+<li>nixos networking documentation is subpar, atleast very confusing at the minimum</li>
+<li>documentation is pretty much missing on setting up common deployments. You&rsquo;re forced to look at<br />
+a set of options and put them together to make something that works.</li>
+<li>i first looked for bridged networking using the networking.* set of options but was unable to find a complete example</li>
+<li>nixos-rebuild switch does not always work. This is the first time the configuration was not applied to the running system.</li>
+</ul>
+<p><strong>More on configuration not being applied to the running system</strong></p>
+<p>whatever happened i&rsquo;m not sure, i had to reboot the box for the network to come up properly. I discovered this by making a nixos VM and configuring it just like I did before. miraculously<br />
+it worked!</p>
+<p>I thought WTH did i do wrong&hellip; At the end of the day I was fed up with the amount of time I put into it and wanted to move on. So I did.</p>
+<h2 id="dns-fun">dns fun <a class="anchor" href="#dns-fun"> </a></h2>
+<p>Second big woes was DNS</p>
+<ul>
+<li>first i tried &rsquo;networking.search&rsquo; and that did nothing</li>
+<li>then i tried &lsquo;services.resolved.domains = [ &ldquo;lan&rdquo; ]&rsquo; and that didn&rsquo;t work</li>
+<li>then i tried &lsquo;systemd.network.networks.<name>.domains&rsquo; and that finally worked</li>
+<li>getting &lsquo;search lan&rsquo; functionality is surprisingly difficult</li>
+<li>somehow i was automatically switched over to &lsquo;resolved&rsquo; functionality (services.resolved.enable) when enabling systemd.network</li>
+</ul>
+<h1 id="working-configuration">Working configuration <a class="anchor" href="#working-configuration"> </a></h1>
+<p>The final configration that setup bridged networking for my host</p>
+<pre><code>    # This network config uses sytemd networkd with a bridge
+    {
+    networking.hostName = &quot;desktop3&quot;;
+    networking = {
+        useDHCP = false;
+        useNetworkd = true;
+    };
+    systemd.network = {
+        enable = true;
+        netdevs = {
+            &quot;25-br0&quot; = {
+                netdevConfig = {
+                    Kind = &quot;bridge&quot;;
+                    Name = &quot;br0&quot;;
+                };
+            };
+        };
+        networks = {
+            &quot;30-br0&quot; = {
+                matchConfig.Name = &quot;en*&quot;;
+                networkConfig = {
+                    Bridge = &quot;br0&quot;;
+                };
+            };
+            &quot;40-br0&quot; = {
+                DHCP = &quot;yes&quot;;
+                matchConfig.Name = &quot;br0&quot;;
+            };
+        };
+    };
+
+    # Wait for any interface to become available, not for all
+    systemd.services.&quot;systemd-networkd-wait-online&quot;.serviceConfig.ExecStart = [
+        &quot;&quot; &quot;${config.systemd.package}/lib/systemd/systemd-networkd-wait-online --any&quot;
+    ];
+    }
+</code></pre>
+<h1 id="final-thoughts">Final Thoughts <a class="anchor" href="#final-thoughts"> </a></h1>
+<p>I think that nixos might be the best OS i&rsquo;ve used in terms of reproducibility.</p>
+<p>I usually dont have a lot of problem these days with ubuntu but having to upgrade between distributions and set everything back up was a pain. Mostly because I didn&rsquo;t remember what<br />
+I wanted until I needed it right away. There was some things that were old on ubuntu like i3, tmux and polybar that I would compile from source.</p>
+<p>I dont even have a complete list of everything.</p>
+<p>I&rsquo;ve attempted to salt or ansible my desktop and development environments but those tools<br />
+required more effort than I was willing to put in.</p>
+<p>So all that being said, I hope this blog post helps someone on their nixos adventures.</p>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>
