@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/bahunya.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>interesting tech</title>
+  <meta name="title" content="interesting tech" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+  </nav>
+  <header>
+    <h1>interesting tech</h1>
+  </header>
+  <article><!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#aug-2024">Aug 2024</a></li>
+<li><a href="#feb-2019">Feb 2019</a></li>
+<li><a href="#jan-2018">Jan 2018</a></li>
+<li><a href="#oct-2016">Oct 2016</a>
+<ul>
+<li><a href="#hitless-haproxy-reload">hitless haproxy reload</a></li>
+<li><a href="#go-jira">go jira</a></li>
+<li><a href="#http2-keylog">http2 keylog</a></li>
+<li><a href="#xo">xo</a></li>
+<li><a href="#teleport">teleport</a></li>
+<li><a href="#sftp-server-library-in-go">sftp server library in go</a></li>
+<li><a href="#toasteroid">toasteroid</a></li>
+<li><a href="#httpcache">httpcache</a></li>
+</ul>
+</li>
+<li><a href="#feb-2016">Feb 2016</a></li>
+<li><a href="#jan-2016">Jan 2016</a></li>
+<li><a href="#nov-2015">Nov 2015</a></li>
+<li><a href="#jan-2015">Jan 2015</a></li>
+</ul>
+<!-- markdown-toc end -->
+<h1 id="aug-2024">Aug 2024 <a class="anchor" href="#aug-2024"> </a></h1>
+<ul>
+<li>process-compose - docker-compose but for processes<br />
+see <a href="https://github.com/F1bonacc1/process-compose">https://github.com/F1bonacc1/process-compose</a></li>
+</ul>
+<h1 id="feb-2019">Feb 2019 <a class="anchor" href="#feb-2019"> </a></h1>
+<table>
+<thead>
+<tr>
+<th>Link</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://landscape.cncf.io/">https://landscape.cncf.io/</a></td>
+<td>the CNCF landscape makes me want to cry</td>
+</tr>
+</tbody>
+</table>
+<h1 id="jan-2018">Jan 2018 <a class="anchor" href="#jan-2018"> </a></h1>
+<table>
+<thead>
+<tr>
+<th>Link</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/lewish/asciiflow2">https://github.com/lewish/asciiflow2</a> and <a href="http://asciiflow.com/">http://asciiflow.com/</a></td>
+<td>ascii art draw tool.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benhoyt/goawk">https://github.com/benhoyt/goawk</a></td>
+<td>awk fully implemented in go and passes &rsquo;the awk test'</td>
+</tr>
+</tbody>
+</table>
+<h1 id="oct-2016">Oct 2016 <a class="anchor" href="#oct-2016"> </a></h1>
+<p>gmx - similar to jmx but for go<br />
+<a href="https://github.com/davecheney/gmx">https://github.com/davecheney/gmx</a></p>
+<h2 id="hitless-haproxy-reload">hitless haproxy reload <a class="anchor" href="#hitless-haproxy-reload"> </a></h2>
+<p><a href="https://github.com/sorah/sandbox/tree/master/ruby/haproxy-master">https://github.com/sorah/sandbox/tree/master/ruby/haproxy-master</a></p>
+<h2 id="go-jira">go jira <a class="anchor" href="#go-jira"> </a></h2>
+<p><a href="https://github.com/Netflix-Skunkworks/go-jira">https://github.com/Netflix-Skunkworks/go-jira</a></p>
+<p>I currently use this program in a very limited fashion for managing development workflow. it becomes very handy to build a<br />
+shell script environment for aiding in common development process. Right now its only used to view jira tasks and comment on<br />
+them.</p>
+<p>This is powerful enough for the time being</p>
+<h2 id="http2-keylog">http2 keylog <a class="anchor" href="#http2-keylog"> </a></h2>
+<p>with the growing popularity of http/2 you can&rsquo;t be without the ability to inspect the payload.</p>
+<p>This looks really useful in tracing http/2 (even grpc) with wireshark</p>
+<p><a href="https://github.com/joneskoo/http2-keylog/">https://github.com/joneskoo/http2-keylog/</a></p>
+<h2 id="xo">xo <a class="anchor" href="#xo"> </a></h2>
+<p>generate idomatic go code for SQL databases (Please do not confuse this with an ORM!)</p>
+<p><a href="https://github.com/knq/xo">https://github.com/knq/xo</a></p>
+<h2 id="teleport">teleport <a class="anchor" href="#teleport"> </a></h2>
+<p>its a pretty impressive ssh daemon setup that has temporary certs for ssh access through a central auth system, with 2-factor<br />
+auth built in. Every &ldquo;teleport node&rdquo; registers itself too so you can just list specific nodes</p>
+<p>I can imagine something like this becoming &ldquo;the normal&rdquo; in a cloud computing environment</p>
+<p><a href="https://github.com/gravitational/teleport">https://github.com/gravitational/teleport</a></p>
+<h2 id="sftp-server-library-in-go">sftp server library in go <a class="anchor" href="#sftp-server-library-in-go"> </a></h2>
+<p>SFTP server library in Go, <a href="https://github.com/taruti/sftpd">https://github.com/taruti/sftpd</a></p>
+<h2 id="toasteroid">toasteroid <a class="anchor" href="#toasteroid"> </a></h2>
+<ol>
+<li>print stuff on your toast.</li>
+<li>Print Ads on your toast.</li>
+<li>Profit. What!?</li>
+</ol>
+<p>See <a href="https://toasteroid.com/">https://toasteroid.com/</a></p>
+<p>I imagine a (dystopian?) future where you have to pay a subscription fee to remove ads from your toast in the morning</p>
+<p>This could be the IoT future we all hate.</p>
+<h2 id="httpcache">httpcache <a class="anchor" href="#httpcache"> </a></h2>
+<p>A Transport for http.Client that will cache responses according to the HTTP RFC</p>
+<p><a href="https://github.com/gregjones/httpcache">https://github.com/gregjones/httpcache</a></p>
+<h1 id="feb-2016">Feb 2016 <a class="anchor" href="#feb-2016"> </a></h1>
+<ul>
+<li>
+<p>asciinema - record your terminal in plain text and replay it!</p>
+<ul>
+<li>website - <a href="https://asciinema.org/">https://asciinema.org/</a></li>
+</ul>
+</li>
+<li>
+<p>find unused packages in a go repository - <a href="https://github.com/nf/deadleaves">https://github.com/nf/deadleaves</a></p>
+</li>
+<li>
+<p>AppImages is a interesting format that is similar to other &ldquo;self contained&rdquo; technologies like<br />
+CDE (<a href="http://www.pgbovine.net/cde.html)">http://www.pgbovine.net/cde.html)</a>. I havn&rsquo;t read into it yet but lets hope it does better<br />
+than everyone else&hellip;</p>
+<p>AppImage is at <a href="https://github.com/probonopd/AppImageKit/wiki/Creating-AppImages">https://github.com/probonopd/AppImageKit/wiki/Creating-AppImages</a></p>
+</li>
+<li>
+<p>The web of names, hashes and UUIDs - <a href="https://joearms.github.io/2015/03/12/The_web_of_names.html">https://joearms.github.io/2015/03/12/The_web_of_names.html</a></p>
+<p>This isnt the first time I read this but I came across it again recently and wanted to save it here</p>
+</li>
+</ul>
+<h1 id="jan-2016">Jan 2016 <a class="anchor" href="#jan-2016"> </a></h1>
+<ul>
+<li>
+<p>MQTT - <a href="http://mqtt.org/">http://mqtt.org/</a></p>
+<p>MQTT is a machine-to-machine messaging protocol designed for IoT. Its design goals are small code and resource footprint is required (network, memory, etc) making<br />
+it very interesting for mobile (and more) development.</p>
+</li>
+<li>
+<p>sheepdog - distributed block storage for qemu - <a href="http://sheepdog.github.io/sheepdog/">http://sheepdog.github.io/sheepdog/</a></p>
+</li>
+<li>
+<p>snap - <a href="https://github.com/intelsdi-x/snap">https://github.com/intelsdi-x/snap</a></p>
+</li>
+<li>
+<p>thermal cameras - <a href="http://www.thermal.com/thermal-cameras/">http://www.thermal.com/thermal-cameras/</a></p>
+</li>
+<li>
+<p>debops - <a href="http://docs.debops.org/en/latest/index.html">http://docs.debops.org/en/latest/index.html</a> - automate installation of all your data center components</p>
+</li>
+<li>
+<p>api.data.gov</p>
+</li>
+</ul>
+<h1 id="nov-2015">Nov 2015 <a class="anchor" href="#nov-2015"> </a></h1>
+<ul>
+<li>
+<p>tenus - linux networking in golang</p>
+<ul>
+<li>website <a href="https://github.com/milosgajdos83/tenus">https://github.com/milosgajdos83/tenus</a></li>
+<li>mentioned in article - <a href="http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/">http://containerops.org/2014/07/30/tenus-golang-powered-linux-networking/</a></li>
+</ul>
+</li>
+<li>
+<p>Task Spooler - <a href="http://vicerveza.homeunix.net/~viric/soft/ts/">http://vicerveza.homeunix.net/~viric/soft/ts/</a></p>
+<p>An oldie but a goodie.. I had used this many years ago but forgot its name and wanted it again.. Here&rsquo;s to remembering!</p>
+</li>
+<li>
+<p>hound - <a href="https://github.com/etsy/Hound">https://github.com/etsy/Hound</a></p>
+</li>
+<li>
+<p>silver surfer - <a href="http://geoff.greer.fm/ag/">http://geoff.greer.fm/ag/</a></p>
+<ul>
+<li><a href="https://github.com/ggreer/the_silver_searcher">https://github.com/ggreer/the_silver_searcher</a></li>
+</ul>
+</li>
+<li>
+<p>microservices future</p>
+<ul>
+<li><a href="http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone">http://blog.giantswarm.io/docker-and-related-services-enable-a-future-of-microservices-for-everyone</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="jan-2015">Jan 2015 <a class="anchor" href="#jan-2015"> </a></h1>
+<ul>
+<li>
+<p>otro - javascript interpreter in Go - https://github.com/robertkrimen/otto</p>
+</li>
+<li>
+<p>C10M - http://c10m.robertgraham.com/p/manifesto.html</p>
+</li>
+<li>
+<p>Completely decentralized cloud messaging - http://iris.karalabe.com<br />
+decentralized cloud messaging with broadcast, request/reply and pubsub messaging with literally zero configuration.</p>
+</li>
+<li>
+<p>Fast and Simple Open Source &ldquo;Github&rdquo; - https://github.com/gogits/gogs</p>
+</li>
+<li>
+<p>Quick VPN using SSH - <a href="http://backreference.org/2009/11/13/openssh-based-vpns/">http://backreference.org/2009/11/13/openssh-based-vpns/</a></p>
+</li>
+<li>
+<p>Rudder - Software Defined Networks - <a href="https://github.com/coreos/rudder">https://github.com/coreos/rudder</a> </p>
+</li>
+</ul>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+    Last modified <time datetime="2025-07-13T22:20:49Z-07:00
+">Sun Jul 13 10:20:49 PM PDT 2025
+</time>
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>

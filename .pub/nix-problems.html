@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/bahunya.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>Nix Problems</title>
+  <meta name="title" content="Nix Problems" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+  </nav>
+  <header>
+    <h1>Nix Problems</h1>
+  </header>
+  <article><h1 id="inkscape-segfault-on-opening-a-file">inkscape segfault on opening a file <a class="anchor" href="#inkscape-segfault-on-opening-a-file"> </a></h1>
+<p>axidraw is not available in nixos, so I need to figure out how to get virtualenv working, which<br />
+isn&rsquo;t that hard. I managed.</p>
+<p>inkscape crashes every time I open a file on nix. This does not happen on ubuntu or MacOS.</p>
+<p>There seems to be a problem related to GTK3 but it&rsquo;s not fixed in nixpkgs stable or unstable</p>
+<p><a href="https://github.com/NixOS/nixpkgs/issues/249616">https://github.com/NixOS/nixpkgs/issues/249616</a></p>
+<p><a href="https://gitlab.com/inkscape/inbox/-/issues/9843">https://gitlab.com/inkscape/inbox/-/issues/9843</a></p>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+    Last modified <time datetime="2025-07-13T22:20:49Z-07:00
+">Sun Jul 13 10:20:49 PM PDT 2025
+</time>
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>

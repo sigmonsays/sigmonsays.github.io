@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/bahunya.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>building packages with docker</title>
+  <meta name="title" content="building packages with docker" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+  </nav>
+  <header>
+    <h1>building packages with docker</h1>
+  </header>
+  <article><p>This is a simple idea I had while waiting for a build to complete.</p>
+<p><strong>The background</strong><br />
+Its common to use dpkg-buildpackage inside of a chroot managed by pdebuild. The pdebuild script<br />
+takes a minimal base image tarball and installs all dependencies in it required to<br />
+build your package.</p>
+<p>The build dependencies come from debian/control Build-Depends section. The package being<br />
+built is a python application using virtualenv. A lot of the packages come from apt however.<br />
+There is a bunch of python pip/easy install work performed too.</p>
+<p>Needless to say this takes quite some time to do since extracting a .deb and installing<br />
+it is a pretty expensive operation when there is a lot of dependencies.</p>
+<p>Obverve the following times</p>
+<ul>
+<li>pdebuild - 2m35.113s</li>
+<li>dpkg-buildpackage - 0m55.480s</li>
+<li>docker - 0m37.421s</li>
+</ul>
+<p>because i&rsquo;m not interested in explaining how the other 2 method work, i&rsquo;ll leave that out. However, let me<br />
+explain how the docker build works.</p>
+<h2 id="docker">docker <a class="anchor" href="#docker"> </a></h2>
+<p>The idea is to exploit the layered file system of containers to provide build dependencies. Since<br />
+its a copy on write file system, this means providing a container with all build deps present is<br />
+incredibly fast.</p>
+<p><strong>Dockerfile</strong></p>
+<pre><code>FROM ubuntu
+RUN apt-get update \
+   &amp;&amp; apt-get install -y dpkg-dev
+
+
+# This is the key line, it installs the build dependencies for your application!
+RUN apt-get build-dep -y --force-yes YOUR_PACKAGE
+
+RUN useradd packaging \
+   &amp;&amp; mkdir -p /packaging \
+   &amp;&amp; chown packaging /packaging
+
+USER packaging
+ADD build.sh /bin/build.sh
+
+ENTRYPOINT [ &quot;/bin/build.sh&quot; ]
+
+</code></pre>
+<p><strong>build.sh</strong></p>
+<pre><code>#!/bin/bash
+
+echo &quot;[build.sh] $@&quot;
+
+set -x
+
+cd /packaging
+pwd
+tar vzxf -
+cd package
+dpkg-buildpackage
+</code></pre>
+<p>Then to invoke the build we stream the contents at a tar.gz into the container which streams<br />
+it to disk and builds the package.</p>
+<pre><code>package_stream ()
+{
+    git archive HEAD --format tar --prefix=package/ | gzip -9
+}
+</code></pre>
+<p>Finally, this is the final command that runs the build</p>
+<pre><code>  time package_stream | docker run -i debbie
+</code></pre>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+    Last modified <time datetime="2025-07-13T22:20:49Z-07:00
+">Sun Jul 13 10:20:49 PM PDT 2025
+</time>
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>
