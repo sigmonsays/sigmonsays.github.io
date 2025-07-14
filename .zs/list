@@ -1,29 +1,32 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 set -e
 
-if [ ! $# = 1 ]; then
-    printf >&2 "Usage: %s <path> [ext]\n" "$(basename "$0")"
-    exit 0
-fi
+# if [ ! $# = 2 ]; then
+#     printf >&2 "Usage: %s <path> prefix [ext]\n" "$(basename "$0")"
+#     exit 0
+# fi
 
 p="$1"
-t="${2:-md}"
+prefix="$2"
+t="${3:-md}"
 
 if [ ! -d "$p" ]; then
     printf >&2 "error: path %s not found\n" "$p"
     exit 1
 fi
 
-find "$p" -type f -name "*.$t" | while read -r file; do
-    name="${file#"$p"}"
-    name="${name#"/"}"
+
+ls -1 $p/*.$t | while read file; do
+    name="$file"
     name="${name%.*}"
 
     title="$(zs vars "$file" title)"
     if [ -z "$title" ]; then
         title="$file"
     fi
+    base="$(basename "$file")"
 
-    echo "- [$title](${p}/${name}.html)"
+    echo -e "\nfile:$file name:$name prefix:$prefix title:$title"
+    echo "- [$title](${prefix}${base}.html)"
 done
