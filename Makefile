@@ -16,6 +16,9 @@ dev : build
 
 build:
 	zs build
+	rm -rf docs
+	mkdir -p docs
+	mv .pub/* docs/
 
 ifeq ($(PUBLISH), 1)
 image:
