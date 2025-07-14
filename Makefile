@@ -7,23 +7,23 @@ TAG := latest
 all: build
 
 deps:
-	@$(GOCMD) install go.mills.io/zs@latest
-	@$(GOCMD) install github.com/tdewolff/minify/v2/cmd/minify@latest
+	$(GOCMD) install go.mills.io/zs@latest
+	$(GOCMD) install github.com/tdewolff/minify/v2/cmd/minify@latest
 
 dev : DEBUG=1
 dev : build
-	@zs serve
+	zs serve -root public
 
 build:
-	@zs build
+	zs build
 
 ifeq ($(PUBLISH), 1)
 image:
-	@docker buildx build --platform linux/amd64,linux/arm64 --push -t $(IMAGE):$(TAG) .
+	docker buildx build --platform linux/amd64,linux/arm64 --push -t $(IMAGE):$(TAG) .
 else
 image:
-	@docker build  -t $(IMAGE):$(TAG) .
+	docker build  -t $(IMAGE):$(TAG) .
 endif
 
 clean:
-	@git clean -f -d -X
+	git clean -f -d -X
