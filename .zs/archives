@@ -37,7 +37,7 @@ for dirpath, dirnames, filenames in os.walk(path):
 
 # Sort pages by date desc
 sorted_pages = sorted(pages, key=lambda item: item['date'])
-for page in pages:
+for page in sorted_pages:
     if page['date'] == 'none': page['date'] = ''
 
     if page['date']:
