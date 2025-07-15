@@ -2,3 +2,4 @@ bin/hugo
 hugo*_Linux-64bit.tar.gz
 .direnv
 .pub
+pages.json

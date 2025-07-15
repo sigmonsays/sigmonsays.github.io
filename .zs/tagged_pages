@@ -1,0 +1,55 @@
+#!/usr/bin/env python
+import sys
+import os
+import subprocess
+from datetime import datetime
+
+def zs_vars(filename, var_name):
+    result = subprocess.run(['zs', 'vars', filename, var_name], capture_output=True, text=True)
+    lines = result.stdout.split("\n")
+    line = lines[0]
+    return line
+
+path = '.'
+tag = sys.argv[1]
+
+pages = []
+
+for dirpath, dirnames, filenames in os.walk(path):
+    for filename in filenames:
+        if not filename.endswith('.md'): continue
+        abspath = os.path.join(dirpath, filename)
+        relpath = os.path.relpath(abspath, path)
+        st = os.stat(abspath)
+        dirname = os.path.dirname(relpath)
+        filename = relpath.replace('.md', '.html')
+        date = zs_vars(abspath, 'date')
+        title = zs_vars(abspath, 'title')
+        tags = zs_vars(abspath, 'tags')
+
+        tag_list = tags.split()
+        if not tag in tag_list:
+            continue
+
+        page = {
+            'abspath': abspath,
+            'relpath': relpath,
+            'dirname': dirname,
+            'title': title,
+            'date': date,
+            'filename': filename,
+            'tags': tags,
+        }
+        pages.append(page)
+
+# Sort pages by date desc
+sorted_pages = sorted(pages, key=lambda item: item['date'])
+for page in pages:
+    if page['date'] == 'none': page['date'] = ''
+
+    if page['date']:
+        print(f"- {page['dirname']} [{page['title']}]({page['filename']}) - {page['date']}")
+    else:
+        print(f"- {page['dirname']} [{page['title']}]({page['filename']})")
+
+# EOF

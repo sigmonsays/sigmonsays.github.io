@@ -15,10 +15,11 @@ deps:
 
 dev : DEBUG=1
 dev : build
-	zs serve
+	zs serve --root public
 
 build:
 	rm -rf docs
+	.zs/pages_json  . | jq > pages.json
 	zs build
 	mv .pub/ docs/
 
