@@ -10,7 +10,6 @@ random linux things
 - [[bash]]
 - [[emacs]]
 - [[docker/index|docker]]
-- [[building-packages-with-docker|Build packages within docker]]
 
 window managers
 
