@@ -9,15 +9,15 @@ needed to operate on a workqueue. This daemon is actually still in produciton to
 
 # In summary
 
-- [Easy To Learn]({{< relref "#easy-to-learn" >}}) language is simple and easy to learn
-- [Compiled Language]({{< relref "#compiled-language" >}}) has a compiler which checks a lot of errors for me
-- [Strictly typed]({{< relref "#strictly-typed" >}}) language
-- [Statically linked]({{< relref "#static-linking" >}}) binary (single binary deployment!)
-- [Unique type system]({{< relref "#type-system" >}}) using interfaces, composition and embedding instead of OOP patterns
-- [Language Grammer]({{< relref "#language-grammer" >}}) well defined
-- [Amazing Tooling]({{< relref "#tooling" >}}) ie, gofmt, godef, go-imports, vim-go
+- [Easy To Learn](#easy-to-learn) language is simple and easy to learn
+- [Compiled Language](#compiled-language) has a compiler which checks a lot of errors for me
+- [Strictly typed](#strictly-typed) language
+- [Statically linked](#static-linking) binary (single binary deployment!)
+- [Unique type system](#type-system) using interfaces, composition and embedding instead of OOP patterns
+- [Language Grammer](#language-grammer) well defined
+- [Amazing Tooling](#tooling) ie, gofmt, godef, go-imports, vim-go
 - small standard library and the go1 promise https://golang.org/doc/go1compat
-- [concurrency]({{< relref "#concurrency" >}}) is a language (not library) feature, ie concurrency, goroutines, and channels
+- [concurrency](#concurrency) is a language (not library) feature, ie concurrency, goroutines, and channels
 - it is good to collaborate on (e.g. writing large systems)
 - Go is [memory safe](https://en.wikipedia.org/wiki/Memory_safety)
 

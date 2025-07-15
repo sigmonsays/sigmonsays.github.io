@@ -9,9 +9,8 @@ primarily serves as short snippets of bash recipes I often want to re-use.
 
 A lot of this bash is old and wrong, because I learned bash so long ago (1998?). Refer to http://mywiki.wooledge.org/BashGuide for proper rules.
 
-- [Simple Logging Redirect]({{< relref "#simple-logging-redirect" >}})
-- [Human Size]({{< relref "#human-size" >}})
-
+- [Simple Logging Redirect](#simple-logging-redirect)
+- [Human Size](#human-size)
 
 
 ### Simple Logging Redirect

@@ -5,10 +5,9 @@ date: 2021/08/04
 
 Sections
 
-- [Network Programming in go]({{< relref "#network-programming-in-go" >}})
-- [Installing golang tools]({{< relref "#installing-golang-tools" >}})
-- [Errors are values ]({{< relref "#errors-are-values" >}})
-
+- [Network Programming in go](#network-programming-in-go)
+- [Installing golang tools](#installing-golang-tools)
+- [Errors are values ](#errors-are-values)
 
 # Network programming in Go
 
