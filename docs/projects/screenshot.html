@@ -40,15 +40,17 @@ sudo pip install .
 </code></pre>
 <p>Configuration</p>
 <p>Edit <code>~/.screenshot/config.ini</code></p>
-<p>[screenshot]<br />
-use_clipboard = yes<br />
-clipboard_method = s3<br />
-capture_method = imagemagick</p>
-<p>[s3]<br />
-enabled = yes<br />
-bucket = my_bucket<br />
-access_key = XXXX<br />
-secret_key = XXXX</p>
+<pre><code>[screenshot]
+use_clipboard = yes
+clipboard_method = s3
+capture_method = imagemagick
+
+[s3]
+enabled = yes
+bucket = my_bucket
+access_key = XXXX
+secret_key = XXXX
+</code></pre>
 <p>Flag summary</p>
 <pre><code>  Usage: screenshot [options]
 

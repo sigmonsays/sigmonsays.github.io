@@ -21,16 +21,16 @@ Configuration
 
 Edit `~/.screenshot/config.ini`
 
-   [screenshot]
-   use_clipboard = yes
-   clipboard_method = s3
-   capture_method = imagemagick
+    [screenshot]
+    use_clipboard = yes
+    clipboard_method = s3
+    capture_method = imagemagick
 
-   [s3]
-   enabled = yes
-   bucket = my_bucket
-   access_key = XXXX
-   secret_key = XXXX
+    [s3]
+    enabled = yes
+    bucket = my_bucket
+    access_key = XXXX
+    secret_key = XXXX
 
 Flag summary
 
