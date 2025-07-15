@@ -21,6 +21,7 @@ for dirpath, dirnames, filenames in os.walk(path):
         relpath = os.path.relpath(abspath, path)
         st = os.stat(abspath)
         dirname = os.path.dirname(relpath)
+        basename = os.path.basename(relpath)
         filename = relpath.replace('.md', '.html')
         date = zs_vars(abspath, 'date')
         title = zs_vars(abspath, 'title')
@@ -29,6 +30,7 @@ for dirpath, dirnames, filenames in os.walk(path):
             'abspath': abspath,
             'relpath': relpath,
             'dirname': dirname,
+            'basename': basename,
             'title': title,
             'date': date,
             'filename': filename,
@@ -38,6 +40,8 @@ for dirpath, dirnames, filenames in os.walk(path):
 # Sort pages by date desc
 sorted_pages = sorted(pages, key=lambda item: item['date'], reverse=True)
 for page in sorted_pages:
+    if page['basename'] == 'index.md':
+        continue
     if page['date'] == 'none': page['date'] = ''
 
     if page['date']:
