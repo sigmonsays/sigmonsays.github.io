@@ -20,9 +20,9 @@ for dirpath, dirnames, filenames in os.walk(path):
         abspath = os.path.join(dirpath, filename)
         relpath = os.path.relpath(abspath, path)
         st = os.stat(abspath)
-        mtime = st.st_mtime
         dirname = os.path.dirname(relpath)
         filename = relpath.replace('.md', '.html')
+        date = zs_vars(abspath, 'date')
         title = zs_vars(abspath, 'title')
 
         page = {
@@ -30,13 +30,14 @@ for dirpath, dirnames, filenames in os.walk(path):
             'relpath': relpath,
             'dirname': dirname,
             'title': title,
-            'mtime': mtime,
+            'date': date,
             'filename': filename,
         }
         pages.append(page)
 
-# Sort pages by mtime desc
-sorted_pages = sorted(pages, key=lambda item: item['mtime'])
+# Sort pages by date desc
+sorted_pages = sorted(pages, key=lambda item: item['date'])
 for page in pages:
-    timestamp = datetime.fromtimestamp(page['mtime']).strftime('%Y/%m/%d')
-    print(f"- {page['dirname']} [{page['title']}]({page['filename']}) - {timestamp}")
+    print(f"- {page['dirname']} [{page['title']}]({page['filename']}) - {page['date']}")
+
+# EOF
