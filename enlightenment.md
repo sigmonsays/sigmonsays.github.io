@@ -1,6 +1,7 @@
 ---
 title: "enlightenment"
 date: 2021/08/04
+tags: linux
 ---
 
 # Update: August 2019
