@@ -1,6 +1,6 @@
 ---
 title: "interesting tech"
-date: todo
+date: 2021/08/04
 ---
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->

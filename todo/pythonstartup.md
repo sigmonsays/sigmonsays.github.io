@@ -1,6 +1,6 @@
 ---
 title: "convenient cli tookit using python"
-date: todo
+date: 2025/07/13
 ---
 
 

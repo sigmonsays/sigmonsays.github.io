@@ -1,6 +1,6 @@
 ---
 title: "Pinterest invades google"
-date: todo
+date: 2025/07/13
 ---
 
 Pinterest is awful.

@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-date: todo
+date: 2021/08/04
 ---
 
 Various ramblings and projects, mostly tools and libraries

@@ -1,6 +1,6 @@
 ---
 title: "building packages with docker"
-date: todo
+date: 2021/08/04
 ---
 
 This is a simple idea I had while waiting for a build to complete.

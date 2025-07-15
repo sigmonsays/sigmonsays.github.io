@@ -1,7 +1,7 @@
 ---
 title: bash
 tags: bash msic
-date: todo
+date: 2021/08/04
 ---
 
 I have been a bash hacker since I started with computers. That being said, I probably have some old habits on this page. This page

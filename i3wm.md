@@ -1,6 +1,6 @@
 ---
 title: i3
-date: todo
+date: 2021/08/04
 ---
 
 

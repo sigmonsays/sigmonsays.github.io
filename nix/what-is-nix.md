@@ -1,6 +1,6 @@
 ---
 title: "nix and nixos"
-date: todo
+date: 2023/07/05
 ---
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->

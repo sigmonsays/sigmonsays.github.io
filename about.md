@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: todo
+date: 2021/08/04
 ---
 
 Start of another blog, developer focused, as a way to write about, keep track of and archive various technologies and trends.

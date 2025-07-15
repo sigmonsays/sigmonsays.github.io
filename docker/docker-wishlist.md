@@ -1,6 +1,6 @@
 ---
 title: "docker wishlist"
-date: todo
+date: 2021/08/04
 ---
 
 things I find that I wish docker supported

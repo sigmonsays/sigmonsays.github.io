@@ -1,6 +1,6 @@
 ---
 title: "My Emacs Kit"
-date: todo
+date: 2022/11/14
 ---
 
 This document will be a living document that i'll attempt to update from time to time

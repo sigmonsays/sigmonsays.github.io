@@ -1,6 +1,6 @@
 ---
 title: "nix resources"
-date: todo
+date: 2025/07/13
 ---
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->

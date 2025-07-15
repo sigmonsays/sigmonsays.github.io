@@ -1,6 +1,6 @@
 ---
 title: "picman: photo sorting tool"
-date: todo
+date: 2023/12/31
 ---
 
 github https://github.com/sigmonsays/picman

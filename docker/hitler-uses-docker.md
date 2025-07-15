@@ -1,6 +1,6 @@
 ---
 title: "hitler uses docker"
-date: todo
+date: 2021/08/04
 ---
 
 

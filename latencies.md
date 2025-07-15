@@ -1,6 +1,6 @@
 ---
 title: "System latencies for software developers"
-date: todo
+date: 2021/08/04
 ---
 
 Approximate timing for various operations on a typical PC:

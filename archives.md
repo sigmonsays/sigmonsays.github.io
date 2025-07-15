@@ -1,5 +1,5 @@
 ---
 title: archives
-date: todo
+date: 2025/07/11
 ---
 {{ archives . }}

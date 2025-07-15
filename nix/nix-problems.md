@@ -1,6 +1,6 @@
 ---
 title: "Nix Problems"
-date: todo
+date: 2024/01/29
 ---
 
 

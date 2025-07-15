@@ -1,9 +1,0 @@
-#!/bin/sh
-
-GITEA_BASE_URL="https://github.com"
-REPO="sigmonsays/sigmonsays.github.io"
-BRANCH="dev"
-
-url="${GITEA_BASE_URL}/${REPO}/_edit/${BRANCH}/${ZS_FILE}"
-
-printf "<a href=\"%s\" rel=\"nofollow\" target=\"_blank\">✍️ Edit Page on Gitea</a>" "$url"

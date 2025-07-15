@@ -1,6 +1,6 @@
 ---
 title: "random fun things"
-date: todo
+date: 2025/07/14
 ---
 
 {{ list fun }}

@@ -1,6 +1,6 @@
 ---
 title: "Docker is not what I want"
-date: todo
+date: 2021/08/04
 ---
 
 I have used docker for a while now and consider it a useful piece of software. It helped introduce
