@@ -1,0 +1,19 @@
+#!/bin/sh
+for f in *.md ; do
+	d="$(zs var "$f" date)"
+	[ "$d" == "none" ] && continue
+	if [ ! -z $d ] ; then
+		timestamp="$(date --date "$d" +%s)"
+		url="$(zs var "$f" url)"
+		title="$(zs var "$f" title | tr A-Z a-z)"
+		desc="$(zs var "$f" description)"
+		echo $timestamp \
+			"<item>" \
+			"<title>$title</title>" \
+			"<link>http://sigmonsays.github.io/$url</link>" \
+			"<description>$desc</description>" \
+			"<pubDate>$(date --date @$timestamp -R)</pubDate>" \
+			"<guid>http://sigmonsays.github.io/$url</guid>" \
+		"</item>"
+	fi
+done | sort -r -n | cut -d' ' -f2-
