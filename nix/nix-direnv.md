@@ -1,6 +1,6 @@
 ---
 title: "nix-direnv"
-date: todo
+date: 2023/12/14
 ---
 
 

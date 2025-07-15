@@ -1,6 +1,6 @@
 ---
 title: "my alternative to google photos"
-date: todo
+date: 2021/06/11
 ---
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->

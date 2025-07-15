@@ -1,6 +1,6 @@
 ---
 title: "nix and nixos"
-date: todo
+date: 2025/07/11
 ---
 
 {{ list nix }}

@@ -1,6 +1,6 @@
 ---
 title: "nixos VM in lxd"
-date: todo
+date: 2025/01/09
 ---
 
 Setting up VM images with nixos is incredibly powerful when coupled with declarative nature of nix language itself.

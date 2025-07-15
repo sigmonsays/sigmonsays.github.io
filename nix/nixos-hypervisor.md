@@ -1,6 +1,6 @@
 ---
 title: "nixos hypervisor"
-date: todo
+date: 2024/08/11
 ---
 
 

@@ -38,6 +38,11 @@ for dirpath, dirnames, filenames in os.walk(path):
 # Sort pages by date desc
 sorted_pages = sorted(pages, key=lambda item: item['date'])
 for page in pages:
-    print(f"- {page['dirname']} [{page['title']}]({page['filename']}) - {page['date']}")
+    if page['date'] == 'none': page['date'] = ''
+
+    if page['date']:
+        print(f"- {page['dirname']} [{page['title']}]({page['filename']}) - {page['date']}")
+    else:
+        print(f"- {page['dirname']} [{page['title']}]({page['filename']})")
 
 # EOF

@@ -1,6 +1,6 @@
 ---
 title: "nix tip: nvd to see what is going to change"
-date: todo
+date: 2023/12/27
 ---
 
 have you ever wanted to see what packages are going to change before updating them on nix?

@@ -1,6 +1,6 @@
 ---
 title: "notes"
-date: todo
+date: none
 ---
 
 {{ list notes }}

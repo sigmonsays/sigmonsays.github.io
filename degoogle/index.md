@@ -1,6 +1,6 @@
 ---
 title: "degoogle"
-date: todo
+date: 2025/07/11
 ---
 
 {{ list degoogle }}

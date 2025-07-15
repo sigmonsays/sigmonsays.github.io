@@ -1,6 +1,6 @@
 ---
 title: "nix tip: shell shabang"
-date: todo
+date: 2023/12/20
 ---
 
 A feature I discovered recently is that nix-shell can be used as an interpreter

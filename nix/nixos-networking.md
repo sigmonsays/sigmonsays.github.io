@@ -1,6 +1,6 @@
 ---
 title: "nixos networking"
-date: todo
+date: 2023/12/16
 ---
 
 

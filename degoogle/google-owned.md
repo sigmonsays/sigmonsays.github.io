@@ -1,6 +1,6 @@
 ---
 title: "Google Owned"
-date: todo
+date: 2021/08/04
 ---
 
 Ever think about how much information google has collected about you?

@@ -1,6 +1,6 @@
 ---
 title: "Trump"
-date: todo
+date: 2021/08/04
 ---
 
 Trump owes millions to state-owned bank in China
