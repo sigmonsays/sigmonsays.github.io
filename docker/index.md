@@ -1,6 +1,6 @@
 ---
 title: "docker"
-date: todo
+date: none
 ---
 
 {{ list docker }}
