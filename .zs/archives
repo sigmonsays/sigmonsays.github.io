@@ -4,11 +4,17 @@ import os
 import subprocess
 from datetime import datetime
 
-def zs_vars(filename, var_name):
+def boolval(x):
+    x = str(x).lower()
+    return x in [ 'true', 't', 'y', 'yes' ]
+
+def zs_vars(filename, var_name, corce=None):
     result = subprocess.run(['zs', 'vars', filename, var_name], capture_output=True, text=True)
     lines = result.stdout.split("\n")
     line = lines[0]
-    return line
+    if corce == None:
+        return line
+    return corce(line)
 
 path = sys.argv[1]
 
@@ -25,6 +31,7 @@ for dirpath, dirnames, filenames in os.walk(path):
         filename = relpath.replace('.md', '.html')
         date = zs_vars(abspath, 'date')
         title = zs_vars(abspath, 'title')
+        draft = zs_vars(abspath, 'draft', boolval)
 
         page = {
             'abspath': abspath,
@@ -34,6 +41,7 @@ for dirpath, dirnames, filenames in os.walk(path):
             'title': title,
             'date': date,
             'filename': filename,
+            'draft': draft,
         }
         pages.append(page)
 
@@ -41,6 +49,8 @@ for dirpath, dirnames, filenames in os.walk(path):
 sorted_pages = sorted(pages, key=lambda item: item['date'], reverse=True)
 for page in sorted_pages:
     if page['basename'] == 'index.md':
+        continue
+    if page['draft'] == True:
         continue
     if page['date'] == 'none': page['date'] = ''
 
