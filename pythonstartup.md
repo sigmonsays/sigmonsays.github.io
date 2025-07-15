@@ -1,6 +1,7 @@
 ---
 title: "convenient cli tookit using python"
 date: 2025/07/13
+tags: python
 ---
 
 
