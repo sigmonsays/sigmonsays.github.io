@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/bahunya.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>incus commands</title>
+  <meta name="title" content="incus commands" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+    <a href="/about.html">about</a>
+  </nav>
+  <header>
+    <h1>incus commands</h1>
+  </header>
+    <span>
+Tags: 
+<a href='/tags/linux.html'>linux</a>
+</span>
+<hr>
+
+  <article><p>Instances</p>
+<pre><code>incus list
+incus stop -f svc1
+incus start svc1
+incus rm -f lab1
+incus exec lab1 bash
+</code></pre>
+<p>copy files into or out of instances</p>
+<pre><code>incus file push -r /home/sig/.dotfiles/ video/home/sig/.dotfiles
+</code></pre>
+<p>Images</p>
+<pre><code>incus image list
+incus image refresh
+</code></pre>
+<h1 id="zfs-storage-pool">ZFS Storage Pool <a class="anchor" href="#zfs-storage-pool"> </a></h1>
+<p>create zfs storage pool</p>
+<pre><code>incus storage create pool1 zfs
+</code></pre>
+<p>change size of zfs storage pool</p>
+<pre><code>incus storage set pool1 size &quot;200GiB&quot;
+</code></pre>
+<p>see storage pool parameters</p>
+<pre><code>incus storage show pool1
+</code></pre>
+<p>This is where you see the current size of the pool. also, can easily see storage use via zpool list</p>
+<pre><code>zpool list
+</code></pre>
+<h1 id="zfs-hacks">ZFS Hacks <a class="anchor" href="#zfs-hacks"> </a></h1>
+<p>migrate failed due to me restarting incus daemon</p>
+<p>i could cleanup the target volume</p>
+<pre><code>zfs list
+sudo zfs destroy pool1/virtual-machines/move-of-13669488997282970863
+sudo zfs destroy pool1/virtual-machines/move-of-13669488997282970863.block
+</code></pre>
+<h1 id="storage-volumes">Storage Volumes <a class="anchor" href="#storage-volumes"> </a></h1>
+<p>list all volumes</p>
+<pre><code>incus storage volume list default
+</code></pre>
+<p>remove extra disk volume from VM</p>
+<pre><code># detach from instance
+incus storage volume detach default dev2-disk1 dev2
+
+# delete volume
+incus storage volume delete default custom/dev2-disk1
+</code></pre>
+<p>move instance into new storage pool</p>
+<pre><code>incus stop dev2
+incus move dev2 --storage pool1
+incus start dev2
+</code></pre>
+<p>get info on storage volume (virtual machine instance)</p>
+<pre><code>incus storage volume info default virtual-machine/dev2
+</code></pre>
+<h1 id="storage-volumes-bulk-operations">Storage Volumes Bulk Operations <a class="anchor" href="#storage-volumes-bulk-operations"> </a></h1>
+<p>bulk delete custom storage volumes</p>
+<pre><code>incus storage show default \
+ | grep custom |awk -F/ '{print $7}' \
+ | xargs -r -n1 incus storage volume delete default
+</code></pre>
+<h1 id="profiles">Profiles <a class="anchor" href="#profiles"> </a></h1>
+<pre><code>incus profile list
+incus profile edit default
+incus profile delete default
+</code></pre>
+<p>Edit cloud-init configuration here<br />
+assign default networks</p>
+<h1 id="web-ui">Web UI <a class="anchor" href="#web-ui"> </a></h1>
+<p>enable web UI</p>
+<pre><code>incus config set core.https_address :8443
+</code></pre>
+<p>open https://server:8443/</p>
+<p>see <a href="https://blog.simos.info/how-to-install-and-setup-the-incus-web-ui/">https://blog.simos.info/how-to-install-and-setup-the-incus-web-ui/</a></p>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>

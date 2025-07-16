@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/bahunya.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>docker networking performance</title>
+  <meta name="title" content="docker networking performance" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+    <a href="/about.html">about</a>
+  </nav>
+  <header>
+    <h1>docker networking performance</h1>
+  </header>
+    
+  <article><p>While trying to determine the performance overhead of a simple docker container setup, I discovered several<br />
+issues related to network performance.</p>
+<p>two issues I have encountered</p>
+<ul>
+<li>docker-proxy handles local network traffic when using the hosts bridge IP (or localhost)</li>
+<li>connection tracking overhead of NAT increases memory usage</li>
+</ul>
+<p>my setup</p>
+<p>I am using docker containers as an easy way to deploy backends on a host. I wish to use<br />
+the hosts bridge IP as a backend to route requests from the load balancer. The load balancer<br />
+is just a haproxy instance running on port 8080 and it uses 500X as backend ports.  I had to<br />
+doctor up the output a little but this is still the output of <strong>docker ps</strong>.</p>
+<pre><code>07 haproxy:0.0.1-8 X Up 2 days   0.0.0.0:443-&gt;443/tcp     dev1-haproxy-1
+                                 0.0.0.0:1983-&gt;1983/tcp
+                                 0.0.0.0:8080-&gt;8080/tcp
+
+b6 api:4.2.0-2   X  Up 14 hours  0.0.0.0:5003-&gt;8080/tcp   dev1-api-3
+f0 api:4.2.0-2   X  Up 14 hours  0.0.0.0:5002-&gt;8080/tcp   dev1-api-2
+7f api:4.2.0-2   X  Up 15 hours  0.0.0.0:5001-&gt;8080/tcp   dev1-api-1
+</code></pre>
+<p>I&rsquo;ve measured performance of docker-proxy process using nginx and timing the transfers and have seen<br />
+performance degrades around 40-50% due to docker having to reverse proxy the connection in software.</p>
+<p>I really believe that if performance is important, there should be a option of disabling docker-proxy,<br />
+but I will focus on this more later if I really need to.</p>
+<h2 id="issues-with-docker-proxy">issues with docker-proxy <a class="anchor" href="#issues-with-docker-proxy"> </a></h2>
+<ul>
+<li>software reverse proxy should not be enabled by default</li>
+<li>network performance degradation up to 50% is not acceptable when traffic is <em>accidently</em><br />
+routed through the proxy.</li>
+</ul>
+<p>i&rsquo;m not entirely sure why the userland proxy is even required or why it was introduced.<br />
+investigating the proxy history shows proxy was introduced in Apr 2013, commit 930e9a7,<br />
+unfortunately it is not easy to determine the intention and why iptables was not just<br />
+used in the first place to handle local traffic. iptables is used to route the network<br />
+traffic externally, so I wonder, why the proxy in userland. It seems pointless but I<br />
+have yet to investigate it further.</p>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>

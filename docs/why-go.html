@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/bahunya.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>why use the go programming language?</title>
+  <meta name="title" content="why use the go programming language?" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+    <a href="/about.html">about</a>
+  </nav>
+  <header>
+    <h1>why use the go programming language?</h1>
+  </header>
+    
+  <article><p>I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle<br />
+some backend work where concurrency was key and have enjoyed developing it for quite some time. It replaced a python process where many actors<br />
+needed to operate on a workqueue. This daemon is actually still in produciton today =P</p>
+<h1 id="in-summary">In summary <a class="anchor" href="#in-summary"> </a></h1>
+<ul>
+<li><a href="#easy-to-learn">Easy To Learn</a> language is simple and easy to learn</li>
+<li><a href="#compiled-language">Compiled Language</a> has a compiler which checks a lot of errors for me</li>
+<li><a href="#strictly-typed">Strictly typed</a> language</li>
+<li><a href="#static-linking">Statically linked</a> binary (single binary deployment!)</li>
+<li><a href="#type-system">Unique type system</a> using interfaces, composition and embedding instead of OOP patterns</li>
+<li><a href="#language-grammer">Language Grammer</a> well defined</li>
+<li><a href="#tooling">Amazing Tooling</a> ie, gofmt, godef, go-imports, vim-go</li>
+<li>small standard library and the go1 promise <a href="https://golang.org/doc/go1compat">https://golang.org/doc/go1compat</a></li>
+<li><a href="#concurrency">concurrency</a> is a language (not library) feature, ie concurrency, goroutines, and channels</li>
+<li>it is good to collaborate on (e.g. writing large systems)</li>
+<li>Go is <a href="https://en.wikipedia.org/wiki/Memory_safety">memory safe</a></li>
+</ul>
+<h1 id="work-in-progress">work in progress! <a class="anchor" href="#work-in-progress"> </a></h1>
+<p>This page will be filled out over time</p>
+<h1 id="easy-to-learn">Easy To Learn <a class="anchor" href="#easy-to-learn"> </a></h1>
+<p>It is hard to say how important it is to get this right. Having a langauge that<br />
+is both powerful and easy to learn is extremely challenging.</p>
+<p>The go language is easy to start with and quickly learn and get up to speed on.</p>
+<p>Coming from a history of C, PHP, Ruby and Python, it only took a couple weeks<br />
+before I had something that was production ready.</p>
+<h1 id="compiled-language">Compiled Language <a class="anchor" href="#compiled-language"> </a></h1>
+<p>compiler checks a lot of errors for me</p>
+<p>One case which use to get me all the time is error handling code in dynamic languages. If you do not unit test every case, often a undefined variable would result<br />
+in your error handling code explode.</p>
+<p>The go language also has some unique features. Undefined and unused variables cause compiler errors.</p>
+<h1 id="strictly-typed">Strictly typed <a class="anchor" href="#strictly-typed"> </a></h1>
+<p>Similar to being a compiled language,</p>
+<p>Large refactors in code often require changing arguments around or adding new ones. With a strictly<br />
+typed language this is easy. If the compile works, you can be fairly confident that everything will run<br />
+as designed.</p>
+<h1 id="static-linking">Static linking <a class="anchor" href="#static-linking"> </a></h1>
+<p>Being a statically linked package means you are deploying a single binary or binary + config file. The only thing most go binaries link to are libc for some OS level networking support. It is possible<br />
+to compile without libc entirely if you choose. Finally, if you avoid <strong>cgo</strong> this means your binary will run anywhere given you have a matching architecture.</p>
+<p><strong>This is an amazing feature coming from python</strong> I love python but its biggest shortcoming is the confusion that arrises from the myraid of packaging systems.</p>
+<h1 id="type-system">Type system <a class="anchor" href="#type-system"> </a></h1>
+<p>Go has a interesting type system which removes the fundamentally flawed OOP features. OOP programmers often uses inheritenace when composition could be used instead.</p>
+<p><strong>composition</strong> means you combine objects together instead of searching a inheritence tree. I am not going into all the details here but here is the <a href="https://en.wikipedia.org/wiki/Composition_over_inheritance">wikipedia article on composition</a></p>
+<h1 id="language-grammer">Language Grammer <a class="anchor" href="#language-grammer"> </a></h1>
+<p>a language spec that is well defined <a href="https://golang.org/ref/spec">https://golang.org/ref/spec</a>, short, and simple.</p>
+<p>Without a well defined language specification, none of the tooling would be possible. It also makes it easy to develop tools which parse code into AST (Abstract syntax tree) and manipulate it. Ie, write code which<br />
+modifies other code. This was not very practical in other langauges (IMHO). The <code>go/ast</code> and <code>go/types</code> packages lowered the barrier of entry to write quick tools for manipulating go source code.</p>
+<h1 id="tooling">Tooling <a class="anchor" href="#tooling"> </a></h1>
+<p>The amount of tooling really makes go a step above the rest</p>
+<p><code>godoc</code> and <code>godoc.org</code></p>
+<p>having the ability to easily see any 3rd party libraries documentation on godoc.org or with godoc locally is a far superior experience<br />
+when trying to use someone elses library.</p>
+<p><code>gofmt</code></p>
+<p>This tool automatically formats source code in a pre-defined way.</p>
+<p>The tool shuts down the bike shed discussions which naturally occur about code formatting. Most people (if not all) require <code>gofmt</code> to be executed on the source code being submitted to a project. This<br />
+is also very useful to tie into your editor on save. Often you can paste a piece of code which does not match the indentation level, and watch it all fall into place.</p>
+<p>I have spent a lot of time re-indenting code and this is no longer a step in go.</p>
+<p><code>goimports</code></p>
+<p>This tool automatically adds imports and removes unused imports in a source file</p>
+<p>It is very useful to not worry about jumping to the top of the file and change imports every time you modify code.</p>
+<p><code>godef</code></p>
+<p>This tool is used in editors to jump to a types declartion.</p>
+<p>Within vim one can type <code>gd</code> on any variable or type and the editor jumps to the file and location where that <em>thing</em> is defined. It is very useful for navigating<br />
+unfamiliar and large source trees.</p>
+<p><code>gocode</code></p>
+<p>This tool provides a auto complete interface of methods and variables</p>
+<p>integration with editors, like <strong>vim-go</strong> really tie the tools together for a IDE like developer experience from the terminal. Of course there<br />
+is a lot of graphical editors too if that is your thing.</p>
+<p><code>vim-go</code></p>
+<p>Lots of amazing features provided by vim-go</p>
+<ul>
+<li>Godef - typing <code>gd</code> in vim goes to the file defining the type or function that is under the cursor</li>
+<li>Automatic imports - typing <code>gi</code> in vim adds missing imports and removes unused imports</li>
+</ul>
+<p><strong>Others?</strong></p>
+<p>I am sure I missed some tools that I use.  What tools do you use that are not mentioned here?</p>
+<h1 id="concurrency">Concurrency <a class="anchor" href="#concurrency"> </a></h1>
+<p>Last but not least and quite possibly the most important feature of go is its concurrency primitives.</p>
+<p>They are built directly into the language specification and first class citizens (they are not bolted on later).</p>
+<p><code>goroutines</code> are essentially coroutines but are executed across multiple real OS threads. The runtime scheduler handles everything for you so you can focus on writing logically blocking<br />
+code. goroutines run in parallel, which makes it easy to maintain a mental model of what is happening in a concurrent program.</p>
+<p><code>channels</code> are the communication primitive and allow different goroutines to talk to each other. A channel can be buffered and unbuffered, which allows creation of some really useful patterns.</p>
+<h1 id="useful-resources">Useful Resources <a class="anchor" href="#useful-resources"> </a></h1>
+<ul>
+<li>Go Proverbs - Bunch of wisdom - <a href="https://go-proverbs.github.io/">https://go-proverbs.github.io/</a></li>
+<li>Errors are Values - <a href="https://blog.golang.org/errors-are-values">https://blog.golang.org/errors-are-values</a></li>
+</ul>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>
