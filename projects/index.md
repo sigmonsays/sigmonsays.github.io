@@ -12,6 +12,9 @@ An hour long project where I wrote a paste server and shell script client
 [[screenshot]]
 python script for taking screenshots and uploading them to a cloud storage provider. [github](https://github.com/sigmonsays/screenshot)
 
+[[screenshot2]]
+golang rewrite of the python screenshot for taking screenshots and uploading them to a cloud storage provider. [github](https://github.com/sigmonsays/screenshot2)
+
 [git-watch](https://github.com/sigmonsays/git-watch)
 watch a git repository for changes and execute update commands
 
