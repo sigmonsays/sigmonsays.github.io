@@ -18,7 +18,7 @@ window managers
 
 linux distributions
 
-- [[/nix/index|Nix Things]]
+- [[/nix/index|nix things]]
 
 ## programming
 
@@ -26,8 +26,8 @@ linux distributions
 
 golang things
 
-- [[why-go]]
-- [[golang-faq]]
+- [[why-go|why go]]
+- [[golang-faq|golang faq]]
 
 
 ## misc
