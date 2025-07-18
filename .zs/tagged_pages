@@ -22,7 +22,7 @@ for dirpath, dirnames, filenames in os.walk(path):
         relpath = os.path.relpath(abspath, path)
         st = os.stat(abspath)
         dirname = os.path.dirname(relpath)
-        filename = relpath.replace('.md', '.html')
+        filename = '/tags/' + relpath.replace('.md', '.html')
         date = zs_vars(abspath, 'date')
         title = zs_vars(abspath, 'title')
         tags = zs_vars(abspath, 'tags')
