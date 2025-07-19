@@ -29,6 +29,7 @@ publish: build ## build and publish
 build: ## build site
 	rm -rf docs
 	.zs/pages_json  . | jq > pages.json
+	make -C tags gentags
 	zs build
 	mv .pub/ docs/
 	rm -rf docs/docs
