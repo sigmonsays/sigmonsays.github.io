@@ -1,6 +1,7 @@
 ---
 title: "why use the go programming language?"
 date: 2025/07/13
+tags: golang
 ---
 
 I have been a go programmer before go 1.0 was released, I think that brings me back to beginning writing go code around 2011. as en exercise I wrote a simple daemon to handle
