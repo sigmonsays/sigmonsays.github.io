@@ -17,6 +17,10 @@ def zs_vars(filename, var_name, corce=None):
     return corce(line)
 
 path = sys.argv[1]
+try:
+    max_pages = int(sys.argv[2])
+except:
+    max_pages = -1
 
 pages = []
 
@@ -47,11 +51,21 @@ for dirpath, dirnames, filenames in os.walk(path):
 
 # Sort pages by date desc
 sorted_pages = sorted(pages, key=lambda item: item['date'], reverse=True)
+
+
+count = 0
 for page in sorted_pages:
     if page['basename'] == 'index.md':
         continue
     if page['draft'] == True:
         continue
+    if page['dirname'] == 'tags':
+        continue
+    if page['title'] == 'archives':
+        continue
+    count = count + 1
+    if max_pages != -1 and count > max_pages:
+        break
     if page['date'] == 'none': page['date'] = ''
 
     if page['date']:

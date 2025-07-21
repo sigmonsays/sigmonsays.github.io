@@ -62,7 +62,7 @@ for dirpath, dirnames, filenames in os.walk(path):
 
 # Sort pages by date desc
 sorted_pages = sorted(pages, key=lambda item: item['date'], reverse=True)
-max_posts = 10
+max_posts = 20
 posted = 0
 for page in sorted_pages:
     if page['basename'] == 'index.md':
@@ -77,10 +77,9 @@ for page in sorted_pages:
     if posted > max_posts:
         break
 
-    print(f"## [{page['title']}]({page['filename']})\n")
-
-    page_snippet(page)
     if page['date']:
-        print(f"on **{page['date']}**\n")
+        print(f"- **{page['date']}** - [{page['title']}]({page['filename']})")
+    else:
+        print(f"- [{page['title']}]({page['filename']})")
 
 # EOF

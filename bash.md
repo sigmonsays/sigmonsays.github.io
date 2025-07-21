@@ -1,6 +1,6 @@
 ---
 title: bash
-tags: bash msic
+tags: bash
 date: 2021/08/04
 ---
 

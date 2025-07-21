@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/theme.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>ssh git configuration</title>
+  <meta name="title" content="ssh git configuration" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+    <a href="/things.html">things</a>
+    <a href="/about.html">about</a>
+  </nav>
+  <header>
+    <h1>ssh git configuration</h1>
+  </header>
+    
+  <article><p>ssh configuration can be tricky with git if you have to use multiple keys and even more so when multiple keys<br />
+for the same host.  This post will demonstrate a flexible configuration method of defining git configuration<br />
+per top level directory.</p>
+<p>in <code>~/.gitconfig</code> put the following</p>
+<pre><code>[includeIf &quot;gitdir:~/code/&quot;]
+    path = ~/.gitconfig.d/personal
+
+[includeIf &quot;gitdir:~/work/&quot;]
+    path = ~/.gitconfig.d/work
+</code></pre>
+<p>This includes .gitconfig.d/personal if you are in ~/code and .gitconfig.d/work if you are in ~/work</p>
+<p>Within each of these files you can then configure the appropriate things for that space</p>
+<pre><code>[core]
+sshCommand = &quot;ssh -i ~/.private/keys/personal/secret&quot;
+
+[user]
+email = user@example.net
+name = sigmonsays
+</code></pre>
+<p>the sshCommand parameter determines allows you to specify what private key to use for the ssh connection. The other<br />
+parameters configure what e-mail and name to use for committing.</p>
+<p>That&rsquo;s about it!</p>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>

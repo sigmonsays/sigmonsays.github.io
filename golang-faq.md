@@ -1,6 +1,7 @@
 ---
 title: "golang FAQ"
 date: 2021/08/04
+tags: golang
 ---
 
 Sections

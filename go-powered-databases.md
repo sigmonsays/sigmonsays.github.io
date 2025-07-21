@@ -1,6 +1,7 @@
 ---
 title: "go powered databases"
 date: 2021/08/04
+tags: golang
 ---
 
 - bolt - https://github.com/boltdb/bolt
