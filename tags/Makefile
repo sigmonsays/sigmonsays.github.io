@@ -7,7 +7,7 @@ tags=$(shell list-tags.sh)
 gentags: $(tags) ## generate tags
 
 $(tags): ## create tag.md file
-	sed "s,template,$@,g" template.md > $@.md
+	@sed "s,template,$@,g" template.md > $@.md
 
 list-tags: ## list all tags
 	list-tags.sh
