@@ -12,8 +12,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <title>ssh git configuration</title>
-  <meta name="title" content="ssh git configuration" />
+  <title>pages tagged dotfiles</title>
+  <meta name="title" content="pages tagged dotfiles" />
   <meta name="description" content="a few things to remember" />
   <meta name="keywords" content="go, nix, linux" />
 </head>
@@ -26,36 +26,13 @@
     <a href="/about.html">about</a>
   </nav>
   <header>
-    <h1>ssh git configuration</h1>
+    <h1>pages tagged dotfiles</h1>
   </header>
-    <span>
-Tags: 
-<a href='/tags/dotfiles.html'>dotfiles</a>
-</span>
-<hr>
-
-  <article><p>ssh configuration can be tricky with git if you have to use multiple keys and even more so when multiple keys<br />
-for the same host.  This post will demonstrate a flexible configuration method of defining git configuration<br />
-per top level directory.</p>
-<p>in <code>~/.gitconfig</code> put the following</p>
-<pre><code>[includeIf &quot;gitdir:~/code/&quot;]
-    path = ~/.gitconfig.d/personal
-
-[includeIf &quot;gitdir:~/work/&quot;]
-    path = ~/.gitconfig.d/work
-</code></pre>
-<p>This includes .gitconfig.d/personal if you are in ~/code and .gitconfig.d/work if you are in ~/work</p>
-<p>Within each of these files you can then configure the appropriate things for that space</p>
-<pre><code>[core]
-sshCommand = &quot;ssh -i ~/.private/keys/personal/secret&quot;
-
-[user]
-email = user@example.net
-name = sigmonsays
-</code></pre>
-<p>the sshCommand parameter sets what private key to use for the ssh connection. The other<br />
-parameters configure what e-mail and name to use for committing.</p>
-<p>That&rsquo;s about it!</p>
+    
+  <article><ul>
+<li><a href="/ssh-git-config.html">ssh git configuration</a> - 2025/07/21</li>
+<li>projects <a href="/projects/dotbot.html">dotbot</a> - 2023/01/29</li>
+</ul>
 </article>
   <footer>
     Copyright &copy; sigmonsays ·
