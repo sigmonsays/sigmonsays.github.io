@@ -5,6 +5,8 @@ date: 2021/08/04
 
 Various ramblings and projects, mostly tools and libraries
 
+[[dotbot]]
+a symlink manager rewritten in go
 
 [[paste]]
 An hour long project where I wrote a paste server and shell script client
