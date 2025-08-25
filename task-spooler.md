@@ -4,8 +4,6 @@ date: 2025/08/25
 draft: false
 ---
 
-# Task Spooler
-
 website https://viric.name/soft/ts/
 
 The task spooler program is quite old, I used it back in the early 2000s for managing s3 uploads but it's a tool
