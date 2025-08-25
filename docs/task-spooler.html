@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/theme.css">
+<link rel="stylesheet" href="/assets/css/board.css">
+<link rel="stylesheet" href="/assets/css/highlight.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>task spooler</title>
+  <meta name="title" content="task spooler" />
+  <meta name="description" content="a few things to remember" />
+  <meta name="keywords" content="go, nix, linux" />
+</head>
+
+<body>
+  <nav>
+    <a id="brand" href="/">Home</a>
+    <a href="/projects/">projects</a>
+    <a href="/things.html">things</a>
+    <a href="/about.html">about</a>
+  </nav>
+  <header>
+    <h1>task spooler</h1>
+  </header>
+    
+  <article><h1 id="task-spooler">Task Spooler <a class="anchor" href="#task-spooler"> </a></h1>
+<p>website <a href="https://viric.name/soft/ts/">https://viric.name/soft/ts/</a></p>
+<p>The task spooler program is quite old, I used it back in the early 2000s for managing s3 uploads but it&rsquo;s a tool<br />
+I use intermittently today.</p>
+<p>Some basic operations</p>
+<pre><code># clear task list of completed jobs
+ts -C
+
+# show max concurrency
+ts -S
+
+# set max concurrency
+ts -S 4
+
+# kill queue
+ts -K
+
+# Get job output, job id 1
+ts -c 1
+</code></pre>
+<p><code>ts-wait-all</code> script waits for all jobs in the queue to finish:</p>
+<pre><code>ts -l | awk '$1 ~ /^[0-9]+$/ {print $1}' | xargs -I^ ts -w ^
+</code></pre>
+<h1 id="a-quick-example">A quick example <a class="anchor" href="#a-quick-example"> </a></h1>
+<p><code>job.sh</code> script:</p>
+<pre><code>#!/usr/bin/env bash
+
+url=&quot;$1&quot;
+cd &quot;$(dirname &quot;$0&quot;)&quot;
+mkdir -p out
+cd out
+wget --mirror --convert-links --adjust-extension --page-requisites --no-parent &quot;$1&quot;
+</code></pre>
+<p>hard reset the queue (kills all jobs)</p>
+<pre><code>ts -K       # kill queue and all existing jobs
+</code></pre>
+<p>Then fill the queue</p>
+<pre><code>ts -C       # clear queue, just finished jobs, starting fresh
+ts -S 2     # Set job concurrency to 2
+ts ./job.sh https://viric.name/soft/ts/
+ts ./job.sh https://linux.die.net/man/8/sudo
+ts ./job.sh https://linux.die.net/man/1/pstree
+</code></pre>
+<p>jobs can be listed and added at any time</p>
+<pre><code>ts -l
+</code></pre>
+<p>Finally if you care to you can wait for it all to finish</p>
+<pre><code>ts-wait-all
+</code></pre>
+<h1 id="capturing-exit-code">Capturing exit code <a class="anchor" href="#capturing-exit-code"> </a></h1>
+<p>One way to capture the exit code of the jobs is to write a finish script,</p>
+<p><code>finish.sh</code>:</p>
+<pre><code>#!/usr/bin/env bash
+# arguments: jobid errorlevel output_filename command
+echo &quot;$@&quot; &gt;&gt; jobs.log
+</code></pre>
+<p>set TS_ONFINISH:</p>
+<pre><code>export TS_ONFINISH=./finish.sh
+</code></pre>
+<p>Try re-running the example above with TS_ONFINISH set, you&rsquo;ll generate a log file similar to this</p>
+<pre><code>0 0 /tmp/ts-out.6aJiVM ./job.sh https://viric.name/soft/ts/
+1 1 /tmp/ts-out.OlL66T ./job.sh https://linux.die.net/man/8/sudo
+2 0 /tmp/ts-out.S1GWSK ./job.sh https://linux.die.net/man/1/pstree
+</code></pre>
+</article>
+  <footer>
+    Copyright &copy; sigmonsays ·
+  </footer>
+  <script type="application/javascript" src="/assets/js/highlight.js"></script>
+<script type="application/javascript" src="/assets/js/umbrella.js"></script>
+<script type="application/javascript" src="/assets/js/live.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>
