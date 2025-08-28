@@ -57,18 +57,18 @@ all:
 `install.sh`:
 ```
 #!/usr/bin/env bash
-mkdir -pv /etc/oasd
-cp oasd.env /etc/oasd/oasd.env
-cp oasd.service /etc/systemd/system/oasd.service
+mkdir -pv /etc/myservice
+cp myservice.env /etc/myservice/myservice.env
+cp myservice.service /etc/systemd/system/myservice.service
 
 archive=$(ls -1 stuff_*_linux_amd64.tar.gz | head -n1)
 if [ ! -z "$archive" ]; then
     tar vzxf "$archive"
-    sudo cp oasd /usr/bin/oasd
-    sudo chmod +x /usr/bin/oasd
+    sudo cp myservice /usr/bin/myservice
+    sudo chmod +x /usr/bin/myservice
 fi
 
 systemctl daemon-reload
-systemctl enable oasd
-systemctl restart oasd
+systemctl enable myservice
+systemctl restart myservice
 ```
