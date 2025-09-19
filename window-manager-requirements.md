@@ -7,8 +7,8 @@ draft: false
 This post is to help myself and also anyone else to detail what I look for in a window manager
 on a linux desktop.
 
-The primary use case is a dual screen workstation and the screens are both 4k screens, which rules out
-tiling since tiling with such high resolution (3840x2160).
+The primary use case for these requirements are a dual screen workstation. The screens are both 4k screens,
+which rules out tiling since tiling with such high resolution (3840x2160) breaks down quickly.
 
 This workstation is a desktop and my primary working environment.
 
