@@ -24,6 +24,8 @@ https://kdl.dev/
 
 https://github.com/hashicorp/hcl
 
+https://github.com/lightbend/config/blob/master/HOCON.md
+
 A couple of weirder ones:
 
 https://github.com/ron-rs/ron
