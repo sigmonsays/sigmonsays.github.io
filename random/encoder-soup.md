@@ -8,6 +8,8 @@ Just an exhaustive list of encoding formats that are supposed to be better than 
 
 We're really reaching hard for https://xkcd.com/927/
 
+https://huml.io/
+
 https://json5.org/
 
 https://hjson.github.io/
