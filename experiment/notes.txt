@@ -1,0 +1,8 @@
+go install github.com/a-h/templ/cmd/templ@latest
+
+todo
+- no index page (listing recent posts)
+- no tags page (listing tags and pages with tag)
+
+features
+- wikilink support using https://github.com/abhinav/goldmark-wikilink

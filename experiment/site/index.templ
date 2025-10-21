@@ -1,0 +1,26 @@
+package site
+
+//import "html/template"
+
+func PageLink(url string) string {
+  return url + ".html"
+}
+
+templ Index(site Site, title string) {
+  <!doctype html>
+  <html>
+    @head(title)
+    <body>
+      <div class="container">
+        @Header(title)
+        <main class="article">
+
+        for _, page := range site.Pages {
+          <li><a href={ PageLink(page.Url) }>{page.Title}</a></li>
+        }
+        </main>
+        @Footer()
+      </div>
+    </body>
+  </html>
+}

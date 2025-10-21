@@ -1,0 +1,12 @@
+package site
+
+templ link(name, url string) {
+	<a href={url}>{ name }</a>
+}
+
+templ nav() {
+    <nav>
+	@link("home", "/") &nbsp
+	@link("archive", "/archive") &nbsp
+	</nav>
+}

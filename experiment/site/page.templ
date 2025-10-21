@@ -1,0 +1,19 @@
+package site
+
+//import "html/template"
+
+templ Page(site Site, title string, body string) {
+  <!doctype html>
+  <html>
+    @head(title)
+    <body>
+      <div class="container">
+        @Header(title)
+        <main class="article">
+        @templ.Raw(body)
+        </main>
+        @Footer()
+      </div>
+    </body>
+  </html>
+}
