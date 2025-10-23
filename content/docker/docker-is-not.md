@@ -1,7 +1,7 @@
 ---
 title: "Docker is not what I want"
 date: 2021/08/04
-tags: "docker"
+tags: [ "docker"]
 ---
 
 I have used docker for a while now and consider it a useful piece of software. It helped introduce

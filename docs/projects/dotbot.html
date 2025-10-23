@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>dotbot</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><h1>dotbot</h1><nav><a href="/">home</a>&nbsp<a href="/archive.html">archive</a>&nbsp</nav></header><main class="article"><span style="display: inline-block; text-align: right; width: 100%;">Posted on 2023/01/29<br>tagged <a href="/tag/dotfiles.html">dotfiles</a> &nbsp;</span><p></p><!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#why">why</a></li>
+<li><a href="#dotbot">dotbot</a></li>
+</ul>
+<!-- markdown-toc end -->
+<h1>why</h1>
+<p>dotbot is a tool to manage dot files. I wrote this tool after gettting tired of futzing around
+with the python dotbot from <a href="https://github.com/anishathalye/dotbot">https://github.com/anishathalye/dotbot</a>. Full disclosure I love
+this tool and it's the motivation for the development of my own dotbot.</p>
+<p>I had two main issues that were annoying to me. First, git submodules were a part of the bootstrap
+process. Second, I always needed some yaml dependancy installed. These two steps combined and that
+written in a confusing shell script I managed to find getting setup annoying, and slightly difficult.</p>
+<p>So i took a simplify approach, lets rewrite the tool in go. No dependencies, No submodules. No scripts.
+I modified the config slightly to fit modeling it to a go struct and simplified things. What I ended
+up with was the go rewrite of dotbot.</p>
+<h1>dotbot</h1>
+<p>sigmonsays version of a dotbot tool <a href="https://github.com/sigmonsays/dotbot">https://github.com/sigmonsays/dotbot</a></p>
+<p>Supported features are similar, directories can be created using <code>mkdirs:</code>, symlinks can be created
+using <code>symlinks:</code> and scripts can be run using <code>script:</code>. The final <code>clean:</code> section is used to
+delete invalid symbolic links; invalid meaning they do not point to an actual something that exists.</p>
+<p>Example configuration, lets call it <code>example.yaml</code></p>
+<pre><code>mkdirs:
+- ~/asdf
+symlinks:
+    ~/bin: bin
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.tmux.conf: tmux.conf
+
+script:
+- id: fix-ssh-perms
+    type: post
+    command: |
+    chmod 0400 ~/.ssh/config
+clean:
+- &quot;~&quot;
+- &quot;~/.config&quot;
+</code></pre>
+<p>Example invocation</p>
+<pre><code> dotbot -c example.yaml link
+</code></pre>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays</small></footer></div></body></html>

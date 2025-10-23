@@ -1,6 +1,6 @@
 ---
 title: "bunny"
-tags: funny
+tags: [ "funny" ]
 date: 2021/08/04
 ---
 
