@@ -77,7 +77,7 @@ func (me *SiteRender) WriteDirectoryIndexPage(ctx context.Context, inDir, outDir
 	}
 	outfile := filepath.Join(me.OutDir, relDir, "index.html")
 	//log.Printf("Write directory index %s", outfile)
-	title := fmt.Sprintf("directory %s", relDir)
+	title := fmt.Sprintf("%s", relDir)
 	_pages, err := GetPages(me.InDir, inDir, me.includeDrafts)
 	if err != nil {
 		return err
