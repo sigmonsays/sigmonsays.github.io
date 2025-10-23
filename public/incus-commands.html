@@ -1,0 +1,73 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>incus commands</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><h1>incus commands</h1><nav><a href="/">home</a>&nbsp<a href="/archive.html">archive</a>&nbsp</nav></header><main class="article"><span style="display: inline-block; text-align: right; width: 100%;">Posted on 2025/07/14<br>tagged <a href="/tag/linux.html">linux</a> &nbsp;</span><p></p><p>Instances</p>
+<pre><code>incus list
+incus stop -f svc1
+incus start svc1
+incus rm -f lab1
+incus exec lab1 bash
+</code></pre>
+<p>copy files into or out of instances</p>
+<pre><code>incus file push -r /home/sig/.dotfiles/ video/home/sig/.dotfiles
+</code></pre>
+<p>Images</p>
+<pre><code>incus image list
+incus image refresh
+</code></pre>
+<h1>ZFS Storage Pool</h1>
+<p>create zfs storage pool</p>
+<pre><code>incus storage create pool1 zfs
+</code></pre>
+<p>change size of zfs storage pool</p>
+<pre><code>incus storage set pool1 size &quot;200GiB&quot;
+</code></pre>
+<p>see storage pool parameters</p>
+<pre><code>incus storage show pool1
+</code></pre>
+<p>This is where you see the current size of the pool. also, can easily see storage use via zpool list</p>
+<pre><code>zpool list
+</code></pre>
+<h1>ZFS Hacks</h1>
+<p>migrate failed due to me restarting incus daemon</p>
+<p>i could cleanup the target volume</p>
+<pre><code>zfs list
+sudo zfs destroy pool1/virtual-machines/move-of-13669488997282970863
+sudo zfs destroy pool1/virtual-machines/move-of-13669488997282970863.block
+</code></pre>
+<h1>Storage Volumes</h1>
+<p>list all volumes</p>
+<pre><code>incus storage volume list default
+</code></pre>
+<p>remove extra disk volume from VM</p>
+<pre><code># detach from instance
+incus storage volume detach default dev2-disk1 dev2
+
+# delete volume
+incus storage volume delete default custom/dev2-disk1
+</code></pre>
+<p>move instance into new storage pool</p>
+<pre><code>incus stop dev2
+incus move dev2 --storage pool1
+incus start dev2
+</code></pre>
+<p>get info on storage volume (virtual machine instance)</p>
+<pre><code>incus storage volume info default virtual-machine/dev2
+</code></pre>
+<h1>Storage Volumes Bulk Operations</h1>
+<p>bulk delete custom storage volumes</p>
+<pre><code>incus storage show default \
+ | grep custom |awk -F/ '{print $7}' \
+ | xargs -r -n1 incus storage volume delete default
+</code></pre>
+<h1>Profiles</h1>
+<pre><code>incus profile list
+incus profile edit default
+incus profile delete default
+</code></pre>
+<p>Edit cloud-init configuration here
+assign default networks</p>
+<h1>Web UI</h1>
+<p>enable web UI</p>
+<pre><code>incus config set core.https_address :8443
+</code></pre>
+<p>open https://server:8443/</p>
+<p>see <a href="https://blog.simos.info/how-to-install-and-setup-the-incus-web-ui/">https://blog.simos.info/how-to-install-and-setup-the-incus-web-ui/</a></p>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays</small></footer></div></body></html>

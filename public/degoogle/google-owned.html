@@ -1,0 +1,170 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Google Owned</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><h1>Google Owned</h1><nav><a href="/">home</a>&nbsp<a href="/archive.html">archive</a>&nbsp</nav></header><main class="article"><span style="display: inline-block; text-align: right; width: 100%;">Posted on 2021/08/04<br>tagged </span><p></p><p>Ever think about how much information google has collected about you?</p>
+<p>Apart from services there are additional things going on that you might not be aware of</p>
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#data-collection">Data Collection</a></li>
+<li><a href="#location-services">Location Services</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#photos">Photos</a></li>
+<li><a href="#phone-sensors">Phone Sensors</a></li>
+<li><a href="#degoogle-resources">Degoogle Resources</a></li>
+</ul>
+<!-- markdown-toc end -->
+<h1>Data Collection</h1>
+<p>Data collected is often uploaded to google servers</p>
+<ul>
+<li>
+<p>IMEI, hardware serial number, Wifi MAC address</p>
+</li>
+<li>
+<p>AndroidID, Google Ad ID</p>
+</li>
+<li>
+<p>[1] <a href="https://www.scss.tcd.ie/Doug.Leith/Android_privacy_report.pdf">https://www.scss.tcd.ie/Doug.Leith/Android_privacy_report.pdf</a></p>
+</li>
+</ul>
+<h1>Location Services</h1>
+<p>In addition to GPS tracking, there is a service that runs on android phones and looks at available wifi networks to determine your location. This is usable when there isn't cell service.  However, the wifi networks are saved
+and uploaded centrally to google. Nobody knows what and how this data is used. I do not want google or Macy's knowing if I happen to walk into their store and my wifi pings theirs.</p>
+<p>The options given to you might not even work. See Google Tracks you even if you turn off 'location history' [1] and [2]</p>
+<ul>
+<li>[1] <a href="https://www.theverge.com/2018/8/13/17684660/google-turn-off-location-history-data">https://www.theverge.com/2018/8/13/17684660/google-turn-off-location-history-data</a> (2018)</li>
+<li>[2] <a href="https://qz.com/1131515/google-collects-android-users-locations-even-when-location-services-are-disabled">https://qz.com/1131515/google-collects-android-users-locations-even-when-location-services-are-disabled</a></li>
+</ul>
+<h1>Services</h1>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Information</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search</td>
+<td>Search History</td>
+<td>All my search history</td>
+</tr>
+<tr>
+<td>Gmail</td>
+<td>E-mail Data</td>
+<td>All my E-mail dating back to 2009</td>
+</tr>
+<tr>
+<td>Chrome Web History</td>
+<td>Browser History</td>
+<td>Names of web sites I visit</td>
+</tr>
+<tr>
+<td>Chrome Saved Passwords</td>
+<td>Passwords</td>
+<td>Saved passwords for sites (almost every site)</td>
+</tr>
+<tr>
+<td>Maps on Android</td>
+<td>Location data</td>
+<td>Location history, Phone goes everywhere</td>
+</tr>
+<tr>
+<td>Google Operated Dns Servers</td>
+<td>DNS Queries</td>
+<td>See all DNS quries</td>
+</tr>
+<tr>
+<td>Photos</td>
+<td>Pictures</td>
+<td>They run facial recognition on everyone</td>
+</tr>
+<tr>
+<td>Google Music</td>
+<td>Music</td>
+<td>All my music is hosted by google</td>
+</tr>
+<tr>
+<td>Google Drive  Productivity</td>
+<td>Storage</td>
+<td>a lot of information is in google drive</td>
+</tr>
+<tr>
+<td>Google Docs (Sheets, Docs, etc)</td>
+<td>Productivity</td>
+<td>I store a lot of information in google docs</td>
+</tr>
+<tr>
+<td>Google Home</td>
+<td>TTS Conversations</td>
+<td>Always on microphone virtual assistant</td>
+</tr>
+<tr>
+<td>Hangouts</td>
+<td>Chat Conversations</td>
+<td>Everyone I chat with</td>
+</tr>
+<tr>
+<td>Keep</td>
+<td>Notes</td>
+<td>All the random notes and shopping lists</td>
+</tr>
+<tr>
+<td>Calendar</td>
+<td>Events</td>
+<td>My calendar</td>
+</tr>
+<tr>
+<td>Contacts</td>
+<td>Address book</td>
+<td>Everyone I call and e-mail</td>
+</tr>
+<tr>
+<td>Voice</td>
+<td>Telephone service</td>
+<td>Transcribes voicemails and collects phone call metadata</td>
+</tr>
+</tbody>
+</table>
+<h1>Photos</h1>
+<p>On top of facial recognition, there are other levels of processing performed.</p>
+<p>They have ran extensive image processing on my photo library. I can ask google home to show me pictures of <code>pizza</code> and it shows mostly things similar to pizza</p>
+<h1>Phone Sensors</h1>
+<table>
+<thead>
+<tr>
+<th>Sensor</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microphone</td>
+<td>Audio Recording</td>
+</tr>
+<tr>
+<td>Camera</td>
+<td>Picture and Video Recording</td>
+</tr>
+<tr>
+<td>GPS</td>
+<td>GPS Location - Location within meters</td>
+</tr>
+<tr>
+<td>802.11 (Wifi)</td>
+<td>Wifi Location - Triangulation</td>
+</tr>
+<tr>
+<td>Accelorometer</td>
+<td>Local movement and direction</td>
+</tr>
+</tbody>
+</table>
+<p>Notes</p>
+<ul>
+<li>With accelorometer they know if you're walking/driving/in a train/on a bike/etc and upload this data to google. <a href="https://www.youtube.com/watch?v=yIZmUINSvQ4">https://www.youtube.com/watch?v=yIZmUINSvQ4</a></li>
+</ul>
+<h1>Degoogle Resources</h1>
+<ul>
+<li>[1] <a href="https://www.youtube.com/watch?v=RQUEgwgV99I">https://www.youtube.com/watch?v=RQUEgwgV99I</a></li>
+<li>[2] <a href="https://archive.ph/XzrbQ">https://archive.ph/XzrbQ</a> - archive of <a href="https://www.cupwire.com/google-timeline/">https://www.cupwire.com/google-timeline/</a></li>
+</ul>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays</small></footer></div></body></html>

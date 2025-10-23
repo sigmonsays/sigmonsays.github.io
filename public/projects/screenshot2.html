@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>screenshot2</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><h1>screenshot2</h1><nav><a href="/">home</a>&nbsp<a href="/archive.html">archive</a>&nbsp</nav></header><main class="article"><span style="display: inline-block; text-align: right; width: 100%;">Posted on 2024/02/04<br>tagged </span><p></p><p>screenshot2 is a simple golang program which is a rewrite of the python version. I wrote install
+in go because of the single file binary.</p>
+<p>Github page <a href="https://github.com/sigmonsays/screenshot2/blob/master/README.md">https://github.com/sigmonsays/screenshot2/blob/master/README.md</a></p>
+<p>The point of this post is to demonstrate how to setup screenshot2 and how to use it to achieve a few things</p>
+<p>Configuration</p>
+<p>Edit <code>~/.screenshot.yaml</code></p>
+<pre><code>datadir: Pictures/screenshot
+writeurlfile: true
+capture:
+    command: import
+upload:
+    interface: s3
+    access_key: XXX
+    secret_key: XXX
+    bucket: sigmonsays
+</code></pre>
+<p>Replace XXX with your access_key and secret_key</p>
+<h1>Usage</h1>
+<p>screenshot capture -s whatever</p>
+<p>This allows you to select a region of your screen and then uploads it</p>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays</small></footer></div></body></html>

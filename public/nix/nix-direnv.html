@@ -1,0 +1,212 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>nix-direnv</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><h1>nix-direnv</h1><nav><a href="/">home</a>&nbsp<a href="/archive.html">archive</a>&nbsp</nav></header><main class="article"><span style="display: inline-block; text-align: right; width: 100%;">Posted on 2023/12/14<br>tagged </span><p></p><!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#direnv">direnv</a></li>
+<li><a href="#nix-direnv">nix-direnv</a></li>
+<li><a href="#nix-shell">Nix Shell</a></li>
+<li><a href="#rust-development-environment">Rust development environment</a></li>
+<li><a href="#go-development-environment">Go development environment</a></li>
+<li><a href="#nix-shell-and-flakes">Nix Shell and Flakes</a></li>
+<li><a href="#audio--video-transcoding-tools">Audio / Video Transcoding tools</a></li>
+<li><a href="#photos-and-videos">Photos and Videos</a></li>
+<li><a href="#static-website">Static Website</a></li>
+<li><a href="#emacs">Emacs</a></li>
+<li><a href="#hey-gcroots-save-some-of-that-garbage">hey gcroots, save some of that garbage!</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<!-- markdown-toc end -->
+<h1>direnv</h1>
+<p>The power of nix with direnv is easy to understate. This post is to explains some ways to use it.</p>
+<p>direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd
+to a specific directory. supported shells are bash, zsh, tcsh, fish, elvish, and powershell.</p>
+<p>It can not setup shell aliases or inject bash functions into your shell. This is by design due to security. however
+manipulating the environment variables seems enough.</p>
+<p>direnv can be used with <code>nix-direnv</code> to support modifying <code>PATH</code> and other variables to inject commands into your project.</p>
+<p>Installing direnv is out of scope for the purpose of this document but the direnv website [1] has good instructions and
+installation is pretty straightforward.</p>
+<p>In short the way direnv works is by loading a .envrc file like this</p>
+<pre><code>export FOO=bar
+</code></pre>
+<p>If you cd to a directory with this .envrc, you must first run <code>direnv allow</code> then you can see the environment is loaded</p>
+<pre><code>$ direnv allow
+direnv: loading ~/demo/.envrc
+direnv: export +FOO
+$ echo $FOO
+bar
+</code></pre>
+<h1>nix-direnv</h1>
+<p>nix-direnv [2]  provides the <code>use flake</code> and <code>use nix</code> functionality for direnv</p>
+<h1>Nix Shell</h1>
+<p>It's possible to get a shell with a arbitrary package installed using nix-shell. This allows your computer
+to remain pristine except for when you're working on a specific project.</p>
+<p>Evaluating applications becomes fearless because everything needed to install said application, all it's
+dependencies can now easily be deleted when you exit the shell. No left over krufty deps.</p>
+<pre><code>$ nix-shell -p fortune
+$ fortune
+If you don't drink it, someone else will.
+</code></pre>
+<p>and fortune is no longer available after exiting</p>
+<pre><code>$ exit
+exit
+$ fortune
+command not found: fortune
+</code></pre>
+<p>Multiple packages</p>
+<pre><code>$ nix-shell -p fortune htop
+</code></pre>
+<h1>Rust development environment</h1>
+<p>In order to develop with rust, I installed rustup on my system. Installing rustup is
+a step i perform outside of the development shell.</p>
+<p>The unnamed application i built these examples from uses environment variables
+as configuration. So using direnv also has the added benefit of loading the
+applications configuration.</p>
+<p>The basic setup is to have both a .envrc file and a a shell.nix file</p>
+<p>example .envrc</p>
+<pre><code>export RUST_BACKTRACE=1
+export SIMPLE_LOGS=false
+export ENABLE_UI=true
+
+use nix
+</code></pre>
+<p>example shell.nix</p>
+<pre><code>{ pkgs ? import &lt;nixpkgs&gt; {} }:
+
+with pkgs;
+
+mkShell {
+    buildInputs = [
+        openssl
+        pkg-config
+    ];
+}
+</code></pre>
+<p>Then to install your rust toolchain (last project uses nightly)</p>
+<pre><code>  rustup toolchain install nightly
+  rustup default nightly
+  cargo install cargo-edit cargo-watch cargo-tree cargo-duplicates cargo-feature
+</code></pre>
+<p>rust-analyzer is the LSP i use in emacs</p>
+<pre><code>  rustup +nightly component add rust-analyzer-preview
+</code></pre>
+<p>finally compile the project</p>
+<pre><code>  cargo build
+</code></pre>
+<h1>Go development environment</h1>
+<p>Just like the rust development environment we need two files, .envrc and shell.nix</p>
+<p>.envrc</p>
+<pre><code>export WORKSPACE=&quot;$(pwd)&quot;
+export GOFLAGS=&quot;-count=1&quot;
+use nix
+</code></pre>
+<p>shell.nix</p>
+<pre><code>{ pkgs ? import &lt;nixpkgs&gt; {} }:
+
+with pkgs;
+
+mkShell {
+  buildInputs = [
+        go_1_20
+        protobuf
+        grpc-gateway
+        sqlite
+        libpcap
+  ];
+}
+</code></pre>
+<p>The shell.nix contents are specific to a project that uses grpc gateway and protobuf.</p>
+<h1>Nix Shell and Flakes</h1>
+<p>The same .envrc and shell.nix can be used with flakes. The addition of a flake.nix file
+indicates what upstream nixos to use.</p>
+<p>flake.nix</p>
+<pre><code>{
+  description = &quot;example program&quot;;
+
+  inputs.nixpkgs.url = &quot;github:NixOS/nixpkgs/nixos-unstable&quot;;
+  inputs.flake-utils.url = &quot;github:numtide/flake-utils&quot;;
+  inputs.gomod2nix.url = &quot;github:nix-community/gomod2nix&quot;;
+
+  outputs = { self, nixpkgs, flake-utils, gomod2nix }:
+    (flake-utils.lib.eachDefaultSystem
+      (system:
+        let
+          pkgs = import nixpkgs {
+            inherit system;
+            overlays = [ gomod2nix.overlays.default ];
+          };
+
+        in
+        {
+          packages.default = pkgs.callPackage ./. { };
+          devShells.default = import ./shell.nix { inherit pkgs; };
+        })
+    );
+}
+</code></pre>
+<p>We need to change the .envrc use line from 'use nix' to 'use flake'</p>
+<p>.envrc</p>
+<pre><code>use flake
+</code></pre>
+<p>Now can can use flakes</p>
+<pre><code>nix shell
+</code></pre>
+<h1>Audio / Video Transcoding tools</h1>
+<p>Changing to the transcoding-tools directory automatically loads all the tools I need to process video</p>
+<pre><code>cat ~/code/random-code/transcoding-tools/shell.nix
+
+{ pkgs ? import &lt;nixpkgs&gt; { } }:
+
+with pkgs;
+
+mkShell {
+  buildInputs = [
+
+    handbrake
+    mplayer
+    ffmpeg
+
+    audacity
+
+    mpg123
+
+  ];
+}
+</code></pre>
+<h1>Photos and Videos</h1>
+<p>Another example, I wrote a program call <code>picman</code> which sorts photos with my own rules. This program needs exiftool and libheif to function.</p>
+<p>Changing directory to my photos automatically loads the shell.nix for Photos and Videos and all of these tools are then made available to use</p>
+<pre><code>{ pkgs ? import &lt;nixpkgs&gt; {} }:
+
+with pkgs;
+
+mkShell {
+  buildInputs = [
+        exiftool
+        libheif
+  ];
+}
+</code></pre>
+<h1>Static Website</h1>
+<p>This website is created using hugo, here is it's shell.nix</p>
+<pre><code>{ pkgs ? import &lt;nixpkgs&gt; {} }:
+
+with pkgs; mkShell {
+  buildInputs = [
+        hugo
+  ];
+}
+</code></pre>
+<h1>Emacs</h1>
+<p>Since emacs is the editor i use (doom emacs to be specific) i figured it's worth mentioning that I also use</p>
+<p>in ~/.doom.d/init.el I have <code>:tools direnv</code> set which sets up <code>emacs-direnv</code> [3]. This allows various tools
+like gopls and rust-analyzer to function properly.</p>
+<h1>hey gcroots, save some of that garbage!</h1>
+<p>So it's worth mentioning that <code>use flake</code> saves build result in a hidden file where .envrc resides. This has the effect
+of protecting the shell contents from getting garbage collected. This is ideal imho as constantly having to re-download
+and setup a shell is annoying.</p>
+<h1>References</h1>
+<ul>
+<li>[1] <a href="https://direnv.net/">https://direnv.net/</a></li>
+<li>[2] <a href="https://github.com/nix-community/nix-direnv">https://github.com/nix-community/nix-direnv</a></li>
+<li>[3] <a href="https://github.com/wbolster/emacs-direnv">https://github.com/wbolster/emacs-direnv</a></li>
+</ul>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays</small></footer></div></body></html>

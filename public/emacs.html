@@ -1,0 +1,132 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>My Emacs Kit</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><h1>My Emacs Kit</h1><nav><a href="/">home</a>&nbsp<a href="/archive.html">archive</a>&nbsp</nav></header><main class="article"><span style="display: inline-block; text-align: right; width: 100%;">Posted on 2022/11/14<br>tagged </span><p></p><p>This document will be a living document that i'll attempt to update from time to time</p>
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#pico-and-nano">Pico and Nano</a></li>
+<li><a href="#vim">Vim</a></li>
+<li><a href="#doom-emacs">doom emacs</a></li>
+<li><a href="#emacs28-with-native-compilation">emacs28 with native compilation</a></li>
+<li><a href="#markdown-mode">Markdown mode</a></li>
+<li><a href="#org-mode-and-babel">Org mode and babel</a></li>
+</ul>
+<!-- markdown-toc end -->
+<h1>Intro</h1>
+<p>I've been using doom-emacs for over a year now (since March 2021) and this is my personal experiences with it.</p>
+<p>I do not put a ton of effort into editors, rather I spend a chunk of time intermittently. This has happened with vi/vim and again
+with emacs. my vim configuration was always flaky and never worked correctly until around neovim. At that point I was so fed up
+with reproducible editor configuration that I looked for something better.</p>
+<p>Here is my editor timeline</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Editor</th>
+<th style="text-align:center">Years Using</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">nano pico</td>
+<td style="text-align:center">Since 2001</td>
+</tr>
+<tr>
+<td style="text-align:left">vi</td>
+<td style="text-align:center">Since 2002</td>
+</tr>
+<tr>
+<td style="text-align:left">vim neovim</td>
+<td style="text-align:center">Since 2004</td>
+</tr>
+<tr>
+<td style="text-align:left">emacs</td>
+<td style="text-align:center">Since late 2020</td>
+</tr>
+</tbody>
+</table>
+<h1>Pico and Nano</h1>
+<p>As a systems administration and a PHP developer, I primarily built CMS type stacks and shopping cart applications. These
+editors worked well but I found myself wasting so much time navigating with page up and page down</p>
+<h1>Vim</h1>
+<p>When I discovered vim and what it could do, I became interested.. But...</p>
+<p>It was really difficult for me to pick up. Once I managed to make the switch to a modal editor, I never
+looked back.</p>
+<p>vim configuration was always mystical to me (and still is). I could barely customize it outside of it's
+stock configuration so that's what I used.</p>
+<h1>doom emacs</h1>
+<p>Being a vim user for so many years has basically burned those keys into my brain.</p>
+<p>I am still a vim user to this day like using <code>j</code> and <code>k</code> to navigate is still present in doom emacs due to evil mode</p>
+<p>I'm by no means a lisp expert but doom emacs is ready to go out very quickly. Some things that look time are learning
+and discovering everything that is out there.</p>
+<p>Favorite packages</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Package</th>
+<th style="text-align:left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">projectile</td>
+<td style="text-align:left">project manager</td>
+</tr>
+<tr>
+<td style="text-align:left">dired</td>
+<td style="text-align:left">file explorer</td>
+</tr>
+<tr>
+<td style="text-align:left">magit</td>
+<td style="text-align:left">use git in emacs</td>
+</tr>
+<tr>
+<td style="text-align:left">bookmarks</td>
+<td style="text-align:left">quickly jump to common files</td>
+</tr>
+<tr>
+<td style="text-align:left">ibuffer</td>
+<td style="text-align:left">grouping and switching buffers</td>
+</tr>
+<tr>
+<td style="text-align:left">LSP</td>
+<td style="text-align:left">for coding in go, rust, python</td>
+</tr>
+<tr>
+<td style="text-align:left">org-mode</td>
+<td style="text-align:left">knowledge base and interactive document</td>
+</tr>
+<tr>
+<td style="text-align:left">emacs-everywhere</td>
+<td style="text-align:left">quick pop up emacs buffer for editing and pasting back into an application</td>
+</tr>
+</tbody>
+</table>
+<p>Honerable mentions</p>
+<ul>
+<li>restclient.el</li>
+<li>code folding</li>
+<li>yasnippet for code snippets</li>
+<li>eshell</li>
+<li>markdown mode</li>
+<li>org mode and babel</li>
+<li>dired</li>
+</ul>
+<h1>emacs28 with native compilation</h1>
+<p>The editor install is a beast which is not ideal but native compilation made emacs so much faster that I can't live without it</p>
+<h1>Markdown mode</h1>
+<p>Emacs never fails to amaze in the commands it has. One case is in markdown mode, you can simply run <code>markdown-toc-generate-toc</code> and it will generate
+a index at the top of the page. This also works for org mode using <code>toc-org-insert-toc</code></p>
+<h1>Org mode and babel</h1>
+<p>I use .org files for keeping notes about various things. Being able to have a text only interface with the ability to link between org files and sections
+is really all I need.</p>
+<p>Then comes babel, which is a way for emacs to execute source code snippets. For instance for bash, I can get the output of <code>df -h /</code> rendered directly in
+my org file</p>
+<pre><code>#+begin_src bash :results output
+df -h /
+#+end_src
+
+#+RESULTS:
+: Filesystem      Size  Used Avail Use% Mounted on
+: /dev/nvme0n1p2  1.8T  473G  1.3T  28% /
+</code></pre>
+<p>I've used this for a lot of things where you want to remember the command and also capture the results.</p>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays</small></footer></div></body></html>

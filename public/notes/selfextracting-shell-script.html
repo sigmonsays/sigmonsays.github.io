@@ -1,0 +1,60 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>self extracting shell script</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><h1>self extracting shell script</h1><nav><a href="/">home</a>&nbsp<a href="/archive.html">archive</a>&nbsp</nav></header><main class="article"><span style="display: inline-block; text-align: right; width: 100%;">Posted on 2025/08/28<br>tagged </span><p></p><p>Quick script to build a self extracting archive, which can be useful for deploying multiple assets and running a script
+on a remote machine.</p>
+<p><code>selfextract/header</code>:</p>
+<pre><code>#!/usr/bin/env bash
+
+# Define a temporary directory for extraction
+TMPDIR=$(mktemp -d /tmp/selfextract.XXXXXX)
+
+# Find the line number where the archive starts
+ARCHIVE_START_LINE=$(awk '/^__ARCHIVE_BELOW__/ {print NR + 1; exit 0; }' &quot;$0&quot;)
+
+# Extract the archive to the temporary directory
+tail -n+&quot;$ARCHIVE_START_LINE&quot; &quot;$0&quot; | tar xzv -C &quot;$TMPDIR&quot;
+
+echo &quot;working in $TMPDIR&quot;
+
+# Optional: Run a script or command from the extracted data
+# For example, if you have an 'install.sh' script in the archive:
+# &quot;$TMPDIR/install.sh&quot;
+cd &quot;$TMPDIR&quot;
+&quot;$TMPDIR/install.sh&quot;
+
+# Clean up the temporary directory (optional, depending on your needs)
+# rm -rf &quot;$TMPDIR&quot;
+
+
+exit 0
+
+__ARCHIVE_BELOW__
+
+
+</code></pre>
+<p><code>Makefile</code>:</p>
+<pre><code>ARCHIVES = $(shell ls stuff*_linux_amd64.tar.gz)
+
+all:
+	tar zcf archive.tar.gz service.env service.service install.sh $(ARCHIVES)
+	cp ./selfextract/header archive.sh
+	cat archive.tar.gz &gt;&gt; archive.sh
+	rm -f archive.tar.gz
+	chmod +x archive.sh
+</code></pre>
+<p><code>install.sh</code>:</p>
+<pre><code>#!/usr/bin/env bash
+mkdir -pv /etc/myservice
+cp myservice.env /etc/myservice/myservice.env
+cp myservice.service /etc/systemd/system/myservice.service
+
+archive=$(ls -1 stuff_*_linux_amd64.tar.gz | head -n1)
+if [ ! -z &quot;$archive&quot; ]; then
+    tar vzxf &quot;$archive&quot;
+    sudo cp myservice /usr/bin/myservice
+    sudo chmod +x /usr/bin/myservice
+fi
+
+systemctl daemon-reload
+systemctl enable myservice
+systemctl restart myservice
+</code></pre>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays</small></footer></div></body></html>

@@ -1,0 +1,123 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>window manager requirements</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><h1>window manager requirements</h1><nav><a href="/">home</a>&nbsp<a href="/archive.html">archive</a>&nbsp</nav></header><main class="article"><span style="display: inline-block; text-align: right; width: 100%;">Posted on 2025/09/19<br>tagged </span><p></p><p>This post is to help myself and also anyone else to detail what I look for in a window manager
+on a linux desktop.</p>
+<p>The primary use case for these requirements are a dual screen workstation. The screens are both 4k screens,
+which rules out tiling since tiling with such high resolution (3840x2160) breaks down quickly.</p>
+<p>This workstation is a desktop and my primary working environment.</p>
+<p><strong>Current solution</strong></p>
+<p>My current solution is to use i3 and float everything. Prior to floating everything, my 2 screens were smaller
+and I had far less screen space. Tiling actually made sense back then but with 4k screens it does not.</p>
+<p><strong>Previous solutions</strong></p>
+<p>Prior to i3 I was a heavy enlightenment user but it ended up having some missing features</p>
+<p>I used awesome-wm for a little but having to write lua was a huge pain. interoperability issues like
+not being able to use polybar cause more pain. At some pinot I had memory leaks and the complicated
+code to do simple things hurt. Still I had an awesome window manger setup with awesome-wm (pun intended)</p>
+<h1>Common Features</h1>
+<p><strong>Configurable Key bindings</strong></p>
+<p>This should go without saying but i definitely need to be able to configure key bindings as I am primarily
+a keyboard user with very little mouse usage.</p>
+<h1>Workspaces</h1>
+<p>I will always have the need to move applications to a workspace I do not see.</p>
+<p>I have a machine with a lot of memory and will have multiple development environments open and maybe
+a remote/production workspace as well. The first workspace is usually e-mail and chat.</p>
+<p>A common setup is as follows</p>
+<p><strong>Screen 1 (left) - workspaces 1 through 5</strong></p>
+<ul>
+<li>workspace 1
+<ul>
+<li>browser w/ work chat programs</li>
+<li>browser w/ work email and calendar programs</li>
+<li>terminal with meetings notes</li>
+</ul>
+</li>
+<li>workspace 2
+<ul>
+<li>code on primary project</li>
+<li>usually many terminals, 3 to 4 is common</li>
+</ul>
+</li>
+<li>workspace 3
+<ul>
+<li>sometimes ssh remote sessions</li>
+<li>sometimes adhoc coding projects</li>
+</ul>
+</li>
+<li>workspace 4
+<ul>
+<li>whatever overflows like additional projects</li>
+<li>production or development deployments</li>
+</ul>
+</li>
+<li>workspace 5
+<ul>
+<li>steam games</li>
+</ul>
+</li>
+</ul>
+<p><strong>Screen 2 (right) - workspaces 6 through 9 and 0</strong></p>
+<ul>
+<li>workspace 6
+<ul>
+<li>personal chats</li>
+<li>personal email</li>
+<li>music (spotify or youtube)</li>
+</ul>
+</li>
+<li>workspace 7
+<ul>
+<li>gui notes program (sublime text)</li>
+</ul>
+</li>
+<li>workspace 8
+<ul>
+<li>sometimes GUI REST API tool like bruno</li>
+</ul>
+</li>
+<li>workspace 9
+<ul>
+<li>whatever</li>
+</ul>
+</li>
+<li>workspace 10
+<ul>
+<li>mindmapping</li>
+</ul>
+</li>
+</ul>
+<h1>Independent workspaces per screen</h1>
+<p>This single requirement rules out so many window managers.</p>
+<p>Being able to switch a workspace on a single monitor is such a big deal.</p>
+<p>Quite often I have documentation or chat up on one screen that I am keeping an eye on and then code
+or work on the other screen.</p>
+<p>This is a critical part of my workflow that I really think is necessary on a desktop workstation</p>
+<p>This list of window managers that can do this are short, some of them are bspwm, awesome-wm, i3,
+enlightenment, xmonad, wingo, dwm, and cosmic.</p>
+<h1>Scratch pad</h1>
+<p>A scratch pad is a window that you can show and hide quickly that is always running.</p>
+<p>I have multiple scratch pads each bound to a key</p>
+<ul>
+<li>terminal</li>
+<li>math terminal - usually running python or qcalc</li>
+<li>file browser</li>
+</ul>
+<p>There is a terminal called tdrop which can provide a quake like inspired terminal but that does not
+cover other applications like file browsers.</p>
+<h1>Easily configurable from dot files</h1>
+<p>the window manager needs a cli to configure it or have configuration files to control most things.</p>
+<p>enlightenment failed this one, being able to configure everything from a git checkout was ultimately what
+made me look for alternatives.</p>
+<p>That and it was rather old and appeared to be slowly unmaintained. I used to compile it from source to get
+the version I wanted.</p>
+<h1>Powerful Launcher</h1>
+<p>current launcher is rofi, it lets me run arbitrary commands which is pretty useful as I would rather write a script
+as opposed to a .desktop file.</p>
+<p>Rofi does more than just run commands, it also does ssh, open windows, and emoji</p>
+<h1>Menu Bar</h1>
+<p>currently use polybar as it has a lot of features I like</p>
+<ul>
+<li>Various monitors - I have CPU, Memory, Disk, download speed, VPN and Interface stats.</li>
+<li>load average</li>
+<li>volume control, which is critical</li>
+<li>current date</li>
+<li>current weather</li>
+</ul>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays</small></footer></div></body></html>

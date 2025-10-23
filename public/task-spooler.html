@@ -1,0 +1,64 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>task spooler</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><h1>task spooler</h1><nav><a href="/">home</a>&nbsp<a href="/archive.html">archive</a>&nbsp</nav></header><main class="article"><span style="display: inline-block; text-align: right; width: 100%;">Posted on 2025/08/25<br>tagged </span><p></p><p>website <a href="https://viric.name/soft/ts/">https://viric.name/soft/ts/</a></p>
+<p>The task spooler program is quite old, I used it back in the early 2000s for managing s3 uploads but it's a tool
+I use intermittently today.</p>
+<p>Some basic operations</p>
+<pre><code># clear task list of completed jobs
+ts -C
+
+# show max concurrency
+ts -S
+
+# set max concurrency
+ts -S 4
+
+# kill queue
+ts -K
+
+# Get job output, job id 1
+ts -c 1
+</code></pre>
+<p><code>ts-wait-all</code> script waits for all jobs in the queue to finish:</p>
+<pre><code>ts -l | awk '$1 ~ /^[0-9]+$/ {print $1}' | xargs -I^ ts -w ^
+</code></pre>
+<h1>A quick example</h1>
+<p><code>job.sh</code> script:</p>
+<pre><code>#!/usr/bin/env bash
+
+url=&quot;$1&quot;
+cd &quot;$(dirname &quot;$0&quot;)&quot;
+mkdir -p out
+cd out
+wget --mirror --convert-links --adjust-extension --page-requisites --no-parent &quot;$1&quot;
+</code></pre>
+<p>hard reset the queue (kills all jobs)</p>
+<pre><code>ts -K       # kill queue and all existing jobs
+</code></pre>
+<p>Then fill the queue</p>
+<pre><code>ts -C       # clear queue, just finished jobs, starting fresh
+ts -S 2     # Set job concurrency to 2
+ts ./job.sh https://viric.name/soft/ts/
+ts ./job.sh https://linux.die.net/man/8/sudo
+ts ./job.sh https://linux.die.net/man/1/pstree
+</code></pre>
+<p>jobs can be listed and added at any time</p>
+<pre><code>ts -l
+</code></pre>
+<p>Finally if you care to you can wait for it all to finish</p>
+<pre><code>ts-wait-all
+</code></pre>
+<h1>Capturing exit code</h1>
+<p>One way to capture the exit code of the jobs is to write a finish script,</p>
+<p><code>finish.sh</code>:</p>
+<pre><code>#!/usr/bin/env bash
+# arguments: jobid errorlevel output_filename command
+echo &quot;$@&quot; &gt;&gt; jobs.log
+</code></pre>
+<p>set TS_ONFINISH:</p>
+<pre><code>export TS_ONFINISH=./finish.sh
+</code></pre>
+<p>Try re-running the example above with TS_ONFINISH set, you'll generate a log file similar to this</p>
+<pre><code>0 0 /tmp/ts-out.6aJiVM ./job.sh https://viric.name/soft/ts/
+1 1 /tmp/ts-out.OlL66T ./job.sh https://linux.die.net/man/8/sudo
+2 0 /tmp/ts-out.S1GWSK ./job.sh https://linux.die.net/man/1/pstree
+</code></pre>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays</small></footer></div></body></html>

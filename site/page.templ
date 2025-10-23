@@ -1,0 +1,36 @@
+package site
+
+
+templ PageTop(site Site, page PageMetadata) {
+  <span style="display: inline-block; text-align: right; width: 100%;">
+  if page.FrontMatter.Date != "" {
+    Posted on {page.FrontMatter.Date} <br/>
+  }
+  @PageTags(site, page)
+  </span>
+  <p/>
+}
+
+templ PageTags(site Site, page PageMetadata) {
+  tagged
+  for _, tag := range page.FrontMatter.Tags {
+    <a href={"/tag/" + tag + ".html"}>{tag}</a> &nbsp;
+  }
+}
+
+templ Page(site Site, page PageMetadata, title string, body string) {
+  <!doctype html>
+  <html>
+    @head(title)
+    <body>
+      <div class="container">
+        @Header(title)
+        <main class="article">
+        @PageTop(site, page)
+        @templ.Raw(body)
+        </main>
+        @Footer()
+      </div>
+    </body>
+  </html>
+}
