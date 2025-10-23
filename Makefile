@@ -5,6 +5,7 @@ help: ## Show this help screen
 b: build
 g: gen
 d: dev
+p: publish
 
 compile: gent ## compile
 	go install .
@@ -26,7 +27,7 @@ publish: compile gen ## run dev build
 	git push
 
 dev: compile ## run dev build
-	reflex -s -r '(\.go$$|\.md$$)' -- make run
+	reflex -s -r '(\.go$$|\.md$$|\.templ$$)' -- make run
 
 run: ## run
 	website -dev

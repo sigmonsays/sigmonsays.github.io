@@ -1,11 +1,12 @@
 package site
 
 templ link(name, url string) {
-	<a href={url}>{ name }</a>
+	<a href={url}>{ name }</a> &middot;
 }
 
 templ nav() {
     <nav>
+	&middot; &nbsp;
 	@link("home", "/") &nbsp
 	@link("archive", "/archive.html") &nbsp
 	</nav>
