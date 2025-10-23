@@ -11,8 +11,8 @@ templ TagIndex(site Site, title string) {
         <main class="article">
         tags are sorted alphabetically<br/>
 
-        for _, tag := range site.GetTags() {
-          <li><a href={"/tag/" + tag + ".html"}>{tag}</a></li>
+        for _, tagset := range site.GetTags() {
+          <li><a href={"/tag/" + tagset.Tag + ".html"}>{tagset.Tag}</a> ({len(tagset.Pages)})</li>
         }
         </main>
         @Footer()

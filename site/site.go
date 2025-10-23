@@ -1,6 +1,9 @@
 package site
 
-import "sort"
+import (
+	"cmp"
+	"slices"
+)
 
 func (me *Site) GetPages(max int) []PageMetadata {
 	ret := SortPages(me.Pages)
@@ -11,11 +14,14 @@ func (me *Site) GetPages(max int) []PageMetadata {
 	return ret[:max]
 }
 
-func (me *Site) GetTags() []string {
-	ret := make([]string, 0)
-	for tag, _ := range me.TagSet {
-		ret = append(ret, tag)
+func (me *Site) GetTags() []*TagSet {
+	ret := make([]*TagSet, 0)
+	for _, tagset := range me.TagSet {
+		ret = append(ret, tagset)
 	}
-	sort.Strings(ret)
+	slices.SortFunc(ret, func(a, b *TagSet) int {
+		return cmp.Compare(a.Tag, b.Tag)
+
+	})
 	return ret
 }
