@@ -1,13 +1,15 @@
 ---
 title: "test"
 tags: [ "foo", "bar" ]
+draft: true
+date: 2025/10/23
 ---
 
 # test
 
 This is a demo page built with **templ** + a tiny SSG.
 
-see [about]
+see [[about]]
 
 bash code:
 
