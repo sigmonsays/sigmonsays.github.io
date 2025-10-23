@@ -22,6 +22,8 @@ gent: ## generate templates
 
 publish: compile gen ## run dev build
 	git add docs
+	git commit -a -m' publish '
+	git push
 
 dev: compile ## run dev build
 	reflex -s -r '(\.go$$|\.md$$)' -- make run
