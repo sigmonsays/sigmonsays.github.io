@@ -10,10 +10,10 @@ compile: gent ## compile
 	go install .
 
 gen: ## generate site
-	rm -rf public
+	rm -rf docs
 	website && echo
-	cp site/site.css public/site.css
-	rsync -ar ./overlay/ ./public/
+	cp site/site.css docs/site.css
+	rsync -ar ./overlay/ ./docs/
 
 test: gen compile run ## test run
 

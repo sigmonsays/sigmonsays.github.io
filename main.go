@@ -69,7 +69,7 @@ func main() {
 
 	devServer := false
 	inDir := "content"
-	outDir := "public"
+	outDir := "docs"
 	flag.BoolVar(&devServer, "dev", devServer, "dev start")
 	flag.Parse()
 
