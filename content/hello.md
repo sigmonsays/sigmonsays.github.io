@@ -2,6 +2,7 @@
 title: "just a quick hello"
 tags: [ "hello" ]
 date: 2025/10/21
+draft: true
 summary: just saying hello
 ---
 

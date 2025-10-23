@@ -13,6 +13,8 @@ features
   - need dates
 - archive page (listing all posts)
 - no tags page (listing tags and pages with tag)
+- supports frontmatter data for title, summary and date
+- frontmatter draft flag to skip page in production mode
 
 features
 - wikilink support using https://github.com/abhinav/goldmark-wikilink
