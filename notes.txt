@@ -2,6 +2,11 @@ go install github.com/a-h/templ/cmd/templ@latest
 
 todo
 - table of contents?
+  see https://pkg.go.dev/go.abhg.dev/goldmark/toc#section-readme
+- whole bunch of extensions here https://go.abhg.dev/
+  - heading anchors?
+  - hash tags (instead of tags)
+    see https://pkg.go.dev/go.abhg.dev/goldmark/hashtag
 
 features
 - index page (listing recent posts)
