@@ -1,7 +1,7 @@
 ---
 title: "just a quick hello"
 tags: [ "hello" ]
-date: 2025-10-21
+date: 2025/10/21
 summary: just saying hello
 ---
 

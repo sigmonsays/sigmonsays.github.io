@@ -68,14 +68,20 @@ func (me *SiteRender) WritePage(ctx context.Context, page *site.PageMetadata, ti
 func main() {
 
 	devServer := false
+	gen := false
 	inDir := "content"
 	outDir := "docs"
 	flag.BoolVar(&devServer, "dev", devServer, "dev start")
+	flag.BoolVar(&gen, "gen", gen, "generate and exit")
 	flag.Parse()
 
 	err := genSite(inDir, outDir)
 	if err != nil {
 		log.Fatalf("GenServer %s", err)
+	}
+
+	if gen {
+		os.Exit(0)
 	}
 
 	if devServer {
