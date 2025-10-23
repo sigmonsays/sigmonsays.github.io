@@ -1,6 +1,7 @@
 ---
 title: "Projects Overview"
 date: 2021/08/04
+tags: [ "projects" ]
 skip_index: true
 ---
 
@@ -46,6 +47,6 @@ leveled logging libary for go
 
 # Related
 
-I maintain a page of [[ Interesting-Tech ]] which are random pieces of software or tools I find interesting at the time.
+I maintain a page of [[Interesting-Tech]] which are random pieces of software or tools I find interesting at the time.
 
 There is a section on [[bash scripting]]

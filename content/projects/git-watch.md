@@ -1,6 +1,7 @@
 ---
 title: "git-watch"
 date: 2021/08/04
+tags: [ "projects" ]
 ---
 git watch is a simple library and CLI tool for monitoring git repositories and triggering events (restart process) when they change.
 

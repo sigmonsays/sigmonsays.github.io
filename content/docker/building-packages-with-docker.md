@@ -1,6 +1,7 @@
 ---
 title: "building packages with docker"
 date: 2021/08/04
+tags: [ "docker" ]
 ---
 
 This is a simple idea I had while waiting for a build to complete.

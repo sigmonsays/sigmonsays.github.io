@@ -1,6 +1,7 @@
 ---
 title: "screenshot2"
 date: 2024/02/04
+tags: [ "projects" ]
 ---
 
 screenshot2 is a simple golang program which is a rewrite of the python version. I wrote install

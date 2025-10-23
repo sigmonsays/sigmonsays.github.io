@@ -1,6 +1,7 @@
 ---
 title: "docker networking performance"
 date: 2021/08/04
+tags: [ "docker" ]
 ---
 
 While trying to determine the performance overhead of a simple docker container setup, I discovered several

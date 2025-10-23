@@ -1,6 +1,7 @@
 ---
 title: "paste, an hour long project"
 date: 2021/08/04
+tags: [ "projects" ]
 ---
 
 I'm sure anyone who has been on IRC or any type of chat understands the concept of a no paste service.
