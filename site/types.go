@@ -57,5 +57,6 @@ type FrontMatter struct {
 	Title   string   `yaml:"title"`
 	Summary string   `yaml:"summary"`
 	Date    string   `yaml:"date"`
+	Draft   bool     `yaml:"draft"`
 	Tags    []string `yaml:"tags"`
 }

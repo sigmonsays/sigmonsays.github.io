@@ -65,17 +65,28 @@ func (me *SiteRender) WritePage(ctx context.Context, page *site.PageMetadata, ti
 	return me.WriteComponent(ctx, comp, outfile)
 }
 
+type Options struct {
+	DevServer bool
+	InDir     string
+	OutDir    string
+}
+
 func main() {
 
 	devServer := false
 	gen := false
-	inDir := "content"
-	outDir := "docs"
-	flag.BoolVar(&devServer, "dev", devServer, "dev start")
+	opts := &Options{
+		OutDir: "docs",
+		InDir:  "content",
+	}
+
+	flag.StringVar(&opts.InDir, "in", opts.InDir, "input directory")
+	flag.StringVar(&opts.OutDir, "out", opts.OutDir, "output directory")
+	flag.BoolVar(&opts.DevServer, "dev", devServer, "dev start")
 	flag.BoolVar(&gen, "gen", gen, "generate and exit")
 	flag.Parse()
 
-	err := genSite(inDir, outDir)
+	err := genSite(opts)
 	if err != nil {
 		log.Fatalf("GenServer %s", err)
 	}
@@ -85,7 +96,7 @@ func main() {
 	}
 
 	if devServer {
-		fs := http.FileServer(http.Dir(outDir))
+		fs := http.FileServer(http.Dir(opts.OutDir))
 		http.Handle("/", fs)
 
 		log.Println("Serving on http://localhost:8080 ...")
@@ -102,7 +113,7 @@ type FileEntry struct {
 	Info fs.FileInfo
 }
 
-func GetPages(dir string) ([]*site.PageMetadata, error) {
+func GetPages(dir string, includeDrafts bool) ([]*site.PageMetadata, error) {
 	ret := make([]*site.PageMetadata, 0)
 	entries := make([]*FileEntry, 0)
 	walkfn := func(path string, info fs.FileInfo, err error) error {
@@ -140,6 +151,12 @@ func GetPages(dir string) ([]*site.PageMetadata, error) {
 			continue
 		}
 
+		if includeDrafts == false && fm.Draft == true {
+			log.Printf("skipping draft page %s", ent.Path)
+			continue
+
+		}
+
 		relPath, err := filepath.Rel(dir, ent.Path)
 		if err != nil {
 			fmt.Printf("ERROR: RelPath: %s", err)
@@ -165,15 +182,17 @@ func GetPages(dir string) ([]*site.PageMetadata, error) {
 	return ret, nil
 }
 
-func genSite(inDir, outDir string) error {
+func genSite(opts *Options) error {
 	ctx := context.Background()
+	inDir := opts.InDir
+	outDir := opts.OutDir
 
 	err := os.MkdirAll(outDir, 0755)
 	if err != nil {
 		return err
 	}
 
-	pages, err := GetPages(inDir)
+	pages, err := GetPages(inDir, opts.DevServer)
 	if err != nil {
 		return err
 	}
