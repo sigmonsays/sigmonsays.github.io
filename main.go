@@ -76,7 +76,7 @@ func (me *SiteRender) WriteDirectoryIndexPage(ctx context.Context, inDir, outDir
 		return err
 	}
 	outfile := filepath.Join(me.OutDir, relDir, "index.html")
-	log.Printf("Write directory index %s", outfile)
+	//log.Printf("Write directory index %s", outfile)
 	title := fmt.Sprintf("directory %s", relDir)
 	_pages, err := GetPages(me.InDir, inDir, me.includeDrafts)
 	if err != nil {
@@ -85,6 +85,12 @@ func (me *SiteRender) WriteDirectoryIndexPage(ctx context.Context, inDir, outDir
 	pages := site.SortPages(_pages)
 
 	comp := site.DirectoryIndex(*me.Site, title, pages)
+	return me.WriteComponent(ctx, comp, outfile)
+}
+
+func (me *SiteRender) WriteTagsIndex(ctx context.Context, title string) error {
+	outfile := filepath.Join(me.OutDir, "tags.html")
+	comp := site.TagIndex(*me.Site, title)
 	return me.WriteComponent(ctx, comp, outfile)
 }
 

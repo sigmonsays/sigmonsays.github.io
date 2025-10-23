@@ -25,15 +25,6 @@ func SortPages(pages []*PageMetadata) []PageMetadata {
 	return ret
 }
 
-func (me *Site) GetPages(max int) []PageMetadata {
-	ret := SortPages(me.Pages)
-	if max == 0 || len(ret) < max {
-		return ret
-	}
-
-	return ret[:max]
-}
-
 type TagSet struct {
 	Tag   string
 	Pages []*PageMetadata

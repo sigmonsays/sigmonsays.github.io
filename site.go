@@ -121,11 +121,17 @@ func genSite(opts *Options) error {
 	// generate index page for directories
 	for directory, count := range directories {
 		outdir := filepath.Join(opts.OutDir, directory)
-		fmt.Printf("WIP: generate index for %s (%d children, outdir:%s)\n",
+		fmt.Printf("generate index for %s (%d children, outdir:%s)\n",
 			directory, count, outdir)
 		err := siteRender.WriteDirectoryIndexPage(ctx, directory, outdir)
 		if err != nil {
 			log.Printf("Error: generating dir index %s: %s", directory, err)
+		}
+
+		// generate a tag index page, ie tags.html
+		err = siteRender.WriteTagsIndex(ctx, "tags")
+		if err != nil {
+			return err
 		}
 	}
 
