@@ -17,7 +17,7 @@
   --radius: 10px;
   --radius-sm: 6px;
   --gap: 1rem;
-  --max-width: 65ch; /* good measure for readable text */
+  --max-width: 85ch; /* good measure for readable text */
   --text-size: 16px;
   --line-height: 1.65;
   --shadow: 0 6px 18px rgba(11,50,77,0.06);
