@@ -20,6 +20,8 @@ test: gen compile run ## test run
 gent: ## generate templates
 	go generate ./site
 
+publish: compile gen ## run dev build
+	git add docs
 
 dev: compile ## run dev build
 	reflex -s -r '(\.go$$|\.md$$)' -- make run

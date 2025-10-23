@@ -12,9 +12,11 @@ templ PageTop(site Site, page PageMetadata) {
 }
 
 templ PageTags(site Site, page PageMetadata) {
-  tagged
-  for _, tag := range page.FrontMatter.Tags {
-    <a href={"/tag/" + tag + ".html"}>{tag}</a> &nbsp;
+  if len(page.FrontMatter.Tags) > 0 {
+    tagged
+    for _, tag := range page.FrontMatter.Tags {
+      <a href={"/tag/" + tag + ".html"}>{tag}</a> &nbsp;
+    }
   }
 }
 
