@@ -1,6 +1,7 @@
 ---
-title: "Projects"
+title: "Projects Overview"
 date: 2021/08/04
+skip_index: true
 ---
 
 Various ramblings and projects, mostly tools and libraries

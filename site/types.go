@@ -54,9 +54,10 @@ type PageMetadata struct {
 }
 
 type FrontMatter struct {
-	Title   string   `yaml:"title"`
-	Summary string   `yaml:"summary"`
-	Date    string   `yaml:"date"`
-	Draft   bool     `yaml:"draft"`
-	Tags    []string `yaml:"tags"`
+	Title     string   `yaml:"title"`
+	Summary   string   `yaml:"summary"`
+	Date      string   `yaml:"date"`
+	Draft     bool     `yaml:"draft"`
+	SkipIndex bool     `yaml:"skip_index"`
+	Tags      []string `yaml:"tags"`
 }
