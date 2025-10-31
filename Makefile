@@ -12,6 +12,7 @@ compile: gent ## compile
 
 gen: ## generate site
 	rm -rf docs
+	mkdir -p docs
 	website -gen && echo
 	cp site/site.css docs/site.css
 	rsync -ar ./overlay/ ./docs/
