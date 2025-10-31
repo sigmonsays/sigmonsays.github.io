@@ -1,5 +1,5 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>emacs configs</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><h1>emacs configs</h1><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><span style="display: inline-block; text-align: right; width: 100%;">Posted on 2025/07/13<br></span><p></p><p>see emacs configs</p>
-<li><a href="#bashrc.d/emacs.sh">bashrc.d/emacs.sh</a></li><li><a href="#doom.d/.gitignore">doom.d/.gitignore</a></li><li><a href="#doom.d/README.org">doom.d/README.org</a></li><li><a href="#doom.d/config.el">doom.d/config.el</a></li><li><a href="#doom.d/config.org">doom.d/config.org</a></li><li><a href="#doom.d/init.el">doom.d/init.el</a></li><li><a href="#doom.d/packages.el">doom.d/packages.el</a></li><li><a href="#doom.d/snippets/.keep">doom.d/snippets/.keep</a></li><li><a href="#dotbot.yaml">dotbot.yaml</a></li><br><h1 id="bashrc.d/emacs.sh">bashrc.d/emacs.sh</h1><pre>alias doom='~/.emacs.d/bin/doom'
+<li><a href="#bashrc.d/emacs.sh">bashrc.d/emacs.sh</a></li><li><a href="#doom.d/.gitignore">doom.d/.gitignore</a></li><li><a href="#doom.d/README.org">doom.d/README.org</a></li><li><a href="#doom.d/config.el">doom.d/config.el</a></li><li><a href="#doom.d/config.org">doom.d/config.org</a></li><li><a href="#doom.d/init.el">doom.d/init.el</a></li><li><a href="#doom.d/packages.el">doom.d/packages.el</a></li><li><a href="#doom.d/snippets/.keep">doom.d/snippets/.keep</a></li><li><a href="#dotbot.yaml">dotbot.yaml</a></li><br><h1 id="bashrc.d/emacs.sh">bashrc.d/emacs.sh</h1><a href="#top">top</a><pre><code>alias doom='~/.emacs.d/bin/doom'
 
 # This is needed on macOS since /run is not writable
 if [ "$(uname -s)" == "Darwin" ] ; then
@@ -11,8 +11,8 @@ export EDITOR="e"
 if [ -z "$XDG_RUNTIME_DIR" ] ; then
     export XDG_RUNTIME_DIR=/run/user/$(id -u)
 fi
-</pre><a href="#top">top</a><h1 id="doom.d/.gitignore">doom.d/.gitignore</h1><pre>custom.el
-</pre><a href="#top">top</a><h1 id="doom.d/README.org">doom.d/README.org</h1><pre>#+title: Readme
+</code></pre><h1 id="doom.d/.gitignore">doom.d/.gitignore</h1><a href="#top">top</a><pre><code>custom.el
+</code></pre><h1 id="doom.d/README.org">doom.d/README.org</h1><a href="#top">top</a><pre><code>#+title: Readme
 
 pinned release of ~/.emacs.d to tag 4d072ce8
 
@@ -33,7 +33,7 @@ git describe --tags --always
 
 #+RESULTS:
 : 4d072ce
-</pre><a href="#top">top</a><h1 id="doom.d/config.el">doom.d/config.el</h1><pre>;; the contents of this file (config.el) are automatically combined from config.org
+</code></pre><h1 id="doom.d/config.el">doom.d/config.el</h1><a href="#top">top</a><pre><code>;; the contents of this file (config.el) are automatically combined from config.org
 ;; make all your edits in config.org
 
 ;; Utility functions
@@ -328,7 +328,7 @@ git describe --tags --always
  (setq! gptel-model "gpt-3.5-turbo")
  (setq! gptel-api-key (my-file-contents "~/.secrets/chatgpt-api-key"))
 )
-</pre><a href="#top">top</a><h1 id="doom.d/config.org">doom.d/config.org</h1><pre>* index :TOC:
+</code></pre><h1 id="doom.d/config.org">doom.d/config.org</h1><a href="#top">top</a><pre><code>* index :TOC:
 - [[#notes][Notes]]
   - [[#heading-template][Heading Template]]
   - [[#emacs-everywhere][Emacs Everywhere]]
@@ -903,7 +903,7 @@ What does this do?
 
 #+RESULTS:
 : t
-</pre><a href="#top">top</a><h1 id="doom.d/init.el">doom.d/init.el</h1><pre>;;; init.el -*- lexical-binding: t; -*-
+</code></pre><h1 id="doom.d/init.el">doom.d/init.el</h1><a href="#top">top</a><pre><code>;;; init.el -*- lexical-binding: t; -*-
 
 ;; This file controls what Doom modules are enabled and what order they load
 ;; in. Remember to run 'doom sync' after modifying it!
@@ -1088,7 +1088,7 @@ What does this do?
        :config
        literate
        (default +bindings +smartparens))
-</pre><a href="#top">top</a><h1 id="doom.d/packages.el">doom.d/packages.el</h1><pre>;; need to find better salt support; disable this
+</code></pre><h1 id="doom.d/packages.el">doom.d/packages.el</h1><a href="#top">top</a><pre><code>;; need to find better salt support; disable this
 ;; I am keeping there enabled just for snippets
 ;; (package! salt-mode)
 
@@ -1206,10 +1206,10 @@ What does this do?
 ; https://github.com/hlissner/doom-emacs/blob/develop/docs/getting_started.org#usingloading-local-packages
 ;; (use-package ps-ccrypt
 ;;   :load-path "extra/ps-ccrypt")
-</pre><a href="#top">top</a><h1 id="doom.d/snippets/.keep">doom.d/snippets/.keep</h1><pre></pre><a href="#top">top</a><h1 id="dotbot.yaml">dotbot.yaml</h1><pre>symlinks:
+</code></pre><h1 id="doom.d/snippets/.keep">doom.d/snippets/.keep</h1><a href="#top">top</a><pre><code></code></pre><h1 id="dotbot.yaml">dotbot.yaml</h1><a href="#top">top</a><pre><code>symlinks:
    ~/.doom.d: doom.d
 
 walkdir:
   #~/bin: bin
   ~/.bashrc.d: bashrc.d
-</pre><a href="#top">top</a></main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays</small></footer></div></body></html>
+</code></pre></main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays</small></footer></div></body></html>
