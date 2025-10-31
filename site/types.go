@@ -1,9 +1,15 @@
 package site
 
 import (
+	"io/fs"
 	"slices"
 	"strings"
 )
+
+type FileEntry struct {
+	Path string
+	Info fs.FileInfo
+}
 
 type Site struct {
 	AllTags []string
@@ -35,6 +41,7 @@ func (me *TagSet) GetPages() []PageMetadata {
 }
 
 type PageMetadata struct {
+	FileEntry   *FileEntry
 	ID          string
 	Filename    string
 	RelPath     string
@@ -51,4 +58,12 @@ type FrontMatter struct {
 	Draft     bool     `yaml:"draft"`
 	SkipIndex bool     `yaml:"skip_index"`
 	Tags      []string `yaml:"tags"`
+	Layout    string
+	Directory string
+}
+
+func (me *FrontMatter) SetDefaults() {
+	if me.Layout == "" {
+		me.Layout = "page"
+	}
 }

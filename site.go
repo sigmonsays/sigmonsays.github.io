@@ -87,11 +87,20 @@ func genSite(opts *Options) error {
 			log.Printf("markdown convert %s: %v", page.Filename, err)
 			continue
 		}
-
-		err = siteRender.WritePage(ctx, page, page.FrontMatter.Title, body)
-		if err != nil {
-			log.Printf("render page %s: %v", page.Filename, err)
-			continue
+		switch page.FrontMatter.Layout {
+		case "page":
+			err = siteRender.WritePage(ctx, page, page.FrontMatter.Title, body)
+			if err != nil {
+				log.Printf("render page %s: %v", page.Filename, err)
+				continue
+			}
+		case "directory":
+			dir := filepath.Join(inDir, page.FrontMatter.Directory)
+			err = siteRender.WriteDirectory(ctx, page, page.FrontMatter.Title, body, dir)
+			if err != nil {
+				log.Printf("render directory %s: %v", page.Filename, err)
+				continue
+			}
 		}
 
 	}
@@ -123,7 +132,7 @@ func genSite(opts *Options) error {
 		outdir := filepath.Join(opts.OutDir, directory)
 		fmt.Printf("generate index for %s (%d children, outdir:%s)\n",
 			directory, count, outdir)
-		err := siteRender.WriteDirectoryIndexPage(ctx, directory, outdir)
+		err = siteRender.WriteDirectoryIndexPage(ctx, directory, outdir)
 		if err != nil {
 			log.Printf("Error: generating dir index %s: %s", directory, err)
 		}

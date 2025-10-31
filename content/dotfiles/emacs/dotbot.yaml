@@ -1,0 +1,6 @@
+symlinks:
+   ~/.doom.d: doom.d
+
+walkdir:
+  #~/bin: bin
+  ~/.bashrc.d: bashrc.d

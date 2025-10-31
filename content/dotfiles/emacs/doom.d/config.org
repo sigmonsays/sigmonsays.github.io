@@ -1,0 +1,575 @@
+* index :TOC:
+- [[#notes][Notes]]
+  - [[#heading-template][Heading Template]]
+  - [[#emacs-everywhere][Emacs Everywhere]]
+- [[#functions][Functions]]
+- [[#identity][Identity]]
+- [[#splash-screen--startup-logo][Splash screen / Startup Logo]]
+- [[#on-save-behavior][On Save Behavior]]
+- [[#treemacs][Treemacs]]
+- [[#random-bits][Random Bits]]
+- [[#notmuch-email][notmuch (email)]]
+  - [[#notmuch-configuration][Notmuch configuration]]
+- [[#misc][Misc]]
+  - [[#save-file-position-in-files][Save file position in files]]
+  - [[#dont-ask-to-exit][Dont ask to exit]]
+  - [[#unsorted][Unsorted]]
+- [[#fonts][Fonts]]
+- [[#theme][Theme]]
+  - [[#zeburn][zeburn]]
+- [[#projectile][Projectile]]
+- [[#nix][Nix]]
+- [[#nix-lsp][Nix LSP]]
+- [[#golang-lsp][Golang LSP]]
+- [[#rust-2023][Rust 2023]]
+- [[#rust-old][Rust Old]]
+- [[#org-mode][Org Mode]]
+- [[#org-mode-appearance][Org Mode Appearance]]
+- [[#xorg-clipboard-handling][xorg clipboard handling]]
+  - [[#clipboard][clipboard]]
+  - [[#clipboard-keys][clipboard keys]]
+  - [[#clipetty][clipetty]]
+- [[#simplenote][simplenote]]
+- [[#joplin][joplin]]
+- [[#ibuffer-grouping-by-revision-control][ibuffer grouping by revision control]]
+- [[#org-roam][Org Roam]]
+- [[#deft-disabled][Deft (Disabled)]]
+- [[#dired][Dired]]
+- [[#literate-calc-mode][literate-calc-mode]]
+- [[#age][age]]
+  - [[#enable-age-disabled][enable age (disabled)]]
+- [[#unsorted-1][Unsorted]]
+  - [[#disabled-block-example][Disabled block Example]]
+  - [[#snippets---yasnippet][Snippets - yasnippet]]
+  - [[#rest-client][REST Client]]
+  - [[#recoll---search-tool][Recoll - Search tool]]
+  - [[#dired---tmsu][dired - tmsu]]
+  - [[#chatel][chat.el]]
+  - [[#gptel][gptel]]
+
+* Notes
+- add ':tangle no' to a begin_src block to disable
+- literate config docs https://github.com/doomemacs/doomemacs/blob/master/modules/config/literate/README.org
+
+** Heading Template
+#+begin_src emacs-lisp :tangle yes
+;; the contents of this file (config.el) are automatically combined from config.org
+;; make all your edits in config.org
+#+end_src
+
+** Emacs Everywhere
+see https://github.com/tecosaur/emacs-everywhere
+
+installed in init.el using :app everywhere
+
+* Functions
+#+begin_src emacs-lisp :tangle yes
+;; Utility functions
+(defun my-file-contents (filename)
+  "Return the contents of FILENAME."
+  (with-temp-buffer
+    (insert-file-contents filename)
+    (buffer-string)))
+#+end_src
+
+* Identity
+#+begin_src emacs-lisp :tangle yes
+;; Some functionality uses this to identify you, e.g. GPG configuration, email
+;; clients, file templates and snippets.
+(setq user-full-name "Sig Lange"
+      user-mail-address "sig.lange@gmail.com")
+#+end_src
+
+* Splash screen / Startup Logo
+#+begin_src emacs-lisp :tangle yes
+;; dashboard
+(defun my-weebery-is-always-greater ()
+  (let* ((banner '("+-------------------------------+"
+                   "|                               |"
+                   "+-------------------------------+ "))
+                   ;---------------------------------;
+         (longest-line (apply #'max (mapcar #'length banner))))
+    (put-text-property
+     (point)
+     (dolist (line banner (point))
+       (insert (+doom-dashboard--center
+                +doom-dashboard--width
+                (concat line (make-string (max 0 (- longest-line (length line))) 32)))
+               "\n"))
+     'face 'doom-dashboard-banner)))
+
+(setq +doom-dashboard-ascii-banner-fn #'my-weebery-is-always-greater)
+
+#+end_src
+
+* On Save Behavior
+Disable some broken on save behaviors
+#+begin_src emacs-lisp :tangle yes
+
+(setq +format-on-save-enabled-modes
+      '(not emacs-lisp-mode  ; elisp's mechanisms are good enough
+            sql-mode         ; sqlformat is currently broken
+            tex-mode         ; latexindent is broken
+            org-mode
+            sh-mode
+            latex-mode))
+
+(setq apheleia-inhibit-functions '(always))
+
+#+end_src
+
+* Treemacs
+#+begin_src emacs-lisp :tangle yes
+
+(after! treemacs
+  (treemacs-follow-mode 1))
+
+#+end_src
+
+#+RESULTS:
+: t
+
+* Random Bits
+#+begin_src emacs-lisp :tangle yes
+
+;; blinking cursor
+(blink-cursor-mode 0)
+
+;; This determines the style of line numbers in effect. If set to `nil', line
+;; numbers are disabled. For relative line numbers, set this to `relative'.
+(setq display-line-numbers-type t)
+
+;; (global-set-key [f5] 'hl-line-mode)
+(remove-hook 'doom-first-buffer-hook #'global-hl-line-mode)
+
+(setq doom-localleader-key ",")
+
+;; (server-start)
+; (pcre-mode +1)
+
+(defun save-all () (interactive) (save-some-buffers t))
+(global-set-key (kbd "C-S") 'save-all)
+
+;; disable automatically adding various pairs of matching parentheses
+(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
+
+;; (setq +notmuch-sync-backend 'mbsync)
+#+end_src
+
+#+RESULTS:
+
+* notmuch (email)
+** Notmuch configuration
+#+begin_src emacs-lisp :tangle yes
+;; Configure notmuch-hello
+(setq +notmuch-home-function (lambda () (notmuch-search "tag:inbox")))
+#+end_src
+
+* Misc
+** Save file position in files
+#+begin_src emacs-lisp :tangle yes
+;; save current cursor position in files
+(save-place-mode 1)
+#+end_src
+** Dont ask to exit
+#+begin_src emacs-lisp :tangle yes
+(setq confirm-kill-emacs nil)
+#+end_src
+
+** Unsorted
+Some things from http://yummymelon.com/devnull/surprise-and-emacs-defaults.html
+#+begin_src emacs-lisp :tangle yes
+(setq bookmark-save-flag 1)
+(setq sentence-end-double-space nil)
+(setq delete-selection-mode t)
+
+#+end_src
+
+* Fonts
+#+begin_src emacs-lisp :tangle yes
+
+
+;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
+;; are the three important ones:
+;;
+;; + `doom-font'
+;; + `doom-variable-pitch-font'
+;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
+;;   presentations or streaming.
+;;
+;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
+;; font string. You generally only need these two:
+;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
+;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+
+;; There are two ways to load a theme. Both assume the theme is installed and
+;; available. You can either set `doom-theme' or manually load a theme with the
+;; `load-theme' function.
+;; This is the default: doom-one
+;; (setq doom-theme 'doom-one)
+;; (setq doom-theme 'doom-spacegrey)
+;; notes
+;; - zenburn seems easy to read on my laptop, in the morning
+
+;; (ef-themes-select 'ef-bio)
+#+end_src
+
+* Theme
+- list of doom emacs themes https://github.com/doomemacs/themes
+** zeburn
+#+begin_src emacs-lisp :tangle yes
+;(setq doom-theme 'doom-zenburn)
+(setq doom-theme 'doom-spacegrey)
+#+end_src
+
+* Projectile
+#+begin_src emacs-lisp :tangle yes
+(setq projectile-use-native-indexing t)
+#+end_src
+
+* Nix
+#+begin_src emacs-lisp :tangle yes
+;; (after! nix-mode
+;;   (setq nix-nixfmt-bin "alejandra --quiet"))
+;; (set-formatter! 'alejandra "alejandra --quiet" :modes '(nix-mode))
+;;(set-formatter! 'alejandra '("alejandra" "--quiet") :modes '(nix-mode))
+(after! nix-mode
+  (set-formatter! 'alejandra '("alejandra" "--quiet") :modes '(nix-mode))
+  (map! :localleader
+        :map nix-mode-map
+        :desc "nix-format-buffer" "p" #'+format/buffer))
+#+end_src
+
+* Nix LSP
+TODO
+
+* Golang LSP
+#+begin_src emacs-lisp :tangle yes
+
+;;(after! go-mode
+;;        (setq gofmt-command "goimports")
+;;)
+
+;;(add-hook 'go-mode-hook 'lsp-deferred)
+
+(setq lsp-enable-file-watchers nil)
+
+(setq lsp-gopls-codelens nil)
+
+(after! go-mode
+  (setq gofmt-command "goimports")
+  ;; (add-hook 'go-mode-hook
+  ;;           (lambda ()
+  ;;             (add-hook 'after-save-hook 'gofmt nil 'make-it-local))))
+  (add-hook 'go-mode-hook
+            (lambda ()
+              (add-hook 'before-save-hook 'gofmt nil 'make-it-local))))
+
+;; (after! go-mode
+;;   (set-lookup-handlers! 'go-mode
+;;     :definition #'godef-jump
+;;     :references #'go-guru-referrers
+;;     :documentation #'godoc-at-point))
+
+#+end_src
+
+* Rust 2023
+#+begin_src emacs-lisp :tangle yes
+(defun company-is-kind (match candidate)
+        (when-let
+            (kind (company-call-backend 'kind candidate))
+            (member match (alist-get kind company-text-icons-mapping))
+        )
+)
+(defun company-sort-prefer-members (candidates)
+        "Prefer CANDIDATES that are members."
+        ;; (message "Candidate: %s" (pop candidates))
+        ;; (message "Text: %s" (company-call-backend 'kind (pop candidates)))
+
+        ;;(message "%s" (company-fetch-metadata ))
+        (cl-loop for candidate in candidates
+                ;;if (string-suffix-p ")" candidate)
+                if (company-is-kind "f" candidate)
+                collect candidate into fields
+                else if (company-is-kind "m" candidate)
+                collect candidate into methods
+                else if (company-is-kind "c" candidate)
+                collect candidate into consts
+                else collect candidate into other
+                finally return (append fields consts methods other)))
+
+(after! (:and company lsp-mode lsp-rust)
+  (setq company-transformers '(company-sort-prefer-members))
+)
+
+(after! lsp-rust
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]vendor\\'")
+  (setq lsp-rust-analyzer-display-chaining-hints t
+        lsp-rust-analyzer-display-parameter-hints t
+        lsp-rust-analyzer-completion-add-call-argument-snippets t
+        lsp-rust-analyzer-experimental-proc-attr-macros t
+        lsp-rust-analyzer-proc-macro-enable t
+        lsp-rust-analyzer-call-info-full t
+        lsp-rust-analyzer-inlay-chain-format " : %s"
+        lsp-rust-analyzer-max-inlay-hint-length 40
+;;        lsp-inlay-hint-enable t
+  )
+  (map! :localleader :map rustic-mode-map "i" 'lsp-inlay-hints-mode)
+  (map! :localleader :map rustic-mode-map "tl" 'rustic-cargo-test-rerun)
+  (map! :localleader :map rustic-mode-map "c" 'rustic-cargo-check)
+  (map! :localleader :map rustic-mode-map "f" 'rustic-cargo-fmt)
+  (map! :localleader :map rustic-mode-map "a" 'lsp-execute-code-action)
+)
+#+end_src
+
+#+RESULTS:
+
+* Rust Old
+#+begin_src emacs-lisp :tangle no
+ ;; rust
+ ;; (after! lsp-rust
+ ;;   (setq lsp-rust-analyzer-display-chaining-hints t
+ ;;         lsp-rust-analyzer-display-parameter-hints t
+ ;;         lsp-rust-analyzer-completion-add-call-argument-snippets t
+ ;;         lsp-rust-analyzer-call-info-full t
+ ;;         lsp-rust-analyzer-inlay-chain-format " : %s"
+ ;;         lsp-rust-analyzer-server-display-inlay-hints t
+ ;;         lsp-rust-analyzer-server-display-inlay-hints t))
+(after! lsp-rust
+  (setq lsp-rust-analyzer-display-chaining-hints t
+        lsp-rust-analyzer-display-parameter-hints t
+        lsp-rust-analyzer-completion-add-call-argument-snippets t
+        lsp-rust-analyzer-call-info-full t
+        lsp-rust-analyzer-inlay-chain-format " : %s"
+        lsp-rust-analyzer-max-inlay-hint-length 40
+        lsp-rust-analyzer-server-display-inlay-hints t)
+  (map! :localleader :map rustic-mode-map "tl" 'rustic-cargo-test-rerun)
+  (map! :localleader :map rustic-mode-map "c" 'rustic-cargo-check)
+)
+;; (after! lsp-rust
+;;        (setq racer-rust-src-path
+;;        (concat (string-trim
+;;                (shell-command-to-string "rustc --print sysroot"))
+;;                "/lib/rustlib/src/rust/src")))
+
+;; (after! rustic
+;;   (setq rustic-format-on-save t)
+;;   (setq rustic-lsp-server 'rust-analyzer))
+
+(after! lsp-rust
+  (setq lsp-rust-server 'rust-analyzer))
+
+#+end_src
+
+* Org Mode
+#+begin_src emacs-lisp :tangle yes
+
+;; If you use `org' and don't want your org files in the default location below,
+;; change `org-directory'. It must be set before org loads!
+
+
+;; org-capture
+;; (setq org-default-notes-file (concat org-directory "/notes.org"))
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+
+(setq org-directory "~/org")
+(after! org
+  (setq org-log-done t))
+(after! org
+  (setq org-agenda-files '("~/org/")))
+#+end_src
+
+* Org Mode Appearance
+#+begin_src emacs-lisp :tangle no
+(require 'nano)
+
+; make org mode look nice
+;; (setq org-hide-emphasis-markers t)
+;; (use-package org-bullets
+;;     :config
+;;     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+#+end_src
+
+#+RESULTS:
+: t
+
+* xorg clipboard handling
+** clipboard
+#+begin_src emacs-lisp :tangle yes
+; xorg clipboard handling
+(setq x-select-enable-primary t)
+(setq x-select-enable-clipboard t)
+#+end_src
+** clipboard keys
+#+begin_src emacs-lisp :tangle yes
+(defun copy-to-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (message "Yanked region to x-clipboard!")
+        (call-interactively 'clipboard-kill-ring-save)
+        )
+    (if (region-active-p)
+        (progn
+          (shell-command-on-region (region-beginning) (region-end) "xsel -i -b")
+          (message "Yanked region to clipboard!")
+          (deactivate-mark))
+      (message "No region active; can't yank to clipboard!")))
+  )
+
+(defun paste-from-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (clipboard-yank)
+        (message "graphics active")
+        )
+    (insert (shell-command-to-string "xsel -o -b"))
+    )
+  )
+
+(global-set-key [f8] 'copy-to-clipboard)
+(global-set-key [f9] 'paste-from-clipboard)
+#+end_src
+
+** clipetty
+#+begin_src emacs-lisp :tangle no
+(use-package clipetty
+  :ensure t
+  :hook (after-init . global-clipetty-mode))
+#+end_src
+
+* simplenote
+#+begin_src emacs-lisp :tangle no
+(require 'simplenote2)
+(setq simplenote2-email "simplenote@picklerick.it")
+(setq simplenote2-password "nuBzQzQThMCHCJ4")
+(simplenote2-setup)
+#+end_src
+
+* joplin
+#+begin_src emacs-lisp :tangle no
+(require 'joplin-mode)
+(with-eval-after-load "markdown-mode"
+  (add-to-list 'markdown-mode-hook 'joplin-note-mode))
+#+end_src
+
+* ibuffer grouping by revision control
+#+begin_src emacs-lisp :tangle yes
+; ibuffer grouping
+(use-package ibuffer-vc
+  :ensure t
+  :init
+  :config
+  (add-hook 'ibuffer-hook
+            (lambda ()
+              (ibuffer-vc-set-filter-groups-by-vc-root)
+              (unless (eq ibuffer-sorting-mode 'alphabetic)
+                (ibuffer-do-sort-by-alphabetic)))))
+#+end_src
+
+* Org Roam
+#+begin_src emacs-lisp :tangle yes
+;(make-directory "~/Sync/org/roam")
+(setq org-roam-directory (file-truename "~/Sync/org/roam"))
+;(setq org-roam-database-connector 'sqlite-builtin)
+;(org-roam-db-autosync-mode)
+; - initial setup
+; - run M-x org-roam-db-sync
+#+end_src
+
+* Deft (Disabled)
+#+begin_src emacs-lisp :tangle no
+(setq deft-directory "~/Sync/roam"
+      deft-extensions '("org" "txt")
+      deft-recurse t)
+#+end_src
+
+* Dired
+#+begin_src emacs-lisp :tangle yes
+(add-hook 'dired-mode-hook
+          (lambda ()
+            (when (file-remote-p dired-directory)
+              (setq-local dired-actual-switches "-alhB"))
+            (setq dired-auto-revert-buffer t)
+        ))
+#+end_src
+
+* literate-calc-mode
+#+begin_src emacs-lisp :tangle yes
+(use-package! literate-calc-mode )
+#+end_src
+
+* age
+** enable age (disabled)
+#+begin_src emacs-lisp :tangle no
+(setq age-default-identity "~/.ssh/keys/personal/secret")
+(setq age-default-recipient
+   '("~/.ssh/keys/personal/secret.pub"))
+(age-file-enable)
+#+end_src
+
+* Unsorted
+** Disabled block Example
+#+begin_src emacs-lisp :tangle no
+;; Put ':tangle no' to disable a block
+#+end_src
+
+
+** Snippets - yasnippet
+#+begin_src emacs-lisp :tangle yes
+;; snippets
+(yas-global-mode 1)
+(add-to-list 'load-path
+              "~/.emacs.d/plugins/yasnippet")
+#+end_src
+
+** REST Client
+#+begin_src emacs-lisp :tangle yes
+(require 'restclient)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((restclient . t)))
+#+end_src
+
+** Recoll - Search tool
+#+begin_src emacs-lisp :tangle yes
+;; recoll
+(use-package! org-recoll
+  :after org)
+
+(global-set-key (kbd "C-c g") 'org-recoll-search)
+(global-set-key (kbd "C-c u") 'org-recoll-update-index)
+#+end_src
+
+** dired - tmsu
+What does this do?
+#+begin_src emacs-lisp :tangle yes
+;; tmsu.el
+(use-package! tmsu
+  :after dired)
+#+end_src
+
+** chat.el
+#+begin_src emacs-lisp :tangle no
+;; chat.el - chatgpt
+(require 'chat)
+(setq chat-api-key (my-file-contents "~/.secrets/chatgpt-api-key"))
+#+end_src
+
+** gptel
+#+begin_src emacs-lisp :tangle yes
+;; https://github.com/karthink/gptel#doom-emacs
+(use-package! gptel
+ :config
+ (setq! gptel-model "gpt-3.5-turbo")
+ (setq! gptel-api-key (my-file-contents "~/.secrets/chatgpt-api-key"))
+)
+#+end_src
+
+#+RESULTS:
+: t

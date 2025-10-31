@@ -1,0 +1,1215 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>emacs configs</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><h1>emacs configs</h1><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><span style="display: inline-block; text-align: right; width: 100%;">Posted on 2025/07/13<br></span><p></p><p>see emacs configs</p>
+<li><a href="#bashrc.d/emacs.sh">bashrc.d/emacs.sh</a></li><li><a href="#doom.d/.gitignore">doom.d/.gitignore</a></li><li><a href="#doom.d/README.org">doom.d/README.org</a></li><li><a href="#doom.d/config.el">doom.d/config.el</a></li><li><a href="#doom.d/config.org">doom.d/config.org</a></li><li><a href="#doom.d/init.el">doom.d/init.el</a></li><li><a href="#doom.d/packages.el">doom.d/packages.el</a></li><li><a href="#doom.d/snippets/.keep">doom.d/snippets/.keep</a></li><li><a href="#dotbot.yaml">dotbot.yaml</a></li><br><h1 id="bashrc.d/emacs.sh">bashrc.d/emacs.sh</h1><pre>alias doom='~/.emacs.d/bin/doom'
+
+# This is needed on macOS since /run is not writable
+if [ "$(uname -s)" == "Darwin" ] ; then
+    export XDG_RUNTIME_DIR="$HOME/.run"
+fi
+
+export EDITOR="e"
+
+if [ -z "$XDG_RUNTIME_DIR" ] ; then
+    export XDG_RUNTIME_DIR=/run/user/$(id -u)
+fi
+</pre><a href="#top">top</a><h1 id="doom.d/.gitignore">doom.d/.gitignore</h1><pre>custom.el
+</pre><a href="#top">top</a><h1 id="doom.d/README.org">doom.d/README.org</h1><pre>#+title: Readme
+
+pinned release of ~/.emacs.d to tag 4d072ce8
+
+* Config
+
+config.org writes config.el
+** config.org
+
+open [[org:./config.org]]
+
+* setup
+
+#+begin_src bash
+cd ~/.emacs.d
+git checkout -b main 4d072ce8
+git describe --tags --always
+#+end_src
+
+#+RESULTS:
+: 4d072ce
+</pre><a href="#top">top</a><h1 id="doom.d/config.el">doom.d/config.el</h1><pre>;; the contents of this file (config.el) are automatically combined from config.org
+;; make all your edits in config.org
+
+;; Utility functions
+(defun my-file-contents (filename)
+  "Return the contents of FILENAME."
+  (with-temp-buffer
+    (insert-file-contents filename)
+    (buffer-string)))
+
+;; Some functionality uses this to identify you, e.g. GPG configuration, email
+;; clients, file templates and snippets.
+(setq user-full-name "Sig Lange"
+      user-mail-address "sig.lange@gmail.com")
+
+;; dashboard
+(defun my-weebery-is-always-greater ()
+  (let* ((banner '("+-------------------------------+"
+                   "|                               |"
+                   "+-------------------------------+ "))
+                   ;---------------------------------;
+         (longest-line (apply #'max (mapcar #'length banner))))
+    (put-text-property
+     (point)
+     (dolist (line banner (point))
+       (insert (+doom-dashboard--center
+                +doom-dashboard--width
+                (concat line (make-string (max 0 (- longest-line (length line))) 32)))
+               "\n"))
+     'face 'doom-dashboard-banner)))
+
+(setq +doom-dashboard-ascii-banner-fn #'my-weebery-is-always-greater)
+
+(setq +format-on-save-enabled-modes
+      '(not emacs-lisp-mode  ; elisp's mechanisms are good enough
+            sql-mode         ; sqlformat is currently broken
+            tex-mode         ; latexindent is broken
+            org-mode
+            sh-mode
+            latex-mode))
+
+(setq apheleia-inhibit-functions '(always))
+
+(after! treemacs
+  (treemacs-follow-mode 1))
+
+;; blinking cursor
+(blink-cursor-mode 0)
+
+;; This determines the style of line numbers in effect. If set to `nil', line
+;; numbers are disabled. For relative line numbers, set this to `relative'.
+(setq display-line-numbers-type t)
+
+;; (global-set-key [f5] 'hl-line-mode)
+(remove-hook 'doom-first-buffer-hook #'global-hl-line-mode)
+
+(setq doom-localleader-key ",")
+
+;; (server-start)
+; (pcre-mode +1)
+
+(defun save-all () (interactive) (save-some-buffers t))
+(global-set-key (kbd "C-S") 'save-all)
+
+;; disable automatically adding various pairs of matching parentheses
+(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
+
+;; (setq +notmuch-sync-backend 'mbsync)
+
+;; Configure notmuch-hello
+(setq +notmuch-home-function (lambda () (notmuch-search "tag:inbox")))
+
+;; save current cursor position in files
+(save-place-mode 1)
+
+(setq confirm-kill-emacs nil)
+
+(setq bookmark-save-flag 1)
+(setq sentence-end-double-space nil)
+(setq delete-selection-mode t)
+
+;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
+;; are the three important ones:
+;;
+;; + `doom-font'
+;; + `doom-variable-pitch-font'
+;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
+;;   presentations or streaming.
+;;
+;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
+;; font string. You generally only need these two:
+;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
+;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+
+;; There are two ways to load a theme. Both assume the theme is installed and
+;; available. You can either set `doom-theme' or manually load a theme with the
+;; `load-theme' function.
+;; This is the default: doom-one
+;; (setq doom-theme 'doom-one)
+;; (setq doom-theme 'doom-spacegrey)
+;; notes
+;; - zenburn seems easy to read on my laptop, in the morning
+
+;; (ef-themes-select 'ef-bio)
+
+;(setq doom-theme 'doom-zenburn)
+(setq doom-theme 'doom-spacegrey)
+
+(setq projectile-use-native-indexing t)
+
+;; (after! nix-mode
+;;   (setq nix-nixfmt-bin "alejandra --quiet"))
+;; (set-formatter! 'alejandra "alejandra --quiet" :modes '(nix-mode))
+;;(set-formatter! 'alejandra '("alejandra" "--quiet") :modes '(nix-mode))
+(after! nix-mode
+  (set-formatter! 'alejandra '("alejandra" "--quiet") :modes '(nix-mode))
+  (map! :localleader
+        :map nix-mode-map
+        :desc "nix-format-buffer" "p" #'+format/buffer))
+
+;;(after! go-mode
+;;        (setq gofmt-command "goimports")
+;;)
+
+;;(add-hook 'go-mode-hook 'lsp-deferred)
+
+(setq lsp-enable-file-watchers nil)
+
+(setq lsp-gopls-codelens nil)
+
+(after! go-mode
+  (setq gofmt-command "goimports")
+  ;; (add-hook 'go-mode-hook
+  ;;           (lambda ()
+  ;;             (add-hook 'after-save-hook 'gofmt nil 'make-it-local))))
+  (add-hook 'go-mode-hook
+            (lambda ()
+              (add-hook 'before-save-hook 'gofmt nil 'make-it-local))))
+
+;; (after! go-mode
+;;   (set-lookup-handlers! 'go-mode
+;;     :definition #'godef-jump
+;;     :references #'go-guru-referrers
+;;     :documentation #'godoc-at-point))
+
+(defun company-is-kind (match candidate)
+        (when-let
+            (kind (company-call-backend 'kind candidate))
+            (member match (alist-get kind company-text-icons-mapping))
+        )
+)
+(defun company-sort-prefer-members (candidates)
+        "Prefer CANDIDATES that are members."
+        ;; (message "Candidate: %s" (pop candidates))
+        ;; (message "Text: %s" (company-call-backend 'kind (pop candidates)))
+
+        ;;(message "%s" (company-fetch-metadata ))
+        (cl-loop for candidate in candidates
+                ;;if (string-suffix-p ")" candidate)
+                if (company-is-kind "f" candidate)
+                collect candidate into fields
+                else if (company-is-kind "m" candidate)
+                collect candidate into methods
+                else if (company-is-kind "c" candidate)
+                collect candidate into consts
+                else collect candidate into other
+                finally return (append fields consts methods other)))
+
+(after! (:and company lsp-mode lsp-rust)
+  (setq company-transformers '(company-sort-prefer-members))
+)
+
+(after! lsp-rust
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]vendor\\'")
+  (setq lsp-rust-analyzer-display-chaining-hints t
+        lsp-rust-analyzer-display-parameter-hints t
+        lsp-rust-analyzer-completion-add-call-argument-snippets t
+        lsp-rust-analyzer-experimental-proc-attr-macros t
+        lsp-rust-analyzer-proc-macro-enable t
+        lsp-rust-analyzer-call-info-full t
+        lsp-rust-analyzer-inlay-chain-format " : %s"
+        lsp-rust-analyzer-max-inlay-hint-length 40
+;;        lsp-inlay-hint-enable t
+  )
+  (map! :localleader :map rustic-mode-map "i" 'lsp-inlay-hints-mode)
+  (map! :localleader :map rustic-mode-map "tl" 'rustic-cargo-test-rerun)
+  (map! :localleader :map rustic-mode-map "c" 'rustic-cargo-check)
+  (map! :localleader :map rustic-mode-map "f" 'rustic-cargo-fmt)
+  (map! :localleader :map rustic-mode-map "a" 'lsp-execute-code-action)
+)
+
+;; If you use `org' and don't want your org files in the default location below,
+;; change `org-directory'. It must be set before org loads!
+
+
+;; org-capture
+;; (setq org-default-notes-file (concat org-directory "/notes.org"))
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+
+(setq org-directory "~/org")
+(after! org
+  (setq org-log-done t))
+(after! org
+  (setq org-agenda-files '("~/org/")))
+
+; xorg clipboard handling
+(setq x-select-enable-primary t)
+(setq x-select-enable-clipboard t)
+
+(defun copy-to-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (message "Yanked region to x-clipboard!")
+        (call-interactively 'clipboard-kill-ring-save)
+        )
+    (if (region-active-p)
+        (progn
+          (shell-command-on-region (region-beginning) (region-end) "xsel -i -b")
+          (message "Yanked region to clipboard!")
+          (deactivate-mark))
+      (message "No region active; can't yank to clipboard!")))
+  )
+
+(defun paste-from-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (clipboard-yank)
+        (message "graphics active")
+        )
+    (insert (shell-command-to-string "xsel -o -b"))
+    )
+  )
+
+(global-set-key [f8] 'copy-to-clipboard)
+(global-set-key [f9] 'paste-from-clipboard)
+
+; ibuffer grouping
+(use-package ibuffer-vc
+  :ensure t
+  :init
+  :config
+  (add-hook 'ibuffer-hook
+            (lambda ()
+              (ibuffer-vc-set-filter-groups-by-vc-root)
+              (unless (eq ibuffer-sorting-mode 'alphabetic)
+                (ibuffer-do-sort-by-alphabetic)))))
+
+;(make-directory "~/Sync/org/roam")
+(setq org-roam-directory (file-truename "~/Sync/org/roam"))
+;(setq org-roam-database-connector 'sqlite-builtin)
+;(org-roam-db-autosync-mode)
+; - initial setup
+; - run M-x org-roam-db-sync
+
+(add-hook 'dired-mode-hook
+          (lambda ()
+            (when (file-remote-p dired-directory)
+              (setq-local dired-actual-switches "-alhB"))
+            (setq dired-auto-revert-buffer t)
+        ))
+
+(use-package! literate-calc-mode )
+
+;; snippets
+(yas-global-mode 1)
+(add-to-list 'load-path
+              "~/.emacs.d/plugins/yasnippet")
+
+(require 'restclient)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((restclient . t)))
+
+;; recoll
+(use-package! org-recoll
+  :after org)
+
+(global-set-key (kbd "C-c g") 'org-recoll-search)
+(global-set-key (kbd "C-c u") 'org-recoll-update-index)
+
+;; tmsu.el
+(use-package! tmsu
+  :after dired)
+
+;; https://github.com/karthink/gptel#doom-emacs
+(use-package! gptel
+ :config
+ (setq! gptel-model "gpt-3.5-turbo")
+ (setq! gptel-api-key (my-file-contents "~/.secrets/chatgpt-api-key"))
+)
+</pre><a href="#top">top</a><h1 id="doom.d/config.org">doom.d/config.org</h1><pre>* index :TOC:
+- [[#notes][Notes]]
+  - [[#heading-template][Heading Template]]
+  - [[#emacs-everywhere][Emacs Everywhere]]
+- [[#functions][Functions]]
+- [[#identity][Identity]]
+- [[#splash-screen--startup-logo][Splash screen / Startup Logo]]
+- [[#on-save-behavior][On Save Behavior]]
+- [[#treemacs][Treemacs]]
+- [[#random-bits][Random Bits]]
+- [[#notmuch-email][notmuch (email)]]
+  - [[#notmuch-configuration][Notmuch configuration]]
+- [[#misc][Misc]]
+  - [[#save-file-position-in-files][Save file position in files]]
+  - [[#dont-ask-to-exit][Dont ask to exit]]
+  - [[#unsorted][Unsorted]]
+- [[#fonts][Fonts]]
+- [[#theme][Theme]]
+  - [[#zeburn][zeburn]]
+- [[#projectile][Projectile]]
+- [[#nix][Nix]]
+- [[#nix-lsp][Nix LSP]]
+- [[#golang-lsp][Golang LSP]]
+- [[#rust-2023][Rust 2023]]
+- [[#rust-old][Rust Old]]
+- [[#org-mode][Org Mode]]
+- [[#org-mode-appearance][Org Mode Appearance]]
+- [[#xorg-clipboard-handling][xorg clipboard handling]]
+  - [[#clipboard][clipboard]]
+  - [[#clipboard-keys][clipboard keys]]
+  - [[#clipetty][clipetty]]
+- [[#simplenote][simplenote]]
+- [[#joplin][joplin]]
+- [[#ibuffer-grouping-by-revision-control][ibuffer grouping by revision control]]
+- [[#org-roam][Org Roam]]
+- [[#deft-disabled][Deft (Disabled)]]
+- [[#dired][Dired]]
+- [[#literate-calc-mode][literate-calc-mode]]
+- [[#age][age]]
+  - [[#enable-age-disabled][enable age (disabled)]]
+- [[#unsorted-1][Unsorted]]
+  - [[#disabled-block-example][Disabled block Example]]
+  - [[#snippets---yasnippet][Snippets - yasnippet]]
+  - [[#rest-client][REST Client]]
+  - [[#recoll---search-tool][Recoll - Search tool]]
+  - [[#dired---tmsu][dired - tmsu]]
+  - [[#chatel][chat.el]]
+  - [[#gptel][gptel]]
+
+* Notes
+- add ':tangle no' to a begin_src block to disable
+- literate config docs https://github.com/doomemacs/doomemacs/blob/master/modules/config/literate/README.org
+
+** Heading Template
+#+begin_src emacs-lisp :tangle yes
+;; the contents of this file (config.el) are automatically combined from config.org
+;; make all your edits in config.org
+#+end_src
+
+** Emacs Everywhere
+see https://github.com/tecosaur/emacs-everywhere
+
+installed in init.el using :app everywhere
+
+* Functions
+#+begin_src emacs-lisp :tangle yes
+;; Utility functions
+(defun my-file-contents (filename)
+  "Return the contents of FILENAME."
+  (with-temp-buffer
+    (insert-file-contents filename)
+    (buffer-string)))
+#+end_src
+
+* Identity
+#+begin_src emacs-lisp :tangle yes
+;; Some functionality uses this to identify you, e.g. GPG configuration, email
+;; clients, file templates and snippets.
+(setq user-full-name "Sig Lange"
+      user-mail-address "sig.lange@gmail.com")
+#+end_src
+
+* Splash screen / Startup Logo
+#+begin_src emacs-lisp :tangle yes
+;; dashboard
+(defun my-weebery-is-always-greater ()
+  (let* ((banner '("+-------------------------------+"
+                   "|                               |"
+                   "+-------------------------------+ "))
+                   ;---------------------------------;
+         (longest-line (apply #'max (mapcar #'length banner))))
+    (put-text-property
+     (point)
+     (dolist (line banner (point))
+       (insert (+doom-dashboard--center
+                +doom-dashboard--width
+                (concat line (make-string (max 0 (- longest-line (length line))) 32)))
+               "\n"))
+     'face 'doom-dashboard-banner)))
+
+(setq +doom-dashboard-ascii-banner-fn #'my-weebery-is-always-greater)
+
+#+end_src
+
+* On Save Behavior
+Disable some broken on save behaviors
+#+begin_src emacs-lisp :tangle yes
+
+(setq +format-on-save-enabled-modes
+      '(not emacs-lisp-mode  ; elisp's mechanisms are good enough
+            sql-mode         ; sqlformat is currently broken
+            tex-mode         ; latexindent is broken
+            org-mode
+            sh-mode
+            latex-mode))
+
+(setq apheleia-inhibit-functions '(always))
+
+#+end_src
+
+* Treemacs
+#+begin_src emacs-lisp :tangle yes
+
+(after! treemacs
+  (treemacs-follow-mode 1))
+
+#+end_src
+
+#+RESULTS:
+: t
+
+* Random Bits
+#+begin_src emacs-lisp :tangle yes
+
+;; blinking cursor
+(blink-cursor-mode 0)
+
+;; This determines the style of line numbers in effect. If set to `nil', line
+;; numbers are disabled. For relative line numbers, set this to `relative'.
+(setq display-line-numbers-type t)
+
+;; (global-set-key [f5] 'hl-line-mode)
+(remove-hook 'doom-first-buffer-hook #'global-hl-line-mode)
+
+(setq doom-localleader-key ",")
+
+;; (server-start)
+; (pcre-mode +1)
+
+(defun save-all () (interactive) (save-some-buffers t))
+(global-set-key (kbd "C-S") 'save-all)
+
+;; disable automatically adding various pairs of matching parentheses
+(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
+
+;; (setq +notmuch-sync-backend 'mbsync)
+#+end_src
+
+#+RESULTS:
+
+* notmuch (email)
+** Notmuch configuration
+#+begin_src emacs-lisp :tangle yes
+;; Configure notmuch-hello
+(setq +notmuch-home-function (lambda () (notmuch-search "tag:inbox")))
+#+end_src
+
+* Misc
+** Save file position in files
+#+begin_src emacs-lisp :tangle yes
+;; save current cursor position in files
+(save-place-mode 1)
+#+end_src
+** Dont ask to exit
+#+begin_src emacs-lisp :tangle yes
+(setq confirm-kill-emacs nil)
+#+end_src
+
+** Unsorted
+Some things from http://yummymelon.com/devnull/surprise-and-emacs-defaults.html
+#+begin_src emacs-lisp :tangle yes
+(setq bookmark-save-flag 1)
+(setq sentence-end-double-space nil)
+(setq delete-selection-mode t)
+
+#+end_src
+
+* Fonts
+#+begin_src emacs-lisp :tangle yes
+
+
+;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
+;; are the three important ones:
+;;
+;; + `doom-font'
+;; + `doom-variable-pitch-font'
+;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
+;;   presentations or streaming.
+;;
+;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
+;; font string. You generally only need these two:
+;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
+;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+
+;; There are two ways to load a theme. Both assume the theme is installed and
+;; available. You can either set `doom-theme' or manually load a theme with the
+;; `load-theme' function.
+;; This is the default: doom-one
+;; (setq doom-theme 'doom-one)
+;; (setq doom-theme 'doom-spacegrey)
+;; notes
+;; - zenburn seems easy to read on my laptop, in the morning
+
+;; (ef-themes-select 'ef-bio)
+#+end_src
+
+* Theme
+- list of doom emacs themes https://github.com/doomemacs/themes
+** zeburn
+#+begin_src emacs-lisp :tangle yes
+;(setq doom-theme 'doom-zenburn)
+(setq doom-theme 'doom-spacegrey)
+#+end_src
+
+* Projectile
+#+begin_src emacs-lisp :tangle yes
+(setq projectile-use-native-indexing t)
+#+end_src
+
+* Nix
+#+begin_src emacs-lisp :tangle yes
+;; (after! nix-mode
+;;   (setq nix-nixfmt-bin "alejandra --quiet"))
+;; (set-formatter! 'alejandra "alejandra --quiet" :modes '(nix-mode))
+;;(set-formatter! 'alejandra '("alejandra" "--quiet") :modes '(nix-mode))
+(after! nix-mode
+  (set-formatter! 'alejandra '("alejandra" "--quiet") :modes '(nix-mode))
+  (map! :localleader
+        :map nix-mode-map
+        :desc "nix-format-buffer" "p" #'+format/buffer))
+#+end_src
+
+* Nix LSP
+TODO
+
+* Golang LSP
+#+begin_src emacs-lisp :tangle yes
+
+;;(after! go-mode
+;;        (setq gofmt-command "goimports")
+;;)
+
+;;(add-hook 'go-mode-hook 'lsp-deferred)
+
+(setq lsp-enable-file-watchers nil)
+
+(setq lsp-gopls-codelens nil)
+
+(after! go-mode
+  (setq gofmt-command "goimports")
+  ;; (add-hook 'go-mode-hook
+  ;;           (lambda ()
+  ;;             (add-hook 'after-save-hook 'gofmt nil 'make-it-local))))
+  (add-hook 'go-mode-hook
+            (lambda ()
+              (add-hook 'before-save-hook 'gofmt nil 'make-it-local))))
+
+;; (after! go-mode
+;;   (set-lookup-handlers! 'go-mode
+;;     :definition #'godef-jump
+;;     :references #'go-guru-referrers
+;;     :documentation #'godoc-at-point))
+
+#+end_src
+
+* Rust 2023
+#+begin_src emacs-lisp :tangle yes
+(defun company-is-kind (match candidate)
+        (when-let
+            (kind (company-call-backend 'kind candidate))
+            (member match (alist-get kind company-text-icons-mapping))
+        )
+)
+(defun company-sort-prefer-members (candidates)
+        "Prefer CANDIDATES that are members."
+        ;; (message "Candidate: %s" (pop candidates))
+        ;; (message "Text: %s" (company-call-backend 'kind (pop candidates)))
+
+        ;;(message "%s" (company-fetch-metadata ))
+        (cl-loop for candidate in candidates
+                ;;if (string-suffix-p ")" candidate)
+                if (company-is-kind "f" candidate)
+                collect candidate into fields
+                else if (company-is-kind "m" candidate)
+                collect candidate into methods
+                else if (company-is-kind "c" candidate)
+                collect candidate into consts
+                else collect candidate into other
+                finally return (append fields consts methods other)))
+
+(after! (:and company lsp-mode lsp-rust)
+  (setq company-transformers '(company-sort-prefer-members))
+)
+
+(after! lsp-rust
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]vendor\\'")
+  (setq lsp-rust-analyzer-display-chaining-hints t
+        lsp-rust-analyzer-display-parameter-hints t
+        lsp-rust-analyzer-completion-add-call-argument-snippets t
+        lsp-rust-analyzer-experimental-proc-attr-macros t
+        lsp-rust-analyzer-proc-macro-enable t
+        lsp-rust-analyzer-call-info-full t
+        lsp-rust-analyzer-inlay-chain-format " : %s"
+        lsp-rust-analyzer-max-inlay-hint-length 40
+;;        lsp-inlay-hint-enable t
+  )
+  (map! :localleader :map rustic-mode-map "i" 'lsp-inlay-hints-mode)
+  (map! :localleader :map rustic-mode-map "tl" 'rustic-cargo-test-rerun)
+  (map! :localleader :map rustic-mode-map "c" 'rustic-cargo-check)
+  (map! :localleader :map rustic-mode-map "f" 'rustic-cargo-fmt)
+  (map! :localleader :map rustic-mode-map "a" 'lsp-execute-code-action)
+)
+#+end_src
+
+#+RESULTS:
+
+* Rust Old
+#+begin_src emacs-lisp :tangle no
+ ;; rust
+ ;; (after! lsp-rust
+ ;;   (setq lsp-rust-analyzer-display-chaining-hints t
+ ;;         lsp-rust-analyzer-display-parameter-hints t
+ ;;         lsp-rust-analyzer-completion-add-call-argument-snippets t
+ ;;         lsp-rust-analyzer-call-info-full t
+ ;;         lsp-rust-analyzer-inlay-chain-format " : %s"
+ ;;         lsp-rust-analyzer-server-display-inlay-hints t
+ ;;         lsp-rust-analyzer-server-display-inlay-hints t))
+(after! lsp-rust
+  (setq lsp-rust-analyzer-display-chaining-hints t
+        lsp-rust-analyzer-display-parameter-hints t
+        lsp-rust-analyzer-completion-add-call-argument-snippets t
+        lsp-rust-analyzer-call-info-full t
+        lsp-rust-analyzer-inlay-chain-format " : %s"
+        lsp-rust-analyzer-max-inlay-hint-length 40
+        lsp-rust-analyzer-server-display-inlay-hints t)
+  (map! :localleader :map rustic-mode-map "tl" 'rustic-cargo-test-rerun)
+  (map! :localleader :map rustic-mode-map "c" 'rustic-cargo-check)
+)
+;; (after! lsp-rust
+;;        (setq racer-rust-src-path
+;;        (concat (string-trim
+;;                (shell-command-to-string "rustc --print sysroot"))
+;;                "/lib/rustlib/src/rust/src")))
+
+;; (after! rustic
+;;   (setq rustic-format-on-save t)
+;;   (setq rustic-lsp-server 'rust-analyzer))
+
+(after! lsp-rust
+  (setq lsp-rust-server 'rust-analyzer))
+
+#+end_src
+
+* Org Mode
+#+begin_src emacs-lisp :tangle yes
+
+;; If you use `org' and don't want your org files in the default location below,
+;; change `org-directory'. It must be set before org loads!
+
+
+;; org-capture
+;; (setq org-default-notes-file (concat org-directory "/notes.org"))
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+
+(setq org-directory "~/org")
+(after! org
+  (setq org-log-done t))
+(after! org
+  (setq org-agenda-files '("~/org/")))
+#+end_src
+
+* Org Mode Appearance
+#+begin_src emacs-lisp :tangle no
+(require 'nano)
+
+; make org mode look nice
+;; (setq org-hide-emphasis-markers t)
+;; (use-package org-bullets
+;;     :config
+;;     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+#+end_src
+
+#+RESULTS:
+: t
+
+* xorg clipboard handling
+** clipboard
+#+begin_src emacs-lisp :tangle yes
+; xorg clipboard handling
+(setq x-select-enable-primary t)
+(setq x-select-enable-clipboard t)
+#+end_src
+** clipboard keys
+#+begin_src emacs-lisp :tangle yes
+(defun copy-to-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (message "Yanked region to x-clipboard!")
+        (call-interactively 'clipboard-kill-ring-save)
+        )
+    (if (region-active-p)
+        (progn
+          (shell-command-on-region (region-beginning) (region-end) "xsel -i -b")
+          (message "Yanked region to clipboard!")
+          (deactivate-mark))
+      (message "No region active; can't yank to clipboard!")))
+  )
+
+(defun paste-from-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (clipboard-yank)
+        (message "graphics active")
+        )
+    (insert (shell-command-to-string "xsel -o -b"))
+    )
+  )
+
+(global-set-key [f8] 'copy-to-clipboard)
+(global-set-key [f9] 'paste-from-clipboard)
+#+end_src
+
+** clipetty
+#+begin_src emacs-lisp :tangle no
+(use-package clipetty
+  :ensure t
+  :hook (after-init . global-clipetty-mode))
+#+end_src
+
+* simplenote
+#+begin_src emacs-lisp :tangle no
+(require 'simplenote2)
+(setq simplenote2-email "simplenote@picklerick.it")
+(setq simplenote2-password "nuBzQzQThMCHCJ4")
+(simplenote2-setup)
+#+end_src
+
+* joplin
+#+begin_src emacs-lisp :tangle no
+(require 'joplin-mode)
+(with-eval-after-load "markdown-mode"
+  (add-to-list 'markdown-mode-hook 'joplin-note-mode))
+#+end_src
+
+* ibuffer grouping by revision control
+#+begin_src emacs-lisp :tangle yes
+; ibuffer grouping
+(use-package ibuffer-vc
+  :ensure t
+  :init
+  :config
+  (add-hook 'ibuffer-hook
+            (lambda ()
+              (ibuffer-vc-set-filter-groups-by-vc-root)
+              (unless (eq ibuffer-sorting-mode 'alphabetic)
+                (ibuffer-do-sort-by-alphabetic)))))
+#+end_src
+
+* Org Roam
+#+begin_src emacs-lisp :tangle yes
+;(make-directory "~/Sync/org/roam")
+(setq org-roam-directory (file-truename "~/Sync/org/roam"))
+;(setq org-roam-database-connector 'sqlite-builtin)
+;(org-roam-db-autosync-mode)
+; - initial setup
+; - run M-x org-roam-db-sync
+#+end_src
+
+* Deft (Disabled)
+#+begin_src emacs-lisp :tangle no
+(setq deft-directory "~/Sync/roam"
+      deft-extensions '("org" "txt")
+      deft-recurse t)
+#+end_src
+
+* Dired
+#+begin_src emacs-lisp :tangle yes
+(add-hook 'dired-mode-hook
+          (lambda ()
+            (when (file-remote-p dired-directory)
+              (setq-local dired-actual-switches "-alhB"))
+            (setq dired-auto-revert-buffer t)
+        ))
+#+end_src
+
+* literate-calc-mode
+#+begin_src emacs-lisp :tangle yes
+(use-package! literate-calc-mode )
+#+end_src
+
+* age
+** enable age (disabled)
+#+begin_src emacs-lisp :tangle no
+(setq age-default-identity "~/.ssh/keys/personal/secret")
+(setq age-default-recipient
+   '("~/.ssh/keys/personal/secret.pub"))
+(age-file-enable)
+#+end_src
+
+* Unsorted
+** Disabled block Example
+#+begin_src emacs-lisp :tangle no
+;; Put ':tangle no' to disable a block
+#+end_src
+
+
+** Snippets - yasnippet
+#+begin_src emacs-lisp :tangle yes
+;; snippets
+(yas-global-mode 1)
+(add-to-list 'load-path
+              "~/.emacs.d/plugins/yasnippet")
+#+end_src
+
+** REST Client
+#+begin_src emacs-lisp :tangle yes
+(require 'restclient)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((restclient . t)))
+#+end_src
+
+** Recoll - Search tool
+#+begin_src emacs-lisp :tangle yes
+;; recoll
+(use-package! org-recoll
+  :after org)
+
+(global-set-key (kbd "C-c g") 'org-recoll-search)
+(global-set-key (kbd "C-c u") 'org-recoll-update-index)
+#+end_src
+
+** dired - tmsu
+What does this do?
+#+begin_src emacs-lisp :tangle yes
+;; tmsu.el
+(use-package! tmsu
+  :after dired)
+#+end_src
+
+** chat.el
+#+begin_src emacs-lisp :tangle no
+;; chat.el - chatgpt
+(require 'chat)
+(setq chat-api-key (my-file-contents "~/.secrets/chatgpt-api-key"))
+#+end_src
+
+** gptel
+#+begin_src emacs-lisp :tangle yes
+;; https://github.com/karthink/gptel#doom-emacs
+(use-package! gptel
+ :config
+ (setq! gptel-model "gpt-3.5-turbo")
+ (setq! gptel-api-key (my-file-contents "~/.secrets/chatgpt-api-key"))
+)
+#+end_src
+
+#+RESULTS:
+: t
+</pre><a href="#top">top</a><h1 id="doom.d/init.el">doom.d/init.el</h1><pre>;;; init.el -*- lexical-binding: t; -*-
+
+;; This file controls what Doom modules are enabled and what order they load
+;; in. Remember to run 'doom sync' after modifying it!
+
+;; NOTE Press 'SPC h d h' (or 'C-h d h' for non-vim users) to access Doom's
+;;      documentation. There you'll find a "Module Index" link where you'll find
+;;      a comprehensive list of Doom's modules and what flags they support.
+
+;; NOTE Move your cursor over a module's name (or its flags) and press 'K' (or
+;;      'C-c c k' for non-vim users) to view its documentation. This works on
+;;      flags as well (those symbols that start with a plus).
+;;
+;;      Alternatively, press 'gd' (or 'C-c c d') on a module to browse its
+;;      directory (for easy access to its source code).
+
+(doom! :input
+       ;;chinese
+       ;;japanese
+       ;;layout            ; auie,ctsrnm is the superior home row
+
+       :completion
+       company           ; the ultimate code completion backend
+       ;;helm              ; the *other* search engine for love and life
+       ;;ido               ; the other *other* search engine...
+       ivy               ; a search engine for love and life
+
+       :ui
+       deft              ; notational velocity for Emacs
+       doom              ; what makes DOOM look the way it does
+       doom-dashboard    ; a nifty splash screen for Emacs
+       ;;doom-quit         ; DOOM quit-message prompts when you quit Emacs
+       ;;(emoji +unicode)  ; 🙂
+       ;;fill-column       ; a `fill-column' indicator
+       hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
+       ;;hydra
+       ;;indent-guides     ; highlighted indent columns
+       ;;ligatures         ; ligatures and symbols to make your code pretty again
+       ;;minimap           ; show a map of the code on the side
+       modeline          ; snazzy, Atom-inspired modeline, plus API
+       ;;nav-flash         ; blink cursor line after big motions
+       ;;neotree           ; a project drawer, like NERDTree for vim
+       ophints           ; highlight the region an operation acts on
+       (popup +defaults)   ; tame sudden yet inevitable temporary windows
+       ;;tabs              ; a tab bar for Emacs
+       (treemacs +lsp)          ; a project drawer, like neotree but cooler
+       ;;unicode           ; extended unicode support for various languages
+       vc-gutter         ; vcs diff in the fringe
+       vi-tilde-fringe   ; fringe tildes to mark beyond EOB
+       ;;window-select     ; visually switch windows
+       ;; workspaces        ; tab emulation, persistence & separate workspaces
+       ;;zen               ; distraction-free coding or writing
+
+       :editor
+       (evil +everywhere); come to the dark side, we have cookies
+       file-templates    ; auto-snippets for empty files
+       fold              ; (nigh) universal code folding
+       (format +onsave)   ; automated prettiness (format +onsave)
+       ;;god               ; run Emacs commands without modifier keys
+       ;;lispy             ; vim for lisp, for people who don't like vim
+       multiple-cursors  ; editing in many places at once
+       ;;objed             ; text object editing for the innocent
+       ;;parinfer          ; turn lisp into python, sort of
+       ;;rotate-text       ; cycle region at point between text candidates
+       snippets          ; my elves. They type so I don't have to
+       ;;word-wrap         ; soft wrapping with language-aware indent
+
+       :emacs
+       dired             ; making dired pretty [functional]
+       electric          ; smarter, keyword-based electric-indent
+       ;;ibuffer         ; interactive buffer management
+       (undo +tree)      ; persistent, smarter undo for your inevitable mistakes
+       vc                ; version-control and Emacs, sitting in a tree
+
+       :term
+       eshell              ; the elisp shell that works everywhere
+       ;;shell             ; simple shell REPL for Emacs
+       ;;term              ; basic terminal emulator for Emacs
+       vterm               ; the best terminal emulation in Emacs
+
+       :checkers
+       syntax              ; tasing you for every semicolon you forget
+       ;;spell             ; tasing you for misspelling mispelling
+       ;;grammar           ; tasing grammar mistake every you make
+
+       :tools
+       ;;ansible
+       ;;debugger          ; FIXME stepping through code, to help you add bugs
+       direnv
+       (docker +lsp)
+       ;;editorconfig      ; let someone else argue about tabs vs spaces
+       ;;ein               ; tame Jupyter notebooks with emacs
+       (eval +overlay)     ; run code, run (also, repls)
+       ;;gist              ; interacting with github gists
+       lookup              ; navigate your code and its documentation
+       lsp
+       magit             ; a git porcelain for Emacs
+       ;;make              ; run make tasks from Emacs
+       ;;pass              ; password manager for nerds
+       pdf               ; pdf enhancements
+       ;;prodigy           ; FIXME managing external services & code builders
+       ;;rgb               ; creating color strings
+       ;;taskrunner        ; taskrunner for all your projects
+       ;;terraform         ; infrastructure as code
+       ;;tmux              ; an API for interacting with tmux
+       ;;upload            ; map local to remote projects via ssh/ftp
+
+       :os
+       (:if IS-MAC macos)  ; improve compatibility with macOS
+       ;;tty               ; improve the terminal Emacs experience
+
+       :lang
+       ;;agda              ; types of types of types of types...
+       ;;cc                ; C/C++/Obj-C madness
+       ;;clojure           ; java with a lisp
+       ;;common-lisp       ; if you've seen one lisp, you've seen them all
+       ;;coq               ; proofs-as-programs
+       ;;crystal           ; ruby at the speed of c
+       ;;csharp            ; unity, .NET, and mono shenanigans
+       ;;data              ; config/data formats
+       ;;(dart +flutter)   ; paint ui and not much else
+       ;;elixir            ; erlang done right
+       ;;elm               ; care for a cup of TEA?
+       emacs-lisp        ; drown in parentheses
+       ;;erlang            ; an elegant language for a more civilized age
+       ;;ess               ; emacs speaks statistics
+       ;;faust             ; dsp, but you get to keep your soul
+       ;;fsharp            ; ML stands for Microsoft's Language
+       ;;fstar             ; (dependent) types and (monadic) effects and Z3
+       ;;gdscript          ; the language you waited for
+       (go +lsp)         ; the hipster dialect
+       ;;(haskell +dante)  ; a language that's lazier than I am
+       ;;hy                ; readability of scheme w/ speed of python
+       ;;idris             ; a language you can depend on
+       ;;json              ; At least it ain't XML
+       ;;(java +meghanada) ; the poster child for carpal tunnel syndrome
+       ;;javascript        ; all(hope(abandon(ye(who(enter(here))))))
+       ;;julia             ; a better, faster MATLAB
+       ;;kotlin            ; a better, slicker Java(Script)
+       ;;latex             ; writing papers in Emacs has never been so fun
+       ;;lean
+       ;;factor
+       ;;ledger            ; an accounting system in Emacs
+       ;;lua               ; one-based indices? one-based indices
+       markdown          ; writing docs for people to ignore
+       ;;nim               ; python + lisp at the speed of c
+       (nix +lsp)               ; I hereby declare "nix geht mehr!"
+       ;;ocaml             ; an objective camel
+       (org +pretty +journal +roam2 )          ; organize your plain life in plain text
+       ;;php               ; perl's insecure younger brother
+       ;;plantuml          ; diagrams for confusing people more
+       ;;purescript        ; javascript, but functional
+       ;;python            ; beautiful is better than ugly
+       ;;qt                ; the 'cutest' gui framework ever
+       ;;racket            ; a DSL for DSLs
+       ;;raku              ; the artist formerly known as perl6
+       ;;rest              ; Emacs as a REST client
+       ;;rst               ; ReST in peace
+       ;;(ruby +rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
+       (rust +lsp)              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
+       ;;scala             ; java, but good
+       ;;scheme            ; a fully conniving family of lisps
+       sh                  ; she sells {ba,z,fi}sh shells on the C xor
+       ;;sml
+       ;;solidity          ; do you need a blockchain? No.
+       ;;swift             ; who asked for emoji variables?
+       ;;terra             ; Earth and Moon in alignment for performance.
+       ;;web               ; the tubes
+       yaml                ; JSON, but readable
+
+       :email
+       ;;(mu4e +gmail)
+       notmuch
+       ;;(wanderlust +gmail)
+
+       :app
+       ;;calendar
+       ;;irc               ; how neckbeards socialize
+       ;;(rss +org)        ; emacs as an RSS reader
+       ;;twitter           ; twitter client https://twitter.com/vnought
+       everywhere
+
+       :config
+       literate
+       (default +bindings +smartparens))
+</pre><a href="#top">top</a><h1 id="doom.d/packages.el">doom.d/packages.el</h1><pre>;; need to find better salt support; disable this
+;; I am keeping there enabled just for snippets
+;; (package! salt-mode)
+
+;; (package! ef-themes)
+
+; https://github.com/spudlyo/clipetty
+;; (package! clipetty
+;;   :recipe (:host github :repo "spudlyo/clipetty" ))
+
+; org-bullets https://github.com/sabof/org-bullets
+;; (package! org-bullets
+;;   :recipe (:host github :repo "sabof/org-bullets" ))
+
+;; (package! nano-emacs
+;;   :recipe (:host github :repo "rougier/nano-emacs" ))
+
+; jq-mode https://github.com/ljos/jq-mode
+(package! jq-mode
+  :recipe (:host github :repo "ljos/jq-mode" ))
+
+; joplin
+(package! joplin-mode
+  :recipe (:host github :repo "cinsk/joplin-mode" ))
+
+; simple note
+; https://github.com/alpha22jp/simplenote2.el
+;; (package! simplenote2
+;;   :recipe (:host github :repo "alpha22jp/simplenote2.el" ))
+
+;;(package! undo-tree)
+(package! go-add-tags)
+(package! org-recoll)
+
+(package! restclient
+  :recipe (:host github :repo "pashky/restclient.el" ))
+(package! ob-restclient
+  :recipe (:host github :repo "alf/ob-restclient.el" ))
+
+(package! ibuffer-vc
+  :recipe (:host github :repo "purcell/ibuffer-vc" ))
+
+
+(package! literate-calc-mode
+  :recipe (:host github :repo "sulami/literate-calc-mode.el" ))
+
+(package! age
+  :recipe (:host github :repo "anticomputer/age.el" ))
+
+(package! tmsu
+  :recipe (:host github :repo "vifon/tmsu.el" ))
+
+
+; https://github.com/ardumont/markdown-toc
+(package! markdown-toc
+  :recipe (:host github :repo "ardumont/markdown-toc" ))
+
+(package! csv-mode)
+
+;; (package! chat
+;;   :recipe (:host github :repo "iwahbe/chat.el" ))
+
+(package! gptel)
+
+  ;; :bind (:map dired-mode-map
+  ;;        (";" . tmsu-dired-edit)
+  ;;        ("M-;" . tmsu-dired-query))
+
+;;(package! org-super-agenda)
+
+;; To install a package directly from a remote git repo, you must specify a
+;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
+;; https://github.com/raxod502/straight.el#the-recipe-format
+;(package! another-package
+;  :recipe (:host github :repo "username/repo"))
+
+;; If the package you are trying to install does not contain a PACKAGENAME.el
+;; file, or is located in a subdirectory of the repo, you'll need to specify
+;; `:files' in the `:recipe':
+;(package! this-package
+;  :recipe (:host github :repo "username/repo"
+;           :files ("some-file.el" "src/lisp/*.el")))
+
+;; If you'd like to disable a package included with Doom, you can do so here
+;; with the `:disable' property:
+;(package! builtin-package :disable t)
+
+;; You can override the recipe of a built in package without having to specify
+;; all the properties for `:recipe'. These will inherit the rest of its recipe
+;; from Doom or MELPA/ELPA/Emacsmirror:
+;(package! builtin-package :recipe (:nonrecursive t))
+;(package! builtin-package-2 :recipe (:repo "myfork/package"))
+
+;; Specify a `:branch' to install a package from a particular branch or tag.
+;; This is required for some packages whose default branch isn't 'master' (which
+;; our package manager can't deal with; see raxod502/straight.el#279)
+;(package! builtin-package :recipe (:branch "develop"))
+
+;; Use `:pin' to specify a particular commit to install.
+;(package! builtin-package :pin "1a2b3c4d5e")
+
+
+;; Doom's packages are pinned to a specific commit and updated from release to
+;; release. The `unpin!' macro allows you to unpin single packages...
+;(unpin! pinned-package)
+;; ...or multiple packages
+;(unpin! pinned-package another-pinned-package)
+;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
+;(unpin! t)
+
+
+; https://github.com/isdamir/ps-ccrypt
+;; (package! ps-ccrypt
+;;   :recipe (:host github :repo "isdamir/ps-ccrypt" ))
+
+; https://github.com/hlissner/doom-emacs/blob/develop/docs/getting_started.org#usingloading-local-packages
+;; (use-package ps-ccrypt
+;;   :load-path "extra/ps-ccrypt")
+</pre><a href="#top">top</a><h1 id="doom.d/snippets/.keep">doom.d/snippets/.keep</h1><pre></pre><a href="#top">top</a><h1 id="dotbot.yaml">dotbot.yaml</h1><pre>symlinks:
+   ~/.doom.d: doom.d
+
+walkdir:
+  #~/bin: bin
+  ~/.bashrc.d: bashrc.d
+</pre><a href="#top">top</a></main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays</small></footer></div></body></html>

@@ -69,6 +69,20 @@ func (me *SiteRender) WritePage(ctx context.Context, page *site.PageMetadata, ti
 	comp := site.Page(*me.Site, *page, title, body)
 	return me.WriteComponent(ctx, comp, outfile)
 }
+func (me *SiteRender) WriteDirectory(ctx context.Context, page *site.PageMetadata, title string, body string, directory string) error {
+	outName := strings.TrimSuffix(page.RelPath, ".md") + ".html"
+	outfile := filepath.Join(me.OutDir, outName)
+	files, err := site.ListFiles(directory)
+	if err != nil {
+		return err
+	}
+	fmt.Printf("directory %s (%d files)\n", directory, len(files))
+	for _, file := range files {
+		fmt.Printf(" file %s\n", file.Path)
+	}
+	comp := site.Directory(*me.Site, *page, title, body, directory, files)
+	return me.WriteComponent(ctx, comp, outfile)
+}
 
 func (me *SiteRender) WriteDirectoryIndexPage(ctx context.Context, inDir, outDir string) error {
 	relDir, err := filepath.Rel(me.InDir, inDir)
@@ -141,20 +155,15 @@ func main() {
 	}
 }
 
-type FileEntry struct {
-	Path string
-	Info fs.FileInfo
-}
-
 func GetPages(rootdir, dir string, includeDrafts bool) ([]*site.PageMetadata, error) {
 	ret := make([]*site.PageMetadata, 0)
-	entries := make([]*FileEntry, 0)
+	entries := make([]*site.FileEntry, 0)
 	walkfn := func(path string, info fs.FileInfo, err error) error {
 		if err != nil {
 			return nil
 		}
 
-		e := &FileEntry{
+		e := &site.FileEntry{
 			Path: path,
 			Info: info,
 		}
@@ -200,6 +209,7 @@ func GetPages(rootdir, dir string, includeDrafts bool) ([]*site.PageMetadata, er
 		pageUrl := "/" + pageId + ".html"
 
 		page := &site.PageMetadata{
+			FileEntry:   ent,
 			Filename:    ent.Path,
 			RelPath:     relPath,
 			ID:          pageId,
@@ -236,6 +246,8 @@ func parseFrontMatter(md []byte) (*site.FrontMatter, []byte, error) {
 	if err := yaml.Unmarshal(fmData, &fm); err != nil {
 		return fm, md, fmt.Errorf("parse front matter: %w", err)
 	}
+
+	fm.SetDefaults()
 
 	return fm, body, nil
 }

@@ -1,0 +1,21 @@
+#+title: Readme
+
+pinned release of ~/.emacs.d to tag 4d072ce8
+
+* Config
+
+config.org writes config.el
+** config.org
+
+open [[org:./config.org]]
+
+* setup
+
+#+begin_src bash
+cd ~/.emacs.d
+git checkout -b main 4d072ce8
+git describe --tags --always
+#+end_src
+
+#+RESULTS:
+: 4d072ce
