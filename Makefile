@@ -16,6 +16,7 @@ gen: ## generate site
 	website -gen && echo
 	cp site/site.css docs/site.css
 	rsync -ar ./overlay/ ./docs/
+	#rsync -ar ./content/dotfiles/emacs/ ./docs/dotfiles/emacs/
 
 test: gen compile run ## test run
 
@@ -27,8 +28,13 @@ publish: compile gen ## run dev build
 	git commit -a -m' publish '
 	git push
 
-dev: compile ## run dev build
-	reflex -s -r '(\.go$$|\.md$$|\.templ$$)' -- make run
+dev: ## run dev build
+	# use -v with reflex for debug
+	reflex -v -s -r '(\.go$$|\.md$$|\.templ$$)' -R 'docs/*' -R 'site/.*_templ.go' -- make rerun
+	#run-dev
+
+rerun: gent compile gen run ## build and run
+	# rerun $@
 
 run: ## run
 	website -dev
