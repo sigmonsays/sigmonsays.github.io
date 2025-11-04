@@ -2,12 +2,15 @@ package site
 
 
 templ PageTop(site Site, page PageMetadata) {
-  <span style="display: inline-block; text-align: right; width: 100%;">
+  <div class="grid-container">
+  @Slug(site, page)
+  <div class="grid-box" style="text-align: right;">
   if page.FrontMatter.Date != "" {
-    Posted on {page.FrontMatter.Date} <br/>
+    Posted on {page.FrontMatter.Date} &nbsp; <br/>
   }
   @PageTags(site, page)
-  </span>
+  </div>
+  </div>
   <p/>
 }
 

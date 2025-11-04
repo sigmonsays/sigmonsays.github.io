@@ -40,17 +40,6 @@ func (me *TagSet) GetPages() []PageMetadata {
 	return SortPages(me.Pages)
 }
 
-type PageMetadata struct {
-	FileEntry   *FileEntry
-	ID          string
-	Filename    string
-	RelPath     string
-	Url         string
-	Title       string
-	FrontMatter *FrontMatter
-	Markdown    []byte
-}
-
 type FrontMatter struct {
 	Title     string   `yaml:"title"`
 	Summary   string   `yaml:"summary"`

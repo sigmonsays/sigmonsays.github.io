@@ -208,3 +208,16 @@ pre {
   font-weight:700;
   box-shadow: var(--shadow-sm);
 }
+
+
+.grid-container {
+  display: flex;
+  /* Optional: Add space between items */
+  gap: 20px;
+  /* Optional: Center items horizontally */
+}
+
+.grid-box {
+  width: 50%; /* Example width */
+  height: 100px; /* Example height */
+}
