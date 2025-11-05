@@ -4,6 +4,7 @@ date: 2025/07/13
 layout: directory
 directory: selfhosted/homepage
 tags: [ "selfhosted" ]
+skip_index: true
 ---
 
 homepage is a simple dashboard that supports adding custom links and widgets for all your services. Here
