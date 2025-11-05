@@ -13,6 +13,12 @@ templ Index(site Site, title string) {
 
         for _, page := range site.GetPages(10) {
 
+          {{
+            if page.FrontMatter.SkipIndex {
+               continue
+            }
+          }}
+
           <li><a href={ page.Url }>{page.Title}</a>
           if page.FrontMatter.Date != "" {
             &middot; {page.FrontMatter.Date}
