@@ -1,0 +1,200 @@
+- Daily:
+  - "Fastmail":
+    - href: https://app.fastmail.com/mail/Inbox/?u=dd1140f1
+      icon: /icons/app.fastmail.ico.png
+      description: ""
+  - "Hangouts":
+    - href: https://mail.google.com/chat/u/0/
+      icon: /icons/mail.google.ico-0.png
+      description: ""
+  - "SimpleNote":
+    - href: https://app.simplenote.com/
+      icon: /icons/app.simplenote.ico.png
+      description: ""
+  - "Spotify":
+    - href: https://open.spotify.com/
+      icon: /icons/open.spotify.ico-0.png
+      description: ""
+
+
+- Social:
+    - Reddit:
+      - icon: reddit.png
+        href: https://reddit.com/
+        description: ""
+    - Element:
+      - href: https://app.element.io/
+        icon: /icons/app.element.io.ico.png
+        description: ""
+    - Discord:
+      - href: https://discord.com/channels/XXX
+        icon: /icons/discord.ico.png
+        description: ""
+    - Mastodon:
+      - href: https://mastodon.social
+        icon: /icons/globe.ico.png
+        description: ""
+    - Bluesky:
+      - href: https://bsky.app/
+        icon: /icons/globe.ico.png
+        description: ""
+    - Lemmy:
+      - href: https://lemmy.studio/
+        icon: /icons/globe.ico.png
+        description: ""
+
+- "Entertainment":
+    - YouTube:
+      - abbr: YT
+        href: https://youtube.com/
+        icon: https://youtube.com/favicon.ico
+        description: ""
+    - "The Moment":
+      - href: https://www.youtube.com/@the_moment_work
+        icon: /icons/youtube-the-moment.ico.png
+        description: ""
+    - What But Why:
+      - href: https://waitbutwhy.com/
+        icon: /icons/waitbutwhy.ico.png
+        description: ""
+    - "Hackster.io":
+      - href: https://www.hackster.io/
+        icon: /icons/globe.ico.png
+        description: ""
+
+- Cloud Services:
+  - AWS Console:
+    - href: https://console.aws.amazon.com/console/home?region=us-east-1
+      icon: /icons/console.aws.amazon.ico.png
+      description: ""
+  - Backblaze:
+    - href: https://www.backblaze.com/
+      icon: /icons/backblaze.ico.png
+      description: ""
+
+
+- TV:
+  - Netflix:
+    - href: https://www.netflix.com
+      icon: /icons/netflix.ico.png
+      description: ""
+  - Youtube:
+    - href: https://www.youtube.com/
+      icon: /icons/youtube.ico.png
+      description: ""
+  - Vudu:
+    - href: https://www.vudu.com
+      icon: /icons/vudu.ico.png
+      description: ""
+  - Amazon Prime Video:
+    - href: https://www.amazon.com/Prime-Video/
+      icon: /icons/amazon.ico-0.png
+      description: ""
+  - HBO Max:
+    - href: https://play.hbomax.com/
+      icon: /icons/play.hbomax.ico.png
+      description: ""
+  - Hulu:
+    - href: https://hulu.com/
+      icon: /icons/huli.ico.png
+      description: ""
+
+
+- News:
+  - "The Travel Magazine":
+    - href: https://www.thetravelmagazine.net/
+      icon: /icons/thetravelmagazine.ico.png
+      description: ""
+  - "Google News":
+    - href: https://news.google.com
+      icon: /icons/news.google.ico.png
+      description: ""
+  - "The Crow":
+    - href: https://thecrow.uk/
+      icon: /icons/thecrow.uk.ico.png
+      description: ""
+  - "Jalopnik":
+    - href: https://jalopnik.com/
+      icon: /icons/jalopnik.ico.png
+      description: ""
+  - "KPBS":
+    - href: https://www.kpbs.org/
+      icon: /icons/kpbs.org.ico.png
+      description: ""
+  - "Bleeping Compputer":
+    - href: https://www.bleepingcomputer.com/
+      icon: /icons/bleepingcomputer.ico.png
+      description: ""
+  - "Live Science":
+    - href: https://www.livescience.com/
+      icon: /icons/livescience.ico.png
+      description: ""
+  - "Vice":
+    - href: https://www.vice.com/en
+      icon: /icons/vice.png
+      description: ""
+  - "Wired":
+    - href: https://www.wired.com
+      icon: https://www.wired.com/favicon.ico
+      description: ""
+  - Github:
+      - abbr: GH
+        href: https://github.com/
+        icon: https://github.com/favicon.ico
+        description: ""
+  - Ycombinator:
+      - abbr: YC
+        href: https://news.ycombinator.com/news
+        icon: https://news.ycombinator.com/favicon.ico
+        description: ""
+  - Lobster:
+      - href: https://lobste.rs/
+        icon: https://lobste.rs/favicon.ico
+        description: ""
+  - Phoronix:
+      - href: https://www.phoronix.com/
+        icon: /icons/phoronix.ico.png
+        description: ""
+  - The Register:
+      - href: https://www.theregister.com/
+        icon: /icons/theregister.ico.png
+        description: ""
+
+- People:
+  - "Julia Evans":
+    - href: https://jvns.ca/
+      icon: /icons/jvns.ca.ico.png
+      description: Julia Evans
+  - "Brian Schrader":
+    - href: https://brianschrader.com/
+      icon: /icons/brianschrader.ico.png
+      description: Brian Schrader
+  - "Phillip Tool":
+    - href: https://www.philipotoole.com/
+      icon: /icons/philipotoole.ico.png.png
+      description: Philip Toole
+  - "Josh Rosso":
+    - href: https://joshrosso.com/docs/
+      icon: /icons/joshrosso.ico.png
+      description: Josh Rosso
+  - "Scattered Thoughts":
+    - href: https://scattered-thoughts.net/
+      icon: /icons/scattered-thoughts.ico.png
+  - "hevic":
+    - href: https://henvic.dev/
+      icon: /icons/henvic.dev.ico.png
+  - "anish athalye":
+    - href: https://www.anishathalye.com/
+      icon: /icons/anishathalye.ico.png
+  - "Joel On Software":
+    - href: https://www.joelonsoftware.com/
+      description: Joel on Software
+      icon: /icons/joelonsoftware.ico.png
+  - "Eaton Phil":
+    - href: https://eatonphil.com/
+  - "Yummy Melon":
+    - href: http://yummymelon.com/
+      icon: /icons/yummymelon.ico.png
+      description: 최민수
+  - "Faster Than Lime":
+    - href: https://fasterthanli.me/

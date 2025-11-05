@@ -1,0 +1,463 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>homepage configs</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><h1>homepage configs</h1><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><div class="grid-container"><div class="grid-box">&raquo; <a href="/">sigmonsays</a> / <a href="/selfhosted">selfhosted</a> &nbsp;</div><div class="grid-box" style="text-align: right;">Posted on 2025/07/13 &nbsp; <br>tagged <a href="/tag/selfhosted.html">selfhosted</a> &nbsp;</div></div><p></p><p>homepage is a simple dashboard that supports adding custom links and widgets for all your services. Here
+you will find my configurations (with secrets redacted of course).</p>
+<p>the list of dynamic widgets / services I currently have</p>
+<ul>
+<li>stocks</li>
+<li>uptime kuma</li>
+<li>photoprism</li>
+<li>qbittorrent</li>
+<li>miniflux</li>
+</ul>
+<h1>Notes</h1>
+<ul>
+<li>settings.yaml <a href="https://gethomepage.dev/v0.8.3/configs/settings/">https://gethomepage.dev/v0.8.3/configs/settings/</a></li>
+<li>bookmarks.yaml <a href="https://gethomepage.dev/v0.8.3/configs/bookmarks/">https://gethomepage.dev/v0.8.3/configs/bookmarks/</a></li>
+<li>services.yaml <a href="https://gethomepage.dev/v0.8.3/configs/services/">https://gethomepage.dev/v0.8.3/configs/services/</a></li>
+<li>service widgets <a href="https://gethomepage.dev/v0.8.3/configs/service-widgets/">https://gethomepage.dev/v0.8.3/configs/service-widgets/</a></li>
+<li>list of widgets <a href="https://gethomepage.dev/v0.8.3/widgets/">https://gethomepage.dev/v0.8.3/widgets/</a></li>
+<li>the sidebar is confusing and must be expanded</li>
+</ul>
+<h1>Configs</h1>
+<p>Anywhere you see <code>XXX</code> you need to replace with actual values (username, password, access key, etc)</p>
+<li><a href="#.env">.env</a></li><li><a href="#config/bookmarks.yaml">config/bookmarks.yaml</a></li><li><a href="#config/docker.yaml">config/docker.yaml</a></li><li><a href="#config/kubernetes.yaml">config/kubernetes.yaml</a></li><li><a href="#config/proxmox.yaml">config/proxmox.yaml</a></li><li><a href="#config/services.yaml">config/services.yaml</a></li><li><a href="#config/settings.yaml">config/settings.yaml</a></li><li><a href="#config/widgets.yaml">config/widgets.yaml</a></li><li><a href="#docker-compose.yaml">docker-compose.yaml</a></li><br><h1 id=".env">.env</h1><a href="#top">top</a><pre><code>PUID=1000
+PGID=1000
+
+DATA_ROOT=/srv/homepage
+</code></pre><h1 id="config/bookmarks.yaml">config/bookmarks.yaml</h1><a href="#top">top</a><pre><code>- Daily:
+  - "Fastmail":
+    - href: https://app.fastmail.com/mail/Inbox/?u=dd1140f1
+      icon: /icons/app.fastmail.ico.png
+      description: ""
+  - "Hangouts":
+    - href: https://mail.google.com/chat/u/0/
+      icon: /icons/mail.google.ico-0.png
+      description: ""
+  - "SimpleNote":
+    - href: https://app.simplenote.com/
+      icon: /icons/app.simplenote.ico.png
+      description: ""
+  - "Spotify":
+    - href: https://open.spotify.com/
+      icon: /icons/open.spotify.ico-0.png
+      description: ""
+
+
+- Social:
+    - Reddit:
+      - icon: reddit.png
+        href: https://reddit.com/
+        description: ""
+    - Element:
+      - href: https://app.element.io/
+        icon: /icons/app.element.io.ico.png
+        description: ""
+    - Discord:
+      - href: https://discord.com/channels/XXX
+        icon: /icons/discord.ico.png
+        description: ""
+    - Mastodon:
+      - href: https://mastodon.social
+        icon: /icons/globe.ico.png
+        description: ""
+    - Bluesky:
+      - href: https://bsky.app/
+        icon: /icons/globe.ico.png
+        description: ""
+    - Lemmy:
+      - href: https://lemmy.studio/
+        icon: /icons/globe.ico.png
+        description: ""
+
+- "Entertainment":
+    - YouTube:
+      - abbr: YT
+        href: https://youtube.com/
+        icon: https://youtube.com/favicon.ico
+        description: ""
+    - "The Moment":
+      - href: https://www.youtube.com/@the_moment_work
+        icon: /icons/youtube-the-moment.ico.png
+        description: ""
+    - What But Why:
+      - href: https://waitbutwhy.com/
+        icon: /icons/waitbutwhy.ico.png
+        description: ""
+    - "Hackster.io":
+      - href: https://www.hackster.io/
+        icon: /icons/globe.ico.png
+        description: ""
+
+- Cloud Services:
+  - AWS Console:
+    - href: https://console.aws.amazon.com/console/home?region=us-east-1
+      icon: /icons/console.aws.amazon.ico.png
+      description: ""
+  - Backblaze:
+    - href: https://www.backblaze.com/
+      icon: /icons/backblaze.ico.png
+      description: ""
+
+
+- TV:
+  - Netflix:
+    - href: https://www.netflix.com
+      icon: /icons/netflix.ico.png
+      description: ""
+  - Youtube:
+    - href: https://www.youtube.com/
+      icon: /icons/youtube.ico.png
+      description: ""
+  - Vudu:
+    - href: https://www.vudu.com
+      icon: /icons/vudu.ico.png
+      description: ""
+  - Amazon Prime Video:
+    - href: https://www.amazon.com/Prime-Video/
+      icon: /icons/amazon.ico-0.png
+      description: ""
+  - HBO Max:
+    - href: https://play.hbomax.com/
+      icon: /icons/play.hbomax.ico.png
+      description: ""
+  - Hulu:
+    - href: https://hulu.com/
+      icon: /icons/huli.ico.png
+      description: ""
+
+
+- News:
+  - "The Travel Magazine":
+    - href: https://www.thetravelmagazine.net/
+      icon: /icons/thetravelmagazine.ico.png
+      description: ""
+  - "Google News":
+    - href: https://news.google.com
+      icon: /icons/news.google.ico.png
+      description: ""
+  - "The Crow":
+    - href: https://thecrow.uk/
+      icon: /icons/thecrow.uk.ico.png
+      description: ""
+  - "Jalopnik":
+    - href: https://jalopnik.com/
+      icon: /icons/jalopnik.ico.png
+      description: ""
+  - "KPBS":
+    - href: https://www.kpbs.org/
+      icon: /icons/kpbs.org.ico.png
+      description: ""
+  - "Bleeping Compputer":
+    - href: https://www.bleepingcomputer.com/
+      icon: /icons/bleepingcomputer.ico.png
+      description: ""
+  - "Live Science":
+    - href: https://www.livescience.com/
+      icon: /icons/livescience.ico.png
+      description: ""
+  - "Vice":
+    - href: https://www.vice.com/en
+      icon: /icons/vice.png
+      description: ""
+  - "Wired":
+    - href: https://www.wired.com
+      icon: https://www.wired.com/favicon.ico
+      description: ""
+  - Github:
+      - abbr: GH
+        href: https://github.com/
+        icon: https://github.com/favicon.ico
+        description: ""
+  - Ycombinator:
+      - abbr: YC
+        href: https://news.ycombinator.com/news
+        icon: https://news.ycombinator.com/favicon.ico
+        description: ""
+  - Lobster:
+      - href: https://lobste.rs/
+        icon: https://lobste.rs/favicon.ico
+        description: ""
+  - Phoronix:
+      - href: https://www.phoronix.com/
+        icon: /icons/phoronix.ico.png
+        description: ""
+  - The Register:
+      - href: https://www.theregister.com/
+        icon: /icons/theregister.ico.png
+        description: ""
+
+- People:
+  - "Julia Evans":
+    - href: https://jvns.ca/
+      icon: /icons/jvns.ca.ico.png
+      description: Julia Evans
+  - "Brian Schrader":
+    - href: https://brianschrader.com/
+      icon: /icons/brianschrader.ico.png
+      description: Brian Schrader
+  - "Phillip Tool":
+    - href: https://www.philipotoole.com/
+      icon: /icons/philipotoole.ico.png.png
+      description: Philip Toole
+  - "Josh Rosso":
+    - href: https://joshrosso.com/docs/
+      icon: /icons/joshrosso.ico.png
+      description: Josh Rosso
+  - "Scattered Thoughts":
+    - href: https://scattered-thoughts.net/
+      icon: /icons/scattered-thoughts.ico.png
+  - "hevic":
+    - href: https://henvic.dev/
+      icon: /icons/henvic.dev.ico.png
+  - "anish athalye":
+    - href: https://www.anishathalye.com/
+      icon: /icons/anishathalye.ico.png
+  - "Joel On Software":
+    - href: https://www.joelonsoftware.com/
+      description: Joel on Software
+      icon: /icons/joelonsoftware.ico.png
+  - "Eaton Phil":
+    - href: https://eatonphil.com/
+  - "Yummy Melon":
+    - href: http://yummymelon.com/
+      icon: /icons/yummymelon.ico.png
+      description: 최민수
+  - "Faster Than Lime":
+    - href: https://fasterthanli.me/
+</code></pre><h1 id="config/docker.yaml">config/docker.yaml</h1><a href="#top">top</a><pre><code>---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/docker/
+
+# my-docker:
+#   host: 127.0.0.1
+#   port: 2375
+
+# my-docker:
+#   socket: /var/run/docker.sock
+</code></pre><h1 id="config/kubernetes.yaml">config/kubernetes.yaml</h1><a href="#top">top</a><pre><code>---
+# sample kubernetes config
+</code></pre><h1 id="config/proxmox.yaml">config/proxmox.yaml</h1><a href="#top">top</a><pre><code>---
+# url: https://proxmox.host.or.ip:8006
+# token: username@pam!Token ID
+# secret: secret
+</code></pre><h1 id="config/services.yaml">config/services.yaml</h1><a href="#top">top</a><pre><code>- "Self Hosted":
+    - Uptime Kuma:
+        abbr: UK
+        icon: /icons/uptimekuma.png
+        #href: http://uptime.lan
+        href: http://svc1.lan:3001/
+        description: Monitoring
+        widget:
+            type: uptimekuma
+            url: http://svc1.lan:3001
+            # slug: What dashboard to show
+            slug: dashboard
+            #slug: hosts
+    - Photoprism:
+        abbr: PP
+        icon: /icons/photoprism.example.com.ico.png
+        #href: https://photoprism.example.com
+        href: http://photoprism.lan
+        description: Photos
+        widget:
+            type: photoprism
+            url: http://photoprism.lan
+            username: XXX
+            password: XXX
+            fields: [ "albums", "photos", "videos"]
+    - QBittorrent:
+        abbr: QT
+        icon: /icons/qbittorrent.svg
+        #href: http://svc1.lan:8084/
+        href: http://torrent.lan
+        description: torrent client
+        widget:
+            type: qbittorrent
+            #url: http://torrent.lan
+            url: http://svc2.lan:8084
+            username: XXX
+            password: XXX
+            fields: [ "download", "seed", "upload" ]
+    - Miniflux:
+        abbr: MF
+        icon: /icons/miniflux.ico.png
+        #href: http://svc1.lan:8085/unread
+        href: http://miniflux.lan/unread
+        description: RSS
+        widget:
+         type: miniflux
+         #url: http://svc1.lan:8085/
+         url: http://172.16.0.34:8085/
+         key: "XXX"
+    - Paperless:
+        abbr: PL
+        icon: paperless.png
+        href: http://svc1.lan:8000
+        description: paperless
+    - Home Assistant:
+        abbr: HA
+        icon: home-assistant.png
+        href: https://ha.example.com
+        description: Home Assistant
+    - Gitea:
+        abbr: GT
+        icon: /icons/git.example.com.ico.png
+        href: https://git.example.com/
+        description: git ui
+    - Traefik:
+        abbr: TR
+        icon: /icons/traefik.svg
+        href: http://svc1.lan:8089
+        description: traefik load balancer
+    - Jellyfin:
+        abbr: JF
+        icon: /icons/jellyfin.svg
+        #href: http://video.lan:8096/
+        href: http://jellyfin.lan
+        description: media
+    - Plex:
+        #abbr: JF
+        icon: /icons/plex.png
+        #href: http://video.lan:32400
+        href: http://plex.lan
+        description: media
+    - Immich:
+        abbr: IM
+        icon: /icons/immich.png
+        href: http://svc2.lan:2283/
+        description: Immich
+
+- Syncthing:
+    - Svc1:
+        href: http://svc1.lan:8384/
+        icon: syncthing.png
+    - Svc2:
+        href: http://svc2.lan:8384/
+        icon: syncthing.png
+
+# - More:
+#     - Calendar:
+#         href: https://app.fastmail.com/calendar/month
+#         icon: fastmail.png
+#         widget:
+#             type: calendar
+</code></pre><h1 id="config/settings.yaml">config/settings.yaml</h1><a href="#top">top</a><pre><code>title: Homepage v1
+
+providers:
+  finnhub: XXX
+
+background:
+  image: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
+  #image: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
+  #image: https://images.unsplash.com/photo-1703217889032-c951a2934609?q=80&w=1374&auto=format&fit=crop
+  #blur: sm
+  #saturate: 50
+  opacity: 30
+
+theme: dark
+
+# Supported colors are: slate, gray, zinc, neutral, stone, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose, red, white
+color: zinc
+
+target: _blank
+
+layout:
+
+  "Self Hosted":
+    header: false
+    style: row
+    columns: 4
+    #tab: Main
+    #fiveColumns: true
+    #
+  Syncthing:
+    header: false
+    #icon: syncthing.png
+    style: row
+    columns: 4
+    #tab: Main
+  Daily:
+    style: row
+    columns: 4
+    #tab: Main
+  Social:
+    style: row
+    columns: 4
+    #tab: Main
+  Entertainment:
+    style: row
+    columns: 4
+    #tab: Main
+  News:
+    style: row
+    columns: 4
+    #tab: Main
+  People:
+    style: row
+    columns: 4
+    #tab: Main
+  Tech:
+    style: row
+    columns: 4
+    #tab: Main
+  Cloud Services:
+    style: row
+    columns: 4
+    #tab: Main
+  TV:
+    style: row
+    columns: 4
+    #tab: Main
+</code></pre><h1 id="config/widgets.yaml">config/widgets.yaml</h1><a href="#top">top</a><pre><code>---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/service-widgets
+
+- resources:
+    cpu: true
+    memory: true
+    disk: /
+
+- search:
+    provider: duckduckgo
+    target: _blank
+
+- stocks:
+    provider: finnhub
+    color: true # optional, defaults to true
+    cache: 1 # optional, default caches results for 1 minute
+    watchlist:
+     - NVDA
+     # # Composite indexes
+     # # S&P 500
+     # - GSPC
+     # # Dow jones industrial average
+     # - DJI
+     # # Nasdaq composite
+     # - IXIC
+</code></pre><h1 id="docker-compose.yaml">docker-compose.yaml</h1><a href="#top">top</a><pre><code>networks:
+  svc1:
+    name: svc1
+    external: true
+
+services:
+  homepage:
+    networks:
+      - svc1
+    image: ghcr.io/gethomepage/homepage:latest
+    labels:
+      - traefik.http.routers.homepage.rule=Host(`homepage.lan`)
+      - tsdproxy.enable=true
+    container_name: homepage
+    ports:
+      - 3007:3000
+    volumes:
+      - ${DATA_ROOT}/config:/app/config
+      - ${DATA_ROOT}/images:/app/public/images
+      - ${DATA_ROOT}/icons:/app/public/icons
+      # (optional) For docker integrations, see alternative methods
+      #- /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      HOMEPAGE_ALLOWED_HOSTS: svc1.lan:3007,homepage.lan
+    restart: unless-stopped
+</code></pre></main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays</small></footer></div></body></html>

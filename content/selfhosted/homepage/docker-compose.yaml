@@ -1,0 +1,27 @@
+networks:
+  svc1:
+    name: svc1
+    external: true
+
+services:
+  homepage:
+    networks:
+      - svc1
+    image: ghcr.io/gethomepage/homepage:latest
+    labels:
+      - traefik.http.routers.homepage.rule=Host(`homepage.lan`)
+      - tsdproxy.enable=true
+    container_name: homepage
+    ports:
+      - 3007:3000
+    volumes:
+      - ${DATA_ROOT}/config:/app/config
+      - ${DATA_ROOT}/images:/app/public/images
+      - ${DATA_ROOT}/icons:/app/public/icons
+      # (optional) For docker integrations, see alternative methods
+      #- /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      HOMEPAGE_ALLOWED_HOSTS: svc1.lan:3007,homepage.lan
+    restart: unless-stopped

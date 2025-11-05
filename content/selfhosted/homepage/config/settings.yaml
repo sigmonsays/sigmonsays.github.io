@@ -1,0 +1,67 @@
+title: Homepage v1
+
+providers:
+  finnhub: XXX
+
+background:
+  image: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
+  #image: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
+  #image: https://images.unsplash.com/photo-1703217889032-c951a2934609?q=80&w=1374&auto=format&fit=crop
+  #blur: sm
+  #saturate: 50
+  opacity: 30
+
+theme: dark
+
+# Supported colors are: slate, gray, zinc, neutral, stone, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose, red, white
+color: zinc
+
+target: _blank
+
+layout:
+
+  "Self Hosted":
+    header: false
+    style: row
+    columns: 4
+    #tab: Main
+    #fiveColumns: true
+    #
+  Syncthing:
+    header: false
+    #icon: syncthing.png
+    style: row
+    columns: 4
+    #tab: Main
+  Daily:
+    style: row
+    columns: 4
+    #tab: Main
+  Social:
+    style: row
+    columns: 4
+    #tab: Main
+  Entertainment:
+    style: row
+    columns: 4
+    #tab: Main
+  News:
+    style: row
+    columns: 4
+    #tab: Main
+  People:
+    style: row
+    columns: 4
+    #tab: Main
+  Tech:
+    style: row
+    columns: 4
+    #tab: Main
+  Cloud Services:
+    style: row
+    columns: 4
+    #tab: Main
+  TV:
+    style: row
+    columns: 4
+    #tab: Main
