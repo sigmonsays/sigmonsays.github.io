@@ -1,6 +1,7 @@
 ---
 title: "nix and nixos"
 date: 2023/07/05
+tags: [ "nix" ]
 ---
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->

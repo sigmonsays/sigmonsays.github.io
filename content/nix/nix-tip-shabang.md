@@ -1,6 +1,7 @@
 ---
 title: "nix tip: shell shabang"
 date: 2023/12/20
+tags: [ "nix" ]
 ---
 
 A feature I discovered recently is that nix-shell can be used as an interpreter

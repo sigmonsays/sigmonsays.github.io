@@ -1,6 +1,7 @@
 ---
 title: "nix resources"
 date: 2025/07/13
+tags: [ "nix" ]
 ---
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->

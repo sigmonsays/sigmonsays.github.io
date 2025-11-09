@@ -1,6 +1,7 @@
 ---
 title: "nix-direnv"
 date: 2023/12/14
+tags: [ "nix" ]
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title: "nixos hypervisor"
 date: 2024/08/11
+tags: [ "nixos" ]
 ---
 
 

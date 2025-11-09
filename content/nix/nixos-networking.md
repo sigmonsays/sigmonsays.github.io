@@ -1,6 +1,7 @@
 ---
 title: "nixos networking"
 date: 2023/12/16
+tags: [ "nixos" ]
 ---
 
 
