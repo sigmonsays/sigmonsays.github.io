@@ -50,7 +50,7 @@ func Index(site Site, title string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		for _, page := range site.GetPages(10) {
+		for _, page := range site.GetPages(15) {
 			if page.FrontMatter.SkipIndex {
 				continue
 			}

@@ -11,7 +11,7 @@ templ Index(site Site, title string) {
         @Header(title)
         <main class="article">
 
-        for _, page := range site.GetPages(10) {
+        for _, page := range site.GetPages(15) {
 
           {{
             if page.FrontMatter.SkipIndex {
