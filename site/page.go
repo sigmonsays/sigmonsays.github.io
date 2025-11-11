@@ -1,6 +1,8 @@
 package site
 
 import (
+	"io/fs"
+	"slices"
 	"strings"
 )
 
@@ -13,6 +15,11 @@ type PageMetadata struct {
 	Title       string
 	FrontMatter *FrontMatter
 	Markdown    []byte
+}
+
+type FileEntry struct {
+	Path string
+	Info fs.FileInfo
 }
 
 type PageSlugItem struct {
@@ -37,5 +44,19 @@ func (me *PageMetadata) GetSlug() []PageSlugItem {
 			ret = append(ret, s)
 		}
 	}
+	return ret
+}
+
+// sort by date, newest at top
+func SortPages(pages []*PageMetadata) []PageMetadata {
+	ret := make([]PageMetadata, 0)
+	for _, page := range pages {
+		ret = append(ret, *page)
+	}
+
+	slices.SortFunc(ret, func(a, b PageMetadata) int {
+		return strings.Compare(b.FrontMatter.Date, a.FrontMatter.Date)
+	})
+
 	return ret
 }

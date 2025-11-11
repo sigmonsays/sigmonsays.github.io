@@ -5,6 +5,12 @@ import (
 	"slices"
 )
 
+type Site struct {
+	AllTags []string
+	Pages   []*PageMetadata
+	TagSet  map[string]*TagSet
+}
+
 func (me *Site) GetPages(max int) []PageMetadata {
 	ret := SortPages(me.Pages)
 	if max == 0 || len(ret) < max {
