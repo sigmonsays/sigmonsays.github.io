@@ -10,6 +10,7 @@ templ Archive(site Site, title string) {
       <div class="container">
         @Header(title)
         <main class="article">
+        <h1>{title}</h1>
         for _, page := range site.GetPages(0) {
 
           {{

@@ -9,6 +9,7 @@ templ TagIndex(site Site, title string) {
       <div class="container">
         @Header(title)
         <main class="article">
+        <h1>{title}</h1>
         tags are sorted alphabetically<br/>
 
         for _, tagset := range site.GetTags() {

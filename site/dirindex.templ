@@ -9,6 +9,7 @@ templ DirectoryIndex(site Site, title string, pages []PageMetadata) {
       <div class="container">
         @Header(title)
         <main class="article">
+        <h1>{title}</h1>
         for _, page := range pages {
           <li><a href={ page.Url }>{page.Title}</a>
           if page.FrontMatter.Date != "" {

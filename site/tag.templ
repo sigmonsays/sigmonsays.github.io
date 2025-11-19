@@ -9,6 +9,7 @@ templ PagesWithTag(site Site, pages []PageMetadata, tag string) {
       <div class="container">
         @Header("pages tagged " + tag)
         <main class="article">
+        <h1>Pages with tag {tag}</h1>
         for _, page := range pages {
           <li><a href={page.Url}>{page.FrontMatter.Title}</a></li>
         }
