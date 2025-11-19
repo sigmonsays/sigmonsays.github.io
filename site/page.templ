@@ -32,6 +32,7 @@ templ Page(site Site, page PageMetadata, title string, body string) {
         @Header(title)
         <main class="article">
         @PageTop(site, page)
+        <h1>{title}</h1>
         @templ.Raw(body)
         </main>
         @Footer()
