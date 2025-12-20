@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>shell tools</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><div class="grid-container"><div class="grid-box">&raquo; <a href="/">sigmonsays</a> </div><div class="grid-box" style="text-align: right;">Posted on 2025/12/20 &nbsp; <br>tagged <a href="/tag/shell.html">shell</a> &nbsp;</div></div><p></p><h1>shell tools</h1><p>This is a collection of tools I use that help my productivity in the interactive shell and shell scripts.</p>
+<p>Most of these are simple and the install and configuration is so straightforward that they are all on
+this single page.</p>
+<!-- mtoc-start -->
+<ul>
+<li><a href="#zoxide">zoxide</a></li>
+<li><a href="#jq">jq</a></li>
+<li><a href="#fzf">fzf</a></li>
+<li><a href="#gdu">gdu</a></li>
+</ul>
+<!-- mtoc-end -->
+<h1 id="zoxide">zoxide <a class="anchor" href="#zoxide">_</a></h1>
+<p>zoxide is one of the most recent tools that really enhanced your shell experience.</p>
+<p>It hooks the <code>cd</code> command and tracks directories you frequent, the directories are
+scored, and when you cd again, it lets you quickly cd to something if it's unique.</p>
+<p>There are two ways to use it, first is &quot;cd code myapp&quot; which will look through your
+directory list, and if there is a match, it will bring you to that directory.</p>
+<p>The other way to use zoxide, is to open an interactive fzf of the directory list.</p>
+<p>Simply type <code>cd thing &lt;tab&gt;</code> and fzf will open with matches for <code>thing</code>.</p>
+<p>Since I use <a href="nixos.html">nixos</a> and <a href="home-manager.html">home-manager</a> the setup and install process was relatively straightforward</p>
+<p>I used home-manager for zoxide setup and simply set <code>programs.zoxide.enable=true;</code> then the typical setup
+step is to source it in your <code>~/.bashrc</code>:</p>
+<pre><code>eval &quot;$(zoxide init --cmd cd bash)&quot;
+</code></pre>
+<h1 id="jq">jq <a class="anchor" href="#jq">_</a></h1>
+<p>jq is the swiss army knife of JSON. The syntax is a little cryptic but once you get a hang of it,
+it's super powerful.</p>
+<p>jq is installed vix home-manager using <code>programs.jq.enable = true;</code></p>
+<h1 id="fzf">fzf <a class="anchor" href="#fzf">_</a></h1>
+<p>fuzzy finder, this is super useful for anything you need to quickly select from a list. I use this in shell
+scripts and the terminal.</p>
+<ul>
+<li>CTRL-R - Paste the selected command from history into the command line</li>
+<li>CTRL-T - Paste the selected file path into the command line</li>
+<li>ALT-C - cd into the selected directory</li>
+</ul>
+<h1 id="gdu">gdu <a class="anchor" href="#gdu">_</a></h1>
+<p>a nice interactive du tool</p>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays 2014</small></footer></div></body></html>
