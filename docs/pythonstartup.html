@@ -6,7 +6,7 @@ into a python startup file as a set of libraries and functions.</p>
 <p>create a file in $HOME/<strong>.pythonstartup</strong> and cherry pick anything below that you find
 useful.</p>
 <p>The code below is missing the imports used.. instead copy the text from the imports section</p>
-<h2>tab completion and history</h2>
+<h2 id="tab-completion-and-history">tab completion and history <a class="anchor" href="#tab-completion-and-history">_</a></h2>
 <pre><code>  # Tab completion
   import rlcompleter
   import readline
@@ -21,7 +21,7 @@ useful.</p>
   atexit.register(readline.write_history_file, histfile)
   del histfile
 </code></pre>
-<h2>imports</h2>
+<h2 id="imports">imports <a class="anchor" href="#imports">_</a></h2>
 <p>i'm going to just drop a list of imports used. I'll let you
 sort out which ones are unused with a linter (pyflakes peraps?).</p>
 <pre><code>  import os
@@ -40,7 +40,7 @@ sort out which ones are unused with a linter (pyflakes peraps?).</p>
   import os
   from urllib import quote_plus,unquote,quote
 </code></pre>
-<h2>custom prompt and line counter</h2>
+<h2 id="custom-prompt-and-line-counter">custom prompt and line counter <a class="anchor" href="#custom-prompt-and-line-counter">_</a></h2>
 <pre><code># use a custom prompt
 class LineCounter(object):
     def __init__(self):
@@ -55,7 +55,7 @@ sys.ps1 = line
 <pre><code>&gt;&gt;&gt; line.count
 6
 </code></pre>
-<h2>handy string functions</h2>
+<h2 id="handy-string-functions">handy string functions <a class="anchor" href="#handy-string-functions">_</a></h2>
 <pre><code>  def safe_str(s):
       try:
           return str(s)
@@ -65,7 +65,7 @@ sys.ps1 = line
   quote = lambda s: urllib.quote(s)
   unquote = lambda s: urllib.unquote(s)
 </code></pre>
-<h2>file size utilities</h2>
+<h2 id="file-size-utilities">file size utilities <a class="anchor" href="#file-size-utilities">_</a></h2>
 <p>format bytes as a human printable form</p>
 <pre><code>  def formatSize(bytes, base=1024, precision=2):
       units = [ 'b', 'kb', 'mb', 'gb', 'tb', 'pb', 'eb', 'xb', 'yb' ]
@@ -111,7 +111,7 @@ sys.ps1 = line
   units = 'bit kibibyte mebibyte gibibyte tebibyte pebibyte exbibyte zebibyte yobibyte'
   ConvertSize(1024)._install(units, globals())
 </code></pre>
-<h2>time utilities</h2>
+<h2 id="time-utilities">time utilities <a class="anchor" href="#time-utilities">_</a></h2>
 <pre><code>  def formatTime(s, legend = [  'd', 'h', 'm', 's' ]):
       units = [  86400, 3600, 60, 1 ]
       r = s
@@ -181,7 +181,7 @@ sys.ps1 = line
   hours = ConvertTime.hours
   days = ConvertTime.days
 </code></pre>
-<h2>misc utilities</h2>
+<h2 id="misc-utilities">misc utilities <a class="anchor" href="#misc-utilities">_</a></h2>
 <pre><code>  def to_hex(t, nbytes):
       &quot;Format text t as a sequence of nbyte long values separated by spaces.&quot;
       chars_per_item = nbytes * 2
@@ -192,7 +192,7 @@ sys.ps1 = line
               yield hex_version[start:start + chars_per_item]
       return ' '.join(chunkify())
 </code></pre>
-<h2>display hooks</h2>
+<h2 id="display-hooks">display hooks <a class="anchor" href="#display-hooks">_</a></h2>
 <p>this display hook will automatically pretty print returned values from cli expressions</p>
 <pre><code>  # display hook hack to pretty print everything by default
   # use pprint_on or pprint_off to enable/disable pretty printing

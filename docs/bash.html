@@ -5,12 +5,12 @@ primarily serves as short snippets of bash recipes I often want to re-use.</p>
 <li><a href="#simple-logging-redirect">Simple Logging Redirect</a></li>
 <li><a href="#human-size">Human Size</a></li>
 </ul>
-<h3>Simple Logging Redirect</h3>
+<h3 id="simple-logging-redirect">Simple Logging Redirect <a class="anchor" href="#simple-logging-redirect">_</a></h3>
 <p>If you have a bash script you wish to add logging to a simple approach is to use <code>exec</code> and redirect the output to a file.</p>
 <pre><code> exec &gt; &gt;(tee mylog) 2&gt;&amp;1
 </code></pre>
 <p>This is straight from the bash FAQ <a href="http://mywiki.wooledge.org/BashFAQ/106">#106</a> so go there for details.</p>
-<h3>Human Size</h3>
+<h3 id="human-size">Human Size <a class="anchor" href="#human-size">_</a></h3>
 <p>This function converts a integer to the appropriate human size</p>
 <pre><code>  function human_size {
    local B=$1

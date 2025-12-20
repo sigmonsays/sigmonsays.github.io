@@ -16,7 +16,7 @@ it is a pretty expensive operation when there is a lot of dependencies.</p>
 </ul>
 <p>because i'm not interested in explaining how the other 2 method work, i'll leave that out. However, let me
 explain how the docker build works.</p>
-<h2>docker</h2>
+<h2 id="docker">docker <a class="anchor" href="#docker">_</a></h2>
 <p>The idea is to exploit the layered file system of containers to provide build dependencies. Since
 its a copy on write file system, this means providing a container with all build deps present is
 incredibly fast.</p>

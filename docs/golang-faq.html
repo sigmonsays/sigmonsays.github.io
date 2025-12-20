@@ -4,9 +4,9 @@
 <li><a href="#installing-golang-tools">Installing golang tools</a></li>
 <li><a href="#errors-are-values">Errors are values </a></li>
 </ul>
-<h1>Network programming in Go</h1>
+<h1 id="network-programming-in-go">Network programming in Go <a class="anchor" href="#network-programming-in-go">_</a></h1>
 <p><a href="http://whispering-gophers.appspot.com/talk.slide#1">http://whispering-gophers.appspot.com/talk.slide#1</a></p>
-<h1>installing golang tools</h1>
+<h1 id="installing-golang-tools">installing golang tools <a class="anchor" href="#installing-golang-tools">_</a></h1>
 <p>is there any way i could install my go binaries wherever i want using go tools?</p>
 <p><code>answer</code></p>
 <p>typical solution is to install tools in a different GOPATH</p>
@@ -17,7 +17,7 @@ go get -u golang.org/x/tools/cmd/goimports
 <p>The only portions you should add to your shell environment (ie ~/.bash_profile) is just the PATH portion.
 Do not export GOPATH by default as a security measure. Any remote shell exploit could in theory instruct
 the go tool to install and run arbitrary code!</p>
-<h1>Errors are values</h1>
+<h1 id="errors-are-values">Errors are values <a class="anchor" href="#errors-are-values">_</a></h1>
 <p>This feature of go about errors being values was not immediately obvious to me until I read through the spec about how objects are compared</p>
 <p>In the spec, <a href="https://golang.org/ref/spec#Comparison_operators">https://golang.org/ref/spec#Comparison_operators</a> about pointers it says this</p>
 <blockquote>

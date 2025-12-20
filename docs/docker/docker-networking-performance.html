@@ -22,7 +22,7 @@ f0 api:4.2.0-2   X  Up 14 hours  0.0.0.0:5002-&gt;8080/tcp   dev1-api-2
 performance degrades around 40-50% due to docker having to reverse proxy the connection in software.</p>
 <p>I really believe that if performance is important, there should be a option of disabling docker-proxy,
 but I will focus on this more later if I really need to.</p>
-<h2>issues with docker-proxy</h2>
+<h2 id="issues-with-docker-proxy">issues with docker-proxy <a class="anchor" href="#issues-with-docker-proxy">_</a></h2>
 <ul>
 <li>software reverse proxy should not be enabled by default</li>
 <li>network performance degradation up to 50% is not acceptable when traffic is <em>accidently</em>

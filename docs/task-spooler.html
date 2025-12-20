@@ -20,7 +20,7 @@ ts -c 1
 <p><code>ts-wait-all</code> script waits for all jobs in the queue to finish:</p>
 <pre><code>ts -l | awk '$1 ~ /^[0-9]+$/ {print $1}' | xargs -I^ ts -w ^
 </code></pre>
-<h1>A quick example</h1>
+<h1 id="a-quick-example">A quick example <a class="anchor" href="#a-quick-example">_</a></h1>
 <p><code>job.sh</code> script:</p>
 <pre><code>#!/usr/bin/env bash
 
@@ -46,7 +46,7 @@ ts ./job.sh https://linux.die.net/man/1/pstree
 <p>Finally if you care to you can wait for it all to finish</p>
 <pre><code>ts-wait-all
 </code></pre>
-<h1>Capturing exit code</h1>
+<h1 id="capturing-exit-code">Capturing exit code <a class="anchor" href="#capturing-exit-code">_</a></h1>
 <p>One way to capture the exit code of the jobs is to write a finish script,</p>
 <p><code>finish.sh</code>:</p>
 <pre><code>#!/usr/bin/env bash

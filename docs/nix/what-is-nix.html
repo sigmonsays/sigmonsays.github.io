@@ -12,7 +12,7 @@
 <li><a href="#resources">Resources</a></li>
 </ul>
 <!-- markdown-toc end -->
-<h1>Summary</h1>
+<h1 id="summary">Summary <a class="anchor" href="#summary">_</a></h1>
 <p>Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required
 may not be worth it to some people.</p>
 <p>Nix overall has so many features that it's worth understanding what's possible</p>
@@ -27,7 +27,7 @@ may not be worth it to some people.</p>
 <li>Everything above is reproducible</li>
 </ul>
 <p>I hope this document aims to explain how i've used each one and my experiences with it. There is not a lot of information out there and nix error messages are anything but useful.</p>
-<h1>Why NixOS</h1>
+<h1 id="why-nixos">Why NixOS <a class="anchor" href="#why-nixos">_</a></h1>
 <ul>
 <li>declarative</li>
 <li>reproducible</li>
@@ -63,14 +63,14 @@ and need to uninstall it, i just comment out the &quot;install package&quot; lin
 <p>enable alsa</p>
 <pre><code> sound.enable = true;
 </code></pre>
-<h1>NixOS</h1>
+<h1 id="nixos">NixOS <a class="anchor" href="#nixos">_</a></h1>
 <p>nixos provides a entire OS that is defined in the same nix language that nix package manager and home manager uses.</p>
 <p>I've only bootstraped a VM using nixos and that was relatively straighforward. I followed <a href="https://gist.github.com/tarnacious/f9674436fff0efeb4bb6585c79a3b9ff">this</a> guide. A working verion I modified is <a href="https://github.com/sigmonsays/nix-experiments/tree/main/nix-qemu2">here</a></p>
 <p>Example nixos configurations are <a href="https://github.com/sigmonsays/nix-experiments/tree/main/nix/nixos">here</a></p>
 <p>I installed nixos on a Lenovo ThinkPad P15S Gen 2 but gave up quickly when the graphics failed to function. I ended up returning the laptop for other reasons so my nixos experience was cut short.</p>
 <p>I purchased an old Thinkpad T480 and put NIXOS on it. The installation went smoothly and it's my primary NIXOS laptop. I'm surprised by
 how quickly I got everything working.</p>
-<h1>Home Manager</h1>
+<h1 id="home-manager">Home Manager <a class="anchor" href="#home-manager">_</a></h1>
 <p>Since nix runs everywhere, I have it as part of my dotfile repo and it naturally fits</p>
 <p>Figuring out how to organize nix code was very difficult for me and I refactored a couple times. First I just wrote it, then I tried doing hostname detection and importing things dynamically but that failed.</p>
 <p>Where I ended up was having a entry point per device and then including modules based on what
@@ -78,9 +78,9 @@ device.nix file I was in.</p>
 <p>All of my devices run home manager. On MacOS i've used it to replace brew. I have a module for macos
 that installed more modern versions of bash and coreutils in addition to all the other things I use
 like emacs, jq, fzf, tmux, gdu, etc.</p>
-<h1>Build Docker Containers</h1>
+<h1 id="build-docker-containers">Build Docker Containers <a class="anchor" href="#build-docker-containers">_</a></h1>
 <p>I have yet to actually do this but will update this section when I get there</p>
-<h1>Development Shells</h1>
+<h1 id="development-shells">Development Shells <a class="anchor" href="#development-shells">_</a></h1>
 <p>I've used nix to build development shells for various tools.</p>
 <p>One such repository is a go code base which manages dotfiles named <a href="https://github.com/sigmonsays/dotbot/blob/main/shell.nix">dotbot</a>. Specifically the <code>shell.nix</code> file
 contains the details on what's needed to compile and run the application.</p>
@@ -103,12 +103,12 @@ direnv: using flake
 now they can be defined in code and kept in the repository.</p>
 <p>I've also used this same concept for including various tools for scripts such as image processing
 workflows where I needed exiftool, imagemagick and libheif.</p>
-<h1>Nix Cache</h1>
+<h1 id="nix-cache">Nix Cache <a class="anchor" href="#nix-cache">_</a></h1>
 <p>This feature makes nix really nice.</p>
 <p>You get the best of both worlds with a nix binary cache since most things can be pulled as a binary from
 the cache.</p>
 <p>iF the inputs result in a hash that's not in the cache, nix will build it from source.</p>
-<h1>Flakes</h1>
+<h1 id="flakes">Flakes <a class="anchor" href="#flakes">_</a></h1>
 <p>The main purpose of flakes is to have more control over the inputs used to install a package. For instance if your nixos configuration.nix
 has the stable channel and you try to take someone elses code that expects unstable channel, there could be problems. It might work but the
 two systems are not the exact same. Flakes solves this by enforcing the inputs.</p>
@@ -128,7 +128,7 @@ nix search nixpkgs fzf
 # Search a specific channel (23.05)
 nix search github:NixOS/nixpkgs/nixos-23.05 fzf
 </code></pre>
-<h1>Resources</h1>
+<h1 id="resources">Resources <a class="anchor" href="#resources">_</a></h1>
 <p>One of the biggest negatives of nix is it's lack and fragmentation of documenttation</p>
 <p>This section aims to collect the resources I found useful</p>
 <ul>

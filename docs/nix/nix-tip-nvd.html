@@ -10,7 +10,7 @@
 <li><a href="#nix-diff">nix-diff</a></li>
 </ul>
 <!-- markdown-toc end -->
-<h1>A naive approach</h1>
+<h1 id="a-naive-approach">A naive approach <a class="anchor" href="#a-naive-approach">_</a></h1>
 <p>I wondered since everything is in the nix store, why not just diff it?</p>
 <p>So as an experiment I set off to do just that</p>
 <p>first step is to clear out any garbage</p>
@@ -35,7 +35,7 @@ cat after.txt | cut -d- -f2- | sort | grep .drv$ &gt; after.names
 &gt; firefox-release-bin-unwrapped-121.0.drv
 </code></pre>
 <p>it's pretty hard to read this so there has to be a better way</p>
-<h1>nvd</h1>
+<h1 id="nvd">nvd <a class="anchor" href="#nvd">_</a></h1>
 <p>the solution i landed on that worked great is nvd. I didn't bother looking into
 other solutions since it can work with both home-manager and nixos.</p>
 <p>For nixos</p>
@@ -85,10 +85,10 @@ Closure size: 2102 -&gt; 2102 (54 paths added, 54 paths removed, delta +0, disk 
 detect if a kernel update occured</p>
 <pre><code>nvd diff $(ls -d1v /nix/var/nix/profiles/system-*-link|tail -n 2)
 </code></pre>
-<h1>nix store diff-closure</h1>
+<h1 id="nix-store-diff-closure">nix store diff-closure <a class="anchor" href="#nix-store-diff-closure">_</a></h1>
 <p>I have yet to explore this method but people demonstrated invocations here</p>
 <p><a href="https://www.reddit.com/r/NixOS/comments/x5i7nb/how_to_see_whats_been_updated_after_nix_flake/">https://www.reddit.com/r/NixOS/comments/x5i7nb/how_to_see_whats_been_updated_after_nix_flake/</a></p>
-<h1>nix-diff</h1>
+<h1 id="nix-diff">nix-diff <a class="anchor" href="#nix-diff">_</a></h1>
 <p><a href="https://github.com/Gabriella439/nix-diff">https://github.com/Gabriella439/nix-diff</a></p>
 <p>This tool is capable of generating a diff given two derivations</p>
 <p>I did not investigate usage of this tool.</p>

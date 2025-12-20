@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>nixos networking</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><div class="grid-container"><div class="grid-box">&raquo; <a href="/">sigmonsays</a> / <a href="/nix">nix</a> &nbsp;</div><div class="grid-box" style="text-align: right;">Posted on 2023/12/16 &nbsp; <br>tagged <a href="/tag/nixos.html">nixos</a> &nbsp;</div></div><p></p><h1>nixos networking</h1><h1>Bridged Networking</h1>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>nixos networking</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><div class="grid-container"><div class="grid-box">&raquo; <a href="/">sigmonsays</a> / <a href="/nix">nix</a> &nbsp;</div><div class="grid-box" style="text-align: right;">Posted on 2023/12/16 &nbsp; <br>tagged <a href="/tag/nixos.html">nixos</a> &nbsp;</div></div><p></p><h1>nixos networking</h1><h1 id="bridged-networking">Bridged Networking <a class="anchor" href="#bridged-networking">_</a></h1>
 <p>I recently switched my main desktop from ubuntu to nixos. So I started down the road of attempting
 to run virtual machines on nixos as a development stack.</p>
 <p><code>All I want for christmas is a bridged network</code></p>
@@ -25,7 +25,7 @@ a set of options and put them together to make something that works.</li>
 <p>whatever happened i'm not sure, i had to reboot the box for the network to come up properly. I discovered this by making a nixos VM and configuring it just like I did before. miraculously
 it worked!</p>
 <p>I thought WTH did i do wrong... At the end of the day I was fed up with the amount of time I put into it and wanted to move on. So I did.</p>
-<h2>dns fun</h2>
+<h2 id="dns-fun">dns fun <a class="anchor" href="#dns-fun">_</a></h2>
 <p>Second big woes was DNS</p>
 <ul>
 <li>first i tried 'networking.search' and that did nothing</li>
@@ -34,7 +34,7 @@ it worked!</p>
 <li>getting 'search lan' functionality is surprisingly difficult</li>
 <li>somehow i was automatically switched over to 'resolved' functionality (services.resolved.enable) when enabling systemd.network</li>
 </ul>
-<h1>Working configuration</h1>
+<h1 id="working-configuration">Working configuration <a class="anchor" href="#working-configuration">_</a></h1>
 <p>The final configration that setup bridged networking for my host</p>
 <pre><code>    # This network config uses sytemd networkd with a bridge
     {
@@ -73,7 +73,7 @@ it worked!</p>
     ];
     }
 </code></pre>
-<h1>Final Thoughts</h1>
+<h1 id="final-thoughts">Final Thoughts <a class="anchor" href="#final-thoughts">_</a></h1>
 <p>I think that nixos might be the best OS i've used in terms of reproducibility.</p>
 <p>I usually dont have a lot of problem these days with ubuntu but having to upgrade between distributions and set everything back up was a pain. Mostly because I didn't remember what
 I wanted until I needed it right away. There was some things that were old on ubuntu like i3, tmux and polybar that I would compile from source.</p>

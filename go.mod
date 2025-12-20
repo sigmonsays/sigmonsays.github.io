@@ -8,4 +8,7 @@ require (
 	gopkg.in/yaml.v3 v3.0.1
 )
 
-require go.abhg.dev/goldmark/wikilink v0.6.0 // indirect
+require (
+	go.abhg.dev/goldmark/anchor v0.2.0 // indirect
+	go.abhg.dev/goldmark/wikilink v0.6.0 // indirect
+)

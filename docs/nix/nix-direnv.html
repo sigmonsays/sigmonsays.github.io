@@ -15,7 +15,7 @@
 <li><a href="#references">References</a></li>
 </ul>
 <!-- markdown-toc end -->
-<h1>direnv</h1>
+<h1 id="direnv">direnv <a class="anchor" href="#direnv">_</a></h1>
 <p>The power of nix with direnv is easy to understate. This post is to explains some ways to use it.</p>
 <p>direnv is a nice tool to use which allows you to load the appropriate environment variables when you cd
 to a specific directory. supported shells are bash, zsh, tcsh, fish, elvish, and powershell.</p>
@@ -34,9 +34,9 @@ direnv: export +FOO
 $ echo $FOO
 bar
 </code></pre>
-<h1>nix-direnv</h1>
+<h1 id="nix-direnv">nix-direnv <a class="anchor" href="#nix-direnv">_</a></h1>
 <p>nix-direnv [2]  provides the <code>use flake</code> and <code>use nix</code> functionality for direnv</p>
-<h1>Nix Shell</h1>
+<h1 id="nix-shell">Nix Shell <a class="anchor" href="#nix-shell">_</a></h1>
 <p>It's possible to get a shell with a arbitrary package installed using nix-shell. This allows your computer
 to remain pristine except for when you're working on a specific project.</p>
 <p>Evaluating applications becomes fearless because everything needed to install said application, all it's
@@ -54,7 +54,7 @@ command not found: fortune
 <p>Multiple packages</p>
 <pre><code>$ nix-shell -p fortune htop
 </code></pre>
-<h1>Rust development environment</h1>
+<h1 id="rust-development-environment">Rust development environment <a class="anchor" href="#rust-development-environment">_</a></h1>
 <p>In order to develop with rust, I installed rustup on my system. Installing rustup is
 a step i perform outside of the development shell.</p>
 <p>The unnamed application i built these examples from uses environment variables
@@ -91,7 +91,7 @@ mkShell {
 <p>finally compile the project</p>
 <pre><code>  cargo build
 </code></pre>
-<h1>Go development environment</h1>
+<h1 id="go-development-environment">Go development environment <a class="anchor" href="#go-development-environment">_</a></h1>
 <p>Just like the rust development environment we need two files, .envrc and shell.nix</p>
 <p>.envrc</p>
 <pre><code>export WORKSPACE=&quot;$(pwd)&quot;
@@ -114,7 +114,7 @@ mkShell {
 }
 </code></pre>
 <p>The shell.nix contents are specific to a project that uses grpc gateway and protobuf.</p>
-<h1>Nix Shell and Flakes</h1>
+<h1 id="nix-shell-and-flakes">Nix Shell and Flakes <a class="anchor" href="#nix-shell-and-flakes">_</a></h1>
 <p>The same .envrc and shell.nix can be used with flakes. The addition of a flake.nix file
 indicates what upstream nixos to use.</p>
 <p>flake.nix</p>
@@ -149,7 +149,7 @@ indicates what upstream nixos to use.</p>
 <p>Now can can use flakes</p>
 <pre><code>nix shell
 </code></pre>
-<h1>Audio / Video Transcoding tools</h1>
+<h1 id="audio--video-transcoding-tools">Audio / Video Transcoding tools <a class="anchor" href="#audio--video-transcoding-tools">_</a></h1>
 <p>Changing to the transcoding-tools directory automatically loads all the tools I need to process video</p>
 <pre><code>cat ~/code/random-code/transcoding-tools/shell.nix
 
@@ -171,7 +171,7 @@ mkShell {
   ];
 }
 </code></pre>
-<h1>Photos and Videos</h1>
+<h1 id="photos-and-videos">Photos and Videos <a class="anchor" href="#photos-and-videos">_</a></h1>
 <p>Another example, I wrote a program call <code>picman</code> which sorts photos with my own rules. This program needs exiftool and libheif to function.</p>
 <p>Changing directory to my photos automatically loads the shell.nix for Photos and Videos and all of these tools are then made available to use</p>
 <pre><code>{ pkgs ? import &lt;nixpkgs&gt; {} }:
@@ -185,7 +185,7 @@ mkShell {
   ];
 }
 </code></pre>
-<h1>Static Website</h1>
+<h1 id="static-website">Static Website <a class="anchor" href="#static-website">_</a></h1>
 <p>This website is created using hugo, here is it's shell.nix</p>
 <pre><code>{ pkgs ? import &lt;nixpkgs&gt; {} }:
 
@@ -195,15 +195,15 @@ with pkgs; mkShell {
   ];
 }
 </code></pre>
-<h1>Emacs</h1>
+<h1 id="emacs">Emacs <a class="anchor" href="#emacs">_</a></h1>
 <p>Since emacs is the editor i use (doom emacs to be specific) i figured it's worth mentioning that I also use</p>
 <p>in ~/.doom.d/init.el I have <code>:tools direnv</code> set which sets up <code>emacs-direnv</code> [3]. This allows various tools
 like gopls and rust-analyzer to function properly.</p>
-<h1>hey gcroots, save some of that garbage!</h1>
+<h1 id="hey-gcroots-save-some-of-that-garbage">hey gcroots, save some of that garbage! <a class="anchor" href="#hey-gcroots-save-some-of-that-garbage">_</a></h1>
 <p>So it's worth mentioning that <code>use flake</code> saves build result in a hidden file where .envrc resides. This has the effect
 of protecting the shell contents from getting garbage collected. This is ideal imho as constantly having to re-download
 and setup a shell is annoying.</p>
-<h1>References</h1>
+<h1 id="references">References <a class="anchor" href="#references">_</a></h1>
 <ul>
 <li>[1] <a href="https://direnv.net/">https://direnv.net/</a></li>
 <li>[2] <a href="https://github.com/nix-community/nix-direnv">https://github.com/nix-community/nix-direnv</a></li>

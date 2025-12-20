@@ -10,13 +10,13 @@
 <li><a href="#honorable-mention-photostructure">honorable mention: Photostructure</a></li>
 </ul>
 <!-- markdown-toc end -->
-<h1>Introduction</h1>
+<h1 id="introduction">Introduction <a class="anchor" href="#introduction">_</a></h1>
 <p>Google photos was amazing in the beginning, the photos application did what I wanted and in general it was a good experience</p>
 <p>I was somewhat of an early adopter, so I had a plethora of photos stored in google photos.  I didn't really
 have to think about photos, it was just handled for me.</p>
 <p>Some of the features were pretty useful such as facial recognition and automatic event creation but they didn't
 really end up being needed.</p>
-<h1>Walled garden</h1>
+<h1 id="walled-garden">Walled garden <a class="anchor" href="#walled-garden">_</a></h1>
 <p>A series of decisions were made by google, which I do not care to fully understand. When they stopped
 supporting integrations and tightened the walled garden, my concern grew.</p>
 <p>I was trying to use rclone to backup my photos, but google removed the ability to access the originals. That is via the
@@ -31,24 +31,24 @@ metadata it collects from photos. This includes not only location but facial rec
 I take a photo of (directly or indirectly) being indexed. It is very big brother.</p>
 <p>The final straw was when I ran out of space and was told I needed to buy more. So I cleaned up some data to buy some time, did a photos takeout
 and begin my research.</p>
-<h1>The solution</h1>
+<h1 id="the-solution">The solution <a class="anchor" href="#the-solution">_</a></h1>
 <p>use <a href="#syncthing">Syncthing</a> to copy originals from my phone to my server</p>
 <p>use <a href="#picman">picman</a> as a way to automatically import and organize the photos on my NAS</p>
 <p>use <a href="#photoprism">photoprism</a> as a webUI to look at photos</p>
-<h1>syncthing</h1>
+<h1 id="syncthing">syncthing <a class="anchor" href="#syncthing">_</a></h1>
 <p>syncthing was chosen as a way to have more control over the photos being copied between devices. I didn't want any software in the middle modifying
 the photo (resizing it like google docs, transcoding it, etc).</p>
 <p>Most if not all photo solutions support an external folder, so I can just import the originals</p>
 <p>syncthing is pretty straight forward to setup, so I wont go into the details here.</p>
-<h1>picman</h1>
+<h1 id="picman">picman <a class="anchor" href="#picman">_</a></h1>
 <p>I wrote a program that lets me import photos into a folder structure of <code>Year/Month</code> by reading exif data</p>
 <p>This program simply runs from a cron and imports from various syncthing sources</p>
 <p>picman runs from a cronjob and imports photos every 30 minutes.</p>
-<h1>photoprism</h1>
+<h1 id="photoprism">photoprism <a class="anchor" href="#photoprism">_</a></h1>
 <p>This is the interface I settled on.</p>
 <p>It seems stable enough and does the job well. I turned off facial recognition and other AI type features.</p>
 <p>I deploy this on my server using docker-compose</p>
-<h1>honorable mention: Photostructure</h1>
+<h1 id="honorable-mention-photostructure">honorable mention: Photostructure <a class="anchor" href="#honorable-mention-photostructure">_</a></h1>
 <p>I want to mention photostructure because I really liked the UI and UX, but I spent too much time
 trying to get it working and be stable.</p>
 <p>The TLDR is it would randomly hang and stop importing and I could never figure out know why. I think
