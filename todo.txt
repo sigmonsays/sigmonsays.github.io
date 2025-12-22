@@ -2,3 +2,6 @@
   - single page with everything it uses
 
 - write about syncthing - does it belong in selfhosted?
+- write about incus ?
+- write about tailscale ?
+- write about building your own static site generator ?
