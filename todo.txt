@@ -1,0 +1,4 @@
+- write about i3 - should it be its own post, i3-desktop ?
+  - single page with everything it uses
+
+- write about syncthing - does it belong in selfhosted?

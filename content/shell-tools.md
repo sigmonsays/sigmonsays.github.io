@@ -15,6 +15,9 @@ this single page.
 * [zoxide](#zoxide)
 * [jq](#jq)
 * [fzf](#fzf)
+* [git](#git)
+* [curl](#curl)
+* [make](#make)
 * [gdu](#gdu)
 
 <!-- mtoc-end -->
@@ -56,6 +59,9 @@ scripts and the terminal.
 - CTRL-T - Paste the selected file path into the command line
 - ALT-C - cd into the selected directory
 
+# git
+# curl
+# make
 # gdu
 
 a nice interactive du tool
