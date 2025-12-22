@@ -1,7 +1,15 @@
-- write about i3 - should it be its own post, i3-desktop ?
+-
+
+write about i3 - should it be its own post, i3-desktop ?
   - single page with everything it uses
 
-- write about syncthing - does it belong in selfhosted?
-- write about incus ?
-- write about tailscale ?
+- write about syncthing
+  - does it belong in selfhosted?
+
 - write about building your own static site generator ?
+  - put it under projects
+
+
+- write about tailscale ?
+- write about incus ?
+  - already have nixos-hypervisor talking about incus

@@ -12,6 +12,7 @@ this single page.
 
 <!-- mtoc-start -->
 
+* [bash-completion](#bash-completion)
 * [zoxide](#zoxide)
 * [jq](#jq)
 * [fzf](#fzf)
@@ -21,6 +22,9 @@ this single page.
 * [gdu](#gdu)
 
 <!-- mtoc-end -->
+
+# bash-completion
+
 
 # zoxide
 

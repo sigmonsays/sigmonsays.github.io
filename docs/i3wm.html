@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>i3</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><div class="grid-container"><div class="grid-box">&raquo; <a href="/">sigmonsays</a> </div><div class="grid-box" style="text-align: right;">Posted on 2021/08/04 &nbsp; <br></div></div><p></p><h1>i3</h1><p>I have switched from enlightenment to i3wm and wanted to talk about my experiences. At the time I was compiling enlightenment from source using a terrible set
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>i3 window manager</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><div class="grid-container"><div class="grid-box">&raquo; <a href="/">sigmonsays</a> </div><div class="grid-box" style="text-align: right;">Posted on 2021/08/04 &nbsp; <br>tagged <a href="/tag/i3.html">i3</a> &nbsp;</div></div><p></p><h1>i3 window manager</h1><p>I have switched from enlightenment to i3wm and wanted to talk about my experiences. At the time I was compiling enlightenment from source using a terrible set
 of bash scripts I wrote myself and maintained over the years. This was because I started running the latest version of e from git.</p>
 <p>If memory serves, I switched from fluxbox to enlightenment when enlightenment 0.17 came out, which was somewhere near the year 2012. Needless to say it
 takes a lot to shift someone who has been using e for so long.</p>
@@ -13,5 +13,95 @@ takes a lot to shift someone who has been using e for so long.</p>
 <p>its controllable via i3-msg which are basically the same commands used in ~/.i3/config, so it is much more scriptable than enlightenment</p>
 <p>being keyboard driven it allows me to switch workspaces and windows without ever leaving the home keys. This has huge implications on development workflows which
 i'll get into later.</p>
-<p><code>workflows</code></p>
+<h1 id="contents">Contents <a class="anchor" href="#contents">_</a></h1>
+<!-- mtoc-start -->
+<ul>
+<li><a href="#additional-tools">Additional tools</a></li>
+<li><a href="#pulseaudio">pulseaudio</a></li>
+<li><a href="#polybar">polybar</a></li>
+<li><a href="#xsecurelock">xsecurelock</a></li>
+<li><a href="#rofi">rofi</a></li>
+<li><a href="#xscreensaver">xscreensaver</a></li>
+<li><a href="#x11-tools">x11 tools</a></li>
+<li><a href="#xrandr">xrandr</a></li>
+<li><a href="#thunar">thunar</a></li>
+<li><a href="#gtk-things">gtk things</a></li>
+</ul>
+<!-- mtoc-end -->
+<h1 id="additional-tools">Additional tools <a class="anchor" href="#additional-tools">_</a></h1>
+<p>Since i3 is just a window manager, you need additional tools for a complete environment</p>
+<ul>
+<li><a href="#polybar">polybar</a></li>
+<li>caffeine-ng</li>
+<li>wego</li>
+<li>gsimplecal</li>
+<li>xdotool</li>
+<li>wmctrl</li>
+<li>dunst</li>
+<li>feh</li>
+</ul>
+<h1 id="pulseaudio">pulseaudio <a class="anchor" href="#pulseaudio">_</a></h1>
+<p>I chose pipewire sound system for i3</p>
+<p>It supports alsa and pulseaudio as well so I enabled those</p>
+<p>This is the core config line for nixos</p>
+<pre><code>  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+  };
+</code></pre>
+<h1 id="polybar">polybar <a class="anchor" href="#polybar">_</a></h1>
+<p>polybar provides a small bar at the top of the screen for workspaces, system metrics and volume controls.</p>
+<p>The left column</p>
+<ul>
+<li>workspaces</li>
+</ul>
+<p>The middle column</p>
+<ul>
+<li>load average</li>
+</ul>
+<p>The right column</p>
+<ul>
+<li>mouse battery provided by razer-cli</li>
+<li>cpu usage</li>
+<li>root filesystem usage</li>
+<li>download speed</li>
+<li>ping latency</li>
+<li>primary interface state</li>
+<li>volume control provided by pavucontrol</li>
+<li>current date</li>
+<li>current weather provided by wego</li>
+</ul>
+<h1 id="xsecurelock">xsecurelock <a class="anchor" href="#xsecurelock">_</a></h1>
+<p>xsecurelock and xautolock implement my screen lock solution</p>
+<h1 id="rofi">rofi <a class="anchor" href="#rofi">_</a></h1>
+<p>The main use cases for fori are to run programs, switch windows, ssh to hosts and copy emoji's</p>
+<p>I want to spend more time on rofi plugins but I have not gotten around to it</p>
+<h1 id="xscreensaver">xscreensaver <a class="anchor" href="#xscreensaver">_</a></h1>
+<p>I <em>LOVE</em> xscreensaver, i'm going to be sad when I can't use it anymore.</p>
+<h1 id="x11-tools">x11 tools <a class="anchor" href="#x11-tools">_</a></h1>
+<p>There is a whole slew of random x11 tools i've acquired over the years</p>
+<ul>
+<li>xinit</li>
+<li>xrandr</li>
+<li>xhost</li>
+<li>xkill</li>
+<li>xdpyinfo</li>
+<li>xmodmap</li>
+</ul>
+<h1 id="xrandr">xrandr <a class="anchor" href="#xrandr">_</a></h1>
+<p>I wrote a little script named xrandr.sh to run at startup in i3 to control the configuration
+of my dual 4k screens.</p>
+<pre><code>left=DP-2
+right=DP-4
+res=3840x2160
+pos=3840
+xrandr  \
+ --output $left --auto --primary --mode $res --pos 0x0 --rotate normal \
+ --output $right --auto --mode $res --pos ${pos}x0 --rotate normal --right-of $left
+</code></pre>
+<h1 id="thunar">thunar <a class="anchor" href="#thunar">_</a></h1>
+<p>GUI file browser</p>
+<h1 id="gtk-things">gtk things <a class="anchor" href="#gtk-things">_</a></h1>
+<p>I enabled <code>dconf</code> for gnome programs and GTK theming</p>
 </main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays 2014</small></footer></div></body></html>
