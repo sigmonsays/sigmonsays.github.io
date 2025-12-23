@@ -1,5 +1,5 @@
 ---
-title: "homepage configs"
+title: "homepage"
 date: 2025/11/05
 layout: directory
 directory: selfhosted/homepage

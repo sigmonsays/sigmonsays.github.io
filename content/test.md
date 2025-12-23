@@ -11,8 +11,11 @@ see [[about]]
 
 bash code:
 
+```bash
+
     rm -rf /data
     mkdir -pv /data
 
     # get disk space
     gdu /data
+```
