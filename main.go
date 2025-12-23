@@ -200,6 +200,12 @@ func GetPages(rootdir, dir string, includeDrafts bool) ([]*site.PageMetadata, er
 
 		}
 
+		// skip pages without a title
+		if fm.Title == "" {
+			log.Printf("skipping page without title %s", ent.Path)
+			continue
+		}
+
 		relPath, err := filepath.Rel(rootdir, ent.Path)
 		if err != nil {
 			fmt.Printf("ERROR: RelPath: %s", err)
