@@ -10,6 +10,8 @@ of a .go file, as if it were a shell script.
 
 All credit goes to this post, https://lorentz.app/blog-item.html?id=go-shebang
 
+**Please never do this in production!**
+
 # Example
 
 Save this to `script.go`:

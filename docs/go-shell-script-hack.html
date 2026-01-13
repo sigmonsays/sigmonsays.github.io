@@ -1,6 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>go shell script hack</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><div class="grid-container"><div class="grid-box">&raquo; <a href="/">sigmonsays</a> </div><div class="grid-box" style="text-align: right;">Posted on 2026/01/11 &nbsp; <br>tagged <a href="/tag/golang.html">golang</a> &nbsp;</div></div><p></p><h1>go shell script hack</h1><p>There is a shell script hack that can be used with go to make go compile and execute the source code
 of a .go file, as if it were a shell script.</p>
 <p>All credit goes to this post, <a href="https://lorentz.app/blog-item.html?id=go-shebang">https://lorentz.app/blog-item.html?id=go-shebang</a></p>
+<p><strong>Please never do this in production!</strong></p>
 <h1 id="example">Example <a class="anchor" href="#example">_</a></h1>
 <p>Save this to <code>script.go</code>:</p>
 <pre><code>/*usr/bin/env go run &quot;$0&quot; &quot;$@&quot;; exit; */
