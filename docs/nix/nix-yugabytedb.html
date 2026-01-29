@@ -1,0 +1,82 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>yugabytedb on nix</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><div class="grid-container"><div class="grid-box">&raquo; <a href="/">sigmonsays</a> / <a href="/nix">nix</a> &nbsp;</div><div class="grid-box" style="text-align: right;">Posted on 2026/1/28 &nbsp; <br>tagged <a href="/tag/nix.html">nix</a> &nbsp;</div></div><p></p><h1>yugabytedb on nix</h1><!--toc:start-->
+<ul>
+<li><a href="#intro">intro</a></li>
+<li><a href="#binary-install">binary install</a></li>
+<li><a href="#yugabyte-nix-package">yugabyte nix package</a></li>
+<li><a href="#shellnix-file">shell.nix file</a></li>
+</ul>
+<!--toc:end-->
+<h1 id="intro">intro <a class="anchor" href="#intro">_</a></h1>
+<p>I wanted to run yugabytedb on nix and could not find it packaged, so I needed to make my own derivation.</p>
+<p>This post is how I achieved that.</p>
+<h1 id="binary-install">binary install <a class="anchor" href="#binary-install">_</a></h1>
+<p>I looked at vault-bin as an example of how to do the installation as yugabytedb is distributed as a tarball
+of binaries.</p>
+<h1 id="yugabyte-nix-package">yugabyte nix package <a class="anchor" href="#yugabyte-nix-package">_</a></h1>
+<p>I created the following file after a little trial and error and with the help of claude.ai</p>
+<pre><code>{ pkgs ? import &lt;nixpkgs&gt; {} }:
+
+pkgs.stdenv.mkDerivation rec {
+  pname = &quot;yugabytedb&quot;;
+  version = &quot;2025.2.0.1&quot;;
+
+  src = pkgs.fetchurl {
+    url = &quot;https://software.yugabyte.com/releases/${version}/yugabyte-${version}-b1-linux-x86_64.tar.gz&quot;;
+    sha256 = &quot;sha256-9wNK8a9fX7VmD/qr0ZmMkaoEiK43YRjnYccMSvjsC34=&quot;;
+  };
+
+  dontConfigure = true;
+  dontBuild = true;
+  dontStrip = true;
+  dontPatchELF = true;
+  dontPatchShebangs = true;
+
+  buildInputs = with pkgs; [
+    stdenv.cc.cc.lib
+    openssl
+    zlib
+    python3
+    libkrb5
+  ];
+
+  # Yugabyte's tarball comes with a folder inside.
+  # We just move everything to $out.
+  installPhase = ''
+    mkdir -p $out
+    rm bin/post_install.sh
+    cp -vr . $out/
+
+  '';
+
+  meta = with pkgs.lib; {
+    description = &quot;High-performance distributed SQL database&quot;;
+    homepage = &quot;https://www.yugabyte.com/&quot;;
+    license = licenses.asl20;
+    platforms = [ &quot;x86_64-linux&quot; ];
+  };
+}
+</code></pre>
+<h1 id="shellnix-file">shell.nix file <a class="anchor" href="#shellnix-file">_</a></h1>
+<p>shell.nix because I plan to run this in nix-direnv</p>
+<pre><code>{ pkgs ? import &lt;nixpkgs&gt; {} }:
+
+with pkgs;
+let
+  yugabytedb = callPackage ./pkg/yugabytedb.nix {};
+in
+mkShell {
+  buildInputs = [
+    overmind
+    yugabytedb
+  ];
+}
+</code></pre>
+<h1 id="startup-scripts">startup scripts <a class="anchor" href="#startup-scripts">_</a></h1>
+<p>run-yugabyte.sh shell script</p>
+<pre><code>#!/usr/bin/env bash
+iface=&quot;$(ip route show default |awk '/default via/ {print $5}')&quot;
+ip=&quot;$(ip -br a show dev $iface | awk -F'[/ ]+' '{print $3}')&quot;
+set -x
+yugabyted start --advertise_address $ip --daemon=false --base_dir ~/yugabyte
+</code></pre>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays 2014</small></footer></div></body></html>
