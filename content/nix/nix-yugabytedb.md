@@ -1,6 +1,6 @@
 ---
 title: "yugabytedb on nix"
-date: 2026/1/28
+date: 2026/01/28
 tags: [ "nix" ]
 ---
 
