@@ -12,7 +12,7 @@ templ Index(site Site, title string) {
         <main class="article">
         <h1>{title}</h1>
 
-        recent posts:<p/>
+        <div class="index_title"> recent posts</div><p/>
 
         for _, page := range site.GetPages(15) {
 
@@ -22,7 +22,7 @@ templ Index(site Site, title string) {
             }
           }}
 
-          <li><a href={ page.Url }>{page.Title}</a>
+          <li class="index_title"><a href={ page.Url }>{page.Title}</a>
           if page.FrontMatter.Date != "" {
             &middot; {page.FrontMatter.Date}
           }
