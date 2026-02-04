@@ -1,0 +1,63 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>bracketed paste</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><div class="grid-container"><div class="grid-box">&raquo; <a href="/">sigmonsays</a> </div><div class="grid-box" style="text-align: right;">Posted on 2026/02/04 &nbsp; <br>tagged <a href="/tag/bash.html">bash</a> &nbsp;</div></div><p></p><h1>bracketed paste</h1><p>Bracketed paste is a feature in modern terminal emulators and Readline (used by Bash 5.1+) that
+protects users when pasting text, especially multi-line commands.</p>
+<p>Key Aspects of Bracketed Paste:</p>
+<ul>
+<li>
+<p>Safety: Prevents accidentally executing malicious or unintended commands, as the shell
+will not execute the text until you press Enter.</p>
+</li>
+<li>
+<p>Highlighting: Pasted text is often highlighted (inverted) to indicate it was pasted
+and needs confirmation.</p>
+</li>
+<li>
+<p>Default Behavior: Enabled by default in Readline 8.1 / Bash 5.1 and newer.</p>
+</li>
+</ul>
+<h1 id="example">Example <a class="anchor" href="#example">_</a></h1>
+<p>To check if your terminal has bracketed pasted enabled</p>
+<pre><code>bind -v | grep enable-bracketed-paste
+</code></pre>
+<h1 id="paste-script">Paste Script <a class="anchor" href="#paste-script">_</a></h1>
+<p>I discovered the bracketed paste feature when wanting to copy and paste urls to download into a terminal.</p>
+<p>Instead of just repeatedly pasting urls, I thought, why can't I just capture the paste event and automatically download?</p>
+<p>example <code>bracketed-paste.sh</code> script</p>
+<pre><code>#!/usr/bin/env bash
+
+function capture_paste {
+
+    # Save current terminal settings
+    local state=$(stty -g)
+    # Turn off keyboard input echo
+    stty -echo
+
+    # Enable bracketed paste
+    printf '\e[?2004h' &gt;&amp;2
+
+    # Read the input
+    IFS= read -r input
+
+    # Disable bracketed paste
+    printf '\e[?2004l' &gt;&amp;2
+
+    # Strip bracketed paste markers if present
+    input=&quot;${input#$'\e[200~'}&quot;
+    input=&quot;${input%$'\e[201~'}&quot;
+
+    # restore state
+    stty &quot;$state&quot;
+
+    echo &quot;$input&quot;
+}
+
+while true
+do
+    echo
+    echo &quot;Paste or type something:&quot;
+    result=$(capture_paste)
+    echo &quot;Result: $result&quot;
+done
+</code></pre>
+<p>write this to a file and make this script executable, run it, paste something, hit enter, and you'll get some
+output.</p>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays 2014</small></footer></div></body></html>
