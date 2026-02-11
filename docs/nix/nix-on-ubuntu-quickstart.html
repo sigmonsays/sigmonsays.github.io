@@ -1,0 +1,73 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>nix on ubuntu quick start guide</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><div class="grid-container"><div class="grid-box">&raquo; <a href="/">sigmonsays</a> / <a href="/nix">nix</a> &nbsp;</div><div class="grid-box" style="text-align: right;">Posted on 2026/02/10 &nbsp; <br>tagged <a href="/tag/nix.html">nix</a> &nbsp;</div></div><p></p><h1>nix on ubuntu quick start guide</h1><!-- mtoc-start -->
+<ul>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#install-nix">Install Nix</a></li>
+<li><a href="#install-home-manager">Install Home Manager</a></li>
+<li><a href="#edit-home-manager-config">Edit home manager config</a></li>
+</ul>
+<!-- mtoc-end -->
+<h1 id="intro">Intro <a class="anchor" href="#intro">_</a></h1>
+<p>Nix is difficult to learn but the promises are appealing with a bit of effort. The effort required
+may not be worth it to some people.</p>
+<p>I wanted to make this guide to demonstrate how quick you can get setup and running on ubuntu</p>
+<h1 id="install-nix">Install Nix <a class="anchor" href="#install-nix">_</a></h1>
+<p>I performed these steps on an ubuntu 22.04 VM</p>
+<p>Install nix</p>
+<pre><code> yes | sh &lt;(curl -L https://nixos.org/nix/install) --daemon
+
+ if ! grep -q nix-command /etc/nix/nix.conf ; then
+    echo &quot;experimental-features = nix-command flakes&quot; | sudo tee -a /etc/nix/nix.conf
+ fi
+</code></pre>
+<p>Exit the shell and start a new one</p>
+<p>After exiting the shell and starting a new one, you should have nix command</p>
+<pre><code>which nix
+</code></pre>
+<p>Now we need to pick the correct nix version that is compatible with home-manager</p>
+<pre><code>    sudo $(which nix-channel) --remove nixpkgs
+    sudo $(which nix-channel) --add https://nixos.org/channels/nixos-24.11 nixpkgs
+    sudo $(which nix-channel) --update
+</code></pre>
+<h1 id="install-home-manager">Install Home Manager <a class="anchor" href="#install-home-manager">_</a></h1>
+<p>Exit shell and start a new one</p>
+<p>write initial home manager config to  <code>.config/home-manager/home.nix</code></p>
+<pre><code>    { config, pkgs, ... }:
+
+    {
+      home.username = &quot;sig&quot;;
+      home.homeDirectory = &quot;/home/sig&quot;;
+
+      home.stateVersion = &quot;24.11&quot;; # Please read the comment before changing.
+
+      home.packages = [
+      ];
+
+
+      # Let Home Manager install and manage itself.
+      programs.home-manager.enable = true;
+    }
+</code></pre>
+<p>install home manager</p>
+<pre><code>nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz home-manager
+nix-channel --update
+nix-shell '&lt;home-manager&gt;' -A install
+home-manager switch
+</code></pre>
+<h1 id="edit-home-manager-config">Edit home manager config <a class="anchor" href="#edit-home-manager-config">_</a></h1>
+<p>Lets say you want some packages installed</p>
+<p>Modify the home.packages block here</p>
+<pre><code>      home.packages = [
+      ];
+</code></pre>
+<p>to look like this:</p>
+<pre><code>      home.packages = with pkgs; [
+            neovim
+            rsync
+            git
+      ];
+</code></pre>
+<p>Now apply it</p>
+<pre><code>home-manager switch
+</code></pre>
+<p>That is it!</p>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays 2014</small></footer></div></body></html>
