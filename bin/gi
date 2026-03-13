@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-go install github.com/sigmonsays/website
+go install github.com/sigmonsays/website/...

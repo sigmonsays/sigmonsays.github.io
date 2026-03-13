@@ -8,7 +8,7 @@ d: dev
 p: publish
 
 compile: gent ## compile
-	go install .
+	go install ./website/
 
 gen: ## generate site
 	rm -rf docs
