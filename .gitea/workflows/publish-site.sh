@@ -19,16 +19,16 @@ make gen
 
 # configure remote
 pwd
-git remote -v
 if ! git remote get-url upstream ; then
     git remote add upstream git@github.com:sigmonsays/sigmonsays.github.io
-    git push --all upstream
 fi
+git remote -v
 
 ymd="$(date +%Y-%m-%d)"
 
 git commit -a -m" automated commit on $ymd"
 
+git pull upstream
 git push upstream
 
 # Cleanup
