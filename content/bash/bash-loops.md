@@ -1,7 +1,7 @@
 ---
 title: "bash loops"
 date: 2026/04/07
-draft: true
+draft: false
 tags: [ "bash" ]
 ---
 
