@@ -13,6 +13,10 @@ export GIT_SSH_COMMAND="ssh -i /tmp/deploy_key -o IdentitiesOnly=yes"
 git config --local user.email "sig@picklerick.it"
 git config --local user.name "sig"
 
+echo "git branch:"
+git branch
+git branch -la
+
 # Compile
 go install ./website/
 
