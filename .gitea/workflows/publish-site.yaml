@@ -22,6 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: build and publish site
-        shell: |
+        shell: bash
+        run: |
           cd "${{ inputs.working_directory }}"
           ./.gitea/workflows/publish-site.sh
