@@ -30,7 +30,7 @@ jobs:
 
       - name: setup PATH
         run: |
-          echo "$HOME/go/bin" >> $GITHUB_PATH
+          echo "$HOME/go/bin" >> $GITEA_PATH
 
       - name: build site
         run: |
