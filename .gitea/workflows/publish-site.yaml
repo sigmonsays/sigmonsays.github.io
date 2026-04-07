@@ -19,6 +19,8 @@ on:
 jobs:
   publish-site:
     runs-on: host-svc1
+    env:
+      GH_PRIV_KEY: "${{ secrets.GH_PRIV_KEY }}"
     steps:
       - uses: actions/checkout@v3
       - name: build and publish site
