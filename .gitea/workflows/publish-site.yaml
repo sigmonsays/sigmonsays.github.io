@@ -34,7 +34,7 @@ jobs:
 
       - name: build site
         run: |
-          go install ./website
+          ./.gitea/workflows/build.sh
 
       - name: configure ssh
         run: |
