@@ -1,0 +1,26 @@
+name: Publish Site
+
+concurrency:
+  group: publish-sigmonsays-github-io
+  cancel-in-progress: false  # waits for running job; true would cancel it
+
+on:
+   # schedule:
+   #   - cron: "0 6 * * *"
+
+   workflow_dispatch:  # allows manual runs
+
+   #push: {}
+   push:
+     branches:
+       - dev
+
+
+jobs:
+  publish-site:
+    runs-on: host-svc1
+    steps:
+      - uses: actions/checkout@v3
+      - uses: sig/gitea-actions/wrap-nix
+        with:
+          script: ./build.sh
