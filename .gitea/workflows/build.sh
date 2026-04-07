@@ -6,3 +6,4 @@ echo "HOME: $HOME"
 
 set -x
 go install ./website
+make gen
