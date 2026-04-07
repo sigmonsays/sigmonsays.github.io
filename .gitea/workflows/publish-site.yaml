@@ -34,7 +34,6 @@ jobs:
 
       - name: build site
         run: |
-          git reset --hard
           ./.gitea/workflows/build.sh
 
       - name: configure ssh
@@ -54,8 +53,8 @@ jobs:
           GIT_SSH_COMMAND: "ssh -i /tmp/deploy_key -o StrictHostKeyChecking=no"
         run: |
           git remote -v
-          git fetch origin ${{ github.ref_name }}
-          git rebase origin/${{ github.ref_name }}
+          # git fetch origin ${{ github.ref_name }}
+          # git rebase origin/${{ github.ref_name }}
           git add .
           # Only commit and push if there are changes
           if ! git diff --cached --quiet; then
