@@ -40,6 +40,7 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.GH_PRIV_KEY }}" > /tmp/deploy_key
+          chmod 0600 /tmp/deploy_key
 
       - name: Configure Git and add SSH remote
         run: |
