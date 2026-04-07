@@ -10,6 +10,9 @@ echo "$GH_PRIV_KEY" > /tmp/deploy_key
 chmod 600 /tmp/deploy_key
 export GIT_SSH_COMMAND="ssh -i /tmp/deploy_key -o IdentitiesOnly=yes"
 
+git config --local user.email "sig@picklerick.it"
+git config --local user.name "sig"
+
 # Compile
 go install ./website/
 
@@ -26,10 +29,11 @@ git remote -v
 
 ymd="$(date +%Y-%m-%d)"
 
+
 git commit -a -m" automated commit on $ymd"
 
-git pull upstream
-git push upstream
+git pull upstream master
+git push upstream master
 
 # Cleanup
 rm -f /tmp/deploy_key
