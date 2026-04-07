@@ -15,4 +15,10 @@ go install ./website/
 # Generate
 make gen
 
-# Push
+# configure remote
+if ! git remote get-url upstream ; then
+    git remote add upstream git@github.com:sigmonsays/sigmonsays.github.io
+    git push --all upstream
+fi
+
+git push upstream
