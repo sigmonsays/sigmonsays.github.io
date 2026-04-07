@@ -21,6 +21,7 @@ jobs:
     runs-on: host-svc1
     steps:
       - uses: actions/checkout@v3
-      - uses: https://git.grepped.org/sig/gitea-actions/wrap-nix@dev
-        with:
-          script: ./build.sh
+      - name: build and publish site
+        shell: |
+          cd "${{ inputs.working_directory }}"
+          ./.gitea/workflows/publish-site.sh
