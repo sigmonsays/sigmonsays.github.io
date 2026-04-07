@@ -25,6 +25,8 @@ jobs:
       GIT_SSH_COMMAND: "ssh -i /tmp/deploy_key -o StrictHostKeyChecking=no"
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: setup PATH
         run: |
