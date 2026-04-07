@@ -52,6 +52,7 @@ jobs:
         env:
           GIT_SSH_COMMAND: "ssh -i /tmp/deploy_key -o StrictHostKeyChecking=no"
         run: |
+          git remote -v
           git fetch origin ${{ github.ref_name }}
           git rebase origin/${{ github.ref_name }}
           git add .
@@ -63,6 +64,6 @@ jobs:
             echo "No changes to push."
           fi
 
-      - name: Commit and push changes
+      - name: Cleanup
         run: |
           rm -f /tmp/deploy_key
