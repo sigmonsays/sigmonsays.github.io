@@ -26,6 +26,9 @@ if ! git remote get-url upstream ; then
     git push --all upstream
 fi
 
+ymd="$(date +%Y-%m-%d)"
+
+git commit -a -m" automated commit on $ymd"
 
 git remote get-url upstream
 git push upstream
