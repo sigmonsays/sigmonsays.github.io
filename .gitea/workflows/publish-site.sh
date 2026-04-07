@@ -5,4 +5,6 @@ export HOME=/home/sig
 
 set -x
 which go
-go install .
+pwd
+ls -la
+go install ./website/
