@@ -1,10 +1,17 @@
 ---
-title: "looping a files lines in bash"
+title: "bash loops"
 date: 2026/04/07
 draft: true
 tags: [ "bash" ]
 ---
 
+<!-- mtoc-start -->
+
+* [Looping a file line by line](#looping-a-file-line-by-line)
+
+<!-- mtoc-end -->
+
+# Looping a file line by line
 looping a file should be easy in bash but once you start making things more complicated, your solution is often the wrong one.
 
 
