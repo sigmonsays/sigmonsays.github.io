@@ -20,11 +20,44 @@ jobs:
   publish-site:
     runs-on: host-svc1
     env:
+      HOME: /home/sig
       GH_PRIV_KEY: "${{ secrets.GH_PRIV_KEY }}"
+      GIT_SSH_COMMAND: "ssh -i /tmp/deploy_key -o StrictHostKeyChecking=no"
     steps:
       - uses: actions/checkout@v3
-      - name: build and publish site
-        shell: bash
+
+      - name: setup PATH
         run: |
-          cd "${{ inputs.working_directory }}"
-          ./.gitea/workflows/publish-site.sh
+          echo "$HOME/go/bin" >> $GITHUB_PATH
+
+      - name: build site
+        run: |
+          go install ./website
+
+      - name: configure ssh
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.GH_PRIV_KEY }}" > /tmp/deploy_key
+
+      - name: Configure Git and add SSH remote
+        run: |
+          git config user.name "gitea actions"
+          git config user.email "gitea-actions@pickelrick.it"
+          git remote set-url origin git@github.com:${{ gitea.repository }}.git
+
+      - name: Commit and push changes
+        env:
+          GIT_SSH_COMMAND: "ssh -i /tmp/deploy_key -o StrictHostKeyChecking=no"
+        run: |
+          git add .
+          # Only commit and push if there are changes
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: build output [skip ci]"
+            git push origin HEAD:${{ gitea.ref_name }}
+          else
+            echo "No changes to push."
+          fi
+
+      - name: Commit and push changes
+        run: |
+          rm -f /tmp/deploy_key
