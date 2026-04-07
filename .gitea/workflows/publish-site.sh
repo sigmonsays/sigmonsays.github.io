@@ -21,4 +21,5 @@ if ! git remote get-url upstream ; then
     git push --all upstream
 fi
 
+git remote get-url upstream
 git push upstream
