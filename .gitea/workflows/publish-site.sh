@@ -18,6 +18,8 @@ make gen
 
 
 # configure remote
+pwd
+git remote -v
 if ! git remote get-url upstream ; then
     git remote add upstream git@github.com:sigmonsays/sigmonsays.github.io
     git push --all upstream
