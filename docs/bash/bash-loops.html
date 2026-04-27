@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>bash loops</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><div class="grid-container"><div class="grid-box">&raquo; <a href="/">sigmonsays</a> / <a href="/bash">bash</a> &nbsp;</div><div class="grid-box" style="text-align: right;">Posted on 2026/04/07 &nbsp; <br>tagged <a href="/tag/bash.html">bash</a> &nbsp;</div></div><p></p><h1>bash loops</h1><!-- mtoc-start -->
+<ul>
+<li><a href="#looping-a-file-line-by-line">Looping a file line by line</a></li>
+</ul>
+<!-- mtoc-end -->
+<h1 id="looping-a-file-line-by-line">Looping a file line by line <a class="anchor" href="#looping-a-file-line-by-line">_</a></h1>
+<p>looping a file should be easy in bash but once you start making things more complicated, your solution is often the wrong one.</p>
+<pre><code># Loop a file, line by line
+# supports lines with spaces
+# supports a program in the loop that can read from stdin
+
+while IFS= read -r line &lt;&amp;3 || [[ -n &quot;$line&quot; ]]; do
+    # Skip empty lines and lines starting with #
+    [[ -z &quot;$line&quot; || &quot;$line&quot; == \#* ]] &amp;&amp; continue
+    echo &quot;'$line'&quot;
+    (
+        cd ..
+        my-thing.sh &quot;$line&quot;
+    )
+done 3&lt; todo.txt
+</code></pre>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays 2014</small></footer></div></body></html>

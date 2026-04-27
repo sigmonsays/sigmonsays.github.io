@@ -1,0 +1,184 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>nix-tool</title><link rel="stylesheet" href="/site.css"></head><body><div class="container"><header style="padding:1rem;border-bottom:1px solid #ddd"><nav>&middot; &nbsp;<a href="/">home</a> &middot;&nbsp<a href="/projects/">projects</a> &middot;&nbsp<a href="/tags.html">tags</a> &middot;&nbsp<a href="/archive.html">archive</a> &middot;&nbsp</nav></header><main class="article"><div class="grid-container"><div class="grid-box">&raquo; <a href="/">sigmonsays</a> / <a href="/nix">nix</a> &nbsp;</div><div class="grid-box" style="text-align: right;">Posted on 2026/04/26 &nbsp; <br>tagged <a href="/tag/nix.html">nix</a> &nbsp;</div></div><p></p><h1>nix-tool</h1><!-- mtoc-start -->
+<ul>
+<li><a href="#nix-tool">nix-tool</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#the-script">The script</a></li>
+</ul>
+<!-- mtoc-end -->
+<h1 id="nix-tool">nix-tool <a class="anchor" href="#nix-tool">_</a></h1>
+<p>nix-tool is a simple wrapper script I have been using to make things simpler on nix/nixos hosts.</p>
+<p>The use case is I have macos with nix, a bunch of ubuntu VMs with nix installed and nixos. They
+all have different ways of executing the same task.</p>
+<p>So this script is here to provide some helpers and uniformity</p>
+<h1 id="usage">Usage <a class="anchor" href="#usage">_</a></h1>
+<pre><code>nix-tool
+Usage: nix-tool cmd
+cmd
+    update    flake update
+    switch    build and switch to latest build
+    boot      build boot (requires reboot)
+    build     build local but do not switch
+    diff      build and diff
+    gc        garbage collection
+    optimize  optimize nix store
+    du        show disk usage for /nix/store
+    clean     clean local build
+    fmt       format .nix using alejandra
+    nix-info  show nix info
+    graph     generate a graph
+</code></pre>
+<h1 id="examples">Examples <a class="anchor" href="#examples">_</a></h1>
+<p>Get disk space of /nix</p>
+<pre><code>$ nix-tool du
+53.9 GiB nix
+</code></pre>
+<p>Set current configuration to version from current git checkout</p>
+<pre><code>nix-tool switch
+</code></pre>
+<p>Set boot configuration to version from current git checkout</p>
+<pre><code>nix-tool boot
+</code></pre>
+<p>Cleanup garbage</p>
+<pre><code>nix-tool gc
+</code></pre>
+<h1 id="the-script">The script <a class="anchor" href="#the-script">_</a></h1>
+<pre><code class="language-bash">#!/usr/bin/env bash
+
+function chdir_nix {
+	cd $HOME/nix
+}
+
+function is_nixos {
+	stat /etc/NIXOS &gt;/dev/null 2&gt;&amp;1
+}
+function help_cmd {
+	local b=&quot;$(basename &quot;$0&quot;)&quot;
+	cat &lt;&lt;EOF
+Usage: $b cmd
+cmd
+    update    flake update
+    switch    build and switch to latest build
+    boot      build boot (requires reboot)
+    build     build local but do not switch
+    diff      build and diff
+    gc        garbage collection
+    optimize  optimize nix store
+    du        show disk usage for /nix/store
+    clean     clean local build
+    fmt       format .nix using alejandra
+    nix-info  show nix info
+    graph     generate a graph
+EOF
+}
+function update_cmd {
+	nix flake update
+}
+function flake_arg {
+	local flake=&quot;$2&quot;
+	if [ -z &quot;$flake&quot; ]; then
+		flake=&quot;.&quot;
+	else
+		flake=&quot;./${flake}#${flake}&quot;
+	fi
+	echo &quot;$flake&quot;
+}
+function switch_cmd {
+	local flake=&quot;$( flake_arg &quot;$2&quot;)&quot;
+
+	if is_nixos; then
+		sudo nixos-rebuild switch --flake &quot;$flake&quot;
+	else
+		home-manager switch --flake &quot;$flake&quot;
+	fi
+}
+function boot_cmd {
+	if ! is_nixos; then
+		echo &quot;boot only makes sense on nixos&quot;
+		exit 1
+	fi
+	sudo nixos-rebuild boot --flake .
+}
+function build_cmd {
+	if is_nixos; then
+		sudo nixos-rebuild build --flake .
+	else
+		home-manager build --flake .
+	fi
+}
+function diff_cmd {
+	update_cmd &quot;$@&quot;
+	build_cmd &quot;$@&quot;
+	if is_nixos; then
+		nix-shell -p nvd --run &quot;nvd diff /run/current-system result&quot; | tee nvd-diff.txt
+	else
+		CURRENT_HOME=&quot;$HOME/.local/state/home-manager/gcroots/current-home&quot;
+		nix-shell -p nvd --run &quot;nvd diff $CURRENT_HOME result&quot; | tee nvd-diff.txt
+	fi
+	rm -f result
+	date +%Y-%m-%d &gt;updated.txt
+}
+function gc_cmd {
+	if is_nixos; then
+		sudo rm -rf /tmp/nixos-rebuild.*
+		sudo nix-env --delete-generations 14d
+		sudo nix-collect-garbage -d
+		nix-collect-garbage -d
+	else
+		nix-collect-garbage -d
+	fi
+	du_cmd
+}
+function optimize_cmd {
+	nix-store --optimize
+}
+function du_cmd {
+	gdu -ns /nix | head
+}
+function clean_cmd {
+	rm -vf result
+}
+function fmt_cmd {
+	alejandra .
+}
+function nix_info_cmd {
+	nix-shell -p nix-info --run &quot;nix-info -m&quot;
+}
+function graph_cmd {
+	local flake=&quot;$( flake_arg &quot;$1&quot;)&quot;
+	# .#nixosConfigurations.desktop3.graph
+	nix eval \
+		--json \
+		&quot;$flake&quot; \
+		| nix run 'nixpkgs#fx'
+}
+
+function main {
+	local cmd=&quot;$1&quot;
+	[ -z &quot;$cmd&quot; ] &amp;&amp; cmd=help
+
+	chdir_nix
+
+	case &quot;$cmd&quot; in
+	build) build_cmd &quot;$@&quot; ;;
+	clean) clean_cmd &quot;$@&quot; ;;
+	diff) diff_cmd &quot;$@&quot; ;;
+	fmt) fmt_cmd &quot;$@&quot; ;;
+	gc) gc_cmd &quot;$@&quot; ;;
+	optimize) optimize_cmd &quot;$@&quot; ;;
+	du) du_cmd &quot;$@&quot; ;;
+	switch) switch_cmd &quot;$@&quot; ;;
+	boot) boot_cmd &quot;$@&quot; ;;
+	update) update_cmd &quot;$@&quot; ;;
+	nix-info) nix_info_cmd &quot;$@&quot; ;;
+	graph) graph_cmd &quot;$@&quot; ;;
+	help) help_cmd &quot;$@&quot; ;;
+	*) help_cmd &quot;$@&quot; ;;
+	esac
+}
+
+main &quot;$@&quot;
+
+
+</code></pre>
+</main><footer style="padding:1rem;border-top:1px solid #ddd;margin-top:2rem"><small>© Sigmonsays 2014</small></footer></div></body></html>
