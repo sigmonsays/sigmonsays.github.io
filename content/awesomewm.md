@@ -36,6 +36,7 @@ Missing features
 - mouse battery monitor
 - a working network widget
 - a working weather widget
+- a working volume widget
 - center new window when it's the only window on the workspace (claude)
 - fixed workspace mapping bugs (claude)
 - remove dead code (claude)
