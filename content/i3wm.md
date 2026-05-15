@@ -1,7 +1,7 @@
 ---
 title: i3 window manager
 date: 2021/08/04
-tags: [ "i3" ]
+tags: [ "window-managers", "i3" ]
 ---
 
 

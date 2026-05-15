@@ -1,7 +1,7 @@
 ---
 title: awesome window manager
 date: 2026/05/15
-tags: [ "awesomewm" ]
+tags: [ "window-managers", "awesomewm" ]
 ---
 
 # Contents
