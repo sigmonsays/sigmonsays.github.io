@@ -57,7 +57,9 @@ jobs:
           # git rebase origin/${{ github.ref_name }}
           git add .
           # Hope this works!
+          git reset --hard
           git pull
+
           # Only commit and push if there are changes
           if ! git diff --cached --quiet; then
             git commit -m "chore: build output [skip ci]"
